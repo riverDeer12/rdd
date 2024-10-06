@@ -4,22 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="718f2baa-a58c-4a7d-bb84-ae37ec736951" name="Changes" comment="init">
-      <change afterPath="$PROJECT_DIR$/images/portfolio/gallery/gremo_na_sljeme_modal.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/portfolio/gallery/petro_bulk_solutions_modal.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/portfolio/gallery/rimap_modal.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/portfolio/gallery/yufe_modal.png" afterDir="false" />
+    <list default="true" id="718f2baa-a58c-4a7d-bb84-ae37ec736951" name="Changes" comment="changed favicons">
+      <change afterPath="$PROJECT_DIR$/images/avatars/damir_medved.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/avatars/roel_de_beer.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/avatars/sara_husidic.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/avatars/zarko_galjanic.jpeg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/portfolio/gallery/g-fuji.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/portfolio/gallery/g-lamp.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/portfolio/gallery/g-minimalismo.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/portfolio/gallery/g-rucksack.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/portfolio/gallery/g-sanddunes.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/portfolio/gallery/g-skaterboy.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/portfolio/gallery/gremo_na_sljeme_modal.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/portfolio/gallery/petro_bulk_solutions_modal.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/portfolio/gallery/rimap_modal.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/portfolio/gallery/yufe_modal.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/avatars/user-01.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/avatars/user-02.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/avatars/user-03.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/avatars/user-04.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/avatars/user-05.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/avatars/user-06.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/avatars/user-07.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/avatars/user-08.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -48,7 +46,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "/Users/riverdeer/Projects/rdd/images/portfolio/gallery",
+    "last_opened_file_path": "/Users/riverdeer/Projects/rdd/images/avatars",
     "node.js.selected.package.tslint": "(autodetect)",
     "settings.editor.selected.configurable": "preferences.lookFeel",
     "vue.rearranger.settings.migration": "true"
@@ -56,6 +54,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/images/avatars" />
       <recent name="$PROJECT_DIR$/images/portfolio/gallery" />
     </key>
   </component>
@@ -76,7 +75,23 @@
       <option name="project" value="LOCAL" />
       <updated>1727867458956</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="changed images for project's modals">
+      <option name="closed" value="true" />
+      <created>1728250703969</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1728250703969</updated>
+    </task>
+    <task id="LOCAL-00003" summary="changed favicons">
+      <option name="closed" value="true" />
+      <created>1728250884853</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1728250884853</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -96,6 +111,8 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="init" />
-    <option name="LAST_COMMIT_MESSAGE" value="init" />
+    <MESSAGE value="changed images for project's modals" />
+    <MESSAGE value="changed favicons" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed favicons" />
   </component>
 </project>
