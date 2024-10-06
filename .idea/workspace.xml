@@ -1,7 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="718f2baa-a58c-4a7d-bb84-ae37ec736951" name="Changes" comment="init" />
+    <list default="true" id="718f2baa-a58c-4a7d-bb84-ae37ec736951" name="Changes" comment="init">
+      <change afterPath="$PROJECT_DIR$/images/portfolio/gallery/gremo_na_sljeme_modal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/portfolio/gallery/petro_bulk_solutions_modal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/portfolio/gallery/rimap_modal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/portfolio/gallery/yufe_modal.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/portfolio/gallery/g-fuji.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/portfolio/gallery/g-lamp.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/portfolio/gallery/g-minimalismo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/portfolio/gallery/g-rucksack.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/portfolio/gallery/g-sanddunes.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/portfolio/gallery/g-skaterboy.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/portfolio/gallery/gremo_na_sljeme_modal.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/portfolio/gallery/petro_bulk_solutions_modal.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/portfolio/gallery/rimap_modal.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/portfolio/gallery/yufe_modal.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,10 +47,18 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/_projects/Dummy_Projects/rdd",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "/Users/riverdeer/Projects/rdd/images/portfolio/gallery",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/images/portfolio/gallery" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
