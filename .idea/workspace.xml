@@ -4,20 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="718f2baa-a58c-4a7d-bb84-ae37ec736951" name="Changes" comment="changed favicons">
-      <change afterPath="$PROJECT_DIR$/images/avatars/damir_medved.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/avatars/roel_de_beer.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/avatars/sara_husidic.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/avatars/zarko_galjanic.jpeg" afterDir="false" />
+    <list default="true" id="718f2baa-a58c-4a7d-bb84-ae37ec736951" name="Changes" comment="updated profile images of reviewers">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/avatars/user-01.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/avatars/user-02.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/avatars/user-03.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/avatars/user-04.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/avatars/user-05.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/avatars/user-06.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/avatars/user-07.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/avatars/user-08.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -31,6 +19,10 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2msZmIE0Zwxj9z6GDBf7L9g4WaI" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -47,6 +39,8 @@
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
     "last_opened_file_path": "/Users/riverdeer/Projects/rdd/images/avatars",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "settings.editor.selected.configurable": "preferences.lookFeel",
     "vue.rearranger.settings.migration": "true"
@@ -67,6 +61,8 @@
       <option name="presentableId" value="Default" />
       <updated>1727867401894</updated>
       <workItem from="1727867403193" duration="323000" />
+      <workItem from="1728286229492" duration="14000" />
+      <workItem from="1728286686610" duration="2332000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1727867458956</created>
@@ -91,7 +87,15 @@
       <option name="project" value="LOCAL" />
       <updated>1728250884853</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="updated profile images of reviewers">
+      <option name="closed" value="true" />
+      <created>1728251623285</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1728251623285</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -113,6 +117,7 @@
     <MESSAGE value="init" />
     <MESSAGE value="changed images for project's modals" />
     <MESSAGE value="changed favicons" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed favicons" />
+    <MESSAGE value="updated profile images of reviewers" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated profile images of reviewers" />
   </component>
 </project>
