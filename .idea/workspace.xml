@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="718f2baa-a58c-4a7d-bb84-ae37ec736951" name="Changes" comment="last changes before publish">
+    <list default="true" id="718f2baa-a58c-4a7d-bb84-ae37ec736951" name="Changes" comment="added google tag for google analytics">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -63,6 +63,7 @@
       <workItem from="1728286229492" duration="14000" />
       <workItem from="1728286686610" duration="2780000" />
       <workItem from="1728414679785" duration="611000" />
+      <workItem from="1728983790770" duration="1197000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1727867458956</created>
@@ -103,7 +104,15 @@
       <option name="project" value="LOCAL" />
       <updated>1728325195403</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="added google tag for google analytics">
+      <option name="closed" value="true" />
+      <created>1728983862162</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1728983862162</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -127,6 +136,7 @@
     <MESSAGE value="changed favicons" />
     <MESSAGE value="updated profile images of reviewers" />
     <MESSAGE value="last changes before publish" />
-    <option name="LAST_COMMIT_MESSAGE" value="last changes before publish" />
+    <MESSAGE value="added google tag for google analytics" />
+    <option name="LAST_COMMIT_MESSAGE" value="added google tag for google analytics" />
   </component>
 </project>
