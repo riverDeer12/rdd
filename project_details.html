@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Project Detail</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!-- Your main stylesheet -->
+    <link rel="stylesheet" href="css/project_details_style.css"/>
+</head>
+<body class="dark">
+<div class="min-h-screen project-detail">
+    <!-- Header -->
+    <header class="border-b border-border sticky top-0 bg-background/80 backdrop-blur-sm z-10 back-header">
+        <div class="max-w-5xl mx-auto px-6 py-6">
+            <!-- Replace href with your projects page -->
+            <a
+                    href="#"
+                    class="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors back-link"
+            >
+                <span class="icon-arrow-left">←</span>
+                <span>Back to projects</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <main class="max-w-5xl mx-auto px-6 py-12">
+        <div class="mb-8">
+            <div class="flex items-start justify-between mb-6">
+                <div>
+                    <h1 class="mb-4 project-title">ReViv Plus</h1>
+                    <p class="text-muted-foreground max-w-2xl project-long-description">
+                        The website dedicated to the ReViv Plus supplement is designed as a modern, informative, and
+                        user-friendly platform that clearly communicates all the benefits of this product. Through an
+                        attractive design and simple navigation, users are offered a detailed insight into the
+                        composition, mode of action, and effectiveness of the ReViv Plus supplement. The main goal of
+                        the site is to provide potential customers with all the necessary information about the product,
+                        enable easy purchasing, and assist in making an informed decision.
+                    </p>
+                </div>
+                <span class="text-muted-foreground project-year">2025</span>
+            </div>
+
+            <!-- Links -->
+            <div class="flex gap-4 project-links">
+                <a
+                        href="https://reviv-plus.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:opacity-90 transition-opacity"
+                >
+                    <span class="icon-external-link">🔗</span>
+                    <span>View Project</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Main Image -->
+        <div class="mb-16 rounded-lg overflow-hidden border border-border">
+            <img
+                    src="images/portfolio/home_about.png"
+                    alt="Project main screenshot"
+                    class="w-full aspect-video object-cover"
+            />
+        </div>
+
+        <!-- Technologies -->
+        <section class="mb-16">
+            <h2 class="mb-6">Technologies</h2>
+            <div class="flex flex-wrap gap-3">
+          <span class="px-4 py-2 bg-muted text-foreground rounded-lg border border-border">
+            HTML
+          </span>
+                <span class="px-4 py-2 bg-muted text-foreground rounded-lg border border-border">
+            JavaScript
+          </span>
+                <span class="px-4 py-2 bg-muted text-foreground rounded-lg border border-border">
+            Tailwind CSS
+          </span>
+                <!-- Add more as needed -->
+            </div>
+        </section>
+
+        <!-- Challenge & Solution -->
+        <section class="challenge-solution mb-16">
+            <div>
+                <h3 class="mb-4">Challenge</h3>
+                <p class="text-muted-foreground leading-relaxed">
+                    Describe the main challenges faced during the project, such as
+                    performance limitations, complex user flows, or integration issues.
+                </p>
+            </div>
+
+            <div>
+                <h3 class="mb-4">Solution</h3>
+                <p class="text-muted-foreground leading-relaxed">
+                    Explain how you approached and solved those challenges, technologies
+                    used, architecture decisions, and improvements made.
+                </p>
+            </div>
+        </section>
+
+
+        <!-- Additional Images/Screenshots Section -->
+        <section class="mb-16">
+            <h2 class="mb-6">Project Showcase</h2>
+
+            <div class="gallery-container">
+                <button class="gallery-btn prev">‹</button>
+
+                <div class="gallery-wrapper">
+                    <div class="gallery-track">
+                        <img src="images/portfolio/home_cart.png" alt="Screenshot 1"/>
+                        <img src="images/portfolio/home_box_now.png" alt="Screenshot 2"/>
+                        <img src="images/portfolio/pay_screen.png" alt="Screenshot 3"/>
+                    </div>
+                </div>
+
+                <button class="gallery-btn next">›</button>
+            </div>
+        </section>
+
+
+        <!-- Key Features -->
+        <section class="mb-16">
+            <h2 class="mb-6">Key Features</h2>
+
+            <div class="key-features-grid">
+                <div class="feature-box">
+                    <h4 class="mb-2">Responsive Design</h4>
+                    <p class="text-muted-foreground">Optimized for all devices and screen sizes.</p>
+                </div>
+
+                <div class="feature-box">
+                    <h4 class="mb-2">Performance</h4>
+                    <p class="text-muted-foreground">Fast load times and smooth interactions.</p>
+                </div>
+
+                <div class="feature-box">
+                    <h4 class="mb-2">Webshop Functionality</h4>
+                    <p class="text-muted-foreground">
+                        Fully featured online store with product catalog, filtering, cart system, and intuitive checkout
+                        flow.
+                    </p>
+                </div>
+
+                <div class="feature-box">
+                    <h4 class="mb-2">Secure Payment Methods</h4>
+                    <p class="text-muted-foreground">
+                        Supports secure payments including cards, PayPal, digital wallets, and local providers.
+                    </p>
+                </div>
+
+                <div class="feature-box">
+                    <h4 class="mb-2">Box Now Integration</h4>
+                    <p class="text-muted-foreground">
+                        Locker delivery, real-time tracking, and automated Box Now API integration.
+                    </p>
+                </div>
+
+                <div class="feature-box">
+                    <h4 class="mb-2">Scalability</h4>
+                    <p class="text-muted-foreground">Built to handle growth and increased demand.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer Navigation -->
+    <footer class="border-t border-border mt-16 back-footer">
+        <div class="max-w-5xl mx-auto px-6 py-8">
+            <!-- Replace href with your projects page -->
+            <a
+                    href="#"
+                    class="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors back-link"
+            >
+                <span class="icon-arrow-left">←</span>
+                <span>Back to all projects</span>
+            </a>
+        </div>
+    </footer>
+</div>
+
+<script>
+    const track = document.querySelector(".gallery-track");
+    const images = document.querySelectorAll(".gallery-track img");
+    const prevBtn = document.querySelector(".gallery-btn.prev");
+    const nextBtn = document.querySelector(".gallery-btn.next");
+
+    let index = 0;
+
+    function updateGallery() {
+        const width = images[0].clientWidth;
+        track.style.transform = `translateX(-${index * width}px)`;
+    }
+
+    nextBtn.addEventListener("click", () => {
+        if (index < images.length - 1) index++;
+        updateGallery();
+    });
+
+    prevBtn.addEventListener("click", () => {
+        if (index > 0) index--;
+        updateGallery();
+    });
+
+    window.addEventListener("resize", updateGallery);
+</script>
+
+</body>
+</html>
