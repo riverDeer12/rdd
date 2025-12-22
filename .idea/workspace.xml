@@ -4,28 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="718f2baa-a58c-4a7d-bb84-ae37ec736951" name="Changes" comment="removed readme.txt">
-      <change afterPath="$PROJECT_DIR$/images/avatars/nicola_capobianco.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/portfolio/gallery/reviv_plus_modal.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/portfolio/reviv-plus.png" afterDir="false" />
+    <list default="true" id="718f2baa-a58c-4a7d-bb84-ae37ec736951" name="Changes" comment="changed title and description">
+      <change afterPath="$PROJECT_DIR$/petro-bulk-details.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reviv-plus-details.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rimap-details.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/snow-festival-details.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yufe-details.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/portfolio/fuji@2x.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/portfolio/lamp.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/portfolio/lamp@2x.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/portfolio/minimalismo.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/portfolio/minimalismo@2x.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/portfolio/rucksack.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/portfolio/rucksack@2x.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/portfolio/sanddunes.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/portfolio/sanddunes@2x.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/portfolio/skaterboy.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/portfolio/skaterboy@2x.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project_details.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -60,6 +59,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
+    "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -83,7 +83,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-WS-243.25659.40" />
+        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-WS-243.26053.12" />
       </set>
     </attachedChunks>
   </component>
@@ -102,7 +102,14 @@
       <workItem from="1728983790770" duration="1197000" />
       <workItem from="1731000401573" duration="62000" />
       <workItem from="1742316104367" duration="743000" />
-      <workItem from="1742316849818" duration="2992000" />
+      <workItem from="1742316849818" duration="4019000" />
+      <workItem from="1742847531356" duration="512000" />
+      <workItem from="1744015258830" duration="1915000" />
+      <workItem from="1744990638523" duration="4506000" />
+      <workItem from="1745344350836" duration="35000" />
+      <workItem from="1745594262495" duration="698000" />
+      <workItem from="1745748510536" duration="1243000" />
+      <workItem from="1766424416971" duration="3157000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1727867458956</created>
@@ -159,7 +166,39 @@
       <option name="project" value="LOCAL" />
       <updated>1731000449795</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="added reviv plus project to portfolio">
+      <option name="closed" value="true" />
+      <created>1742478108142</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1742478108142</updated>
+    </task>
+    <task id="LOCAL-00009" summary="new image for reviv-plus">
+      <option name="closed" value="true" />
+      <created>1744015795307</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1744015795307</updated>
+    </task>
+    <task id="LOCAL-00010" summary="added seo tags for social networks">
+      <option name="closed" value="true" />
+      <created>1744991368160</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1744991368160</updated>
+    </task>
+    <task id="LOCAL-00011" summary="changed title and description">
+      <option name="closed" value="true" />
+      <created>1744991709333</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1744991709333</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -185,6 +224,10 @@
     <MESSAGE value="last changes before publish" />
     <MESSAGE value="added google tag for google analytics" />
     <MESSAGE value="removed readme.txt" />
-    <option name="LAST_COMMIT_MESSAGE" value="removed readme.txt" />
+    <MESSAGE value="added reviv plus project to portfolio" />
+    <MESSAGE value="new image for reviv-plus" />
+    <MESSAGE value="added seo tags for social networks" />
+    <MESSAGE value="changed title and description" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed title and description" />
   </component>
 </project>
