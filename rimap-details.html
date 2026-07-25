@@ -13,11 +13,8 @@
     <header class="border-b border-border sticky top-0 bg-background/80 backdrop-blur-sm z-10 back-header">
         <div class="max-w-5xl mx-auto px-6 py-6">
             <!-- Replace href with your projects page -->
-            <a
-                    href="#"
-                    class="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors back-link"
-            >
-                <a href="index.html#works" class="icon-arrow-left">←  Back to all projects</a>
+            <a href="index.html#works" class="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors back-link">
+                ←  Back to all projects
             </a>
         </div>
     </header>
@@ -168,47 +165,121 @@
             </div>
         </section>
 
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" aria-label="Close">&times;</button>
+        <button class="lightbox-btn lightbox-prev" aria-label="Previous">‹</button>
+        <img class="lightbox-img" id="lightbox-img" src="" alt="" />
+        <button class="lightbox-btn lightbox-next" aria-label="Next">›</button>
+    </div>
     </main>
 
     <!-- Footer Navigation -->
     <footer class="border-t border-border mt-16 back-footer">
         <div class="max-w-5xl mx-auto px-6 py-8">
             <!-- Replace href with your projects page -->
-            <a
-                    href="#"
-                    class="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors back-link"
-            >
-
-                <a href="index.html#works" class="icon-arrow-left">←  Back to all projects</a>
+            <a href="index.html#works" class="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors back-link">
+                ←  Back to all projects
             </a>
         </div>
     </footer>
 </div>
 
 <script>
-    const track = document.querySelector(".gallery-track");
-    const images = document.querySelectorAll(".gallery-track img");
-    const prevBtn = document.querySelector(".gallery-btn.prev");
-    const nextBtn = document.querySelector(".gallery-btn.next");
+    (function () {
+        const track = document.querySelector(".gallery-track");
+        const imgs = track.querySelectorAll("img");
+        const prevBtn = document.querySelector(".gallery-btn.prev");
+        const nextBtn = document.querySelector(".gallery-btn.next");
+        let index = 0;
 
-    let index = 0;
+        function updateGallery() {
+            track.style.transform = `translateX(-${index * imgs[0].clientWidth}px)`;
+        }
 
-    function updateGallery() {
-        const width = images[0].clientWidth;
-        track.style.transform = `translateX(-${index * width}px)`;
-    }
+        nextBtn.addEventListener("click", () => { if (index < imgs.length - 1) index++; updateGallery(); });
+        prevBtn.addEventListener("click", () => { if (index > 0) index--; updateGallery(); });
+        window.addEventListener("resize", updateGallery);
 
-    nextBtn.addEventListener("click", () => {
-        if (index < images.length - 1) index++;
-        updateGallery();
-    });
+        const wrapper = document.querySelector(".gallery-wrapper");
+        let touchStartX = 0;
+        wrapper.addEventListener("touchstart", (e) => { touchStartX = e.changedTouches[0].screenX; }, { passive: true });
+        wrapper.addEventListener("touchend", (e) => {
+            const diff = e.changedTouches[0].screenX - touchStartX;
+            if (Math.abs(diff) > 50) {
+                if (diff < 0 && index < imgs.length - 1) { index++; updateGallery(); }
+                if (diff > 0 && index > 0) { index--; updateGallery(); }
+            }
+        });
+    })();
+</script>
 
-    prevBtn.addEventListener("click", () => {
-        if (index > 0) index--;
-        updateGallery();
-    });
+<script>
+    (function () {
+        const lightbox = document.getElementById("lightbox");
+        const lightboxImg = document.getElementById("lightbox-img");
+        const closeBtn = document.querySelector(".lightbox-close");
+        const prevBtn = document.querySelector(".lightbox-prev");
+        const nextBtn = document.querySelector(".lightbox-next");
+        const galleryTrack = document.querySelector(".gallery-track");
 
-    window.addEventListener("resize", updateGallery);
+        let images = [];
+        let currentIndex = 0;
+
+        function collectImages() {
+            images = Array.from(galleryTrack.querySelectorAll("img")).map(img => img.src);
+        }
+
+        function openLightbox(src) {
+            collectImages();
+            currentIndex = images.indexOf(src);
+            if (currentIndex === -1) currentIndex = 0;
+            lightboxImg.src = images[currentIndex];
+            lightbox.classList.add("open");
+            document.body.style.overflow = "hidden";
+        }
+
+        function closeLightbox() {
+            lightbox.classList.remove("open");
+            document.body.style.overflow = "";
+        }
+
+        function showNext() {
+            currentIndex = (currentIndex + 1) % images.length;
+            lightboxImg.src = images[currentIndex];
+        }
+
+        function showPrev() {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            lightboxImg.src = images[currentIndex];
+        }
+
+        galleryTrack.addEventListener("click", (e) => {
+            if (e.target.tagName === "IMG") openLightbox(e.target.src);
+        });
+
+        closeBtn.addEventListener("click", closeLightbox);
+        nextBtn.addEventListener("click", showNext);
+        prevBtn.addEventListener("click", showPrev);
+
+        lightbox.addEventListener("click", (e) => {
+            if (e.target === lightbox) closeLightbox();
+        });
+
+        document.addEventListener("keydown", (e) => {
+            if (!lightbox.classList.contains("open")) return;
+            if (e.key === "Escape") closeLightbox();
+            if (e.key === "ArrowRight") showNext();
+            if (e.key === "ArrowLeft") showPrev();
+        });
+
+        let touchStartX = 0;
+        lightboxImg.addEventListener("touchstart", (e) => { touchStartX = e.changedTouches[0].screenX; });
+        lightboxImg.addEventListener("touchend", (e) => {
+            const diff = e.changedTouches[0].screenX - touchStartX;
+            if (Math.abs(diff) > 50) diff > 0 ? showPrev() : showNext();
+        });
+    })();
 </script>
 
 </body>

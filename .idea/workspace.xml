@@ -5,14 +5,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="718f2baa-a58c-4a7d-bb84-ae37ec736951" name="Changes" comment="changed title and description">
-      <change afterPath="$PROJECT_DIR$/petro-bulk-details.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reviv-plus-details.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rimap-details.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/snow-festival-details.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yufe-details.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apex-performance-details.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/portfolio/apex_details/apex1.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/portfolio/apex_details/apex10.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/portfolio/apex_details/apex2.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/portfolio/apex_details/apex3.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/portfolio/apex_details/apex4.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/portfolio/apex_details/apex5.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/portfolio/apex_details/apex6.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/portfolio/apex_details/apex7.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/portfolio/apex_details/apex8.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/portfolio/apex_details/apex9.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/portfolio/apex_details/apexweb.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/portfolio/apex_details/apexweb2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/portfolio/apex_details/apexweb3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/portfolio/gallery/apex_white.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/project_details_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/project_details_style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project_details.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/petro-bulk-details.html" beforeDir="false" afterPath="$PROJECT_DIR$/petro-bulk-details.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reviv-plus-details.html" beforeDir="false" afterPath="$PROJECT_DIR$/reviv-plus-details.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rimap-details.html" beforeDir="false" afterPath="$PROJECT_DIR$/rimap-details.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snow-festival-details.html" beforeDir="false" afterPath="$PROJECT_DIR$/snow-festival-details.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yufe-details.html" beforeDir="false" afterPath="$PROJECT_DIR$/yufe-details.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,12 +52,12 @@
     &quot;assignee&quot;: &quot;riverDeer12&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/riverDeer12/rdd&quot;,
-    &quot;accountId&quot;: &quot;53932b12-3ccc-41ed-9d82-b23c76a159b6&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/riverDeer12/rdd.git",
+    "accountId": "1efe55c0-54ac-42d8-a87b-77e61f90910d"
   }
-}</component>
+}]]></component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -60,8 +77,10 @@
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "DefaultHtmlFileTemplate": "HTML File",
+    "JavaScript Debug.index.html.executor": "Coverage",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
@@ -77,6 +96,10 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/images/avatars" />
+      <recent name="$PROJECT_DIR$/images/portfolio/gallery" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/images/portfolio/apex_details" />
       <recent name="$PROJECT_DIR$/images/portfolio/gallery" />
     </key>
   </component>
