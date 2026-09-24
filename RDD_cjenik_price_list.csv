@@ -1,0 +1,16 @@
+﻿Rbr / No.;Kategorija;Category;Usluga;Service;Cijena (EUR) / Price (EUR);Sidrena cijena (EUR) / Anchor price (EUR);Datum sidrene cijene / Anchor price date;Vrsta cijene;Price type;Jedinica;Unit
+1;Razvoj softvera po mjeri;Custom Software Solutions;Programiranje – sat rada;Programming – hourly rate;45;45;10.09.2026.;fiksna;fixed;sat;hour
+2;Razvoj softvera po mjeri;Custom Software Solutions;Web aplikacija po mjeri;Custom web application;3500;3500;10.09.2026.;od;from;projekt;project
+3;Razvoj softvera po mjeri;Custom Software Solutions;Mobilna aplikacija (iOS / Android);Mobile application (iOS / Android);5000;5000;10.09.2026.;od;from;projekt;project
+4;Web stranice i web trgovine;Websites & Online Shops;Prezentacijska web stranica;Business / presentation website;800;800;10.09.2026.;od;from;projekt;project
+5;Web stranice i web trgovine;Websites & Online Shops;Web trgovina;Online shop;2000;2000;10.09.2026.;od;from;projekt;project
+6;Digitalna transformacija;Digital Transformation;Analiza procesa i plan digitalizacije;Process analysis & digitalisation plan;600;600;10.09.2026.;od;from;projekt;project
+7;Digitalna transformacija;Digital Transformation;Integracija sustava i automatizacija;System integration & automation;45;45;10.09.2026.;fiksna;fixed;sat;hour
+8;Konzultacije;Consulting;IT konzultacije;IT consulting;50;50;10.09.2026.;fiksna;fixed;sat;hour
+9;Tehnička podrška;Technical Support;Održavanje web stranice;Website maintenance;50;50;10.09.2026.;od;from;mjesec;month
+10;Tehnička podrška;Technical Support;Održavanje aplikacije;Application maintenance;150;150;10.09.2026.;od;from;mjesec;month
+11;Tehnička podrška;Technical Support;Tehnička intervencija;Technical support call-out;40;40;10.09.2026.;fiksna;fixed;sat;hour
+12;Brending i vizualni identitet;Branding Identity;Dizajn logotipa;Logo design;300;300;10.09.2026.;od;from;projekt;project
+13;Brending i vizualni identitet;Branding Identity;Paket vizualnog identiteta;Visual identity package;800;800;10.09.2026.;od;from;projekt;project
+14;Dizajn proizvoda;Product Design;UX/UI dizajn i prototip;UX/UI design & prototype;700;700;10.09.2026.;od;from;projekt;project
+15;Dizajn proizvoda;Product Design;Dizajn – sat rada;Design – hourly rate;40;40;10.09.2026.;fiksna;fixed;sat;hour

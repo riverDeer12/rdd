@@ -1,0 +1,107 @@
+/* ===================================================================
+ * RDD Software - language switcher (hr / en)
+ * Used together with js/i18n.js on every page.
+ * ------------------------------------------------------------------- */
+
+/* show only the active language */
+html[lang="hr"] [data-lang="en"],
+html[lang="en"] [data-lang="hr"] {
+    display: none !important;
+}
+
+/* --------------------------------------------------------------------
+ * switcher
+ * -------------------------------------------------------------------- */
+.lang-switch {
+    display: inline-flex;
+    align-items: center;
+    gap: .2rem;
+}
+
+.lang-switch__btn,
+.lang-switch__btn:hover,
+.lang-switch__btn:focus {
+    display: inline-block;
+    height: auto;
+    margin: 0;
+    padding: .4rem .6rem;
+    font-family: inherit;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 1.6;
+    letter-spacing: .35em;
+    text-transform: uppercase;
+    background: none;
+    border: 0;
+    box-shadow: none;
+    cursor: pointer;
+}
+
+.lang-switch__btn {
+    color: rgba(255, 255, 255, .45);
+}
+
+.lang-switch__btn:hover,
+.lang-switch__btn:focus {
+    color: #ffffff;
+}
+
+.lang-switch__btn.is-active {
+    color: hsla(168, 62%, 46%, 1);
+}
+
+.lang-switch__sep {
+    color: rgba(255, 255, 255, .25);
+    font-size: 10px;
+}
+
+/* --------------------------------------------------------------------
+ * main site header (index.html, pricing.html)
+ * -------------------------------------------------------------------- */
+.main-nav li.lang-switch-item {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1.6rem;
+}
+
+.header-mobile .lang-switch {
+    position: absolute;
+    top: 0;
+    right: calc(var(--header-height) + .8rem);
+    height: var(--header-height);
+}
+
+/* the extra menu items (pricing, language) need a bit more room on narrow desktops */
+@media screen and (min-width: 801px) {
+    .main-nav a {
+        white-space: nowrap;
+    }
+}
+
+@media screen and (min-width: 801px) and (max-width: 1100px) {
+    .main-nav a {
+        padding: 0 1.2rem 0 1.6rem;
+    }
+
+    .main-nav li.lang-switch-item {
+        padding: 0 .8rem;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .main-nav li.lang-switch-item {
+        display: none;
+    }
+}
+
+/* --------------------------------------------------------------------
+ * project detail pages
+ * -------------------------------------------------------------------- */
+.back-header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.6rem;
+}

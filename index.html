@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html class="no-js ss-preload" lang="en">
+<html class="no-js ss-preload" lang="hr"
+      data-title-hr="RDD Software - Osnažujemo poslovanje tehnologijom."
+      data-title-en="RDD Software - Empowering Business Through Technology.">
 <head>
 
     <!--- basic page needs
     ================================================== -->
     <meta charset="utf-8">
-    <title>RDD Software - Empowering Business Through Technology.</title>
+    <title>RDD Software - Osnažujemo poslovanje tehnologijom.</title>
     <meta name="description" content="RDD Software - Empowering Business Through Technology.">
     <meta name="author" content="Software company that can be likened to a deer in the tech world: agile, swift, and
                             adaptable in navigating complex environments. Just as a deer relies on its keen
@@ -34,6 +36,11 @@
     ================================================== -->
     <link rel="stylesheet" href="css/vendor.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/i18n.css">
+
+    <!-- language (hr / en) - runs before render so only one language is shown
+    ================================================== -->
+    <script src="js/i18n.js"></script>
 
     <!-- favicons
     ================================================== -->
@@ -73,6 +80,11 @@
 
         <div class="header-mobile">
             <span class="mobile-home-link"><a href="index.html">RDD.</a></span>
+            <div class="lang-switch" role="group" aria-label="Jezik / Language">
+                <button type="button" class="lang-switch__btn" data-set-lang="hr">HR</button>
+                <span class="lang-switch__sep">/</span>
+                <button type="button" class="lang-switch__btn" data-set-lang="en">EN</button>
+            </div>
             <a class="mobile-menu-toggle" href="#0"><span>Menu</span></a>
         </div>
 
@@ -80,10 +92,18 @@
             <nav class="column lg-12 main-nav">
                 <ul>
                     <li><a href="index.html" class="home-link">RDD.</a></li>
-                    <li class="current"><a href="#intro" class="smoothscroll">Intro</a></li>
-                    <li><a href="#about" class="smoothscroll">About</a></li>
-                    <li><a href="#works" class="smoothscroll">Works</a></li>
-                    <li><a href="#contact" class="smoothscroll">Say Hello</a></li>
+                    <li class="current"><a href="#intro" class="smoothscroll"><span data-lang="hr">Početna</span><span data-lang="en">Intro</span></a></li>
+                    <li><a href="#about" class="smoothscroll"><span data-lang="hr">O nama</span><span data-lang="en">About</span></a></li>
+                    <li><a href="#works" class="smoothscroll"><span data-lang="hr">Projekti</span><span data-lang="en">Works</span></a></li>
+                    <li><a href="pricing.html"><span data-lang="hr">Cjenik</span><span data-lang="en">Pricing</span></a></li>
+                    <li><a href="#contact" class="smoothscroll"><span data-lang="hr">Kontakt</span><span data-lang="en">Say Hello</span></a></li>
+                    <li class="lang-switch-item">
+                        <div class="lang-switch" role="group" aria-label="Jezik / Language">
+                            <button type="button" class="lang-switch__btn" data-set-lang="hr">HR</button>
+                            <span class="lang-switch__sep">/</span>
+                            <button type="button" class="lang-switch__btn" data-set-lang="en">EN</button>
+                        </div>
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -107,7 +127,12 @@
                         RDD Software
                     </div>
 
-                    <h1 class="text-huge-title">
+                    <h1 class="text-huge-title" data-lang="hr">
+                        Ovo je RDD, <br>
+                        softverska tvrtka <br>
+                        iz Hrvatske. <br>
+                    </h1>
+                    <h1 class="text-huge-title" data-lang="en">
                         This is RDD, <br>
                         a software company <br>
                         based in Croatia. <br>
@@ -143,15 +168,27 @@
                     <div class="about-info__text">
 
                         <h2 class="text-pretitle with-line" data-animate-el>
-                            About
+                            <span data-lang="hr">O nama</span><span data-lang="en">About</span>
                         </h2>
-                        <p class="attention-getter" data-animate-el>
+                        <p class="attention-getter" data-animate-el data-lang="hr">
+                            Softversku tvrtku možemo usporediti s jelenom u svijetu tehnologije: agilna je, brza i
+                            prilagodljiva u snalaženju u složenim okruženjima. Kao što se jelen oslanja na oštre
+                            instinkte i brzinu kako bi opstao na različitim terenima, tako i ova tvrtka koristi svoju
+                            fleksibilnost, kreativnost i stručnost kako bi klijentima isporučila rješenja po mjeri.
+                        </p>
+                        <p class="attention-getter" data-animate-el data-lang="hr">
+                            Poput jelena, koji spaja snagu i eleganciju, tvrtka ostaje usmjerena na visokokvalitetan
+                            razvoj, a istovremeno se brzo prilagođava promjenjivom svijetu tehnologije. Zahvaljujući
+                            sposobnosti da učinkovito odgovori na izazove, snažan je, ali i elegantan sudionik
+                            globalnog tehnološkog ekosustava.
+                        </p>
+                        <p class="attention-getter" data-animate-el data-lang="en">
                             Software company that can be likened to a deer in the tech world: agile, swift, and
                             adaptable in navigating complex environments. Just as a deer relies on its keen
                             instincts and speed to thrive in diverse terrains, this software company leverages its
                             flexibility, creativity, and expertise to deliver tailored solutions for clients.
                         </p>
-                        <p class="attention-getter" data-animate-el>
+                        <p class="attention-getter" data-animate-el data-lang="en">
                             Like the deer, which balances strength with elegance, the company maintains a focus on
                             high-quality development while adapting quickly to the fast-changing landscape of
                             technology. This ability to respond efficiently to challenges makes them a strong yet
@@ -166,9 +203,19 @@
             <div class="row about-expertise" data-animate-block>
                 <div class="column lg-12">
 
-                    <h2 class="text-pretitle" data-animate-el>Expertise</h2>
+                    <h2 class="text-pretitle" data-animate-el>
+                        <span data-lang="hr">Stručnost</span><span data-lang="en">Expertise</span>
+                    </h2>
 
-                    <ul class="skills-list h1" data-animate-el>
+                    <ul class="skills-list h1" data-animate-el data-lang="hr">
+                        <li>Razvoj softvera po mjeri</li>
+                        <li>Digitalna transformacija</li>
+                        <li>Konzultacije</li>
+                        <li>Tehnička podrška</li>
+                        <li>Brending i vizualni identitet</li>
+                        <li>Dizajn proizvoda</li>
+                    </ul>
+                    <ul class="skills-list h1" data-animate-el data-lang="en">
                         <li>Custom Software Solutions</li>
                         <li>Digital Transformation</li>
                         <li>Consulting</li>
@@ -193,9 +240,12 @@
                 <div class="column lg-12" data-animate-block>
 
                     <h2 class="text-pretitle" data-animate-el>
-                        Recent Works
+                        <span data-lang="hr">Nedavni projekti</span><span data-lang="en">Recent Works</span>
                     </h2>
-                    <p class="h1" data-animate-el>
+                    <p class="h1" data-animate-el data-lang="hr">
+                        Ovo su neki od naših najdražih nedavnih projekata. Slobodno ih pogledajte.
+                    </p>
+                    <p class="h1" data-animate-el data-lang="en">
                         Here are some of our favorite projects we have done lately. Feel free to check them out.
                     </p>
 
@@ -210,14 +260,14 @@
 
                                 <div class="folio-list__item-text">
                                     <div class="folio-list__item-cat">
-                                        Web Application
+                                        <span data-lang="hr">Web aplikacija</span><span data-lang="en">Web Application</span>
                                     </div>
                                     <div class="folio-list__item-title">
                                         Rimap
                                     </div>
                                 </div>
                             </a>
-                            <a class="folio-list__proj-link" href="https://rimap.uniri.hr" title="project link">
+                            <a class="folio-list__proj-link" href="https://rimap.uniri.hr" title="Link na projekt / Project link">
                                 <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
                                     <path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z"
@@ -235,14 +285,14 @@
 
                                 <div class="folio-list__item-text">
                                     <div class="folio-list__item-cat">
-                                        Web Application
+                                        <span data-lang="hr">Web aplikacija</span><span data-lang="en">Web Application</span>
                                     </div>
                                     <div class="folio-list__item-title">
                                         Yufe
                                     </div>
                                 </div>
                             </a>
-                            <a class="folio-list__proj-link" href="https://yufe-rimap.uniri.hr" title="project link">
+                            <a class="folio-list__proj-link" href="https://yufe-rimap.uniri.hr" title="Link na projekt / Project link">
                                 <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
                                     <path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z"
@@ -261,7 +311,7 @@
 
                                 <div class="folio-list__item-text">
                                     <div class="folio-list__item-cat">
-                                        Website
+                                        <span data-lang="hr">Web stranica</span><span data-lang="en">Website</span>
                                     </div>
                                     <div class="folio-list__item-title">
                                         Petro&Bulk Solutions
@@ -269,7 +319,7 @@
                                 </div>
                             </a>
                             <a class="folio-list__proj-link" href="https://riverdeer12.github.io/petrol-biofuel/"
-                               title="project link">
+                               title="Link na projekt / Project link">
                                 <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
                                     <path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z"
@@ -288,7 +338,7 @@
 
                                 <div class="folio-list__item-text">
                                     <div class="folio-list__item-cat">
-                                        Website
+                                        <span data-lang="hr">Web stranica</span><span data-lang="en">Website</span>
                                     </div>
                                     <div class="folio-list__item-title">
                                         Snow Festival
@@ -296,7 +346,7 @@
                                 </div>
                             </a>
                             <a class="folio-list__proj-link" href="https://riverdeer12.github.io/gremo-na-sljeme/"
-                               title="project link">
+                               title="Link na projekt / Project link">
                                 <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
                                     <path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z"
@@ -315,14 +365,14 @@
 
                                 <div class="folio-list__item-text">
                                     <div class="folio-list__item-cat">
-                                        Web Shop
+                                        <span data-lang="hr">Web trgovina</span><span data-lang="en">Web Shop</span>
                                     </div>
                                     <div class="folio-list__item-title">
                                         ReViv Plus
                                     </div>
                                 </div>
                             </a>
-                            <a class="folio-list__proj-link" href="https://reviv-plus.com" title="project link">
+                            <a class="folio-list__proj-link" href="https://reviv-plus.com" title="Link na projekt / Project link">
                                 <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
                                     <path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z"
@@ -341,7 +391,7 @@
 
                                 <div class="folio-list__item-text">
                                     <div class="folio-list__item-cat">
-                                        Mobile Application
+                                        <span data-lang="hr">Mobilna aplikacija</span><span data-lang="en">Mobile Application</span>
                                     </div>
                                     <div class="folio-list__item-title">
                                         Apex Performance Fit
@@ -350,7 +400,7 @@
                             </a>
                             <a class="folio-list__proj-link"
                                href="https://apps.apple.com/hr/app/apex-performance-fit/id6767208005"
-                               title="project link">
+                               title="Link na projekt / Project link">
                                 <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
                                     <path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z"
@@ -378,10 +428,18 @@
                                          class="testimonial-slider__avatar">
                                     <cite class="testimonial-slider__cite">
                                         <strong>Damir Medved</strong>
-                                        <span>Director, EDIH Adria</span>
+                                        <span data-lang="hr">Direktor, EDIH Adria</span><span data-lang="en">Director, EDIH Adria</span>
                                     </cite>
                                 </div>
-                                <p>
+                                <p data-lang="hr">
+                                    Platforma RIMAP dobro je organizirana i poduzećima, istraživačima i javnom sektoru olakšava
+                                    povezivanje i suradnju na istraživačko-razvojnim projektima. Pohvalan je fokus na
+                                    digitalne tehnologije i stvaranje proizvoda i usluga visoke dodane vrijednosti kroz
+                                    multidisciplinarni pristup. To je snažan alat za poticanje inovacija koji koristi
+                                    resurse i stručnost regije. Toplo preporučujem svima koji žele biti dio živahne
+                                    inovacijske zajednice!
+                                </p>
+                                <p data-lang="en">
                                     The RIMAP platform is well-organized, making it easy for businesses, researchers,
                                     and
                                     public sectors to connect and work together on research and development projects.
@@ -398,10 +456,17 @@
                                          class="testimonial-slider__avatar">
                                     <cite class="testimonial-slider__cite">
                                         <strong>Roel de Beer</strong>
-                                        <span>Project Lead Digitalization, University of Maastricht</span>
+                                        <span data-lang="hr">Voditelj projekata digitalizacije, Sveučilište u Maastrichtu</span><span data-lang="en">Project Lead Digitalization, University of Maastricht</span>
                                     </cite>
                                 </div>
-                                <p>
+                                <p data-lang="hr">
+                                    Iako je još u razvoju, ova platforma puno obećava unutar YUFE mreže. Impresivan je njezin
+                                    fokus na prekograničnu suradnju akademske zajednice i gospodarstva diljem Europe,
+                                    posebno u poticanju inovacija kroz digitalne tehnologije. Veselim se tome kako će
+                                    i dalje povezivati poduzeća, istraživače i javni sektor u stvaranju proizvoda i
+                                    usluga visoke dodane vrijednosti.
+                                </p>
+                                <p data-lang="en">
                                     Though still under development, this platform shows great promise within the YUFE
                                     network. Its focus on cross-border collaboration between academia and the economy
                                     across Europe is impressive, especially in fostering innovation through digital
@@ -416,10 +481,16 @@
                                          class="testimonial-slider__avatar">
                                     <cite class="testimonial-slider__cite">
                                         <strong>Zarko Galjanic</strong>
-                                        <span>Co-Founder, Petro & Biofuel Trading KFT</span>
+                                        <span data-lang="hr">Suosnivač, Petro & Biofuel Trading KFT</span><span data-lang="en">Co-Founder, Petro & Biofuel Trading KFT</span>
                                     </cite>
                                 </div>
-                                <p>
+                                <p data-lang="hr">
+                                    Ova web stranica namijenjena je trgovini naftom i biogorivima, a nudi čist, profesionalan
+                                    dizajn i jednostavnu navigaciju. Pruža korisne podatke, tržišne uvide i prilike za
+                                    trgovanje. Naglasak na održivosti odličan je dodatak. Sve u svemu, pouzdana i
+                                    učinkovita platforma za stručnjake iz industrije. Toplo preporučujem!
+                                </p>
+                                <p data-lang="en">
                                     This website is meant for petrol and biofuel trading, offering a clean,
                                     professional design and easy navigation. It provides valuable data, market
                                     insights, and trading opportunities. The focus on sustainability is a great touch.
@@ -434,10 +505,16 @@
                                          class="testimonial-slider__avatar">
                                     <cite class="testimonial-slider__cite">
                                         <strong>Sara Husidic</strong>
-                                        <span>Trade Marketing Representative, JTI</span>
+                                        <span data-lang="hr">Predstavnica za trade marketing, JTI</span><span data-lang="en">Trade Marketing Representative, JTI</span>
                                     </cite>
                                 </div>
-                                <p>
+                                <p data-lang="hr">
+                                    Sadržaj web stranice Snow Festivala dobro je organiziran pa je lako pronaći upravo ono što
+                                    tražim. Osim toga, stranica je responzivna i odlično radi i na računalu i na
+                                    mobitelu. Bilo da tražite informacije ili usluge, ova stranica čini cijeli proces
+                                    jednostavnim i ugodnim.
+                                </p>
+                                <p data-lang="en">
                                     The content on Snow Festival Website is well-organized, making it easy to find
                                     exactly what I was looking for. Additionally, the website is responsive and performs
                                     beautifully on both desktop and mobile devices. Whether you're here for information
@@ -451,10 +528,17 @@
                                          class="testimonial-slider__avatar">
                                     <cite class="testimonial-slider__cite">
                                         <strong>Nicola Capobianco</strong>
-                                        <span>General Director, Capobianco d.o.o.</span>
+                                        <span data-lang="hr">Generalni direktor, Capobianco d.o.o.</span><span data-lang="en">General Director, Capobianco d.o.o.</span>
                                     </cite>
                                 </div>
-                                <p>
+                                <p data-lang="hr">
+                                    Web stranica ReViv Plus dinamično je i šareno online iskustvo koje spaja snažnu estetiku s
+                                    dizajnom usmjerenim na korisnika. Nudi mnoštvo informacija, a pritom ostaje
+                                    zanimljiva i pristupačna. Bilo da ste potencijalni kupac ili vas samo zanima
+                                    dodatak prehrani, ova stranica ostavlja dobar prvi dojam i odlično predstavlja
+                                    vitalnost brenda i njegovu misiju usmjerenu na zdravlje.
+                                </p>
+                                <p data-lang="en">
                                     ReViv Plus website is a dynamic, colorful online experience that combines strong
                                     aesthetics with user-centric design. It offers a wealth of information while keeping
                                     things engaging and accessible. Whether you're a potential customer or just curious
@@ -482,10 +566,15 @@
             <div class="row contact-top">
                 <div class="column lg-12">
                     <h2 class="text-pretitle">
-                        Get In Touch
+                        <span data-lang="hr">Javite nam se</span><span data-lang="en">Get In Touch</span>
                     </h2>
 
-                    <p class="h1">
+                    <p class="h1" data-lang="hr">
+                        Veselimo se vašoj poruci.
+                        Imate li pitanje ili samo želite
+                        porazgovarati o tehnologiji — pišite nam.
+                    </p>
+                    <p class="h1" data-lang="en">
                         We'd love to hear from you.
                         Whether you have a question or just
                         want to chat about tech — shoot me a message.
@@ -495,8 +584,7 @@
 
             <div class="row contact-bottom">
                 <div class="column lg-4 md-12 contact-block">
-                    <a href="mailto:info@rdd.software" class="mailtoui btn btn--medium u-fullwidth contact-btn">Say
-                        Hello.</a>
+                    <a href="mailto:info@rdd.software" class="mailtoui btn btn--medium u-fullwidth contact-btn"><span data-lang="hr">Pišite nam.</span><span data-lang="en">Say Hello.</span></a>
                 </div>
             </div> <!-- end contact-bottom -->
 
@@ -515,7 +603,7 @@
             </div>
 
             <div class="ss-go-top">
-                <a class="smoothscroll" title="Back to Top" href="#top">
+                <a class="smoothscroll" title="Na vrh / Back to Top" href="#top">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill-rule="evenodd" clip-rule="evenodd">
                         <path d="M11 2.206l-6.235 7.528-.765-.645 7.521-9 7.479 9-.764.646-6.236-7.53v21.884h-1v-21.883z"/>
                     </svg>

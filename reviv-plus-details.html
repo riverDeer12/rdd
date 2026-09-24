@@ -1,21 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hr"
+      data-title-hr="Reviv Plus - Detalji projekta"
+      data-title-en="Reviv Plus - Project Details">
 <head>
     <meta charset="UTF-8"/>
-    <title>Reviv Plus - Project Details</title>
+    <title>Reviv Plus - Detalji projekta</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <!-- Your main stylesheet -->
     <link rel="stylesheet" href="css/project_details_style.css"/>
+    <link rel="stylesheet" href="css/i18n.css"/>
+    <!-- language (hr / en) - runs before render so only one language is shown -->
+    <script src="js/i18n.js"></script>
 </head>
 <body class="dark">
 <div class="min-h-screen project-detail">
     <!-- Header -->
     <header class="border-b border-border sticky top-0 bg-background/80 backdrop-blur-sm z-10 back-header">
-        <div class="max-w-5xl mx-auto px-6 py-6">
+        <div class="max-w-5xl mx-auto px-6 py-6 back-header__inner">
             <!-- Replace href with your projects page -->
             <a href="index.html#works" class="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors back-link">
-                ←  Back to all projects
+                ←  <span data-lang="hr">Natrag na sve projekte</span><span data-lang="en">Back to all projects</span>
             </a>
+            <div class="lang-switch" role="group" aria-label="Jezik / Language">
+                <button type="button" class="lang-switch__btn" data-set-lang="hr">HR</button>
+                <span class="lang-switch__sep">/</span>
+                <button type="button" class="lang-switch__btn" data-set-lang="en">EN</button>
+            </div>
         </div>
     </header>
 
@@ -25,7 +35,10 @@
             <div class="flex items-start justify-between mb-6">
                 <div>
                     <h1 class="mb-4 project-title">ReViv Plus</h1>
-                    <p class="text-muted-foreground max-w-2xl project-long-description">
+                    <p class="text-muted-foreground max-w-2xl project-long-description" data-lang="hr">
+                        Web stranica posvećena dodatku prehrani ReViv Plus osmišljena je kao moderna, informativna i korisnicima prilagođena web trgovina koja jasno prenosi sve prednosti proizvoda. Kroz privlačan dizajn i intuitivnu navigaciju korisnici dobivaju detaljan uvid u sastav, način djelovanja i učinkovitost dodatka prehrani, a pritom mogu jednostavno pregledavati ponudu i dovršiti kupnju online. Glavni je cilj stranice potencijalnim kupcima pružiti sve ključne informacije o proizvodu, omogućiti neometano i sigurno iskustvo kupnje te podržati sigurne i dobro informirane odluke o kupnji.
+                    </p>
+                    <p class="text-muted-foreground max-w-2xl project-long-description" data-lang="en">
                         The website dedicated to the ReViv Plus supplement is designed as a modern, informative, and user-friendly webshop that clearly communicates all the benefits of the product. Through an attractive design and intuitive navigation, users gain detailed insight into the supplement’s composition, mode of action, and effectiveness, while also being able to seamlessly browse offers and complete purchases online. The main goal of the site is to provide potential customers with all essential product information, enable a smooth and secure buying experience, and support confident, well-informed purchasing decisions.
                     </p>
                 </div>
@@ -40,7 +53,7 @@
                         rel="noopener noreferrer"
                         class="flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:opacity-90 transition-opacity"
                 >
-                    <span style="color: #0a0b0b">View Project</span>
+                    <span style="color: #0a0b0b"><span data-lang="hr">Pogledaj projekt</span><span data-lang="en">View Project</span></span>
                 </a>
             </div>
         </div>
@@ -56,7 +69,7 @@
 
         <!-- Technologies -->
         <section class="mb-16">
-            <h2 class="mb-6">Technologies</h2>
+            <h2 class="mb-6"><span data-lang="hr">Tehnologije</span><span data-lang="en">Technologies</span></h2>
             <div class="flex flex-wrap gap-3">
           <span class="px-4 py-2 bg-muted text-foreground rounded-lg border border-border">
             HTML
@@ -74,15 +87,21 @@
         <!-- Challenge & Solution -->
         <section class="challenge-solution mb-16">
             <div>
-                <h3 class="mb-4">Challenge</h3>
-                <p class="text-muted-foreground leading-relaxed">
+                <h3 class="mb-4"><span data-lang="hr">Izazov</span><span data-lang="en">Challenge</span></h3>
+                <p class="text-muted-foreground leading-relaxed" data-lang="hr">
+                    Osmisliti platformu koja ne samo da jasno objašnjava prednosti, sastav i učinkovitost dodatka prehrani ReViv Plus, nego funkcionira i kao pouzdana i jednostavna web trgovina. Izazov je bio uskladiti informativan sadržaj koji gradi povjerenje s neometanim iskustvom online kupnje, kako bi korisnici imali povjerenja i u proizvod i u samu kupnju, bez ikakvih zapreka.
+                </p>
+                <p class="text-muted-foreground leading-relaxed" data-lang="en">
                     Design a platform that not only clearly explains the benefits, composition, and effectiveness of the ReViv Plus supplement, but also functions as a reliable and user-friendly webshop. The challenge was to balance informative, trust-building content with a smooth e-commerce experience, ensuring users feel confident both in the product and in completing a purchase without friction.
                 </p>
             </div>
 
             <div>
-                <h3 class="mb-4">Solution</h3>
-                <p class="text-muted-foreground leading-relaxed">
+                <h3 class="mb-4"><span data-lang="hr">Rješenje</span><span data-lang="en">Solution</span></h3>
+                <p class="text-muted-foreground leading-relaxed" data-lang="hr">
+                    Razviti modernu web trgovinu usmjerenu na sadržaj, s jasnom hijerarhijom informacija i intuitivnom navigacijom koja korisnike vodi od upoznavanja s proizvodom do kupnje. Platforma spaja detaljnu priču o proizvodu s pojednostavljenim procesom kupnje, sigurnim plaćanjem i responzivnim dizajnom &mdash; tako da korisnici lako istražuju prednosti proizvoda, stječu povjerenje u brend i neometano dovršavaju kupnju na svim uređajima.
+                </p>
+                <p class="text-muted-foreground leading-relaxed" data-lang="en">
                     Develop a modern, content-driven webshop with a clear information hierarchy and intuitive navigation that guides users from education to conversion. The platform combines detailed product storytelling with a streamlined shopping flow, secure checkout, and responsive design—making it easy for users to explore product benefits, trust the brand, and complete purchases seamlessly across all devices.
                 </p>
             </div>
@@ -91,7 +110,7 @@
 
         <!-- Additional Images/Screenshots Section -->
         <section class="mb-16">
-            <h2 class="mb-6">Project Showcase</h2>
+            <h2 class="mb-6"><span data-lang="hr">Prikaz projekta</span><span data-lang="en">Project Showcase</span></h2>
 
             <div class="gallery-container">
                 <button class="gallery-btn prev">‹</button>
@@ -111,51 +130,63 @@
 
         <!-- Key Features -->
         <section class="mb-16">
-            <h2 class="mb-6">Key Features</h2>
+            <h2 class="mb-6"><span data-lang="hr">Ključne značajke</span><span data-lang="en">Key Features</span></h2>
 
             <div class="key-features-grid">
                 <div class="feature-box">
-                    <h4 class="mb-2">Responsive Design</h4>
-                    <p class="text-muted-foreground">Optimized for all devices and screen sizes.</p>
+                    <h4 class="mb-2"><span data-lang="hr">Responzivan dizajn</span><span data-lang="en">Responsive Design</span></h4>
+                    <p class="text-muted-foreground" data-lang="hr">Optimizirano za sve uređaje i veličine zaslona.</p>
+                    <p class="text-muted-foreground" data-lang="en">Optimized for all devices and screen sizes.</p>
                 </div>
 
                 <div class="feature-box">
-                    <h4 class="mb-2">Performance</h4>
-                    <p class="text-muted-foreground">Fast load times and smooth interactions.</p>
+                    <h4 class="mb-2"><span data-lang="hr">Performanse</span><span data-lang="en">Performance</span></h4>
+                    <p class="text-muted-foreground" data-lang="hr">Brzo učitavanje i glatka interakcija.</p>
+                    <p class="text-muted-foreground" data-lang="en">Fast load times and smooth interactions.</p>
                 </div>
 
                 <div class="feature-box">
-                    <h4 class="mb-2">Webshop Functionality</h4>
-                    <p class="text-muted-foreground">
+                    <h4 class="mb-2"><span data-lang="hr">Funkcionalnost web trgovine</span><span data-lang="en">Webshop Functionality</span></h4>
+                    <p class="text-muted-foreground" data-lang="hr">
+                        Potpuno opremljena web trgovina s katalogom proizvoda, filtriranjem, košaricom i intuitivnim procesom naplate.
+                    </p>
+                    <p class="text-muted-foreground" data-lang="en">
                         Fully featured online store with product catalog, filtering, cart system, and intuitive checkout
                         flow.
                     </p>
                 </div>
 
                 <div class="feature-box">
-                    <h4 class="mb-2">Secure Payment Methods</h4>
-                    <p class="text-muted-foreground">
+                    <h4 class="mb-2"><span data-lang="hr">Sigurni načini plaćanja</span><span data-lang="en">Secure Payment Methods</span></h4>
+                    <p class="text-muted-foreground" data-lang="hr">
+                        Podržava sigurno plaćanje karticama, putem PayPala, digitalnih novčanika i lokalnih pružatelja usluga plaćanja.
+                    </p>
+                    <p class="text-muted-foreground" data-lang="en">
                         Supports secure payments including cards, PayPal, digital wallets, and local providers.
                     </p>
                 </div>
 
                 <div class="feature-box">
-                    <h4 class="mb-2">Box Now Integration</h4>
-                    <p class="text-muted-foreground">
+                    <h4 class="mb-2"><span data-lang="hr">Integracija s Box Now</span><span data-lang="en">Box Now Integration</span></h4>
+                    <p class="text-muted-foreground" data-lang="hr">
+                        Dostava u paketomate, praćenje pošiljaka u stvarnom vremenu i automatizirana integracija s Box Now API-jem.
+                    </p>
+                    <p class="text-muted-foreground" data-lang="en">
                         Locker delivery, real-time tracking, and automated Box Now API integration.
                     </p>
                 </div>
 
                 <div class="feature-box">
-                    <h4 class="mb-2">Scalability</h4>
-                    <p class="text-muted-foreground">Built to handle growth and increased demand.</p>
+                    <h4 class="mb-2"><span data-lang="hr">Skalabilnost</span><span data-lang="en">Scalability</span></h4>
+                    <p class="text-muted-foreground" data-lang="hr">Izgrađeno za rast i povećanu potražnju.</p>
+                    <p class="text-muted-foreground" data-lang="en">Built to handle growth and increased demand.</p>
                 </div>
             </div>
         </section>
 
     <!-- Lightbox -->
     <div class="lightbox" id="lightbox">
-        <button class="lightbox-close" aria-label="Close">&times;</button>
+        <button class="lightbox-close" aria-label="Zatvori / Close">&times;</button>
         <button class="lightbox-btn lightbox-prev" aria-label="Previous">‹</button>
         <img class="lightbox-img" id="lightbox-img" src="" alt="" />
         <button class="lightbox-btn lightbox-next" aria-label="Next">›</button>
@@ -167,7 +198,7 @@
         <div class="max-w-5xl mx-auto px-6 py-8">
             <!-- Replace href with your projects page -->
             <a href="index.html#works" class="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors back-link">
-                ←  Back to all projects
+                ←  <span data-lang="hr">Natrag na sve projekte</span><span data-lang="en">Back to all projects</span>
             </a>
         </div>
     </footer>

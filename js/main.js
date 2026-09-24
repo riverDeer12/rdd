@@ -247,7 +247,13 @@
     * ------------------------------------------------------ */
     const ssLightbox = function() {
 
-        const folioLinks = document.querySelectorAll('.folio-list__item-link');
+        // only links pointing to an in-page modal (href="#id"); links to
+        // project detail pages are left to behave as normal links
+        const folioLinks = Array.from(document.querySelectorAll('.folio-list__item-link'))
+            .filter(function(link) {
+                const href = link.getAttribute('href');
+                return href && href.charAt(0) === '#' && href.length > 1 && document.querySelector(href);
+            });
         const modals = [];
 
         folioLinks.forEach(function(link) {

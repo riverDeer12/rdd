@@ -1,21 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hr"
+      data-title-hr="Apex Performance Fit - Detalji projekta"
+      data-title-en="Apex Performance Fit - Project Details">
 <head>
     <meta charset="UTF-8"/>
-    <title>Apex Performance Fit - Project Details</title>
+    <title>Apex Performance Fit - Detalji projekta</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <!-- Your main stylesheet -->
     <link rel="stylesheet" href="css/project_details_style.css"/>
+    <link rel="stylesheet" href="css/i18n.css"/>
+    <!-- language (hr / en) - runs before render so only one language is shown -->
+    <script src="js/i18n.js"></script>
 </head>
 <body class="dark">
 <div class="min-h-screen project-detail">
     <!-- Header -->
     <header class="border-b border-border sticky top-0 bg-background/80 backdrop-blur-sm z-10 back-header">
-        <div class="max-w-5xl mx-auto px-6 py-6">
+        <div class="max-w-5xl mx-auto px-6 py-6 back-header__inner">
             <!-- Replace href with your projects page -->
             <a href="index.html#works" class="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors back-link">
-                ←  Back to all projects
+                ←  <span data-lang="hr">Natrag na sve projekte</span><span data-lang="en">Back to all projects</span>
             </a>
+            <div class="lang-switch" role="group" aria-label="Jezik / Language">
+                <button type="button" class="lang-switch__btn" data-set-lang="hr">HR</button>
+                <span class="lang-switch__sep">/</span>
+                <button type="button" class="lang-switch__btn" data-set-lang="en">EN</button>
+            </div>
         </div>
     </header>
 
@@ -26,7 +36,10 @@
                 <div>
                     <h1 class="text-3xl sm:text-4xl font-semibold tracking-tight">Apex Performance Fit</h1>
 
-                    <p class="mt-4 text-zinc-300 leading-relaxed">
+                    <p class="mt-4 text-zinc-300 leading-relaxed" data-lang="hr">
+                        Apex Performance Fit mobilna je i web platforma koja povezuje trenere i sportaše unutar zajednice Apex Performance. Trenerima daje potpunu kontrolu nad njihovim trenerskim poslom, uključujući upravljanje klijentima, raspored i praćenje treninga, dok sportaši mogu rezervirati termine, pratiti svoj plan treninga i ostati u kontaktu sa svojim trenerom &mdash; sve kroz čisto i intuitivno iskustvo na mobitelu i webu.
+                    </p>
+                    <p class="mt-4 text-zinc-300 leading-relaxed" data-lang="en">
                         Apex Performance Fit is a mobile and web platform connecting trainers and athletes within the Apex Performance community. It gives trainers full control over their coaching business including client management, scheduling, and session tracking, while athletes can book sessions, follow their training plan, and stay connected with their coach, all across a clean, intuitive experience on both mobile and web.
                     </p>
                 </div>
@@ -41,7 +54,7 @@
                         rel="noopener noreferrer"
                         class="flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:opacity-90 transition-opacity"
                 >
-                    <span style="color: #0a0b0b">View Project</span>
+                    <span style="color: #0a0b0b"><span data-lang="hr">Pogledaj projekt</span><span data-lang="en">View Project</span></span>
                 </a>
             </div>
         </div>
@@ -57,7 +70,7 @@
 
         <!-- Technologies -->
         <section class="mb-16">
-            <h2 class="mb-6">Technologies</h2>
+            <h2 class="mb-6"><span data-lang="hr">Tehnologije</span><span data-lang="en">Technologies</span></h2>
             <div class="flex flex-wrap gap-3">
           <span class="px-4 py-2 bg-muted text-foreground rounded-lg border border-border">
             SwiftUI
@@ -74,15 +87,21 @@
         <!-- Challenge & Solution -->
         <section class="challenge-solution mb-16">
             <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
-                <h3 class="font-semibold text-white">Challenge</h3>
-                <p class="mt-3 text-zinc-300 leading-relaxed">
+                <h3 class="font-semibold text-white"><span data-lang="hr">Izazov</span><span data-lang="en">Challenge</span></h3>
+                <p class="mt-3 text-zinc-300 leading-relaxed" data-lang="hr">
+                    Samostalni osobni treneri često se oslanjaju na raspršene alate, tablice, aplikacije za dopisivanje i ručno vođenje rasporeda kako bi upravljali svojim poslom. Takav rascjepkan pristup otežava točno praćenje treninga, kredita i plaćanja klijenata, dok sportaši teško prate svoj raspored treninga i učinkovito komuniciraju s trenerom. Cilj je bio stvoriti jedinstvenu platformu, prvenstveno za mobitele, koja pojednostavljuje cijeli trenerski proces i za trenere i za sportaše, bez nepotrebne složenosti.
+                </p>
+                <p class="mt-3 text-zinc-300 leading-relaxed" data-lang="en">
                     Independent personal trainers often rely on scattered tools, spreadsheets, messaging apps, and manual scheduling to manage their coaching business. This fragmented approach makes it difficult to track client sessions, credits, and payments accurately, while athletes struggle to stay on top of their training schedule and communicate efficiently with their coach. The goal was to create a single, mobile-first platform that would streamline the entire coaching workflow for both trainers and athletes, without adding unnecessary complexity.
                 </p>
             </div>
 
             <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
-                <h3 class="font-semibold text-white">Solution</h3>
-                <p class="mt-3 text-zinc-300 leading-relaxed">
+                <h3 class="font-semibold text-white"><span data-lang="hr">Rješenje</span><span data-lang="en">Solution</span></h3>
+                <p class="mt-3 text-zinc-300 leading-relaxed" data-lang="hr">
+                    Apex Performance Fit razvijen je kao nativna iOS i iPadOS aplikacija koja unutar jedne platforme nudi dva povezana iskustva. Treneri dobivaju vlastitu nadzornu ploču za upravljanje klijentima, praćenje kredita za treninge, zakazivanje termina i obradu zahtjeva za otkazivanje &mdash; bez papirologije. Sportaši dobivaju jednostavan način rezerviranja termina, praćenja rasporeda treninga i tjelesnih mjera, što ih drži motiviranima i povezanima s trenerom. Rezultat je čista, brza i intuitivna aplikacija koja uklanja trenje iz svakodnevnog trenerskog posla i pomaže izgraditi snažniji odnos trenera i sportaša.
+                </p>
+                <p class="mt-3 text-zinc-300 leading-relaxed" data-lang="en">
                     Apex Performance Fit was developed as a native iOS and iPadOS application offering two connected experiences within one platform. Trainers get a dedicated dashboard to manage clients, track session credits, schedule appointments, and handle cancellation requests, all without paperwork. Athletes get a simple way to book sessions, follow their training schedule, and track body measurements, keeping them engaged and connected to their coach. The result is a clean, fast, and intuitive app that removes friction from day-to-day coaching operations and helps build a stronger trainer-athlete relationship.
                 </p>
             </div>
@@ -91,7 +110,7 @@
 
         <!-- Additional Images/Screenshots Section -->
         <section class="mb-16">
-            <h2 class="mb-6">Project Showcase</h2>
+            <h2 class="mb-6"><span data-lang="hr">Prikaz projekta</span><span data-lang="en">Project Showcase</span></h2>
 
             <div class="gallery-carousel">
                 <button class="gallery-btn prev" aria-label="Previous">‹</button>
@@ -118,47 +137,65 @@
 
         <!-- Key Features -->
         <section class="mb-16">
-            <h2 class="mb-6">Key Features</h2>
+            <h2 class="mb-6"><span data-lang="hr">Ključne značajke</span><span data-lang="en">Key Features</span></h2>
 
             <div class="key-features-grid">
                 <div class="feature-box">
-                    <h4 class="mb-2">Dual trainer & athlete experience</h4>
-                    <p class="text-muted-foreground">
+                    <h4 class="mb-2"><span data-lang="hr">Dvostruko iskustvo za trenere i sportaše</span><span data-lang="en">Dual trainer & athlete experience</span></h4>
+                    <p class="text-muted-foreground" data-lang="hr">
+                        Jedna platforma, dva povezana prikaza &mdash; treneri upravljaju svojim trenerskim poslom, a sportaši prate svoj trenažni put.
+                    </p>
+                    <p class="text-muted-foreground" data-lang="en">
                         One platform, two connected views — trainers manage their coaching business while athletes follow their training journey.
                     </p>
                 </div>
 
                 <div class="feature-box">
-                    <h4 class="mb-2">Client management with credit tracking</h4>
-                    <p class="text-muted-foreground">
+                    <h4 class="mb-2"><span data-lang="hr">Upravljanje klijentima i praćenje kredita</span><span data-lang="en">Client management with credit tracking</span></h4>
+                    <p class="text-muted-foreground" data-lang="hr">
+                        Treneri mogu upravljati svojim klijentima i pratiti kredite za treninge bez tablica i papirologije.
+                    </p>
+                    <p class="text-muted-foreground" data-lang="en">
                         Trainers can manage their client base and track session credits without spreadsheets or paperwork.
                     </p>
                 </div>
 
                 <div class="feature-box">
-                    <h4 class="mb-2">Smart appointment scheduling</h4>
-                    <p class="text-muted-foreground">
+                    <h4 class="mb-2"><span data-lang="hr">Pametno zakazivanje termina</span><span data-lang="en">Smart appointment scheduling</span></h4>
+                    <p class="text-muted-foreground" data-lang="hr">
+                        Rezervirajte, pregledajte i upravljajte treninzima izravno iz aplikacije, tako da su svi rasporedi uvijek usklađeni.
+                    </p>
+                    <p class="text-muted-foreground" data-lang="en">
                         Book, view, and manage training sessions directly from the app, keeping everyone's schedule aligned.
                     </p>
                 </div>
 
                 <div class="feature-box">
-                    <h4 class="mb-2">Cancellation & approval requests</h4>
-                    <p class="text-muted-foreground">
+                    <h4 class="mb-2"><span data-lang="hr">Zahtjevi za otkazivanje i odobrenje</span><span data-lang="en">Cancellation & approval requests</span></h4>
+                    <p class="text-muted-foreground" data-lang="hr">
+                        Ugrađeni sustav zahtjeva omogućuje trenerima brzo odobravanje ili odbijanje otkazivanja, bez dugog dopisivanja.
+                    </p>
+                    <p class="text-muted-foreground" data-lang="en">
                         A built-in request system lets trainers approve or reject cancellations quickly, without back-and-forth messaging.
                     </p>
                 </div>
 
                 <div class="feature-box">
-                    <h4 class="mb-2">Body measurement tracking</h4>
-                    <p class="text-muted-foreground">
+                    <h4 class="mb-2"><span data-lang="hr">Praćenje tjelesnih mjera</span><span data-lang="en">Body measurement tracking</span></h4>
+                    <p class="text-muted-foreground" data-lang="hr">
+                        Sportaši mogu bilježiti i pratiti tjelesne mjere kroz vrijeme i tako vidjeti napredak prema svojim ciljevima.
+                    </p>
+                    <p class="text-muted-foreground" data-lang="en">
                         Athletes can log and monitor body measurements over time to visualize progress toward their goals.
                     </p>
                 </div>
 
                 <div class="feature-box">
-                    <h4 class="mb-2">Clean, fast, and intuitive interface</h4>
-                    <p class="text-muted-foreground">
+                    <h4 class="mb-2"><span data-lang="hr">Čisto, brzo i intuitivno sučelje</span><span data-lang="en">Clean, fast, and intuitive interface</span></h4>
+                    <p class="text-muted-foreground" data-lang="hr">
+                        Nativno iOS i iPadOS iskustvo izrađeno za brzinu i jednostavnost, kako bi se korisnici mogli usredotočiti na trening, a ne na snalaženje po izbornicima.
+                    </p>
+                    <p class="text-muted-foreground" data-lang="en">
                         A native iOS and iPadOS experience built for speed and simplicity, so users can focus on training, not navigating menus.
                     </p>
                 </div>
@@ -166,7 +203,7 @@
         </section>
     <!-- Lightbox -->
     <div class="lightbox" id="lightbox">
-        <button class="lightbox-close" aria-label="Close">&times;</button>
+        <button class="lightbox-close" aria-label="Zatvori / Close">&times;</button>
         <button class="lightbox-btn lightbox-prev" aria-label="Previous">‹</button>
         <img class="lightbox-img" id="lightbox-img" src="" alt="" />
         <button class="lightbox-btn lightbox-next" aria-label="Next">›</button>
@@ -178,7 +215,7 @@
         <div class="max-w-5xl mx-auto px-6 py-8">
             <!-- Replace href with your projects page -->
             <a href="index.html#works" class="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors back-link">
-                ←  Back to all projects
+                ←  <span data-lang="hr">Natrag na sve projekte</span><span data-lang="en">Back to all projects</span>
             </a>
         </div>
     </footer>

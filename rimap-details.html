@@ -1,21 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hr"
+      data-title-hr="Rimap - Detalji projekta"
+      data-title-en="Rimap - Project Details">
 <head>
     <meta charset="UTF-8"/>
-    <title>Rimap - Project Details</title>
+    <title>Rimap - Detalji projekta</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <!-- Your main stylesheet -->
     <link rel="stylesheet" href="css/project_details_style.css"/>
+    <link rel="stylesheet" href="css/i18n.css"/>
+    <!-- language (hr / en) - runs before render so only one language is shown -->
+    <script src="js/i18n.js"></script>
 </head>
 <body class="dark">
 <div class="min-h-screen project-detail">
     <!-- Header -->
     <header class="border-b border-border sticky top-0 bg-background/80 backdrop-blur-sm z-10 back-header">
-        <div class="max-w-5xl mx-auto px-6 py-6">
+        <div class="max-w-5xl mx-auto px-6 py-6 back-header__inner">
             <!-- Replace href with your projects page -->
             <a href="index.html#works" class="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors back-link">
-                ←  Back to all projects
+                ←  <span data-lang="hr">Natrag na sve projekte</span><span data-lang="en">Back to all projects</span>
             </a>
+            <div class="lang-switch" role="group" aria-label="Jezik / Language">
+                <button type="button" class="lang-switch__btn" data-set-lang="hr">HR</button>
+                <span class="lang-switch__sep">/</span>
+                <button type="button" class="lang-switch__btn" data-set-lang="en">EN</button>
+            </div>
         </div>
     </header>
 
@@ -26,7 +36,10 @@
                 <div>
                     <h1 class="text-3xl sm:text-4xl font-semibold tracking-tight">Rimap</h1>
 
-                    <p class="mt-4 text-zinc-300 leading-relaxed">
+                    <p class="mt-4 text-zinc-300 leading-relaxed" data-lang="hr">
+                        Rimap je regionalna platforma za digitalne inovacije u Primorsko-goranskoj županiji usmjerena na povezivanje akademske zajednice, gospodarstva i javnih institucija. Podržava prijenos znanja, zajedničke istraživačke i razvojne inicijative te uvođenje digitalnih tehnologija kako bi se osnažio lokalni inovacijski ekosustav i stvarali proizvodi i usluge visoke dodane vrijednosti.
+                    </p>
+                    <p class="mt-4 text-zinc-300 leading-relaxed" data-lang="en">
                         Rimap is a regional digital innovation platform in Primorje–Gorski Kotar County focused on
                         connecting academia, businesses, and public institutions. It supports knowledge transfer,
                         joint research and development initiatives, and the adoption of digital technologies to
@@ -44,7 +57,7 @@
                         rel="noopener noreferrer"
                         class="flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:opacity-90 transition-opacity"
                 >
-                    <span style="color: #0a0b0b">View Project</span>
+                    <span style="color: #0a0b0b"><span data-lang="hr">Pogledaj projekt</span><span data-lang="en">View Project</span></span>
                 </a>
             </div>
         </div>
@@ -60,7 +73,7 @@
 
         <!-- Technologies -->
         <section class="mb-16">
-            <h2 class="mb-6">Technologies</h2>
+            <h2 class="mb-6"><span data-lang="hr">Tehnologije</span><span data-lang="en">Technologies</span></h2>
             <div class="flex flex-wrap gap-3">
           <span class="px-4 py-2 bg-muted text-foreground rounded-lg border border-border">
             .NET
@@ -78,16 +91,22 @@
         <!-- Challenge & Solution -->
         <section class="challenge-solution mb-16">
             <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
-                <h3 class="font-semibold text-white">Challenge</h3>
-                <p class="mt-3 text-zinc-300 leading-relaxed">
+                <h3 class="font-semibold text-white"><span data-lang="hr">Izazov</span><span data-lang="en">Challenge</span></h3>
+                <p class="mt-3 text-zinc-300 leading-relaxed" data-lang="hr">
+                    Okupiti dionike iz akademske zajednice, industrije i javnog sektora na jednom mjestu i olakšati njihovu suradnju &mdash; uz platformu koja ostaje pregledna, vjerodostojna i jednostavna za snalaženje.
+                </p>
+                <p class="mt-3 text-zinc-300 leading-relaxed" data-lang="en">
                     Unify stakeholders from academia, industry, and the public sector in one place and make
                     collaboration easy—while keeping the platform clear, credible, and simple to navigate.
                 </p>
             </div>
 
             <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
-                <h3 class="font-semibold text-white">Solution</h3>
-                <p class="mt-3 text-zinc-300 leading-relaxed">
+                <h3 class="font-semibold text-white"><span data-lang="hr">Rješenje</span><span data-lang="en">Solution</span></h3>
+                <p class="mt-3 text-zinc-300 leading-relaxed" data-lang="hr">
+                    Izgraditi skalabilnu digitalnu platformu utemeljenu na sadržaju, s promišljenom informacijskom arhitekturom, dosljednim vizualnim identitetom i intuitivnim tijekovima koji podržavaju istraživačku suradnju, inovacijske programe i strukturirani prijenos znanja u cijeloj regiji.
+                </p>
+                <p class="mt-3 text-zinc-300 leading-relaxed" data-lang="en">
                     Build a scalable, content-driven digital platform with a strong information architecture,
                     consistent branding, and intuitive flows that support research collaboration, innovation
                     programs, and structured knowledge transfer across the region.
@@ -98,7 +117,7 @@
 
         <!-- Additional Images/Screenshots Section -->
         <section class="mb-16">
-            <h2 class="mb-6">Project Showcase</h2>
+            <h2 class="mb-6"><span data-lang="hr">Prikaz projekta</span><span data-lang="en">Project Showcase</span></h2>
 
             <div class="gallery-container">
                 <button class="gallery-btn prev">‹</button>
@@ -118,47 +137,65 @@
 
         <!-- Key Features -->
         <section class="mb-16">
-            <h2 class="mb-6">Key Features</h2>
+            <h2 class="mb-6"><span data-lang="hr">Ključne značajke</span><span data-lang="en">Key Features</span></h2>
 
             <div class="key-features-grid">
                 <div class="feature-box">
-                    <h4 class="mb-2">Regional innovation hub</h4>
-                    <p class="text-muted-foreground">
+                    <h4 class="mb-2"><span data-lang="hr">Regionalno inovacijsko središte</span><span data-lang="en">Regional innovation hub</span></h4>
+                    <p class="text-muted-foreground" data-lang="hr">
+                        Središnja platforma koja povezuje gospodarstvo, akademsku zajednicu i javne institucije u Primorsko-goranskoj županiji.
+                    </p>
+                    <p class="text-muted-foreground" data-lang="en">
                         Centralized platform connecting businesses, academia, and public institutions in Primorje–Gorski Kotar County.
                     </p>
                 </div>
 
                 <div class="feature-box">
-                    <h4 class="mb-2">Knowledge transfer</h4>
-                    <p class="text-muted-foreground">
+                    <h4 class="mb-2"><span data-lang="hr">Prijenos znanja</span><span data-lang="en">Knowledge transfer</span></h4>
+                    <p class="text-muted-foreground" data-lang="hr">
+                        Podržava komercijalizaciju i praktičnu primjenu akademskog znanja kroz strukturirani sadržaj i digitalne alate.
+                    </p>
+                    <p class="text-muted-foreground" data-lang="en">
                         Supports commercialization and practical application of academic expertise through structured content and digital tools.
                     </p>
                 </div>
 
                 <div class="feature-box">
-                    <h4 class="mb-2">Multidisciplinary collaboration</h4>
-                    <p class="text-muted-foreground">
+                    <h4 class="mb-2"><span data-lang="hr">Multidisciplinarna suradnja</span><span data-lang="en">Multidisciplinary collaboration</span></h4>
+                    <p class="text-muted-foreground" data-lang="hr">
+                        Omogućuje međusektorsku suradnju u području istraživanja i razvoja te digitalnih tehnologija, koristeći regionalne resurse i talente.
+                    </p>
+                    <p class="text-muted-foreground" data-lang="en">
                         Enables cross-sector cooperation across R&amp;D and digital technologies using regional resources and talent.
                     </p>
                 </div>
 
                 <div class="feature-box">
-                    <h4 class="mb-2">Clear information architecture</h4>
-                    <p class="text-muted-foreground">
+                    <h4 class="mb-2"><span data-lang="hr">Jasna informacijska arhitektura</span><span data-lang="en">Clear information architecture</span></h4>
+                    <p class="text-muted-foreground" data-lang="hr">
+                        Jednostavna navigacija i organiziran sadržaj zahvaljujući kojima je prilike za suradnju lako pronaći i razumjeti.
+                    </p>
+                    <p class="text-muted-foreground" data-lang="en">
                         Simple navigation and organized content that make collaboration opportunities easy to find and understand.
                     </p>
                 </div>
 
                 <div class="feature-box">
-                    <h4 class="mb-2">Credibility-first content</h4>
-                    <p class="text-muted-foreground">
+                    <h4 class="mb-2"><span data-lang="hr">Sadržaj usmjeren na vjerodostojnost</span><span data-lang="en">Credibility-first content</span></h4>
+                    <p class="text-muted-foreground" data-lang="hr">
+                        Profesionalna prezentacija koja gradi povjerenje za partnerstva, programe i istraživačke inicijative.
+                    </p>
+                    <p class="text-muted-foreground" data-lang="en">
                         Professional presentation that builds trust for partnerships, programs, and research initiatives.
                     </p>
                 </div>
 
                 <div class="feature-box">
-                    <h4 class="mb-2">Responsive experience</h4>
-                    <p class="text-muted-foreground">
+                    <h4 class="mb-2"><span data-lang="hr">Responzivan dizajn</span><span data-lang="en">Responsive experience</span></h4>
+                    <p class="text-muted-foreground" data-lang="hr">
+                        Prilagođeno za stolna računala, tablete i mobilne uređaje.
+                    </p>
+                    <p class="text-muted-foreground" data-lang="en">
                         Optimized for desktop, tablet, and mobile devices.
                     </p>
                 </div>
@@ -167,7 +204,7 @@
 
     <!-- Lightbox -->
     <div class="lightbox" id="lightbox">
-        <button class="lightbox-close" aria-label="Close">&times;</button>
+        <button class="lightbox-close" aria-label="Zatvori / Close">&times;</button>
         <button class="lightbox-btn lightbox-prev" aria-label="Previous">‹</button>
         <img class="lightbox-img" id="lightbox-img" src="" alt="" />
         <button class="lightbox-btn lightbox-next" aria-label="Next">›</button>
@@ -179,7 +216,7 @@
         <div class="max-w-5xl mx-auto px-6 py-8">
             <!-- Replace href with your projects page -->
             <a href="index.html#works" class="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors back-link">
-                ←  Back to all projects
+                ←  <span data-lang="hr">Natrag na sve projekte</span><span data-lang="en">Back to all projects</span>
             </a>
         </div>
     </footer>

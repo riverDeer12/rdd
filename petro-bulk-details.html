@@ -1,21 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hr"
+      data-title-hr="Petro&amp;Bulk Solutions - Detalji projekta"
+      data-title-en="Petro&amp;Bulk Solutions - Project Details">
 <head>
     <meta charset="UTF-8"/>
-    <title>Petro&amp;Bulk Solutions - Project Details</title>
+    <title>Petro&amp;Bulk Solutions - Detalji projekta</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <!-- Your main stylesheet -->
     <link rel="stylesheet" href="css/project_details_style.css"/>
+    <link rel="stylesheet" href="css/i18n.css"/>
+    <!-- language (hr / en) - runs before render so only one language is shown -->
+    <script src="js/i18n.js"></script>
 </head>
 <body class="dark">
 <div class="min-h-screen project-detail">
     <!-- Header -->
     <header class="border-b border-border sticky top-0 bg-background/80 backdrop-blur-sm z-10 back-header">
-        <div class="max-w-5xl mx-auto px-6 py-6">
+        <div class="max-w-5xl mx-auto px-6 py-6 back-header__inner">
             <!-- Replace href with your projects page -->
             <a href="index.html#works" class="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors back-link">
-                ←  Back to all projects
+                ←  <span data-lang="hr">Natrag na sve projekte</span><span data-lang="en">Back to all projects</span>
             </a>
+            <div class="lang-switch" role="group" aria-label="Jezik / Language">
+                <button type="button" class="lang-switch__btn" data-set-lang="hr">HR</button>
+                <span class="lang-switch__sep">/</span>
+                <button type="button" class="lang-switch__btn" data-set-lang="en">EN</button>
+            </div>
         </div>
     </header>
 
@@ -25,7 +35,10 @@
             <div class="flex items-start justify-between mb-6">
                 <div>
                     <h1 class="mb-4 project-title">Petro&amp;Bulk Solutions</h1>
-                    <p class="text-muted-foreground max-w-2xl project-long-description">
+                    <p class="text-muted-foreground max-w-2xl project-long-description" data-lang="hr">
+                        Platforma koja vam omogućuje da uronite u dinamičan svijet trgovanja naftom i biogorivima uz pouzdanog partnera. Web stranica nudi sveobuhvatno rješenje za stručnjake iz industrije koji traže pouzdane uvide, tržišne trendove i prilike za trgovanje u sektoru nafte i biogoriva. Bilo da tražite tržišne podatke, prilike za partnerstvo ili podršku u trgovanju, platforma osigurava pristup pouzdanom i stručnom partneru na svakom koraku.
+                    </p>
+                    <p class="text-muted-foreground max-w-2xl project-long-description" data-lang="en">
                         Platform that allows you to immerse yourself in the dynamic world of petroleum and
                         biofuels trading with a trusted partner. The website offers a comprehensive solution
                         for industry professionals seeking reliable insights, market trends, and trading
@@ -45,7 +58,7 @@
                         rel="noopener noreferrer"
                         class="flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:opacity-90 transition-opacity"
                 >
-                    <span style="color: #0a0b0b">View Project</span>
+                    <span style="color: #0a0b0b"><span data-lang="hr">Pogledaj projekt</span><span data-lang="en">View Project</span></span>
                 </a>
             </div>
         </div>
@@ -61,7 +74,7 @@
 
         <!-- Technologies -->
         <section class="mb-16">
-            <h2 class="mb-6">Technologies</h2>
+            <h2 class="mb-6"><span data-lang="hr">Tehnologije</span><span data-lang="en">Technologies</span></h2>
             <div class="flex flex-wrap gap-3">
           <span class="px-4 py-2 bg-muted text-foreground rounded-lg border border-border">
             HTML
@@ -82,8 +95,11 @@
         <!-- Challenge & Solution -->
         <section class="challenge-solution mb-16">
             <div>
-                <h3 class="mb-4">Challenge</h3>
-                <p class="text-muted-foreground leading-relaxed">
+                <h3 class="mb-4"><span data-lang="hr">Izazov</span><span data-lang="en">Challenge</span></h3>
+                <p class="text-muted-foreground leading-relaxed" data-lang="hr">
+                    Predstaviti složene informacije o tržištu nafte i biogoriva na jasan, vjerodostojan i pristupačan način, uz podršku razvoju poslovanja, partnerstvima i scenarijima usmjerenima na trgovanje.
+                </p>
+                <p class="text-muted-foreground leading-relaxed" data-lang="en">
                     Present complex petroleum and biofuels market information in a clear, trustworthy,
                     and accessible way while supporting business development, partnerships, and
                     trading-oriented use cases.
@@ -91,8 +107,11 @@
             </div>
 
             <div>
-                <h3 class="mb-4">Solution</h3>
-                <p class="text-muted-foreground leading-relaxed">
+                <h3 class="mb-4"><span data-lang="hr">Rješenje</span><span data-lang="en">Solution</span></h3>
+                <p class="text-muted-foreground leading-relaxed" data-lang="hr">
+                    Osmisliti i isporučiti profesionalnu platformu temeljenu na sadržaju, sa snažnim brendom, jasnom informacijskom arhitekturom i naglaskom na vjerodostojnost, koja korisnicima omogućuje da s povjerenjem istražuju tržišne uvide, prilike za trgovanje i mogućnosti partnerstva.
+                </p>
+                <p class="text-muted-foreground leading-relaxed" data-lang="en">
                     Design and deliver a professional, content-driven platform with strong branding,
                     clear information architecture, and a focus on credibility, enabling users to
                     explore market insights, trading opportunities, and partnership options with
@@ -104,7 +123,7 @@
 
         <!-- Additional Images/Screenshots Section -->
         <section class="mb-16">
-            <h2 class="mb-6">Project Showcase</h2>
+            <h2 class="mb-6"><span data-lang="hr">Prikaz projekta</span><span data-lang="en">Project Showcase</span></h2>
 
             <div class="gallery-container">
                 <button class="gallery-btn prev">‹</button>
@@ -124,47 +143,65 @@
 
         <!-- Key Features -->
         <section class="mb-16">
-            <h2 class="mb-6">Key Features</h2>
+            <h2 class="mb-6"><span data-lang="hr">Ključne značajke</span><span data-lang="en">Key Features</span></h2>
 
             <div class="key-features-grid">
                 <div class="feature-box">
-                    <h4 class="mb-2">Market insights</h4>
-                    <p class="text-muted-foreground">
+                    <h4 class="mb-2"><span data-lang="hr">Tržišni uvidi</span><span data-lang="en">Market insights</span></h4>
+                    <p class="text-muted-foreground" data-lang="hr">
+                        Pristup aktualnim tržišnim trendovima i uvidima u trgovanje naftom i biogorivima.
+                    </p>
+                    <p class="text-muted-foreground" data-lang="en">
                         Access up-to-date market trends and insights in petroleum and biofuels trading.
                     </p>
                 </div>
 
                 <div class="feature-box">
-                    <h4 class="mb-2">Trading opportunities</h4>
-                    <p class="text-muted-foreground">
+                    <h4 class="mb-2"><span data-lang="hr">Prilike za trgovanje</span><span data-lang="en">Trading opportunities</span></h4>
+                    <p class="text-muted-foreground" data-lang="hr">
+                        Podrška u otkrivanju i iskorištavanju prilika za trgovanje naftom i biogorivima.
+                    </p>
+                    <p class="text-muted-foreground" data-lang="en">
                         Support for discovering and engaging in petroleum and biofuel trading opportunities.
                     </p>
                 </div>
 
                 <div class="feature-box">
-                    <h4 class="mb-2">Partnership development</h4>
-                    <p class="text-muted-foreground">
+                    <h4 class="mb-2"><span data-lang="hr">Razvoj partnerstava</span><span data-lang="en">Partnership development</span></h4>
+                    <p class="text-muted-foreground" data-lang="hr">
+                        Olakšava suradnju i dugoročna partnerstva u cijelom energetskom sektoru.
+                    </p>
+                    <p class="text-muted-foreground" data-lang="en">
                         Facilitate collaboration and long-term partnerships across the energy sector.
                     </p>
                 </div>
 
                 <div class="feature-box">
-                    <h4 class="mb-2">Industry credibility</h4>
-                    <p class="text-muted-foreground">
+                    <h4 class="mb-2"><span data-lang="hr">Vjerodostojnost u industriji</span><span data-lang="en">Industry credibility</span></h4>
+                    <p class="text-muted-foreground" data-lang="hr">
+                        Snažan brend i struktura sadržaja koji grade povjerenje među stručnjacima iz industrije.
+                    </p>
+                    <p class="text-muted-foreground" data-lang="en">
                         Strong branding and content structure to build trust with industry professionals.
                     </p>
                 </div>
 
                 <div class="feature-box">
-                    <h4 class="mb-2">Clear information architecture</h4>
-                    <p class="text-muted-foreground">
+                    <h4 class="mb-2"><span data-lang="hr">Jasna informacijska arhitektura</span><span data-lang="en">Clear information architecture</span></h4>
+                    <p class="text-muted-foreground" data-lang="hr">
+                        Logična navigacija koja pojednostavljuje složene podatke i usluge iz industrije.
+                    </p>
+                    <p class="text-muted-foreground" data-lang="en">
                         Logical navigation that simplifies complex industry data and services.
                     </p>
                 </div>
 
                 <div class="feature-box">
-                    <h4 class="mb-2">Responsive design</h4>
-                    <p class="text-muted-foreground">
+                    <h4 class="mb-2"><span data-lang="hr">Responzivan dizajn</span><span data-lang="en">Responsive design</span></h4>
+                    <p class="text-muted-foreground" data-lang="hr">
+                        Optimizirano za stolna računala, tablete i mobilne uređaje.
+                    </p>
+                    <p class="text-muted-foreground" data-lang="en">
                         Optimized for desktop, tablet, and mobile devices.
                     </p>
                 </div>
@@ -173,7 +210,7 @@
 
     <!-- Lightbox -->
     <div class="lightbox" id="lightbox">
-        <button class="lightbox-close" aria-label="Close">&times;</button>
+        <button class="lightbox-close" aria-label="Zatvori / Close">&times;</button>
         <button class="lightbox-btn lightbox-prev" aria-label="Previous">‹</button>
         <img class="lightbox-img" id="lightbox-img" src="" alt="" />
         <button class="lightbox-btn lightbox-next" aria-label="Next">›</button>
@@ -185,7 +222,7 @@
         <div class="max-w-5xl mx-auto px-6 py-8">
             <!-- Replace href with your projects page -->
             <a href="index.html#works" class="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors back-link">
-                ←  Back to all projects
+                ←  <span data-lang="hr">Natrag na sve projekte</span><span data-lang="en">Back to all projects</span>
             </a>
         </div>
     </footer>
