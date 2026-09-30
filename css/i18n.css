@@ -11,6 +11,19 @@ html:not([lang="de"]) [data-lang="de"] {
     display: none !important;
 }
 
+/* first visit: hidden while js/i18n.js looks up the visitor's country
+ * (at most ~1.5s); the animation reveals the page even if the script stalls */
+html.i18n-pending body {
+    visibility: hidden;
+    animation: i18n-reveal 0s linear 2s forwards;
+}
+
+@keyframes i18n-reveal {
+    to {
+        visibility: visible;
+    }
+}
+
 /* --------------------------------------------------------------------
  * switcher
  * -------------------------------------------------------------------- */
