@@ -1,0 +1,298 @@
+/* ===================================================================
+ * RDD Software - light / dark theme
+ * Used together with js/theme.js on every page.
+ *
+ * The site is designed dark. js/theme.js sets <html data-theme="light">
+ * for the light theme; everything below only applies then.
+ * ------------------------------------------------------------------- */
+
+html[data-theme="dark"] {
+    color-scheme: dark;
+}
+
+html[data-theme="light"] {
+    color-scheme: light;
+}
+
+/* --------------------------------------------------------------------
+ * main site (css/styles.css) - index.html, pricing.html
+ * -------------------------------------------------------------------- */
+html[data-theme="light"] {
+    --color-gray-8: #d4d4d1;
+    --color-gray-9: #e7e7e3;
+
+    --color-text: #4b4c4e;
+    --color-text-dark: #141516;
+    --color-text-light: #707173;
+    --color-placeholder: #8a8a8b;
+
+    --color-btn: #e7e7e3;
+    --color-btn-hover: #141516;
+    --color-btn-hover-text: #ffffff;
+    --color-btn-stroke: #141516;
+    --color-btn-stroke-text: #141516;
+    --color-btn-stroke-hover: #141516;
+    --color-btn-stroke-hover-text: #ffffff;
+
+    --color-preloader-bg: #f7f7f5;
+    --color-loader: #141516;
+
+    --color-body: #f7f7f5;
+    --color-border: rgba(0, 0, 0, .08);
+}
+
+html[data-theme="light"] #loader {
+    background-color: #141516;
+}
+
+html[data-theme="light"] .text-pretitle {
+    color: #141516;
+}
+
+html[data-theme="light"] .text-pretitle.with-line {
+    color: var(--color-1);
+}
+
+/* pricing.html: the lighter green is too faint on a light background */
+html[data-theme="light"] .price-amount {
+    color: var(--color-2);
+}
+
+html[data-theme="light"] .text-pretitle.with-line::before {
+    background-color: rgba(0, 0, 0, .4);
+}
+
+html[data-theme="light"] .main-nav a,
+html[data-theme="light"] .mobile-home-link a,
+html[data-theme="light"] .intro-social a:hover,
+html[data-theme="light"] .folio-list__item-link,
+html[data-theme="light"] .testimonial-slider__slide:hover .testimonial-slider__cite span,
+html[data-theme="light"] .testimonial-slider__cite strong,
+html[data-theme="light"] .s-footer a:hover {
+    color: #141516;
+}
+
+html[data-theme="light"] .mobile-home-link a:focus,
+html[data-theme="light"] .mobile-home-link a:hover,
+html[data-theme="light"] .main-nav a:focus,
+html[data-theme="light"] .main-nav a:hover {
+    color: var(--color-1);
+}
+
+html[data-theme="light"] .mobile-menu-toggle span,
+html[data-theme="light"] .mobile-menu-toggle.is-clicked span::after {
+    background-color: #141516;
+}
+
+html[data-theme="light"] .mobile-menu-toggle.is-clicked span {
+    background-color: transparent;
+}
+
+html[data-theme="light"] .intro-scrolldown svg path,
+html[data-theme="light"] .folio-list__proj-link svg path,
+html[data-theme="light"] .ss-go-top svg path {
+    fill: #141516;
+}
+
+html[data-theme="light"] .testimonials .swiper-pagination-bullet {
+    background: #141516;
+}
+
+html[data-theme="light"] .ss-go-top a:hover {
+    background-color: #141516;
+    border-color: #141516;
+}
+
+html[data-theme="light"] .ss-go-top a:hover svg path {
+    fill: #ffffff;
+}
+
+html[data-theme="light"] .ss-copyright span::after {
+    color: rgba(0, 0, 0, .15);
+}
+
+html[data-theme="light"] .mailtoui-modal {
+    --mailtoui-modal-head-bgcolor: #ecece8;
+    --mailtoui-modal-head-title-color: #141516;
+    --mailtoui-modal-body-bgcolor: #ffffff;
+    --mailtoui-button-bgcolor: rgba(0, 0, 0, .04);
+    --mailtoui-button-text-color: #141516;
+    --mailtoui-button-text-color-hover: #ffffff;
+    --mailtoui-email-address-bgcolor: #f0f0ed;
+    color: #141516;
+}
+
+html[data-theme="light"] .mailtoui-modal-close {
+    color: rgba(0, 0, 0, .5);
+}
+
+html[data-theme="light"] .mailtoui-modal-close:focus,
+html[data-theme="light"] .mailtoui-modal-close:hover {
+    color: #141516;
+}
+
+/* --------------------------------------------------------------------
+ * project detail pages (css/project_details_style.css)
+ * body.dark carries the dark palette; restore the light one.
+ * -------------------------------------------------------------------- */
+html[data-theme="light"] .dark {
+    --background: #f7f7f5;
+    --foreground: #141516;
+    --card: #ffffff;
+    --card-foreground: #141516;
+    --primary: #141516;
+    --primary-foreground: #ffffff;
+    --muted: #ecece8;
+    --muted-foreground: #5b5c5e;
+    --border: rgba(0, 0, 0, .1);
+}
+
+/* the button label carries an inline dark colour for the white dark-theme button */
+html[data-theme="light"] .project-links a span {
+    color: var(--primary-foreground) !important;
+}
+
+html[data-theme="light"] .back-header {
+    background: rgba(247, 247, 245, .8);
+}
+
+html[data-theme="light"] .project-detail .text-zinc-300 {
+    color: #3f4042;
+}
+
+html[data-theme="light"] .gallery-slide img {
+    border-color: rgba(0, 0, 0, .1);
+}
+
+html[data-theme="light"] .gallery-carousel .gallery-btn,
+html[data-theme="light"] .gallery-container .gallery-btn {
+    border-color: rgba(0, 0, 0, .15);
+    background: rgba(0, 0, 0, .04);
+    color: #141516;
+}
+
+html[data-theme="light"] .gallery-carousel .gallery-btn:hover,
+html[data-theme="light"] .gallery-container .gallery-btn:hover {
+    background: rgba(0, 0, 0, .1);
+}
+
+/* --------------------------------------------------------------------
+ * language switcher (css/i18n.css) on a light background
+ * -------------------------------------------------------------------- */
+html[data-theme="light"] .lang-switch__btn {
+    color: rgba(0, 0, 0, .45);
+}
+
+html[data-theme="light"] .lang-switch__btn:hover,
+html[data-theme="light"] .lang-switch__btn:focus {
+    color: #141516;
+}
+
+html[data-theme="light"] .lang-switch__btn.is-active {
+    color: var(--color-1, hsla(180, 100%, 25%, 1));
+}
+
+html[data-theme="light"] .lang-switch__sep {
+    color: rgba(0, 0, 0, .25);
+}
+
+/* --------------------------------------------------------------------
+ * theme toggle button
+ * -------------------------------------------------------------------- */
+.theme-toggle,
+.theme-toggle:hover,
+.theme-toggle:focus {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.2rem;
+    height: 3.2rem;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    background: none;
+    border: 0;
+    box-shadow: none;
+    cursor: pointer;
+}
+
+.theme-toggle {
+    color: rgba(255, 255, 255, .6);
+}
+
+.theme-toggle:hover,
+.theme-toggle:focus {
+    color: #ffffff;
+}
+
+html[data-theme="light"] .theme-toggle {
+    color: rgba(0, 0, 0, .55);
+}
+
+html[data-theme="light"] .theme-toggle:hover,
+html[data-theme="light"] .theme-toggle:focus {
+    color: #141516;
+}
+
+.theme-toggle svg {
+    width: 16px;
+    height: 16px;
+}
+
+/* dark theme shows the sun (switch to light), light theme shows the moon */
+.theme-toggle__moon,
+html[data-theme="light"] .theme-toggle__sun {
+    display: none;
+}
+
+html[data-theme="light"] .theme-toggle__moon {
+    display: block;
+}
+
+/* main site header (index.html, pricing.html) */
+.main-nav li.theme-toggle-item {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1.2rem 0 0;
+}
+
+.header-mobile .theme-toggle {
+    position: absolute;
+    top: calc((var(--header-height) - 3.2rem) / 2);
+    right: calc(var(--header-height) + .4rem);
+}
+
+.header-mobile .lang-switch {
+    right: calc(var(--header-height) + 3.6rem);
+}
+
+@media screen and (max-width: 800px) {
+    .main-nav li.theme-toggle-item {
+        display: none;
+    }
+}
+
+/* project detail pages: language switcher and toggle sit together on the right */
+.back-header__inner .lang-switch {
+    margin-left: auto;
+}
+
+.back-header__inner .theme-toggle {
+    margin-left: -1.2rem;
+}
+
+/* four languages + toggle: tighten the switcher on phones */
+@media screen and (max-width: 600px) {
+    .lang-switch__btn,
+    .lang-switch__btn:hover,
+    .lang-switch__btn:focus {
+        padding: .4rem .3rem;
+        letter-spacing: .2em;
+    }
+
+    .back-header__inner .lang-switch {
+        flex: 0 0 auto;
+    }
+}

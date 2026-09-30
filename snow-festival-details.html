@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="hr"
       data-title-hr="Snow Festival - Detalji projekta"
-      data-title-en="Snow Festival - Project Details">
+      data-title-en="Snow Festival - Project Details"
+      data-title-it="Snow Festival - Dettagli del progetto"
+      data-title-de="Snow Festival - Projektdetails">
 <head>
     <meta charset="UTF-8"/>
     <title>Snow Festival - Detalji projekta</title>
@@ -9,8 +11,11 @@
     <!-- Your main stylesheet -->
     <link rel="stylesheet" href="css/project_details_style.css"/>
     <link rel="stylesheet" href="css/i18n.css"/>
-    <!-- language (hr / en) - runs before render so only one language is shown -->
+    <link rel="stylesheet" href="css/theme.css"/>
+    <!-- language (hr / en / it / de) - runs before render so only one language is shown -->
     <script src="js/i18n.js"></script>
+    <!-- light / dark theme - runs before render so the page does not flash -->
+    <script src="js/theme.js"></script>
 </head>
 <body class="dark">
 <div class="min-h-screen project-detail">
@@ -18,13 +23,22 @@
     <header class="border-b border-border sticky top-0 bg-background/80 backdrop-blur-sm z-10 back-header">
         <div class="max-w-5xl mx-auto px-6 py-6 back-header__inner">
             <a href="index.html#works" class="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors back-link">
-                ←  <span data-lang="hr">Natrag na sve projekte</span><span data-lang="en">Back to all projects</span>
+                ←  <span data-lang="hr">Natrag na sve projekte</span><span data-lang="en">Back to all projects</span><span data-lang="it">Torna a tutti i progetti</span><span data-lang="de">Zurück zu allen Projekten</span>
             </a>
-            <div class="lang-switch" role="group" aria-label="Jezik / Language">
+            <div class="lang-switch" role="group" aria-label="Jezik / Language / Lingua / Sprache">
                 <button type="button" class="lang-switch__btn" data-set-lang="hr">HR</button>
                 <span class="lang-switch__sep">/</span>
                 <button type="button" class="lang-switch__btn" data-set-lang="en">EN</button>
+                <span class="lang-switch__sep">/</span>
+                <button type="button" class="lang-switch__btn" data-set-lang="it">IT</button>
+                <span class="lang-switch__sep">/</span>
+                <button type="button" class="lang-switch__btn" data-set-lang="de">DE</button>
             </div>
+            <button type="button" class="theme-toggle" data-toggle-theme aria-pressed="false"
+                    aria-label="Tamna / svijetla tema - Dark / light theme" title="Tamna / svijetla tema - Dark / light theme">
+                <svg class="theme-toggle__sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/></svg>
+                <svg class="theme-toggle__moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M20.2 14.6A8.5 8.5 0 0 1 9.4 3.8a8.5 8.5 0 1 0 10.8 10.8z"/></svg>
+            </button>
         </div>
     </header>
 
@@ -46,6 +60,12 @@
                         festival sponsors, partners, and local businesses, while promoting sustainability and
                         community involvement.
                     </p>
+                    <p class="text-muted-foreground max-w-2xl project-long-description" data-lang="it">
+                        Il sito dello Snow Festival sullo Sljeme, in Croazia, offre una piattaforma completa e facile da usare, pensata per migliorare l'esperienza dei visitatori di questo importante evento invernale. Con un programma dettagliato di gare di sport invernali, spettacoli culturali e attività per famiglie, il sito offre un facile accesso all'acquisto dei biglietti, alla registrazione agli eventi e alle informazioni essenziali per i visitatori, comprese le opzioni di viaggio e alloggio. Mette inoltre in evidenza sponsor, partner e aziende locali del festival, promuovendo la sostenibilità e il coinvolgimento della comunità.
+                    </p>
+                    <p class="text-muted-foreground max-w-2xl project-long-description" data-lang="de">
+                        Die Website des Snow Festivals auf dem Sljeme in Kroatien bietet eine umfassende und benutzerfreundliche Plattform, die das Besuchererlebnis bei diesem herausragenden Winterevent verbessert. Mit einem detaillierten Programm aus Wintersportwettbewerben, Kulturveranstaltungen und familienfreundlichen Aktivitäten ermöglicht die Website einfachen Zugang zu Ticketkauf, Veranstaltungsanmeldung und wichtigen Besucherinformationen wie Anreise- und Unterkunftsmöglichkeiten. Außerdem stellt sie Sponsoren, Partner und lokale Unternehmen des Festivals vor und fördert Nachhaltigkeit und gesellschaftliches Engagement.
+                    </p>
                 </div>
                 <span class="text-muted-foreground project-year">2025</span>
             </div>
@@ -58,7 +78,7 @@
                         rel="noopener noreferrer"
                         class="flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:opacity-90 transition-opacity"
                 >
-                    <span style="color: #0a0b0b"><span data-lang="hr">Pogledaj projekt</span><span data-lang="en">View Project</span></span>
+                    <span style="color: #0a0b0b"><span data-lang="hr">Pogledaj projekt</span><span data-lang="en">View Project</span><span data-lang="it">Vedi il progetto</span><span data-lang="de">Projekt ansehen</span></span>
                 </a>
             </div>
         </div>
@@ -75,7 +95,7 @@
 
         <!-- Technologies -->
         <section class="mb-16">
-            <h2 class="mb-6"><span data-lang="hr">Tehnologije</span><span data-lang="en">Technologies</span></h2>
+            <h2 class="mb-6"><span data-lang="hr">Tehnologije</span><span data-lang="en">Technologies</span><span data-lang="it">Tecnologie</span><span data-lang="de">Technologien</span></h2>
             <div class="flex flex-wrap gap-3">
                 <span class="px-4 py-2 bg-muted text-foreground rounded-lg border border-border">HTML</span>
                 <span class="px-4 py-2 bg-muted text-foreground rounded-lg border border-border">JavaScript</span>
@@ -86,7 +106,7 @@
         <!-- Challenge & Solution -->
         <section class="challenge-solution mb-16">
             <div>
-                <h3 class="mb-4"><span data-lang="hr">Izazov</span><span data-lang="en">Challenge</span></h3>
+                <h3 class="mb-4"><span data-lang="hr">Izazov</span><span data-lang="en">Challenge</span><span data-lang="it">Sfida</span><span data-lang="de">Herausforderung</span></h3>
                 <p class="text-muted-foreground leading-relaxed" data-lang="hr">
                     Predstaviti bogat višednevni zimski festival sa sportskim i kulturnim programom te aktivnostima za cijelu obitelj na način koji ostaje pregledan, lako pretraživ i jednostavan za snalaženje svim posjetiteljima.
                 </p>
@@ -94,10 +114,16 @@
                     Present a busy multi-day winter festival with sports, cultural programs, and family-friendly
                     activities in a way that remains clear, discoverable, and easy to navigate for all visitors.
                 </p>
+                <p class="text-muted-foreground leading-relaxed" data-lang="it">
+                    Presentare un festival invernale di più giorni, ricco di sport, programmi culturali e attività per famiglie, in modo che resti chiaro, facile da scoprire e da navigare per tutti i visitatori.
+                </p>
+                <p class="text-muted-foreground leading-relaxed" data-lang="de">
+                    Ein mehrtägiges, dicht gefülltes Winterfestival mit Sport, Kulturprogramm und Familienaktivitäten so präsentieren, dass es für alle Besucher klar, auffindbar und leicht navigierbar bleibt.
+                </p>
             </div>
 
             <div>
-                <h3 class="mb-4"><span data-lang="hr">Rješenje</span><span data-lang="en">Solution</span></h3>
+                <h3 class="mb-4"><span data-lang="hr">Rješenje</span><span data-lang="en">Solution</span><span data-lang="it">Soluzione</span><span data-lang="de">Lösung</span></h3>
                 <p class="text-muted-foreground leading-relaxed" data-lang="hr">
                     Izgraditi strukturiranu platformu za događanja prilagođenu mobilnim uređajima, s naglaskom na raspored programa, prodaju ulaznica, ključne informacije za posjetitelje i vidljivost sponzora, uz promicanje održivosti i uključenosti zajednice.
                 </p>
@@ -106,12 +132,18 @@
                     ticketing, visitor essentials, and sponsor visibility, while promoting sustainability
                     and community engagement.
                 </p>
+                <p class="text-muted-foreground leading-relaxed" data-lang="it">
+                    Costruire una piattaforma per eventi strutturata e ottimizzata per dispositivi mobili, con particolare attenzione a programma, biglietteria, informazioni per i visitatori e visibilità degli sponsor, promuovendo al contempo la sostenibilità e il coinvolgimento della comunità.
+                </p>
+                <p class="text-muted-foreground leading-relaxed" data-lang="de">
+                    Eine strukturierte, mobilfreundliche Eventplattform mit Fokus auf Programm, Ticketing, Besucherinformationen und Sponsorensichtbarkeit aufbauen und dabei Nachhaltigkeit und gesellschaftliches Engagement fördern.
+                </p>
             </div>
         </section>
 
         <!-- Additional Images/Screenshots Section -->
         <section class="mb-16">
-            <h2 class="mb-6"><span data-lang="hr">Prikaz projekta</span><span data-lang="en">Project Showcase</span></h2>
+            <h2 class="mb-6"><span data-lang="hr">Prikaz projekta</span><span data-lang="en">Project Showcase</span><span data-lang="it">Presentazione del progetto</span><span data-lang="de">Projektpräsentation</span></h2>
 
             <div class="gallery-container">
                 <button class="gallery-btn prev">‹</button>
@@ -130,66 +162,102 @@
 
         <!-- Key Features -->
         <section class="mb-16">
-            <h2 class="mb-6"><span data-lang="hr">Ključne značajke</span><span data-lang="en">Key Features</span></h2>
+            <h2 class="mb-6"><span data-lang="hr">Ključne značajke</span><span data-lang="en">Key Features</span><span data-lang="it">Caratteristiche principali</span><span data-lang="de">Hauptfunktionen</span></h2>
 
             <div class="key-features-grid">
                 <div class="feature-box">
-                    <h4 class="mb-2"><span data-lang="hr">Raspored događanja</span><span data-lang="en">Event schedule</span></h4>
+                    <h4 class="mb-2"><span data-lang="hr">Raspored događanja</span><span data-lang="en">Event schedule</span><span data-lang="it">Programma dell'evento</span><span data-lang="de">Veranstaltungsprogramm</span></h4>
                     <p class="text-muted-foreground" data-lang="hr">
                         Pregledan vremenski raspored natjecanja u zimskim sportovima, kulturnih nastupa i obiteljskih aktivnosti.
                     </p>
                     <p class="text-muted-foreground" data-lang="en">
                         Clear timelines for snow sports competitions, cultural performances, and family activities.
                     </p>
+                    <p class="text-muted-foreground" data-lang="it">
+                        Tempistiche chiare per gare di sport invernali, spettacoli culturali e attività per famiglie.
+                    </p>
+                    <p class="text-muted-foreground" data-lang="de">
+                        Klare Zeitpläne für Wintersportwettbewerbe, Kulturveranstaltungen und Familienaktivitäten.
+                    </p>
                 </div>
 
                 <div class="feature-box">
-                    <h4 class="mb-2"><span data-lang="hr">Ulaznice i prijave</span><span data-lang="en">Tickets & registration</span></h4>
+                    <h4 class="mb-2"><span data-lang="hr">Ulaznice i prijave</span><span data-lang="en">Tickets & registration</span><span data-lang="it">Biglietti e registrazione</span><span data-lang="de">Tickets &amp; Anmeldung</span></h4>
                     <p class="text-muted-foreground" data-lang="hr">
                         Jednostavna kupnja ulaznica i prijava na događanja za posjetitelje i sudionike.
                     </p>
                     <p class="text-muted-foreground" data-lang="en">
                         Easy access to ticket purchasing and event registration for visitors and participants.
                     </p>
+                    <p class="text-muted-foreground" data-lang="it">
+                        Facile accesso all'acquisto dei biglietti e alla registrazione agli eventi per visitatori e partecipanti.
+                    </p>
+                    <p class="text-muted-foreground" data-lang="de">
+                        Einfacher Zugang zu Ticketkauf und Veranstaltungsanmeldung für Besucher und Teilnehmer.
+                    </p>
                 </div>
 
                 <div class="feature-box">
-                    <h4 class="mb-2"><span data-lang="hr">Informacije za posjetitelje</span><span data-lang="en">Visitor essentials</span></h4>
+                    <h4 class="mb-2"><span data-lang="hr">Informacije za posjetitelje</span><span data-lang="en">Visitor essentials</span><span data-lang="it">Informazioni per i visitatori</span><span data-lang="de">Besucherinformationen</span></h4>
                     <p class="text-muted-foreground" data-lang="hr">
                         Informacije o prijevozu, smještaju i ostale praktične informacije za bezbrižan doživljaj festivala.
                     </p>
                     <p class="text-muted-foreground" data-lang="en">
                         Travel, accommodation, and practical information to support a smooth festival experience.
                     </p>
+                    <p class="text-muted-foreground" data-lang="it">
+                        Informazioni su viaggio, alloggio e aspetti pratici per un'esperienza al festival senza intoppi.
+                    </p>
+                    <p class="text-muted-foreground" data-lang="de">
+                        Informationen zu Anreise, Unterkunft und Praktischem für ein reibungsloses Festivalerlebnis.
+                    </p>
                 </div>
 
                 <div class="feature-box">
-                    <h4 class="mb-2"><span data-lang="hr">Sponzori i partneri</span><span data-lang="en">Sponsors & partners</span></h4>
+                    <h4 class="mb-2"><span data-lang="hr">Sponzori i partneri</span><span data-lang="en">Sponsors & partners</span><span data-lang="it">Sponsor e partner</span><span data-lang="de">Sponsoren &amp; Partner</span></h4>
                     <p class="text-muted-foreground" data-lang="hr">
                         Isticanje sponzora i partnera festivala te lokalnih tvrtki.
                     </p>
                     <p class="text-muted-foreground" data-lang="en">
                         Highlight festival sponsors, partners, and local businesses.
                     </p>
+                    <p class="text-muted-foreground" data-lang="it">
+                        Mette in evidenza sponsor, partner e aziende locali del festival.
+                    </p>
+                    <p class="text-muted-foreground" data-lang="de">
+                        Präsentation von Sponsoren, Partnern und lokalen Unternehmen des Festivals.
+                    </p>
                 </div>
 
                 <div class="feature-box">
-                    <h4 class="mb-2"><span data-lang="hr">Održivost i zajednica</span><span data-lang="en">Sustainability & community</span></h4>
+                    <h4 class="mb-2"><span data-lang="hr">Održivost i zajednica</span><span data-lang="en">Sustainability & community</span><span data-lang="it">Sostenibilità e comunità</span><span data-lang="de">Nachhaltigkeit &amp; Gemeinschaft</span></h4>
                     <p class="text-muted-foreground" data-lang="hr">
                         Promicanje ekološki prihvatljivih praksi i uključenosti zajednice.
                     </p>
                     <p class="text-muted-foreground" data-lang="en">
                         Promote eco-friendly practices and community involvement.
                     </p>
+                    <p class="text-muted-foreground" data-lang="it">
+                        Promuove pratiche ecologiche e il coinvolgimento della comunità.
+                    </p>
+                    <p class="text-muted-foreground" data-lang="de">
+                        Förderung umweltfreundlicher Praktiken und gesellschaftlichen Engagements.
+                    </p>
                 </div>
 
                 <div class="feature-box">
-                    <h4 class="mb-2"><span data-lang="hr">Responzivan dizajn</span><span data-lang="en">Responsive design</span></h4>
+                    <h4 class="mb-2"><span data-lang="hr">Responzivan dizajn</span><span data-lang="en">Responsive design</span><span data-lang="it">Design responsive</span><span data-lang="de">Responsives Design</span></h4>
                     <p class="text-muted-foreground" data-lang="hr">
                         Prilagođeno mobitelima, tabletima i stolnim računalima.
                     </p>
                     <p class="text-muted-foreground" data-lang="en">
                         Optimized for mobile, tablet, and desktop devices.
+                    </p>
+                    <p class="text-muted-foreground" data-lang="it">
+                        Ottimizzato per dispositivi mobili, tablet e desktop.
+                    </p>
+                    <p class="text-muted-foreground" data-lang="de">
+                        Optimiert für Mobilgeräte, Tablets und Desktop.
                     </p>
                 </div>
             </div>
@@ -208,7 +276,7 @@
     <footer class="border-t border-border mt-16 back-footer">
         <div class="max-w-5xl mx-auto px-6 py-8">
             <a href="index.html#works" class="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors back-link">
-                ←  <span data-lang="hr">Natrag na sve projekte</span><span data-lang="en">Back to all projects</span>
+                ←  <span data-lang="hr">Natrag na sve projekte</span><span data-lang="en">Back to all projects</span><span data-lang="it">Torna a tutti i progetti</span><span data-lang="de">Zurück zu allen Projekten</span>
             </a>
         </div>
     </footer>

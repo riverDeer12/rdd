@@ -1,8 +1,8 @@
 /* ===================================================================
- * RDD Software - language switcher (hr / en)
+ * RDD Software - language switcher (hr / en / it / de)
  *
- * Content is written in both languages side by side, marked with
- * data-lang="hr" / data-lang="en". css/i18n.css hides the language that
+ * Content is written in all languages side by side, marked with
+ * data-lang="hr" / "en" / "it" / "de". css/i18n.css hides the language that
  * does not match <html lang>. This script picks the language (saved
  * choice, otherwise Croatian) and wires up the [data-set-lang] buttons.
  *
@@ -14,7 +14,7 @@
     'use strict';
 
     const STORAGE_KEY = 'rdd-lang';
-    const SUPPORTED = ['hr', 'en'];
+    const SUPPORTED = ['hr', 'en', 'it', 'de'];
     const DEFAULT_LANG = 'hr';
 
     function readStored() {

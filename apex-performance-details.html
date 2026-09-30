@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="hr"
       data-title-hr="Apex Performance Fit - Detalji projekta"
-      data-title-en="Apex Performance Fit - Project Details">
+      data-title-en="Apex Performance Fit - Project Details"
+      data-title-it="Apex Performance Fit - Dettagli del progetto"
+      data-title-de="Apex Performance Fit - Projektdetails">
 <head>
     <meta charset="UTF-8"/>
     <title>Apex Performance Fit - Detalji projekta</title>
@@ -9,8 +11,11 @@
     <!-- Your main stylesheet -->
     <link rel="stylesheet" href="css/project_details_style.css"/>
     <link rel="stylesheet" href="css/i18n.css"/>
-    <!-- language (hr / en) - runs before render so only one language is shown -->
+    <link rel="stylesheet" href="css/theme.css"/>
+    <!-- language (hr / en / it / de) - runs before render so only one language is shown -->
     <script src="js/i18n.js"></script>
+    <!-- light / dark theme - runs before render so the page does not flash -->
+    <script src="js/theme.js"></script>
 </head>
 <body class="dark">
 <div class="min-h-screen project-detail">
@@ -19,13 +24,22 @@
         <div class="max-w-5xl mx-auto px-6 py-6 back-header__inner">
             <!-- Replace href with your projects page -->
             <a href="index.html#works" class="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors back-link">
-                ←  <span data-lang="hr">Natrag na sve projekte</span><span data-lang="en">Back to all projects</span>
+                ←  <span data-lang="hr">Natrag na sve projekte</span><span data-lang="en">Back to all projects</span><span data-lang="it">Torna a tutti i progetti</span><span data-lang="de">Zurück zu allen Projekten</span>
             </a>
-            <div class="lang-switch" role="group" aria-label="Jezik / Language">
+            <div class="lang-switch" role="group" aria-label="Jezik / Language / Lingua / Sprache">
                 <button type="button" class="lang-switch__btn" data-set-lang="hr">HR</button>
                 <span class="lang-switch__sep">/</span>
                 <button type="button" class="lang-switch__btn" data-set-lang="en">EN</button>
+                <span class="lang-switch__sep">/</span>
+                <button type="button" class="lang-switch__btn" data-set-lang="it">IT</button>
+                <span class="lang-switch__sep">/</span>
+                <button type="button" class="lang-switch__btn" data-set-lang="de">DE</button>
             </div>
+            <button type="button" class="theme-toggle" data-toggle-theme aria-pressed="false"
+                    aria-label="Tamna / svijetla tema - Dark / light theme" title="Tamna / svijetla tema - Dark / light theme">
+                <svg class="theme-toggle__sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/></svg>
+                <svg class="theme-toggle__moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M20.2 14.6A8.5 8.5 0 0 1 9.4 3.8a8.5 8.5 0 1 0 10.8 10.8z"/></svg>
+            </button>
         </div>
     </header>
 
@@ -42,6 +56,12 @@
                     <p class="mt-4 text-zinc-300 leading-relaxed" data-lang="en">
                         Apex Performance Fit is a mobile and web platform connecting trainers and athletes within the Apex Performance community. It gives trainers full control over their coaching business including client management, scheduling, and session tracking, while athletes can book sessions, follow their training plan, and stay connected with their coach, all across a clean, intuitive experience on both mobile and web.
                     </p>
+                    <p class="mt-4 text-zinc-300 leading-relaxed" data-lang="it">
+                        Apex Performance Fit è una piattaforma mobile e web che collega allenatori e atleti all'interno della community Apex Performance. Offre agli allenatori il pieno controllo della loro attività di coaching, inclusi gestione dei clienti, pianificazione e monitoraggio delle sessioni, mentre gli atleti possono prenotare sessioni, seguire il proprio piano di allenamento e restare in contatto con il proprio coach, il tutto con un'esperienza chiara e intuitiva su mobile e web.
+                    </p>
+                    <p class="mt-4 text-zinc-300 leading-relaxed" data-lang="de">
+                        Apex Performance Fit ist eine Mobile- und Web-Plattform, die Trainer und Athleten innerhalb der Apex-Performance-Community verbindet. Trainer erhalten die volle Kontrolle über ihr Coaching-Geschäft – inklusive Kundenverwaltung, Terminplanung und Trainingsprotokoll –, während Athleten Trainings buchen, ihrem Trainingsplan folgen und mit ihrem Coach in Verbindung bleiben können, und das mit einer klaren, intuitiven Oberfläche auf Mobilgeräten und im Web.
+                    </p>
                 </div>
                 <span class="text-muted-foreground project-year">2026</span>
             </div>
@@ -54,7 +74,7 @@
                         rel="noopener noreferrer"
                         class="flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:opacity-90 transition-opacity"
                 >
-                    <span style="color: #0a0b0b"><span data-lang="hr">Pogledaj projekt</span><span data-lang="en">View Project</span></span>
+                    <span style="color: #0a0b0b"><span data-lang="hr">Pogledaj projekt</span><span data-lang="en">View Project</span><span data-lang="it">Vedi il progetto</span><span data-lang="de">Projekt ansehen</span></span>
                 </a>
             </div>
         </div>
@@ -70,7 +90,7 @@
 
         <!-- Technologies -->
         <section class="mb-16">
-            <h2 class="mb-6"><span data-lang="hr">Tehnologije</span><span data-lang="en">Technologies</span></h2>
+            <h2 class="mb-6"><span data-lang="hr">Tehnologije</span><span data-lang="en">Technologies</span><span data-lang="it">Tecnologie</span><span data-lang="de">Technologien</span></h2>
             <div class="flex flex-wrap gap-3">
           <span class="px-4 py-2 bg-muted text-foreground rounded-lg border border-border">
             SwiftUI
@@ -87,22 +107,34 @@
         <!-- Challenge & Solution -->
         <section class="challenge-solution mb-16">
             <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
-                <h3 class="font-semibold text-white"><span data-lang="hr">Izazov</span><span data-lang="en">Challenge</span></h3>
+                <h3 class="font-semibold text-white"><span data-lang="hr">Izazov</span><span data-lang="en">Challenge</span><span data-lang="it">Sfida</span><span data-lang="de">Herausforderung</span></h3>
                 <p class="mt-3 text-zinc-300 leading-relaxed" data-lang="hr">
                     Samostalni osobni treneri često se oslanjaju na raspršene alate, tablice, aplikacije za dopisivanje i ručno vođenje rasporeda kako bi upravljali svojim poslom. Takav rascjepkan pristup otežava točno praćenje treninga, kredita i plaćanja klijenata, dok sportaši teško prate svoj raspored treninga i učinkovito komuniciraju s trenerom. Cilj je bio stvoriti jedinstvenu platformu, prvenstveno za mobitele, koja pojednostavljuje cijeli trenerski proces i za trenere i za sportaše, bez nepotrebne složenosti.
                 </p>
                 <p class="mt-3 text-zinc-300 leading-relaxed" data-lang="en">
                     Independent personal trainers often rely on scattered tools, spreadsheets, messaging apps, and manual scheduling to manage their coaching business. This fragmented approach makes it difficult to track client sessions, credits, and payments accurately, while athletes struggle to stay on top of their training schedule and communicate efficiently with their coach. The goal was to create a single, mobile-first platform that would streamline the entire coaching workflow for both trainers and athletes, without adding unnecessary complexity.
                 </p>
+                <p class="mt-3 text-zinc-300 leading-relaxed" data-lang="it">
+                    I personal trainer indipendenti si affidano spesso a strumenti sparsi, fogli di calcolo, app di messaggistica e pianificazione manuale per gestire la propria attività. Questo approccio frammentato rende difficile tenere traccia con precisione di sessioni, crediti e pagamenti dei clienti, mentre gli atleti faticano a seguire il proprio programma di allenamento e a comunicare in modo efficiente con il coach. L'obiettivo era creare un'unica piattaforma mobile-first che semplificasse l'intero flusso di lavoro per allenatori e atleti, senza aggiungere complessità inutili.
+                </p>
+                <p class="mt-3 text-zinc-300 leading-relaxed" data-lang="de">
+                    Unabhängige Personal Trainer arbeiten oft mit verstreuten Tools, Tabellen, Messaging-Apps und manueller Terminplanung. Dieser fragmentierte Ansatz erschwert es, Trainingseinheiten, Guthaben und Zahlungen der Kunden genau zu verfolgen, während Athleten Mühe haben, den Überblick über ihren Trainingsplan zu behalten und effizient mit ihrem Coach zu kommunizieren. Ziel war eine einzige Mobile-First-Plattform, die den gesamten Coaching-Ablauf für Trainer und Athleten vereinfacht – ohne unnötige Komplexität.
+                </p>
             </div>
 
             <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
-                <h3 class="font-semibold text-white"><span data-lang="hr">Rješenje</span><span data-lang="en">Solution</span></h3>
+                <h3 class="font-semibold text-white"><span data-lang="hr">Rješenje</span><span data-lang="en">Solution</span><span data-lang="it">Soluzione</span><span data-lang="de">Lösung</span></h3>
                 <p class="mt-3 text-zinc-300 leading-relaxed" data-lang="hr">
                     Apex Performance Fit razvijen je kao nativna iOS i iPadOS aplikacija koja unutar jedne platforme nudi dva povezana iskustva. Treneri dobivaju vlastitu nadzornu ploču za upravljanje klijentima, praćenje kredita za treninge, zakazivanje termina i obradu zahtjeva za otkazivanje &mdash; bez papirologije. Sportaši dobivaju jednostavan način rezerviranja termina, praćenja rasporeda treninga i tjelesnih mjera, što ih drži motiviranima i povezanima s trenerom. Rezultat je čista, brza i intuitivna aplikacija koja uklanja trenje iz svakodnevnog trenerskog posla i pomaže izgraditi snažniji odnos trenera i sportaša.
                 </p>
                 <p class="mt-3 text-zinc-300 leading-relaxed" data-lang="en">
                     Apex Performance Fit was developed as a native iOS and iPadOS application offering two connected experiences within one platform. Trainers get a dedicated dashboard to manage clients, track session credits, schedule appointments, and handle cancellation requests, all without paperwork. Athletes get a simple way to book sessions, follow their training schedule, and track body measurements, keeping them engaged and connected to their coach. The result is a clean, fast, and intuitive app that removes friction from day-to-day coaching operations and helps build a stronger trainer-athlete relationship.
+                </p>
+                <p class="mt-3 text-zinc-300 leading-relaxed" data-lang="it">
+                    Apex Performance Fit è stata sviluppata come applicazione nativa per iOS e iPadOS che offre due esperienze collegate in un'unica piattaforma. Gli allenatori dispongono di una dashboard dedicata per gestire i clienti, monitorare i crediti delle sessioni, fissare appuntamenti e gestire le richieste di cancellazione, il tutto senza scartoffie. Gli atleti hanno un modo semplice per prenotare sessioni, seguire il programma di allenamento e monitorare le misure corporee, restando coinvolti e in contatto con il proprio coach. Il risultato è un'app pulita, veloce e intuitiva che elimina gli attriti nella gestione quotidiana del coaching e aiuta a costruire un rapporto più solido tra allenatore e atleta.
+                </p>
+                <p class="mt-3 text-zinc-300 leading-relaxed" data-lang="de">
+                    Apex Performance Fit wurde als native iOS- und iPadOS-App entwickelt, die zwei verbundene Erlebnisse in einer Plattform vereint. Trainer erhalten ein eigenes Dashboard, um Kunden zu verwalten, Trainingsguthaben zu verfolgen, Termine zu planen und Stornierungsanfragen zu bearbeiten – ganz ohne Papierkram. Athleten können einfach Trainings buchen, ihrem Trainingsplan folgen und Körpermaße erfassen, was sie motiviert und mit ihrem Coach verbunden hält. Das Ergebnis ist eine klare, schnelle und intuitive App, die den Coaching-Alltag reibungslos macht und die Beziehung zwischen Trainer und Athlet stärkt.
                 </p>
             </div>
         </section>
@@ -110,7 +142,7 @@
 
         <!-- Additional Images/Screenshots Section -->
         <section class="mb-16">
-            <h2 class="mb-6"><span data-lang="hr">Prikaz projekta</span><span data-lang="en">Project Showcase</span></h2>
+            <h2 class="mb-6"><span data-lang="hr">Prikaz projekta</span><span data-lang="en">Project Showcase</span><span data-lang="it">Presentazione del progetto</span><span data-lang="de">Projektpräsentation</span></h2>
 
             <div class="gallery-carousel">
                 <button class="gallery-btn prev" aria-label="Previous">‹</button>
@@ -137,66 +169,102 @@
 
         <!-- Key Features -->
         <section class="mb-16">
-            <h2 class="mb-6"><span data-lang="hr">Ključne značajke</span><span data-lang="en">Key Features</span></h2>
+            <h2 class="mb-6"><span data-lang="hr">Ključne značajke</span><span data-lang="en">Key Features</span><span data-lang="it">Caratteristiche principali</span><span data-lang="de">Hauptfunktionen</span></h2>
 
             <div class="key-features-grid">
                 <div class="feature-box">
-                    <h4 class="mb-2"><span data-lang="hr">Dvostruko iskustvo za trenere i sportaše</span><span data-lang="en">Dual trainer & athlete experience</span></h4>
+                    <h4 class="mb-2"><span data-lang="hr">Dvostruko iskustvo za trenere i sportaše</span><span data-lang="en">Dual trainer & athlete experience</span><span data-lang="it">Doppia esperienza per allenatori e atleti</span><span data-lang="de">Duale Oberfläche für Trainer & Athleten</span></h4>
                     <p class="text-muted-foreground" data-lang="hr">
                         Jedna platforma, dva povezana prikaza &mdash; treneri upravljaju svojim trenerskim poslom, a sportaši prate svoj trenažni put.
                     </p>
                     <p class="text-muted-foreground" data-lang="en">
                         One platform, two connected views — trainers manage their coaching business while athletes follow their training journey.
                     </p>
+                    <p class="text-muted-foreground" data-lang="it">
+                        Una piattaforma, due viste collegate: gli allenatori gestiscono la propria attività mentre gli atleti seguono il loro percorso di allenamento.
+                    </p>
+                    <p class="text-muted-foreground" data-lang="de">
+                        Eine Plattform, zwei verbundene Ansichten – Trainer verwalten ihr Coaching-Geschäft, Athleten verfolgen ihren Trainingsweg.
+                    </p>
                 </div>
 
                 <div class="feature-box">
-                    <h4 class="mb-2"><span data-lang="hr">Upravljanje klijentima i praćenje kredita</span><span data-lang="en">Client management with credit tracking</span></h4>
+                    <h4 class="mb-2"><span data-lang="hr">Upravljanje klijentima i praćenje kredita</span><span data-lang="en">Client management with credit tracking</span><span data-lang="it">Gestione clienti con monitoraggio dei crediti</span><span data-lang="de">Kundenverwaltung mit Guthabenverfolgung</span></h4>
                     <p class="text-muted-foreground" data-lang="hr">
                         Treneri mogu upravljati svojim klijentima i pratiti kredite za treninge bez tablica i papirologije.
                     </p>
                     <p class="text-muted-foreground" data-lang="en">
                         Trainers can manage their client base and track session credits without spreadsheets or paperwork.
                     </p>
+                    <p class="text-muted-foreground" data-lang="it">
+                        Gli allenatori possono gestire i propri clienti e monitorare i crediti delle sessioni senza fogli di calcolo o scartoffie.
+                    </p>
+                    <p class="text-muted-foreground" data-lang="de">
+                        Trainer können ihre Kunden verwalten und Trainingsguthaben ohne Tabellen oder Papierkram verfolgen.
+                    </p>
                 </div>
 
                 <div class="feature-box">
-                    <h4 class="mb-2"><span data-lang="hr">Pametno zakazivanje termina</span><span data-lang="en">Smart appointment scheduling</span></h4>
+                    <h4 class="mb-2"><span data-lang="hr">Pametno zakazivanje termina</span><span data-lang="en">Smart appointment scheduling</span><span data-lang="it">Pianificazione intelligente degli appuntamenti</span><span data-lang="de">Intelligente Terminplanung</span></h4>
                     <p class="text-muted-foreground" data-lang="hr">
                         Rezervirajte, pregledajte i upravljajte treninzima izravno iz aplikacije, tako da su svi rasporedi uvijek usklađeni.
                     </p>
                     <p class="text-muted-foreground" data-lang="en">
                         Book, view, and manage training sessions directly from the app, keeping everyone's schedule aligned.
                     </p>
+                    <p class="text-muted-foreground" data-lang="it">
+                        Prenota, visualizza e gestisci le sessioni di allenamento direttamente dall'app, mantenendo allineati gli impegni di tutti.
+                    </p>
+                    <p class="text-muted-foreground" data-lang="de">
+                        Trainings direkt in der App buchen, ansehen und verwalten – so bleiben alle Termine abgestimmt.
+                    </p>
                 </div>
 
                 <div class="feature-box">
-                    <h4 class="mb-2"><span data-lang="hr">Zahtjevi za otkazivanje i odobrenje</span><span data-lang="en">Cancellation & approval requests</span></h4>
+                    <h4 class="mb-2"><span data-lang="hr">Zahtjevi za otkazivanje i odobrenje</span><span data-lang="en">Cancellation & approval requests</span><span data-lang="it">Richieste di cancellazione e approvazione</span><span data-lang="de">Stornierungs- & Genehmigungsanfragen</span></h4>
                     <p class="text-muted-foreground" data-lang="hr">
                         Ugrađeni sustav zahtjeva omogućuje trenerima brzo odobravanje ili odbijanje otkazivanja, bez dugog dopisivanja.
                     </p>
                     <p class="text-muted-foreground" data-lang="en">
                         A built-in request system lets trainers approve or reject cancellations quickly, without back-and-forth messaging.
                     </p>
+                    <p class="text-muted-foreground" data-lang="it">
+                        Un sistema di richieste integrato consente agli allenatori di approvare o rifiutare rapidamente le cancellazioni, senza scambi di messaggi.
+                    </p>
+                    <p class="text-muted-foreground" data-lang="de">
+                        Ein integriertes Anfragesystem ermöglicht Trainern, Stornierungen schnell zu genehmigen oder abzulehnen – ohne langes Hin und Her.
+                    </p>
                 </div>
 
                 <div class="feature-box">
-                    <h4 class="mb-2"><span data-lang="hr">Praćenje tjelesnih mjera</span><span data-lang="en">Body measurement tracking</span></h4>
+                    <h4 class="mb-2"><span data-lang="hr">Praćenje tjelesnih mjera</span><span data-lang="en">Body measurement tracking</span><span data-lang="it">Monitoraggio delle misure corporee</span><span data-lang="de">Erfassung der Körpermaße</span></h4>
                     <p class="text-muted-foreground" data-lang="hr">
                         Sportaši mogu bilježiti i pratiti tjelesne mjere kroz vrijeme i tako vidjeti napredak prema svojim ciljevima.
                     </p>
                     <p class="text-muted-foreground" data-lang="en">
                         Athletes can log and monitor body measurements over time to visualize progress toward their goals.
                     </p>
+                    <p class="text-muted-foreground" data-lang="it">
+                        Gli atleti possono registrare e monitorare nel tempo le proprie misure corporee per visualizzare i progressi verso i loro obiettivi.
+                    </p>
+                    <p class="text-muted-foreground" data-lang="de">
+                        Athleten können ihre Körpermaße über die Zeit erfassen und verfolgen, um ihre Fortschritte sichtbar zu machen.
+                    </p>
                 </div>
 
                 <div class="feature-box">
-                    <h4 class="mb-2"><span data-lang="hr">Čisto, brzo i intuitivno sučelje</span><span data-lang="en">Clean, fast, and intuitive interface</span></h4>
+                    <h4 class="mb-2"><span data-lang="hr">Čisto, brzo i intuitivno sučelje</span><span data-lang="en">Clean, fast, and intuitive interface</span><span data-lang="it">Interfaccia pulita, veloce e intuitiva</span><span data-lang="de">Klare, schnelle und intuitive Oberfläche</span></h4>
                     <p class="text-muted-foreground" data-lang="hr">
                         Nativno iOS i iPadOS iskustvo izrađeno za brzinu i jednostavnost, kako bi se korisnici mogli usredotočiti na trening, a ne na snalaženje po izbornicima.
                     </p>
                     <p class="text-muted-foreground" data-lang="en">
                         A native iOS and iPadOS experience built for speed and simplicity, so users can focus on training, not navigating menus.
+                    </p>
+                    <p class="text-muted-foreground" data-lang="it">
+                        Un'esperienza nativa iOS e iPadOS pensata per velocità e semplicità, così gli utenti possono concentrarsi sull'allenamento e non sulla navigazione dei menu.
+                    </p>
+                    <p class="text-muted-foreground" data-lang="de">
+                        Eine native iOS- und iPadOS-App für Tempo und Einfachheit – damit sich Nutzer aufs Training konzentrieren statt auf Menüs.
                     </p>
                 </div>
             </div>
@@ -215,7 +283,7 @@
         <div class="max-w-5xl mx-auto px-6 py-8">
             <!-- Replace href with your projects page -->
             <a href="index.html#works" class="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors back-link">
-                ←  <span data-lang="hr">Natrag na sve projekte</span><span data-lang="en">Back to all projects</span>
+                ←  <span data-lang="hr">Natrag na sve projekte</span><span data-lang="en">Back to all projects</span><span data-lang="it">Torna a tutti i progetti</span><span data-lang="de">Zurück zu allen Projekten</span>
             </a>
         </div>
     </footer>

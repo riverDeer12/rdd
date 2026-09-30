@@ -1,11 +1,13 @@
 /* ===================================================================
- * RDD Software - language switcher (hr / en)
+ * RDD Software - language switcher (hr / en / it / de)
  * Used together with js/i18n.js on every page.
  * ------------------------------------------------------------------- */
 
 /* show only the active language */
-html[lang="hr"] [data-lang="en"],
-html[lang="en"] [data-lang="hr"] {
+html:not([lang="hr"]) [data-lang="hr"],
+html:not([lang="en"]) [data-lang="en"],
+html:not([lang="it"]) [data-lang="it"],
+html:not([lang="de"]) [data-lang="de"] {
     display: none !important;
 }
 

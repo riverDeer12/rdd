@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html class="no-js ss-preload" lang="hr"
       data-title-hr="RDD Software - Osnažujemo poslovanje tehnologijom."
-      data-title-en="RDD Software - Empowering Business Through Technology.">
+      data-title-en="RDD Software - Empowering Business Through Technology."
+      data-title-it="RDD Software - Potenziamo il business con la tecnologia."
+      data-title-de="RDD Software - Wir stärken Unternehmen mit Technologie.">
 <head>
 
     <!--- basic page needs
@@ -37,10 +39,13 @@
     <link rel="stylesheet" href="css/vendor.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/i18n.css">
+    <link rel="stylesheet" href="css/theme.css">
 
-    <!-- language (hr / en) - runs before render so only one language is shown
+    <!-- language (hr / en / it / de) - runs before render so only one language is shown
     ================================================== -->
     <script src="js/i18n.js"></script>
+    <!-- light / dark theme - runs before render so the page does not flash -->
+    <script src="js/theme.js"></script>
 
     <!-- favicons
     ================================================== -->
@@ -80,11 +85,20 @@
 
         <div class="header-mobile">
             <span class="mobile-home-link"><a href="index.html">RDD.</a></span>
-            <div class="lang-switch" role="group" aria-label="Jezik / Language">
+            <div class="lang-switch" role="group" aria-label="Jezik / Language / Lingua / Sprache">
                 <button type="button" class="lang-switch__btn" data-set-lang="hr">HR</button>
                 <span class="lang-switch__sep">/</span>
                 <button type="button" class="lang-switch__btn" data-set-lang="en">EN</button>
+                <span class="lang-switch__sep">/</span>
+                <button type="button" class="lang-switch__btn" data-set-lang="it">IT</button>
+                <span class="lang-switch__sep">/</span>
+                <button type="button" class="lang-switch__btn" data-set-lang="de">DE</button>
             </div>
+            <button type="button" class="theme-toggle" data-toggle-theme aria-pressed="false"
+                    aria-label="Tamna / svijetla tema - Dark / light theme" title="Tamna / svijetla tema - Dark / light theme">
+                <svg class="theme-toggle__sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/></svg>
+                <svg class="theme-toggle__moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M20.2 14.6A8.5 8.5 0 0 1 9.4 3.8a8.5 8.5 0 1 0 10.8 10.8z"/></svg>
+            </button>
             <a class="mobile-menu-toggle" href="#0"><span>Menu</span></a>
         </div>
 
@@ -92,17 +106,28 @@
             <nav class="column lg-12 main-nav">
                 <ul>
                     <li><a href="index.html" class="home-link">RDD.</a></li>
-                    <li class="current"><a href="#intro" class="smoothscroll"><span data-lang="hr">Početna</span><span data-lang="en">Intro</span></a></li>
-                    <li><a href="#about" class="smoothscroll"><span data-lang="hr">O nama</span><span data-lang="en">About</span></a></li>
-                    <li><a href="#works" class="smoothscroll"><span data-lang="hr">Projekti</span><span data-lang="en">Works</span></a></li>
-                    <li><a href="pricing.html"><span data-lang="hr">Cjenik</span><span data-lang="en">Pricing</span></a></li>
-                    <li><a href="#contact" class="smoothscroll"><span data-lang="hr">Kontakt</span><span data-lang="en">Say Hello</span></a></li>
+                    <li class="current"><a href="#intro" class="smoothscroll"><span data-lang="hr">Početna</span><span data-lang="en">Intro</span><span data-lang="it">Intro</span><span data-lang="de">Start</span></a></li>
+                    <li><a href="#about" class="smoothscroll"><span data-lang="hr">O nama</span><span data-lang="en">About</span><span data-lang="it">Chi siamo</span><span data-lang="de">Über uns</span></a></li>
+                    <li><a href="#works" class="smoothscroll"><span data-lang="hr">Projekti</span><span data-lang="en">Works</span><span data-lang="it">Progetti</span><span data-lang="de">Projekte</span></a></li>
+                    <li><a href="pricing.html"><span data-lang="hr">Cjenik</span><span data-lang="en">Pricing</span><span data-lang="it">Prezzi</span><span data-lang="de">Preise</span></a></li>
+                    <li><a href="#contact" class="smoothscroll"><span data-lang="hr">Kontakt</span><span data-lang="en">Say Hello</span><span data-lang="it">Contatti</span><span data-lang="de">Kontakt</span></a></li>
                     <li class="lang-switch-item">
-                        <div class="lang-switch" role="group" aria-label="Jezik / Language">
+                        <div class="lang-switch" role="group" aria-label="Jezik / Language / Lingua / Sprache">
                             <button type="button" class="lang-switch__btn" data-set-lang="hr">HR</button>
                             <span class="lang-switch__sep">/</span>
                             <button type="button" class="lang-switch__btn" data-set-lang="en">EN</button>
+                            <span class="lang-switch__sep">/</span>
+                            <button type="button" class="lang-switch__btn" data-set-lang="it">IT</button>
+                            <span class="lang-switch__sep">/</span>
+                            <button type="button" class="lang-switch__btn" data-set-lang="de">DE</button>
                         </div>
+                    </li>
+                    <li class="theme-toggle-item">
+                        <button type="button" class="theme-toggle" data-toggle-theme aria-pressed="false"
+                                aria-label="Tamna / svijetla tema - Dark / light theme" title="Tamna / svijetla tema - Dark / light theme">
+                            <svg class="theme-toggle__sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/></svg>
+                            <svg class="theme-toggle__moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M20.2 14.6A8.5 8.5 0 0 1 9.4 3.8a8.5 8.5 0 1 0 10.8 10.8z"/></svg>
+                        </button>
                     </li>
                 </ul>
             </nav>
@@ -137,6 +162,16 @@
                         a software company <br>
                         based in Croatia. <br>
                     </h1>
+                    <h1 class="text-huge-title" data-lang="it">
+                        Questa è RDD, <br>
+                        un'azienda di software <br>
+                        con sede in Croazia. <br>
+                    </h1>
+                    <h1 class="text-huge-title" data-lang="de">
+                        Das ist RDD, <br>
+                        ein Softwareunternehmen <br>
+                        aus Kroatien. <br>
+                    </h1>
                 </div>
 
             </div> <!-- end intro content -->
@@ -168,7 +203,7 @@
                     <div class="about-info__text">
 
                         <h2 class="text-pretitle with-line" data-animate-el>
-                            <span data-lang="hr">O nama</span><span data-lang="en">About</span>
+                            <span data-lang="hr">O nama</span><span data-lang="en">About</span><span data-lang="it">Chi siamo</span><span data-lang="de">Über uns</span>
                         </h2>
                         <p class="attention-getter" data-animate-el data-lang="hr">
                             Softversku tvrtku možemo usporediti s jelenom u svijetu tehnologije: agilna je, brza i
@@ -188,11 +223,23 @@
                             instincts and speed to thrive in diverse terrains, this software company leverages its
                             flexibility, creativity, and expertise to deliver tailored solutions for clients.
                         </p>
+                        <p class="attention-getter" data-animate-el data-lang="it">
+                            Un'azienda di software paragonabile a un cervo nel mondo della tecnologia: agile, rapida e capace di adattarsi ad ambienti complessi. Proprio come il cervo si affida al suo istinto acuto e alla sua velocità per prosperare in terreni diversi, questa azienda sfrutta flessibilità, creatività e competenza per offrire ai clienti soluzioni su misura.
+                        </p>
+                        <p class="attention-getter" data-animate-el data-lang="de">
+                            Ein Softwareunternehmen, das man mit einem Hirsch in der Tech-Welt vergleichen kann: agil, schnell und anpassungsfähig in komplexen Umgebungen. So wie sich ein Hirsch auf seine scharfen Instinkte und seine Schnelligkeit verlässt, um in unterschiedlichstem Gelände zu bestehen, nutzt dieses Unternehmen Flexibilität, Kreativität und Fachwissen, um maßgeschneiderte Lösungen für seine Kunden zu liefern.
+                        </p>
                         <p class="attention-getter" data-animate-el data-lang="en">
                             Like the deer, which balances strength with elegance, the company maintains a focus on
                             high-quality development while adapting quickly to the fast-changing landscape of
                             technology. This ability to respond efficiently to challenges makes them a strong yet
                             graceful contender in the global tech ecosystem.
+                        </p>
+                        <p class="attention-getter" data-animate-el data-lang="it">
+                            Come il cervo, che unisce forza ed eleganza, l'azienda mantiene l'attenzione su uno sviluppo di alta qualità adattandosi rapidamente al panorama tecnologico in continua evoluzione. Questa capacità di rispondere in modo efficiente alle sfide la rende un protagonista solido ma elegante dell'ecosistema tecnologico globale.
+                        </p>
+                        <p class="attention-getter" data-animate-el data-lang="de">
+                            Wie der Hirsch, der Stärke mit Eleganz verbindet, setzt das Unternehmen auf hochwertige Entwicklung und passt sich zugleich schnell an die sich wandelnde Technologielandschaft an. Diese Fähigkeit, Herausforderungen effizient zu meistern, macht es zu einem starken und zugleich eleganten Akteur im globalen Tech-Ökosystem.
                         </p>
 
                     </div>
@@ -204,7 +251,7 @@
                 <div class="column lg-12">
 
                     <h2 class="text-pretitle" data-animate-el>
-                        <span data-lang="hr">Stručnost</span><span data-lang="en">Expertise</span>
+                        <span data-lang="hr">Stručnost</span><span data-lang="en">Expertise</span><span data-lang="it">Competenze</span><span data-lang="de">Kompetenzen</span>
                     </h2>
 
                     <ul class="skills-list h1" data-animate-el data-lang="hr">
@@ -223,6 +270,22 @@
                         <li>Branding Identity</li>
                         <li>Product Design</li>
                     </ul>
+                    <ul class="skills-list h1" data-animate-el data-lang="it">
+                        <li>Software su misura</li>
+                        <li>Trasformazione digitale</li>
+                        <li>Consulenza</li>
+                        <li>Supporto tecnico</li>
+                        <li>Brand e identità visiva</li>
+                        <li>Design di prodotto</li>
+                    </ul>
+                    <ul class="skills-list h1" data-animate-el data-lang="de">
+                        <li>Individuelle Software</li>
+                        <li>Digitale Transformation</li>
+                        <li>Beratung</li>
+                        <li>Technischer Support</li>
+                        <li>Branding &amp; Corporate Identity</li>
+                        <li>Produktdesign</li>
+                    </ul>
 
                 </div>
             </div> <!-- end about-expertise -->
@@ -240,13 +303,19 @@
                 <div class="column lg-12" data-animate-block>
 
                     <h2 class="text-pretitle" data-animate-el>
-                        <span data-lang="hr">Nedavni projekti</span><span data-lang="en">Recent Works</span>
+                        <span data-lang="hr">Nedavni projekti</span><span data-lang="en">Recent Works</span><span data-lang="it">Progetti recenti</span><span data-lang="de">Aktuelle Projekte</span>
                     </h2>
                     <p class="h1" data-animate-el data-lang="hr">
                         Ovo su neki od naših najdražih nedavnih projekata. Slobodno ih pogledajte.
                     </p>
                     <p class="h1" data-animate-el data-lang="en">
                         Here are some of our favorite projects we have done lately. Feel free to check them out.
+                    </p>
+                    <p class="h1" data-animate-el data-lang="it">
+                        Ecco alcuni dei nostri progetti recenti preferiti. Dai un'occhiata.
+                    </p>
+                    <p class="h1" data-animate-el data-lang="de">
+                        Hier sind einige unserer liebsten Projekte der letzten Zeit. Schauen Sie gerne vorbei.
                     </p>
 
                     <ul class="folio-list row block-lg-one-half block-stack-on-1000">
@@ -260,7 +329,7 @@
 
                                 <div class="folio-list__item-text">
                                     <div class="folio-list__item-cat">
-                                        <span data-lang="hr">Web aplikacija</span><span data-lang="en">Web Application</span>
+                                        <span data-lang="hr">Web aplikacija</span><span data-lang="en">Web Application</span><span data-lang="it">Applicazione web</span><span data-lang="de">Webanwendung</span>
                                     </div>
                                     <div class="folio-list__item-title">
                                         Rimap
@@ -285,7 +354,7 @@
 
                                 <div class="folio-list__item-text">
                                     <div class="folio-list__item-cat">
-                                        <span data-lang="hr">Web aplikacija</span><span data-lang="en">Web Application</span>
+                                        <span data-lang="hr">Web aplikacija</span><span data-lang="en">Web Application</span><span data-lang="it">Applicazione web</span><span data-lang="de">Webanwendung</span>
                                     </div>
                                     <div class="folio-list__item-title">
                                         Yufe
@@ -311,7 +380,7 @@
 
                                 <div class="folio-list__item-text">
                                     <div class="folio-list__item-cat">
-                                        <span data-lang="hr">Web stranica</span><span data-lang="en">Website</span>
+                                        <span data-lang="hr">Web stranica</span><span data-lang="en">Website</span><span data-lang="it">Sito web</span><span data-lang="de">Website</span>
                                     </div>
                                     <div class="folio-list__item-title">
                                         Petro&Bulk Solutions
@@ -338,7 +407,7 @@
 
                                 <div class="folio-list__item-text">
                                     <div class="folio-list__item-cat">
-                                        <span data-lang="hr">Web stranica</span><span data-lang="en">Website</span>
+                                        <span data-lang="hr">Web stranica</span><span data-lang="en">Website</span><span data-lang="it">Sito web</span><span data-lang="de">Website</span>
                                     </div>
                                     <div class="folio-list__item-title">
                                         Snow Festival
@@ -365,7 +434,7 @@
 
                                 <div class="folio-list__item-text">
                                     <div class="folio-list__item-cat">
-                                        <span data-lang="hr">Web trgovina</span><span data-lang="en">Web Shop</span>
+                                        <span data-lang="hr">Web trgovina</span><span data-lang="en">Web Shop</span><span data-lang="it">Negozio online</span><span data-lang="de">Onlineshop</span>
                                     </div>
                                     <div class="folio-list__item-title">
                                         ReViv Plus
@@ -391,7 +460,7 @@
 
                                 <div class="folio-list__item-text">
                                     <div class="folio-list__item-cat">
-                                        <span data-lang="hr">Mobilna aplikacija</span><span data-lang="en">Mobile Application</span>
+                                        <span data-lang="hr">Mobilna aplikacija</span><span data-lang="en">Mobile Application</span><span data-lang="it">Applicazione mobile</span><span data-lang="de">Mobile App</span>
                                     </div>
                                     <div class="folio-list__item-title">
                                         Apex Performance Fit
@@ -428,7 +497,7 @@
                                          class="testimonial-slider__avatar">
                                     <cite class="testimonial-slider__cite">
                                         <strong>Damir Medved</strong>
-                                        <span data-lang="hr">Direktor, EDIH Adria</span><span data-lang="en">Director, EDIH Adria</span>
+                                        <span data-lang="hr">Direktor, EDIH Adria</span><span data-lang="en">Director, EDIH Adria</span><span data-lang="it">Direttore, EDIH Adria</span><span data-lang="de">Direktor, EDIH Adria</span>
                                     </cite>
                                 </div>
                                 <p data-lang="hr">
@@ -448,6 +517,12 @@
                                     driving innovation by harnessing the region's resources and expertise. Highly
                                     recommended for anyone looking to be part of a vibrant innovation community!
                                 </p>
+                                <p data-lang="it">
+                                    La piattaforma RIMAP è ben organizzata e rende facile per aziende, ricercatori e settore pubblico entrare in contatto e collaborare a progetti di ricerca e sviluppo. L'attenzione alle tecnologie digitali e alla creazione di prodotti e servizi ad alto valore attraverso un approccio multidisciplinare è lodevole. È uno strumento potente per promuovere l'innovazione sfruttando le risorse e le competenze della regione. Consigliatissima a chiunque voglia far parte di una vivace comunità dell'innovazione!
+                                </p>
+                                <p data-lang="de">
+                                    Die RIMAP-Plattform ist gut organisiert und macht es Unternehmen, Forschenden und dem öffentlichen Sektor leicht, sich zu vernetzen und gemeinsam an Forschungs- und Entwicklungsprojekten zu arbeiten. Der Fokus auf digitale Technologien und die Entwicklung hochwertiger Produkte und Dienstleistungen durch einen multidisziplinären Ansatz ist lobenswert. Ein starkes Werkzeug, um Innovation mit den Ressourcen und dem Know-how der Region voranzutreiben. Sehr empfehlenswert für alle, die Teil einer lebendigen Innovationsgemeinschaft sein möchten!
+                                </p>
                             </div> <!-- end testimonial-slider__slide -->
 
                             <div class="testimonial-slider__slide swiper-slide">
@@ -456,7 +531,7 @@
                                          class="testimonial-slider__avatar">
                                     <cite class="testimonial-slider__cite">
                                         <strong>Roel de Beer</strong>
-                                        <span data-lang="hr">Voditelj projekata digitalizacije, Sveučilište u Maastrichtu</span><span data-lang="en">Project Lead Digitalization, University of Maastricht</span>
+                                        <span data-lang="hr">Voditelj projekata digitalizacije, Sveučilište u Maastrichtu</span><span data-lang="en">Project Lead Digitalization, University of Maastricht</span><span data-lang="it">Project Lead Digitalizzazione, Università di Maastricht</span><span data-lang="de">Projektleiter Digitalisierung, Universität Maastricht</span>
                                     </cite>
                                 </div>
                                 <p data-lang="hr">
@@ -473,6 +548,12 @@
                                     technologies. I’m excited to see how it will continue to connect businesses,
                                     researchers, and public sectors to create high-value products and services.
                                 </p>
+                                <p data-lang="it">
+                                    Sebbene ancora in fase di sviluppo, questa piattaforma è molto promettente all'interno della rete YUFE. L'attenzione alla collaborazione transfrontaliera tra mondo accademico ed economia in tutta Europa è notevole, soprattutto nel promuovere l'innovazione attraverso le tecnologie digitali. Sono curioso di vedere come continuerà a mettere in contatto aziende, ricercatori e settore pubblico per creare prodotti e servizi ad alto valore.
+                                </p>
+                                <p data-lang="de">
+                                    Obwohl sie sich noch in der Entwicklung befindet, ist diese Plattform innerhalb des YUFE-Netzwerks sehr vielversprechend. Der Fokus auf grenzüberschreitende Zusammenarbeit zwischen Wissenschaft und Wirtschaft in ganz Europa ist beeindruckend, insbesondere bei der Förderung von Innovation durch digitale Technologien. Ich bin gespannt, wie sie weiterhin Unternehmen, Forschende und den öffentlichen Sektor verbindet, um hochwertige Produkte und Dienstleistungen zu schaffen.
+                                </p>
                             </div> <!-- end testimonial-slider__slide -->
 
                             <div class="testimonial-slider__slide swiper-slide">
@@ -481,7 +562,7 @@
                                          class="testimonial-slider__avatar">
                                     <cite class="testimonial-slider__cite">
                                         <strong>Zarko Galjanic</strong>
-                                        <span data-lang="hr">Suosnivač, Petro & Biofuel Trading KFT</span><span data-lang="en">Co-Founder, Petro & Biofuel Trading KFT</span>
+                                        <span data-lang="hr">Suosnivač, Petro & Biofuel Trading KFT</span><span data-lang="en">Co-Founder, Petro & Biofuel Trading KFT</span><span data-lang="it">Co-fondatore, Petro &amp; Biofuel Trading KFT</span><span data-lang="de">Mitgründer, Petro &amp; Biofuel Trading KFT</span>
                                     </cite>
                                 </div>
                                 <p data-lang="hr">
@@ -497,6 +578,12 @@
                                     Overall, it's a reliable and efficient platform for industry professionals. Highly
                                     recommended!
                                 </p>
+                                <p data-lang="it">
+                                    Questo sito è dedicato al commercio di petrolio e biocarburanti e offre un design pulito e professionale e una navigazione semplice. Fornisce dati preziosi, analisi di mercato e opportunità di trading. L'attenzione alla sostenibilità è un bel tocco. Nel complesso, una piattaforma affidabile ed efficiente per i professionisti del settore. Consigliatissimo!
+                                </p>
+                                <p data-lang="de">
+                                    Diese Website für den Handel mit Erdöl und Biokraftstoffen bietet ein klares, professionelles Design und eine einfache Navigation. Sie liefert wertvolle Daten, Markteinblicke und Handelsmöglichkeiten. Der Fokus auf Nachhaltigkeit ist ein schöner Akzent. Insgesamt eine zuverlässige und effiziente Plattform für Branchenprofis. Sehr empfehlenswert!
+                                </p>
                             </div> <!-- end testimonial-slider__slide -->
 
                             <div class="testimonial-slider__slide swiper-slide">
@@ -505,7 +592,7 @@
                                          class="testimonial-slider__avatar">
                                     <cite class="testimonial-slider__cite">
                                         <strong>Sara Husidic</strong>
-                                        <span data-lang="hr">Predstavnica za trade marketing, JTI</span><span data-lang="en">Trade Marketing Representative, JTI</span>
+                                        <span data-lang="hr">Predstavnica za trade marketing, JTI</span><span data-lang="en">Trade Marketing Representative, JTI</span><span data-lang="it">Trade Marketing Representative, JTI</span><span data-lang="de">Trade Marketing Representative, JTI</span>
                                     </cite>
                                 </div>
                                 <p data-lang="hr">
@@ -520,6 +607,12 @@
                                     beautifully on both desktop and mobile devices. Whether you're here for information
                                     or services, this site makes the process smooth and enjoyable.
                                 </p>
+                                <p data-lang="it">
+                                    I contenuti del sito dello Snow Festival sono ben organizzati e permettono di trovare facilmente ciò che si cerca. Inoltre, il sito è responsive e funziona benissimo sia su desktop che su dispositivi mobili. Che tu sia qui per informazioni o servizi, questo sito rende tutto semplice e piacevole.
+                                </p>
+                                <p data-lang="de">
+                                    Die Inhalte der Snow-Festival-Website sind gut organisiert, sodass man genau das findet, was man sucht. Außerdem ist die Website responsiv und funktioniert hervorragend auf Desktop- und Mobilgeräten. Ob für Informationen oder Services – diese Seite macht alles einfach und angenehm.
+                                </p>
                             </div> <!-- end testimonial-slider__slide -->
 
                             <div class="testimonial-slider__slide swiper-slide">
@@ -528,7 +621,7 @@
                                          class="testimonial-slider__avatar">
                                     <cite class="testimonial-slider__cite">
                                         <strong>Nicola Capobianco</strong>
-                                        <span data-lang="hr">Generalni direktor, Capobianco d.o.o.</span><span data-lang="en">General Director, Capobianco d.o.o.</span>
+                                        <span data-lang="hr">Generalni direktor, Capobianco d.o.o.</span><span data-lang="en">General Director, Capobianco d.o.o.</span><span data-lang="it">Direttore generale, Capobianco d.o.o.</span><span data-lang="de">Geschäftsführer, Capobianco d.o.o.</span>
                                     </cite>
                                 </div>
                                 <p data-lang="hr">
@@ -544,6 +637,12 @@
                                     things engaging and accessible. Whether you're a potential customer or just curious
                                     about the supplement, it’s a website that makes a good first impression and does a
                                     great job of representing the brand’s vitality and health-focused mission.
+                                </p>
+                                <p data-lang="it">
+                                    Il sito di ReViv Plus è un'esperienza online dinamica e colorata che unisce un'estetica forte a un design incentrato sull'utente. Offre molte informazioni mantenendo tutto coinvolgente e accessibile. Che tu sia un potenziale cliente o semplicemente curioso di conoscere l'integratore, è un sito che fa un'ottima prima impressione e rappresenta molto bene la vitalità e la missione del marchio orientata alla salute.
+                                </p>
+                                <p data-lang="de">
+                                    Die ReViv-Plus-Website ist ein dynamisches, farbenfrohes Online-Erlebnis, das starke Ästhetik mit nutzerorientiertem Design verbindet. Sie bietet viele Informationen und bleibt dabei ansprechend und zugänglich. Ob potenzieller Kunde oder einfach neugierig auf das Nahrungsergänzungsmittel – die Website hinterlässt einen guten ersten Eindruck und bringt die Vitalität und gesundheitsorientierte Mission der Marke hervorragend zum Ausdruck.
                                 </p>
                             </div> <!-- end testimonial-slider__slide -->
 
@@ -566,7 +665,7 @@
             <div class="row contact-top">
                 <div class="column lg-12">
                     <h2 class="text-pretitle">
-                        <span data-lang="hr">Javite nam se</span><span data-lang="en">Get In Touch</span>
+                        <span data-lang="hr">Javite nam se</span><span data-lang="en">Get In Touch</span><span data-lang="it">Contattaci</span><span data-lang="de">Kontakt aufnehmen</span>
                     </h2>
 
                     <p class="h1" data-lang="hr">
@@ -579,12 +678,18 @@
                         Whether you have a question or just
                         want to chat about tech — shoot me a message.
                     </p>
+                    <p class="h1" data-lang="it">
+                        Saremo felici di sentirti. Che tu abbia una domanda o voglia semplicemente parlare di tecnologia, scrivici.
+                    </p>
+                    <p class="h1" data-lang="de">
+                        Wir freuen uns, von Ihnen zu hören. Ob Sie eine Frage haben oder einfach über Technologie sprechen möchten – schreiben Sie uns.
+                    </p>
                 </div>
             </div> <!-- end contact-top -->
 
             <div class="row contact-bottom">
                 <div class="column lg-4 md-12 contact-block">
-                    <a href="mailto:info@rdd.software" class="mailtoui btn btn--medium u-fullwidth contact-btn"><span data-lang="hr">Pišite nam.</span><span data-lang="en">Say Hello.</span></a>
+                    <a href="mailto:info@rdd.software" class="mailtoui btn btn--medium u-fullwidth contact-btn"><span data-lang="hr">Pišite nam.</span><span data-lang="en">Say Hello.</span><span data-lang="it">Scrivici.</span><span data-lang="de">Schreiben Sie uns.</span></a>
                 </div>
             </div> <!-- end contact-bottom -->
 

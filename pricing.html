@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html class="no-js ss-preload" lang="hr"
       data-title-hr="Cjenik - RDD Software"
-      data-title-en="Pricing - RDD Software">
+      data-title-en="Pricing - RDD Software"
+      data-title-it="Prezzi - RDD Software"
+      data-title-de="Preise - RDD Software">
 <head>
 
     <!--- basic page needs
@@ -26,6 +28,7 @@
     <link rel="stylesheet" href="css/vendor.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/i18n.css">
+    <link rel="stylesheet" href="css/theme.css">
     <style>
         .s-pricing {
             padding-bottom: var(--vspace-3_5);
@@ -126,12 +129,22 @@
                 font-size: 1.4rem;
                 color: var(--color-text-light);
             }
+
+            html[lang="it"] .pricing-table .col-anchor::before {
+                content: "Prezzo di riferimento: ";
+            }
+
+            html[lang="de"] .pricing-table .col-anchor::before {
+                content: "Referenzpreis: ";
+            }
         }
     </style>
 
-    <!-- language (hr / en) - runs before render so only one language is shown
+    <!-- language (hr / en / it / de) - runs before render so only one language is shown
     ================================================== -->
     <script src="js/i18n.js"></script>
+    <!-- light / dark theme - runs before render so the page does not flash -->
+    <script src="js/theme.js"></script>
 
     <!-- favicons
     ================================================== -->
@@ -171,11 +184,20 @@
 
         <div class="header-mobile">
             <span class="mobile-home-link"><a href="index.html">RDD.</a></span>
-            <div class="lang-switch" role="group" aria-label="Jezik / Language">
+            <div class="lang-switch" role="group" aria-label="Jezik / Language / Lingua / Sprache">
                 <button type="button" class="lang-switch__btn" data-set-lang="hr">HR</button>
                 <span class="lang-switch__sep">/</span>
                 <button type="button" class="lang-switch__btn" data-set-lang="en">EN</button>
+                <span class="lang-switch__sep">/</span>
+                <button type="button" class="lang-switch__btn" data-set-lang="it">IT</button>
+                <span class="lang-switch__sep">/</span>
+                <button type="button" class="lang-switch__btn" data-set-lang="de">DE</button>
             </div>
+            <button type="button" class="theme-toggle" data-toggle-theme aria-pressed="false"
+                    aria-label="Tamna / svijetla tema - Dark / light theme" title="Tamna / svijetla tema - Dark / light theme">
+                <svg class="theme-toggle__sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/></svg>
+                <svg class="theme-toggle__moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M20.2 14.6A8.5 8.5 0 0 1 9.4 3.8a8.5 8.5 0 1 0 10.8 10.8z"/></svg>
+            </button>
             <a class="mobile-menu-toggle" href="#0"><span>Menu</span></a>
         </div>
 
@@ -183,17 +205,28 @@
             <nav class="column lg-12 main-nav">
                 <ul>
                     <li><a href="index.html" class="home-link">RDD.</a></li>
-                    <li><a href="index.html#intro"><span data-lang="hr">Početna</span><span data-lang="en">Intro</span></a></li>
-                    <li><a href="index.html#about"><span data-lang="hr">O nama</span><span data-lang="en">About</span></a></li>
-                    <li><a href="index.html#works"><span data-lang="hr">Projekti</span><span data-lang="en">Works</span></a></li>
-                    <li class="current"><a href="pricing.html"><span data-lang="hr">Cjenik</span><span data-lang="en">Pricing</span></a></li>
-                    <li><a href="index.html#contact"><span data-lang="hr">Kontakt</span><span data-lang="en">Say Hello</span></a></li>
+                    <li><a href="index.html#intro"><span data-lang="hr">Početna</span><span data-lang="en">Intro</span><span data-lang="it">Intro</span><span data-lang="de">Start</span></a></li>
+                    <li><a href="index.html#about"><span data-lang="hr">O nama</span><span data-lang="en">About</span><span data-lang="it">Chi siamo</span><span data-lang="de">Über uns</span></a></li>
+                    <li><a href="index.html#works"><span data-lang="hr">Projekti</span><span data-lang="en">Works</span><span data-lang="it">Progetti</span><span data-lang="de">Projekte</span></a></li>
+                    <li class="current"><a href="pricing.html"><span data-lang="hr">Cjenik</span><span data-lang="en">Pricing</span><span data-lang="it">Prezzi</span><span data-lang="de">Preise</span></a></li>
+                    <li><a href="index.html#contact"><span data-lang="hr">Kontakt</span><span data-lang="en">Say Hello</span><span data-lang="it">Contatti</span><span data-lang="de">Kontakt</span></a></li>
                     <li class="lang-switch-item">
-                        <div class="lang-switch" role="group" aria-label="Jezik / Language">
+                        <div class="lang-switch" role="group" aria-label="Jezik / Language / Lingua / Sprache">
                             <button type="button" class="lang-switch__btn" data-set-lang="hr">HR</button>
                             <span class="lang-switch__sep">/</span>
                             <button type="button" class="lang-switch__btn" data-set-lang="en">EN</button>
+                            <span class="lang-switch__sep">/</span>
+                            <button type="button" class="lang-switch__btn" data-set-lang="it">IT</button>
+                            <span class="lang-switch__sep">/</span>
+                            <button type="button" class="lang-switch__btn" data-set-lang="de">DE</button>
                         </div>
+                    </li>
+                    <li class="theme-toggle-item">
+                        <button type="button" class="theme-toggle" data-toggle-theme aria-pressed="false"
+                                aria-label="Tamna / svijetla tema - Dark / light theme" title="Tamna / svijetla tema - Dark / light theme">
+                            <svg class="theme-toggle__sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/></svg>
+                            <svg class="theme-toggle__moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M20.2 14.6A8.5 8.5 0 0 1 9.4 3.8a8.5 8.5 0 1 0 10.8 10.8z"/></svg>
+                        </button>
                     </li>
                 </ul>
             </nav>
@@ -215,7 +248,7 @@
 
                 <div class="column">
                     <div class="text-pretitle with-line">
-                        <span data-lang="hr">Cjenik</span><span data-lang="en">Pricing</span>
+                        <span data-lang="hr">Cjenik</span><span data-lang="en">Pricing</span><span data-lang="it">Prezzi</span><span data-lang="de">Preise</span>
                     </div>
 
                     <h1 class="text-huge-title" data-lang="hr">
@@ -225,6 +258,14 @@
                     <h1 class="text-huge-title" data-lang="en">
                         Price list <br>
                         of our services. <br>
+                    </h1>
+                    <h1 class="text-huge-title" data-lang="it">
+                        Listino prezzi <br>
+                        dei nostri servizi. <br>
+                    </h1>
+                    <h1 class="text-huge-title" data-lang="de">
+                        Preisliste <br>
+                        unserer Leistungen. <br>
                     </h1>
                 </div>
 
@@ -248,42 +289,48 @@
                         All prices are in euros (EUR). Prices marked “from” are starting prices &mdash;
                         the final price depends on the scope of the project and is agreed in an individual offer.
                     </p>
+                    <p data-lang="it">
+                        Tutti i prezzi sono in euro (EUR). I prezzi indicati con “da” sono prezzi di partenza &mdash; il prezzo finale dipende dall'entità del progetto e viene concordato in un'offerta personalizzata.
+                    </p>
+                    <p data-lang="de">
+                        Alle Preise sind in Euro (EUR). Mit „ab“ gekennzeichnete Preise sind Einstiegspreise &mdash; der Endpreis hängt vom Projektumfang ab und wird in einem individuellen Angebot vereinbart.
+                    </p>
 
                     <!-- Custom Software Solutions -->
                     <div class="pricing-group">
                         <h3 class="pricing-group__title">
-                            <span data-lang="hr">Razvoj softvera po mjeri</span><span data-lang="en">Custom Software Solutions</span>
+                            <span data-lang="hr">Razvoj softvera po mjeri</span><span data-lang="en">Custom Software Solutions</span><span data-lang="it">Software su misura</span><span data-lang="de">Individuelle Software</span>
                         </h3>
                         <div class="table-responsive">
                             <table class="pricing-table">
                                 <thead>
                                 <tr>
-                                    <th><span data-lang="hr">Usluga</span><span data-lang="en">Service</span></th>
-                                    <th class="col-price"><span data-lang="hr">Cijena</span><span data-lang="en">Price</span></th>
-                                    <th class="col-anchor"><span data-lang="hr">Sidrena cijena</span><span data-lang="en">Anchor price</span></th>
+                                    <th><span data-lang="hr">Usluga</span><span data-lang="en">Service</span><span data-lang="it">Servizio</span><span data-lang="de">Leistung</span></th>
+                                    <th class="col-price"><span data-lang="hr">Cijena</span><span data-lang="en">Price</span><span data-lang="it">Prezzo</span><span data-lang="de">Preis</span></th>
+                                    <th class="col-anchor"><span data-lang="hr">Sidrena cijena</span><span data-lang="en">Anchor price</span><span data-lang="it">Prezzo di riferimento</span><span data-lang="de">Referenzpreis</span></th>
                                 </tr>
                                 </thead>
                                 <tbody>
                                 <tr>
                                     <td>
-                                        <span class="price-service__main" data-lang="hr">Programiranje – sat rada</span><span class="price-service__main" data-lang="en">Programming – hourly rate</span>
+                                        <span class="price-service__main" data-lang="hr">Programiranje – sat rada</span><span class="price-service__main" data-lang="en">Programming – hourly rate</span><span class="price-service__main" data-lang="it">Programmazione – tariffa oraria</span><span class="price-service__main" data-lang="de">Programmierung – Stundensatz</span>
                                     </td>
-                                    <td class="col-price"><span data-lang="hr"><span class="price-amount">45 €</span> / sat</span><span data-lang="en"><span class="price-amount">€45</span> / hour</span></td>
-                                    <td class="col-anchor"><span data-lang="hr">45 €</span><span data-lang="en">€45</span><span class="price-note">10.09.2026.</span></td>
+                                    <td class="col-price"><span data-lang="hr"><span class="price-amount">45 €</span> / sat</span><span data-lang="en"><span class="price-amount">€45</span> / hour</span><span data-lang="it"><span class="price-amount">45 €</span> / ora</span><span data-lang="de"><span class="price-amount">45 €</span> / Stunde</span></td>
+                                    <td class="col-anchor"><span data-lang="hr">45 €</span><span data-lang="en">€45</span><span data-lang="it">45 €</span><span data-lang="de">45 €</span><span class="price-note">10.09.2026.</span></td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <span class="price-service__main" data-lang="hr">Web aplikacija po mjeri</span><span class="price-service__main" data-lang="en">Custom web application</span>
+                                        <span class="price-service__main" data-lang="hr">Web aplikacija po mjeri</span><span class="price-service__main" data-lang="en">Custom web application</span><span class="price-service__main" data-lang="it">Applicazione web su misura</span><span class="price-service__main" data-lang="de">Individuelle Webanwendung</span>
                                     </td>
-                                    <td class="col-price"><span data-lang="hr"><span class="price-from">od</span> <span class="price-amount">3.500 €</span> / projekt</span><span data-lang="en"><span class="price-from">from</span> <span class="price-amount">€3,500</span> / project</span></td>
-                                    <td class="col-anchor"><span data-lang="hr">3.500 €</span><span data-lang="en">€3,500</span><span class="price-note">10.09.2026.</span></td>
+                                    <td class="col-price"><span data-lang="hr"><span class="price-from">od</span> <span class="price-amount">3.500 €</span> / projekt</span><span data-lang="en"><span class="price-from">from</span> <span class="price-amount">€3,500</span> / project</span><span data-lang="it"><span class="price-from">da</span> <span class="price-amount">3.500 €</span> / progetto</span><span data-lang="de"><span class="price-from">ab</span> <span class="price-amount">3.500 €</span> / Projekt</span></td>
+                                    <td class="col-anchor"><span data-lang="hr">3.500 €</span><span data-lang="en">€3,500</span><span data-lang="it">3.500 €</span><span data-lang="de">3.500 €</span><span class="price-note">10.09.2026.</span></td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <span class="price-service__main" data-lang="hr">Mobilna aplikacija (iOS / Android)</span><span class="price-service__main" data-lang="en">Mobile application (iOS / Android)</span>
+                                        <span class="price-service__main" data-lang="hr">Mobilna aplikacija (iOS / Android)</span><span class="price-service__main" data-lang="en">Mobile application (iOS / Android)</span><span class="price-service__main" data-lang="it">Applicazione mobile (iOS / Android)</span><span class="price-service__main" data-lang="de">Mobile App (iOS / Android)</span>
                                     </td>
-                                    <td class="col-price"><span data-lang="hr"><span class="price-from">od</span> <span class="price-amount">5.000 €</span> / projekt</span><span data-lang="en"><span class="price-from">from</span> <span class="price-amount">€5,000</span> / project</span></td>
-                                    <td class="col-anchor"><span data-lang="hr">5.000 €</span><span data-lang="en">€5,000</span><span class="price-note">10.09.2026.</span></td>
+                                    <td class="col-price"><span data-lang="hr"><span class="price-from">od</span> <span class="price-amount">5.000 €</span> / projekt</span><span data-lang="en"><span class="price-from">from</span> <span class="price-amount">€5,000</span> / project</span><span data-lang="it"><span class="price-from">da</span> <span class="price-amount">5.000 €</span> / progetto</span><span data-lang="de"><span class="price-from">ab</span> <span class="price-amount">5.000 €</span> / Projekt</span></td>
+                                    <td class="col-anchor"><span data-lang="hr">5.000 €</span><span data-lang="en">€5,000</span><span data-lang="it">5.000 €</span><span data-lang="de">5.000 €</span><span class="price-note">10.09.2026.</span></td>
                                 </tr>
                                 </tbody>
                             </table>
@@ -293,31 +340,31 @@
                     <!-- Websites & Online Shops -->
                     <div class="pricing-group">
                         <h3 class="pricing-group__title">
-                            <span data-lang="hr">Web stranice i web trgovine</span><span data-lang="en">Websites &amp; Online Shops</span>
+                            <span data-lang="hr">Web stranice i web trgovine</span><span data-lang="en">Websites &amp; Online Shops</span><span data-lang="it">Siti web e negozi online</span><span data-lang="de">Websites &amp; Onlineshops</span>
                         </h3>
                         <div class="table-responsive">
                             <table class="pricing-table">
                                 <thead>
                                 <tr>
-                                    <th><span data-lang="hr">Usluga</span><span data-lang="en">Service</span></th>
-                                    <th class="col-price"><span data-lang="hr">Cijena</span><span data-lang="en">Price</span></th>
-                                    <th class="col-anchor"><span data-lang="hr">Sidrena cijena</span><span data-lang="en">Anchor price</span></th>
+                                    <th><span data-lang="hr">Usluga</span><span data-lang="en">Service</span><span data-lang="it">Servizio</span><span data-lang="de">Leistung</span></th>
+                                    <th class="col-price"><span data-lang="hr">Cijena</span><span data-lang="en">Price</span><span data-lang="it">Prezzo</span><span data-lang="de">Preis</span></th>
+                                    <th class="col-anchor"><span data-lang="hr">Sidrena cijena</span><span data-lang="en">Anchor price</span><span data-lang="it">Prezzo di riferimento</span><span data-lang="de">Referenzpreis</span></th>
                                 </tr>
                                 </thead>
                                 <tbody>
                                 <tr>
                                     <td>
-                                        <span class="price-service__main" data-lang="hr">Prezentacijska web stranica</span><span class="price-service__main" data-lang="en">Business / presentation website</span>
+                                        <span class="price-service__main" data-lang="hr">Prezentacijska web stranica</span><span class="price-service__main" data-lang="en">Business / presentation website</span><span class="price-service__main" data-lang="it">Sito web aziendale / di presentazione</span><span class="price-service__main" data-lang="de">Unternehmens- / Präsentationswebsite</span>
                                     </td>
-                                    <td class="col-price"><span data-lang="hr"><span class="price-from">od</span> <span class="price-amount">1.000 €</span> / projekt</span><span data-lang="en"><span class="price-from">from</span> <span class="price-amount">€1,000</span> / project</span></td>
-                                    <td class="col-anchor"><span data-lang="hr">1.000 €</span><span data-lang="en">€1,000</span><span class="price-note">10.09.2026.</span></td>
+                                    <td class="col-price"><span data-lang="hr"><span class="price-from">od</span> <span class="price-amount">1.000 €</span> / projekt</span><span data-lang="en"><span class="price-from">from</span> <span class="price-amount">€1,000</span> / project</span><span data-lang="it"><span class="price-from">da</span> <span class="price-amount">1.000 €</span> / progetto</span><span data-lang="de"><span class="price-from">ab</span> <span class="price-amount">1.000 €</span> / Projekt</span></td>
+                                    <td class="col-anchor"><span data-lang="hr">1.000 €</span><span data-lang="en">€1,000</span><span data-lang="it">1.000 €</span><span data-lang="de">1.000 €</span><span class="price-note">10.09.2026.</span></td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <span class="price-service__main" data-lang="hr">Web trgovina</span><span class="price-service__main" data-lang="en">Online shop</span>
+                                        <span class="price-service__main" data-lang="hr">Web trgovina</span><span class="price-service__main" data-lang="en">Online shop</span><span class="price-service__main" data-lang="it">Negozio online</span><span class="price-service__main" data-lang="de">Onlineshop</span>
                                     </td>
-                                    <td class="col-price"><span data-lang="hr"><span class="price-from">od</span> <span class="price-amount">2.000 €</span> / projekt</span><span data-lang="en"><span class="price-from">from</span> <span class="price-amount">€2,000</span> / project</span></td>
-                                    <td class="col-anchor"><span data-lang="hr">2.000 €</span><span data-lang="en">€2,000</span><span class="price-note">10.09.2026.</span></td>
+                                    <td class="col-price"><span data-lang="hr"><span class="price-from">od</span> <span class="price-amount">2.000 €</span> / projekt</span><span data-lang="en"><span class="price-from">from</span> <span class="price-amount">€2,000</span> / project</span><span data-lang="it"><span class="price-from">da</span> <span class="price-amount">2.000 €</span> / progetto</span><span data-lang="de"><span class="price-from">ab</span> <span class="price-amount">2.000 €</span> / Projekt</span></td>
+                                    <td class="col-anchor"><span data-lang="hr">2.000 €</span><span data-lang="en">€2,000</span><span data-lang="it">2.000 €</span><span data-lang="de">2.000 €</span><span class="price-note">10.09.2026.</span></td>
                                 </tr>
                                 </tbody>
                             </table>
@@ -327,31 +374,31 @@
                     <!-- Digital Transformation -->
                     <div class="pricing-group">
                         <h3 class="pricing-group__title">
-                            <span data-lang="hr">Digitalna transformacija</span><span data-lang="en">Digital Transformation</span>
+                            <span data-lang="hr">Digitalna transformacija</span><span data-lang="en">Digital Transformation</span><span data-lang="it">Trasformazione digitale</span><span data-lang="de">Digitale Transformation</span>
                         </h3>
                         <div class="table-responsive">
                             <table class="pricing-table">
                                 <thead>
                                 <tr>
-                                    <th><span data-lang="hr">Usluga</span><span data-lang="en">Service</span></th>
-                                    <th class="col-price"><span data-lang="hr">Cijena</span><span data-lang="en">Price</span></th>
-                                    <th class="col-anchor"><span data-lang="hr">Sidrena cijena</span><span data-lang="en">Anchor price</span></th>
+                                    <th><span data-lang="hr">Usluga</span><span data-lang="en">Service</span><span data-lang="it">Servizio</span><span data-lang="de">Leistung</span></th>
+                                    <th class="col-price"><span data-lang="hr">Cijena</span><span data-lang="en">Price</span><span data-lang="it">Prezzo</span><span data-lang="de">Preis</span></th>
+                                    <th class="col-anchor"><span data-lang="hr">Sidrena cijena</span><span data-lang="en">Anchor price</span><span data-lang="it">Prezzo di riferimento</span><span data-lang="de">Referenzpreis</span></th>
                                 </tr>
                                 </thead>
                                 <tbody>
                                 <tr>
                                     <td>
-                                        <span class="price-service__main" data-lang="hr">Analiza procesa i plan digitalizacije</span><span class="price-service__main" data-lang="en">Process analysis &amp; digitalisation plan</span>
+                                        <span class="price-service__main" data-lang="hr">Analiza procesa i plan digitalizacije</span><span class="price-service__main" data-lang="en">Process analysis &amp; digitalisation plan</span><span class="price-service__main" data-lang="it">Analisi dei processi e piano di digitalizzazione</span><span class="price-service__main" data-lang="de">Prozessanalyse &amp; Digitalisierungsplan</span>
                                     </td>
-                                    <td class="col-price"><span data-lang="hr"><span class="price-from">od</span> <span class="price-amount">600 €</span> / projekt</span><span data-lang="en"><span class="price-from">from</span> <span class="price-amount">€600</span> / project</span></td>
-                                    <td class="col-anchor"><span data-lang="hr">600 €</span><span data-lang="en">€600</span><span class="price-note">10.09.2026.</span></td>
+                                    <td class="col-price"><span data-lang="hr"><span class="price-from">od</span> <span class="price-amount">600 €</span> / projekt</span><span data-lang="en"><span class="price-from">from</span> <span class="price-amount">€600</span> / project</span><span data-lang="it"><span class="price-from">da</span> <span class="price-amount">600 €</span> / progetto</span><span data-lang="de"><span class="price-from">ab</span> <span class="price-amount">600 €</span> / Projekt</span></td>
+                                    <td class="col-anchor"><span data-lang="hr">600 €</span><span data-lang="en">€600</span><span data-lang="it">600 €</span><span data-lang="de">600 €</span><span class="price-note">10.09.2026.</span></td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <span class="price-service__main" data-lang="hr">Integracija sustava i automatizacija</span><span class="price-service__main" data-lang="en">System integration &amp; automation</span>
+                                        <span class="price-service__main" data-lang="hr">Integracija sustava i automatizacija</span><span class="price-service__main" data-lang="en">System integration &amp; automation</span><span class="price-service__main" data-lang="it">Integrazione di sistemi e automazione</span><span class="price-service__main" data-lang="de">Systemintegration &amp; Automatisierung</span>
                                     </td>
-                                    <td class="col-price"><span data-lang="hr"><span class="price-amount">45 €</span> / sat</span><span data-lang="en"><span class="price-amount">€45</span> / hour</span></td>
-                                    <td class="col-anchor"><span data-lang="hr">45 €</span><span data-lang="en">€45</span><span class="price-note">10.09.2026.</span></td>
+                                    <td class="col-price"><span data-lang="hr"><span class="price-amount">45 €</span> / sat</span><span data-lang="en"><span class="price-amount">€45</span> / hour</span><span data-lang="it"><span class="price-amount">45 €</span> / ora</span><span data-lang="de"><span class="price-amount">45 €</span> / Stunde</span></td>
+                                    <td class="col-anchor"><span data-lang="hr">45 €</span><span data-lang="en">€45</span><span data-lang="it">45 €</span><span data-lang="de">45 €</span><span class="price-note">10.09.2026.</span></td>
                                 </tr>
                                 </tbody>
                             </table>
@@ -361,24 +408,24 @@
                     <!-- Consulting -->
                     <div class="pricing-group">
                         <h3 class="pricing-group__title">
-                            <span data-lang="hr">Konzultacije</span><span data-lang="en">Consulting</span>
+                            <span data-lang="hr">Konzultacije</span><span data-lang="en">Consulting</span><span data-lang="it">Consulenza</span><span data-lang="de">Beratung</span>
                         </h3>
                         <div class="table-responsive">
                             <table class="pricing-table">
                                 <thead>
                                 <tr>
-                                    <th><span data-lang="hr">Usluga</span><span data-lang="en">Service</span></th>
-                                    <th class="col-price"><span data-lang="hr">Cijena</span><span data-lang="en">Price</span></th>
-                                    <th class="col-anchor"><span data-lang="hr">Sidrena cijena</span><span data-lang="en">Anchor price</span></th>
+                                    <th><span data-lang="hr">Usluga</span><span data-lang="en">Service</span><span data-lang="it">Servizio</span><span data-lang="de">Leistung</span></th>
+                                    <th class="col-price"><span data-lang="hr">Cijena</span><span data-lang="en">Price</span><span data-lang="it">Prezzo</span><span data-lang="de">Preis</span></th>
+                                    <th class="col-anchor"><span data-lang="hr">Sidrena cijena</span><span data-lang="en">Anchor price</span><span data-lang="it">Prezzo di riferimento</span><span data-lang="de">Referenzpreis</span></th>
                                 </tr>
                                 </thead>
                                 <tbody>
                                 <tr>
                                     <td>
-                                        <span class="price-service__main" data-lang="hr">IT konzultacije</span><span class="price-service__main" data-lang="en">IT consulting</span>
+                                        <span class="price-service__main" data-lang="hr">IT konzultacije</span><span class="price-service__main" data-lang="en">IT consulting</span><span class="price-service__main" data-lang="it">Consulenza IT</span><span class="price-service__main" data-lang="de">IT-Beratung</span>
                                     </td>
-                                    <td class="col-price"><span data-lang="hr"><span class="price-amount">50 €</span> / sat</span><span data-lang="en"><span class="price-amount">€50</span> / hour</span></td>
-                                    <td class="col-anchor"><span data-lang="hr">50 €</span><span data-lang="en">€50</span><span class="price-note">10.09.2026.</span></td>
+                                    <td class="col-price"><span data-lang="hr"><span class="price-amount">50 €</span> / sat</span><span data-lang="en"><span class="price-amount">€50</span> / hour</span><span data-lang="it"><span class="price-amount">50 €</span> / ora</span><span data-lang="de"><span class="price-amount">50 €</span> / Stunde</span></td>
+                                    <td class="col-anchor"><span data-lang="hr">50 €</span><span data-lang="en">€50</span><span data-lang="it">50 €</span><span data-lang="de">50 €</span><span class="price-note">10.09.2026.</span></td>
                                 </tr>
                                 </tbody>
                             </table>
@@ -388,38 +435,38 @@
                     <!-- Technical Support -->
                     <div class="pricing-group">
                         <h3 class="pricing-group__title">
-                            <span data-lang="hr">Tehnička podrška</span><span data-lang="en">Technical Support</span>
+                            <span data-lang="hr">Tehnička podrška</span><span data-lang="en">Technical Support</span><span data-lang="it">Supporto tecnico</span><span data-lang="de">Technischer Support</span>
                         </h3>
                         <div class="table-responsive">
                             <table class="pricing-table">
                                 <thead>
                                 <tr>
-                                    <th><span data-lang="hr">Usluga</span><span data-lang="en">Service</span></th>
-                                    <th class="col-price"><span data-lang="hr">Cijena</span><span data-lang="en">Price</span></th>
-                                    <th class="col-anchor"><span data-lang="hr">Sidrena cijena</span><span data-lang="en">Anchor price</span></th>
+                                    <th><span data-lang="hr">Usluga</span><span data-lang="en">Service</span><span data-lang="it">Servizio</span><span data-lang="de">Leistung</span></th>
+                                    <th class="col-price"><span data-lang="hr">Cijena</span><span data-lang="en">Price</span><span data-lang="it">Prezzo</span><span data-lang="de">Preis</span></th>
+                                    <th class="col-anchor"><span data-lang="hr">Sidrena cijena</span><span data-lang="en">Anchor price</span><span data-lang="it">Prezzo di riferimento</span><span data-lang="de">Referenzpreis</span></th>
                                 </tr>
                                 </thead>
                                 <tbody>
                                 <tr>
                                     <td>
-                                        <span class="price-service__main" data-lang="hr">Održavanje web stranice</span><span class="price-service__main" data-lang="en">Website maintenance</span>
+                                        <span class="price-service__main" data-lang="hr">Održavanje web stranice</span><span class="price-service__main" data-lang="en">Website maintenance</span><span class="price-service__main" data-lang="it">Manutenzione del sito web</span><span class="price-service__main" data-lang="de">Website-Wartung</span>
                                     </td>
-                                    <td class="col-price"><span data-lang="hr"><span class="price-from">od</span> <span class="price-amount">50 €</span> / mjesec</span><span data-lang="en"><span class="price-from">from</span> <span class="price-amount">€50</span> / month</span></td>
-                                    <td class="col-anchor"><span data-lang="hr">50 €</span><span data-lang="en">€50</span><span class="price-note">10.09.2026.</span></td>
+                                    <td class="col-price"><span data-lang="hr"><span class="price-from">od</span> <span class="price-amount">50 €</span> / mjesec</span><span data-lang="en"><span class="price-from">from</span> <span class="price-amount">€50</span> / month</span><span data-lang="it"><span class="price-from">da</span> <span class="price-amount">50 €</span> / mese</span><span data-lang="de"><span class="price-from">ab</span> <span class="price-amount">50 €</span> / Monat</span></td>
+                                    <td class="col-anchor"><span data-lang="hr">50 €</span><span data-lang="en">€50</span><span data-lang="it">50 €</span><span data-lang="de">50 €</span><span class="price-note">10.09.2026.</span></td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <span class="price-service__main" data-lang="hr">Održavanje aplikacije</span><span class="price-service__main" data-lang="en">Application maintenance</span>
+                                        <span class="price-service__main" data-lang="hr">Održavanje aplikacije</span><span class="price-service__main" data-lang="en">Application maintenance</span><span class="price-service__main" data-lang="it">Manutenzione dell'applicazione</span><span class="price-service__main" data-lang="de">Anwendungswartung</span>
                                     </td>
-                                    <td class="col-price"><span data-lang="hr"><span class="price-from">od</span> <span class="price-amount">150 €</span> / mjesec</span><span data-lang="en"><span class="price-from">from</span> <span class="price-amount">€150</span> / month</span></td>
-                                    <td class="col-anchor"><span data-lang="hr">150 €</span><span data-lang="en">€150</span><span class="price-note">10.09.2026.</span></td>
+                                    <td class="col-price"><span data-lang="hr"><span class="price-from">od</span> <span class="price-amount">150 €</span> / mjesec</span><span data-lang="en"><span class="price-from">from</span> <span class="price-amount">€150</span> / month</span><span data-lang="it"><span class="price-from">da</span> <span class="price-amount">150 €</span> / mese</span><span data-lang="de"><span class="price-from">ab</span> <span class="price-amount">150 €</span> / Monat</span></td>
+                                    <td class="col-anchor"><span data-lang="hr">150 €</span><span data-lang="en">€150</span><span data-lang="it">150 €</span><span data-lang="de">150 €</span><span class="price-note">10.09.2026.</span></td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <span class="price-service__main" data-lang="hr">Tehnička intervencija</span><span class="price-service__main" data-lang="en">Technical support call-out</span>
+                                        <span class="price-service__main" data-lang="hr">Tehnička intervencija</span><span class="price-service__main" data-lang="en">Technical support call-out</span><span class="price-service__main" data-lang="it">Intervento di supporto tecnico</span><span class="price-service__main" data-lang="de">Technischer Support vor Ort</span>
                                     </td>
-                                    <td class="col-price"><span data-lang="hr"><span class="price-amount">40 €</span> / sat</span><span data-lang="en"><span class="price-amount">€40</span> / hour</span></td>
-                                    <td class="col-anchor"><span data-lang="hr">40 €</span><span data-lang="en">€40</span><span class="price-note">10.09.2026.</span></td>
+                                    <td class="col-price"><span data-lang="hr"><span class="price-amount">40 €</span> / sat</span><span data-lang="en"><span class="price-amount">€40</span> / hour</span><span data-lang="it"><span class="price-amount">40 €</span> / ora</span><span data-lang="de"><span class="price-amount">40 €</span> / Stunde</span></td>
+                                    <td class="col-anchor"><span data-lang="hr">40 €</span><span data-lang="en">€40</span><span data-lang="it">40 €</span><span data-lang="de">40 €</span><span class="price-note">10.09.2026.</span></td>
                                 </tr>
                                 </tbody>
                             </table>
@@ -429,31 +476,31 @@
                     <!-- Branding Identity -->
                     <div class="pricing-group">
                         <h3 class="pricing-group__title">
-                            <span data-lang="hr">Brending i vizualni identitet</span><span data-lang="en">Branding Identity</span>
+                            <span data-lang="hr">Brending i vizualni identitet</span><span data-lang="en">Branding Identity</span><span data-lang="it">Brand e identità visiva</span><span data-lang="de">Branding &amp; Corporate Identity</span>
                         </h3>
                         <div class="table-responsive">
                             <table class="pricing-table">
                                 <thead>
                                 <tr>
-                                    <th><span data-lang="hr">Usluga</span><span data-lang="en">Service</span></th>
-                                    <th class="col-price"><span data-lang="hr">Cijena</span><span data-lang="en">Price</span></th>
-                                    <th class="col-anchor"><span data-lang="hr">Sidrena cijena</span><span data-lang="en">Anchor price</span></th>
+                                    <th><span data-lang="hr">Usluga</span><span data-lang="en">Service</span><span data-lang="it">Servizio</span><span data-lang="de">Leistung</span></th>
+                                    <th class="col-price"><span data-lang="hr">Cijena</span><span data-lang="en">Price</span><span data-lang="it">Prezzo</span><span data-lang="de">Preis</span></th>
+                                    <th class="col-anchor"><span data-lang="hr">Sidrena cijena</span><span data-lang="en">Anchor price</span><span data-lang="it">Prezzo di riferimento</span><span data-lang="de">Referenzpreis</span></th>
                                 </tr>
                                 </thead>
                                 <tbody>
                                 <tr>
                                     <td>
-                                        <span class="price-service__main" data-lang="hr">Dizajn logotipa</span><span class="price-service__main" data-lang="en">Logo design</span>
+                                        <span class="price-service__main" data-lang="hr">Dizajn logotipa</span><span class="price-service__main" data-lang="en">Logo design</span><span class="price-service__main" data-lang="it">Design del logo</span><span class="price-service__main" data-lang="de">Logodesign</span>
                                     </td>
-                                    <td class="col-price"><span data-lang="hr"><span class="price-from">od</span> <span class="price-amount">300 €</span> / projekt</span><span data-lang="en"><span class="price-from">from</span> <span class="price-amount">€300</span> / project</span></td>
-                                    <td class="col-anchor"><span data-lang="hr">300 €</span><span data-lang="en">€300</span><span class="price-note">10.09.2026.</span></td>
+                                    <td class="col-price"><span data-lang="hr"><span class="price-from">od</span> <span class="price-amount">300 €</span> / projekt</span><span data-lang="en"><span class="price-from">from</span> <span class="price-amount">€300</span> / project</span><span data-lang="it"><span class="price-from">da</span> <span class="price-amount">300 €</span> / progetto</span><span data-lang="de"><span class="price-from">ab</span> <span class="price-amount">300 €</span> / Projekt</span></td>
+                                    <td class="col-anchor"><span data-lang="hr">300 €</span><span data-lang="en">€300</span><span data-lang="it">300 €</span><span data-lang="de">300 €</span><span class="price-note">10.09.2026.</span></td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <span class="price-service__main" data-lang="hr">Paket vizualnog identiteta</span><span class="price-service__main" data-lang="en">Visual identity package</span>
+                                        <span class="price-service__main" data-lang="hr">Paket vizualnog identiteta</span><span class="price-service__main" data-lang="en">Visual identity package</span><span class="price-service__main" data-lang="it">Pacchetto di identità visiva</span><span class="price-service__main" data-lang="de">Corporate-Identity-Paket</span>
                                     </td>
-                                    <td class="col-price"><span data-lang="hr"><span class="price-from">od</span> <span class="price-amount">800 €</span> / projekt</span><span data-lang="en"><span class="price-from">from</span> <span class="price-amount">€800</span> / project</span></td>
-                                    <td class="col-anchor"><span data-lang="hr">800 €</span><span data-lang="en">€800</span><span class="price-note">10.09.2026.</span></td>
+                                    <td class="col-price"><span data-lang="hr"><span class="price-from">od</span> <span class="price-amount">800 €</span> / projekt</span><span data-lang="en"><span class="price-from">from</span> <span class="price-amount">€800</span> / project</span><span data-lang="it"><span class="price-from">da</span> <span class="price-amount">800 €</span> / progetto</span><span data-lang="de"><span class="price-from">ab</span> <span class="price-amount">800 €</span> / Projekt</span></td>
+                                    <td class="col-anchor"><span data-lang="hr">800 €</span><span data-lang="en">€800</span><span data-lang="it">800 €</span><span data-lang="de">800 €</span><span class="price-note">10.09.2026.</span></td>
                                 </tr>
                                 </tbody>
                             </table>
@@ -463,31 +510,31 @@
                     <!-- Product Design -->
                     <div class="pricing-group">
                         <h3 class="pricing-group__title">
-                            <span data-lang="hr">Dizajn proizvoda</span><span data-lang="en">Product Design</span>
+                            <span data-lang="hr">Dizajn proizvoda</span><span data-lang="en">Product Design</span><span data-lang="it">Design di prodotto</span><span data-lang="de">Produktdesign</span>
                         </h3>
                         <div class="table-responsive">
                             <table class="pricing-table">
                                 <thead>
                                 <tr>
-                                    <th><span data-lang="hr">Usluga</span><span data-lang="en">Service</span></th>
-                                    <th class="col-price"><span data-lang="hr">Cijena</span><span data-lang="en">Price</span></th>
-                                    <th class="col-anchor"><span data-lang="hr">Sidrena cijena</span><span data-lang="en">Anchor price</span></th>
+                                    <th><span data-lang="hr">Usluga</span><span data-lang="en">Service</span><span data-lang="it">Servizio</span><span data-lang="de">Leistung</span></th>
+                                    <th class="col-price"><span data-lang="hr">Cijena</span><span data-lang="en">Price</span><span data-lang="it">Prezzo</span><span data-lang="de">Preis</span></th>
+                                    <th class="col-anchor"><span data-lang="hr">Sidrena cijena</span><span data-lang="en">Anchor price</span><span data-lang="it">Prezzo di riferimento</span><span data-lang="de">Referenzpreis</span></th>
                                 </tr>
                                 </thead>
                                 <tbody>
                                 <tr>
                                     <td>
-                                        <span class="price-service__main" data-lang="hr">UX/UI dizajn i prototip</span><span class="price-service__main" data-lang="en">UX/UI design &amp; prototype</span>
+                                        <span class="price-service__main" data-lang="hr">UX/UI dizajn i prototip</span><span class="price-service__main" data-lang="en">UX/UI design &amp; prototype</span><span class="price-service__main" data-lang="it">Design UX/UI e prototipo</span><span class="price-service__main" data-lang="de">UX/UI-Design &amp; Prototyp</span>
                                     </td>
-                                    <td class="col-price"><span data-lang="hr"><span class="price-from">od</span> <span class="price-amount">700 €</span> / projekt</span><span data-lang="en"><span class="price-from">from</span> <span class="price-amount">€700</span> / project</span></td>
-                                    <td class="col-anchor"><span data-lang="hr">700 €</span><span data-lang="en">€700</span><span class="price-note">10.09.2026.</span></td>
+                                    <td class="col-price"><span data-lang="hr"><span class="price-from">od</span> <span class="price-amount">700 €</span> / projekt</span><span data-lang="en"><span class="price-from">from</span> <span class="price-amount">€700</span> / project</span><span data-lang="it"><span class="price-from">da</span> <span class="price-amount">700 €</span> / progetto</span><span data-lang="de"><span class="price-from">ab</span> <span class="price-amount">700 €</span> / Projekt</span></td>
+                                    <td class="col-anchor"><span data-lang="hr">700 €</span><span data-lang="en">€700</span><span data-lang="it">700 €</span><span data-lang="de">700 €</span><span class="price-note">10.09.2026.</span></td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <span class="price-service__main" data-lang="hr">Dizajn – sat rada</span><span class="price-service__main" data-lang="en">Design – hourly rate</span>
+                                        <span class="price-service__main" data-lang="hr">Dizajn – sat rada</span><span class="price-service__main" data-lang="en">Design – hourly rate</span><span class="price-service__main" data-lang="it">Design – tariffa oraria</span><span class="price-service__main" data-lang="de">Design – Stundensatz</span>
                                     </td>
-                                    <td class="col-price"><span data-lang="hr"><span class="price-amount">40 €</span> / sat</span><span data-lang="en"><span class="price-amount">€40</span> / hour</span></td>
-                                    <td class="col-anchor"><span data-lang="hr">40 €</span><span data-lang="en">€40</span><span class="price-note">10.09.2026.</span></td>
+                                    <td class="col-price"><span data-lang="hr"><span class="price-amount">40 €</span> / sat</span><span data-lang="en"><span class="price-amount">€40</span> / hour</span><span data-lang="it"><span class="price-amount">40 €</span> / ora</span><span data-lang="de"><span class="price-amount">40 €</span> / Stunde</span></td>
+                                    <td class="col-anchor"><span data-lang="hr">40 €</span><span data-lang="en">€40</span><span data-lang="it">40 €</span><span data-lang="de">40 €</span><span class="price-note">10.09.2026.</span></td>
                                 </tr>
                                 </tbody>
                             </table>
@@ -500,10 +547,16 @@
                     <p class="pricing-footnote" data-lang="en">
                         Anchor price is the price in effect on the stated date.
                     </p>
+                    <p class="pricing-footnote" data-lang="it">
+                        Il prezzo di riferimento è il prezzo in vigore alla data indicata.
+                    </p>
+                    <p class="pricing-footnote" data-lang="de">
+                        Der Referenzpreis ist der am angegebenen Datum gültige Preis.
+                    </p>
 
                     <div class="pricing-download">
                         <a href="RDD_cjenik_price_list.csv" download="RDD_cjenik_price_list.csv"
-                           class="btn btn--medium btn--primary"><span data-lang="hr">Preuzmi cjenik (.csv)</span><span data-lang="en">Download price list (.csv)</span></a>
+                           class="btn btn--medium btn--primary"><span data-lang="hr">Preuzmi cjenik (.csv)</span><span data-lang="en">Download price list (.csv)</span><span data-lang="it">Scarica il listino prezzi (.csv)</span><span data-lang="de">Preisliste herunterladen (.csv)</span></a>
                     </div>
 
                 </div>

@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="hr"
       data-title-hr="YUFE - Detalji projekta"
-      data-title-en="YUFE - Project Details">
+      data-title-en="YUFE - Project Details"
+      data-title-it="YUFE - Dettagli del progetto"
+      data-title-de="YUFE - Projektdetails">
 <head>
     <meta charset="UTF-8"/>
     <title>YUFE - Detalji projekta</title>
@@ -9,8 +11,11 @@
     <!-- Your main stylesheet -->
     <link rel="stylesheet" href="css/project_details_style.css"/>
     <link rel="stylesheet" href="css/i18n.css"/>
-    <!-- language (hr / en) - runs before render so only one language is shown -->
+    <link rel="stylesheet" href="css/theme.css"/>
+    <!-- language (hr / en / it / de) - runs before render so only one language is shown -->
     <script src="js/i18n.js"></script>
+    <!-- light / dark theme - runs before render so the page does not flash -->
+    <script src="js/theme.js"></script>
 </head>
 
 <body class="dark">
@@ -23,13 +28,22 @@
                     class="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors back-link"
             >
                 <span class="icon-arrow-left">←</span>
-                <span data-lang="hr">Natrag na sve projekte</span><span data-lang="en">Back to all projects</span>
+                <span data-lang="hr">Natrag na sve projekte</span><span data-lang="en">Back to all projects</span><span data-lang="it">Torna a tutti i progetti</span><span data-lang="de">Zurück zu allen Projekten</span>
             </a>
-            <div class="lang-switch" role="group" aria-label="Jezik / Language">
+            <div class="lang-switch" role="group" aria-label="Jezik / Language / Lingua / Sprache">
                 <button type="button" class="lang-switch__btn" data-set-lang="hr">HR</button>
                 <span class="lang-switch__sep">/</span>
                 <button type="button" class="lang-switch__btn" data-set-lang="en">EN</button>
+                <span class="lang-switch__sep">/</span>
+                <button type="button" class="lang-switch__btn" data-set-lang="it">IT</button>
+                <span class="lang-switch__sep">/</span>
+                <button type="button" class="lang-switch__btn" data-set-lang="de">DE</button>
             </div>
+            <button type="button" class="theme-toggle" data-toggle-theme aria-pressed="false"
+                    aria-label="Tamna / svijetla tema - Dark / light theme" title="Tamna / svijetla tema - Dark / light theme">
+                <svg class="theme-toggle__sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/></svg>
+                <svg class="theme-toggle__moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M20.2 14.6A8.5 8.5 0 0 1 9.4 3.8a8.5 8.5 0 1 0 10.8 10.8z"/></svg>
+            </button>
         </div>
     </header>
 
@@ -51,6 +65,12 @@
                         create high-value products and services through a multidisciplinary approach, utilizing
                         resources, expertise, and human capital from across Europe.
                     </p>
+                    <p class="text-muted-foreground max-w-2xl project-long-description" data-lang="it">
+                        Come parte della rete Young Universities for the Future of Europe (YUFE), questa piattaforma regionale per l'innovazione digitale promuove il trasferimento di conoscenze tra mondo accademico ed economia in tutta l'Unione europea. Mette in contatto imprese, imprenditori, ricercatori e settore pubblico di diverse regioni dell'UE per collaborare su ricerca, sviluppo e tecnologie digitali. Facilitando il networking e l'innovazione transfrontalieri, la piattaforma aiuta a creare prodotti e servizi ad alto valore attraverso un approccio multidisciplinare, sfruttando risorse, competenze e capitale umano di tutta Europa.
+                    </p>
+                    <p class="text-muted-foreground max-w-2xl project-long-description" data-lang="de">
+                        Als Teil des Netzwerks Young Universities for the Future of Europe (YUFE) fördert diese regionale Plattform für digitale Innovation den Wissenstransfer zwischen Wissenschaft und Wirtschaft in der gesamten Europäischen Union. Sie verbindet Unternehmen, Unternehmer, Forschende und den öffentlichen Sektor aus verschiedenen EU-Regionen für die Zusammenarbeit in Forschung, Entwicklung und digitalen Technologien. Durch grenzüberschreitende Vernetzung und Innovation hilft die Plattform, mit einem multidisziplinären Ansatz hochwertige Produkte und Dienstleistungen zu schaffen – unter Nutzung von Ressourcen, Know-how und Humankapital aus ganz Europa.
+                    </p>
                 </div>
                 <span class="text-muted-foreground project-year">2025</span>
             </div>
@@ -63,7 +83,7 @@
                         rel="noopener noreferrer"
                         class="flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:opacity-90 transition-opacity"
                 >
-                    <span style="color: #0a0b0b"><span data-lang="hr">Pogledaj projekt</span><span data-lang="en">View Project</span></span>
+                    <span style="color: #0a0b0b"><span data-lang="hr">Pogledaj projekt</span><span data-lang="en">View Project</span><span data-lang="it">Vedi il progetto</span><span data-lang="de">Projekt ansehen</span></span>
                 </a>
             </div>
         </div>
@@ -79,7 +99,7 @@
         </div>
 
         <section class="mb-16">
-            <h2 class="mb-6"><span data-lang="hr">Tehnologije</span><span data-lang="en">Technologies</span></h2>
+            <h2 class="mb-6"><span data-lang="hr">Tehnologije</span><span data-lang="en">Technologies</span><span data-lang="it">Tecnologie</span><span data-lang="de">Technologien</span></h2>
             <div class="flex flex-wrap gap-3">
           <span class="px-4 py-2 bg-muted text-foreground rounded-lg border border-border">
             .NET
@@ -97,7 +117,7 @@
         <!-- Challenge & Solution -->
         <section class="challenge-solution mb-16">
             <div>
-                <h3 class="mb-4"><span data-lang="hr">Izazov</span><span data-lang="en">Challenge</span></h3>
+                <h3 class="mb-4"><span data-lang="hr">Izazov</span><span data-lang="en">Challenge</span><span data-lang="it">Sfida</span><span data-lang="de">Herausforderung</span></h3>
                 <p class="text-muted-foreground leading-relaxed" data-lang="hr">
                     Omogućiti prekograničnu suradnju i inovacije među raznolikim dionicima (gospodarstvom, akademskom zajednicom, istraživačima i javnim sektorom), uz jasno, pregledno i jednostavno korisničko iskustvo u kojem se sadržaj lako pronalazi.
                 </p>
@@ -106,10 +126,16 @@
                     academia, researchers, and public sectors) while keeping the experience clear, discoverable,
                     and easy to navigate.
                 </p>
+                <p class="text-muted-foreground leading-relaxed" data-lang="it">
+                    Consentire la collaborazione e l'innovazione transfrontaliera tra attori diversi (imprese, mondo accademico, ricercatori e settore pubblico), mantenendo un'esperienza chiara, facile da scoprire e da navigare.
+                </p>
+                <p class="text-muted-foreground leading-relaxed" data-lang="de">
+                    Grenzüberschreitende Zusammenarbeit und Innovation zwischen verschiedenen Akteuren (Wirtschaft, Wissenschaft, Forschende und öffentlicher Sektor) ermöglichen – bei einem klaren, auffindbaren und leicht navigierbaren Nutzererlebnis.
+                </p>
             </div>
 
             <div>
-                <h3 class="mb-4"><span data-lang="hr">Rješenje</span><span data-lang="en">Solution</span></h3>
+                <h3 class="mb-4"><span data-lang="hr">Rješenje</span><span data-lang="en">Solution</span><span data-lang="it">Soluzione</span><span data-lang="de">Lösung</span></h3>
                 <p class="text-muted-foreground leading-relaxed" data-lang="hr">
                     Izraditi strukturiranu platformu bogatu sadržajem, s dobro osmišljenom informacijskom arhitekturom i intuitivnim sučeljem koje podržava umrežavanje, otkrivanje sadržaja i prijenos znanja među regijama i disciplinama.
                 </p>
@@ -118,12 +144,18 @@
                     user-friendly interface that supports networking, discovery, and knowledge transfer across
                     regions and disciplines.
                 </p>
+                <p class="text-muted-foreground leading-relaxed" data-lang="it">
+                    Realizzare una piattaforma strutturata e ricca di contenuti, con una solida architettura dell'informazione e un'interfaccia intuitiva che supporti networking, scoperta e trasferimento di conoscenze tra regioni e discipline.
+                </p>
+                <p class="text-muted-foreground leading-relaxed" data-lang="de">
+                    Eine strukturierte, inhaltsreiche Plattform mit starker Informationsarchitektur und benutzerfreundlicher Oberfläche liefern, die Vernetzung, Entdeckung und Wissenstransfer über Regionen und Disziplinen hinweg unterstützt.
+                </p>
             </div>
         </section>
 
         <!-- Project Showcase -->
         <section class="mb-16">
-            <h2 class="mb-6"><span data-lang="hr">Prikaz projekta</span><span data-lang="en">Project Showcase</span></h2>
+            <h2 class="mb-6"><span data-lang="hr">Prikaz projekta</span><span data-lang="en">Project Showcase</span><span data-lang="it">Presentazione del progetto</span><span data-lang="de">Projektpräsentation</span></h2>
 
             <div class="gallery-container">
                 <button class="gallery-btn prev">‹</button>
@@ -142,66 +174,102 @@
 
         <!-- Key Features -->
         <section class="mb-16">
-            <h2 class="mb-6"><span data-lang="hr">Ključne značajke</span><span data-lang="en">Key Features</span></h2>
+            <h2 class="mb-6"><span data-lang="hr">Ključne značajke</span><span data-lang="en">Key Features</span><span data-lang="it">Caratteristiche principali</span><span data-lang="de">Hauptfunktionen</span></h2>
 
             <div class="key-features-grid">
                 <div class="feature-box">
-                    <h4 class="mb-2"><span data-lang="hr">Prekogranično umrežavanje</span><span data-lang="en">Cross-border networking</span></h4>
+                    <h4 class="mb-2"><span data-lang="hr">Prekogranično umrežavanje</span><span data-lang="en">Cross-border networking</span><span data-lang="it">Networking transfrontaliero</span><span data-lang="de">Grenzüberschreitende Vernetzung</span></h4>
                     <p class="text-muted-foreground" data-lang="hr">
                         Povezuje dionike iz različitih regija EU-a radi suradnje u istraživanju i razvoju te digitalnim tehnologijama.
                     </p>
                     <p class="text-muted-foreground" data-lang="en">
                         Connect stakeholders from different EU regions to collaborate on R&amp;D and digital technologies.
                     </p>
+                    <p class="text-muted-foreground" data-lang="it">
+                        Mette in contatto attori di diverse regioni dell'UE per collaborare su R&amp;S e tecnologie digitali.
+                    </p>
+                    <p class="text-muted-foreground" data-lang="de">
+                        Verbindet Akteure aus verschiedenen EU-Regionen für die Zusammenarbeit in F&amp;E und digitalen Technologien.
+                    </p>
                 </div>
 
                 <div class="feature-box">
-                    <h4 class="mb-2"><span data-lang="hr">Prijenos znanja</span><span data-lang="en">Knowledge transfer</span></h4>
+                    <h4 class="mb-2"><span data-lang="hr">Prijenos znanja</span><span data-lang="en">Knowledge transfer</span><span data-lang="it">Trasferimento di conoscenze</span><span data-lang="de">Wissenstransfer</span></h4>
                     <p class="text-muted-foreground" data-lang="hr">
                         Povezuje akademsku zajednicu i gospodarstvo kroz strukturirane informacije i jasne putove suradnje.
                     </p>
                     <p class="text-muted-foreground" data-lang="en">
                         Bridge academia and the economy through structured information and collaboration pathways.
                     </p>
+                    <p class="text-muted-foreground" data-lang="it">
+                        Collega mondo accademico ed economia attraverso informazioni strutturate e percorsi di collaborazione.
+                    </p>
+                    <p class="text-muted-foreground" data-lang="de">
+                        Verbindet Wissenschaft und Wirtschaft durch strukturierte Informationen und Kooperationswege.
+                    </p>
                 </div>
 
                 <div class="feature-box">
-                    <h4 class="mb-2"><span data-lang="hr">Multidisciplinarni pristup</span><span data-lang="en">Multidisciplinary approach</span></h4>
+                    <h4 class="mb-2"><span data-lang="hr">Multidisciplinarni pristup</span><span data-lang="en">Multidisciplinary approach</span><span data-lang="it">Approccio multidisciplinare</span><span data-lang="de">Multidisziplinärer Ansatz</span></h4>
                     <p class="text-muted-foreground" data-lang="hr">
                         Koristi stručnost i ljudski kapital iz cijele Europe za postizanje rezultata visoke vrijednosti.
                     </p>
                     <p class="text-muted-foreground" data-lang="en">
                         Leverage expertise and human capital across Europe to support high-value outcomes.
                     </p>
+                    <p class="text-muted-foreground" data-lang="it">
+                        Sfrutta competenze e capitale umano di tutta Europa per ottenere risultati ad alto valore.
+                    </p>
+                    <p class="text-muted-foreground" data-lang="de">
+                        Nutzt Know-how und Humankapital aus ganz Europa für hochwertige Ergebnisse.
+                    </p>
                 </div>
 
                 <div class="feature-box">
-                    <h4 class="mb-2"><span data-lang="hr">Jasna informacijska arhitektura</span><span data-lang="en">Clear information architecture</span></h4>
+                    <h4 class="mb-2"><span data-lang="hr">Jasna informacijska arhitektura</span><span data-lang="en">Clear information architecture</span><span data-lang="it">Architettura dell'informazione chiara</span><span data-lang="de">Klare Informationsarchitektur</span></h4>
                     <p class="text-muted-foreground" data-lang="hr">
                         Logična navigacija koja olakšava pronalaženje programa, partnera i prilika.
                     </p>
                     <p class="text-muted-foreground" data-lang="en">
                         Logical navigation that makes programs, partners, and opportunities easy to discover.
                     </p>
+                    <p class="text-muted-foreground" data-lang="it">
+                        Navigazione logica che rende facili da scoprire programmi, partner e opportunità.
+                    </p>
+                    <p class="text-muted-foreground" data-lang="de">
+                        Logische Navigation, die Programme, Partner und Möglichkeiten leicht auffindbar macht.
+                    </p>
                 </div>
 
                 <div class="feature-box">
-                    <h4 class="mb-2"><span data-lang="hr">Skalabilna platforma</span><span data-lang="en">Scalable platform</span></h4>
+                    <h4 class="mb-2"><span data-lang="hr">Skalabilna platforma</span><span data-lang="en">Scalable platform</span><span data-lang="it">Piattaforma scalabile</span><span data-lang="de">Skalierbare Plattform</span></h4>
                     <p class="text-muted-foreground" data-lang="hr">
                         Izrađena da raste zajedno s novim regijama, inicijativama, vrstama sadržaja i potrebama za suradnjom.
                     </p>
                     <p class="text-muted-foreground" data-lang="en">
                         Built to grow with new regions, initiatives, content types, and collaboration needs.
                     </p>
+                    <p class="text-muted-foreground" data-lang="it">
+                        Progettata per crescere con nuove regioni, iniziative, tipi di contenuti e esigenze di collaborazione.
+                    </p>
+                    <p class="text-muted-foreground" data-lang="de">
+                        Ausgelegt für Wachstum mit neuen Regionen, Initiativen, Inhaltstypen und Kooperationsanforderungen.
+                    </p>
                 </div>
 
                 <div class="feature-box">
-                    <h4 class="mb-2"><span data-lang="hr">Responzivan dizajn</span><span data-lang="en">Responsive design</span></h4>
+                    <h4 class="mb-2"><span data-lang="hr">Responzivan dizajn</span><span data-lang="en">Responsive design</span><span data-lang="it">Design responsive</span><span data-lang="de">Responsives Design</span></h4>
                     <p class="text-muted-foreground" data-lang="hr">
                         Optimizirano za stolna računala, tablete i mobilne uređaje.
                     </p>
                     <p class="text-muted-foreground" data-lang="en">
                         Optimized for desktop, tablet, and mobile devices.
+                    </p>
+                    <p class="text-muted-foreground" data-lang="it">
+                        Ottimizzato per desktop, tablet e dispositivi mobili.
+                    </p>
+                    <p class="text-muted-foreground" data-lang="de">
+                        Optimiert für Desktop, Tablet und Mobilgeräte.
                     </p>
                 </div>
             </div>
@@ -224,7 +292,7 @@
                     class="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors back-link"
             >
                 <span class="icon-arrow-left">←</span>
-                <span data-lang="hr">Natrag na sve projekte</span><span data-lang="en">Back to all projects</span>
+                <span data-lang="hr">Natrag na sve projekte</span><span data-lang="en">Back to all projects</span><span data-lang="it">Torna a tutti i progetti</span><span data-lang="de">Zurück zu allen Projekten</span>
             </a>
         </div>
     </footer>
