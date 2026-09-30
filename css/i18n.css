@@ -120,3 +120,11 @@ html.i18n-pending body {
     justify-content: space-between;
     gap: 1.6rem;
 }
+
+.back-footer__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1.6rem;
+}
