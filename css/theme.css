@@ -80,6 +80,7 @@ html[data-theme="light"] .main-nav a:hover {
 }
 
 html[data-theme="light"] .mobile-menu-toggle span,
+html[data-theme="light"] .mobile-menu-toggle.is-clicked span::before,
 html[data-theme="light"] .mobile-menu-toggle.is-clicked span::after {
     background-color: #141516;
 }
