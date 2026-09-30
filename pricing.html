@@ -29,6 +29,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/i18n.css">
     <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/consent.css">
     <style>
         .s-pricing {
             padding-bottom: var(--vspace-3_5);
@@ -575,6 +576,7 @@
             <div class="column ss-copyright">
                 <span>© Copyright RDD <script>document.write(/\d{4}/.exec(Date())[0] + ".")</script></span>
                 <span><a href="privacy.html" data-lang="hr">Izjava o privatnosti</a><a href="privacy.html" data-lang="en">Privacy Policy</a><a href="privacy.html" data-lang="it">Informativa sulla privacy</a><a href="privacy.html" data-lang="de">Datenschutzerklärung</a></span>
+                <span><a href="#0" data-consent-open data-lang="hr">Postavke kolačića</a><a href="#0" data-consent-open data-lang="en">Cookie settings</a><a href="#0" data-consent-open data-lang="it">Impostazioni cookie</a><a href="#0" data-consent-open data-lang="de">Cookie-Einstellungen</a></span>
             </div>
 
             <div class="ss-go-top">
@@ -595,16 +597,8 @@
 ================================================== -->
 <script src="js/plugins.js"></script>
 <script src="js/main.js"></script>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-LM7LK5FY5W"></script>
-<script> window.dataLayer = window.dataLayer || [];
-
-function gtag() {
-    dataLayer.push(arguments);
-}
-
-gtag('js', new Date());
-gtag('config', 'G-LM7LK5FY5W'); </script>
+<!-- Google Analytics - loaded only after the visitor accepts cookies -->
+<script src="js/consent.js"></script>
 
 </body>
 </html>

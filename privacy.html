@@ -29,6 +29,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/i18n.css">
     <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/consent.css">
     <style>
         .s-privacy {
             padding-bottom: var(--vspace-3_5);
@@ -246,14 +247,16 @@
                         stranice, uređaju i približnoj lokaciji. Google Analytics 4 ne pohranjuje IP adrese.
                         Podaci se mogu prenositi Googleu u SAD. Pravna osnova: vaša privola
                         (čl. 6. st. 1. t. (a) GDPR-a), koju možete povući u bilo kojem trenutku.
+                        Google Analytics učitava se tek kada u traci s obavijesti o kolačićima kliknete
+                        „Prihvati”; ako kliknete „Odbij”, ne učitava se i ne postavlja kolačiće. Odluku možete
+                        promijeniti u bilo kojem trenutku putem poveznice „Postavke kolačića” u podnožju stranice.
                         Podaci se u Google Analyticsu čuvaju najviše 14 mjeseci.
                     </p>
 
                     <h4>2.4. Fontovi</h4>
                     <p>
-                        Fontovi stranice učitavaju se s poslužitelja Google Fonts (Google Ireland Limited),
-                        pri čemu Google vidi vašu IP adresu. Pravna osnova: legitimni interes za ujednačen
-                        prikaz stranice (čl. 6. st. 1. t. (f) GDPR-a).
+                        Fontovi se poslužuju izravno s ove stranice, a ne s poslužitelja trećih strana
+                        (npr. Google Fonts), pa se pri njihovom učitavanju vaši podaci nikome ne prosljeđuju.
                     </p>
 
                     <h4>2.5. Kontakt e-poštom</h4>
@@ -270,7 +273,8 @@
                     <p>
                         U lokalnoj pohrani vašeg preglednika (localStorage) spremamo samo vaše postavke:
                         odabrani jezik (<code>rdd-lang</code>), automatski određeni jezik
-                        (<code>rdd-lang-geo</code>) i tamni ili svijetli način (<code>rdd-theme</code>).
+                        (<code>rdd-lang-geo</code>), tamni ili svijetli način (<code>rdd-theme</code>) i vašu
+                        odluku o kolačićima (<code>rdd-consent</code>).
                         Ti podaci ostaju na vašem uređaju, ne šalju se nama ni trećim stranama i možete ih
                         obrisati u postavkama preglednika.
                     </p>
@@ -356,14 +360,16 @@
                         (<code>_ga</code>, <code>_ga_*</code>) and collects data about site usage, your device
                         and approximate location. Google Analytics 4 does not store IP addresses. Data may be
                         transferred to Google in the USA. Legal basis: your consent (Art. 6(1)(a) GDPR), which
-                        you can withdraw at any time. Data is kept in Google Analytics for at most 14 months.
+                        you can withdraw at any time. Google Analytics is loaded only after you click “Accept” in
+                        the cookie banner; if you click “Decline”, it is not loaded and sets no cookies. You can
+                        change your decision at any time via the “Cookie settings” link at the bottom of the page.
+                        Data is kept in Google Analytics for at most 14 months.
                     </p>
 
                     <h4>2.4. Fonts</h4>
                     <p>
-                        The website fonts are loaded from Google Fonts servers (Google Ireland Limited), which
-                        means Google sees your IP address. Legal basis: legitimate interest in a consistent
-                        presentation of the website (Art. 6(1)(f) GDPR).
+                        Fonts are served directly from this website, not from third-party servers (such as
+                        Google Fonts), so loading them does not pass your data on to anyone.
                     </p>
 
                     <h4>2.5. Contact by email</h4>
@@ -380,7 +386,8 @@
                     <p>
                         In your browser's local storage (localStorage) we save only your settings: the chosen
                         language (<code>rdd-lang</code>), the automatically detected language
-                        (<code>rdd-lang-geo</code>) and dark or light mode (<code>rdd-theme</code>). This data
+                        (<code>rdd-lang-geo</code>), dark or light mode (<code>rdd-theme</code>) and your
+                        cookie decision (<code>rdd-consent</code>). This data
                         stays on your device, is not sent to us or to third parties, and you can delete it in
                         your browser settings.
                     </p>
@@ -468,14 +475,16 @@
                         dispositivo e sulla posizione approssimativa. Google Analytics 4 non memorizza gli
                         indirizzi IP. I dati possono essere trasferiti a Google negli USA. Base giuridica: il tuo
                         consenso (art. 6, par. 1, lett. a) GDPR), che puoi revocare in qualsiasi momento.
+                        Google Analytics viene caricato solo dopo che hai cliccato “Accetta” nel banner dei
+                        cookie; se clicchi “Rifiuta”, non viene caricato e non imposta cookie. Puoi modificare la
+                        tua scelta in qualsiasi momento tramite il link “Impostazioni cookie” in fondo alla pagina.
                         I dati sono conservati in Google Analytics per un massimo di 14 mesi.
                     </p>
 
                     <h4>2.4. Font</h4>
                     <p>
-                        I font del sito vengono caricati dai server di Google Fonts (Google Ireland Limited),
-                        per cui Google vede il tuo indirizzo IP. Base giuridica: legittimo interesse a una
-                        presentazione uniforme del sito (art. 6, par. 1, lett. f) GDPR).
+                        I font vengono forniti direttamente da questo sito e non da server di terzi (ad esempio
+                        Google Fonts), quindi il loro caricamento non trasmette i tuoi dati a nessuno.
                     </p>
 
                     <h4>2.5. Contatto via e-mail</h4>
@@ -492,7 +501,8 @@
                     <p>
                         Nella memoria locale del tuo browser (localStorage) salviamo solo le tue impostazioni:
                         la lingua scelta (<code>rdd-lang</code>), la lingua rilevata automaticamente
-                        (<code>rdd-lang-geo</code>) e la modalità scura o chiara (<code>rdd-theme</code>).
+                        (<code>rdd-lang-geo</code>), la modalità scura o chiara (<code>rdd-theme</code>) e la tua
+                        scelta sui cookie (<code>rdd-consent</code>).
                         Questi dati restano sul tuo dispositivo, non vengono inviati a noi né a terzi e puoi
                         cancellarli nelle impostazioni del browser.
                     </p>
@@ -582,15 +592,18 @@
                         (<code>_ga</code>, <code>_ga_*</code>) und erfasst Daten zur Nutzung der Website, zu Ihrem
                         Gerät und zu Ihrem ungefähren Standort. Google Analytics 4 speichert keine IP-Adressen.
                         Daten können an Google in die USA übermittelt werden. Rechtsgrundlage: Ihre Einwilligung
-                        (Art. 6 Abs. 1 lit. a DSGVO), die Sie jederzeit widerrufen können. Die Daten werden in
+                        (Art. 6 Abs. 1 lit. a DSGVO), die Sie jederzeit widerrufen können. Google Analytics wird
+                        erst geladen, nachdem Sie im Cookie-Hinweis auf „Akzeptieren“ geklickt haben; klicken Sie
+                        auf „Ablehnen“, wird es nicht geladen und setzt keine Cookies. Sie können Ihre
+                        Entscheidung jederzeit über den Link „Cookie-Einstellungen“ unten auf der Seite ändern.
+                        Die Daten werden in
                         Google Analytics höchstens 14 Monate gespeichert.
                     </p>
 
                     <h4>2.4. Schriftarten</h4>
                     <p>
-                        Die Schriftarten der Website werden von Servern von Google Fonts (Google Ireland Limited)
-                        geladen, wodurch Google Ihre IP-Adresse sieht. Rechtsgrundlage: berechtigtes Interesse an
-                        einer einheitlichen Darstellung der Website (Art. 6 Abs. 1 lit. f DSGVO).
+                        Die Schriftarten werden direkt von dieser Website bereitgestellt und nicht von Servern
+                        Dritter (etwa Google Fonts); beim Laden werden daher keine Daten an Dritte übermittelt.
                     </p>
 
                     <h4>2.5. Kontakt per E-Mail</h4>
@@ -608,7 +621,8 @@
                     <p>
                         Im lokalen Speicher Ihres Browsers (localStorage) speichern wir nur Ihre Einstellungen:
                         die gewählte Sprache (<code>rdd-lang</code>), die automatisch ermittelte Sprache
-                        (<code>rdd-lang-geo</code>) und den dunklen oder hellen Modus (<code>rdd-theme</code>).
+                        (<code>rdd-lang-geo</code>), den dunklen oder hellen Modus (<code>rdd-theme</code>) und
+                        Ihre Cookie-Entscheidung (<code>rdd-consent</code>).
                         Diese Daten bleiben auf Ihrem Gerät, werden weder an uns noch an Dritte übermittelt und
                         können in den Browsereinstellungen gelöscht werden.
                     </p>
@@ -664,6 +678,7 @@
             <div class="column ss-copyright">
                 <span>© Copyright RDD <script>document.write(/\d{4}/.exec(Date())[0] + ".")</script></span>
                 <span><a href="privacy.html" data-lang="hr">Izjava o privatnosti</a><a href="privacy.html" data-lang="en">Privacy Policy</a><a href="privacy.html" data-lang="it">Informativa sulla privacy</a><a href="privacy.html" data-lang="de">Datenschutzerklärung</a></span>
+                <span><a href="#0" data-consent-open data-lang="hr">Postavke kolačića</a><a href="#0" data-consent-open data-lang="en">Cookie settings</a><a href="#0" data-consent-open data-lang="it">Impostazioni cookie</a><a href="#0" data-consent-open data-lang="de">Cookie-Einstellungen</a></span>
             </div>
 
             <div class="ss-go-top">
@@ -684,16 +699,8 @@
 ================================================== -->
 <script src="js/plugins.js"></script>
 <script src="js/main.js"></script>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-LM7LK5FY5W"></script>
-<script> window.dataLayer = window.dataLayer || [];
-
-function gtag() {
-    dataLayer.push(arguments);
-}
-
-gtag('js', new Date());
-gtag('config', 'G-LM7LK5FY5W'); </script>
+<!-- Google Analytics - loaded only after the visitor accepts cookies -->
+<script src="js/consent.js"></script>
 
 </body>
 </html>
