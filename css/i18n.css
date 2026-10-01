@@ -128,3 +128,28 @@ html.i18n-pending body {
     flex-wrap: wrap;
     gap: 1.6rem;
 }
+
+/* --------------------------------------------------------------------
+ * business details (Zakon o elektroničkoj trgovini, čl. 6) in footers
+ * -------------------------------------------------------------------- */
+.ss-legal {
+    margin: var(--vspace-0_5) 5.2rem 0 0;
+    font-size: 1.3rem;
+    line-height: 1.7;
+    color: var(--color-text-light);
+}
+
+.ss-legal a {
+    color: inherit;
+}
+
+.back-footer__legal {
+    flex: 1 0 100%;
+    margin: 0;
+    font-size: .8rem;
+    line-height: 1.6;
+}
+
+.back-footer__legal a {
+    text-decoration: underline;
+}
