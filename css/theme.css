@@ -265,7 +265,7 @@ html[data-theme="light"] .theme-toggle__moon {
     right: calc(var(--header-height) + .4rem);
 }
 
-.header-mobile .lang-switch {
+.header-mobile .lang-menu {
     right: calc(var(--header-height) + 3.6rem);
 }
 
@@ -276,7 +276,7 @@ html[data-theme="light"] .theme-toggle__moon {
 }
 
 /* project detail pages: language switcher and toggle sit together on the right */
-.back-header__inner .lang-switch {
+.back-header__inner .lang-menu {
     margin-left: auto;
 }
 
@@ -284,16 +284,26 @@ html[data-theme="light"] .theme-toggle__moon {
     margin-left: -1.2rem;
 }
 
-/* four languages + toggle: tighten the switcher on phones */
 @media screen and (max-width: 600px) {
-    .lang-switch__btn,
-    .lang-switch__btn:hover,
-    .lang-switch__btn:focus {
-        padding: .4rem .3rem;
-        letter-spacing: .2em;
-    }
-
-    .back-header__inner .lang-switch {
+    .back-header__inner .lang-menu {
         flex: 0 0 auto;
     }
+}
+
+/* language dropdown (css/i18n.css) on a light background */
+html[data-theme="light"] .lang-menu__toggle {
+    color: var(--color-1, hsla(180, 100%, 25%, 1));
+}
+
+html[data-theme="light"] .header-mobile .lang-menu .lang-switch,
+html[data-theme="light"] .back-header__inner .lang-menu .lang-switch {
+    border-color: rgba(0, 0, 0, .1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .12);
+}
+
+html[data-theme="light"] .header-mobile .lang-menu .lang-switch__btn:hover,
+html[data-theme="light"] .header-mobile .lang-menu .lang-switch__btn:focus,
+html[data-theme="light"] .back-header__inner .lang-menu .lang-switch__btn:hover,
+html[data-theme="light"] .back-header__inner .lang-menu .lang-switch__btn:focus {
+    background: rgba(0, 0, 0, .05);
 }

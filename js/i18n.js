@@ -117,8 +117,32 @@
         domReady = true;
         applyLang(lang);
 
+        // phone dropdown (.lang-menu): open/close the list under the toggle
+        function closeMenus(except) {
+            document.querySelectorAll('.lang-menu.is-open').forEach(function (menu) {
+                if (menu === except) return;
+                menu.classList.remove('is-open');
+                menu.querySelector('.lang-menu__toggle').setAttribute('aria-expanded', 'false');
+            });
+        }
+
+        document.addEventListener('keydown', function (event) {
+            if (event.key === 'Escape') closeMenus(null);
+        });
+
         document.addEventListener('click', function (event) {
+            const toggle = event.target.closest('.lang-menu__toggle');
+            if (toggle) {
+                const menu = toggle.closest('.lang-menu');
+                const open = !menu.classList.contains('is-open');
+                closeMenus(menu);
+                menu.classList.toggle('is-open', open);
+                toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+                return;
+            }
+
             const button = event.target.closest('[data-set-lang]');
+            closeMenus(null);
             if (!button) return;
 
             event.preventDefault();

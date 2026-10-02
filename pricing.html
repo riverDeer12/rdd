@@ -185,14 +185,18 @@
 
         <div class="header-mobile">
             <span class="mobile-home-link"><a href="index.html">RDD.</a></span>
-            <div class="lang-switch" role="group" aria-label="Jezik / Language / Lingua / Sprache">
-                <button type="button" class="lang-switch__btn" data-set-lang="hr">HR</button>
-                <span class="lang-switch__sep">/</span>
-                <button type="button" class="lang-switch__btn" data-set-lang="en">EN</button>
-                <span class="lang-switch__sep">/</span>
-                <button type="button" class="lang-switch__btn" data-set-lang="it">IT</button>
-                <span class="lang-switch__sep">/</span>
-                <button type="button" class="lang-switch__btn" data-set-lang="de">DE</button>
+            <div class="lang-menu">
+                <button type="button" class="lang-menu__toggle" aria-haspopup="true" aria-expanded="false"
+                        aria-label="Jezik / Language / Lingua / Sprache"><span data-lang="hr">HR</span><span data-lang="en">EN</span><span data-lang="it">IT</span><span data-lang="de">DE</span><svg class="lang-menu__chevron" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="lang-switch" role="group" aria-label="Jezik / Language / Lingua / Sprache">
+                    <button type="button" class="lang-switch__btn" data-set-lang="hr"><span class="lang-switch__code">HR</span><span class="lang-switch__name">Hrvatski</span></button>
+                    <span class="lang-switch__sep">/</span>
+                    <button type="button" class="lang-switch__btn" data-set-lang="en"><span class="lang-switch__code">EN</span><span class="lang-switch__name">English</span></button>
+                    <span class="lang-switch__sep">/</span>
+                    <button type="button" class="lang-switch__btn" data-set-lang="it"><span class="lang-switch__code">IT</span><span class="lang-switch__name">Italiano</span></button>
+                    <span class="lang-switch__sep">/</span>
+                    <button type="button" class="lang-switch__btn" data-set-lang="de"><span class="lang-switch__code">DE</span><span class="lang-switch__name">Deutsch</span></button>
+                </div>
             </div>
             <button type="button" class="theme-toggle" data-toggle-theme aria-pressed="false"
                     aria-label="Tamna / svijetla tema - Dark / light theme" title="Tamna / svijetla tema - Dark / light theme">
@@ -213,13 +217,13 @@
                     <li><a href="index.html#contact"><span data-lang="hr">Kontakt</span><span data-lang="en">Say Hello</span><span data-lang="it">Contatti</span><span data-lang="de">Kontakt</span></a></li>
                     <li class="lang-switch-item">
                         <div class="lang-switch" role="group" aria-label="Jezik / Language / Lingua / Sprache">
-                            <button type="button" class="lang-switch__btn" data-set-lang="hr">HR</button>
+                            <button type="button" class="lang-switch__btn" data-set-lang="hr"><span class="lang-switch__code">HR</span><span class="lang-switch__name">Hrvatski</span></button>
                             <span class="lang-switch__sep">/</span>
-                            <button type="button" class="lang-switch__btn" data-set-lang="en">EN</button>
+                            <button type="button" class="lang-switch__btn" data-set-lang="en"><span class="lang-switch__code">EN</span><span class="lang-switch__name">English</span></button>
                             <span class="lang-switch__sep">/</span>
-                            <button type="button" class="lang-switch__btn" data-set-lang="it">IT</button>
+                            <button type="button" class="lang-switch__btn" data-set-lang="it"><span class="lang-switch__code">IT</span><span class="lang-switch__name">Italiano</span></button>
                             <span class="lang-switch__sep">/</span>
-                            <button type="button" class="lang-switch__btn" data-set-lang="de">DE</button>
+                            <button type="button" class="lang-switch__btn" data-set-lang="de"><span class="lang-switch__code">DE</span><span class="lang-switch__name">Deutsch</span></button>
                         </div>
                     </li>
                     <li class="theme-toggle-item">

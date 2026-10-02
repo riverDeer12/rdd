@@ -81,7 +81,7 @@ html.i18n-pending body {
     padding: 0 1.6rem;
 }
 
-.header-mobile .lang-switch {
+.header-mobile .lang-menu {
     position: absolute;
     top: 0;
     right: calc(var(--header-height) + .8rem);
@@ -158,4 +158,179 @@ html.i18n-pending body {
     display: flex;
     flex-wrap: wrap;
     gap: .4rem 2rem;
+}
+
+/* --------------------------------------------------------------------
+ * language dropdown on phones
+ * .lang-menu wraps a switcher with a toggle showing the current
+ * language; on phones the switcher becomes a list under the toggle.
+ * Sizes in px: the main site and the project pages use different rem.
+ * -------------------------------------------------------------------- */
+.lang-menu {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+}
+
+.lang-menu__toggle,
+.lang-switch__name {
+    display: none;
+}
+
+.header-mobile .lang-menu__toggle,
+.header-mobile .lang-menu__toggle:hover,
+.header-mobile .lang-menu__toggle:focus {
+    display: inline-flex;
+}
+
+@media screen and (max-width: 600px) {
+    .back-header__inner .lang-menu__toggle,
+    .back-header__inner .lang-menu__toggle:hover,
+    .back-header__inner .lang-menu__toggle:focus {
+        display: inline-flex;
+    }
+}
+
+.lang-menu__toggle,
+.lang-menu__toggle:hover,
+.lang-menu__toggle:focus {
+    align-items: center;
+    gap: 6px;
+    height: auto;
+    margin: 0;
+    padding: 8px 6px;
+    font-family: inherit;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 1.6;
+    letter-spacing: .35em;
+    text-transform: uppercase;
+    color: hsla(168, 62%, 46%, 1);
+    background: none;
+    border: 0;
+    box-shadow: none;
+    cursor: pointer;
+}
+
+.lang-menu__chevron {
+    width: 9px;
+    height: 6px;
+    transition: transform .2s ease;
+}
+
+.lang-menu.is-open .lang-menu__chevron {
+    transform: rotate(180deg);
+}
+
+/* the switcher as a dropdown list (same selectors in both blocks) */
+.header-mobile .lang-menu .lang-switch {
+    display: none;
+    position: absolute;
+    top: calc(100% - 8px);
+    right: -8px;
+    z-index: 300;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    min-width: 160px;
+    height: auto;
+    padding: 6px;
+    background: var(--color-body);
+    border: 1px solid rgba(255, 255, 255, .12);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .4);
+}
+
+.header-mobile .lang-menu.is-open .lang-switch {
+    display: flex;
+}
+
+.header-mobile .lang-menu .lang-switch__sep {
+    display: none;
+}
+
+.header-mobile .lang-menu .lang-switch__btn,
+.header-mobile .lang-menu .lang-switch__btn:hover,
+.header-mobile .lang-menu .lang-switch__btn:focus {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    padding: 10px 12px;
+    font-size: 14px;
+    letter-spacing: .02em;
+    text-transform: none;
+    text-align: left;
+}
+
+.header-mobile .lang-menu .lang-switch__btn:hover,
+.header-mobile .lang-menu .lang-switch__btn:focus {
+    background: rgba(255, 255, 255, .06);
+}
+
+.header-mobile .lang-menu .lang-switch__code {
+    min-width: 22px;
+    font-size: 10px;
+    letter-spacing: .2em;
+    opacity: .6;
+}
+
+.header-mobile .lang-menu .lang-switch__name {
+    display: inline;
+}
+
+@media screen and (max-width: 600px) {
+    .back-header__inner .lang-menu .lang-switch {
+        display: none;
+        position: absolute;
+        top: calc(100% + 4px);
+        right: -8px;
+        z-index: 300;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        min-width: 160px;
+        height: auto;
+        padding: 6px;
+        background: var(--card);
+        border: 1px solid rgba(255, 255, 255, .12);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, .4);
+    }
+
+    .back-header__inner .lang-menu.is-open .lang-switch {
+        display: flex;
+    }
+
+    .back-header__inner .lang-menu .lang-switch__sep {
+        display: none;
+    }
+
+    .back-header__inner .lang-menu .lang-switch__btn,
+    .back-header__inner .lang-menu .lang-switch__btn:hover,
+    .back-header__inner .lang-menu .lang-switch__btn:focus {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        width: 100%;
+        padding: 10px 12px;
+        font-size: 14px;
+        letter-spacing: .02em;
+        text-transform: none;
+        text-align: left;
+    }
+
+    .back-header__inner .lang-menu .lang-switch__btn:hover,
+    .back-header__inner .lang-menu .lang-switch__btn:focus {
+        background: rgba(255, 255, 255, .06);
+    }
+
+    .back-header__inner .lang-menu .lang-switch__code {
+        min-width: 22px;
+        font-size: 10px;
+        letter-spacing: .2em;
+        opacity: .6;
+    }
+
+    .back-header__inner .lang-menu .lang-switch__name {
+        display: inline;
+    }
 }
