@@ -153,3 +153,9 @@ html.i18n-pending body {
 .back-footer__legal a {
     text-decoration: underline;
 }
+
+.back-footer__links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .4rem 2rem;
+}
