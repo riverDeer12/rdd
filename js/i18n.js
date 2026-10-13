@@ -86,6 +86,9 @@
             button.classList.toggle('is-active', isActive);
             button.setAttribute('aria-pressed', isActive ? 'true' : 'false');
         });
+
+        // lets other scripts (e.g. js/contact.js) translate placeholders and options
+        document.dispatchEvent(new CustomEvent('rdd:langchange', { detail: lang }));
     }
 
     let domReady = false;

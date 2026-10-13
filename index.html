@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js ss-preload" lang="hr"
+<html class="no-js" lang="hr"
       data-title-hr="RDD Software - Softver po mjeri iz Rijeke"
       data-title-en="RDD Software - Custom software from Rijeka, Croatia"
       data-title-it="RDD Software - Software su misura da Fiume, Croazia"
@@ -41,12 +41,50 @@
     <link rel="stylesheet" href="css/i18n.css">
     <link rel="stylesheet" href="css/theme.css">
     <link rel="stylesheet" href="css/consent.css">
+    <link rel="stylesheet" href="css/home.css">
 
     <!-- language (hr / en / it / de) - runs before render so only one language is shown
     ================================================== -->
     <script src="js/i18n.js"></script>
     <!-- light / dark theme - runs before render so the page does not flash -->
     <script src="js/theme.js"></script>
+
+    <!-- business details for search engines
+    ================================================== -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "RDD Software",
+        "legalName": "R.D.D., obrt za računalno programiranje, vl. Milan Trbojević",
+        "url": "https://rdd.software/",
+        "logo": "https://rdd.software/android-chrome-512x512.png",
+        "image": "https://rdd.software/images/about-photo.jpg",
+        "description": "Custom software, web and mobile applications, online shops and digital transformation from Rijeka, Croatia.",
+        "email": "info@rdd.software",
+        "taxID": "09887105714",
+        "foundingDate": "2021",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Mihovilići 2b",
+            "postalCode": "51000",
+            "addressLocality": "Rijeka",
+            "addressCountry": "HR"
+        },
+        "areaServed": "Europe",
+        "knowsLanguage": [
+            "hr",
+            "en",
+            "it",
+            "de"
+        ],
+        "priceRange": "€€",
+        "founder": {
+            "@type": "Person",
+            "name": "Milan Trbojević"
+        }
+    }
+    </script>
 
     <!-- favicons
     ================================================== -->
@@ -59,12 +97,6 @@
 <body id="top">
 
 
-<!-- # preloader
-================================================== -->
-<div id="preloader">
-    <div id="loader">
-    </div>
-</div>
 
 
 <!-- # page wrap
@@ -177,6 +209,11 @@
                         die Ihr Unternehmen <br>
                         voranbringt. <br>
                     </h1>
+
+                    <div class="intro-cta">
+                        <a href="#contact" class="btn btn--primary smoothscroll"><span data-lang="hr">Zatražite ponudu</span><span data-lang="en">Request a quote</span><span data-lang="it">Richiedi un preventivo</span><span data-lang="de">Angebot anfordern</span></a>
+                        <a href="#works" class="btn btn--stroke smoothscroll"><span data-lang="hr">Pogledajte projekte</span><span data-lang="en">View our work</span><span data-lang="it">Guarda i progetti</span><span data-lang="de">Projekte ansehen</span></a>
+                    </div>
                 </div>
 
             </div> <!-- end intro content -->
@@ -282,6 +319,44 @@
 
                 </div>
             </div> <!-- end about-expertise -->
+
+
+            <div class="row about-process">
+                <div class="column lg-12">
+
+                    <h2 class="text-pretitle">
+                        <span data-lang="hr">Kako radimo</span><span data-lang="en">How we work</span><span data-lang="it">Come lavoriamo</span><span data-lang="de">So arbeiten wir</span>
+                    </h2>
+                    <p class="h1" data-lang="hr">Od prve ideje do objave &mdash; jasno i bez iznenađenja.</p>
+                    <p class="h1" data-lang="en">From the first idea to launch &mdash; clear and without surprises.</p>
+                    <p class="h1" data-lang="it">Dalla prima idea al lancio &mdash; in modo chiaro e senza sorprese.</p>
+                    <p class="h1" data-lang="de">Von der ersten Idee bis zum Launch &mdash; klar und ohne Überraschungen.</p>
+
+                    <ol class="process-steps">
+                        <li>
+                            <span class="process-steps__num">01</span>
+                            <h3><span data-lang="hr">Upoznavanje</span><span data-lang="en">Discovery</span><span data-lang="it">Conoscenza</span><span data-lang="de">Kennenlernen</span></h3>
+                            <p><span data-lang="hr">Na besplatnim konzultacijama od 30 minuta razgovaramo o vašim ciljevima, korisnicima i rokovima.</span><span data-lang="en">In a free 30-minute call we talk about your goals, users and timeline.</span><span data-lang="it">In una consulenza gratuita di 30 minuti parliamo dei tuoi obiettivi, degli utenti e delle tempistiche.</span><span data-lang="de">In einem kostenlosen 30-minütigen Gespräch besprechen wir Ihre Ziele, Nutzer und den Zeitplan.</span></p>
+                        </li>
+                        <li>
+                            <span class="process-steps__num">02</span>
+                            <h3><span data-lang="hr">Ponuda</span><span data-lang="en">Proposal</span><span data-lang="it">Offerta</span><span data-lang="de">Angebot</span></h3>
+                            <p><span data-lang="hr">Dobivate pisanu ponudu s jasnim opsegom posla, cijenom i rokovima &mdash; bez skrivenih troškova.</span><span data-lang="en">You receive a written offer with a clear scope, price and timeline &mdash; no hidden costs.</span><span data-lang="it">Ricevi un'offerta scritta con ambito, prezzo e tempi chiari &mdash; senza costi nascosti.</span><span data-lang="de">Sie erhalten ein schriftliches Angebot mit klarem Umfang, Preis und Zeitplan &mdash; ohne versteckte Kosten.</span></p>
+                        </li>
+                        <li>
+                            <span class="process-steps__num">03</span>
+                            <h3><span data-lang="hr">Razvoj</span><span data-lang="en">Development</span><span data-lang="it">Sviluppo</span><span data-lang="de">Entwicklung</span></h3>
+                            <p><span data-lang="hr">Radimo u kratkim ciklusima i redovito vam pokazujemo napredak, pa uvijek znate gdje je projekt.</span><span data-lang="en">We work in short cycles and show you progress regularly, so you always know where the project stands.</span><span data-lang="it">Lavoriamo in cicli brevi e ti mostriamo regolarmente i progressi, così sai sempre a che punto è il progetto.</span><span data-lang="de">Wir arbeiten in kurzen Zyklen und zeigen Ihnen regelmäßig den Fortschritt, damit Sie immer wissen, wo das Projekt steht.</span></p>
+                        </li>
+                        <li>
+                            <span class="process-steps__num">04</span>
+                            <h3><span data-lang="hr">Objava i podrška</span><span data-lang="en">Launch &amp; support</span><span data-lang="it">Lancio e supporto</span><span data-lang="de">Launch &amp; Support</span></h3>
+                            <p><span data-lang="hr">Nakon objave ostajemo uz vas: održavanje, ažuriranja i nadogradnje kad vam zatrebaju.</span><span data-lang="en">After launch we stay with you: maintenance, updates and new features whenever you need them.</span><span data-lang="it">Dopo il lancio restiamo al tuo fianco: manutenzione, aggiornamenti e nuove funzionalità quando servono.</span><span data-lang="de">Nach dem Launch bleiben wir an Ihrer Seite: Wartung, Updates und Erweiterungen, wann immer Sie sie brauchen.</span></p>
+                        </li>
+                    </ol>
+
+                </div>
+            </div> <!-- end about-process -->
 
         </section> <!-- end s-about -->
 
@@ -677,8 +752,65 @@
             </div> <!-- end contact-top -->
 
             <div class="row contact-bottom">
-                <div class="column lg-4 md-12 contact-block">
-                    <a href="mailto:info@rdd.software" class="mailtoui btn btn--medium u-fullwidth contact-btn"><span data-lang="hr">Pišite nam.</span><span data-lang="en">Say Hello.</span><span data-lang="it">Scrivici.</span><span data-lang="de">Schreiben Sie uns.</span></a>
+                <div class="column lg-12">
+
+                    <form class="contact-form" id="contact-form" novalidate>
+                        <div class="contact-form__grid">
+                        <div class="form-field">
+                            <label for="cf-name"><span data-lang="hr">Ime i prezime</span><span data-lang="en">Name</span><span data-lang="it">Nome e cognome</span><span data-lang="de">Name</span> *</label>
+                            <input type="text" id="cf-name" name="name" autocomplete="name" required maxlength="120">
+                        </div>
+                        <div class="form-field">
+                            <label for="cf-email"><span data-lang="hr">E-mail</span><span data-lang="en">Email</span><span data-lang="it">E-mail</span><span data-lang="de">E-Mail</span> *</label>
+                            <input type="email" id="cf-email" name="email" autocomplete="email" required maxlength="160" data-ph-hr="ime@tvrtka.hr" data-ph-en="name@company.com" data-ph-it="nome@azienda.it" data-ph-de="name@firma.de" placeholder="ime@tvrtka.hr">
+                        </div>
+                        <div class="form-field contact-form__full">
+                            <label for="cf-company"><span data-lang="hr">Tvrtka (neobavezno)</span><span data-lang="en">Company (optional)</span><span data-lang="it">Azienda (facoltativo)</span><span data-lang="de">Unternehmen (optional)</span></label>
+                            <input type="text" id="cf-company" name="company" autocomplete="organization" maxlength="160">
+                        </div>
+                        <div class="form-field">
+                            <label for="cf-type"><span data-lang="hr">Vrsta projekta</span><span data-lang="en">Project type</span><span data-lang="it">Tipo di progetto</span><span data-lang="de">Projektart</span></label>
+                            <div class="ss-custom-select"><select id="cf-type" name="cf-type"><option value="" data-label-hr="Odaberite…" data-label-en="Choose…" data-label-it="Scegli…" data-label-de="Bitte wählen…">Odaberite…</option><option value="Web stranica" data-label-hr="Web stranica" data-label-en="Website" data-label-it="Sito web" data-label-de="Website">Web stranica</option><option value="Web trgovina" data-label-hr="Web trgovina" data-label-en="Online shop" data-label-it="Negozio online" data-label-de="Onlineshop">Web trgovina</option><option value="Web aplikacija" data-label-hr="Web aplikacija" data-label-en="Web application" data-label-it="Applicazione web" data-label-de="Webanwendung">Web aplikacija</option><option value="Mobilna aplikacija" data-label-hr="Mobilna aplikacija" data-label-en="Mobile app" data-label-it="App mobile" data-label-de="Mobile App">Mobilna aplikacija</option><option value="Softver po mjeri" data-label-hr="Softver po mjeri" data-label-en="Custom software" data-label-it="Software su misura" data-label-de="Individuelle Software">Softver po mjeri</option><option value="Održavanje i podrška" data-label-hr="Održavanje i podrška" data-label-en="Maintenance &amp; support" data-label-it="Manutenzione e supporto" data-label-de="Wartung &amp; Support">Održavanje i podrška</option><option value="Nešto drugo" data-label-hr="Nešto drugo" data-label-en="Something else" data-label-it="Altro" data-label-de="Etwas anderes">Nešto drugo</option></select></div>
+                        </div>
+                        <div class="form-field">
+                            <label for="cf-budget"><span data-lang="hr">Okvirni budžet</span><span data-lang="en">Estimated budget</span><span data-lang="it">Budget indicativo</span><span data-lang="de">Budgetrahmen</span></label>
+                            <div class="ss-custom-select"><select id="cf-budget" name="cf-budget"><option value="" data-label-hr="Odaberite…" data-label-en="Choose…" data-label-it="Scegli…" data-label-de="Bitte wählen…">Odaberite…</option><option value="Još ne znam" data-label-hr="Još ne znam" data-label-en="Not sure yet" data-label-it="Non so ancora" data-label-de="Noch unklar">Još ne znam</option><option value="Do 1.000 €" data-label-hr="Do 1.000 €" data-label-en="Up to €1,000" data-label-it="Fino a 1.000 €" data-label-de="Bis 1.000 €">Do 1.000 €</option><option value="1.000 – 3.000 €" data-label-hr="1.000 – 3.000 €" data-label-en="€1,000 – €3,000" data-label-it="1.000 – 3.000 €" data-label-de="1.000 – 3.000 €">1.000 – 3.000 €</option><option value="3.000 – 10.000 €" data-label-hr="3.000 – 10.000 €" data-label-en="€3,000 – €10,000" data-label-it="3.000 – 10.000 €" data-label-de="3.000 – 10.000 €">3.000 – 10.000 €</option><option value="Više od 10.000 €" data-label-hr="Više od 10.000 €" data-label-en="Over €10,000" data-label-it="Oltre 10.000 €" data-label-de="Über 10.000 €">Više od 10.000 €</option></select></div>
+                        </div>
+                        <div class="form-field contact-form__full">
+                            <label for="cf-message"><span data-lang="hr">Poruka</span><span data-lang="en">Message</span><span data-lang="it">Messaggio</span><span data-lang="de">Nachricht</span> *</label>
+                            <textarea id="cf-message" name="message" required maxlength="5000" data-ph-hr="Ukratko opišite projekt ili pitanje…" data-ph-en="Briefly describe your project or question…" data-ph-it="Descrivi brevemente il progetto o la domanda…" data-ph-de="Beschreiben Sie kurz Ihr Projekt oder Ihre Frage…" placeholder="Ukratko opišite projekt ili pitanje…"></textarea>
+                        </div>
+                        <div class="form-field contact-form__full">
+                            <label class="contact-form__check"><input type="checkbox" id="cf-meeting" name="meeting"> <span><span data-lang="hr">Želim rezervirati besplatne konzultacije (30 min, online)</span><span data-lang="en">I would like to book a free consultation (30 min, online)</span><span data-lang="it">Vorrei prenotare una consulenza gratuita (30 min, online)</span><span data-lang="de">Ich möchte ein kostenloses Beratungsgespräch buchen (30 Min., online)</span></span></label>
+                            <div class="contact-form__meeting" id="cf-meeting-fields" hidden>
+                                <div class="form-field">
+                                    <label for="cf-date"><span data-lang="hr">Datum</span><span data-lang="en">Date</span><span data-lang="it">Data</span><span data-lang="de">Datum</span></label>
+                                    <input type="date" id="cf-date" name="date">
+                                </div>
+                                <div class="form-field">
+                                    <label for="cf-time"><span data-lang="hr">Vrijeme (hrvatsko vrijeme)</span><span data-lang="en">Time (Croatian time, CET)</span><span data-lang="it">Orario (ora dell'Europa centrale)</span><span data-lang="de">Uhrzeit (MEZ)</span></label>
+                                    <div class="ss-custom-select"><select id="cf-time" name="time"></select></div>
+                                </div>
+                                <p class="contact-form__hint"><span data-lang="hr">Termini su radnim danom od 9 do 16 h. Odabrani termin je prijedlog &mdash; potvrdit ćemo ga e-poštom.</span><span data-lang="en">Slots are on working days from 9:00 to 16:00. The time you pick is a request &mdash; we will confirm it by email.</span><span data-lang="it">Gli appuntamenti sono nei giorni feriali dalle 9 alle 16. L'orario scelto è una proposta &mdash; lo confermeremo via e-mail.</span><span data-lang="de">Termine sind werktags von 9 bis 16 Uhr möglich. Der gewählte Termin ist ein Vorschlag &mdash; wir bestätigen ihn per E-Mail.</span></p>
+                            </div>
+                        </div>
+                        </div>
+
+                        <div class="contact-form__hp" aria-hidden="true">
+                            <label for="cf-hp">Website</label>
+                            <input type="text" id="cf-hp" name="_honey" tabindex="-1" autocomplete="off">
+                        </div>
+
+                        <div class="contact-form__actions">
+                            <button type="submit" class="btn btn--primary"><span data-lang="hr">Pošalji upit</span><span data-lang="en">Send enquiry</span><span data-lang="it">Invia richiesta</span><span data-lang="de">Anfrage senden</span></button>
+                            <p class="contact-form__privacy"><span data-lang="hr">Vaše podatke koristimo samo za odgovor na upit, u skladu s <a href="privacy.html">Izjavom o privatnosti</a>.</span><span data-lang="en">We use your details only to reply to your enquiry, in line with our <a href="privacy.html">Privacy Policy</a>.</span><span data-lang="it">Usiamo i tuoi dati solo per rispondere alla richiesta, in conformità all'<a href="privacy.html">Informativa sulla privacy</a>.</span><span data-lang="de">Wir verwenden Ihre Daten nur zur Beantwortung Ihrer Anfrage gemäß unserer <a href="privacy.html">Datenschutzerklärung</a>.</span></p>
+                        </div>
+
+                        <p class="contact-form__status" id="cf-status" role="status" aria-live="polite" hidden></p>
+                    </form>
+
+                    <p class="contact-form__alt"><span data-lang="hr">Radije e-poštom? Pišite na</span><span data-lang="en">Prefer email? Write to</span><span data-lang="it">Preferisci l'e-mail? Scrivi a</span><span data-lang="de">Lieber per E-Mail? Schreiben Sie an</span> <a href="mailto:info@rdd.software" class="mailtoui">info@rdd.software</a></p>
+
                 </div>
             </div> <!-- end contact-bottom -->
 
@@ -723,6 +855,7 @@
 ================================================== -->
 <script src="js/plugins.js"></script>
 <script src="js/main.js"></script>
+<script src="js/contact.js"></script>
 <!-- Google Analytics - loaded only after the visitor accepts cookies -->
 <script src="js/consent.js"></script>
 

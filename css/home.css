@@ -1,0 +1,261 @@
+/* ===================================================================
+ * RDD Software - home page additions
+ * hero call to action, "how we work" steps, contact form (js/contact.js)
+ * ------------------------------------------------------------------- */
+
+/* --------------------------------------------------------------------
+ * hero call to action
+ * -------------------------------------------------------------------- */
+.intro-cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.6rem;
+    margin-top: var(--vspace-1_5);
+}
+
+.intro-cta .btn {
+    margin: 0;
+}
+
+@media screen and (max-width: 600px) {
+    .intro-cta .btn {
+        flex: 1 1 100%;
+    }
+}
+
+/* --------------------------------------------------------------------
+ * how we work
+ * -------------------------------------------------------------------- */
+.about-process {
+    margin-top: var(--vspace-4);
+}
+
+.process-steps {
+    list-style: none;
+    margin: var(--vspace-2) 0 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 3.2rem;
+}
+
+.process-steps li {
+    margin: 0;
+    padding-top: var(--vspace-0_75);
+    border-top: 1px solid var(--color-gray-8);
+}
+
+.process-steps__num {
+    display: block;
+    font-family: var(--font-2);
+    font-size: var(--text-xl);
+    line-height: 1;
+    color: var(--color-1);
+}
+
+.process-steps h3 {
+    margin: var(--vspace-0_5) 0 var(--vspace-0_25);
+    font-family: var(--font-1);
+    font-size: var(--text-md);
+    font-weight: 600;
+    color: var(--color-text-dark);
+}
+
+.process-steps p {
+    margin: 0;
+    font-size: var(--text-sm);
+    line-height: 1.7;
+}
+
+@media screen and (max-width: 1000px) {
+    .process-steps {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .process-steps {
+        grid-template-columns: 1fr;
+        gap: 2.4rem;
+    }
+}
+
+/* --------------------------------------------------------------------
+ * contact form
+ * -------------------------------------------------------------------- */
+.contact-form {
+    margin-top: var(--vspace-1);
+}
+
+.contact-form__grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0 3.2rem;
+}
+
+.contact-form__full {
+    grid-column: 1 / -1;
+}
+
+.contact-form .form-field {
+    margin-bottom: var(--vspace-1);
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="date"],
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+    margin-bottom: 0;
+}
+
+/* date inputs are not covered by the template's input styles */
+.contact-form input[type="date"] {
+    display: block;
+    height: var(--vspace-2);
+    padding: 0;
+    border: 0;
+    border-bottom: 1px solid var(--color-border);
+    outline: 0;
+    color: var(--color-text-light);
+    font-family: var(--font-1);
+    font-size: calc(var(--text-size) * 0.7778);
+    background: transparent;
+    color-scheme: inherit;
+}
+
+.contact-form input[type="date"]:focus {
+    color: var(--color-text);
+    border-bottom-color: var(--color-1);
+}
+
+.contact-form textarea {
+    min-height: calc(5 * var(--space));
+}
+
+.contact-form .ss-custom-select select {
+    padding-right: 4rem;
+}
+
+.contact-form__check {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.2rem;
+    font-weight: 400;
+    color: var(--color-text);
+    cursor: pointer;
+}
+
+.contact-form__check input {
+    flex: 0 0 auto;
+    width: 18px;
+    height: 18px;
+    margin: 2px 0 0;
+    accent-color: var(--color-1);
+}
+
+.contact-form__meeting {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0 3.2rem;
+    margin-top: var(--vspace-0_5);
+    padding: var(--vspace-0_75) var(--vspace-0_75) 0;
+    border: 1px solid var(--color-gray-8);
+}
+
+.contact-form__meeting[hidden] {
+    display: none;
+}
+
+.contact-form__hint {
+    grid-column: 1 / -1;
+    margin: 0 0 var(--vspace-0_75);
+    font-size: 1.4rem;
+    color: var(--color-text-light);
+}
+
+.contact-form__hp {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.contact-form__actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1.6rem 3.2rem;
+    margin-top: var(--vspace-0_5);
+}
+
+.contact-form__actions .btn {
+    margin: 0;
+}
+
+.contact-form__privacy,
+.contact-form__alt {
+    margin: 0;
+    font-size: 1.4rem;
+    line-height: 1.6;
+    color: var(--color-text-light);
+}
+
+.contact-form__privacy a,
+.contact-form__alt a {
+    color: inherit;
+    text-decoration: underline;
+}
+
+.contact-form__alt {
+    margin-top: var(--vspace-1);
+}
+
+.contact-form__status {
+    margin: var(--vspace-0_75) 0 0;
+    padding: 1.2rem 1.6rem;
+    font-size: 1.5rem;
+    border-left: 3px solid var(--color-1);
+    background: rgba(255, 255, 255, .04);
+    color: var(--color-text-dark);
+}
+
+.contact-form__status[hidden] {
+    display: none;
+}
+
+.contact-form__status.is-error {
+    border-left-color: hsla(359, 70%, 55%, 1);
+}
+
+.contact-form button[disabled] {
+    opacity: .6;
+    cursor: wait;
+}
+
+@media screen and (max-width: 700px) {
+    .contact-form__grid,
+    .contact-form__meeting {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* light theme */
+html[data-theme="light"] .ss-custom-select::after {
+    border-color: #141516;
+}
+
+html[data-theme="light"] .contact-form__status {
+    background: rgba(0, 0, 0, .03);
+}
+
+.contact-form__meeting .form-field {
+    margin-bottom: var(--vspace-0_5);
+}
+
+/* the template gives custom selects a bottom margin; the field wrapper handles spacing here */
+.contact-form .ss-custom-select {
+    margin-bottom: 0;
+}
