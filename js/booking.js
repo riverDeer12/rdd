@@ -12,7 +12,7 @@
 
     'use strict';
 
-    const CAL_LINK = 'rdd-software';           // cal.com/<CAL_LINK>
+    const CAL_LINK = 'rdd-software/konzultacije'; // cal.com/<CAL_LINK>
     const CAL_ORIGIN = 'https://cal.com';
     const CAL_SCRIPT = 'https://app.cal.com/embed/embed.js';
     const NAMESPACE = 'rdd';
