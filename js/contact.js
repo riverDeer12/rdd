@@ -1,7 +1,8 @@
 /* ===================================================================
  * RDD Software - contact form with optional consultation booking
  *
- * Sends the enquiry to info@rdd.software through FormSubmit
+ * Sends the enquiry to info@rdd.software through FormSubmit, using the
+ * random alias FormSubmit issued for that address
  * (https://formsubmit.co, no account needed; the very first submission
  * sends an activation email to that address). Field names are Croatian
  * because the email is read by us, whatever language the visitor uses.
@@ -18,7 +19,8 @@
     const form = document.getElementById('contact-form');
     if (!form) return;
 
-    const ENDPOINT = 'https://formsubmit.co/ajax/info@rdd.software';
+    // random alias from FormSubmit instead of the address, so it is not in the page source
+    const ENDPOINT = 'https://formsubmit.co/ajax/202370d6dcbdf3b48b293269997a54ce';
     const CALENDAR_PAGE = 'https://rdd.software/calendar.html';
     const MEETING_MINUTES = 30;
     const FIRST_SLOT = 9 * 60;   // 09:00
