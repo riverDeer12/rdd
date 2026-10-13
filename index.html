@@ -780,20 +780,6 @@
                             <label for="cf-message"><span data-lang="hr">Poruka</span><span data-lang="en">Message</span><span data-lang="it">Messaggio</span><span data-lang="de">Nachricht</span> *</label>
                             <textarea id="cf-message" name="message" required maxlength="5000" data-ph-hr="Ukratko opišite projekt ili pitanje…" data-ph-en="Briefly describe your project or question…" data-ph-it="Descrivi brevemente il progetto o la domanda…" data-ph-de="Beschreiben Sie kurz Ihr Projekt oder Ihre Frage…" placeholder="Ukratko opišite projekt ili pitanje…"></textarea>
                         </div>
-                        <div class="form-field contact-form__full">
-                            <label class="contact-form__check"><input type="checkbox" id="cf-meeting" name="meeting"> <span><span data-lang="hr">Želim rezervirati besplatne konzultacije (30 min, online)</span><span data-lang="en">I would like to book a free consultation (30 min, online)</span><span data-lang="it">Vorrei prenotare una consulenza gratuita (30 min, online)</span><span data-lang="de">Ich möchte ein kostenloses Beratungsgespräch buchen (30 Min., online)</span></span></label>
-                            <div class="contact-form__meeting" id="cf-meeting-fields" hidden>
-                                <div class="form-field">
-                                    <label for="cf-date"><span data-lang="hr">Datum</span><span data-lang="en">Date</span><span data-lang="it">Data</span><span data-lang="de">Datum</span></label>
-                                    <input type="date" id="cf-date" name="date">
-                                </div>
-                                <div class="form-field">
-                                    <label for="cf-time"><span data-lang="hr">Vrijeme (hrvatsko vrijeme)</span><span data-lang="en">Time (Croatian time, CET)</span><span data-lang="it">Orario (ora dell'Europa centrale)</span><span data-lang="de">Uhrzeit (MEZ)</span></label>
-                                    <div class="ss-custom-select"><select id="cf-time" name="time"></select></div>
-                                </div>
-                                <p class="contact-form__hint"><span data-lang="hr">Odabrani termin je prijedlog &mdash; potvrdit ćemo ga e-poštom.</span><span data-lang="en">The time you pick is a request &mdash; we will confirm it by email.</span><span data-lang="it">L'orario scelto è una proposta &mdash; lo confermeremo via e-mail.</span><span data-lang="de">Der gewählte Termin ist ein Vorschlag &mdash; wir bestätigen ihn per E-Mail.</span></p>
-                            </div>
-                        </div>
                         </div>
 
                         <div class="contact-form__hp" aria-hidden="true">
@@ -810,6 +796,14 @@
                     </form>
 
                     <p class="contact-form__alt"><span data-lang="hr">Radije e-poštom? Pišite na</span><span data-lang="en">Prefer email? Write to</span><span data-lang="it">Preferisci l'e-mail? Scrivi a</span><span data-lang="de">Lieber per E-Mail? Schreiben Sie an</span> <a href="mailto:info@rdd.software" class="mailtoui">info@rdd.software</a></p>
+
+                    <div class="contact-booking" id="booking">
+                        <h3 class="contact-booking__title"><span data-lang="hr">Radije razgovor?</span><span data-lang="en">Prefer to talk?</span><span data-lang="it">Preferisci parlarne?</span><span data-lang="de">Lieber ein Gespräch?</span></h3>
+                        <p class="contact-booking__text"><span data-lang="hr">Rezervirajte besplatne konzultacije od 30 minuta &mdash; odaberite slobodan termin u kalendaru i odmah dobivate potvrdu.</span><span data-lang="en">Book a free 30-minute consultation &mdash; pick a free slot in the calendar and get an instant confirmation.</span><span data-lang="it">Prenota una consulenza gratuita di 30 minuti &mdash; scegli un orario libero nel calendario e ricevi subito la conferma.</span><span data-lang="de">Buchen Sie ein kostenloses 30-minütiges Beratungsgespräch &mdash; wählen Sie einen freien Termin im Kalender und erhalten Sie sofort eine Bestätigung.</span></p>
+                        <button type="button" class="btn btn--stroke" id="cal-open"><span data-lang="hr">Prikaži slobodne termine</span><span data-lang="en">Show available times</span><span data-lang="it">Mostra gli orari liberi</span><span data-lang="de">Freie Termine anzeigen</span></button>
+                        <p class="contact-booking__note"><span data-lang="hr">Kalendar za rezervaciju pruža Cal.com i učitava se tek kad kliknete gumb. Više u <a href="privacy.html">Izjavi o privatnosti</a>.</span><span data-lang="en">The booking calendar is provided by Cal.com and only loads when you click the button. More in our <a href="privacy.html">Privacy Policy</a>.</span><span data-lang="it">Il calendario di prenotazione è fornito da Cal.com e si carica solo quando clicchi il pulsante. Maggiori informazioni nell'<a href="privacy.html">Informativa sulla privacy</a>.</span><span data-lang="de">Der Buchungskalender wird von Cal.com bereitgestellt und erst geladen, wenn Sie auf die Schaltfläche klicken. Mehr dazu in der <a href="privacy.html">Datenschutzerklärung</a>.</span></p>
+                        <div class="contact-booking__calendar" id="cal-inline" hidden></div>
+                    </div>
 
                 </div>
             </div> <!-- end contact-bottom -->
@@ -856,6 +850,7 @@
 <script src="js/plugins.js"></script>
 <script src="js/main.js"></script>
 <script src="js/contact.js"></script>
+<script src="js/booking.js"></script>
 <!-- Google Analytics - loaded only after the visitor accepts cookies -->
 <script src="js/consent.js"></script>
 

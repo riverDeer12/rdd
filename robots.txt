@@ -40,6 +40,5 @@ Disallow: /
 # --- everyone else (Google, Bing, ...) ---------------------------
 User-agent: *
 Disallow: /RDD_cjenik_price_list.csv
-Disallow: /calendar.html
 
 Sitemap: https://rdd.software/sitemap.xml
