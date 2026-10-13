@@ -4,18 +4,25 @@
  * The Cal.com calendar shows only free slots (it checks the connected
  * Apple calendar) and puts confirmed bookings straight into it.
  * Nothing is loaded from Cal.com until the visitor clicks the button.
- * The calendar follows the site's light/dark theme and is prefilled
- * with the name and email already typed into the contact form.
+ * The calendar follows the site's light/dark theme and language (one
+ * Cal.com event per language) and is prefilled with the name and email
+ * already typed into the contact form.
  * ------------------------------------------------------------------- */
 
 (function (html) {
 
     'use strict';
 
-    const CAL_LINK = 'rdd-software/konzultacije'; // cal.com/<CAL_LINK>
+    // one Cal.com event per site language, each with its own title and description
+    const CAL_LINKS = {
+        hr: 'rdd-software/konzultacije',
+        en: 'rdd-software/consultation',
+        it: 'rdd-software/consulenza',
+        de: 'rdd-software/beratung'
+    };
     const CAL_ORIGIN = 'https://cal.com';
     const CAL_SCRIPT = 'https://app.cal.com/embed/embed.js';
-    const NAMESPACE = 'rdd';
+    const NAMESPACE = 'rdd';           // + '-' + language
     const BRAND = { light: '#007373', dark: '#23967f' };
 
     const button = document.getElementById('cal-open');
@@ -76,12 +83,41 @@
         };
     }
 
-    button.addEventListener('click', function () {
+    const initialised = [];
+
+    function lang() {
+        const l = html.getAttribute('lang');
+        return CAL_LINKS[l] ? l : 'en';
+    }
+
+    function api(ns) {
+        return window.Cal.ns[ns];
+    }
+
+    function open() {
+        const l = lang();
+        const ns = NAMESPACE + '-' + l;
+
+        container.innerHTML = '';
+        const target = document.createElement('div');
+        target.id = 'cal-inline-' + l;
+        container.appendChild(target);
         container.hidden = false;
         button.hidden = true;
 
         loadCal();
-        window.Cal('init', NAMESPACE, { origin: CAL_ORIGIN });
+        if (initialised.indexOf(ns) === -1) {
+            window.Cal('init', ns, { origin: CAL_ORIGIN });
+            api(ns)('on', {
+                action: 'bookingSuccessful',
+                callback: function () {
+                    if (typeof window.gtag === 'function') {
+                        window.gtag('event', 'generate_lead', { method: 'consultation' });
+                    }
+                }
+            });
+            initialised.push(ns);
+        }
 
         const config = { layout: 'month_view', theme: theme() };
         const name = formValue('name');
@@ -89,26 +125,29 @@
         if (name) config.name = name;
         if (email) config.email = email;
 
-        window.Cal.ns[NAMESPACE]('inline', {
-            elementOrSelector: '#cal-inline',
-            calLink: CAL_LINK,
+        api(ns)('inline', {
+            elementOrSelector: '#' + target.id,
+            calLink: CAL_LINKS[l],
             config: config
         });
-        window.Cal.ns[NAMESPACE]('ui', uiOptions());
+        api(ns)('ui', uiOptions());
+    }
 
-        window.Cal.ns[NAMESPACE]('on', {
-            action: 'bookingSuccessful',
-            callback: function () {
-                if (typeof window.gtag === 'function') {
-                    window.gtag('event', 'generate_lead', { method: 'consultation' });
-                }
-            }
+    button.addEventListener('click', open);
+
+    // keep an open calendar in step with the site's theme toggle
+    new MutationObserver(function () {
+        initialised.forEach(function (ns) {
+            api(ns)('ui', uiOptions());
         });
+    }).observe(html, { attributes: true, attributeFilter: ['data-theme'] });
 
-        // keep the calendar in step with the site's theme toggle
-        new MutationObserver(function () {
-            window.Cal.ns[NAMESPACE]('ui', uiOptions());
-        }).observe(html, { attributes: true, attributeFilter: ['data-theme'] });
+    // language switched: close the calendar so it reopens on that language's event
+    document.addEventListener('rdd:langchange', function () {
+        if (container.hidden) return;
+        container.innerHTML = '';
+        container.hidden = true;
+        button.hidden = false;
     });
 
 })(document.documentElement);
