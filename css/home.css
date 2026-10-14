@@ -332,3 +332,82 @@ html[data-theme="light"] .service-card__price {
         grid-template-columns: 1fr;
     }
 }
+
+/* --------------------------------------------------------------------
+ * frequently asked questions (<details> accordion)
+ * -------------------------------------------------------------------- */
+.s-faq {
+    padding-top: var(--vspace-4);
+}
+
+.faq {
+    margin-top: var(--vspace-1);
+    border-top: 1px solid var(--color-gray-8);
+}
+
+.faq__item {
+    border-bottom: 1px solid var(--color-gray-8);
+}
+
+.faq__question {
+    position: relative;
+    display: block;
+    padding: var(--vspace-0_75) 4.8rem var(--vspace-0_75) 0;
+    font-size: var(--text-md);
+    font-weight: 600;
+    line-height: 1.4;
+    color: var(--color-text-dark);
+    cursor: pointer;
+    list-style: none;
+}
+
+.faq__question::-webkit-details-marker {
+    display: none;
+}
+
+/* plus that turns into a minus when open */
+.faq__question::before,
+.faq__question::after {
+    content: "";
+    position: absolute;
+    right: .8rem;
+    top: 50%;
+    width: 16px;
+    height: 2px;
+    background: var(--color-1);
+    transition: transform .2s ease;
+}
+
+.faq__question::after {
+    transform: rotate(90deg);
+}
+
+.faq__item[open] .faq__question::after {
+    transform: rotate(0deg);
+}
+
+.faq__question:hover,
+.faq__question:focus-visible {
+    color: var(--color-1);
+}
+
+.faq__answer {
+    max-width: 860px;
+    padding: 0 0 var(--vspace-0_75);
+}
+
+.faq__answer p {
+    margin: 0;
+    line-height: 1.7;
+}
+
+.faq__answer a {
+    color: var(--color-text-dark);
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 600px) {
+    .faq__question {
+        font-size: 1.8rem;
+    }
+}
