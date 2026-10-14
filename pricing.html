@@ -38,6 +38,8 @@
 
         .pricing-group {
             margin-top: var(--vspace-2);
+            /* links from the service cards land below the fixed header */
+            scroll-margin-top: calc(var(--header-height, 6.4rem) + 2.4rem);
         }
 
         .pricing-group__title {
@@ -299,7 +301,7 @@
                     </p>
 
                     <!-- Custom Software Solutions -->
-                    <div class="pricing-group">
+                    <div class="pricing-group" id="software">
                         <h3 class="pricing-group__title">
                             <span data-lang="hr">Razvoj softvera po mjeri</span><span data-lang="en">Custom Software Solutions</span><span data-lang="it">Software su misura</span><span data-lang="de">Individuelle Software</span>
                         </h3>
@@ -340,7 +342,7 @@
                     </div>
 
                     <!-- Websites & Online Shops -->
-                    <div class="pricing-group">
+                    <div class="pricing-group" id="web">
                         <h3 class="pricing-group__title">
                             <span data-lang="hr">Web stranice i web trgovine</span><span data-lang="en">Websites &amp; Online Shops</span><span data-lang="it">Siti web e negozi online</span><span data-lang="de">Websites &amp; Onlineshops</span>
                         </h3>
@@ -374,7 +376,7 @@
                     </div>
 
                     <!-- Digital Transformation -->
-                    <div class="pricing-group">
+                    <div class="pricing-group" id="digital">
                         <h3 class="pricing-group__title">
                             <span data-lang="hr">Digitalna transformacija</span><span data-lang="en">Digital Transformation</span><span data-lang="it">Trasformazione digitale</span><span data-lang="de">Digitale Transformation</span>
                         </h3>
@@ -408,7 +410,7 @@
                     </div>
 
                     <!-- Consulting -->
-                    <div class="pricing-group">
+                    <div class="pricing-group" id="consulting">
                         <h3 class="pricing-group__title">
                             <span data-lang="hr">Konzultacije</span><span data-lang="en">Consulting</span><span data-lang="it">Consulenza</span><span data-lang="de">Beratung</span>
                         </h3>
@@ -435,7 +437,7 @@
                     </div>
 
                     <!-- Technical Support -->
-                    <div class="pricing-group">
+                    <div class="pricing-group" id="support">
                         <h3 class="pricing-group__title">
                             <span data-lang="hr">Tehnička podrška</span><span data-lang="en">Technical Support</span><span data-lang="it">Supporto tecnico</span><span data-lang="de">Technischer Support</span>
                         </h3>
@@ -476,7 +478,7 @@
                     </div>
 
                     <!-- Branding Identity -->
-                    <div class="pricing-group">
+                    <div class="pricing-group" id="branding">
                         <h3 class="pricing-group__title">
                             <span data-lang="hr">Brending i vizualni identitet</span><span data-lang="en">Branding Identity</span><span data-lang="it">Brand e identità visiva</span><span data-lang="de">Branding &amp; Corporate Identity</span>
                         </h3>
@@ -510,7 +512,7 @@
                     </div>
 
                     <!-- Product Design -->
-                    <div class="pricing-group">
+                    <div class="pricing-group" id="design">
                         <h3 class="pricing-group__title">
                             <span data-lang="hr">Dizajn proizvoda</span><span data-lang="en">Product Design</span><span data-lang="it">Design di prodotto</span><span data-lang="de">Produktdesign</span>
                         </h3>
