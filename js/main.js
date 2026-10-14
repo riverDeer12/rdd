@@ -77,10 +77,13 @@
                 * sectionId variable we are getting while looping through sections as 
                 * an selector
                 */
+                const link = document.querySelector(".main-nav a[href*=" + sectionId + "]");
+                if (!link) return; // section without a menu item (e.g. privacy, terms)
+
                 if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-                    document.querySelector(".main-nav a[href*=" + sectionId + "]").parentNode.classList.add("current");
+                    link.parentNode.classList.add("current");
                 } else {
-                    document.querySelector(".main-nav a[href*=" + sectionId + "]").parentNode.classList.remove("current");
+                    link.parentNode.classList.remove("current");
                 }
             });
         }

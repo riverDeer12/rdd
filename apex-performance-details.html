@@ -8,10 +8,29 @@
     <meta charset="UTF-8"/>
     <title>Apex Performance Fit - Detalji projekta</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <!-- Your main stylesheet -->
+    <meta name="description" content="Apex Performance Fit – web and mobile app connecting personal trainers and athletes: scheduling, session credits and progress tracking. Built by RDD Software.">
+    <link rel="canonical" href="https://rdd.software/apex-performance-details.html">
+
+    <!-- Open Graph (link previews on LinkedIn, WhatsApp, Facebook, ...) -->
+    <meta property="og:type" content="website"/>
+    <meta property="og:site_name" content="RDD Software"/>
+    <meta property="og:title" content="Apex Performance Fit – RDD Software"/>
+    <meta property="og:description" content="Apex Performance Fit – web and mobile app connecting personal trainers and athletes: scheduling, session credits and progress tracking. Built by RDD Software."/>
+    <meta property="og:url" content="https://rdd.software/apex-performance-details.html"/>
+    <meta property="og:image" content="https://rdd.software/images/og/apex-performance.jpg"/>
+    <meta property="og:image:width" content="1200"/>
+    <meta property="og:image:height" content="630"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+
+    <!-- favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
     <link rel="stylesheet" href="css/project_details_style.css"/>
     <link rel="stylesheet" href="css/i18n.css"/>
     <link rel="stylesheet" href="css/theme.css"/>
+    <link rel="stylesheet" href="css/cta.css"/>
     <!-- language (hr / en / it / de) - runs before render so only one language is shown -->
     <script src="js/i18n.js"></script>
     <!-- light / dark theme - runs before render so the page does not flash -->
@@ -86,7 +105,7 @@
         <!-- Main Image -->
         <div class="mb-16 rounded-lg overflow-hidden border border-border">
             <img
-                    src="images/portfolio/apex_details/apexweb.png"
+                    src="images/portfolio/apex_details/apexweb.webp"
                     alt="Project main screenshot"
                     class="w-full aspect-video object-contain"
             />
@@ -153,11 +172,11 @@
 
                 <div class="gallery-viewport">
                     <div class="gallery-track">
-                        <div class="gallery-slide"><img src="images/portfolio/apex_details/apex1.webp" alt="Apex Performance Fit - Login"/></div>
-                        <div class="gallery-slide"><img src="images/portfolio/apex_details/apex2.webp" alt="Apex Performance Fit - Appointments calendar"/></div>
-                        <div class="gallery-slide"><img src="images/portfolio/apex_details/apex3.webp" alt="Apex Performance Fit - Cancellation and join requests"/></div>
-                        <div class="gallery-slide"><img src="images/portfolio/apex_details/apex4.webp" alt="Apex Performance Fit - New appointment"/></div>
-                        <div class="gallery-slide"><img src="images/portfolio/apex_details/apex5.webp" alt="Apex Performance Fit - Client weight progress"/></div>
+                        <div class="gallery-slide"><img loading="lazy" decoding="async" src="images/portfolio/apex_details/apex1.webp" alt="Apex Performance Fit - Login"/></div>
+                        <div class="gallery-slide"><img loading="lazy" decoding="async" src="images/portfolio/apex_details/apex2.webp" alt="Apex Performance Fit - Appointments calendar"/></div>
+                        <div class="gallery-slide"><img loading="lazy" decoding="async" src="images/portfolio/apex_details/apex3.webp" alt="Apex Performance Fit - Cancellation and join requests"/></div>
+                        <div class="gallery-slide"><img loading="lazy" decoding="async" src="images/portfolio/apex_details/apex4.webp" alt="Apex Performance Fit - New appointment"/></div>
+                        <div class="gallery-slide"><img loading="lazy" decoding="async" src="images/portfolio/apex_details/apex5.webp" alt="Apex Performance Fit - Client weight progress"/></div>
                     </div>
                 </div>
 
@@ -275,6 +294,15 @@
         <img class="lightbox-img" id="lightbox-img" src="" alt="" />
         <button class="lightbox-btn lightbox-next" aria-label="Next">›</button>
     </div>
+
+        <section class="project-cta">
+                <h2 class="project-cta__title"><span data-lang="hr">Trebate nešto slično?</span><span data-lang="en">Need something similar?</span><span data-lang="it">Ti serve qualcosa di simile?</span><span data-lang="de">Brauchen Sie etwas Ähnliches?</span></h2>
+                <p class="project-cta__text"><span data-lang="hr">Opišite nam svoj projekt, a mi ćemo predložiti rješenje, rok i cijenu.</span><span data-lang="en">Tell us about your project and we will suggest a solution, timeline and price.</span><span data-lang="it">Raccontaci il tuo progetto e ti proporremo soluzione, tempi e prezzo.</span><span data-lang="de">Erzählen Sie uns von Ihrem Projekt – wir schlagen Lösung, Zeitplan und Preis vor.</span></p>
+                <div class="project-cta__actions">
+                    <a class="project-cta__btn project-cta__btn--primary" href="index.html#contact"><span data-lang="hr">Pošaljite upit</span><span data-lang="en">Send an enquiry</span><span data-lang="it">Invia una richiesta</span><span data-lang="de">Anfrage senden</span></a>
+                    <a class="project-cta__btn" href="index.html#booking"><span data-lang="hr">Rezervirajte konzultacije</span><span data-lang="en">Book a consultation</span><span data-lang="it">Prenota una consulenza</span><span data-lang="de">Beratung buchen</span></a>
+                </div>
+            </section>
     </main>
 
     <!-- Footer Navigation -->
@@ -388,7 +416,7 @@
         const nextBtn = document.querySelector(".lightbox-next");
 
         // Uzima originalne slike (bez klonova iz carousela) iz DOM-a prije inicijalizacije clonea,
-        // pa je sigurnije čitati src atribute direktno iz <img> elemenata u trenutku klika
+        // pa je sigurnije čitati src atribute direktno iz <img loading="lazy" decoding="async"> elemenata u trenutku klika
         // preko delegacije eventa na cijelom containeru.
         const gallerySection = document.querySelector(".gallery-carousel") || document;
 

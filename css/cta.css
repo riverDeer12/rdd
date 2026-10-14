@@ -1,0 +1,78 @@
+/* ===================================================================
+ * RDD Software - "work with us" call to action
+ * End of the project pages and the price list. Colours fall back from
+ * the main site's variables to the project pages' variables, so the
+ * block fits both stylesheets and both themes.
+ * ------------------------------------------------------------------- */
+
+.project-cta {
+    margin: 64px 0 0;
+    padding: 40px 32px;
+    border: 1px solid var(--color-gray-8, var(--border));
+    border-radius: 12px;
+    text-align: center;
+}
+
+.project-cta__title {
+    margin: 0 0 12px;
+    font-size: 28px;
+    line-height: 1.25;
+    color: var(--color-text-dark, var(--foreground));
+}
+
+.project-cta__text {
+    max-width: 560px;
+    margin: 0 auto 28px;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--color-text, var(--muted-foreground));
+}
+
+.project-cta__actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+}
+
+.project-cta__btn,
+.project-cta__btn:visited {
+    display: inline-block;
+    margin: 0;
+    padding: 14px 24px;
+    border: 1px solid var(--color-text-dark, var(--foreground));
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.2;
+    text-decoration: none;
+    color: var(--color-text-dark, var(--foreground));
+    background: transparent;
+    transition: opacity .2s ease;
+}
+
+.project-cta__btn--primary,
+.project-cta__btn--primary:visited {
+    border-color: hsla(180, 100%, 20%, 1);
+    background: hsla(180, 100%, 20%, 1);
+    color: #ffffff;
+}
+
+.project-cta__btn:hover,
+.project-cta__btn:focus {
+    opacity: .85;
+}
+
+@media screen and (max-width: 600px) {
+    .project-cta {
+        padding: 32px 20px;
+    }
+
+    .project-cta__title {
+        font-size: 24px;
+    }
+
+    .project-cta__btn {
+        flex: 1 1 100%;
+    }
+}
