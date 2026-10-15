@@ -16,8 +16,10 @@ Each generated page keeps only its own language and gets its own <title>,
 meta description, canonical URL and hreflang links; the language switcher
 becomes plain links between the versions. sitemap.xml is rebuilt as well.
 
-Run it after every change in src/ and commit the generated files too
-(GitHub Pages serves the repository as it is, there is no build step):
+GitHub Pages serves the repository as it is, so the generated files are
+committed too. The "Build pages" workflow (.github/workflows/build.yml)
+runs this script on every push to master that touches src/ or tools/ and
+commits the result; to see the result before pushing, run it locally:
 
     python3 tools/build.py
 
