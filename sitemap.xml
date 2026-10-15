@@ -82,6 +82,126 @@
         <priority>0.6</priority>
     </url>
     <url>
+        <loc>https://rdd.software/blog-project-brief.html</loc>
+        <xhtml:link rel="alternate" hreflang="hr" href="https://rdd.software/blog-project-brief.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rdd.software/en/blog-project-brief.html"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/blog-project-brief.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/blog-project-brief.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/blog-project-brief.html"/>
+        <lastmod>2026-10-15</lastmod>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://rdd.software/en/blog-project-brief.html</loc>
+        <xhtml:link rel="alternate" hreflang="hr" href="https://rdd.software/blog-project-brief.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rdd.software/en/blog-project-brief.html"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/blog-project-brief.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/blog-project-brief.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/blog-project-brief.html"/>
+        <lastmod>2026-10-15</lastmod>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://rdd.software/it/blog-project-brief.html</loc>
+        <xhtml:link rel="alternate" hreflang="hr" href="https://rdd.software/blog-project-brief.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rdd.software/en/blog-project-brief.html"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/blog-project-brief.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/blog-project-brief.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/blog-project-brief.html"/>
+        <lastmod>2026-10-15</lastmod>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://rdd.software/de/blog-project-brief.html</loc>
+        <xhtml:link rel="alternate" hreflang="hr" href="https://rdd.software/blog-project-brief.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rdd.software/en/blog-project-brief.html"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/blog-project-brief.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/blog-project-brief.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/blog-project-brief.html"/>
+        <lastmod>2026-10-15</lastmod>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://rdd.software/blog-website-cost.html</loc>
+        <xhtml:link rel="alternate" hreflang="hr" href="https://rdd.software/blog-website-cost.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rdd.software/en/blog-website-cost.html"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/blog-website-cost.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/blog-website-cost.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/blog-website-cost.html"/>
+        <lastmod>2026-10-15</lastmod>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://rdd.software/en/blog-website-cost.html</loc>
+        <xhtml:link rel="alternate" hreflang="hr" href="https://rdd.software/blog-website-cost.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rdd.software/en/blog-website-cost.html"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/blog-website-cost.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/blog-website-cost.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/blog-website-cost.html"/>
+        <lastmod>2026-10-15</lastmod>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://rdd.software/it/blog-website-cost.html</loc>
+        <xhtml:link rel="alternate" hreflang="hr" href="https://rdd.software/blog-website-cost.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rdd.software/en/blog-website-cost.html"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/blog-website-cost.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/blog-website-cost.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/blog-website-cost.html"/>
+        <lastmod>2026-10-15</lastmod>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://rdd.software/de/blog-website-cost.html</loc>
+        <xhtml:link rel="alternate" hreflang="hr" href="https://rdd.software/blog-website-cost.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rdd.software/en/blog-website-cost.html"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/blog-website-cost.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/blog-website-cost.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/blog-website-cost.html"/>
+        <lastmod>2026-10-15</lastmod>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://rdd.software/blog-website-or-web-app.html</loc>
+        <xhtml:link rel="alternate" hreflang="hr" href="https://rdd.software/blog-website-or-web-app.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rdd.software/en/blog-website-or-web-app.html"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/blog-website-or-web-app.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/blog-website-or-web-app.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/blog-website-or-web-app.html"/>
+        <lastmod>2026-10-15</lastmod>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://rdd.software/en/blog-website-or-web-app.html</loc>
+        <xhtml:link rel="alternate" hreflang="hr" href="https://rdd.software/blog-website-or-web-app.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rdd.software/en/blog-website-or-web-app.html"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/blog-website-or-web-app.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/blog-website-or-web-app.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/blog-website-or-web-app.html"/>
+        <lastmod>2026-10-15</lastmod>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://rdd.software/it/blog-website-or-web-app.html</loc>
+        <xhtml:link rel="alternate" hreflang="hr" href="https://rdd.software/blog-website-or-web-app.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rdd.software/en/blog-website-or-web-app.html"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/blog-website-or-web-app.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/blog-website-or-web-app.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/blog-website-or-web-app.html"/>
+        <lastmod>2026-10-15</lastmod>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://rdd.software/de/blog-website-or-web-app.html</loc>
+        <xhtml:link rel="alternate" hreflang="hr" href="https://rdd.software/blog-website-or-web-app.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rdd.software/en/blog-website-or-web-app.html"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/blog-website-or-web-app.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/blog-website-or-web-app.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/blog-website-or-web-app.html"/>
+        <lastmod>2026-10-15</lastmod>
+        <priority>0.6</priority>
+    </url>
+    <url>
         <loc>https://rdd.software/blog.html</loc>
         <xhtml:link rel="alternate" hreflang="hr" href="https://rdd.software/blog.html"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://rdd.software/en/blog.html"/>
