@@ -7,11 +7,12 @@
  * and the language switcher is a set of plain links between them.
  *
  * This script only decides whether to send the visitor to another
- * version:
- *   1. the language they picked in the switcher (remembered), else
- *   2. on the Croatian (unprefixed) pages, where new visitors land: the
- *      language of the country their IP address is in (looked up once,
- *      then remembered), otherwise English.
+ * version, and only on the Croatian (unprefixed) pages, where new
+ * visitors land. An /en/, /it/ or /de/ address is always shown as it is:
+ * whoever opens it asked for that language. The target language is
+ *   1. the one they picked in the switcher (remembered), else
+ *   2. the language of the country their IP address is in (looked up
+ *      once, then remembered), otherwise English.
  * Search engine crawlers are never redirected, so they index every version.
  *
  * Pages that still carry all languages side by side (404.html, which
@@ -122,16 +123,14 @@
             if (link) store(STORAGE_KEY, link.getAttribute('data-set-lang'));
         });
 
-        if (CRAWLER.test(navigator.userAgent)) return;
+        // someone who opened an /en/, /it/ or /de/ address wants that language
+        if (CRAWLER.test(navigator.userAgent) || pageLang !== UNPREFIXED_LANG) return;
 
         const chosen = readStored(STORAGE_KEY);
         if (isSupported(chosen)) {
             goTo(chosen);
             return;
         }
-
-        // someone who opened an /en/, /it/ or /de/ link wants that language
-        if (pageLang !== UNPREFIXED_LANG) return;
 
         const detected = readStored(GEO_STORAGE_KEY);
         if (isSupported(detected)) {

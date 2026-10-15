@@ -25,6 +25,7 @@ for page in sorted(pages):
         if re.match(r'^([a-z][a-z0-9+.-]*:|//)', url, re.I) or url in ('', '#0', '#'):
             continue
         target, anchor = urldefrag(url)
+        target = target.split('?', 1)[0]
         if target.startswith('/'):
             file = os.path.join(ROOT, unquote(target.lstrip('/')))
         else:
