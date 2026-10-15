@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html class="no-js" lang="hr"
+      data-title-hr="Izrada web stranica i web trgovina, Rijeka - RDD Software"
+      data-title-en="Website &amp; Online Shop Development - RDD Software"
+      data-title-it="Realizzazione di siti web e negozi online - RDD Software"
+      data-title-de="Website- und Onlineshop-Erstellung - RDD Software"
+      data-description-hr="Izrada web stranica od 1.000 € i web trgovina od 2.000 €: brze, prilagođene mobitelima i spremne za Google. Mali tim iz Rijeke, pisana ponuda bez skrivenih troškova."
+      data-description-en="Websites from €1,000 and online shops from €2,000: fast, mobile-friendly and ready for Google. A small team from Rijeka, Croatia, with a written offer and no hidden costs."
+      data-description-it="Siti web da 1.000 € e negozi online da 2.000 €: veloci, ottimizzati per smartphone e pronti per Google. Un piccolo team di Fiume, offerta scritta senza costi nascosti."
+      data-description-de="Websites ab 1.000 € und Onlineshops ab 2.000 €: schnell, mobilfreundlich und bereit für Google. Ein kleines Team aus Rijeka, schriftliches Angebot ohne versteckte Kosten.">
+<head>
+
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>Izrada web stranica i web trgovina, Rijeka - RDD Software</title>
+
+    <!-- mobile specific metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Open Graph (for Facebook, LinkedIn, etc.) -->
+    <meta property="og:image" content="https://rdd.software/images/about-photo.jpg"/>
+    <meta property="og:type" content="website"/>
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/i18n.css">
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/consent.css">
+    <link rel="stylesheet" href="css/cta.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/pages.css">
+
+    <!-- structured data for search engines, one per language -->
+    <script type="application/ld+json" data-lang="hr">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Izrada web stranica i web trgovina",
+        "serviceType": "Izrada web stranica",
+        "url": "https://rdd.software/web-development.html",
+        "areaServed": "Europe",
+        "provider": {
+            "@type": "ProfessionalService",
+            "name": "RDD Software",
+            "url": "https://rdd.software/"
+        },
+        "offers": [
+            {
+                "@type": "Offer",
+                "name": "Prezentacijska web stranica",
+                "priceSpecification": {
+                    "@type": "PriceSpecification",
+                    "minPrice": 1000,
+                    "priceCurrency": "EUR"
+                }
+            },
+            {
+                "@type": "Offer",
+                "name": "Web trgovina",
+                "priceSpecification": {
+                    "@type": "PriceSpecification",
+                    "minPrice": 2000,
+                    "priceCurrency": "EUR"
+                }
+            }
+        ]
+    }
+    </script>
+    <script type="application/ld+json" data-lang="en">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Website and online shop development",
+        "serviceType": "Website development",
+        "url": "https://rdd.software/en/web-development.html",
+        "areaServed": "Europe",
+        "provider": {
+            "@type": "ProfessionalService",
+            "name": "RDD Software",
+            "url": "https://rdd.software/"
+        },
+        "offers": [
+            {
+                "@type": "Offer",
+                "name": "Business website",
+                "priceSpecification": {
+                    "@type": "PriceSpecification",
+                    "minPrice": 1000,
+                    "priceCurrency": "EUR"
+                }
+            },
+            {
+                "@type": "Offer",
+                "name": "Online shop",
+                "priceSpecification": {
+                    "@type": "PriceSpecification",
+                    "minPrice": 2000,
+                    "priceCurrency": "EUR"
+                }
+            }
+        ]
+    }
+    </script>
+    <script type="application/ld+json" data-lang="it">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Realizzazione di siti web e negozi online",
+        "serviceType": "Realizzazione siti web",
+        "url": "https://rdd.software/it/web-development.html",
+        "areaServed": "Europe",
+        "provider": {
+            "@type": "ProfessionalService",
+            "name": "RDD Software",
+            "url": "https://rdd.software/"
+        },
+        "offers": [
+            {
+                "@type": "Offer",
+                "name": "Sito web di presentazione",
+                "priceSpecification": {
+                    "@type": "PriceSpecification",
+                    "minPrice": 1000,
+                    "priceCurrency": "EUR"
+                }
+            },
+            {
+                "@type": "Offer",
+                "name": "Negozio online",
+                "priceSpecification": {
+                    "@type": "PriceSpecification",
+                    "minPrice": 2000,
+                    "priceCurrency": "EUR"
+                }
+            }
+        ]
+    }
+    </script>
+    <script type="application/ld+json" data-lang="de">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Website- und Onlineshop-Erstellung",
+        "serviceType": "Website-Erstellung",
+        "url": "https://rdd.software/de/web-development.html",
+        "areaServed": "Europe",
+        "provider": {
+            "@type": "ProfessionalService",
+            "name": "RDD Software",
+            "url": "https://rdd.software/"
+        },
+        "offers": [
+            {
+                "@type": "Offer",
+                "name": "Unternehmenswebsite",
+                "priceSpecification": {
+                    "@type": "PriceSpecification",
+                    "minPrice": 1000,
+                    "priceCurrency": "EUR"
+                }
+            },
+            {
+                "@type": "Offer",
+                "name": "Onlineshop",
+                "priceSpecification": {
+                    "@type": "PriceSpecification",
+                    "minPrice": 2000,
+                    "priceCurrency": "EUR"
+                }
+            }
+        ]
+    }
+    </script>
+
+    <!-- language (hr / en / it / de) - runs before render so only one language is shown
+    ================================================== -->
+    <script src="js/i18n.js"></script>
+    <!-- light / dark theme - runs before render so the page does not flash -->
+    <script src="js/theme.js"></script>
+
+    <!-- favicons
+    ================================================== -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+</head>
+
+<body id="top">
+
+
+
+
+<!-- # page wrap
+================================================== -->
+<div class="s-pagewrap">
+
+    <div class="circles">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+
+    <!-- ## site header
+    ================================================== -->
+    <header class="s-header">
+
+        <div class="header-mobile">
+            <span class="mobile-home-link"><a href="index.html">RDD.</a></span>
+            <div class="lang-menu">
+                <button type="button" class="lang-menu__toggle" aria-haspopup="true" aria-expanded="false"
+                        aria-label="Jezik / Language / Lingua / Sprache"><span data-lang="hr">HR</span><span data-lang="en">EN</span><span data-lang="it">IT</span><span data-lang="de">DE</span><svg class="lang-menu__chevron" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="lang-switch" role="group" aria-label="Jezik / Language / Lingua / Sprache">
+                    <button type="button" class="lang-switch__btn" data-set-lang="hr"><span class="lang-switch__code">HR</span><span class="lang-switch__name">Hrvatski</span></button>
+                    <span class="lang-switch__sep">/</span>
+                    <button type="button" class="lang-switch__btn" data-set-lang="en"><span class="lang-switch__code">EN</span><span class="lang-switch__name">English</span></button>
+                    <span class="lang-switch__sep">/</span>
+                    <button type="button" class="lang-switch__btn" data-set-lang="it"><span class="lang-switch__code">IT</span><span class="lang-switch__name">Italiano</span></button>
+                    <span class="lang-switch__sep">/</span>
+                    <button type="button" class="lang-switch__btn" data-set-lang="de"><span class="lang-switch__code">DE</span><span class="lang-switch__name">Deutsch</span></button>
+                </div>
+            </div>
+            <button type="button" class="theme-toggle" data-toggle-theme aria-pressed="false"
+                    aria-label="Tamna / svijetla tema - Dark / light theme" title="Tamna / svijetla tema - Dark / light theme">
+                <svg class="theme-toggle__sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/></svg>
+                <svg class="theme-toggle__moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M20.2 14.6A8.5 8.5 0 0 1 9.4 3.8a8.5 8.5 0 1 0 10.8 10.8z"/></svg>
+            </button>
+            <a class="mobile-menu-toggle" href="#0"><span>Menu</span></a>
+        </div>
+
+        <div class="row wide main-nav-wrap">
+            <nav class="column lg-12 main-nav">
+                <ul>
+                    <li><a href="index.html" class="home-link">RDD.</a></li>
+                    <li><a href="index.html#intro"><span data-lang="hr">Početna</span><span data-lang="en">Intro</span><span data-lang="it">Intro</span><span data-lang="de">Start</span></a></li>
+                    <li><a href="index.html#about"><span data-lang="hr">O nama</span><span data-lang="en">About</span><span data-lang="it">Chi siamo</span><span data-lang="de">Über uns</span></a></li>
+                    <li><a href="index.html#works"><span data-lang="hr">Projekti</span><span data-lang="en">Works</span><span data-lang="it">Progetti</span><span data-lang="de">Projekte</span></a></li>
+                    <li><a href="pricing.html"><span data-lang="hr">Cjenik</span><span data-lang="en">Pricing</span><span data-lang="it">Prezzi</span><span data-lang="de">Preise</span></a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="index.html#contact"><span data-lang="hr">Kontakt</span><span data-lang="en">Say Hello</span><span data-lang="it">Contatti</span><span data-lang="de">Kontakt</span></a></li>
+                    <li class="lang-switch-item">
+                        <div class="lang-switch" role="group" aria-label="Jezik / Language / Lingua / Sprache">
+                            <button type="button" class="lang-switch__btn" data-set-lang="hr"><span class="lang-switch__code">HR</span><span class="lang-switch__name">Hrvatski</span></button>
+                            <span class="lang-switch__sep">/</span>
+                            <button type="button" class="lang-switch__btn" data-set-lang="en"><span class="lang-switch__code">EN</span><span class="lang-switch__name">English</span></button>
+                            <span class="lang-switch__sep">/</span>
+                            <button type="button" class="lang-switch__btn" data-set-lang="it"><span class="lang-switch__code">IT</span><span class="lang-switch__name">Italiano</span></button>
+                            <span class="lang-switch__sep">/</span>
+                            <button type="button" class="lang-switch__btn" data-set-lang="de"><span class="lang-switch__code">DE</span><span class="lang-switch__name">Deutsch</span></button>
+                        </div>
+                    </li>
+                    <li class="theme-toggle-item">
+                        <button type="button" class="theme-toggle" data-toggle-theme aria-pressed="false"
+                                aria-label="Tamna / svijetla tema - Dark / light theme" title="Tamna / svijetla tema - Dark / light theme">
+                            <svg class="theme-toggle__sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/></svg>
+                            <svg class="theme-toggle__moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M20.2 14.6A8.5 8.5 0 0 1 9.4 3.8a8.5 8.5 0 1 0 10.8 10.8z"/></svg>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+    </header> <!-- end s-header -->
+
+
+    <!-- ## main content
+    ==================================================- -->
+    <main class="s-content">
+
+        <!-- ### intro
+        ================================================== -->
+        <section class="s-intro">
+
+            <div class="row intro-content" style="min-height: 0;">
+
+                <div class="column">
+                    <div class="text-pretitle with-line">
+                        <span data-lang="hr">Usluge</span><span data-lang="en">Services</span><span data-lang="it">Servizi</span><span data-lang="de">Leistungen</span>
+                    </div>
+
+                    <h1 class="text-huge-title" data-lang="hr">
+                        Izrada web <br>
+                        stranica. <br>
+                    </h1>
+                    <h1 class="text-huge-title" data-lang="en">
+                        Website <br>
+                        development. <br>
+                    </h1>
+                    <h1 class="text-huge-title" data-lang="it">
+                        Realizzazione <br>
+                        siti web. <br>
+                    </h1>
+                    <h1 class="text-huge-title" data-lang="de">
+                        Website-<br>
+                        Erstellung. <br>
+                    </h1>
+                </div>
+
+            </div>
+
+        </section> <!-- end s-intro -->
+
+
+        <!-- ### service
+        ================================================== -->
+        <section class="s-page target-section">
+
+            <div class="row">
+                <div class="column lg-12">
+
+                    <div class="page-body" data-lang="hr">
+                        <p class="page-lead">
+                            Izrađujemo brze i pregledne web stranice i web trgovine za tvrtke, obrte i udruge.
+                            Sve radimo sami, od dizajna do objave, pa razgovarate izravno s ljudima koji grade vašu stranicu.
+                        </p>
+
+                        <div class="intro-cta">
+                            <a href="index.html#contact" class="btn btn--primary">Zatražite ponudu</a>
+                            <a href="index.html#booking" class="btn btn--stroke">Rezervirajte konzultacije</a>
+                        </div>
+
+                        <h2>Što dobivate</h2>
+                        <ul class="feature-grid">
+                            <li>
+                                <h3>Dizajn usklađen s vama</h3>
+                                <p>Izgled stranice slijedi vaš logotip, boje i stil poslovanja, a strukturu prilagođavamo onome što vaši kupci traže.</p>
+                            </li>
+                            <li>
+                                <h3>Prilagođeno mobitelima</h3>
+                                <p>Stranica se jednako dobro prikazuje i koristi na mobitelu, tabletu i računalu.</p>
+                            </li>
+                            <li>
+                                <h3>Brzo učitavanje</h3>
+                                <p>Optimizirane slike i čist kod, jer spore stranice gube posjetitelje i lošije se rangiraju na Googleu.</p>
+                            </li>
+                            <li>
+                                <h3>Spremno za Google</h3>
+                                <p>Naslovi, opisi, sitemap i povezivanje s Google Search Consoleom, da vas kupci mogu pronaći.</p>
+                            </li>
+                            <li>
+                                <h3>Upiti i rezervacije</h3>
+                                <p>Kontakt obrazac čiji upiti stižu ravno u vaš e-mail, a po želji i rezervacija termina putem kalendara.</p>
+                            </li>
+                            <li>
+                                <h3>Privatnost i kolačići</h3>
+                                <p>Obavijest o kolačićima, analitika koja se uključuje tek uz pristanak posjetitelja i pomoć oko izjave o privatnosti.</p>
+                            </li>
+                            <li>
+                                <h3>Više jezika</h3>
+                                <p>Ako poslujete s inozemstvom, stranica može imati više jezika, svaki na svojoj adresi koju Google zasebno prikazuje.</p>
+                            </li>
+                            <li>
+                                <h3>Web trgovina</h3>
+                                <p>Katalog proizvoda, košarica, online plaćanje karticama i povezivanje s dostavom, primjerice u paketomate.</p>
+                            </li>
+                        </ul>
+
+                        <h2>Cijene i rokovi</h2>
+                        <table class="price-table">
+                            <thead>
+                            <tr>
+                                <th>Usluga</th>
+                                <th>Cijena</th>
+                                <th>Okvirni rok</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>Prezentacijska web stranica</td>
+                                <td class="price-table__price">od 1.000&nbsp;€</td>
+                                <td>2&ndash;4 tjedna</td>
+                            </tr>
+                            <tr>
+                                <td>Web trgovina</td>
+                                <td class="price-table__price">od 2.000&nbsp;€</td>
+                                <td>4&ndash;8 tjedana</td>
+                            </tr>
+                            <tr>
+                                <td>Održavanje web stranice <span class="price-table__note">ažuriranja, sigurnosne kopije i podrška</span></td>
+                                <td class="price-table__price">od 50&nbsp;€ / mj.</td>
+                                <td>mjesečno</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <p class="page-note">
+                            Cijene su konačne jer obrt nije u sustavu PDV-a. Točnu cijenu i rok dobivate u pisanoj ponudi nakon kratkog razgovora.
+                            Sve usluge i cijene navedene su u <a href="pricing.html">cjeniku</a>.
+                        </p>
+
+                        <h2>O čemu ovisi cijena?</h2>
+                        <ul>
+                            <li>o broju stranica i količini sadržaja,</li>
+                            <li>o tome radimo li dizajn od nule ili se oslanjamo na vaš postojeći vizualni identitet,</li>
+                            <li>o posebnim funkcijama, kao što su rezervacije, više jezika ili povezivanje s drugim sustavima,</li>
+                            <li>kod web trgovine i o broju proizvoda te načinima plaćanja i dostave.</li>
+                        </ul>
+                        <p>Detaljnije o tome pišemo u članku <a href="blog-website-cost.html">Koliko košta izrada web stranice u 2026.?</a></p>
+
+                        <h2>Kako radimo</h2>
+                        <ol class="process-steps">
+                            <li>
+                                <span class="process-steps__num">01</span>
+                                <h3>Upoznavanje</h3>
+                                <p>Na besplatnim konzultacijama od 30 minuta razgovaramo o tome čemu stranica treba služiti i tko su vaši kupci.</p>
+                            </li>
+                            <li>
+                                <span class="process-steps__num">02</span>
+                                <h3>Ponuda</h3>
+                                <p>Dobivate pisanu ponudu s opsegom posla, cijenom i rokom, bez skrivenih troškova.</p>
+                            </li>
+                            <li>
+                                <span class="process-steps__num">03</span>
+                                <h3>Izrada</h3>
+                                <p>Najprije dogovaramo strukturu i dizajn, a zatim izrađujemo stranicu i redovito vam pokazujemo napredak.</p>
+                            </li>
+                            <li>
+                                <span class="process-steps__num">04</span>
+                                <h3>Objava</h3>
+                                <p>Postavljamo domenu i hosting na vaše ime, objavljujemo stranicu i povezujemo je s Googleom.</p>
+                            </li>
+                        </ol>
+
+                        <h2>Projekti</h2>
+                        <ul class="project-links">
+                            <li><a href="petro-bulk-details.html"><span class="project-links__name">Petro&amp;Bulk Solutions</span><span class="project-links__type">Web stranica za trgovinu naftnim derivatima i biogorivima</span></a></li>
+                            <li><a href="snow-festival-details.html"><span class="project-links__name">Snow Festival Sljeme</span><span class="project-links__type">Web stranica događanja s programom i ulaznicama</span></a></li>
+                            <li><a href="reviv-plus-details.html"><span class="project-links__name">ReViv Plus</span><span class="project-links__type">Web trgovina s online plaćanjem i dostavom u paketomate</span></a></li>
+                        </ul>
+
+                        <h2>Česta pitanja</h2>
+                        <div class="faq">
+                            <details class="faq__item">
+                                <summary class="faq__question">Trebam li sam pripremiti tekstove i fotografije?</summary>
+                                <div class="faq__answer"><p>Najbolje je da sadržaj o svojoj tvrtki pripremite vi, jer svoje poslovanje najbolje poznajete. Pomažemo sa strukturom stranice, uređivanjem tekstova i odabirom fotografija, a po dogovoru izrađujemo i logo i vizualni identitet.</p></div>
+                            </details>
+                            <details class="faq__item">
+                                <summary class="faq__question">Tko je vlasnik stranice i domene?</summary>
+                                <div class="faq__answer"><p>Vi. Domena i hosting registriraju se na vaše ime, a nakon što platite ugovorenu cijenu na vas prelaze sva prava na kod i dizajn izrađen za vaš projekt.</p></div>
+                            </details>
+                            <details class="faq__item">
+                                <summary class="faq__question">Što ako nakon objave pronađem grešku?</summary>
+                                <div class="faq__answer"><p>Greške koje prijavite u roku od 3 mjeseca od preuzimanja stranice ispravljamo besplatno. Nakon toga možete ugovoriti održavanje od 50&nbsp;€ mjesečno, uz otkazni rok od 30 dana.</p></div>
+                            </details>
+                            <details class="faq__item">
+                                <summary class="faq__question">Kako izgleda plaćanje?</summary>
+                                <div class="faq__answer"><p>Ako ponudom nije drugačije dogovoreno, 50&nbsp;% plaćate unaprijed, a ostatak nakon isporuke. Sve uvjete možete pročitati u <a href="terms.html">općim uvjetima poslovanja</a>.</p></div>
+                            </details>
+                        </div>
+
+                        <h2>Povezano</h2>
+                        <ul class="page-related">
+                            <li><a href="blog-website-or-web-app.html">Web stranica, web trgovina ili web aplikacija: što vam zapravo treba? &rarr;</a></li>
+                            <li><a href="mobile-apps.html">Izrada mobilnih aplikacija &rarr;</a></li>
+                            <li><a href="custom-software.html">Softver po mjeri &rarr;</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="page-body" data-lang="en">
+                        <p class="page-lead">
+                            We build fast, clear websites and online shops for companies, sole traders and associations.
+                            We do everything ourselves, from design to launch, so you talk directly to the people building your site.
+                        </p>
+
+                        <div class="intro-cta">
+                            <a href="index.html#contact" class="btn btn--primary">Request a quote</a>
+                            <a href="index.html#booking" class="btn btn--stroke">Book a consultation</a>
+                        </div>
+
+                        <h2>What you get</h2>
+                        <ul class="feature-grid">
+                            <li>
+                                <h3>Design that fits you</h3>
+                                <p>The look follows your logo, colours and style, and the structure is built around what your customers are looking for.</p>
+                            </li>
+                            <li>
+                                <h3>Mobile-friendly</h3>
+                                <p>The site looks and works just as well on a phone, a tablet and a desktop.</p>
+                            </li>
+                            <li>
+                                <h3>Fast loading</h3>
+                                <p>Optimised images and clean code, because slow sites lose visitors and rank lower on Google.</p>
+                            </li>
+                            <li>
+                                <h3>Ready for Google</h3>
+                                <p>Titles, descriptions, a sitemap and a Google Search Console setup, so customers can find you.</p>
+                            </li>
+                            <li>
+                                <h3>Enquiries and bookings</h3>
+                                <p>A contact form that sends enquiries straight to your inbox and, if you like, appointment booking through a calendar.</p>
+                            </li>
+                            <li>
+                                <h3>Privacy and cookies</h3>
+                                <p>A cookie notice, analytics that only start once visitors agree, and help with your privacy policy.</p>
+                            </li>
+                            <li>
+                                <h3>Several languages</h3>
+                                <p>If you do business abroad, the site can have several languages, each on its own address that Google shows separately.</p>
+                            </li>
+                            <li>
+                                <h3>Online shop</h3>
+                                <p>Product catalogue, basket, online card payments and delivery integration, for example to parcel lockers.</p>
+                            </li>
+                        </ul>
+
+                        <h2>Prices and timelines</h2>
+                        <table class="price-table">
+                            <thead>
+                            <tr>
+                                <th>Service</th>
+                                <th>Price</th>
+                                <th>Typical timeline</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>Business website</td>
+                                <td class="price-table__price">from €1,000</td>
+                                <td>2&ndash;4 weeks</td>
+                            </tr>
+                            <tr>
+                                <td>Online shop</td>
+                                <td class="price-table__price">from €2,000</td>
+                                <td>4&ndash;8 weeks</td>
+                            </tr>
+                            <tr>
+                                <td>Website maintenance <span class="price-table__note">updates, backups and support</span></td>
+                                <td class="price-table__price">from €50 / month</td>
+                                <td>monthly</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <p class="page-note">
+                            Prices are final: we are not registered for VAT. You receive the exact price and timeline in a written offer after a short conversation.
+                            All services and prices are listed in our <a href="pricing.html">price list</a>.
+                        </p>
+
+                        <h2>What does the price depend on?</h2>
+                        <ul>
+                            <li>the number of pages and the amount of content,</li>
+                            <li>whether we design from scratch or build on your existing visual identity,</li>
+                            <li>special features such as bookings, several languages or connections to other systems,</li>
+                            <li>for an online shop, also the number of products and the payment and delivery options.</li>
+                        </ul>
+                        <p>We explain this in more detail in <a href="blog-website-cost.html">How much does a website cost in 2026?</a></p>
+
+                        <h2>How we work</h2>
+                        <ol class="process-steps">
+                            <li>
+                                <span class="process-steps__num">01</span>
+                                <h3>Discovery</h3>
+                                <p>In a free 30-minute call we talk about what the site should achieve and who your customers are.</p>
+                            </li>
+                            <li>
+                                <span class="process-steps__num">02</span>
+                                <h3>Proposal</h3>
+                                <p>You receive a written offer with the scope, price and timeline, with no hidden costs.</p>
+                            </li>
+                            <li>
+                                <span class="process-steps__num">03</span>
+                                <h3>Build</h3>
+                                <p>We agree on the structure and design first, then build the site and show you progress regularly.</p>
+                            </li>
+                            <li>
+                                <span class="process-steps__num">04</span>
+                                <h3>Launch</h3>
+                                <p>We set up the domain and hosting in your name, publish the site and connect it to Google.</p>
+                            </li>
+                        </ol>
+
+                        <h2>Projects</h2>
+                        <ul class="project-links">
+                            <li><a href="petro-bulk-details.html"><span class="project-links__name">Petro&amp;Bulk Solutions</span><span class="project-links__type">Website for petroleum and biofuel trading</span></a></li>
+                            <li><a href="snow-festival-details.html"><span class="project-links__name">Snow Festival Sljeme</span><span class="project-links__type">Event website with programme and tickets</span></a></li>
+                            <li><a href="reviv-plus-details.html"><span class="project-links__name">ReViv Plus</span><span class="project-links__type">Online shop with card payments and parcel locker delivery</span></a></li>
+                        </ul>
+
+                        <h2>Frequently asked questions</h2>
+                        <div class="faq">
+                            <details class="faq__item">
+                                <summary class="faq__question">Do I need to prepare the texts and photos myself?</summary>
+                                <div class="faq__answer"><p>It is best if you provide the content about your business, because nobody knows it better than you. We help with the site structure, editing the texts and choosing photos, and on request we also design a logo and visual identity.</p></div>
+                            </details>
+                            <details class="faq__item">
+                                <summary class="faq__question">Who owns the website and the domain?</summary>
+                                <div class="faq__answer"><p>You do. The domain and hosting are registered in your name, and once you have paid the agreed price, all rights to the code and design created for your project pass to you.</p></div>
+                            </details>
+                            <details class="faq__item">
+                                <summary class="faq__question">What if I find a bug after launch?</summary>
+                                <div class="faq__answer"><p>We fix bugs reported within 3 months of handover free of charge. After that you can take out maintenance from €50 per month, with 30 days' notice.</p></div>
+                            </details>
+                            <details class="faq__item">
+                                <summary class="faq__question">How does payment work?</summary>
+                                <div class="faq__answer"><p>Unless the offer says otherwise, you pay 50&nbsp;% in advance and the rest on delivery. All conditions are set out in our <a href="terms.html">terms and conditions</a>.</p></div>
+                            </details>
+                        </div>
+
+                        <h2>Related</h2>
+                        <ul class="page-related">
+                            <li><a href="blog-website-or-web-app.html">Website, online shop or web app: what do you actually need? &rarr;</a></li>
+                            <li><a href="mobile-apps.html">Mobile app development &rarr;</a></li>
+                            <li><a href="custom-software.html">Custom software &rarr;</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="page-body" data-lang="it">
+                        <p class="page-lead">
+                            Realizziamo siti web e negozi online veloci e chiari per aziende, artigiani e associazioni.
+                            Facciamo tutto noi, dal design alla pubblicazione, così parli direttamente con chi costruisce il tuo sito.
+                        </p>
+
+                        <div class="intro-cta">
+                            <a href="index.html#contact" class="btn btn--primary">Richiedi un preventivo</a>
+                            <a href="index.html#booking" class="btn btn--stroke">Prenota una consulenza</a>
+                        </div>
+
+                        <h2>Cosa ottieni</h2>
+                        <ul class="feature-grid">
+                            <li>
+                                <h3>Un design su misura per te</h3>
+                                <p>L'aspetto del sito segue il tuo logo, i tuoi colori e il tuo stile, e la struttura si basa su ciò che cercano i tuoi clienti.</p>
+                            </li>
+                            <li>
+                                <h3>Ottimizzato per smartphone</h3>
+                                <p>Il sito si vede e funziona altrettanto bene su smartphone, tablet e computer.</p>
+                            </li>
+                            <li>
+                                <h3>Caricamento veloce</h3>
+                                <p>Immagini ottimizzate e codice pulito, perché i siti lenti perdono visitatori e si posizionano peggio su Google.</p>
+                            </li>
+                            <li>
+                                <h3>Pronto per Google</h3>
+                                <p>Titoli, descrizioni, sitemap e collegamento a Google Search Console, perché i clienti possano trovarti.</p>
+                            </li>
+                            <li>
+                                <h3>Richieste e prenotazioni</h3>
+                                <p>Un modulo di contatto che invia le richieste direttamente alla tua e-mail e, se vuoi, la prenotazione di appuntamenti tramite calendario.</p>
+                            </li>
+                            <li>
+                                <h3>Privacy e cookie</h3>
+                                <p>Avviso sui cookie, statistiche attivate solo con il consenso dei visitatori e aiuto con l'informativa sulla privacy.</p>
+                            </li>
+                            <li>
+                                <h3>Più lingue</h3>
+                                <p>Se lavori con l'estero, il sito può avere più lingue, ognuna con il proprio indirizzo che Google mostra separatamente.</p>
+                            </li>
+                            <li>
+                                <h3>Negozio online</h3>
+                                <p>Catalogo prodotti, carrello, pagamenti online con carta e integrazione con le spedizioni, ad esempio verso i locker.</p>
+                            </li>
+                        </ul>
+
+                        <h2>Prezzi e tempi</h2>
+                        <table class="price-table">
+                            <thead>
+                            <tr>
+                                <th>Servizio</th>
+                                <th>Prezzo</th>
+                                <th>Tempi indicativi</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>Sito web di presentazione</td>
+                                <td class="price-table__price">da 1.000&nbsp;€</td>
+                                <td>2&ndash;4 settimane</td>
+                            </tr>
+                            <tr>
+                                <td>Negozio online</td>
+                                <td class="price-table__price">da 2.000&nbsp;€</td>
+                                <td>4&ndash;8 settimane</td>
+                            </tr>
+                            <tr>
+                                <td>Manutenzione del sito <span class="price-table__note">aggiornamenti, backup e supporto</span></td>
+                                <td class="price-table__price">da 50&nbsp;€ / mese</td>
+                                <td>mensile</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <p class="page-note">
+                            I prezzi sono definitivi: non siamo soggetti a IVA. Prezzo e tempi esatti li ricevi in un'offerta scritta dopo una breve conversazione.
+                            Tutti i servizi e i prezzi sono nel nostro <a href="pricing.html">listino</a>.
+                        </p>
+
+                        <h2>Da cosa dipende il prezzo?</h2>
+                        <ul>
+                            <li>dal numero di pagine e dalla quantità di contenuti,</li>
+                            <li>dal fatto che il design parta da zero o si basi sulla tua identità visiva esistente,</li>
+                            <li>da funzioni particolari come prenotazioni, più lingue o collegamenti con altri sistemi,</li>
+                            <li>per un negozio online, anche dal numero di prodotti e dai metodi di pagamento e spedizione.</li>
+                        </ul>
+                        <p>Ne parliamo più nel dettaglio nell'articolo <a href="blog-website-cost.html">Quanto costa un sito web nel 2026?</a></p>
+
+                        <h2>Come lavoriamo</h2>
+                        <ol class="process-steps">
+                            <li>
+                                <span class="process-steps__num">01</span>
+                                <h3>Conoscenza</h3>
+                                <p>In una consulenza gratuita di 30 minuti parliamo di cosa deve ottenere il sito e di chi sono i tuoi clienti.</p>
+                            </li>
+                            <li>
+                                <span class="process-steps__num">02</span>
+                                <h3>Offerta</h3>
+                                <p>Ricevi un'offerta scritta con ambito, prezzo e tempi, senza costi nascosti.</p>
+                            </li>
+                            <li>
+                                <span class="process-steps__num">03</span>
+                                <h3>Sviluppo</h3>
+                                <p>Prima concordiamo struttura e design, poi realizziamo il sito e ti mostriamo regolarmente i progressi.</p>
+                            </li>
+                            <li>
+                                <span class="process-steps__num">04</span>
+                                <h3>Pubblicazione</h3>
+                                <p>Registriamo dominio e hosting a tuo nome, pubblichiamo il sito e lo colleghiamo a Google.</p>
+                            </li>
+                        </ol>
+
+                        <h2>Progetti</h2>
+                        <ul class="project-links">
+                            <li><a href="petro-bulk-details.html"><span class="project-links__name">Petro&amp;Bulk Solutions</span><span class="project-links__type">Sito web per il commercio di prodotti petroliferi e biocarburanti</span></a></li>
+                            <li><a href="snow-festival-details.html"><span class="project-links__name">Snow Festival Sljeme</span><span class="project-links__type">Sito di un evento con programma e biglietti</span></a></li>
+                            <li><a href="reviv-plus-details.html"><span class="project-links__name">ReViv Plus</span><span class="project-links__type">Negozio online con pagamenti con carta e consegna nei locker</span></a></li>
+                        </ul>
+
+                        <h2>Domande frequenti</h2>
+                        <div class="faq">
+                            <details class="faq__item">
+                                <summary class="faq__question">Devo preparare io testi e fotografie?</summary>
+                                <div class="faq__answer"><p>È meglio che i contenuti sulla tua attività li prepari tu, perché nessuno la conosce meglio. Ti aiutiamo con la struttura del sito, la revisione dei testi e la scelta delle foto e, su richiesta, realizziamo anche logo e identità visiva.</p></div>
+                            </details>
+                            <details class="faq__item">
+                                <summary class="faq__question">Chi è il proprietario del sito e del dominio?</summary>
+                                <div class="faq__answer"><p>Tu. Dominio e hosting sono registrati a tuo nome e, una volta pagato il prezzo concordato, tutti i diritti su codice e design creati per il tuo progetto passano a te.</p></div>
+                            </details>
+                            <details class="faq__item">
+                                <summary class="faq__question">E se dopo la pubblicazione trovo un errore?</summary>
+                                <div class="faq__answer"><p>Correggiamo gratuitamente gli errori segnalati entro 3 mesi dalla consegna. Dopo puoi attivare la manutenzione da 50&nbsp;€ al mese, con preavviso di disdetta di 30 giorni.</p></div>
+                            </details>
+                            <details class="faq__item">
+                                <summary class="faq__question">Come funziona il pagamento?</summary>
+                                <div class="faq__answer"><p>Salvo diverso accordo nell'offerta, paghi il 50&nbsp;% in anticipo e il resto alla consegna. Tutte le condizioni sono nelle nostre <a href="terms.html">condizioni generali</a>.</p></div>
+                            </details>
+                        </div>
+
+                        <h2>Vedi anche</h2>
+                        <ul class="page-related">
+                            <li><a href="blog-website-or-web-app.html">Sito web, negozio online o applicazione web: di cosa hai davvero bisogno? &rarr;</a></li>
+                            <li><a href="mobile-apps.html">Sviluppo di app mobile &rarr;</a></li>
+                            <li><a href="custom-software.html">Software su misura &rarr;</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="page-body" data-lang="de">
+                        <p class="page-lead">
+                            Wir erstellen schnelle, übersichtliche Websites und Onlineshops für Unternehmen, Selbstständige und Vereine.
+                            Wir machen alles selbst, vom Design bis zum Launch &ndash; Sie sprechen direkt mit den Menschen, die Ihre Website bauen.
+                        </p>
+
+                        <div class="intro-cta">
+                            <a href="index.html#contact" class="btn btn--primary">Angebot anfordern</a>
+                            <a href="index.html#booking" class="btn btn--stroke">Beratung buchen</a>
+                        </div>
+
+                        <h2>Was Sie bekommen</h2>
+                        <ul class="feature-grid">
+                            <li>
+                                <h3>Design, das zu Ihnen passt</h3>
+                                <p>Das Erscheinungsbild folgt Ihrem Logo, Ihren Farben und Ihrem Stil, die Struktur richtet sich danach, was Ihre Kunden suchen.</p>
+                            </li>
+                            <li>
+                                <h3>Für Smartphones optimiert</h3>
+                                <p>Die Website sieht auf Smartphone, Tablet und Computer gleich gut aus und lässt sich überall gut bedienen.</p>
+                            </li>
+                            <li>
+                                <h3>Schnelle Ladezeiten</h3>
+                                <p>Optimierte Bilder und sauberer Code, denn langsame Websites verlieren Besucher und ranken schlechter bei Google.</p>
+                            </li>
+                            <li>
+                                <h3>Bereit für Google</h3>
+                                <p>Titel, Beschreibungen, Sitemap und Einrichtung der Google Search Console, damit Kunden Sie finden.</p>
+                            </li>
+                            <li>
+                                <h3>Anfragen und Buchungen</h3>
+                                <p>Ein Kontaktformular, dessen Anfragen direkt in Ihrem Postfach landen, auf Wunsch auch Terminbuchung über einen Kalender.</p>
+                            </li>
+                            <li>
+                                <h3>Datenschutz und Cookies</h3>
+                                <p>Cookie-Hinweis, Analyse erst nach Zustimmung der Besucher und Unterstützung bei der Datenschutzerklärung.</p>
+                            </li>
+                            <li>
+                                <h3>Mehrere Sprachen</h3>
+                                <p>Wenn Sie international tätig sind, kann die Website mehrsprachig sein, jede Sprache unter einer eigenen Adresse, die Google separat anzeigt.</p>
+                            </li>
+                            <li>
+                                <h3>Onlineshop</h3>
+                                <p>Produktkatalog, Warenkorb, Online-Kartenzahlung und Anbindung an den Versand, zum Beispiel an Paketstationen.</p>
+                            </li>
+                        </ul>
+
+                        <h2>Preise und Zeitrahmen</h2>
+                        <table class="price-table">
+                            <thead>
+                            <tr>
+                                <th>Leistung</th>
+                                <th>Preis</th>
+                                <th>Richtwert Dauer</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>Unternehmenswebsite</td>
+                                <td class="price-table__price">ab 1.000&nbsp;€</td>
+                                <td>2&ndash;4 Wochen</td>
+                            </tr>
+                            <tr>
+                                <td>Onlineshop</td>
+                                <td class="price-table__price">ab 2.000&nbsp;€</td>
+                                <td>4&ndash;8 Wochen</td>
+                            </tr>
+                            <tr>
+                                <td>Website-Wartung <span class="price-table__note">Updates, Backups und Support</span></td>
+                                <td class="price-table__price">ab 50&nbsp;€ / Monat</td>
+                                <td>monatlich</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <p class="page-note">
+                            Die Preise sind Endpreise, da wir nicht umsatzsteuerpflichtig sind. Genauen Preis und Zeitplan erhalten Sie nach einem kurzen Gespräch in einem schriftlichen Angebot.
+                            Alle Leistungen und Preise finden Sie in unserer <a href="pricing.html">Preisliste</a>.
+                        </p>
+
+                        <h2>Wovon hängt der Preis ab?</h2>
+                        <ul>
+                            <li>von der Anzahl der Seiten und der Menge an Inhalten,</li>
+                            <li>davon, ob wir das Design neu entwickeln oder auf Ihrem bestehenden Corporate Design aufbauen,</li>
+                            <li>von besonderen Funktionen wie Buchungen, mehreren Sprachen oder Anbindungen an andere Systeme,</li>
+                            <li>beim Onlineshop auch von der Anzahl der Produkte sowie den Zahlungs- und Versandarten.</li>
+                        </ul>
+                        <p>Mehr dazu im Artikel <a href="blog-website-cost.html">Was kostet eine Website im Jahr 2026?</a></p>
+
+                        <h2>So arbeiten wir</h2>
+                        <ol class="process-steps">
+                            <li>
+                                <span class="process-steps__num">01</span>
+                                <h3>Kennenlernen</h3>
+                                <p>In einem kostenlosen 30-minütigen Gespräch klären wir, was die Website leisten soll und wer Ihre Kunden sind.</p>
+                            </li>
+                            <li>
+                                <span class="process-steps__num">02</span>
+                                <h3>Angebot</h3>
+                                <p>Sie erhalten ein schriftliches Angebot mit Umfang, Preis und Zeitplan, ohne versteckte Kosten.</p>
+                            </li>
+                            <li>
+                                <span class="process-steps__num">03</span>
+                                <h3>Umsetzung</h3>
+                                <p>Zuerst legen wir Struktur und Design fest, dann bauen wir die Website und zeigen Ihnen regelmäßig den Fortschritt.</p>
+                            </li>
+                            <li>
+                                <span class="process-steps__num">04</span>
+                                <h3>Launch</h3>
+                                <p>Wir richten Domain und Hosting auf Ihren Namen ein, veröffentlichen die Website und verbinden sie mit Google.</p>
+                            </li>
+                        </ol>
+
+                        <h2>Projekte</h2>
+                        <ul class="project-links">
+                            <li><a href="petro-bulk-details.html"><span class="project-links__name">Petro&amp;Bulk Solutions</span><span class="project-links__type">Website für den Handel mit Mineralölprodukten und Biokraftstoffen</span></a></li>
+                            <li><a href="snow-festival-details.html"><span class="project-links__name">Snow Festival Sljeme</span><span class="project-links__type">Event-Website mit Programm und Tickets</span></a></li>
+                            <li><a href="reviv-plus-details.html"><span class="project-links__name">ReViv Plus</span><span class="project-links__type">Onlineshop mit Kartenzahlung und Lieferung an Paketstationen</span></a></li>
+                        </ul>
+
+                        <h2>Häufige Fragen</h2>
+                        <div class="faq">
+                            <details class="faq__item">
+                                <summary class="faq__question">Muss ich Texte und Fotos selbst vorbereiten?</summary>
+                                <div class="faq__answer"><p>Am besten liefern Sie die Inhalte über Ihr Unternehmen selbst, denn niemand kennt es besser. Wir helfen bei der Struktur der Website, beim Überarbeiten der Texte und bei der Auswahl der Fotos und gestalten auf Wunsch auch Logo und Corporate Design.</p></div>
+                            </details>
+                            <details class="faq__item">
+                                <summary class="faq__question">Wem gehören Website und Domain?</summary>
+                                <div class="faq__answer"><p>Ihnen. Domain und Hosting werden auf Ihren Namen registriert, und nach Zahlung des vereinbarten Preises gehen alle Rechte an Code und Design Ihres Projekts auf Sie über.</p></div>
+                            </details>
+                            <details class="faq__item">
+                                <summary class="faq__question">Was, wenn ich nach dem Launch einen Fehler finde?</summary>
+                                <div class="faq__answer"><p>Fehler, die Sie innerhalb von 3 Monaten nach der Abnahme melden, beheben wir kostenlos. Danach können Sie eine Wartung ab 50&nbsp;€ pro Monat mit 30 Tagen Kündigungsfrist vereinbaren.</p></div>
+                            </details>
+                            <details class="faq__item">
+                                <summary class="faq__question">Wie läuft die Zahlung ab?</summary>
+                                <div class="faq__answer"><p>Sofern im Angebot nicht anders vereinbart, zahlen Sie 50&nbsp;% im Voraus und den Rest bei Lieferung. Alle Bedingungen finden Sie in unseren <a href="terms.html">AGB</a>.</p></div>
+                            </details>
+                        </div>
+
+                        <h2>Weiterlesen</h2>
+                        <ul class="page-related">
+                            <li><a href="blog-website-or-web-app.html">Website, Onlineshop oder Web-App: Was brauchen Sie wirklich? &rarr;</a></li>
+                            <li><a href="mobile-apps.html">Entwicklung mobiler Apps &rarr;</a></li>
+                            <li><a href="custom-software.html">Individuelle Software &rarr;</a></li>
+                        </ul>
+                    </div>
+
+                    <section class="project-cta">
+                        <h2 class="project-cta__title"><span data-lang="hr">Imate projekt na umu?</span><span data-lang="en">Have a project in mind?</span><span data-lang="it">Hai un progetto in mente?</span><span data-lang="de">Haben Sie ein Projekt geplant?</span></h2>
+                        <p class="project-cta__text"><span data-lang="hr">Javite nam se &mdash; besplatno ćemo procijeniti opseg i cijenu vašeg projekta.</span><span data-lang="en">Get in touch &mdash; we will estimate the scope and price of your project free of charge.</span><span data-lang="it">Contattaci &mdash; stimeremo gratuitamente portata e prezzo del tuo progetto.</span><span data-lang="de">Melden Sie sich &mdash; wir schätzen Umfang und Preis Ihres Projekts kostenlos ein.</span></p>
+                        <div class="project-cta__actions">
+                            <a class="project-cta__btn project-cta__btn--primary" href="index.html#contact"><span data-lang="hr">Pošaljite upit</span><span data-lang="en">Send an enquiry</span><span data-lang="it">Invia una richiesta</span><span data-lang="de">Anfrage senden</span></a>
+                            <a class="project-cta__btn" href="index.html#booking"><span data-lang="hr">Rezervirajte konzultacije</span><span data-lang="en">Book a consultation</span><span data-lang="it">Prenota una consulenza</span><span data-lang="de">Beratung buchen</span></a>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+        </section> <!-- end s-page -->
+
+    </main> <!-- end s-content -->
+
+
+    <!-- ## footer
+    ================================================== -->
+    <footer class="s-footer">
+
+        <div class="row">
+            <div class="column ss-copyright">
+                <span>© Copyright RDD <script>document.write(/\d{4}/.exec(Date())[0] + ".")</script></span>
+                <span><a href="privacy.html" data-lang="hr">Izjava o privatnosti</a><a href="privacy.html" data-lang="en">Privacy Policy</a><a href="privacy.html" data-lang="it">Informativa sulla privacy</a><a href="privacy.html" data-lang="de">Datenschutzerklärung</a></span>
+                <span><a href="terms.html" data-lang="hr">Opći uvjeti poslovanja</a><a href="terms.html" data-lang="en">Terms and Conditions</a><a href="terms.html" data-lang="it">Condizioni generali</a><a href="terms.html" data-lang="de">AGB</a></span>
+                <span><a href="#0" data-consent-open data-lang="hr">Postavke kolačića</a><a href="#0" data-consent-open data-lang="en">Cookie settings</a><a href="#0" data-consent-open data-lang="it">Impostazioni cookie</a><a href="#0" data-consent-open data-lang="de">Cookie-Einstellungen</a></span>
+            </div>
+
+            <div class="ss-go-top">
+                <a class="smoothscroll" title="Na vrh / Back to Top" href="#top">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill-rule="evenodd" clip-rule="evenodd">
+                        <path d="M11 2.206l-6.235 7.528-.765-.645 7.521-9 7.479 9-.764.646-6.236-7.53v21.884h-1v-21.883z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="column">
+                <p class="ss-legal">R.D.D., obrt za računalno programiranje, vl. Milan Trbojević &middot; Mihovilići 2b, 51000 Rijeka &middot; OIB 09887105714 &middot; <span data-lang="hr">upisan u Obrtni registar, MBO 98224476</span><span data-lang="en">registered in the Croatian Register of Crafts, MBO 98224476</span><span data-lang="it">iscritto al Registro croato dell'artigianato, MBO 98224476</span><span data-lang="de">eingetragen im kroatischen Gewerberegister, MBO 98224476</span> &middot; <span data-lang="hr">nije u sustavu PDV-a</span><span data-lang="en">not registered for VAT</span><span data-lang="it">non soggetto a IVA</span><span data-lang="de">nicht umsatzsteuerpflichtig</span> &middot; <a href="mailto:info@rdd.software">info@rdd.software</a></p>
+            </div>
+        </div>
+
+    </footer> <!-- end s-footer -->
+
+</div> <!-- end -s-pagewrap -->
+
+
+<!-- Java Script
+================================================== -->
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
+<!-- Google Analytics - loaded only after the visitor accepts cookies -->
+<script src="js/consent.js"></script>
+
+</body>
+</html>

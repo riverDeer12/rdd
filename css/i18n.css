@@ -105,6 +105,25 @@ html.i18n-pending body {
     }
 }
 
+/* with the blog link, the menu needs tighter spacing just above the phone layout */
+@media screen and (min-width: 801px) and (max-width: 1000px) {
+    .main-nav a {
+        padding: 0 .8rem 0 1rem;
+        letter-spacing: .2em;
+    }
+
+    .main-nav li.lang-switch-item {
+        padding: 0 .4rem;
+    }
+
+    .main-nav .lang-switch__btn,
+    .main-nav .lang-switch__btn:hover,
+    .main-nav .lang-switch__btn:focus {
+        padding: .4rem .3rem;
+        letter-spacing: .2em;
+    }
+}
+
 @media screen and (max-width: 800px) {
     .main-nav li.lang-switch-item {
         display: none;

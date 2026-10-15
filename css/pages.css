@@ -1,0 +1,377 @@
+/* ===================================================================
+ * RDD Software - service pages and blog
+ * web-development.html, mobile-apps.html, custom-software.html,
+ * blog.html and blog-*.html. Loaded after css/home.css, whose
+ * .intro-cta, .process-steps and .faq blocks these pages reuse.
+ * ------------------------------------------------------------------- */
+
+.s-page {
+    padding-bottom: var(--vspace-3_5);
+}
+
+.page-body {
+    max-width: 960px;
+}
+
+.page-lead {
+    max-width: 820px;
+    font-size: var(--text-md);
+    line-height: 1.6;
+    color: var(--color-text-dark);
+}
+
+.page-body h2 {
+    margin-top: var(--vspace-2_5, calc(2.5 * var(--space)));
+    margin-bottom: var(--vspace-0_75);
+    font-family: var(--font-1);
+    font-size: var(--text-xl);
+    font-weight: 600;
+    line-height: 1.25;
+    color: var(--color-text-dark);
+}
+
+.page-body h3 {
+    color: var(--color-text-dark);
+}
+
+.page-body p a,
+.page-body li a {
+    color: var(--color-text-dark);
+    text-decoration: underline;
+}
+
+.page-body .project-links a,
+.page-body .page-related a,
+.page-body .blog-list__title a {
+    text-decoration: none;
+}
+
+.page-body .intro-cta {
+    margin-top: var(--vspace-1);
+}
+
+/* --------------------------------------------------------------------
+ * what you get (feature grid)
+ * -------------------------------------------------------------------- */
+.feature-grid {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.6rem;
+}
+
+.feature-grid li {
+    margin: 0;
+    padding: 2.4rem;
+    border: 1px solid var(--color-gray-8);
+    border-radius: 8px;
+}
+
+.feature-grid h3 {
+    margin: 0 0 var(--vspace-0_25);
+    font-family: var(--font-1);
+    font-size: var(--text-md);
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.feature-grid p {
+    margin: 0;
+    font-size: 1.6rem;
+    line-height: 1.6;
+}
+
+@media screen and (max-width: 700px) {
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* --------------------------------------------------------------------
+ * prices and timelines
+ * -------------------------------------------------------------------- */
+.price-table {
+    width: 100%;
+    margin-bottom: var(--vspace-0_5);
+}
+
+.price-table th {
+    font-size: 1.4rem;
+    font-weight: 400;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--color-text-light);
+}
+
+.price-table td {
+    vertical-align: top;
+}
+
+.price-table td:first-child {
+    color: var(--color-text-dark);
+}
+
+.price-table .price-table__price {
+    font-weight: 600;
+    white-space: nowrap;
+    color: var(--color-2-light);
+}
+
+.price-table__note {
+    display: block;
+    font-size: 1.4rem;
+    color: var(--color-text-light);
+}
+
+.page-note {
+    font-size: 1.5rem;
+    color: var(--color-text-light);
+}
+
+html[data-theme="light"] .price-table .price-table__price {
+    color: var(--color-2);
+}
+
+@media screen and (max-width: 600px) {
+    .price-table thead {
+        display: none;
+    }
+
+    .price-table tr {
+        display: block;
+        padding: var(--vspace-0_5) 0;
+        border-bottom: 1px solid var(--color-border);
+    }
+
+    .price-table td {
+        display: block;
+        padding: 0;
+        border: 0;
+    }
+}
+
+/* --------------------------------------------------------------------
+ * related projects
+ * -------------------------------------------------------------------- */
+.project-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.6rem;
+}
+
+.project-links li {
+    margin: 0;
+    display: flex;
+}
+
+.project-links a,
+.project-links a:visited {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 2rem 2.4rem;
+    border: 1px solid var(--color-gray-8);
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--color-text);
+    transition: border-color .2s ease, transform .2s ease;
+}
+
+.project-links a:hover,
+.project-links a:focus {
+    border-color: var(--color-1);
+    color: var(--color-text);
+    transform: translateY(-2px);
+}
+
+.project-links__name {
+    font-size: var(--text-md);
+    font-weight: 600;
+    color: var(--color-text-dark);
+}
+
+.project-links__type {
+    margin-top: .4rem;
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+
+@media screen and (max-width: 900px) {
+    .project-links {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* --------------------------------------------------------------------
+ * links to the other services and articles
+ * -------------------------------------------------------------------- */
+.page-related {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.page-related li {
+    margin: 0;
+    padding: var(--vspace-0_25) 0;
+    border-bottom: 1px solid var(--color-gray-8);
+}
+
+.page-related li:first-child {
+    border-top: 1px solid var(--color-gray-8);
+}
+
+.page-related a {
+    display: block;
+    color: var(--color-text-dark);
+    text-decoration: none;
+}
+
+.page-related a:hover,
+.page-related a:focus {
+    color: var(--color-1);
+}
+
+html[data-theme="dark"] .page-related a:hover,
+html[data-theme="dark"] .page-related a:focus {
+    color: var(--color-2-light);
+}
+
+/* --------------------------------------------------------------------
+ * blog: list of articles
+ * -------------------------------------------------------------------- */
+.blog-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    max-width: 960px;
+}
+
+.blog-list li {
+    margin: 0;
+    padding: var(--vspace-1) 0;
+    border-bottom: 1px solid var(--color-gray-8);
+}
+
+.blog-list li:first-child {
+    padding-top: 0;
+}
+
+.page-body .blog-list__title {
+    margin: var(--vspace-0_25) 0 var(--vspace-0_5);
+    font-family: var(--font-1);
+    font-size: var(--text-lg);
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.blog-list__title a {
+    color: var(--color-text-dark);
+}
+
+.blog-list__title a:hover,
+.blog-list__title a:focus {
+    color: var(--color-1);
+}
+
+html[data-theme="dark"] .blog-list__title a:hover,
+html[data-theme="dark"] .blog-list__title a:focus {
+    color: var(--color-2-light);
+}
+
+.blog-list__excerpt {
+    margin: 0 0 var(--vspace-0_5);
+}
+
+.blog-list__more {
+    font-size: 1.5rem;
+    color: var(--color-text-dark);
+    text-decoration: underline;
+}
+
+/* --------------------------------------------------------------------
+ * blog: article
+ * -------------------------------------------------------------------- */
+.article-title {
+    max-width: 960px;
+    margin: var(--vspace-0_5) 0 var(--vspace-0_75);
+    font-family: var(--font-2);
+    font-size: var(--text-xxl);
+    font-weight: 400;
+    line-height: 1.15;
+    color: var(--color-text-dark);
+}
+
+@media screen and (max-width: 600px) {
+    .article-title {
+        font-size: var(--text-xl);
+    }
+}
+
+.article-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .4rem 1.6rem;
+    margin: 0;
+    font-size: 1.4rem;
+    color: var(--color-text-light);
+}
+
+.article {
+    max-width: 780px;
+}
+
+.article .page-lead {
+    margin-bottom: var(--vspace-1);
+}
+
+.article h2 {
+    margin-top: var(--vspace-2);
+    font-size: var(--text-lg);
+}
+
+.article h3 {
+    margin-top: var(--vspace-1);
+    font-size: var(--text-md);
+}
+
+.article ul,
+.article ol {
+    margin-left: 2rem;
+}
+
+.article li {
+    margin-bottom: .6rem;
+}
+
+.article table {
+    width: 100%;
+}
+
+.article-tip {
+    margin: var(--vspace-1) 0;
+    padding: 1.6rem 2rem;
+    border-left: 3px solid var(--color-1);
+    background: rgba(255, 255, 255, .04);
+}
+
+.article-tip p {
+    margin: 0;
+}
+
+html[data-theme="light"] .article-tip {
+    background: rgba(0, 0, 0, .03);
+}
+
+.article-author {
+    margin-top: var(--vspace-2);
+    padding-top: var(--vspace-0_75);
+    border-top: 1px solid var(--color-gray-8);
+    font-size: 1.5rem;
+    color: var(--color-text-light);
+}

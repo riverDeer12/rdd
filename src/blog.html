@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html class="no-js" lang="hr"
+      data-title-hr="Blog - savjeti o web stranicama i aplikacijama - RDD Software"
+      data-title-en="Blog - advice on websites and apps - RDD Software"
+      data-title-it="Blog - consigli su siti web e app - RDD Software"
+      data-title-de="Blog - Tipps zu Websites und Apps - RDD Software"
+      data-description-hr="Praktični savjeti o izradi web stranica, web trgovina i aplikacija: cijene, odabir rješenja i priprema upita. Piše RDD Software iz Rijeke."
+      data-description-en="Practical advice on building websites, online shops and apps: prices, choosing the right solution and preparing a brief. By RDD Software from Rijeka."
+      data-description-it="Consigli pratici su siti web, negozi online e app: prezzi, scelta della soluzione giusta e preparazione della richiesta. Di RDD Software, Fiume."
+      data-description-de="Praktische Tipps zu Websites, Onlineshops und Apps: Preise, die richtige Lösung und die Vorbereitung einer Anfrage. Von RDD Software aus Rijeka.">
+<head>
+
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>Blog - savjeti o web stranicama i aplikacijama - RDD Software</title>
+
+    <!-- mobile specific metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Open Graph (for Facebook, LinkedIn, etc.) -->
+    <meta property="og:image" content="https://rdd.software/images/about-photo.jpg"/>
+    <meta property="og:type" content="website"/>
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/i18n.css">
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/consent.css">
+    <link rel="stylesheet" href="css/cta.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/pages.css">
+
+    <!-- structured data for search engines, one per language -->
+    <script type="application/ld+json" data-lang="hr">
+    {
+        "@context": "https://schema.org",
+        "@type": "Blog",
+        "name": "RDD Software blog",
+        "url": "https://rdd.software/blog.html",
+        "inLanguage": "hr",
+        "publisher": {
+            "@type": "Organization",
+            "name": "RDD Software",
+            "url": "https://rdd.software/"
+        }
+    }
+    </script>
+    <script type="application/ld+json" data-lang="en">
+    {
+        "@context": "https://schema.org",
+        "@type": "Blog",
+        "name": "RDD Software blog",
+        "url": "https://rdd.software/en/blog.html",
+        "inLanguage": "en",
+        "publisher": {
+            "@type": "Organization",
+            "name": "RDD Software",
+            "url": "https://rdd.software/"
+        }
+    }
+    </script>
+    <script type="application/ld+json" data-lang="it">
+    {
+        "@context": "https://schema.org",
+        "@type": "Blog",
+        "name": "RDD Software blog",
+        "url": "https://rdd.software/it/blog.html",
+        "inLanguage": "it",
+        "publisher": {
+            "@type": "Organization",
+            "name": "RDD Software",
+            "url": "https://rdd.software/"
+        }
+    }
+    </script>
+    <script type="application/ld+json" data-lang="de">
+    {
+        "@context": "https://schema.org",
+        "@type": "Blog",
+        "name": "RDD Software blog",
+        "url": "https://rdd.software/de/blog.html",
+        "inLanguage": "de",
+        "publisher": {
+            "@type": "Organization",
+            "name": "RDD Software",
+            "url": "https://rdd.software/"
+        }
+    }
+    </script>
+
+    <!-- language (hr / en / it / de) - runs before render so only one language is shown
+    ================================================== -->
+    <script src="js/i18n.js"></script>
+    <!-- light / dark theme - runs before render so the page does not flash -->
+    <script src="js/theme.js"></script>
+
+    <!-- favicons
+    ================================================== -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+</head>
+
+<body id="top">
+
+
+
+
+<!-- # page wrap
+================================================== -->
+<div class="s-pagewrap">
+
+    <div class="circles">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+
+    <!-- ## site header
+    ================================================== -->
+    <header class="s-header">
+
+        <div class="header-mobile">
+            <span class="mobile-home-link"><a href="index.html">RDD.</a></span>
+            <div class="lang-menu">
+                <button type="button" class="lang-menu__toggle" aria-haspopup="true" aria-expanded="false"
+                        aria-label="Jezik / Language / Lingua / Sprache"><span data-lang="hr">HR</span><span data-lang="en">EN</span><span data-lang="it">IT</span><span data-lang="de">DE</span><svg class="lang-menu__chevron" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="lang-switch" role="group" aria-label="Jezik / Language / Lingua / Sprache">
+                    <button type="button" class="lang-switch__btn" data-set-lang="hr"><span class="lang-switch__code">HR</span><span class="lang-switch__name">Hrvatski</span></button>
+                    <span class="lang-switch__sep">/</span>
+                    <button type="button" class="lang-switch__btn" data-set-lang="en"><span class="lang-switch__code">EN</span><span class="lang-switch__name">English</span></button>
+                    <span class="lang-switch__sep">/</span>
+                    <button type="button" class="lang-switch__btn" data-set-lang="it"><span class="lang-switch__code">IT</span><span class="lang-switch__name">Italiano</span></button>
+                    <span class="lang-switch__sep">/</span>
+                    <button type="button" class="lang-switch__btn" data-set-lang="de"><span class="lang-switch__code">DE</span><span class="lang-switch__name">Deutsch</span></button>
+                </div>
+            </div>
+            <button type="button" class="theme-toggle" data-toggle-theme aria-pressed="false"
+                    aria-label="Tamna / svijetla tema - Dark / light theme" title="Tamna / svijetla tema - Dark / light theme">
+                <svg class="theme-toggle__sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/></svg>
+                <svg class="theme-toggle__moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M20.2 14.6A8.5 8.5 0 0 1 9.4 3.8a8.5 8.5 0 1 0 10.8 10.8z"/></svg>
+            </button>
+            <a class="mobile-menu-toggle" href="#0"><span>Menu</span></a>
+        </div>
+
+        <div class="row wide main-nav-wrap">
+            <nav class="column lg-12 main-nav">
+                <ul>
+                    <li><a href="index.html" class="home-link">RDD.</a></li>
+                    <li><a href="index.html#intro"><span data-lang="hr">Početna</span><span data-lang="en">Intro</span><span data-lang="it">Intro</span><span data-lang="de">Start</span></a></li>
+                    <li><a href="index.html#about"><span data-lang="hr">O nama</span><span data-lang="en">About</span><span data-lang="it">Chi siamo</span><span data-lang="de">Über uns</span></a></li>
+                    <li><a href="index.html#works"><span data-lang="hr">Projekti</span><span data-lang="en">Works</span><span data-lang="it">Progetti</span><span data-lang="de">Projekte</span></a></li>
+                    <li><a href="pricing.html"><span data-lang="hr">Cjenik</span><span data-lang="en">Pricing</span><span data-lang="it">Prezzi</span><span data-lang="de">Preise</span></a></li>
+                    <li class="current"><a href="blog.html">Blog</a></li>
+                    <li><a href="index.html#contact"><span data-lang="hr">Kontakt</span><span data-lang="en">Say Hello</span><span data-lang="it">Contatti</span><span data-lang="de">Kontakt</span></a></li>
+                    <li class="lang-switch-item">
+                        <div class="lang-switch" role="group" aria-label="Jezik / Language / Lingua / Sprache">
+                            <button type="button" class="lang-switch__btn" data-set-lang="hr"><span class="lang-switch__code">HR</span><span class="lang-switch__name">Hrvatski</span></button>
+                            <span class="lang-switch__sep">/</span>
+                            <button type="button" class="lang-switch__btn" data-set-lang="en"><span class="lang-switch__code">EN</span><span class="lang-switch__name">English</span></button>
+                            <span class="lang-switch__sep">/</span>
+                            <button type="button" class="lang-switch__btn" data-set-lang="it"><span class="lang-switch__code">IT</span><span class="lang-switch__name">Italiano</span></button>
+                            <span class="lang-switch__sep">/</span>
+                            <button type="button" class="lang-switch__btn" data-set-lang="de"><span class="lang-switch__code">DE</span><span class="lang-switch__name">Deutsch</span></button>
+                        </div>
+                    </li>
+                    <li class="theme-toggle-item">
+                        <button type="button" class="theme-toggle" data-toggle-theme aria-pressed="false"
+                                aria-label="Tamna / svijetla tema - Dark / light theme" title="Tamna / svijetla tema - Dark / light theme">
+                            <svg class="theme-toggle__sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/></svg>
+                            <svg class="theme-toggle__moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M20.2 14.6A8.5 8.5 0 0 1 9.4 3.8a8.5 8.5 0 1 0 10.8 10.8z"/></svg>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+    </header> <!-- end s-header -->
+
+
+    <!-- ## main content
+    ==================================================- -->
+    <main class="s-content">
+
+        <!-- ### intro
+        ================================================== -->
+        <section class="s-intro">
+
+            <div class="row intro-content" style="min-height: 0;">
+
+                <div class="column">
+                    <div class="text-pretitle with-line">
+                        Blog
+                    </div>
+
+                    <h1 class="text-huge-title" data-lang="hr">
+                        Savjeti i <br>
+                        iskustva. <br>
+                    </h1>
+                    <h1 class="text-huge-title" data-lang="en">
+                        Notes and <br>
+                        advice. <br>
+                    </h1>
+                    <h1 class="text-huge-title" data-lang="it">
+                        Consigli ed <br>
+                        esperienze. <br>
+                    </h1>
+                    <h1 class="text-huge-title" data-lang="de">
+                        Tipps und <br>
+                        Erfahrungen. <br>
+                    </h1>
+                </div>
+
+            </div>
+
+        </section> <!-- end s-intro -->
+
+
+        <!-- ### articles
+        ================================================== -->
+        <section class="s-page target-section">
+
+            <div class="row">
+                <div class="column lg-12">
+
+                    <div class="page-body" data-lang="hr">
+                        <p class="page-lead">Što smo naučili izrađujući web stranice, web trgovine i aplikacije, napisano tako da vam pomogne isplanirati vlastiti projekt.</p>
+
+                        <ul class="blog-list">
+                            <li>
+                                <p class="article-meta"><time datetime="2026-10-15">15. listopada 2026.</time><span>Milan Trbojević</span></p>
+                                <h2 class="blog-list__title"><a href="blog-website-cost.html">Koliko košta izrada web stranice u 2026.?</a></h2>
+                                <p class="blog-list__excerpt">O čemu ovisi cijena web stranice i web trgovine, koji troškovi dolaze nakon objave i na što pripaziti kad usporedite ponude.</p>
+                                <a class="blog-list__more" href="blog-website-cost.html">Pročitajte članak &rarr;</a>
+                            </li>
+                            <li>
+                                <p class="article-meta"><time datetime="2026-10-15">15. listopada 2026.</time><span>Milan Trbojević</span></p>
+                                <h2 class="blog-list__title"><a href="blog-website-or-web-app.html">Web stranica, web trgovina ili web aplikacija: što vam zapravo treba?</a></h2>
+                                <p class="blog-list__excerpt">Razlike između tri najčešća rješenja na primjerima stvarnih projekata, s pitanjima koja vam pomažu odlučiti.</p>
+                                <a class="blog-list__more" href="blog-website-or-web-app.html">Pročitajte članak &rarr;</a>
+                            </li>
+                            <li>
+                                <p class="article-meta"><time datetime="2026-10-15">15. listopada 2026.</time><span>Milan Trbojević</span></p>
+                                <h2 class="blog-list__title"><a href="blog-project-brief.html">Kako pripremiti upit za izradu softvera i dobiti točnu ponudu</a></h2>
+                                <p class="blog-list__excerpt">Popis onoga što treba znati prije slanja upita, s predloškom koji možete kopirati i najčešćim pogreškama.</p>
+                                <a class="blog-list__more" href="blog-project-brief.html">Pročitajte članak &rarr;</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="page-body" data-lang="en">
+                        <p class="page-lead">What we have learned building websites, online shops and apps, written to help you plan your own project.</p>
+
+                        <ul class="blog-list">
+                            <li>
+                                <p class="article-meta"><time datetime="2026-10-15">15 October 2026</time><span>Milan Trbojević</span></p>
+                                <h2 class="blog-list__title"><a href="blog-website-cost.html">How much does a website cost in 2026?</a></h2>
+                                <p class="blog-list__excerpt">What drives the price of a website or online shop, which costs come after launch and what to look for when you compare offers.</p>
+                                <a class="blog-list__more" href="blog-website-cost.html">Read the article &rarr;</a>
+                            </li>
+                            <li>
+                                <p class="article-meta"><time datetime="2026-10-15">15 October 2026</time><span>Milan Trbojević</span></p>
+                                <h2 class="blog-list__title"><a href="blog-website-or-web-app.html">Website, online shop or web app: what do you actually need?</a></h2>
+                                <p class="blog-list__excerpt">The differences between the three most common solutions, explained with real projects and questions that help you decide.</p>
+                                <a class="blog-list__more" href="blog-website-or-web-app.html">Read the article &rarr;</a>
+                            </li>
+                            <li>
+                                <p class="article-meta"><time datetime="2026-10-15">15 October 2026</time><span>Milan Trbojević</span></p>
+                                <h2 class="blog-list__title"><a href="blog-project-brief.html">How to prepare a software project brief and get an accurate quote</a></h2>
+                                <p class="blog-list__excerpt">A checklist of what to know before you send an enquiry, with a template you can copy and the most common mistakes.</p>
+                                <a class="blog-list__more" href="blog-project-brief.html">Read the article &rarr;</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="page-body" data-lang="it">
+                        <p class="page-lead">Quello che abbiamo imparato realizzando siti web, negozi online e app, scritto per aiutarti a pianificare il tuo progetto.</p>
+
+                        <ul class="blog-list">
+                            <li>
+                                <p class="article-meta"><time datetime="2026-10-15">15 ottobre 2026</time><span>Milan Trbojević</span></p>
+                                <h2 class="blog-list__title"><a href="blog-website-cost.html">Quanto costa un sito web nel 2026?</a></h2>
+                                <p class="blog-list__excerpt">Da cosa dipende il prezzo di un sito o di un negozio online, quali costi arrivano dopo la pubblicazione e cosa controllare quando confronti le offerte.</p>
+                                <a class="blog-list__more" href="blog-website-cost.html">Leggi l'articolo &rarr;</a>
+                            </li>
+                            <li>
+                                <p class="article-meta"><time datetime="2026-10-15">15 ottobre 2026</time><span>Milan Trbojević</span></p>
+                                <h2 class="blog-list__title"><a href="blog-website-or-web-app.html">Sito web, negozio online o applicazione web: di cosa hai davvero bisogno?</a></h2>
+                                <p class="blog-list__excerpt">Le differenze tra le tre soluzioni più comuni, spiegate con progetti reali e domande che ti aiutano a decidere.</p>
+                                <a class="blog-list__more" href="blog-website-or-web-app.html">Leggi l'articolo &rarr;</a>
+                            </li>
+                            <li>
+                                <p class="article-meta"><time datetime="2026-10-15">15 ottobre 2026</time><span>Milan Trbojević</span></p>
+                                <h2 class="blog-list__title"><a href="blog-project-brief.html">Come preparare una richiesta per un progetto software e ottenere un preventivo preciso</a></h2>
+                                <p class="blog-list__excerpt">Cosa sapere prima di inviare una richiesta, con un modello da copiare e gli errori più comuni.</p>
+                                <a class="blog-list__more" href="blog-project-brief.html">Leggi l'articolo &rarr;</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="page-body" data-lang="de">
+                        <p class="page-lead">Was wir bei der Entwicklung von Websites, Onlineshops und Apps gelernt haben &ndash; damit Sie Ihr eigenes Projekt besser planen können.</p>
+
+                        <ul class="blog-list">
+                            <li>
+                                <p class="article-meta"><time datetime="2026-10-15">15. Oktober 2026</time><span>Milan Trbojević</span></p>
+                                <h2 class="blog-list__title"><a href="blog-website-cost.html">Was kostet eine Website im Jahr 2026?</a></h2>
+                                <p class="blog-list__excerpt">Wovon der Preis einer Website oder eines Onlineshops abhängt, welche Kosten nach dem Launch anfallen und worauf Sie beim Vergleich von Angeboten achten sollten.</p>
+                                <a class="blog-list__more" href="blog-website-cost.html">Artikel lesen &rarr;</a>
+                            </li>
+                            <li>
+                                <p class="article-meta"><time datetime="2026-10-15">15. Oktober 2026</time><span>Milan Trbojević</span></p>
+                                <h2 class="blog-list__title"><a href="blog-website-or-web-app.html">Website, Onlineshop oder Web-App: Was brauchen Sie wirklich?</a></h2>
+                                <p class="blog-list__excerpt">Die Unterschiede zwischen den drei häufigsten Lösungen, erklärt an echten Projekten, mit Fragen, die Ihnen bei der Entscheidung helfen.</p>
+                                <a class="blog-list__more" href="blog-website-or-web-app.html">Artikel lesen &rarr;</a>
+                            </li>
+                            <li>
+                                <p class="article-meta"><time datetime="2026-10-15">15. Oktober 2026</time><span>Milan Trbojević</span></p>
+                                <h2 class="blog-list__title"><a href="blog-project-brief.html">So bereiten Sie eine Softwareanfrage vor und erhalten ein genaues Angebot</a></h2>
+                                <p class="blog-list__excerpt">Eine Checkliste für die Zeit vor der Anfrage, mit einer Vorlage zum Kopieren und den häufigsten Fehlern.</p>
+                                <a class="blog-list__more" href="blog-project-brief.html">Artikel lesen &rarr;</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <section class="project-cta">
+                        <h2 class="project-cta__title"><span data-lang="hr">Imate projekt na umu?</span><span data-lang="en">Have a project in mind?</span><span data-lang="it">Hai un progetto in mente?</span><span data-lang="de">Haben Sie ein Projekt geplant?</span></h2>
+                        <p class="project-cta__text"><span data-lang="hr">Javite nam se &mdash; besplatno ćemo procijeniti opseg i cijenu vašeg projekta.</span><span data-lang="en">Get in touch &mdash; we will estimate the scope and price of your project free of charge.</span><span data-lang="it">Contattaci &mdash; stimeremo gratuitamente portata e prezzo del tuo progetto.</span><span data-lang="de">Melden Sie sich &mdash; wir schätzen Umfang und Preis Ihres Projekts kostenlos ein.</span></p>
+                        <div class="project-cta__actions">
+                            <a class="project-cta__btn project-cta__btn--primary" href="index.html#contact"><span data-lang="hr">Pošaljite upit</span><span data-lang="en">Send an enquiry</span><span data-lang="it">Invia una richiesta</span><span data-lang="de">Anfrage senden</span></a>
+                            <a class="project-cta__btn" href="index.html#booking"><span data-lang="hr">Rezervirajte konzultacije</span><span data-lang="en">Book a consultation</span><span data-lang="it">Prenota una consulenza</span><span data-lang="de">Beratung buchen</span></a>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+        </section> <!-- end s-page -->
+
+    </main> <!-- end s-content -->
+
+
+    <!-- ## footer
+    ================================================== -->
+    <footer class="s-footer">
+
+        <div class="row">
+            <div class="column ss-copyright">
+                <span>© Copyright RDD <script>document.write(/\d{4}/.exec(Date())[0] + ".")</script></span>
+                <span><a href="privacy.html" data-lang="hr">Izjava o privatnosti</a><a href="privacy.html" data-lang="en">Privacy Policy</a><a href="privacy.html" data-lang="it">Informativa sulla privacy</a><a href="privacy.html" data-lang="de">Datenschutzerklärung</a></span>
+                <span><a href="terms.html" data-lang="hr">Opći uvjeti poslovanja</a><a href="terms.html" data-lang="en">Terms and Conditions</a><a href="terms.html" data-lang="it">Condizioni generali</a><a href="terms.html" data-lang="de">AGB</a></span>
+                <span><a href="#0" data-consent-open data-lang="hr">Postavke kolačića</a><a href="#0" data-consent-open data-lang="en">Cookie settings</a><a href="#0" data-consent-open data-lang="it">Impostazioni cookie</a><a href="#0" data-consent-open data-lang="de">Cookie-Einstellungen</a></span>
+            </div>
+
+            <div class="ss-go-top">
+                <a class="smoothscroll" title="Na vrh / Back to Top" href="#top">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill-rule="evenodd" clip-rule="evenodd">
+                        <path d="M11 2.206l-6.235 7.528-.765-.645 7.521-9 7.479 9-.764.646-6.236-7.53v21.884h-1v-21.883z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="column">
+                <p class="ss-legal">R.D.D., obrt za računalno programiranje, vl. Milan Trbojević &middot; Mihovilići 2b, 51000 Rijeka &middot; OIB 09887105714 &middot; <span data-lang="hr">upisan u Obrtni registar, MBO 98224476</span><span data-lang="en">registered in the Croatian Register of Crafts, MBO 98224476</span><span data-lang="it">iscritto al Registro croato dell'artigianato, MBO 98224476</span><span data-lang="de">eingetragen im kroatischen Gewerberegister, MBO 98224476</span> &middot; <span data-lang="hr">nije u sustavu PDV-a</span><span data-lang="en">not registered for VAT</span><span data-lang="it">non soggetto a IVA</span><span data-lang="de">nicht umsatzsteuerpflichtig</span> &middot; <a href="mailto:info@rdd.software">info@rdd.software</a></p>
+            </div>
+        </div>
+
+    </footer> <!-- end s-footer -->
+
+</div> <!-- end -s-pagewrap -->
+
+
+<!-- Java Script
+================================================== -->
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
+<!-- Google Analytics - loaded only after the visitor accepts cookies -->
+<script src="js/consent.js"></script>
+
+</body>
+</html>

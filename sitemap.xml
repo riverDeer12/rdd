@@ -1,53 +1,564 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
     <url>
         <loc>https://rdd.software/</loc>
-        <lastmod>2026-10-13</lastmod>
+        <xhtml:link rel="alternate" hreflang="hr" href="https://rdd.software/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rdd.software/en/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/"/>
+        <lastmod>2026-10-15</lastmod>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://rdd.software/pricing.html</loc>
-        <lastmod>2026-10-13</lastmod>
+        <loc>https://rdd.software/en/</loc>
+        <xhtml:link rel="alternate" hreflang="hr" href="https://rdd.software/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rdd.software/en/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/"/>
+        <lastmod>2026-10-15</lastmod>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://rdd.software/it/</loc>
+        <xhtml:link rel="alternate" hreflang="hr" href="https://rdd.software/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rdd.software/en/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/"/>
+        <lastmod>2026-10-15</lastmod>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://rdd.software/de/</loc>
+        <xhtml:link rel="alternate" hreflang="hr" href="https://rdd.software/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rdd.software/en/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/"/>
+        <lastmod>2026-10-15</lastmod>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://rdd.software/apex-performance-details.html</loc>
+        <xhtml:link rel="alternate" hreflang="hr" href="https://rdd.software/apex-performance-details.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rdd.software/en/apex-performance-details.html"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/apex-performance-details.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/apex-performance-details.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/apex-performance-details.html"/>
+        <lastmod>2026-10-15</lastmod>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://rdd.software/en/apex-performance-details.html</loc>
+        <xhtml:link rel="alternate" hreflang="hr" href="https://rdd.software/apex-performance-details.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rdd.software/en/apex-performance-details.html"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/apex-performance-details.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/apex-performance-details.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/apex-performance-details.html"/>
+        <lastmod>2026-10-15</lastmod>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://rdd.software/it/apex-performance-details.html</loc>
+        <xhtml:link rel="alternate" hreflang="hr" href="https://rdd.software/apex-performance-details.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rdd.software/en/apex-performance-details.html"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/apex-performance-details.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/apex-performance-details.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/apex-performance-details.html"/>
+        <lastmod>2026-10-15</lastmod>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://rdd.software/de/apex-performance-details.html</loc>
+        <xhtml:link rel="alternate" hreflang="hr" href="https://rdd.software/apex-performance-details.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rdd.software/en/apex-performance-details.html"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/apex-performance-details.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/apex-performance-details.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/apex-performance-details.html"/>
+        <lastmod>2026-10-15</lastmod>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://rdd.software/blog.html</loc>
+        <xhtml:link rel="alternate" hreflang="hr" href="https://rdd.software/blog.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rdd.software/en/blog.html"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/blog.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/blog.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/blog.html"/>
+        <lastmod>2026-10-15</lastmod>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://rdd.software/en/blog.html</loc>
+        <xhtml:link rel="alternate" hreflang="hr" href="https://rdd.software/blog.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rdd.software/en/blog.html"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/blog.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/blog.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/blog.html"/>
+        <lastmod>2026-10-15</lastmod>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://rdd.software/it/blog.html</loc>
+        <xhtml:link rel="alternate" hreflang="hr" href="https://rdd.software/blog.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rdd.software/en/blog.html"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/blog.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/blog.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/blog.html"/>
+        <lastmod>2026-10-15</lastmod>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://rdd.software/de/blog.html</loc>
+        <xhtml:link rel="alternate" hreflang="hr" href="https://rdd.software/blog.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rdd.software/en/blog.html"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/blog.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/blog.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/blog.html"/>
+        <lastmod>2026-10-15</lastmod>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://rdd.software/custom-software.html</loc>
+        <xhtml:link rel="alternate" hreflang="hr" href="https://rdd.software/custom-software.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rdd.software/en/custom-software.html"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/custom-software.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/custom-software.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/custom-software.html"/>
+        <lastmod>2026-10-15</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://rdd.software/rimap-details.html</loc>
-        <lastmod>2026-10-13</lastmod>
-        <priority>0.6</priority>
+        <loc>https://rdd.software/en/custom-software.html</loc>
+        <xhtml:link rel="alternate" hreflang="hr" href="https://rdd.software/custom-software.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rdd.software/en/custom-software.html"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/custom-software.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/custom-software.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/custom-software.html"/>
+        <lastmod>2026-10-15</lastmod>
+        <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://rdd.software/yufe-details.html</loc>
-        <lastmod>2026-10-13</lastmod>
-        <priority>0.6</priority>
+        <loc>https://rdd.software/it/custom-software.html</loc>
+        <xhtml:link rel="alternate" hreflang="hr" href="https://rdd.software/custom-software.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rdd.software/en/custom-software.html"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/custom-software.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/custom-software.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/custom-software.html"/>
+        <lastmod>2026-10-15</lastmod>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://rdd.software/de/custom-software.html</loc>
+        <xhtml:link rel="alternate" hreflang="hr" href="https://rdd.software/custom-software.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rdd.software/en/custom-software.html"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/custom-software.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/custom-software.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/custom-software.html"/>
+        <lastmod>2026-10-15</lastmod>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://rdd.software/mobile-apps.html</loc>
+        <xhtml:link rel="alternate" hreflang="hr" href="https://rdd.software/mobile-apps.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rdd.software/en/mobile-apps.html"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/mobile-apps.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/mobile-apps.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/mobile-apps.html"/>
+        <lastmod>2026-10-15</lastmod>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://rdd.software/en/mobile-apps.html</loc>
+        <xhtml:link rel="alternate" hreflang="hr" href="https://rdd.software/mobile-apps.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rdd.software/en/mobile-apps.html"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/mobile-apps.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/mobile-apps.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/mobile-apps.html"/>
+        <lastmod>2026-10-15</lastmod>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://rdd.software/it/mobile-apps.html</loc>
+        <xhtml:link rel="alternate" hreflang="hr" href="https://rdd.software/mobile-apps.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rdd.software/en/mobile-apps.html"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/mobile-apps.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/mobile-apps.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/mobile-apps.html"/>
+        <lastmod>2026-10-15</lastmod>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://rdd.software/de/mobile-apps.html</loc>
+        <xhtml:link rel="alternate" hreflang="hr" href="https://rdd.software/mobile-apps.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rdd.software/en/mobile-apps.html"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/mobile-apps.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/mobile-apps.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/mobile-apps.html"/>
+        <lastmod>2026-10-15</lastmod>
+        <priority>0.8</priority>
     </url>
     <url>
         <loc>https://rdd.software/petro-bulk-details.html</loc>
-        <lastmod>2026-10-13</lastmod>
+        <xhtml:link rel="alternate" hreflang="hr" href="https://rdd.software/petro-bulk-details.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rdd.software/en/petro-bulk-details.html"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/petro-bulk-details.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/petro-bulk-details.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/petro-bulk-details.html"/>
+        <lastmod>2026-10-15</lastmod>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://rdd.software/en/petro-bulk-details.html</loc>
+        <xhtml:link rel="alternate" hreflang="hr" href="https://rdd.software/petro-bulk-details.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rdd.software/en/petro-bulk-details.html"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/petro-bulk-details.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/petro-bulk-details.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/petro-bulk-details.html"/>
+        <lastmod>2026-10-15</lastmod>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://rdd.software/it/petro-bulk-details.html</loc>
+        <xhtml:link rel="alternate" hreflang="hr" href="https://rdd.software/petro-bulk-details.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rdd.software/en/petro-bulk-details.html"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/petro-bulk-details.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/petro-bulk-details.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/petro-bulk-details.html"/>
+        <lastmod>2026-10-15</lastmod>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://rdd.software/de/petro-bulk-details.html</loc>
+        <xhtml:link rel="alternate" hreflang="hr" href="https://rdd.software/petro-bulk-details.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rdd.software/en/petro-bulk-details.html"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/petro-bulk-details.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/petro-bulk-details.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/petro-bulk-details.html"/>
+        <lastmod>2026-10-15</lastmod>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://rdd.software/pricing.html</loc>
+        <xhtml:link rel="alternate" hreflang="hr" href="https://rdd.software/pricing.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rdd.software/en/pricing.html"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/pricing.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/pricing.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/pricing.html"/>
+        <lastmod>2026-10-15</lastmod>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://rdd.software/en/pricing.html</loc>
+        <xhtml:link rel="alternate" hreflang="hr" href="https://rdd.software/pricing.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rdd.software/en/pricing.html"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/pricing.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/pricing.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/pricing.html"/>
+        <lastmod>2026-10-15</lastmod>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://rdd.software/it/pricing.html</loc>
+        <xhtml:link rel="alternate" hreflang="hr" href="https://rdd.software/pricing.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rdd.software/en/pricing.html"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/pricing.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/pricing.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/pricing.html"/>
+        <lastmod>2026-10-15</lastmod>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://rdd.software/de/pricing.html</loc>
+        <xhtml:link rel="alternate" hreflang="hr" href="https://rdd.software/pricing.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rdd.software/en/pricing.html"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/pricing.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/pricing.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/pricing.html"/>
+        <lastmod>2026-10-15</lastmod>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://rdd.software/privacy.html</loc>
+        <xhtml:link rel="alternate" hreflang="hr" href="https://rdd.software/privacy.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rdd.software/en/privacy.html"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/privacy.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/privacy.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/privacy.html"/>
+        <lastmod>2026-10-15</lastmod>
+        <priority>0.3</priority>
+    </url>
+    <url>
+        <loc>https://rdd.software/en/privacy.html</loc>
+        <xhtml:link rel="alternate" hreflang="hr" href="https://rdd.software/privacy.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rdd.software/en/privacy.html"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/privacy.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/privacy.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/privacy.html"/>
+        <lastmod>2026-10-15</lastmod>
+        <priority>0.3</priority>
+    </url>
+    <url>
+        <loc>https://rdd.software/it/privacy.html</loc>
+        <xhtml:link rel="alternate" hreflang="hr" href="https://rdd.software/privacy.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rdd.software/en/privacy.html"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/privacy.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/privacy.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/privacy.html"/>
+        <lastmod>2026-10-15</lastmod>
+        <priority>0.3</priority>
+    </url>
+    <url>
+        <loc>https://rdd.software/de/privacy.html</loc>
+        <xhtml:link rel="alternate" hreflang="hr" href="https://rdd.software/privacy.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rdd.software/en/privacy.html"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/privacy.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/privacy.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/privacy.html"/>
+        <lastmod>2026-10-15</lastmod>
+        <priority>0.3</priority>
+    </url>
+    <url>
+        <loc>https://rdd.software/reviv-plus-details.html</loc>
+        <xhtml:link rel="alternate" hreflang="hr" href="https://rdd.software/reviv-plus-details.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rdd.software/en/reviv-plus-details.html"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/reviv-plus-details.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/reviv-plus-details.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/reviv-plus-details.html"/>
+        <lastmod>2026-10-15</lastmod>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://rdd.software/en/reviv-plus-details.html</loc>
+        <xhtml:link rel="alternate" hreflang="hr" href="https://rdd.software/reviv-plus-details.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rdd.software/en/reviv-plus-details.html"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/reviv-plus-details.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/reviv-plus-details.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/reviv-plus-details.html"/>
+        <lastmod>2026-10-15</lastmod>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://rdd.software/it/reviv-plus-details.html</loc>
+        <xhtml:link rel="alternate" hreflang="hr" href="https://rdd.software/reviv-plus-details.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rdd.software/en/reviv-plus-details.html"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/reviv-plus-details.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/reviv-plus-details.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/reviv-plus-details.html"/>
+        <lastmod>2026-10-15</lastmod>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://rdd.software/de/reviv-plus-details.html</loc>
+        <xhtml:link rel="alternate" hreflang="hr" href="https://rdd.software/reviv-plus-details.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rdd.software/en/reviv-plus-details.html"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/reviv-plus-details.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/reviv-plus-details.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/reviv-plus-details.html"/>
+        <lastmod>2026-10-15</lastmod>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://rdd.software/rimap-details.html</loc>
+        <xhtml:link rel="alternate" hreflang="hr" href="https://rdd.software/rimap-details.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rdd.software/en/rimap-details.html"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/rimap-details.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/rimap-details.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/rimap-details.html"/>
+        <lastmod>2026-10-15</lastmod>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://rdd.software/en/rimap-details.html</loc>
+        <xhtml:link rel="alternate" hreflang="hr" href="https://rdd.software/rimap-details.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rdd.software/en/rimap-details.html"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/rimap-details.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/rimap-details.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/rimap-details.html"/>
+        <lastmod>2026-10-15</lastmod>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://rdd.software/it/rimap-details.html</loc>
+        <xhtml:link rel="alternate" hreflang="hr" href="https://rdd.software/rimap-details.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rdd.software/en/rimap-details.html"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/rimap-details.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/rimap-details.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/rimap-details.html"/>
+        <lastmod>2026-10-15</lastmod>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://rdd.software/de/rimap-details.html</loc>
+        <xhtml:link rel="alternate" hreflang="hr" href="https://rdd.software/rimap-details.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rdd.software/en/rimap-details.html"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/rimap-details.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/rimap-details.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/rimap-details.html"/>
+        <lastmod>2026-10-15</lastmod>
         <priority>0.6</priority>
     </url>
     <url>
         <loc>https://rdd.software/snow-festival-details.html</loc>
-        <lastmod>2026-10-13</lastmod>
+        <xhtml:link rel="alternate" hreflang="hr" href="https://rdd.software/snow-festival-details.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rdd.software/en/snow-festival-details.html"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/snow-festival-details.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/snow-festival-details.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/snow-festival-details.html"/>
+        <lastmod>2026-10-15</lastmod>
         <priority>0.6</priority>
     </url>
     <url>
-        <loc>https://rdd.software/reviv-plus-details.html</loc>
-        <lastmod>2026-10-13</lastmod>
+        <loc>https://rdd.software/en/snow-festival-details.html</loc>
+        <xhtml:link rel="alternate" hreflang="hr" href="https://rdd.software/snow-festival-details.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rdd.software/en/snow-festival-details.html"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/snow-festival-details.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/snow-festival-details.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/snow-festival-details.html"/>
+        <lastmod>2026-10-15</lastmod>
         <priority>0.6</priority>
     </url>
     <url>
-        <loc>https://rdd.software/apex-performance-details.html</loc>
-        <lastmod>2026-10-13</lastmod>
+        <loc>https://rdd.software/it/snow-festival-details.html</loc>
+        <xhtml:link rel="alternate" hreflang="hr" href="https://rdd.software/snow-festival-details.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rdd.software/en/snow-festival-details.html"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/snow-festival-details.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/snow-festival-details.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/snow-festival-details.html"/>
+        <lastmod>2026-10-15</lastmod>
         <priority>0.6</priority>
     </url>
     <url>
-        <loc>https://rdd.software/privacy.html</loc>
-        <lastmod>2026-10-13</lastmod>
-        <priority>0.3</priority>
+        <loc>https://rdd.software/de/snow-festival-details.html</loc>
+        <xhtml:link rel="alternate" hreflang="hr" href="https://rdd.software/snow-festival-details.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rdd.software/en/snow-festival-details.html"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/snow-festival-details.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/snow-festival-details.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/snow-festival-details.html"/>
+        <lastmod>2026-10-15</lastmod>
+        <priority>0.6</priority>
     </url>
     <url>
         <loc>https://rdd.software/terms.html</loc>
-        <lastmod>2026-10-13</lastmod>
+        <xhtml:link rel="alternate" hreflang="hr" href="https://rdd.software/terms.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rdd.software/en/terms.html"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/terms.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/terms.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/terms.html"/>
+        <lastmod>2026-10-15</lastmod>
         <priority>0.3</priority>
+    </url>
+    <url>
+        <loc>https://rdd.software/en/terms.html</loc>
+        <xhtml:link rel="alternate" hreflang="hr" href="https://rdd.software/terms.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rdd.software/en/terms.html"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/terms.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/terms.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/terms.html"/>
+        <lastmod>2026-10-15</lastmod>
+        <priority>0.3</priority>
+    </url>
+    <url>
+        <loc>https://rdd.software/it/terms.html</loc>
+        <xhtml:link rel="alternate" hreflang="hr" href="https://rdd.software/terms.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rdd.software/en/terms.html"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/terms.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/terms.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/terms.html"/>
+        <lastmod>2026-10-15</lastmod>
+        <priority>0.3</priority>
+    </url>
+    <url>
+        <loc>https://rdd.software/de/terms.html</loc>
+        <xhtml:link rel="alternate" hreflang="hr" href="https://rdd.software/terms.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rdd.software/en/terms.html"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/terms.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/terms.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/terms.html"/>
+        <lastmod>2026-10-15</lastmod>
+        <priority>0.3</priority>
+    </url>
+    <url>
+        <loc>https://rdd.software/web-development.html</loc>
+        <xhtml:link rel="alternate" hreflang="hr" href="https://rdd.software/web-development.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rdd.software/en/web-development.html"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/web-development.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/web-development.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/web-development.html"/>
+        <lastmod>2026-10-15</lastmod>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://rdd.software/en/web-development.html</loc>
+        <xhtml:link rel="alternate" hreflang="hr" href="https://rdd.software/web-development.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rdd.software/en/web-development.html"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/web-development.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/web-development.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/web-development.html"/>
+        <lastmod>2026-10-15</lastmod>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://rdd.software/it/web-development.html</loc>
+        <xhtml:link rel="alternate" hreflang="hr" href="https://rdd.software/web-development.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rdd.software/en/web-development.html"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/web-development.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/web-development.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/web-development.html"/>
+        <lastmod>2026-10-15</lastmod>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://rdd.software/de/web-development.html</loc>
+        <xhtml:link rel="alternate" hreflang="hr" href="https://rdd.software/web-development.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rdd.software/en/web-development.html"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/web-development.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/web-development.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/web-development.html"/>
+        <lastmod>2026-10-15</lastmod>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://rdd.software/yufe-details.html</loc>
+        <xhtml:link rel="alternate" hreflang="hr" href="https://rdd.software/yufe-details.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rdd.software/en/yufe-details.html"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/yufe-details.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/yufe-details.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/yufe-details.html"/>
+        <lastmod>2026-10-15</lastmod>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://rdd.software/en/yufe-details.html</loc>
+        <xhtml:link rel="alternate" hreflang="hr" href="https://rdd.software/yufe-details.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rdd.software/en/yufe-details.html"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/yufe-details.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/yufe-details.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/yufe-details.html"/>
+        <lastmod>2026-10-15</lastmod>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://rdd.software/it/yufe-details.html</loc>
+        <xhtml:link rel="alternate" hreflang="hr" href="https://rdd.software/yufe-details.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rdd.software/en/yufe-details.html"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/yufe-details.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/yufe-details.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/yufe-details.html"/>
+        <lastmod>2026-10-15</lastmod>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://rdd.software/de/yufe-details.html</loc>
+        <xhtml:link rel="alternate" hreflang="hr" href="https://rdd.software/yufe-details.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rdd.software/en/yufe-details.html"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/yufe-details.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/yufe-details.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/yufe-details.html"/>
+        <lastmod>2026-10-15</lastmod>
+        <priority>0.6</priority>
     </url>
 </urlset>
