@@ -8,7 +8,7 @@
         <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/"/>
         <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/"/>
-        <lastmod>2026-10-15</lastmod>
+        <lastmod>2026-10-16</lastmod>
         <priority>1.0</priority>
     </url>
     <url>
@@ -18,7 +18,7 @@
         <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/"/>
         <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/"/>
-        <lastmod>2026-10-15</lastmod>
+        <lastmod>2026-10-16</lastmod>
         <priority>1.0</priority>
     </url>
     <url>
@@ -28,7 +28,7 @@
         <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/"/>
         <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/"/>
-        <lastmod>2026-10-15</lastmod>
+        <lastmod>2026-10-16</lastmod>
         <priority>1.0</priority>
     </url>
     <url>
@@ -38,7 +38,7 @@
         <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/"/>
         <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/"/>
-        <lastmod>2026-10-15</lastmod>
+        <lastmod>2026-10-16</lastmod>
         <priority>1.0</priority>
     </url>
     <url>
@@ -320,6 +320,46 @@
         <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/mobile-apps.html"/>
         <lastmod>2026-10-15</lastmod>
         <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://rdd.software/paapica-details.html</loc>
+        <xhtml:link rel="alternate" hreflang="hr" href="https://rdd.software/paapica-details.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rdd.software/en/paapica-details.html"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/paapica-details.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/paapica-details.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/paapica-details.html"/>
+        <lastmod>2026-10-16</lastmod>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://rdd.software/en/paapica-details.html</loc>
+        <xhtml:link rel="alternate" hreflang="hr" href="https://rdd.software/paapica-details.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rdd.software/en/paapica-details.html"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/paapica-details.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/paapica-details.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/paapica-details.html"/>
+        <lastmod>2026-10-16</lastmod>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://rdd.software/it/paapica-details.html</loc>
+        <xhtml:link rel="alternate" hreflang="hr" href="https://rdd.software/paapica-details.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rdd.software/en/paapica-details.html"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/paapica-details.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/paapica-details.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/paapica-details.html"/>
+        <lastmod>2026-10-16</lastmod>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://rdd.software/de/paapica-details.html</loc>
+        <xhtml:link rel="alternate" hreflang="hr" href="https://rdd.software/paapica-details.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rdd.software/en/paapica-details.html"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/paapica-details.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/paapica-details.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/paapica-details.html"/>
+        <lastmod>2026-10-16</lastmod>
+        <priority>0.6</priority>
     </url>
     <url>
         <loc>https://rdd.software/petro-bulk-details.html</loc>
