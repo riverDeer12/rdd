@@ -152,6 +152,153 @@
                 content: "Referenzpreis: ";
             }
         }
+        /* quick price estimate (js/estimate.js) */
+        .estimate {
+            margin-top: var(--vspace-2);
+            padding: var(--vspace-1_5) var(--vspace-1_5) var(--vspace-1);
+            border: 1px solid var(--color-gray-8);
+            border-radius: 12px;
+            scroll-margin-top: calc(var(--header-height, 6.4rem) + 2.4rem);
+        }
+
+        .estimate__title {
+            margin: 0 0 var(--vspace-0_25);
+        }
+
+        .estimate__intro {
+            margin-bottom: var(--vspace-1);
+        }
+
+        .estimate__layout {
+            display: grid;
+            grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+            gap: 3.2rem;
+            align-items: start;
+        }
+
+        .estimate__group {
+            margin: 0 0 var(--vspace-1);
+            padding: 0;
+            border: 0;
+        }
+
+        .estimate__group legend {
+            margin-bottom: var(--vspace-0_375);
+            padding: 0;
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: var(--color-text-dark);
+        }
+
+        .estimate__options {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 1rem;
+        }
+
+        .estimate__option {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+            padding: 1.2rem 1.4rem 1.2rem 4.2rem;
+            border: 1px solid var(--color-gray-8);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: border-color .2s ease;
+        }
+
+        .estimate__option:hover {
+            border-color: var(--color-text-light);
+        }
+
+        .estimate__option:has(input:checked) {
+            border-color: var(--color-1);
+            box-shadow: inset 0 0 0 1px var(--color-1);
+        }
+
+        /* beats the template's "label > input" rule */
+        .estimate .estimate__option > input {
+            position: absolute;
+            left: 1.4rem;
+            top: 1.5rem;
+            margin: 0;
+            accent-color: var(--color-1);
+        }
+
+        .estimate__option-name {
+            font-size: 1.6rem;
+            line-height: 1.4;
+            color: var(--color-text-dark);
+        }
+
+        .estimate__option-note {
+            font-size: 1.3rem;
+            line-height: 1.5;
+            color: var(--color-text-light);
+        }
+
+        .estimate__result {
+            position: sticky;
+            top: calc(var(--header-height, 6.4rem) + 2.4rem);
+            padding: var(--vspace-1);
+            border-radius: 8px;
+            background: var(--color-gray-9);
+        }
+
+        .estimate__label {
+            margin: 0;
+            font-size: 1.4rem;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+            color: var(--color-text-light);
+        }
+
+        .estimate__price {
+            margin: var(--vspace-0_25) 0;
+            font-family: var(--font-2);
+            font-size: var(--text-xl);
+            line-height: 1.2;
+            color: var(--color-text-dark);
+        }
+
+        .estimate__meta {
+            margin-bottom: var(--vspace-0_5);
+            font-size: 1.5rem;
+            line-height: 1.6;
+            color: var(--color-text-dark);
+        }
+
+        .estimate__note {
+            font-size: 1.4rem;
+            line-height: 1.6;
+            color: var(--color-text-light);
+        }
+
+        .estimate__send {
+            width: 100%;
+            margin: 0;
+        }
+
+        @media screen and (max-width: 900px) {
+            .estimate__layout {
+                grid-template-columns: 1fr;
+            }
+
+            .estimate__result {
+                position: static;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .estimate {
+                padding: var(--vspace-1) 1.6rem;
+            }
+
+            .estimate__options {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 
     <!-- language (hr / en / it / de) - runs before render so only one language is shown
@@ -310,6 +457,57 @@
                     <p data-lang="de">
                         Alle Preise sind in Euro (EUR) und Endpreise: Das Unternehmen ist nicht umsatzsteuerpflichtig, gemäß Art. 90 Abs. 1 des kroatischen Mehrwertsteuergesetzes wird keine Umsatzsteuer berechnet. Mit „ab“ gekennzeichnete Preise sind Einstiegspreise &mdash; der Endpreis hängt vom Projektumfang ab und wird in einem individuellen Angebot vereinbart.
                     </p>
+
+                    <!-- Price estimate (js/estimate.js) -->
+                    <section class="estimate" id="estimate" aria-labelledby="estimate-title">
+                        <h2 class="estimate__title" id="estimate-title"><span data-lang="hr">Okvirni izračun</span><span data-lang="en">Quick estimate</span><span data-lang="it">Stima rapida</span><span data-lang="de">Schnelle Kostenschätzung</span></h2>
+                        <p class="estimate__intro"><span data-lang="hr">Odaberite što vam treba i odmah vidite okvirnu cijenu i rok.</span><span data-lang="en">Choose what you need and see a rough price and timeline straight away.</span><span data-lang="it">Scegli ciò che ti serve e vedi subito prezzo e tempi indicativi.</span><span data-lang="de">Wählen Sie, was Sie brauchen, und sehen Sie sofort einen Richtpreis und Zeitrahmen.</span></p>
+                        <div class="estimate__layout">
+                            <form class="estimate__form" id="estimate-form">
+                                <fieldset class="estimate__group">
+                                    <legend><span data-lang="hr">1. Što trebate?</span><span data-lang="en">1. What do you need?</span><span data-lang="it">1. Di cosa hai bisogno?</span><span data-lang="de">1. Was brauchen Sie?</span></legend>
+                                    <div class="estimate__options">
+                                    <label class="estimate__option"><input type="radio" name="type" value="website" checked><span class="estimate__option-name"><span data-lang="hr">Web stranica</span><span data-lang="en">Website</span><span data-lang="it">Sito web</span><span data-lang="de">Website</span></span><span class="estimate__option-note"><span data-lang="hr">od 1.000&nbsp;€</span><span data-lang="en">from €1,000</span><span data-lang="it">da 1.000&nbsp;€</span><span data-lang="de">ab 1.000&nbsp;€</span></span></label>
+                                    <label class="estimate__option"><input type="radio" name="type" value="shop"><span class="estimate__option-name"><span data-lang="hr">Web trgovina</span><span data-lang="en">Online shop</span><span data-lang="it">Negozio online</span><span data-lang="de">Onlineshop</span></span><span class="estimate__option-note"><span data-lang="hr">od 2.000&nbsp;€</span><span data-lang="en">from €2,000</span><span data-lang="it">da 2.000&nbsp;€</span><span data-lang="de">ab 2.000&nbsp;€</span></span></label>
+                                    <label class="estimate__option"><input type="radio" name="type" value="webapp"><span class="estimate__option-name"><span data-lang="hr">Web aplikacija</span><span data-lang="en">Web application</span><span data-lang="it">Applicazione web</span><span data-lang="de">Webanwendung</span></span><span class="estimate__option-note"><span data-lang="hr">od 3.500&nbsp;€</span><span data-lang="en">from €3,500</span><span data-lang="it">da 3.500&nbsp;€</span><span data-lang="de">ab 3.500&nbsp;€</span></span></label>
+                                    <label class="estimate__option"><input type="radio" name="type" value="mobile"><span class="estimate__option-name"><span data-lang="hr">Mobilna aplikacija</span><span data-lang="en">Mobile app</span><span data-lang="it">App mobile</span><span data-lang="de">Mobile App</span></span><span class="estimate__option-note"><span data-lang="hr">od 5.000&nbsp;€</span><span data-lang="en">from €5,000</span><span data-lang="it">da 5.000&nbsp;€</span><span data-lang="de">ab 5.000&nbsp;€</span></span></label>
+                                    </div>
+                                </fieldset>
+                                <fieldset class="estimate__group">
+                                    <legend><span data-lang="hr">2. Koliki je projekt?</span><span data-lang="en">2. How big is the project?</span><span data-lang="it">2. Quanto è grande il progetto?</span><span data-lang="de">2. Wie groß ist das Projekt?</span></legend>
+                                    <div class="estimate__options">
+                                    <label class="estimate__option"><input type="radio" name="scope" value="small" checked><span class="estimate__option-name"><span data-lang="hr">Manji</span><span data-lang="en">Small</span><span data-lang="it">Piccolo</span><span data-lang="de">Klein</span></span><span class="estimate__option-note"><span data-lang="hr">osnovni sadržaj, bez posebnih funkcija</span><span data-lang="en">basic content, no special features</span><span data-lang="it">contenuti essenziali, senza funzioni particolari</span><span data-lang="de">grundlegende Inhalte, keine Sonderfunktionen</span></span></label>
+                                    <label class="estimate__option"><input type="radio" name="scope" value="medium"><span class="estimate__option-name"><span data-lang="hr">Srednji</span><span data-lang="en">Medium</span><span data-lang="it">Medio</span><span data-lang="de">Mittel</span></span><span class="estimate__option-note"><span data-lang="hr">više sadržaja ili nekoliko posebnih funkcija</span><span data-lang="en">more content or a few special features</span><span data-lang="it">più contenuti o alcune funzioni particolari</span><span data-lang="de">mehr Inhalte oder einige Sonderfunktionen</span></span></label>
+                                    <label class="estimate__option"><input type="radio" name="scope" value="large"><span class="estimate__option-name"><span data-lang="hr">Veći</span><span data-lang="en">Large</span><span data-lang="it">Grande</span><span data-lang="de">Groß</span></span><span class="estimate__option-note"><span data-lang="hr">puno sadržaja, više jezika ili povezivanje s drugim sustavima</span><span data-lang="en">lots of content, several languages or connections to other systems</span><span data-lang="it">molti contenuti, più lingue o collegamenti con altri sistemi</span><span data-lang="de">viele Inhalte, mehrere Sprachen oder Anbindung an andere Systeme</span></span></label>
+                                    </div>
+                                </fieldset>
+                                <fieldset class="estimate__group">
+                                    <legend><span data-lang="hr">3. Logo i vizualni identitet</span><span data-lang="en">3. Logo and visual identity</span><span data-lang="it">3. Logo e identità visiva</span><span data-lang="de">3. Logo und Corporate Design</span></legend>
+                                    <div class="estimate__options">
+                                    <label class="estimate__option"><input type="radio" name="identity" value="none" checked><span class="estimate__option-name"><span data-lang="hr">Već ih imam</span><span data-lang="en">I already have them</span><span data-lang="it">Li ho già</span><span data-lang="de">Habe ich schon</span></span><span class="estimate__option-note"><span data-lang="hr">bez dodatnog troška</span><span data-lang="en">no extra cost</span><span data-lang="it">nessun costo aggiuntivo</span><span data-lang="de">keine Zusatzkosten</span></span></label>
+                                    <label class="estimate__option"><input type="radio" name="identity" value="logo"><span class="estimate__option-name"><span data-lang="hr">Samo logotip</span><span data-lang="en">Logo only</span><span data-lang="it">Solo logo</span><span data-lang="de">Nur Logo</span></span><span class="estimate__option-note"><span data-lang="hr">+ od 300&nbsp;€</span><span data-lang="en">+ from €300</span><span data-lang="it">+ da 300&nbsp;€</span><span data-lang="de">+ ab 300&nbsp;€</span></span></label>
+                                    <label class="estimate__option"><input type="radio" name="identity" value="identity"><span class="estimate__option-name"><span data-lang="hr">Cijeli vizualni identitet</span><span data-lang="en">Full visual identity</span><span data-lang="it">Identità visiva completa</span><span data-lang="de">Komplettes Corporate Design</span></span><span class="estimate__option-note"><span data-lang="hr">+ od 800&nbsp;€</span><span data-lang="en">+ from €800</span><span data-lang="it">+ da 800&nbsp;€</span><span data-lang="de">+ ab 800&nbsp;€</span></span></label>
+                                    </div>
+                                </fieldset>
+                                <fieldset class="estimate__group">
+                                    <legend><span data-lang="hr">4. Dodatno</span><span data-lang="en">4. Extras</span><span data-lang="it">4. Extra</span><span data-lang="de">4. Zusätzlich</span></legend>
+                                    <div class="estimate__options">
+                                    <label class="estimate__option"><input type="checkbox" name="extra" value="prototype"><span class="estimate__option-name"><span data-lang="hr">UX/UI dizajn i klikabilni prototip</span><span data-lang="en">UX/UI design and clickable prototype</span><span data-lang="it">Design UX/UI e prototipo cliccabile</span><span data-lang="de">UX/UI-Design und klickbarer Prototyp</span></span><span class="estimate__option-note"><span data-lang="hr">+ od 700&nbsp;€</span><span data-lang="en">+ from €700</span><span data-lang="it">+ da 700&nbsp;€</span><span data-lang="de">+ ab 700&nbsp;€</span></span></label>
+                                    <label class="estimate__option"><input type="checkbox" name="extra" value="analysis"><span class="estimate__option-name"><span data-lang="hr">Analiza procesa i plan digitalizacije</span><span data-lang="en">Process analysis and digitalisation plan</span><span data-lang="it">Analisi dei processi e piano di digitalizzazione</span><span data-lang="de">Prozessanalyse und Digitalisierungsplan</span></span><span class="estimate__option-note"><span data-lang="hr">+ od 600&nbsp;€</span><span data-lang="en">+ from €600</span><span data-lang="it">+ da 600&nbsp;€</span><span data-lang="de">+ ab 600&nbsp;€</span></span></label>
+                                    <label class="estimate__option"><input type="checkbox" name="extra" value="maintenance"><span class="estimate__option-name"><span data-lang="hr">Održavanje nakon objave</span><span data-lang="en">Maintenance after launch</span><span data-lang="it">Manutenzione dopo il lancio</span><span data-lang="de">Wartung nach dem Launch</span></span><span class="estimate__option-note"><span data-lang="hr">mjesečno, zasebno</span><span data-lang="en">monthly, billed separately</span><span data-lang="it">mensile, a parte</span><span data-lang="de">monatlich, separat</span></span></label>
+                                    </div>
+                                </fieldset>
+                            </form>
+
+                            <div class="estimate__result" aria-live="polite">
+                                <p class="estimate__label"><span data-lang="hr">Okvirna cijena</span><span data-lang="en">Rough price</span><span data-lang="it">Prezzo indicativo</span><span data-lang="de">Richtpreis</span></p>
+                                <p class="estimate__price" id="estimate-price">1.000 – 1.300 €</p>
+                                <p class="estimate__meta" id="estimate-meta"></p>
+                                <p class="estimate__note"><span data-lang="hr">Izračun je okviran i služi za orijentaciju. Točnu cijenu i rok dobivate u besplatnoj pisanoj ponudi.</span><span data-lang="en">This is a rough estimate to help you plan. You get the exact price and timeline in a free written offer.</span><span data-lang="it">La stima è indicativa e serve per orientarti. Prezzo e tempi esatti li ricevi in un'offerta scritta gratuita.</span><span data-lang="de">Die Schätzung dient zur Orientierung. Genauen Preis und Zeitplan erhalten Sie in einem kostenlosen schriftlichen Angebot.</span></p>
+                                <a class="btn btn--primary estimate__send" id="estimate-send" href="index.html#contact"><span data-lang="hr">Zatražite ponudu</span><span data-lang="en">Request a quote</span><span data-lang="it">Richiedi un preventivo</span><span data-lang="de">Angebot anfordern</span></a>
+                            </div>
+                        </div>
+                    </section>
 
                     <!-- Custom Software Solutions -->
                     <div class="pricing-group" id="software">
@@ -633,6 +831,7 @@
 ================================================== -->
 <script src="js/plugins.js"></script>
 <script src="js/main.js"></script>
+<script src="js/estimate.js"></script>
 <!-- Google Analytics - loaded only after the visitor accepts cookies -->
 <script src="js/consent.js"></script>
 

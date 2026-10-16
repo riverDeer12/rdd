@@ -145,7 +145,30 @@
             });
     });
 
+    /* coming from the price estimate (js/estimate.js): preselect the project
+     * type and budget and start the message with the estimate */
+    function applyEstimate() {
+        let estimate = null;
+        try {
+            estimate = JSON.parse(sessionStorage.getItem('rdd-estimate'));
+            sessionStorage.removeItem('rdd-estimate');
+        } catch (e) {
+            return;
+        }
+        if (!estimate) return;
+
+        const fields = form.elements;
+        [['cf-type', estimate.type], ['cf-budget', estimate.budget]].forEach(function (pair) {
+            const select = fields.namedItem(pair[0]);
+            if (select && select.querySelector('option[value="' + pair[1] + '"]')) select.value = pair[1];
+        });
+
+        const message = fields.namedItem('message');
+        if (estimate.summary && !message.value.trim()) message.value = estimate.summary + '\n\n';
+    }
+
     translate();
+    applyEstimate();
     document.addEventListener('rdd:langchange', translate);
 
 })(document.documentElement);
