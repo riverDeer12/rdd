@@ -26,28 +26,28 @@
             success: 'Hvala! Upit je poslan, javit ćemo vam se što prije.',
             error: 'Upit nije poslan zbog tehničke greške. Pokušajte ponovno ili nam pišite na info@rdd.software.',
             required: 'Ispunite ime, ispravnu e-mail adresu i poruku.',
-            autoresponse: 'Hvala na upitu! Primili smo vašu poruku i javit ćemo vam se što prije. — RDD Software'
+            autoresponse: 'Hvala na upitu! Primili smo vašu poruku i javit ćemo vam se što prije.\n\nLijep pozdrav,\nRDD Software'
         },
         en: {
             sending: 'Sending…',
             success: 'Thank you! Your enquiry has been sent and we will get back to you soon.',
             error: 'Your enquiry could not be sent because of a technical error. Please try again or write to info@rdd.software.',
             required: 'Please fill in your name, a valid email address and a message.',
-            autoresponse: 'Thank you for your enquiry! We have received your message and will get back to you soon. — RDD Software'
+            autoresponse: 'Thank you for your enquiry! We have received your message and will get back to you soon.\n\nKind regards,\nRDD Software'
         },
         it: {
             sending: 'Invio in corso…',
             success: 'Grazie! La richiesta è stata inviata, ti risponderemo al più presto.',
             error: 'Non è stato possibile inviare la richiesta per un errore tecnico. Riprova o scrivi a info@rdd.software.',
             required: 'Inserisci nome, un indirizzo e-mail valido e un messaggio.',
-            autoresponse: 'Grazie per la richiesta! Abbiamo ricevuto il tuo messaggio e ti risponderemo al più presto. — RDD Software'
+            autoresponse: 'Grazie per la richiesta! Abbiamo ricevuto il tuo messaggio e ti risponderemo al più presto.\n\nCordiali saluti,\nRDD Software'
         },
         de: {
             sending: 'Wird gesendet…',
             success: 'Vielen Dank! Ihre Anfrage wurde gesendet, wir melden uns in Kürze.',
             error: 'Die Anfrage konnte wegen eines technischen Fehlers nicht gesendet werden. Bitte versuchen Sie es erneut oder schreiben Sie an info@rdd.software.',
             required: 'Bitte geben Sie Ihren Namen, eine gültige E-Mail-Adresse und eine Nachricht ein.',
-            autoresponse: 'Vielen Dank für Ihre Anfrage! Wir haben Ihre Nachricht erhalten und melden uns in Kürze. — RDD Software'
+            autoresponse: 'Vielen Dank für Ihre Anfrage! Wir haben Ihre Nachricht erhalten und melden uns in Kürze.\n\nViele Grüße,\nRDD Software'
         }
     };
 

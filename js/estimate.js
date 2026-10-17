@@ -129,7 +129,7 @@
             sessionStorage.setItem('rdd-estimate', JSON.stringify({
                 type: e.project.contact,
                 budget: budget,
-                summary: text.summary + ': ' + e.labels.join(', ') + ' – ' + priceEl.textContent + '.'
+                summary: text.summary + ': ' + e.labels.join(', ') + ' (' + priceEl.textContent + ').'
             }));
         } catch (err) {
             // storage unavailable - the visitor still lands on the form
