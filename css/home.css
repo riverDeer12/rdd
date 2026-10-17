@@ -411,3 +411,10 @@ html[data-theme="light"] .service-card__price {
         font-size: 1.8rem;
     }
 }
+
+/* --------------------------------------------------------------------
+ * about: the two intro paragraphs a little heavier than the template's 300
+ * -------------------------------------------------------------------- */
+.about-info .attention-getter {
+    font-weight: 400;
+}
