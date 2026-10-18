@@ -27,6 +27,8 @@ Page conventions in src/:
   * data-lang="xx" on an element      -> kept only in language xx
   * <html data-title-xx data-description-xx>  -> <title> and meta description
   * data-ph-xx on inputs              -> placeholder in language xx
+  * data-alt-xx on images             -> alt text in language xx
+  * data-aria-label-xx, data-title-xx -> aria-label / title in language xx
   * data-label-xx on <option>         -> option text in language xx
   * buttons .lang-switch__btn[data-set-lang] -> links to the other versions
 """
@@ -212,9 +214,15 @@ def render(text, page, lang, pages):
             edits.append((el.open_end, el.close_start, label))
             new = drop_attrs(new, 'label')
 
-        placeholder = raw_attr(tag, 'data-ph-' + lang)
-        if placeholder is not None:
-            new = set_attr(drop_attrs(new, 'ph'), 'placeholder', placeholder)
+        # data-<name>-xx="..." -> <attribute>="..." in language xx
+        # (data-title-xx on <html> is the page title, handled above)
+        for name, attribute in (('ph', 'placeholder'), ('alt', 'alt'),
+                                ('aria-label', 'aria-label'), ('title', 'title')):
+            if name == 'title' and el.tag == 'html':
+                continue
+            value = raw_attr(tag, 'data-%s-%s' % (name, lang))
+            if value is not None:
+                new = set_attr(drop_attrs(new, name), attribute, value)
 
         if lang != DEFAULT_LANG:
             new = re.sub(r'(\s(?:%s)=")([^"]*)(")' % '|'.join(URL_ATTRS),

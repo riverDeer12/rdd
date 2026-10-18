@@ -152,8 +152,9 @@
      */
     --color-text: var(--color-gray-4);
     --color-text-dark: var(--color-white);
-    --color-text-light: var(--color-gray-7);
-    --color-placeholder: var(--color-gray-7);
+    --color-text-light: var(--color-gray-5);
+    --color-link: var(--color-1-light);
+    --color-placeholder: var(--color-gray-5);
 
     /* buttons
      */
@@ -1275,7 +1276,7 @@ body {
 /* links
  */
 a {
-    color: var(--color-1);
+    color: var(--color-link);
     transition: all 0.3s ease-in-out;
 }
 
@@ -2654,7 +2655,7 @@ img.u-pull-left {
 }
 
 .text-pretitle.with-line {
-    color: var(--color-1);
+    color: var(--color-1-light);
     padding-left: 6rem;
     transform: translateX(-6rem);
 }

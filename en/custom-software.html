@@ -29,14 +29,15 @@
 
     <!-- CSS
     ================================================== -->
-    <link rel="stylesheet" href="../css/vendor.css">
-    <link rel="stylesheet" href="../css/styles.css?v=2">
+    <link rel="preload" href="../css/fonts/public-sans-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../css/fonts/dm-serif-display-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="../css/styles.css?v=4">
     <link rel="stylesheet" href="../css/i18n.css?v=3">
-    <link rel="stylesheet" href="../css/theme.css">
+    <link rel="stylesheet" href="../css/theme.css?v=3">
     <link rel="stylesheet" href="../css/consent.css">
     <link rel="stylesheet" href="../css/cta.css">
-    <link rel="stylesheet" href="../css/home.css?v=2">
-    <link rel="stylesheet" href="../css/pages.css">
+    <link rel="stylesheet" href="../css/home.css?v=3">
+    <link rel="stylesheet" href="../css/pages.css?v=2">
 
     <!-- structured data for search engines, one per language -->
     <script type="application/ld+json" data-lang="en">
@@ -115,8 +116,8 @@
             <span class="mobile-home-link"><a href="index.html">RDD.</a></span>
             <div class="lang-menu">
                 <button type="button" class="lang-menu__toggle" aria-haspopup="true" aria-expanded="false"
-                        aria-label="Jezik / Language / Lingua / Sprache"><span data-lang="en">EN</span><svg class="lang-menu__chevron" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-                <div class="lang-switch" role="group" aria-label="Jezik / Language / Lingua / Sprache">
+                        aria-label="Language"><span data-lang="en">EN</span><svg class="lang-menu__chevron" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="lang-switch" role="group" aria-label="Language">
                     <a class="lang-switch__btn" href="../custom-software.html" hreflang="hr" lang="hr" data-set-lang="hr"><span class="lang-switch__code">HR</span><span class="lang-switch__name">Hrvatski</span></a>
                     <span class="lang-switch__sep">/</span>
                     <a class="lang-switch__btn is-active" href="../en/custom-software.html" hreflang="en" lang="en" data-set-lang="en" aria-current="page"><span class="lang-switch__code">EN</span><span class="lang-switch__name">English</span></a>
@@ -127,7 +128,7 @@
                 </div>
             </div>
             <button type="button" class="theme-toggle" data-toggle-theme aria-pressed="false"
-                    aria-label="Tamna / svijetla tema - Dark / light theme" title="Tamna / svijetla tema - Dark / light theme">
+                    aria-label="Dark or light theme" title="Dark or light theme">
                 <svg class="theme-toggle__sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/></svg>
                 <svg class="theme-toggle__moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M20.2 14.6A8.5 8.5 0 0 1 9.4 3.8a8.5 8.5 0 1 0 10.8 10.8z"/></svg>
             </button>
@@ -145,7 +146,7 @@
                     <li><a href="blog.html">Blog</a></li>
                     <li><a href="index.html#contact"><span data-lang="en">Say Hello</span></a></li>
                     <li class="lang-switch-item">
-                        <div class="lang-switch" role="group" aria-label="Jezik / Language / Lingua / Sprache">
+                        <div class="lang-switch" role="group" aria-label="Language">
                             <a class="lang-switch__btn" href="../custom-software.html" hreflang="hr" lang="hr" data-set-lang="hr"><span class="lang-switch__code">HR</span><span class="lang-switch__name">Hrvatski</span></a>
                             <span class="lang-switch__sep">/</span>
                             <a class="lang-switch__btn is-active" href="../en/custom-software.html" hreflang="en" lang="en" data-set-lang="en" aria-current="page"><span class="lang-switch__code">EN</span><span class="lang-switch__name">English</span></a>
@@ -157,7 +158,7 @@
                     </li>
                     <li class="theme-toggle-item">
                         <button type="button" class="theme-toggle" data-toggle-theme aria-pressed="false"
-                                aria-label="Tamna / svijetla tema - Dark / light theme" title="Tamna / svijetla tema - Dark / light theme">
+                                aria-label="Dark or light theme" title="Dark or light theme">
                             <svg class="theme-toggle__sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/></svg>
                             <svg class="theme-toggle__moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M20.2 14.6A8.5 8.5 0 0 1 9.4 3.8a8.5 8.5 0 1 0 10.8 10.8z"/></svg>
                         </button>
@@ -391,7 +392,7 @@
             </div>
 
             <div class="ss-go-top">
-                <a class="smoothscroll" title="Na vrh / Back to Top" href="#top">
+                <a class="smoothscroll" title="Back to top" aria-label="Back to top" href="#top">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill-rule="evenodd" clip-rule="evenodd">
                         <path d="M11 2.206l-6.235 7.528-.765-.645 7.521-9 7.479 9-.764.646-6.236-7.53v21.884h-1v-21.883z"/>
                     </svg>

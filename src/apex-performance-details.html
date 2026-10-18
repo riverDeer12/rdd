@@ -26,9 +26,9 @@
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="manifest" href="site.webmanifest">
-    <link rel="stylesheet" href="css/project_details_style.css"/>
+    <link rel="stylesheet" href="css/project_details_style.css?v=3"/>
     <link rel="stylesheet" href="css/i18n.css?v=3"/>
-    <link rel="stylesheet" href="css/theme.css"/>
+    <link rel="stylesheet" href="css/theme.css?v=3"/>
     <link rel="stylesheet" href="css/cta.css"/>
     <!-- language (hr / en / it / de) - runs before render so only one language is shown -->
     <script src="js/i18n.js?v=2"></script>
@@ -46,8 +46,8 @@
             </a>
             <div class="lang-menu">
                 <button type="button" class="lang-menu__toggle" aria-haspopup="true" aria-expanded="false"
-                        aria-label="Jezik / Language / Lingua / Sprache"><span data-lang="hr">HR</span><span data-lang="en">EN</span><span data-lang="it">IT</span><span data-lang="de">DE</span><svg class="lang-menu__chevron" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-                <div class="lang-switch" role="group" aria-label="Jezik / Language / Lingua / Sprache">
+                        aria-label="Jezik" data-aria-label-hr="Jezik" data-aria-label-en="Language" data-aria-label-it="Lingua" data-aria-label-de="Sprache"><span data-lang="hr">HR</span><span data-lang="en">EN</span><span data-lang="it">IT</span><span data-lang="de">DE</span><svg class="lang-menu__chevron" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="lang-switch" role="group" aria-label="Jezik" data-aria-label-hr="Jezik" data-aria-label-en="Language" data-aria-label-it="Lingua" data-aria-label-de="Sprache">
                     <button type="button" class="lang-switch__btn" data-set-lang="hr"><span class="lang-switch__code">HR</span><span class="lang-switch__name">Hrvatski</span></button>
                     <span class="lang-switch__sep">/</span>
                     <button type="button" class="lang-switch__btn" data-set-lang="en"><span class="lang-switch__code">EN</span><span class="lang-switch__name">English</span></button>
@@ -58,7 +58,7 @@
                 </div>
             </div>
             <button type="button" class="theme-toggle" data-toggle-theme aria-pressed="false"
-                    aria-label="Tamna / svijetla tema - Dark / light theme" title="Tamna / svijetla tema - Dark / light theme">
+                    aria-label="Tamna ili svijetla tema" data-aria-label-hr="Tamna ili svijetla tema" data-aria-label-en="Dark or light theme" data-aria-label-it="Tema scuro o chiaro" data-aria-label-de="Dunkles oder helles Design" title="Tamna ili svijetla tema" data-title-hr="Tamna ili svijetla tema" data-title-en="Dark or light theme" data-title-it="Tema scuro o chiaro" data-title-de="Dunkles oder helles Design">
                 <svg class="theme-toggle__sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/></svg>
                 <svg class="theme-toggle__moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M20.2 14.6A8.5 8.5 0 0 1 9.4 3.8a8.5 8.5 0 1 0 10.8 10.8z"/></svg>
             </button>
@@ -103,11 +103,10 @@
 
         <!-- Main Image -->
         <div class="mb-16 rounded-lg overflow-hidden border border-border">
-            <img
+            <img width="1915" height="1077"
                     src="images/portfolio/apex_details/apexweb.webp"
-                    alt="Project main screenshot"
-                    class="w-full aspect-video object-contain"
-            />
+                   
+                    class="w-full aspect-video object-contain" alt="Apex Performance Fit: nadzorna ploča trenera s tjednim rasporedom termina" data-alt-hr="Apex Performance Fit: nadzorna ploča trenera s tjednim rasporedom termina" data-alt-en="Apex Performance Fit: trainer dashboard with the weekly schedule" data-alt-it="Apex Performance Fit: dashboard dell'allenatore con il programma settimanale" data-alt-de="Apex Performance Fit: Trainer-Dashboard mit Wochenplan"/>
         </div>
 
         <!-- Technologies -->
@@ -171,11 +170,11 @@
 
                 <div class="gallery-viewport">
                     <div class="gallery-track">
-                        <div class="gallery-slide"><img loading="lazy" decoding="async" src="images/portfolio/apex_details/apex1.webp" alt="Apex Performance Fit - Login"/></div>
-                        <div class="gallery-slide"><img loading="lazy" decoding="async" src="images/portfolio/apex_details/apex2.webp" alt="Apex Performance Fit - Appointments calendar"/></div>
-                        <div class="gallery-slide"><img loading="lazy" decoding="async" src="images/portfolio/apex_details/apex3.webp" alt="Apex Performance Fit - Cancellation and join requests"/></div>
-                        <div class="gallery-slide"><img loading="lazy" decoding="async" src="images/portfolio/apex_details/apex4.webp" alt="Apex Performance Fit - New appointment"/></div>
-                        <div class="gallery-slide"><img loading="lazy" decoding="async" src="images/portfolio/apex_details/apex5.webp" alt="Apex Performance Fit - Client weight progress"/></div>
+                        <div class="gallery-slide"><img width="921" height="2000" loading="lazy" decoding="async" src="images/portfolio/apex_details/apex1.webp" alt="Apex Performance Fit: prijava" data-alt-hr="Apex Performance Fit: prijava" data-alt-en="Apex Performance Fit: login" data-alt-it="Apex Performance Fit: accesso" data-alt-de="Apex Performance Fit: Anmeldung"/></div>
+                        <div class="gallery-slide"><img width="921" height="2000" loading="lazy" decoding="async" src="images/portfolio/apex_details/apex2.webp" alt="Apex Performance Fit: kalendar termina" data-alt-hr="Apex Performance Fit: kalendar termina" data-alt-en="Apex Performance Fit: appointments calendar" data-alt-it="Apex Performance Fit: calendario degli appuntamenti" data-alt-de="Apex Performance Fit: Terminkalender"/></div>
+                        <div class="gallery-slide"><img width="921" height="2000" loading="lazy" decoding="async" src="images/portfolio/apex_details/apex3.webp" alt="Apex Performance Fit: zahtjevi za otkazivanje i pridruživanje" data-alt-hr="Apex Performance Fit: zahtjevi za otkazivanje i pridruživanje" data-alt-en="Apex Performance Fit: cancellation and join requests" data-alt-it="Apex Performance Fit: richieste di cancellazione e di partecipazione" data-alt-de="Apex Performance Fit: Storno- und Teilnahmeanfragen"/></div>
+                        <div class="gallery-slide"><img width="921" height="2000" loading="lazy" decoding="async" src="images/portfolio/apex_details/apex4.webp" alt="Apex Performance Fit: novi termin" data-alt-hr="Apex Performance Fit: novi termin" data-alt-en="Apex Performance Fit: new appointment" data-alt-it="Apex Performance Fit: nuovo appuntamento" data-alt-de="Apex Performance Fit: neuer Termin"/></div>
+                        <div class="gallery-slide"><img width="921" height="2000" loading="lazy" decoding="async" src="images/portfolio/apex_details/apex5.webp" alt="Apex Performance Fit: praćenje tjelesne težine klijenta" data-alt-hr="Apex Performance Fit: praćenje tjelesne težine klijenta" data-alt-en="Apex Performance Fit: client weight progress" data-alt-it="Apex Performance Fit: andamento del peso del cliente" data-alt-de="Apex Performance Fit: Gewichtsverlauf des Kunden"/></div>
                     </div>
                 </div>
 
@@ -288,7 +287,7 @@
         </section>
     <!-- Lightbox -->
     <div class="lightbox" id="lightbox">
-        <button class="lightbox-close" aria-label="Zatvori / Close">&times;</button>
+        <button class="lightbox-close" aria-label="Zatvori" data-aria-label-hr="Zatvori" data-aria-label-en="Close" data-aria-label-it="Chiudi" data-aria-label-de="Schließen">&times;</button>
         <button class="lightbox-btn lightbox-prev" aria-label="Previous">‹</button>
         <img class="lightbox-img" id="lightbox-img" src="" alt="" />
         <button class="lightbox-btn lightbox-next" aria-label="Next">›</button>
@@ -415,7 +414,7 @@
         const nextBtn = document.querySelector(".lightbox-next");
 
         // Uzima originalne slike (bez klonova iz carousela) iz DOM-a prije inicijalizacije clonea,
-        // pa je sigurnije čitati src atribute direktno iz <img loading="lazy" decoding="async"> elemenata u trenutku klika
+        // pa je sigurnije čitati src atribute direktno iz <img alt="" loading="lazy" decoding="async"> elemenata u trenutku klika
         // preko delegacije eventa na cijelom containeru.
         const gallerySection = document.querySelector(".gallery-carousel") || document;
 

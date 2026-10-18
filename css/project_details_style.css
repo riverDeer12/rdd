@@ -360,6 +360,7 @@ a:visited {
 }
 
 .gallery-carousel {
+    position: relative;      /* the phone layout overlays the arrows on the images */
     display: flex;
     align-items: center;
     gap: 12px;
@@ -555,3 +556,10 @@ a:visited {
     .gallery-carousel .gallery-btn.next { right: 8px; }
 }
 
+
+/* images carry width/height attributes (no layout shift while loading);
+   let CSS decide the rendered size */
+img {
+    max-width: 100%;
+    height: auto;
+}

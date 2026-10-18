@@ -131,7 +131,7 @@
 }
 
 html[data-theme="light"] .price-table .price-table__price {
-    color: var(--color-2);
+    color: var(--color-2-dark);
 }
 
 @media screen and (max-width: 600px) {

@@ -24,6 +24,7 @@ html[data-theme="light"] {
     --color-text: #4b4c4e;
     --color-text-dark: #141516;
     --color-text-light: #707173;
+    --color-link: var(--color-1-dark);
     --color-placeholder: #8a8a8b;
 
     --color-btn: #e7e7e3;
@@ -50,12 +51,12 @@ html[data-theme="light"] .text-pretitle {
 }
 
 html[data-theme="light"] .text-pretitle.with-line {
-    color: var(--color-1);
+    color: var(--color-1-dark);
 }
 
 /* pricing.html: the lighter green is too faint on a light background */
 html[data-theme="light"] .price-amount {
-    color: var(--color-2);
+    color: var(--color-2-dark);
 }
 
 html[data-theme="light"] .text-pretitle.with-line::before {
@@ -181,7 +182,7 @@ html[data-theme="light"] .gallery-container .gallery-btn:hover {
  * language switcher (css/i18n.css) on a light background
  * -------------------------------------------------------------------- */
 html[data-theme="light"] .lang-switch__btn {
-    color: rgba(0, 0, 0, .45);
+    color: rgba(0, 0, 0, .6);
 }
 
 html[data-theme="light"] .lang-switch__btn:hover,
@@ -190,7 +191,7 @@ html[data-theme="light"] .lang-switch__btn:focus {
 }
 
 html[data-theme="light"] .lang-switch__btn.is-active {
-    color: var(--color-1, hsla(180, 100%, 25%, 1));
+    color: hsla(180, 100%, 20%, 1);
 }
 
 html[data-theme="light"] .lang-switch__sep {

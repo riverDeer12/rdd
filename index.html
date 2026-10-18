@@ -35,12 +35,13 @@
 
     <!-- CSS
     ================================================== -->
-    <link rel="stylesheet" href="css/vendor.css">
-    <link rel="stylesheet" href="css/styles.css?v=2">
+    <link rel="preload" href="css/fonts/public-sans-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="css/fonts/dm-serif-display-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="css/styles.css?v=4">
     <link rel="stylesheet" href="css/i18n.css?v=3">
-    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/theme.css?v=3">
     <link rel="stylesheet" href="css/consent.css">
-    <link rel="stylesheet" href="css/home.css?v=2">
+    <link rel="stylesheet" href="css/home.css?v=3">
 
     <!-- language (hr / en / it / de) - runs before render so only one language is shown
     ================================================== -->
@@ -119,8 +120,8 @@
             <span class="mobile-home-link"><a href="index.html">RDD.</a></span>
             <div class="lang-menu">
                 <button type="button" class="lang-menu__toggle" aria-haspopup="true" aria-expanded="false"
-                        aria-label="Jezik / Language / Lingua / Sprache"><span data-lang="hr">HR</span><svg class="lang-menu__chevron" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-                <div class="lang-switch" role="group" aria-label="Jezik / Language / Lingua / Sprache">
+                        aria-label="Jezik"><span data-lang="hr">HR</span><svg class="lang-menu__chevron" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="lang-switch" role="group" aria-label="Jezik">
                     <a class="lang-switch__btn is-active" href="./" hreflang="hr" lang="hr" data-set-lang="hr" aria-current="page"><span class="lang-switch__code">HR</span><span class="lang-switch__name">Hrvatski</span></a>
                     <span class="lang-switch__sep">/</span>
                     <a class="lang-switch__btn" href="en/" hreflang="en" lang="en" data-set-lang="en"><span class="lang-switch__code">EN</span><span class="lang-switch__name">English</span></a>
@@ -131,7 +132,7 @@
                 </div>
             </div>
             <button type="button" class="theme-toggle" data-toggle-theme aria-pressed="false"
-                    aria-label="Tamna / svijetla tema - Dark / light theme" title="Tamna / svijetla tema - Dark / light theme">
+                    aria-label="Tamna ili svijetla tema" title="Tamna ili svijetla tema">
                 <svg class="theme-toggle__sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/></svg>
                 <svg class="theme-toggle__moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M20.2 14.6A8.5 8.5 0 0 1 9.4 3.8a8.5 8.5 0 1 0 10.8 10.8z"/></svg>
             </button>
@@ -149,7 +150,7 @@
                     <li><a href="blog.html">Blog</a></li>
                     <li><a href="#contact" class="smoothscroll"><span data-lang="hr">Kontakt</span></a></li>
                     <li class="lang-switch-item">
-                        <div class="lang-switch" role="group" aria-label="Jezik / Language / Lingua / Sprache">
+                        <div class="lang-switch" role="group" aria-label="Jezik">
                             <a class="lang-switch__btn is-active" href="./" hreflang="hr" lang="hr" data-set-lang="hr" aria-current="page"><span class="lang-switch__code">HR</span><span class="lang-switch__name">Hrvatski</span></a>
                             <span class="lang-switch__sep">/</span>
                             <a class="lang-switch__btn" href="en/" hreflang="en" lang="en" data-set-lang="en"><span class="lang-switch__code">EN</span><span class="lang-switch__name">English</span></a>
@@ -161,7 +162,7 @@
                     </li>
                     <li class="theme-toggle-item">
                         <button type="button" class="theme-toggle" data-toggle-theme aria-pressed="false"
-                                aria-label="Tamna / svijetla tema - Dark / light theme" title="Tamna / svijetla tema - Dark / light theme">
+                                aria-label="Tamna ili svijetla tema" title="Tamna ili svijetla tema">
                             <svg class="theme-toggle__sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/></svg>
                             <svg class="theme-toggle__moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M20.2 14.6A8.5 8.5 0 0 1 9.4 3.8a8.5 8.5 0 1 0 10.8 10.8z"/></svg>
                         </button>
@@ -203,7 +204,7 @@
 
             </div> <!-- end intro content -->
 
-            <a href="#about" class="intro-scrolldown smoothscroll">
+            <a href="#about" class="intro-scrolldown smoothscroll" aria-label="O nama">
                 <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd"
                      clip-rule="evenodd">
                     <path d="M11 21.883l-6.235-7.527-.765.644 7.521 9 7.479-9-.764-.645-6.236 7.529v-21.884h-1v21.883z"/>
@@ -221,9 +222,8 @@
             <div class="row about-info wide" data-animate-block>
 
                 <div class="column lg-6 md-12 about-info__pic-block">
-                    <img loading="lazy" decoding="async" src="images/about-photo.jpg"
-                         srcset="images/about-photo.jpg 1x, images/about-photo@2x.jpg 2x" alt="RDD Software logo" class="about-info__pic"
-                         data-animate-el>
+                    <img loading="lazy" decoding="async" src="images/about-photo.webp" width="1024" height="1024" class="about-info__pic"
+                         data-animate-el alt="Logotip RDD Software: geometrijski jelen">
                 </div>
 
                 <div class="column lg-6 md-12">
@@ -374,7 +374,7 @@
                         <li class="folio-list__item column" data-animate-el>
                             <a class="folio-list__item-link" href="paapica-details.html">
                                 <div class="folio-list__item-pic">
-                                    <img loading="lazy" decoding="async" src="images/portfolio/paapica.webp"
+                                    <img width="250" height="250" loading="lazy" decoding="async" src="images/portfolio/paapica.webp"
                                          srcset="images/portfolio/paapica.webp 1x, images/portfolio/paapica.webp 2x" alt="Paapica logo">
                                 </div>
 
@@ -387,7 +387,7 @@
                                     </div>
                                 </div>
                             </a>
-                            <a class="folio-list__proj-link" href="https://paapica.com" title="Link na projekt / Project link">
+                            <a class="folio-list__proj-link" href="https://paapica.com" title="Otvori projekt" aria-label="Otvori projekt">
                                 <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
                                     <path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z"
@@ -399,7 +399,7 @@
                         <li class="folio-list__item column" data-animate-el>
                             <a class="folio-list__item-link" href="rimap-details.html">
                                 <div class="folio-list__item-pic">
-                                    <img loading="lazy" decoding="async" src="images/portfolio/rimap.webp"
+                                    <img width="180" height="180" loading="lazy" decoding="async" src="images/portfolio/rimap.webp"
                                          srcset="images/portfolio/rimap.webp 1x, images/portfolio/rimap.webp 2x" alt="Rimap logo">
                                 </div>
 
@@ -412,7 +412,7 @@
                                     </div>
                                 </div>
                             </a>
-                            <a class="folio-list__proj-link" href="https://rimap.uniri.hr" title="Link na projekt / Project link">
+                            <a class="folio-list__proj-link" href="https://rimap.uniri.hr" title="Otvori projekt" aria-label="Otvori projekt">
                                 <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
                                     <path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z"
@@ -424,7 +424,7 @@
                         <li class="folio-list__item column" data-animate-el>
                             <a class="folio-list__item-link" href="yufe-details.html">
                                 <div class="folio-list__item-pic">
-                                    <img loading="lazy" decoding="async" src="images/portfolio/yufe.webp"
+                                    <img width="250" height="250" loading="lazy" decoding="async" src="images/portfolio/yufe.webp"
                                          srcset="images/portfolio/yufe.webp 1x, images/portfolio/yufe.webp 2x" alt="YUFE logo">
                                 </div>
 
@@ -437,7 +437,7 @@
                                     </div>
                                 </div>
                             </a>
-                            <a class="folio-list__proj-link" href="https://yufe-rimap.uniri.hr" title="Link na projekt / Project link">
+                            <a class="folio-list__proj-link" href="https://yufe-rimap.uniri.hr" title="Otvori projekt" aria-label="Otvori projekt">
                                 <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
                                     <path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z"
@@ -449,7 +449,7 @@
                         <li class="folio-list__item column" data-animate-el>
                             <a class="folio-list__item-link" href="petro-bulk-details.html">
                                 <div class="folio-list__item-pic">
-                                    <img loading="lazy" decoding="async" src="images/portfolio/petro_bulk_solutions.webp"
+                                    <img width="451" height="453" loading="lazy" decoding="async" src="images/portfolio/petro_bulk_solutions.webp"
                                          srcset="images/portfolio/petro_bulk_solutions.webp 1x, images/portfolio/petro_bulk_solutions.webp 2x"
                                          alt="Petro&amp;Bulk Solutions logo">
                                 </div>
@@ -464,7 +464,7 @@
                                 </div>
                             </a>
                             <a class="folio-list__proj-link" href="https://riverdeer12.github.io/petrol-biofuel/"
-                               title="Link na projekt / Project link">
+                               title="Otvori projekt" aria-label="Otvori projekt">
                                 <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
                                     <path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z"
@@ -476,7 +476,7 @@
                         <li class="folio-list__item column" data-animate-el>
                             <a class="folio-list__item-link" href="snow-festival-details.html">
                                 <div class="folio-list__item-pic">
-                                    <img loading="lazy" decoding="async" src="images/portfolio/snow_festival.webp"
+                                    <img width="347" height="397" loading="lazy" decoding="async" src="images/portfolio/snow_festival.webp"
                                          srcset="images/portfolio/snow_festival.webp 1x, images/portfolio/snow_festival.webp 2x"
                                          alt="Snow Festival logo">
                                 </div>
@@ -491,7 +491,7 @@
                                 </div>
                             </a>
                             <a class="folio-list__proj-link" href="https://riverdeer12.github.io/gremo-na-sljeme/"
-                               title="Link na projekt / Project link">
+                               title="Otvori projekt" aria-label="Otvori projekt">
                                 <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
                                     <path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z"
@@ -503,7 +503,7 @@
                         <li class="folio-list__item column" data-animate-el>
                             <a class="folio-list__item-link" href="reviv-plus-details.html">
                                 <div class="folio-list__item-pic">
-                                    <img loading="lazy" decoding="async" src="images/portfolio/reviv-plus.webp"
+                                    <img width="261" height="212" loading="lazy" decoding="async" src="images/portfolio/reviv-plus.webp"
                                          srcset="images/portfolio/reviv-plus.webp 1x, images/portfolio/reviv-plus.webp 2x"
                                          alt="ReViv Plus logo">
                                 </div>
@@ -517,7 +517,7 @@
                                     </div>
                                 </div>
                             </a>
-                            <a class="folio-list__proj-link" href="https://reviv-plus.com" title="Link na projekt / Project link">
+                            <a class="folio-list__proj-link" href="https://reviv-plus.com" title="Otvori projekt" aria-label="Otvori projekt">
                                 <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
                                     <path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z"
@@ -529,7 +529,7 @@
                         <li class="folio-list__item column" data-animate-el>
                             <a class="folio-list__item-link" href="apex-performance-details.html">
                                 <div class="folio-list__item-pic">
-                                    <img loading="lazy" decoding="async" src="images/portfolio/gallery/apex_white.webp"
+                                    <img width="1632" height="964" loading="lazy" decoding="async" src="images/portfolio/gallery/apex_white.webp"
                                          srcset="images/portfolio/gallery/apex_white.webp 1x, images/portfolio/gallery/apex_white.webp 2x"
                                          alt="Apex Performance Fit logo">
                                 </div>
@@ -545,7 +545,7 @@
                             </a>
                             <a class="folio-list__proj-link"
                                href="https://apps.apple.com/hr/app/apex-performance-fit/id6767208005"
-                               title="Link na projekt / Project link">
+                               title="Otvori projekt" aria-label="Otvori projekt">
                                 <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
                                     <path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z"
@@ -559,111 +559,6 @@
                 </div> <!-- end column -->
             </div> <!-- end works-portfolio -->
 
-
-            <div class="row testimonials">
-                <div class="column lg-12" data-animate-block>
-
-                    <div class="swiper-container testimonial-slider" data-animate-el>
-
-                        <div class="swiper-wrapper">
-
-                            <div class="testimonial-slider__slide swiper-slide">
-                                <div class="testimonial-slider__author">
-                                    <img loading="lazy" decoding="async" src="images/avatars/damir_medved.webp" alt="Author image"
-                                         class="testimonial-slider__avatar">
-                                    <cite class="testimonial-slider__cite">
-                                        <strong>Damir Medved</strong>
-                                        <span data-lang="hr">Direktor, EDIH Adria</span>
-                                    </cite>
-                                </div>
-                                <p data-lang="hr">
-                                    Platforma RIMAP dobro je organizirana i poduzećima, istraživačima i javnom sektoru olakšava
-                                    povezivanje i suradnju na istraživačko-razvojnim projektima. Pohvalan je fokus na
-                                    digitalne tehnologije i stvaranje proizvoda i usluga visoke dodane vrijednosti kroz
-                                    multidisciplinarni pristup. To je snažan alat za poticanje inovacija koji koristi
-                                    resurse i stručnost regije. Toplo preporučujem svima koji žele biti dio živahne
-                                    inovacijske zajednice!
-                                </p>
-                            </div> <!-- end testimonial-slider__slide -->
-
-                            <div class="testimonial-slider__slide swiper-slide">
-                                <div class="testimonial-slider__author">
-                                    <img loading="lazy" decoding="async" src="images/avatars/roel_de_beer.webp" alt="Author image"
-                                         class="testimonial-slider__avatar">
-                                    <cite class="testimonial-slider__cite">
-                                        <strong>Roel de Beer</strong>
-                                        <span data-lang="hr">Voditelj projekata digitalizacije, Sveučilište u Maastrichtu</span>
-                                    </cite>
-                                </div>
-                                <p data-lang="hr">
-                                    Iako je još u razvoju, ova platforma puno obećava unutar YUFE mreže. Impresivan je njezin
-                                    fokus na prekograničnu suradnju akademske zajednice i gospodarstva diljem Europe,
-                                    posebno u poticanju inovacija kroz digitalne tehnologije. Veselim se tome kako će
-                                    i dalje povezivati poduzeća, istraživače i javni sektor u stvaranju proizvoda i
-                                    usluga visoke dodane vrijednosti.
-                                </p>
-                            </div> <!-- end testimonial-slider__slide -->
-
-                            <div class="testimonial-slider__slide swiper-slide">
-                                <div class="testimonial-slider__author">
-                                    <img loading="lazy" decoding="async" src="images/avatars/zarko_galjanic.webp" alt="Author image"
-                                         class="testimonial-slider__avatar">
-                                    <cite class="testimonial-slider__cite">
-                                        <strong>Zarko Galjanic</strong>
-                                        <span data-lang="hr">Suosnivač, Petro & Biofuel Trading KFT</span>
-                                    </cite>
-                                </div>
-                                <p data-lang="hr">
-                                    Ova web stranica namijenjena je trgovini naftom i biogorivima, a nudi čist, profesionalan
-                                    dizajn i jednostavnu navigaciju. Pruža korisne podatke, tržišne uvide i prilike za
-                                    trgovanje. Naglasak na održivosti odličan je dodatak. Sve u svemu, pouzdana i
-                                    učinkovita platforma za stručnjake iz industrije. Toplo preporučujem!
-                                </p>
-                            </div> <!-- end testimonial-slider__slide -->
-
-                            <div class="testimonial-slider__slide swiper-slide">
-                                <div class="testimonial-slider__author">
-                                    <img loading="lazy" decoding="async" src="images/avatars/sara_husidic.webp" alt="Author image"
-                                         class="testimonial-slider__avatar">
-                                    <cite class="testimonial-slider__cite">
-                                        <strong>Sara Husidic</strong>
-                                        <span data-lang="hr">Predstavnica za trade marketing, JTI</span>
-                                    </cite>
-                                </div>
-                                <p data-lang="hr">
-                                    Sadržaj web stranice Snow Festivala dobro je organiziran pa je lako pronaći upravo ono što
-                                    tražim. Osim toga, stranica je responzivna i odlično radi i na računalu i na
-                                    mobitelu. Bilo da tražite informacije ili usluge, ova stranica čini cijeli proces
-                                    jednostavnim i ugodnim.
-                                </p>
-                            </div> <!-- end testimonial-slider__slide -->
-
-                            <div class="testimonial-slider__slide swiper-slide">
-                                <div class="testimonial-slider__author">
-                                    <img loading="lazy" decoding="async" src="images/avatars/nicola_capobianco.webp" alt="Author image"
-                                         class="testimonial-slider__avatar">
-                                    <cite class="testimonial-slider__cite">
-                                        <strong>Nicola Capobianco</strong>
-                                        <span data-lang="hr">Generalni direktor, Capobianco d.o.o.</span>
-                                    </cite>
-                                </div>
-                                <p data-lang="hr">
-                                    Web stranica ReViv Plus dinamično je i šareno online iskustvo koje spaja snažnu estetiku s
-                                    dizajnom usmjerenim na korisnika. Nudi mnoštvo informacija, a pritom ostaje
-                                    zanimljiva i pristupačna. Bilo da ste potencijalni kupac ili vas samo zanima
-                                    dodatak prehrani, ova stranica ostavlja dobar prvi dojam i odlično predstavlja
-                                    vitalnost brenda i njegovu misiju usmjerenu na zdravlje.
-                                </p>
-                            </div> <!-- end testimonial-slider__slide -->
-
-                        </div> <!-- end swiper-wrapper -->
-
-                        <div class="swiper-pagination"></div>
-
-                    </div> <!-- end swiper-container -->
-
-                </div> <!-- end column -->
-            </div> <!-- end row testimonials -->
 
         </section> <!-- end s-works -->
 
@@ -819,7 +714,7 @@
             </div>
 
             <div class="ss-go-top">
-                <a class="smoothscroll" title="Na vrh / Back to Top" href="#top">
+                <a class="smoothscroll" title="Na vrh" aria-label="Na vrh" href="#top">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill-rule="evenodd" clip-rule="evenodd">
                         <path d="M11 2.206l-6.235 7.528-.765-.645 7.521-9 7.479 9-.764.646-6.236-7.53v21.884h-1v-21.883z"/>
                     </svg>

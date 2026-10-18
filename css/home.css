@@ -318,7 +318,7 @@ html[data-theme="light"] .contact-form__status {
 }
 
 html[data-theme="light"] .service-card__price {
-    color: var(--color-2);
+    color: var(--color-2-dark);
 }
 
 @media screen and (max-width: 1200px) {

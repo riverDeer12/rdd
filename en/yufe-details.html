@@ -30,9 +30,9 @@
     <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
     <link rel="manifest" href="../site.webmanifest">
-    <link rel="stylesheet" href="../css/project_details_style.css"/>
+    <link rel="stylesheet" href="../css/project_details_style.css?v=3"/>
     <link rel="stylesheet" href="../css/i18n.css?v=3"/>
-    <link rel="stylesheet" href="../css/theme.css"/>
+    <link rel="stylesheet" href="../css/theme.css?v=3"/>
     <link rel="stylesheet" href="../css/cta.css"/>
     <!-- language (hr / en / it / de) - runs before render so only one language is shown -->
     <script src="../js/i18n.js?v=2"></script>
@@ -54,8 +54,8 @@
             </a>
             <div class="lang-menu">
                 <button type="button" class="lang-menu__toggle" aria-haspopup="true" aria-expanded="false"
-                        aria-label="Jezik / Language / Lingua / Sprache"><span data-lang="en">EN</span><svg class="lang-menu__chevron" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-                <div class="lang-switch" role="group" aria-label="Jezik / Language / Lingua / Sprache">
+                        aria-label="Language"><span data-lang="en">EN</span><svg class="lang-menu__chevron" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="lang-switch" role="group" aria-label="Language">
                     <a class="lang-switch__btn" href="../yufe-details.html" hreflang="hr" lang="hr" data-set-lang="hr"><span class="lang-switch__code">HR</span><span class="lang-switch__name">Hrvatski</span></a>
                     <span class="lang-switch__sep">/</span>
                     <a class="lang-switch__btn is-active" href="../en/yufe-details.html" hreflang="en" lang="en" data-set-lang="en" aria-current="page"><span class="lang-switch__code">EN</span><span class="lang-switch__name">English</span></a>
@@ -66,7 +66,7 @@
                 </div>
             </div>
             <button type="button" class="theme-toggle" data-toggle-theme aria-pressed="false"
-                    aria-label="Tamna / svijetla tema - Dark / light theme" title="Tamna / svijetla tema - Dark / light theme">
+                    aria-label="Dark or light theme" title="Dark or light theme">
                 <svg class="theme-toggle__sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/></svg>
                 <svg class="theme-toggle__moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M20.2 14.6A8.5 8.5 0 0 1 9.4 3.8a8.5 8.5 0 1 0 10.8 10.8z"/></svg>
             </button>
@@ -107,12 +107,11 @@
 
         <!-- Main Image -->
         <div class="mb-16 rounded-lg overflow-hidden border border-border">
-            <img
+            <img width="2000" height="925"
                     src="../images/portfolio/yufe_home.webp"
-                    alt="YUFE project preview"
+                   
                     class="w-full aspect-video object-contain"
-                    loading="lazy"
-            />
+                    loading="lazy" alt="YUFE: home page of the innovation platform"/>
         </div>
 
         <section class="mb-16">
@@ -161,9 +160,9 @@
 
                 <div class="gallery-wrapper">
                     <div class="gallery-track">
-                        <img src="../images/portfolio/gallery/yufe_modal.webp" alt="Screenshot 1" loading="lazy"/>
-                        <img src="../images/portfolio/yufe_home.webp" alt="Screenshot 2" loading="lazy"/>
-                        <img src="../images/portfolio/yufe_about.webp" alt="Screenshot 3" loading="lazy"/>
+                        <img width="1872" height="790" src="../images/portfolio/gallery/yufe_modal.webp" loading="lazy" alt="YUFE: scientist search"/>
+                        <img width="2000" height="925" src="../images/portfolio/yufe_home.webp" loading="lazy" alt="YUFE: home page of the innovation platform"/>
+                        <img width="2000" height="921" src="../images/portfolio/yufe_about.webp" loading="lazy" alt="YUFE: about the platform"/>
                     </div>
                 </div>
 
@@ -222,7 +221,7 @@
 
     <!-- Lightbox -->
     <div class="lightbox" id="lightbox">
-        <button class="lightbox-close" aria-label="Zatvori / Close">&times;</button>
+        <button class="lightbox-close" aria-label="Close">&times;</button>
         <button class="lightbox-btn lightbox-prev" aria-label="Previous">‹</button>
         <img class="lightbox-img" id="lightbox-img" src="" alt="" />
         <button class="lightbox-btn lightbox-next" aria-label="Next">›</button>

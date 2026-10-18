@@ -26,9 +26,9 @@
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="manifest" href="site.webmanifest">
-    <link rel="stylesheet" href="css/project_details_style.css"/>
+    <link rel="stylesheet" href="css/project_details_style.css?v=3"/>
     <link rel="stylesheet" href="css/i18n.css?v=3"/>
-    <link rel="stylesheet" href="css/theme.css"/>
+    <link rel="stylesheet" href="css/theme.css?v=3"/>
     <link rel="stylesheet" href="css/cta.css"/>
     <!-- language (hr / en / it / de) - runs before render so only one language is shown -->
     <script src="js/i18n.js?v=2"></script>
@@ -46,8 +46,8 @@
             </a>
             <div class="lang-menu">
                 <button type="button" class="lang-menu__toggle" aria-haspopup="true" aria-expanded="false"
-                        aria-label="Jezik / Language / Lingua / Sprache"><span data-lang="hr">HR</span><span data-lang="en">EN</span><span data-lang="it">IT</span><span data-lang="de">DE</span><svg class="lang-menu__chevron" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-                <div class="lang-switch" role="group" aria-label="Jezik / Language / Lingua / Sprache">
+                        aria-label="Jezik" data-aria-label-hr="Jezik" data-aria-label-en="Language" data-aria-label-it="Lingua" data-aria-label-de="Sprache"><span data-lang="hr">HR</span><span data-lang="en">EN</span><span data-lang="it">IT</span><span data-lang="de">DE</span><svg class="lang-menu__chevron" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="lang-switch" role="group" aria-label="Jezik" data-aria-label-hr="Jezik" data-aria-label-en="Language" data-aria-label-it="Lingua" data-aria-label-de="Sprache">
                     <button type="button" class="lang-switch__btn" data-set-lang="hr"><span class="lang-switch__code">HR</span><span class="lang-switch__name">Hrvatski</span></button>
                     <span class="lang-switch__sep">/</span>
                     <button type="button" class="lang-switch__btn" data-set-lang="en"><span class="lang-switch__code">EN</span><span class="lang-switch__name">English</span></button>
@@ -58,7 +58,7 @@
                 </div>
             </div>
             <button type="button" class="theme-toggle" data-toggle-theme aria-pressed="false"
-                    aria-label="Tamna / svijetla tema - Dark / light theme" title="Tamna / svijetla tema - Dark / light theme">
+                    aria-label="Tamna ili svijetla tema" data-aria-label-hr="Tamna ili svijetla tema" data-aria-label-en="Dark or light theme" data-aria-label-it="Tema scuro o chiaro" data-aria-label-de="Dunkles oder helles Design" title="Tamna ili svijetla tema" data-title-hr="Tamna ili svijetla tema" data-title-en="Dark or light theme" data-title-it="Tema scuro o chiaro" data-title-de="Dunkles oder helles Design">
                 <svg class="theme-toggle__sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/></svg>
                 <svg class="theme-toggle__moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M20.2 14.6A8.5 8.5 0 0 1 9.4 3.8a8.5 8.5 0 1 0 10.8 10.8z"/></svg>
             </button>
@@ -102,11 +102,10 @@
 
         <!-- Main Image -->
         <div class="mb-16 rounded-lg overflow-hidden border border-border">
-            <img
+            <img width="1904" height="1142"
                     src="images/portfolio/paapica_home.webp"
-                    alt="Paapica - naslovna stranica"
-                    class="w-full aspect-video object-cover"
-            />
+                   
+                    class="w-full aspect-video object-cover" alt="Paapica: naslovna stranica s pretragom po namirnicama" data-alt-hr="Paapica: naslovna stranica s pretragom po namirnicama" data-alt-en="Paapica: home page with search by ingredients" data-alt-it="Paapica: pagina iniziale con ricerca per ingredienti" data-alt-de="Paapica: Startseite mit Zutatensuche"/>
         </div>
 
         <!-- Challenge & Solution -->
@@ -154,9 +153,9 @@
 
                 <div class="gallery-wrapper">
                     <div class="gallery-track">
-                        <img loading="lazy" decoding="async" src="images/portfolio/paapica_recipe.webp" alt="Paapica - recept s preračunom porcija i nutritivnim vrijednostima"/>
-                        <img loading="lazy" decoding="async" src="images/portfolio/paapica_import.webp" alt="Paapica - uvoz recepata iz Excela, fotografije ili videa"/>
-                        <img loading="lazy" decoding="async" src="images/portfolio/paapica_analytics.webp?v=2" alt="Paapica - analitika posjećenosti i najotvaranijih recepata"/>
+                        <img width="1904" height="1142" loading="lazy" decoding="async" src="images/portfolio/paapica_recipe.webp" alt="Paapica: recept s preračunom porcija i nutritivnim vrijednostima" data-alt-hr="Paapica: recept s preračunom porcija i nutritivnim vrijednostima" data-alt-en="Paapica: recipe with serving scaling and nutrition values" data-alt-it="Paapica: ricetta con calcolo delle porzioni e valori nutrizionali" data-alt-de="Paapica: Rezept mit Portionsrechner und Nährwerten"/>
+                        <img width="1904" height="1142" loading="lazy" decoding="async" src="images/portfolio/paapica_import.webp" alt="Paapica: uvoz recepata iz Excela, fotografije ili videa" data-alt-hr="Paapica: uvoz recepata iz Excela, fotografije ili videa" data-alt-en="Paapica: importing recipes from Excel, a photo or a video" data-alt-it="Paapica: importazione di ricette da Excel, foto o video" data-alt-de="Paapica: Rezeptimport aus Excel, Foto oder Video"/>
+                        <img width="1904" height="1036" loading="lazy" decoding="async" src="images/portfolio/paapica_analytics.webp?v=2" alt="Paapica: analitika posjećenosti i najotvaranijih recepata" data-alt-hr="Paapica: analitika posjećenosti i najotvaranijih recepata" data-alt-en="Paapica: analytics of visits and most-opened recipes" data-alt-it="Paapica: statistiche delle visite e delle ricette più aperte" data-alt-de="Paapica: Statistiken zu Besuchen und meistgeöffneten Rezepten"/>
                     </div>
                 </div>
 
@@ -270,7 +269,7 @@
 
     <!-- Lightbox -->
     <div class="lightbox" id="lightbox">
-        <button class="lightbox-close" aria-label="Zatvori / Close">&times;</button>
+        <button class="lightbox-close" aria-label="Zatvori" data-aria-label-hr="Zatvori" data-aria-label-en="Close" data-aria-label-it="Chiudi" data-aria-label-de="Schließen">&times;</button>
         <button class="lightbox-btn lightbox-prev" aria-label="Previous">‹</button>
         <img class="lightbox-img" id="lightbox-img" src="" alt="" />
         <button class="lightbox-btn lightbox-next" aria-label="Next">›</button>
