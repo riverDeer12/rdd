@@ -160,9 +160,9 @@ Published:
 - [x] Koliko košta izrada web stranice u 2026.? (blog-website-cost)
 - [x] Web stranica, web trgovina ili web aplikacija: što vam zapravo treba? (blog-website-or-web-app)
 - [x] Kako pripremiti upit za izradu softvera i dobiti točnu ponudu (blog-project-brief)
+- [x] Održavanje web stranice: što uključuje i kada se isplati (blog-website-maintenance)
 
 Next, in this order (→ service page the article leads to):
-- [ ] Održavanje web stranice: što uključuje i kada se isplati → web-development.html (održavanje od 50 €/mj.)
 - [ ] Domena i hosting: kako ih odabrati i zašto moraju biti na vaše ime → web-development.html
 - [ ] GDPR i kolačići: što web stranica male tvrtke mora imati → web-development.html
 - [ ] Web trgovina za mali biznis: plaćanje, dostava i pravila prije prve prodaje → web-development.html (web trgovina), primjer ReViv Plus
