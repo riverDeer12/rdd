@@ -1,0 +1,56 @@
+# Blog: raspored objava za sljedećih 52 tjedna
+
+Generirano naredbom `python3 tools/blog_day.py --plan` (dani se ne mijenjaju). Članak se piše tog dana u 6:58 i čeka pregled kao pull request.
+
+- 2026-10-21  srijeda
+- 2026-10-26  ponedjeljak
+- 2026-11-03  utorak
+- 2026-11-14  subota
+- 2026-11-19  četvrtak
+- 2026-11-26  četvrtak
+- 2026-12-02  srijeda
+- 2026-12-13  nedjelja
+- 2026-12-18  petak
+- 2026-12-24  četvrtak
+- 2026-12-28  ponedjeljak
+- 2027-01-10  nedjelja
+- 2027-01-14  četvrtak
+- 2027-01-18  ponedjeljak
+- 2027-01-29  petak
+- 2027-02-03  srijeda
+- 2027-02-11  četvrtak
+- 2027-02-21  nedjelja
+- 2027-02-24  srijeda
+- 2027-03-01  ponedjeljak
+- 2027-03-08  ponedjeljak
+- 2027-03-17  srijeda
+- 2027-03-25  četvrtak
+- 2027-04-03  subota
+- 2027-04-07  srijeda
+- 2027-04-17  subota
+- 2027-04-21  srijeda
+- 2027-04-28  srijeda
+- 2027-05-07  petak
+- 2027-05-12  srijeda
+- 2027-05-22  subota
+- 2027-05-29  subota
+- 2027-06-01  utorak
+- 2027-06-09  srijeda
+- 2027-06-18  petak
+- 2027-06-22  utorak
+- 2027-06-28  ponedjeljak
+- 2027-07-11  nedjelja
+- 2027-07-14  srijeda
+- 2027-07-24  subota
+- 2027-07-28  srijeda
+- 2027-08-05  četvrtak
+- 2027-08-10  utorak
+- 2027-08-20  petak
+- 2027-08-28  subota
+- 2027-09-05  nedjelja
+- 2027-09-06  ponedjeljak
+- 2027-09-17  petak
+- 2027-09-20  ponedjeljak
+- 2027-10-03  nedjelja
+- 2027-10-09  subota
+- 2027-10-11  ponedjeljak
