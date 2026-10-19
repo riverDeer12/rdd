@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>RDD Software blog</title>
+    <link>https://rdd.software/it/blog.html</link>
+    <description>Consigli pratici su siti web, negozi online e app: prezzi, scelta della soluzione giusta e preparazione della richiesta. Di RDD Software, Fiume.</description>
+    <language>it</language>
+    <atom:link href="https://rdd.software/it/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Manutenzione del sito web: cosa comprende e quando conviene</title>
+      <link>https://rdd.software/it/blog-website-maintenance.html</link>
+      <guid isPermaLink="true">https://rdd.software/it/blog-website-maintenance.html</guid>
+      <pubDate>Mon, 19 Oct 2026 07:00:00 +0000</pubDate>
+      <description>Aggiornamenti, backup, piccole modifiche e supporto: cosa comprende davvero la manutenzione di un sito, quando conviene e quando puoi farne a meno.</description>
+    </item>
+    <item>
+      <title>Quanto costa un sito web nel 2026?</title>
+      <link>https://rdd.software/it/blog-website-cost.html</link>
+      <guid isPermaLink="true">https://rdd.software/it/blog-website-cost.html</guid>
+      <pubDate>Thu, 15 Oct 2026 07:00:00 +0000</pubDate>
+      <description>Da cosa dipende il prezzo di un sito o di un negozio online, quali costi arrivano dopo la pubblicazione e cosa controllare quando confronti le offerte.</description>
+    </item>
+    <item>
+      <title>Sito web, negozio online o applicazione web: di cosa hai davvero bisogno?</title>
+      <link>https://rdd.software/it/blog-website-or-web-app.html</link>
+      <guid isPermaLink="true">https://rdd.software/it/blog-website-or-web-app.html</guid>
+      <pubDate>Thu, 15 Oct 2026 07:00:00 +0000</pubDate>
+      <description>Le differenze tra le tre soluzioni più comuni, spiegate con progetti reali e domande che ti aiutano a decidere.</description>
+    </item>
+    <item>
+      <title>Come preparare una richiesta per un progetto software e ottenere un preventivo preciso</title>
+      <link>https://rdd.software/it/blog-project-brief.html</link>
+      <guid isPermaLink="true">https://rdd.software/it/blog-project-brief.html</guid>
+      <pubDate>Thu, 15 Oct 2026 07:00:00 +0000</pubDate>
+      <description>Cosa sapere prima di inviare una richiesta, con un modello da copiare e gli errori più comuni.</description>
+    </item>
+  </channel>
+</rss>

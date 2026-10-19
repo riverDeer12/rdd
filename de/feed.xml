@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>RDD Software blog</title>
+    <link>https://rdd.software/de/blog.html</link>
+    <description>Praktische Tipps zu Websites, Onlineshops und Apps: Preise, die richtige Lösung und die Vorbereitung einer Anfrage. Von RDD Software aus Rijeka.</description>
+    <language>de</language>
+    <atom:link href="https://rdd.software/de/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Website-Wartung: was dazugehört und wann sie sich lohnt</title>
+      <link>https://rdd.software/de/blog-website-maintenance.html</link>
+      <guid isPermaLink="true">https://rdd.software/de/blog-website-maintenance.html</guid>
+      <pubDate>Mon, 19 Oct 2026 07:00:00 +0000</pubDate>
+      <description>Updates, Backups, kleine Änderungen und Support: was Website-Wartung wirklich umfasst, wann sie sich lohnt und wann Sie darauf verzichten können.</description>
+    </item>
+    <item>
+      <title>Was kostet eine Website im Jahr 2026?</title>
+      <link>https://rdd.software/de/blog-website-cost.html</link>
+      <guid isPermaLink="true">https://rdd.software/de/blog-website-cost.html</guid>
+      <pubDate>Thu, 15 Oct 2026 07:00:00 +0000</pubDate>
+      <description>Wovon der Preis einer Website oder eines Onlineshops abhängt, welche Kosten nach dem Launch anfallen und worauf Sie beim Vergleich von Angeboten achten sollten.</description>
+    </item>
+    <item>
+      <title>Website, Onlineshop oder Web-App: Was brauchen Sie wirklich?</title>
+      <link>https://rdd.software/de/blog-website-or-web-app.html</link>
+      <guid isPermaLink="true">https://rdd.software/de/blog-website-or-web-app.html</guid>
+      <pubDate>Thu, 15 Oct 2026 07:00:00 +0000</pubDate>
+      <description>Die Unterschiede zwischen den drei häufigsten Lösungen, erklärt an echten Projekten, mit Fragen, die Ihnen bei der Entscheidung helfen.</description>
+    </item>
+    <item>
+      <title>So bereiten Sie eine Softwareanfrage vor und erhalten ein genaues Angebot</title>
+      <link>https://rdd.software/de/blog-project-brief.html</link>
+      <guid isPermaLink="true">https://rdd.software/de/blog-project-brief.html</guid>
+      <pubDate>Thu, 15 Oct 2026 07:00:00 +0000</pubDate>
+      <description>Eine Checkliste für die Zeit vor der Anfrage, mit einer Vorlage zum Kopieren und den häufigsten Fehlern.</description>
+    </item>
+  </channel>
+</rss>

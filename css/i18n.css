@@ -353,3 +353,66 @@ html.i18n-pending body {
         display: inline;
     }
 }
+
+/* --------------------------------------------------------------------
+ * footer navigation (services, company, follow us) on the main site
+ * -------------------------------------------------------------------- */
+.ss-footer-nav-row {
+    margin-bottom: var(--vspace-1_5);
+}
+
+.ss-footer-nav {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 3.2rem;
+    padding-bottom: var(--vspace-1);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.ss-footer-nav__title {
+    margin: 0 0 1.2rem;
+    font-family: var(--font-1);
+    font-size: 1.2rem;
+    font-weight: 700;
+    line-height: 1.6;
+    letter-spacing: .3em;
+    text-transform: uppercase;
+    color: var(--color-text-dark);
+}
+
+.ss-footer-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.ss-footer-nav li {
+    margin: 0 0 .6rem;
+    padding-left: 0;
+    font-size: 1.5rem;
+    line-height: 1.6;
+}
+
+.ss-footer-nav a {
+    display: inline-flex;
+    align-items: center;
+    gap: .8rem;
+    color: var(--color-text);
+}
+
+.ss-footer-nav a:hover,
+.ss-footer-nav a:focus {
+    color: var(--color-text-dark);
+}
+
+.ss-footer-nav__icon {
+    width: 16px;
+    height: 16px;
+}
+
+@media screen and (max-width: 600px) {
+    .ss-footer-nav {
+        grid-template-columns: 1fr;
+        gap: 2.4rem;
+    }
+}

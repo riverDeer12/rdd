@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>RDD Software blog</title>
+    <link>https://rdd.software/en/blog.html</link>
+    <description>Practical advice on building websites, online shops and apps: prices, choosing the right solution and preparing a brief. By RDD Software from Rijeka.</description>
+    <language>en</language>
+    <atom:link href="https://rdd.software/en/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Website maintenance: what it covers and when it pays off</title>
+      <link>https://rdd.software/en/blog-website-maintenance.html</link>
+      <guid isPermaLink="true">https://rdd.software/en/blog-website-maintenance.html</guid>
+      <pubDate>Mon, 19 Oct 2026 07:00:00 +0000</pubDate>
+      <description>Updates, backups, small changes and support: what website maintenance really covers, when it pays off and when you can do without it.</description>
+    </item>
+    <item>
+      <title>How much does a website cost in 2026?</title>
+      <link>https://rdd.software/en/blog-website-cost.html</link>
+      <guid isPermaLink="true">https://rdd.software/en/blog-website-cost.html</guid>
+      <pubDate>Thu, 15 Oct 2026 07:00:00 +0000</pubDate>
+      <description>What drives the price of a website or online shop, which costs come after launch and what to look for when you compare offers.</description>
+    </item>
+    <item>
+      <title>Website, online shop or web app: what do you actually need?</title>
+      <link>https://rdd.software/en/blog-website-or-web-app.html</link>
+      <guid isPermaLink="true">https://rdd.software/en/blog-website-or-web-app.html</guid>
+      <pubDate>Thu, 15 Oct 2026 07:00:00 +0000</pubDate>
+      <description>The differences between the three most common solutions, explained with real projects and questions that help you decide.</description>
+    </item>
+    <item>
+      <title>How to prepare a software project brief and get an accurate quote</title>
+      <link>https://rdd.software/en/blog-project-brief.html</link>
+      <guid isPermaLink="true">https://rdd.software/en/blog-project-brief.html</guid>
+      <pubDate>Thu, 15 Oct 2026 07:00:00 +0000</pubDate>
+      <description>A checklist of what to know before you send an enquiry, with a template you can copy and the most common mistakes.</description>
+    </item>
+  </channel>
+</rss>

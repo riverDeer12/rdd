@@ -14,7 +14,8 @@ This script turns each of them into one static page per language:
 so search engines see a separate, single-language URL for every version.
 Each generated page keeps only its own language and gets its own <title>,
 meta description, canonical URL and hreflang links; the language switcher
-becomes plain links between the versions. sitemap.xml is rebuilt as well.
+becomes plain links between the versions. sitemap.xml and the blog's RSS
+feeds (feed.xml, en/feed.xml, ...) are rebuilt as well.
 
 GitHub Pages serves the repository as it is, so the generated files are
 committed too. The "Build pages" workflow (.github/workflows/build.yml)
@@ -35,10 +36,13 @@ Page conventions in src/:
 """
 
 import datetime
+import email.utils
+import html
 import os
 import re
 import sys
 from html.parser import HTMLParser
+from xml.sax.saxutils import escape as xml_escape
 
 ROOT = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
 SRC = os.path.join(ROOT, 'src')
@@ -261,8 +265,9 @@ def render(text, page, lang, pages):
         '\n    <meta property="og:title" content="%s">'
         '\n    <meta property="og:description" content="%s">'
         '\n    <meta property="og:url" content="%s">'
+        '\n    <link rel="alternate" type="application/rss+xml" title="RDD Software blog" href="%s">'
     ) % (description, page_url(page, lang), alternates, page_url(page, X_DEFAULT),
-         OG_LOCALE[lang], title, description, page_url(page, lang))
+         OG_LOCALE[lang], title, description, page_url(page, lang), feed_url(lang))
     edits.append((title_el.end, title_el.end, head))
 
     # apply from the end so earlier offsets stay valid
@@ -282,6 +287,56 @@ def render(text, page, lang, pages):
 # --------------------------------------------------------------------
 # sitemap
 # --------------------------------------------------------------------
+def feed_url(lang):
+    return SITE + ('' if lang == DEFAULT_LANG else lang + '/') + 'feed.xml'
+
+
+# --------------------------------------------------------------------
+# RSS feed of the blog, one per language (from the list in src/blog.html)
+# --------------------------------------------------------------------
+FEED_LANGUAGE = {'hr': 'hr-HR', 'en': 'en', 'it': 'it', 'de': 'de'}
+ITEM = re.compile(r'<time datetime="(\d{4}-\d{2}-\d{2})">.*?<h2 class="blog-list__title"><a href="([^"]+)\.html">(.*?)</a></h2>'
+                  r'\s*<p class="blog-list__excerpt">(.*?)</p>', re.S)
+
+
+def write_feeds():
+    blog = open(os.path.join(SRC, 'blog.html'), encoding='utf-8').read()
+    for lang in LANGS:
+        start = blog.index('<div class="page-body" data-lang="%s">' % lang)
+        block = blog[start:blog.index('</ul>', start)]
+        description = raw_attr(blog[:blog.index('>', blog.index('<html'))], 'data-description-' + lang)
+        text = lambda s: xml_escape(html.unescape(re.sub(r'<[^>]+>', '', s)).strip())
+        items = []
+        for date, slug, title, excerpt in ITEM.findall(block):
+            day = datetime.datetime.strptime(date, '%Y-%m-%d').replace(hour=7, tzinfo=datetime.timezone.utc)
+            link = page_url(slug + '.html', lang)
+            items.append(
+                '    <item>\n'
+                '      <title>%s</title>\n'
+                '      <link>%s</link>\n'
+                '      <guid isPermaLink="true">%s</guid>\n'
+                '      <pubDate>%s</pubDate>\n'
+                '      <description>%s</description>\n'
+                '    </item>' % (text(title), link, link, email.utils.format_datetime(day), text(excerpt)))
+        feed = (
+            '<?xml version="1.0" encoding="UTF-8"?>\n'
+            '<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">\n'
+            '  <channel>\n'
+            '    <title>RDD Software blog</title>\n'
+            '    <link>%s</link>\n'
+            '    <description>%s</description>\n'
+            '    <language>%s</language>\n'
+            '    <atom:link href="%s" rel="self" type="application/rss+xml"/>\n'
+            '%s\n'
+            '  </channel>\n'
+            '</rss>\n') % (page_url('blog.html', lang), text(description), FEED_LANGUAGE[lang],
+                            feed_url(lang), '\n'.join(items))
+        folder = ROOT if lang == DEFAULT_LANG else os.path.join(ROOT, lang)
+        path = os.path.join(folder, 'feed.xml')
+        if not os.path.exists(path) or open(path, encoding='utf-8').read() != feed:
+            open(path, 'w', encoding='utf-8').write(feed)
+
+
 def write_sitemap(pages, changed):
     path = os.path.join(ROOT, 'sitemap.xml')
     previous = {}
@@ -326,6 +381,8 @@ def main():
                 open(target, 'w', encoding='utf-8').write(out)
                 changed.add((page, lang))
     write_sitemap(pages, changed)
+    if 'blog.html' in pages:
+        write_feeds()
     print('built %d pages x %d languages, %d files changed' % (len(pages), len(LANGS), len(changed)))
 
 

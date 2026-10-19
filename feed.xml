@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>RDD Software blog</title>
+    <link>https://rdd.software/blog.html</link>
+    <description>Praktični savjeti o izradi web stranica, web trgovina i aplikacija: cijene, odabir rješenja i priprema upita. Piše RDD Software iz Rijeke.</description>
+    <language>hr-HR</language>
+    <atom:link href="https://rdd.software/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Održavanje web stranice: što uključuje i kada se isplati</title>
+      <link>https://rdd.software/blog-website-maintenance.html</link>
+      <guid isPermaLink="true">https://rdd.software/blog-website-maintenance.html</guid>
+      <pubDate>Mon, 19 Oct 2026 07:00:00 +0000</pubDate>
+      <description>Ažuriranja, sigurnosne kopije, sitne izmjene i podrška: što održavanje web stranice stvarno uključuje, kada se isplati, a kada možete i bez njega.</description>
+    </item>
+    <item>
+      <title>Koliko košta izrada web stranice u 2026.?</title>
+      <link>https://rdd.software/blog-website-cost.html</link>
+      <guid isPermaLink="true">https://rdd.software/blog-website-cost.html</guid>
+      <pubDate>Thu, 15 Oct 2026 07:00:00 +0000</pubDate>
+      <description>O čemu ovisi cijena web stranice i web trgovine, koji troškovi dolaze nakon objave i na što pripaziti kad usporedite ponude.</description>
+    </item>
+    <item>
+      <title>Web stranica, web trgovina ili web aplikacija: što vam zapravo treba?</title>
+      <link>https://rdd.software/blog-website-or-web-app.html</link>
+      <guid isPermaLink="true">https://rdd.software/blog-website-or-web-app.html</guid>
+      <pubDate>Thu, 15 Oct 2026 07:00:00 +0000</pubDate>
+      <description>Razlike između tri najčešća rješenja na primjerima stvarnih projekata, s pitanjima koja vam pomažu odlučiti.</description>
+    </item>
+    <item>
+      <title>Kako pripremiti upit za izradu softvera i dobiti točnu ponudu</title>
+      <link>https://rdd.software/blog-project-brief.html</link>
+      <guid isPermaLink="true">https://rdd.software/blog-project-brief.html</guid>
+      <pubDate>Thu, 15 Oct 2026 07:00:00 +0000</pubDate>
+      <description>Popis onoga što treba znati prije slanja upita, s predloškom koji možete kopirati i najčešćim pogreškama.</description>
+    </item>
+  </channel>
+</rss>
