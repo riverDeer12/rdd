@@ -1,6 +1,8 @@
-# E-mails info@rdd.software when a new blog article is waiting for review,
-# i.e. when a pull request from a blog/... branch is opened. Sent through
-# FormSubmit, the same service and alias the site's contact form uses.
+# Lets Milan know by e-mail when a new blog article is waiting for review:
+# when a pull request from a blog/... branch is opened, this posts a comment
+# that mentions him. GitHub e-mails @mentions (Settings > Notifications >
+# "Participating, @mentions and custom": Email), and since the comment comes
+# from github-actions, not from his own account, the e-mail is sent.
 
 name: Blog e-mail
 
@@ -8,40 +10,26 @@ on:
   pull_request:
     types: [opened, reopened]
     branches: [master]
-  workflow_dispatch:
-    inputs:
-      test:
-        description: 'Send a test e-mail'
-        default: 'yes'
 
 permissions:
-  contents: read
+  pull-requests: write
 
 jobs:
   notify:
-    if: github.event_name == 'workflow_dispatch' || startsWith(github.head_ref, 'blog/')
+    if: startsWith(github.head_ref, 'blog/')
     runs-on: ubuntu-latest
     steps:
-      - name: Send the e-mail
+      - name: Mention the owner on the pull request
         env:
-          TITLE: "${{ github.event.pull_request.title || 'Probna obavijest' }}"
-          URL: "${{ github.event.pull_request.html_url || format('{0}/{1}/actions', github.server_url, github.repository) }}"
-          BODY: "${{ github.event.pull_request.body || 'Ovo je probna poruka: obavijesti o novim člancima rade.' }}"
+          GH_TOKEN: ${{ github.token }}
+          PR: ${{ github.event.pull_request.html_url }}
+          OWNER: ${{ github.repository_owner }}
         run: |
-          python3 - <<'PY' > payload.json
-          import json, os
-          title = os.environ['TITLE'].removeprefix('Blog: ')
-          print(json.dumps({
-              '_subject': 'Novi članak čeka pregled: ' + title,
-              '_template': 'box',
-              '_captcha': 'false',
-              'Članak': title,
-              'Pregled i objava': os.environ['URL'],
-              'Kako objaviti': 'Otvorite link, pročitajte članak u kartici Files changed i kliknite Merge pull request. Članak se objavljuje automatski za par minuta.',
-              'Opis': os.environ['BODY'],
-          }, ensure_ascii=False))
-          PY
-          curl --fail-with-body -sS -X POST 'https://formsubmit.co/ajax/202370d6dcbdf3b48b293269997a54ce' \
-            -H 'Content-Type: application/json' -H 'Accept: application/json' \
-            -H 'Origin: https://rdd.software' -H 'Referer: https://rdd.software/' \
-            --data @payload.json
+          cat > comment.md <<MSG
+          @${OWNER} novi članak čeka vaš pregled.
+
+          **Kako objaviti:** otvorite karticu **Files changed** i pročitajte članak, a kad ste zadovoljni kliknite **Merge pull request**. Članak se objavljuje automatski za par minuta.
+
+          Ako nešto treba promijeniti, napišite komentar ovdje ili zatvorite pull request ako članak ne želite objaviti.
+          MSG
+          gh pr comment "$PR" --body-file comment.md
