@@ -1,0 +1,8 @@
+# GitHub Pages (Jekyll): publish only the built site.
+# src/ holds the multilingual sources (tools/build.py turns them into the
+# pages at the root and under en/, it/, de/); tools/ and docs/ are for
+# maintaining the site, not for visitors.
+exclude:
+  - src
+  - tools
+  - docs
