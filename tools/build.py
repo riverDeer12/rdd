@@ -29,6 +29,7 @@ Page conventions in src/:
   * data-ph-xx on inputs              -> placeholder in language xx
   * data-alt-xx on images             -> alt text in language xx
   * data-aria-label-xx, data-title-xx -> aria-label / title in language xx
+  * data-content-xx on <meta>         -> content in language xx (og:image per language)
   * data-label-xx on <option>         -> option text in language xx
   * buttons .lang-switch__btn[data-set-lang] -> links to the other versions
 """
@@ -217,7 +218,8 @@ def render(text, page, lang, pages):
         # data-<name>-xx="..." -> <attribute>="..." in language xx
         # (data-title-xx on <html> is the page title, handled above)
         for name, attribute in (('ph', 'placeholder'), ('alt', 'alt'),
-                                ('aria-label', 'aria-label'), ('title', 'title')):
+                                ('aria-label', 'aria-label'), ('title', 'title'),
+                                ('content', 'content')):
             if name == 'title' and el.tag == 'html':
                 continue
             value = raw_attr(tag, 'data-%s-%s' % (name, lang))

@@ -1,0 +1,64 @@
+# Shares each newly published blog article on the company's LinkedIn page.
+# Runs when a new src/blog-*.html reaches master (the article's pull request
+# was merged), waits until the page is live on rdd.software, then runs
+# tools/linkedin_post.py. Without the LinkedIn secrets, or if LinkedIn
+# refuses, that script opens an issue with the post ready to publish by hand.
+#
+# Secrets (Settings > Secrets and variables > Actions):
+#   LINKEDIN_ACCESS_TOKEN  token with the w_organization_social scope
+#   LINKEDIN_ORG_ID        the company page's number (linkedin.com/company/<id>/admin)
+
+name: LinkedIn
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'src/blog-*.html'
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  share:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Find newly added articles
+        id: new
+        env:
+          BEFORE: ${{ github.event.before }}
+        run: |
+          if [ -z "$BEFORE" ] || [ "$BEFORE" = "0000000000000000000000000000000000000000" ]; then
+            echo "slugs=" >> "$GITHUB_OUTPUT"; exit 0
+          fi
+          slugs=$(git diff --name-only --diff-filter=A "$BEFORE" "$GITHUB_SHA" -- 'src/blog-*.html' \
+                  | sed 's#src/\(.*\)\.html#\1#' | tr '\n' ' ')
+          echo "new articles: ${slugs:-none}"
+          echo "slugs=$slugs" >> "$GITHUB_OUTPUT"
+
+      - name: Wait until the articles are live
+        if: steps.new.outputs.slugs != ''
+        env:
+          SLUGS: ${{ steps.new.outputs.slugs }}
+        run: |
+          for slug in $SLUGS; do
+            for i in $(seq 1 40); do
+              code=$(curl -s -o /dev/null -w '%{http_code}' "https://rdd.software/$slug.html" || true)
+              [ "$code" = "200" ] && { echo "$slug is live"; break; }
+              sleep 15
+            done
+          done
+
+      - name: Share on LinkedIn
+        if: steps.new.outputs.slugs != ''
+        env:
+          SLUGS: ${{ steps.new.outputs.slugs }}
+          LINKEDIN_ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
+          LINKEDIN_ORG_ID: ${{ secrets.LINKEDIN_ORG_ID }}
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python3 tools/linkedin_post.py $SLUGS

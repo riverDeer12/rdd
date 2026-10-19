@@ -12,7 +12,8 @@ RDD Software - create a new page in src/ from two draft files.
 The header, footer, scripts and styles are taken from src/pricing.html,
 so the new page looks like the rest of the site; a call to action is
 added at the end of the content. With --blog the article is also listed
-at the top of src/blog.html in all four languages.
+at the top of src/blog.html in all four languages and gets its share
+images (tools/og_image.py).
 
 meta.json:
     {
@@ -159,6 +160,10 @@ def main():
     create_page(args.slug, meta, body)
     if args.blog:
         list_on_blog(args.slug, meta)
+        # share image per language (LinkedIn, link previews), see tools/og_image.py
+        sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+        import og_image
+        og_image.main([args.slug])
 
 
 if __name__ == '__main__':

@@ -15,8 +15,11 @@ person or Claude.
 2. Pick a short English slug starting with `blog-`, e.g. `blog-website-maintenance`.
 3. Write two draft files in a scratch directory outside the repository:
    `<slug>.meta.json` and `<slug>.main.html` (formats below).
-4. Create the page and list it on the blog:
+4. Create the page, list it on the blog and draw its share images
+   (images/og/<slug>-hr|en|it|de.jpg, used by LinkedIn and link previews):
    `python3 tools/new_page.py <slug> --parts <dir> --blog`
+   Commit the images too. When the pull request is merged, the LinkedIn
+   workflow shares the article on the company page by itself.
 5. Link to the new article from one or two related published articles or
    service pages (their "Pročitajte i / Read next / Leggi anche / Weiterlesen"
    list, all four languages), if it fits naturally.
