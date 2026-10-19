@@ -7,8 +7,11 @@ person or Claude.
 
 ## Steps
 
-1. Take the first topic under **Topics** that is not ticked. If it overlaps
-   heavily with a published article, take the next one.
+1. Take the first topic under **Topics** that is not ticked. Before writing,
+   read the titles and lead paragraphs of every published article (the
+   blog-*.html files in src/) and make sure the new one answers a different
+   question. If it would repeat one of them, skip it and take the next topic.
+   See **No repeats, always tied to a service** below.
 2. Pick a short English slug starting with `blog-`, e.g. `blog-website-maintenance`.
 3. Write two draft files in a scratch directory outside the repository:
    `<slug>.meta.json` and `<slug>.main.html` (formats below).
@@ -69,6 +72,25 @@ competitor prices, testimonials, awards, certifications or technologies.
   Snow Festival Sljeme, event website with programme and tickets
   (snow-festival-details.html).
 - Service pages: web-development.html, mobile-apps.html, custom-software.html.
+
+## No repeats, always tied to a service
+
+Every article exists to bring a reader closer to one of RDD's services, so:
+
+- Each topic below names the service page it leads to. The article must link
+  to that page in the body (where the reader naturally needs it, not only at
+  the end) and to pricing.html or the price estimate (pricing.html#estimate)
+  when prices come up. Where it fits, mention a real project from the list
+  above as an example and link to it.
+- One question per article. Do not repeat what a published article already
+  explains (prices, choosing between website and app, preparing a brief, and
+  each topic you tick from now on); link to that article instead.
+- Do not reuse a published title, slug, lead paragraph or the same outline.
+  A topic about something RDD does not offer (e.g. general marketing, social
+  media management, hardware) is out of scope.
+- When the list runs out, add 10 new topics in the same format, each tied
+  to a service on the price list, check them against the published list, and
+  continue.
 
 ## Writing rules
 
@@ -139,24 +161,26 @@ Published:
 - [x] Web stranica, web trgovina ili web aplikacija: što vam zapravo treba? (blog-website-or-web-app)
 - [x] Kako pripremiti upit za izradu softvera i dobiti točnu ponudu (blog-project-brief)
 
-Next, in this order:
-- [ ] Održavanje web stranice: što uključuje i kada se isplati
-- [ ] Domena i hosting: kako ih odabrati i zašto moraju biti na vaše ime
-- [ ] GDPR i kolačići: što web stranica male tvrtke mora imati
-- [ ] Koliko traje izrada web stranice i što je najčešće usporava
-- [ ] Web trgovina za mali biznis: plaćanje, dostava i pravila prije prve prodaje
-- [ ] Zašto krenuti s manjom prvom verzijom aplikacije (MVP)
-- [ ] Mobilna aplikacija ili web stranica prilagođena mobitelima?
-- [ ] Kako pripremiti tekstove i fotografije za novu web stranicu
-- [ ] Lokalni SEO: kako da vas pronađu kupci iz vašeg grada
-- [ ] Brzina web stranice: zašto je važna i kako je provjeriti
-- [ ] Višejezična web stranica: kada se isplati i kako je napraviti dobro
-- [ ] Digitalizacija malog poduzeća: od Excel tablica do vlastite aplikacije
-- [ ] Softver po mjeri ili gotovo rješenje: kako odlučiti
-- [ ] UX/UI dizajn i klikabilni prototip: zašto štede novac
-- [ ] Od upita do objave: kako izgleda suradnja s malim timom
-- [ ] Tko je vlasnik koda i dizajna: na što pripaziti u ugovoru
-- [ ] Online rezervacije i kalendar na web stranici
-- [ ] Automatizacija ponavljajućih poslova u malom poduzeću
-- [ ] Kako mjeriti uspjeh web stranice: Analytics i Search Console
-- [ ] Sigurnost web stranice: osnovne mjere koje svaka stranica treba
+Next, in this order (→ service page the article leads to):
+- [ ] Održavanje web stranice: što uključuje i kada se isplati → web-development.html (održavanje od 50 €/mj.)
+- [ ] Domena i hosting: kako ih odabrati i zašto moraju biti na vaše ime → web-development.html
+- [ ] GDPR i kolačići: što web stranica male tvrtke mora imati → web-development.html
+- [ ] Web trgovina za mali biznis: plaćanje, dostava i pravila prije prve prodaje → web-development.html (web trgovina), primjer ReViv Plus
+- [ ] Zašto krenuti s manjom prvom verzijom aplikacije (MVP) → custom-software.html
+- [ ] Mobilna aplikacija ili web stranica prilagođena mobitelima? → mobile-apps.html, primjer Apex Performance Fit
+- [ ] Kako pripremiti tekstove i fotografije za novu web stranicu → web-development.html
+- [ ] Lokalni SEO: kako da vas pronađu kupci iz vašeg grada → web-development.html
+- [ ] Brzina web stranice: zašto je važna i kako je provjeriti → web-development.html (održavanje)
+- [ ] Višejezična web stranica: kada se isplati i kako je napraviti dobro → web-development.html
+- [ ] Digitalizacija malog poduzeća: od Excel tablica do vlastite aplikacije → custom-software.html (analiza procesa od 600 €)
+- [ ] Softver po mjeri ili gotovo rješenje: kako odlučiti → custom-software.html
+- [ ] UX/UI dizajn i klikabilni prototip: zašto štede novac → mobile-apps.html i custom-software.html (UX/UI od 700 €)
+- [ ] Logo i vizualni identitet: što dobivate i zašto prije web stranice → pricing.html#branding (logo od 300 €, identitet od 800 €)
+- [ ] Od upita do objave: kako izgleda suradnja s malim timom → index.html#booking (besplatne konzultacije)
+- [ ] Tko je vlasnik koda i dizajna: na što pripaziti u ugovoru → terms.html i custom-software.html
+- [ ] Online rezervacije i kalendar na web stranici → web-development.html, primjer Apex Performance Fit
+- [ ] Automatizacija ponavljajućih poslova u malom poduzeću → custom-software.html (integracija i automatizacija 45 €/sat)
+- [ ] Kako mjeriti uspjeh web stranice: Analytics i Search Console → web-development.html
+- [ ] Sigurnost web stranice: osnovne mjere koje svaka stranica treba → web-development.html (održavanje)
+- [ ] Održavanje aplikacije nakon objave: ažuriranja, nove verzije iOS-a i Androida → mobile-apps.html (od 150 €/mj.)
+- [ ] Povezivanje sustava: kad web trgovina, knjigovodstvo i CRM razgovaraju → custom-software.html
