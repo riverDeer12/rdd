@@ -65,7 +65,7 @@ competitor prices, testimonials, awards, certifications or technologies.
   and public institutions in Primorje-Gorski Kotar County (rimap-details.html);
   YUFE, innovation platform for cross-border collaboration between academia
   and the economy across Europe (yufe-details.html);
-  Apex Performance Fit, web and iOS app connecting personal trainers and
+  Apex Performance Fit, web app with iOS and Android apps connecting personal trainers and
   athletes: scheduling, session credits, progress tracking
   (apex-performance-details.html);
   ReViv Plus, online shop for a dietary supplement with card payments and
