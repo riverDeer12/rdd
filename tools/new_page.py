@@ -13,7 +13,7 @@ The header, footer, scripts and styles are taken from src/pricing.html,
 so the new page looks like the rest of the site; a call to action is
 added at the end of the content. With --blog the article is also listed
 at the top of src/blog.html in all four languages and gets its share
-images (tools/og_image.py).
+images (tools/og_image.py), shown under the title and in the blog list.
 
 meta.json:
     {
@@ -88,7 +88,7 @@ def create_page(slug, meta, body):
     t = re.sub(r'\n<script src="js/estimate.js"></script>', '', t)               # price estimate
     t = re.sub(r'(<link rel="stylesheet" href="css/cta.css[^"]*">)',
                lambda m: m.group(1) + '\n    <link rel="stylesheet" href="css/home.css?v=3">'
-                                      '\n    <link rel="stylesheet" href="css/pages.css?v=3">', t, count=1)
+                                      '\n    <link rel="stylesheet" href="css/pages.css?v=4">', t, count=1)
     if meta.get('og_type'):
         t = t.replace('<meta property="og:type" content="website"/>',
                       '<meta property="og:type" content="%s"/>' % meta['og_type'], 1)
@@ -119,6 +119,22 @@ def create_page(slug, meta, body):
     print('wrote src/%s.html' % slug)
 
 
+def add_cover(slug):
+    """The share image under the article's title and date, one per language."""
+    path = os.path.join(ROOT, 'src', slug + '.html')
+    t = open(path, encoding='utf-8').read()
+    if 'class="article-cover"' in t:
+        return
+    meta = list(re.finditer(r'\n( *)<p class="article-meta" data-lang="de">.*?</p>', t))
+    if not meta:
+        sys.exit('main.html needs the <p class="article-meta" data-lang="xx"> lines (see docs/blog-guide.md)')
+    indent = meta[-1].group(1)
+    imgs = ''.join('\n%s<img class="article-cover" data-lang="%s" src="images/og/%s-%s.jpg" width="1200" height="630" decoding="async" alt="">'
+                   % (indent, l, slug, l) for l in LANGS)
+    t = t[:meta[-1].end()] + '\n' + imgs + t[meta[-1].end():]
+    open(path, 'w', encoding='utf-8').write(t)
+
+
 def list_on_blog(slug, meta):
     path = os.path.join(ROOT, 'src', 'blog.html')
     t = open(path, encoding='utf-8').read()
@@ -130,12 +146,15 @@ def list_on_blog(slug, meta):
         block = t.index('<div class="page-body" data-lang="%s">' % l)
         ul = t.index('<ul class="blog-list">', block) + len('<ul class="blog-list">')
         item = '''
-                            <li>
-                                <p class="article-meta"><time datetime="%s">%s</time><span>Milan Trbojević</span></p>
-                                <h2 class="blog-list__title"><a href="%s.html">%s</a></h2>
-                                <p class="blog-list__excerpt">%s</p>
-                                <a class="blog-list__more" href="%s.html">%s &rarr;</a>
-                            </li>''' % (meta['date'], long_date(day, l), slug, meta['headline'][l],
+                            <li class="blog-list__item">
+                                <a class="blog-list__thumb" href="%s.html" tabindex="-1" aria-hidden="true"><img src="images/og/%s-%s.jpg" width="1200" height="630" loading="lazy" decoding="async" alt=""></a>
+                                <div class="blog-list__text">
+                                    <p class="article-meta"><time datetime="%s">%s</time><span>Milan Trbojević</span></p>
+                                    <h2 class="blog-list__title"><a href="%s.html">%s</a></h2>
+                                    <p class="blog-list__excerpt">%s</p>
+                                    <a class="blog-list__more" href="%s.html">%s &rarr;</a>
+                                </div>
+                            </li>''' % (slug, slug, l, meta['date'], long_date(day, l), slug, meta['headline'][l],
                                         meta['excerpt'][l], slug, READ_MORE[l])
         t = t[:ul] + item + t[ul:]
     open(path, 'w', encoding='utf-8').write(t)
@@ -159,6 +178,7 @@ def main():
 
     create_page(args.slug, meta, body)
     if args.blog:
+        add_cover(args.slug)
         list_on_blog(args.slug, meta)
         # share image per language (LinkedIn, link previews), see tools/og_image.py
         sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
