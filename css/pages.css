@@ -262,6 +262,32 @@ html[data-theme="dark"] .page-related a:focus {
     padding-top: 0;
 }
 
+/* share image next to the text; above it on narrow screens */
+.blog-list__item {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: var(--vspace-0_75);
+    align-items: start;
+}
+
+.blog-list__thumb {
+    display: block;
+}
+
+.blog-list__thumb img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+}
+
+@media screen and (max-width: 700px) {
+    .blog-list__item {
+        grid-template-columns: 1fr;
+        gap: var(--vspace-0_5);
+    }
+}
+
 .page-body .blog-list__title {
     margin: var(--vspace-0_25) 0 var(--vspace-0_5);
     font-family: var(--font-1);
@@ -311,6 +337,15 @@ html[data-theme="dark"] .blog-list__title a:focus {
     .article-title {
         font-size: var(--text-xl);
     }
+}
+
+.article-cover {
+    display: block;
+    width: 100%;
+    max-width: 780px;
+    height: auto;
+    margin-top: var(--vspace-1);
+    border-radius: 8px;
 }
 
 .article-meta {

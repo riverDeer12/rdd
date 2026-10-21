@@ -16,7 +16,8 @@ person or Claude.
 3. Write two draft files in a scratch directory outside the repository:
    `<slug>.meta.json` and `<slug>.main.html` (formats below).
 4. Create the page, list it on the blog and draw its share images
-   (images/og/<slug>-hr|en|it|de.jpg, used by LinkedIn and link previews):
+   (images/og/<slug>-hr|en|it|de.jpg, shown under the article's title and in the
+   blog list, and used by LinkedIn and link previews):
    `python3 tools/new_page.py <slug> --parts <dir> --blog`
    Commit the images too. When the pull request is merged, the LinkedIn
    workflow shares the article on the company page by itself.
