@@ -348,6 +348,24 @@ html[data-theme="dark"] .blog-list__title a:focus {
     border-radius: 8px;
 }
 
+/* a photo in the middle of an article, with its source underneath */
+.article-figure {
+    margin: var(--vspace-1_5) 0;
+}
+
+.article-figure img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.article-figure figcaption {
+    margin-top: var(--vspace-0_25);
+    font-size: 1.3rem;
+    color: var(--color-text-light);
+}
+
 .article-meta {
     display: flex;
     flex-wrap: wrap;
