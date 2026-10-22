@@ -159,7 +159,9 @@ Copy the structure of an existing article exactly, for example the
   per language, one `<p class="article-meta" data-lang="xx">` per language with
   `<time datetime="YYYY-MM-DD">` (hr `19. listopada 2026.`, en `19 October 2026`,
   it `19 ottobre 2026`, de `19. Oktober 2026`), `Milan Trbojević` and the
-  reading time (`N min čitanja`, `N min read`, `N min di lettura`, `N Min. Lesezeit`);
+  reading time (`N min čitanja`, `N min read`, `N min di lettura`, `N Min. Lesezeit`).
+  Do not add a breadcrumb: tools/build.py puts Početna › Blog › title above the
+  pretitle, and its structured data in the head, by itself;
 - article section: one `<article class="article page-body" data-lang="xx">` per
   language with `<p class="page-lead">`, `<h2>`, `<p>`, lists, optionally one
   `table.price-table` and one `div.article-tip`, and the photo from step 3 in

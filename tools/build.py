@@ -33,11 +33,16 @@ Page conventions in src/:
   * data-content-xx on <meta>         -> content in language xx (og:image per language)
   * data-label-xx on <option>         -> option text in language xx
   * buttons .lang-switch__btn[data-set-lang] -> links to the other versions
+
+Every page except the home page also gets a breadcrumb trail (Home > Blog >
+article) above its title, with the same trail as BreadcrumbList structured
+data for search engines; see breadcrumbs() below.
 """
 
 import datetime
 import email.utils
 import html
+import json
 import os
 import re
 import sys
@@ -285,6 +290,85 @@ def render(text, page, lang, pages):
 
 
 # --------------------------------------------------------------------
+# breadcrumbs: Home > section > this page, visible and for search engines
+# --------------------------------------------------------------------
+CRUMB_HOME = {'hr': 'Početna', 'en': 'Home', 'it': 'Home', 'de': 'Startseite'}
+CRUMB_LABEL = {'hr': 'Putanja', 'en': 'Breadcrumb', 'it': 'Percorso', 'de': 'Navigationspfad'}
+SERVICES = {'web-development.html', 'mobile-apps.html', 'custom-software.html'}
+CRUMB_SECTION = {
+    'blog': ('blog.html', {'hr': 'Blog', 'en': 'Blog', 'it': 'Blog', 'de': 'Blog'}),
+    'services': ('index.html#services', {'hr': 'Usluge', 'en': 'Services', 'it': 'Servizi', 'de': 'Leistungen'}),
+    'projects': ('index.html#works', {'hr': 'Projekti', 'en': 'Projects', 'it': 'Progetti', 'de': 'Projekte'}),
+}
+
+
+def crumb_section(page):
+    if page.startswith('blog-'):
+        return 'blog'
+    if page in SERVICES:
+        return 'services'
+    if page.endswith('-details.html'):
+        return 'projects'
+    return None
+
+
+def breadcrumbs(out, page, lang):
+    """Add the trail above the page's <h1>: before the small label over
+    the title on the main pages, at the top of <main> on project pages."""
+    if page == 'index.html':
+        return out
+    h1 = re.search(r'<h1[^>]*>(.*?)</h1>', out, re.S)
+    if not h1:
+        raise ValueError('%s: no <h1> for the breadcrumb' % page)
+    # the title as one line: "Website-<br>Erstellung. <br>" -> "Website-Erstellung"
+    raw = re.sub(r'(-|&shy;)\s*<br\s*/?>\s*', lambda m: '-' if m.group(1) == '-' else '', h1.group(1))
+    name = re.sub(r'\s+', ' ', html.unescape(re.sub(r'<[^>]+>', ' ', raw))).strip()
+    name = re.sub(r'\s+([.,:;!?])', r'\1', name).rstrip('.').replace('\xad', '')
+    if page == 'blog.html':
+        name = 'Blog'
+
+    # links stay inside the language folder, so a page name is enough
+    trail = [(CRUMB_HOME[lang], './', page_url('index.html', lang))]
+    section = crumb_section(page)
+    if section:
+        href, labels = CRUMB_SECTION[section]
+        target, _, anchor = href.partition('#')
+        anchor = '#' + anchor if anchor else ''
+        trail.append((labels[lang], ('./' if target == 'index.html' else target) + anchor,
+                      page_url(target, lang) + anchor))
+    trail.append((name, None, page_url(page, lang)))
+
+    items = ''.join(
+        '<li><a href="%s">%s</a></li>' % (href, html.escape(label)) if href else
+        '<li aria-current="page">%s</li>' % html.escape(name)
+        for label, href, _ in trail)
+    nav = '<nav class="breadcrumb" aria-label="%s"><ol>%s</ol></nav>' % (CRUMB_LABEL[lang], items)
+
+    pretitle = out.rfind('<div class="text-pretitle with-line">', 0, h1.start())
+    main = out.rfind('<main', 0, h1.start())
+    if pretitle > main:
+        at = out.rfind('\n', 0, pretitle) + 1
+        indent = out[at:pretitle]
+    elif main != -1:
+        at = out.index('>', main) + 2
+        indent = ' ' * 8
+    else:
+        raise ValueError('%s: no place for the breadcrumb' % page)
+    out = out[:at] + indent + nav + '\n\n' + out[at:]
+
+    data = {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        'itemListElement': [
+            {'@type': 'ListItem', 'position': i + 1, 'name': label, 'item': url}
+            for i, (label, _, url) in enumerate(trail)],
+    }
+    ld = '    <script type="application/ld+json">%s</script>\n' % json.dumps(data, ensure_ascii=False)
+    head_end = out.index('</head>')
+    return out[:head_end] + ld + out[head_end:]
+
+
+# --------------------------------------------------------------------
 # sitemap
 # --------------------------------------------------------------------
 def feed_url(lang):
@@ -372,7 +456,7 @@ def main():
     for page in pages:
         text = open(os.path.join(SRC, page), encoding='utf-8').read().replace('\r\n', '\n')
         for lang in LANGS:
-            out = render(text, page, lang, pages)
+            out = breadcrumbs(render(text, page, lang, pages), page, lang)
             folder = ROOT if lang == DEFAULT_LANG else os.path.join(ROOT, lang)
             os.makedirs(folder, exist_ok=True)
             target = os.path.join(folder, page)

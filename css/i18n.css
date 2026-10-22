@@ -416,3 +416,65 @@ html.i18n-pending body {
         gap: 2.4rem;
     }
 }
+
+/* --------------------------------------------------------------------
+ * breadcrumb above the page title (added by tools/build.py)
+ * px, because project pages use a different root font size
+ * -------------------------------------------------------------------- */
+.breadcrumb {
+    margin: 0 0 24px;
+    font-family: var(--font-1);
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.breadcrumb ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+}
+
+.breadcrumb li {
+    margin: 0;
+    padding: 0;
+    color: var(--color-text-light, var(--muted-foreground));
+}
+
+.breadcrumb li + li::before {
+    content: "›";
+    padding: 0 8px;
+    color: var(--color-text-light, var(--muted-foreground));
+}
+
+.breadcrumb a,
+.breadcrumb a:visited {
+    color: var(--color-text, var(--foreground));
+    text-decoration: none;
+}
+
+.breadcrumb a:hover,
+.breadcrumb a:focus {
+    text-decoration: underline;
+}
+
+/* the current page: one line, shortened with an ellipsis if it is long */
+.breadcrumb li[aria-current] {
+    min-width: 0;
+    max-width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+@media screen and (max-width: 600px) {
+    .breadcrumb li[aria-current] {
+        flex-basis: 100%;
+    }
+
+    .breadcrumb li[aria-current]::before {
+        display: none;
+    }
+}

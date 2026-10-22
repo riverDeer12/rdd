@@ -366,6 +366,11 @@ html[data-theme="dark"] .blog-list__title a:focus {
     color: var(--color-text-light);
 }
 
+.article-figure figcaption a {
+    color: inherit;
+    text-decoration: underline;
+}
+
 .article-meta {
     display: flex;
     flex-wrap: wrap;

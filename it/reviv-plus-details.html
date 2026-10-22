@@ -32,13 +32,14 @@
     <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
     <link rel="manifest" href="../site.webmanifest">
     <link rel="stylesheet" href="../css/project_details_style.css?v=3"/>
-    <link rel="stylesheet" href="../css/i18n.css?v=5"/>
+    <link rel="stylesheet" href="../css/i18n.css?v=6"/>
     <link rel="stylesheet" href="../css/theme.css?v=3"/>
     <link rel="stylesheet" href="../css/cta.css"/>
     <!-- language (hr / en / it / de) - runs before render so only one language is shown -->
     <script src="../js/i18n.js?v=2"></script>
     <!-- light / dark theme - runs before render so the page does not flash -->
     <script src="../js/theme.js"></script>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://rdd.software/it/"}, {"@type": "ListItem", "position": 2, "name": "Progetti", "item": "https://rdd.software/it/#works"}, {"@type": "ListItem", "position": 3, "name": "ReViv Plus", "item": "https://rdd.software/it/reviv-plus-details.html"}]}</script>
 </head>
 <body class="dark">
 <div class="min-h-screen project-detail">
@@ -72,6 +73,8 @@
 
     <!-- Hero Section -->
     <main class="max-w-5xl mx-auto px-6 py-12">
+        <nav class="breadcrumb" aria-label="Percorso"><ol><li><a href="./">Home</a></li><li><a href="./#works">Progetti</a></li><li aria-current="page">ReViv Plus</li></ol></nav>
+
         <div class="mb-8">
             <div class="flex items-start justify-between mb-6">
                 <div>

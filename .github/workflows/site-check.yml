@@ -1,0 +1,62 @@
+# Checks the live site every Monday morning (tools/site_check.py): all pages
+# in every language, links and images (also to other websites), the contact
+# form's service and the booking calendar. When something is broken it opens
+# an issue that mentions Milan, so GitHub e-mails him (see blog-email.yml);
+# while that issue is open, later failures are added to it as comments, and
+# it is closed by itself once everything works again.
+# Run it by hand: Actions > Site check > Run workflow.
+
+name: Site check
+
+on:
+  schedule:
+    - cron: '17 5 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Check rdd.software
+        id: check
+        continue-on-error: true
+        run: python3 tools/site_check.py --report report.md
+
+      - name: Open, update or close the issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+          OWNER: ${{ github.repository_owner }}
+          OUTCOME: ${{ steps.check.outcome }}
+          RUN: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          TITLE="Provjera stranice: nešto ne radi"
+          OPEN=$(gh issue list --state open --search "\"$TITLE\" in:title" --json number --jq '.[0].number // empty')
+          if [ "$OUTCOME" = "success" ]; then
+            if [ -n "$OPEN" ]; then
+              gh issue close "$OPEN" --comment "Sve ponovno radi, provjera od $(date +%d.%m.%Y.) je prošla. ($RUN)"
+            fi
+            exit 0
+          fi
+          {
+            echo "@${OWNER} tjedna provjera rdd.software pronašla je problem."
+            echo
+            cat report.md 2>/dev/null || echo "Skripta za provjeru se srušila, pogledajte detalje."
+            echo
+            echo "Detalji: $RUN"
+          } > body.md
+          if [ -n "$OPEN" ]; then
+            gh issue comment "$OPEN" --body-file body.md
+          else
+            gh issue create --title "$TITLE" --body-file body.md
+          fi
+          exit 1
