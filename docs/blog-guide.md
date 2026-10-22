@@ -13,22 +13,31 @@ person or Claude.
    question. If it would repeat one of them, skip it and take the next topic.
    See **No repeats, always tied to a service** below.
 2. Pick a short English slug starting with `blog-`, e.g. `blog-website-maintenance`.
-3. Write two draft files in a scratch directory outside the repository:
+3. Find one free photo that fits the topic, for the middle of the article:
+   `python3 tools/blog_photo.py search "Unsplash <english words>"` lists
+   freely licensed photos on Wikimedia Commons (prefer the CC0 Unsplash ones),
+   then `python3 tools/blog_photo.py get "File:<title>.jpg" <slug>` saves it as
+   images/blog/<slug>.jpg and prints its author, licence and page. Choose a
+   photo that shows the subject plainly (a desk, a laptop, servers, a phone),
+   not a person posing for the camera, and not one already used on the blog.
+   If Commons does not answer after a few tries, write the article without
+   the photo and say so in the pull request description.
+4. Write two draft files in a scratch directory outside the repository:
    `<slug>.meta.json` and `<slug>.main.html` (formats below).
-4. Create the page, list it on the blog and draw its share images
+5. Create the page, list it on the blog and draw its share images
    (images/og/<slug>-hr|en|it|de.jpg, shown under the article's title and in the
    blog list, and used by LinkedIn and link previews):
    `python3 tools/new_page.py <slug> --parts <dir> --blog`
    Commit the images too. When the pull request is merged, the LinkedIn
    workflow shares the article on the company page by itself.
-5. Link to the new article from one or two related published articles or
+6. Link to the new article from one or two related published articles or
    service pages (their "Pročitajte i / Read next / Leggi anche / Weiterlesen"
    list, all four languages), if it fits naturally.
-6. Tick the topic below and add the slug next to it.
-7. `python3 tools/build.py` and `python3 tools/check_links.py` (must report 0 problems).
-8. Read the Croatian text once more as a client would. Fix anything that
+7. Tick the topic below and add the slug next to it.
+8. `python3 tools/build.py` and `python3 tools/check_links.py` (must report 0 problems).
+9. Read the Croatian text once more as a client would. Fix anything that
    sounds translated, salesy or invented.
-9. Commit on a branch `blog/<slug>`, push it and open a pull request into
+10. Commit on a branch `blog/<slug>`, push it and open a pull request into
    `master` titled `Blog: <Croatian title>`, with the Croatian lead paragraph
    and the list of languages in the description. Never push to `master`.
 
@@ -153,7 +162,13 @@ Copy the structure of an existing article exactly, for example the
   reading time (`N min čitanja`, `N min read`, `N min di lettura`, `N Min. Lesezeit`);
 - article section: one `<article class="article page-body" data-lang="xx">` per
   language with `<p class="page-lead">`, `<h2>`, `<p>`, lists, optionally one
-  `table.price-table` and one `div.article-tip`, then `<p class="article-author">`
+  `table.price-table` and one `div.article-tip`, and the photo from step 3 in
+  front of an `<h2>` near the middle (alt text describes the photo in that
+  language; the caption names the author, links the Commons page and gives the
+  licence; an unknown author is "nepoznati autor / unknown author / autore
+  sconosciuto / unbekannter Autor"):
+  `<figure class="article-figure"><img src="images/blog/<slug>.jpg" width="1200" height="…" loading="lazy" decoding="async" alt="…"><figcaption>Fotografija | Photo | Foto | Foto: <a href="<commons page>" rel="noopener">Author</a>, Unsplash (CC0)</figcaption></figure>`,
+  then `<p class="article-author">`
   and the "read next" list (`<h2>Pročitajte i</h2><ul class="page-related">…`);
 - the file ends with the closing lines
   `                </div>\n            </div>\n\n        </section> <!-- end s-page -->`.
