@@ -434,13 +434,13 @@ html[data-theme="light"] .article-tip {
     color: var(--color-text-light);
 }
 
-/* four projects read better as two rows of two than as three plus one */
-.project-links:has(> li:nth-child(4)) {
+/* exactly four projects read better as two rows of two than as three plus one */
+.project-links:has(> li:nth-child(4)):not(:has(> li:nth-child(5))) {
     grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 @media screen and (max-width: 900px) {
-    .project-links:has(> li:nth-child(4)) {
+    .project-links:has(> li:nth-child(4)):not(:has(> li:nth-child(5))) {
         grid-template-columns: 1fr;
     }
 }
