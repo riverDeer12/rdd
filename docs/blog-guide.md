@@ -69,7 +69,7 @@ competitor prices, testimonials, awards, certifications or technologies.
   enquiry form (index.html#contact), price list (pricing.html), terms (terms.html).
 - Projects (describe them only like this):
   Pulseboard, private web dashboard that collects Facebook, Instagram, TikTok
-  and YouTube analytics for several profiles in one place, refreshed daily
+  and YouTube analytics for several profiles in one place, refreshed automatically
   with read-only access (pulseboard-details.html);
   Paapica, public collection of healthy home recipes with search by
   ingredients, serving scaling, nutrition per serving and an admin side that
