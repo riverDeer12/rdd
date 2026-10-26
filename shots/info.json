@@ -1,0 +1,18 @@
+{
+  "desk": {
+    "status": 200,
+    "url": "https://pulseboard.click/about",
+    "title": "Pulseboard – private social media analytics dashboard"
+  },
+  "links": [
+    "https://developers.google.com/terms/api-services-user-data-policy",
+    "https://pulseboard.click/privacy",
+    "https://pulseboard.click/terms",
+    "https://pulseboard.click/login"
+  ],
+  "mob": {
+    "status": 200,
+    "url": "https://pulseboard.click/about",
+    "title": "Pulseboard – private social media analytics dashboard"
+  }
+}

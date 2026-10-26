@@ -1,0 +1,25 @@
+Pulseboard
+
+Private social media analytics dashboard
+
+Pulseboard is a private web application operated by RDD Software (Croatia). It collects the statistics of the owner's own social media accounts – YouTube, Instagram, Facebook and TikTok – into one dashboard, so the owner can see how their content performs without opening every platform separately.
+
+What the app does
+Shows followers per day, views per week and engagement rate for each connected account.
+Lists every post with its views, likes, comments, shares and average watch time, and compares the same video across platforms.
+Shows which posts bring visitors to the owner's online shop.
+Refreshes the numbers once a day and keeps their history.
+How Google user data is used
+
+The owner connects their own YouTube channel with Google Sign-In. Pulseboard requests read-only access (youtube.readonly and yt-analytics.readonly) and uses it only to read the channel's statistics and the list of its videos with their view, like, comment and share counts. Pulseboard never uploads, changes or deletes anything on YouTube, does not show ads, and does not share Google user data with anyone.
+
+Pulseboard's use and transfer of information received from Google APIs adheres to the Google API Services User Data Policy, including the Limited Use requirements.
+
+Who can use it
+
+Pulseboard is used only by its owner. It is not a public service and visitors cannot create accounts. The dashboard itself is behind a login.
+
+Privacy Policy
+Terms of Service
+Owner login
+Contact: info@rdd.software
