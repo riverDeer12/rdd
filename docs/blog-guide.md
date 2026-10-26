@@ -183,9 +183,9 @@ Published:
 - [x] Kako pripremiti upit za izradu softvera i dobiti točnu ponudu (blog-project-brief)
 - [x] Održavanje web stranice: što uključuje i kada se isplati (blog-website-maintenance)
 - [x] Domena i hosting: kako ih odabrati i zašto moraju biti na vaše ime (blog-domain-hosting)
+- [x] GDPR i kolačići: što web stranica male tvrtke mora imati (blog-gdpr-cookies)
 
 Next, in this order (→ service page the article leads to):
-- [ ] GDPR i kolačići: što web stranica male tvrtke mora imati → web-development.html
 - [ ] Web trgovina za mali biznis: plaćanje, dostava i pravila prije prve prodaje → web-development.html (web trgovina), primjer ReViv Plus
 - [ ] Zašto krenuti s manjom prvom verzijom aplikacije (MVP) → custom-software.html
 - [ ] Mobilna aplikacija ili web stranica prilagođena mobitelima? → mobile-apps.html, primjer Apex Performance Fit

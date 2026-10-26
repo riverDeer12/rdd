@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html class="no-js" lang="hr"
+      data-title-hr="GDPR i kolačići za web stranicu male tvrtke - RDD Software"
+      data-title-en="GDPR and cookies for a small business website - RDD Software"
+      data-title-it="GDPR e cookie per il sito di una piccola impresa - RDD Software"
+      data-title-de="DSGVO und Cookies für kleine Unternehmen - RDD Software"
+      data-description-hr="Što web stranica male tvrtke mora imati zbog GDPR-a: izjavu o privatnosti, obavijest o kolačićima s pravim izborom, obrazac bez suvišnih pitanja."
+      data-description-en="What a small business website needs for GDPR: a privacy policy, a cookie notice with a real choice and a form without unnecessary questions."
+      data-description-it="Cosa serve al sito di una piccola impresa per il GDPR: informativa sulla privacy, avviso sui cookie con vera scelta e un modulo senza domande inutili."
+      data-description-de="Was die Website eines kleinen Unternehmens für die DSGVO braucht: Datenschutzerklärung, Cookie-Hinweis mit echter Wahl und schlankes Formular.">
+<head>
+
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>GDPR i kolačići za web stranicu male tvrtke - RDD Software</title>
+
+    <!-- mobile specific metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Open Graph (for Facebook, LinkedIn, etc.) -->
+    <meta property="og:image" content="https://rdd.software/images/og/blog-gdpr-cookies-hr.jpg" data-content-hr="https://rdd.software/images/og/blog-gdpr-cookies-hr.jpg" data-content-en="https://rdd.software/images/og/blog-gdpr-cookies-en.jpg" data-content-it="https://rdd.software/images/og/blog-gdpr-cookies-it.jpg" data-content-de="https://rdd.software/images/og/blog-gdpr-cookies-de.jpg"/>
+    <meta property="og:type" content="article"/>
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="preload" href="css/fonts/public-sans-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="css/fonts/dm-serif-display-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="css/styles.css?v=4">
+    <link rel="stylesheet" href="css/i18n.css?v=6">
+    <link rel="stylesheet" href="css/theme.css?v=3">
+    <link rel="stylesheet" href="css/consent.css">
+    <link rel="stylesheet" href="css/cta.css">
+    <link rel="stylesheet" href="css/home.css?v=3">
+    <link rel="stylesheet" href="css/pages.css?v=5">
+
+    <!-- structured data for search engines, one per language -->
+    <script type="application/ld+json" data-lang="hr">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "GDPR i kolačići: što web stranica male tvrtke mora imati",
+        "description": "Što web stranica male tvrtke mora imati zbog GDPR-a: izjavu o privatnosti, obavijest o kolačićima s pravim izborom, obrazac bez suvišnih pitanja.",
+        "inLanguage": "hr",
+        "datePublished": "2026-10-26",
+        "dateModified": "2026-10-26",
+        "author": {
+            "@type": "Person",
+            "name": "Milan Trbojević"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "RDD Software",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://rdd.software/android-chrome-512x512.png"
+            }
+        },
+        "image": "https://rdd.software/images/og/blog-gdpr-cookies-hr.jpg",
+        "mainEntityOfPage": "https://rdd.software/blog-gdpr-cookies.html"
+    }
+    </script>
+    <script type="application/ld+json" data-lang="en">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "GDPR and cookies: what a small business website needs",
+        "description": "What a small business website needs for GDPR: a privacy policy, a cookie notice with a real choice and a form without unnecessary questions.",
+        "inLanguage": "en",
+        "datePublished": "2026-10-26",
+        "dateModified": "2026-10-26",
+        "author": {
+            "@type": "Person",
+            "name": "Milan Trbojević"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "RDD Software",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://rdd.software/android-chrome-512x512.png"
+            }
+        },
+        "image": "https://rdd.software/images/og/blog-gdpr-cookies-en.jpg",
+        "mainEntityOfPage": "https://rdd.software/en/blog-gdpr-cookies.html"
+    }
+    </script>
+    <script type="application/ld+json" data-lang="it">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "GDPR e cookie: cosa deve avere il sito di una piccola impresa",
+        "description": "Cosa serve al sito di una piccola impresa per il GDPR: informativa sulla privacy, avviso sui cookie con vera scelta e un modulo senza domande inutili.",
+        "inLanguage": "it",
+        "datePublished": "2026-10-26",
+        "dateModified": "2026-10-26",
+        "author": {
+            "@type": "Person",
+            "name": "Milan Trbojević"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "RDD Software",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://rdd.software/android-chrome-512x512.png"
+            }
+        },
+        "image": "https://rdd.software/images/og/blog-gdpr-cookies-it.jpg",
+        "mainEntityOfPage": "https://rdd.software/it/blog-gdpr-cookies.html"
+    }
+    </script>
+    <script type="application/ld+json" data-lang="de">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "DSGVO und Cookies: was die Website eines kleinen Unternehmens braucht",
+        "description": "Was die Website eines kleinen Unternehmens für die DSGVO braucht: Datenschutzerklärung, Cookie-Hinweis mit echter Wahl und schlankes Formular.",
+        "inLanguage": "de",
+        "datePublished": "2026-10-26",
+        "dateModified": "2026-10-26",
+        "author": {
+            "@type": "Person",
+            "name": "Milan Trbojević"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "RDD Software",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://rdd.software/android-chrome-512x512.png"
+            }
+        },
+        "image": "https://rdd.software/images/og/blog-gdpr-cookies-de.jpg",
+        "mainEntityOfPage": "https://rdd.software/de/blog-gdpr-cookies.html"
+    }
+    </script>
+
+    <!-- language (hr / en / it / de) - runs before render so only one language is shown
+    ================================================== -->
+    <script src="js/i18n.js?v=2"></script>
+    <!-- light / dark theme - runs before render so the page does not flash -->
+    <script src="js/theme.js"></script>
+
+    <!-- favicons
+    ================================================== -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+</head>
+
+<body id="top">
+
+
+
+
+<!-- # page wrap
+================================================== -->
+<div class="s-pagewrap">
+
+    <div class="circles">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+
+    <!-- ## site header
+    ================================================== -->
+    <header class="s-header">
+
+        <div class="header-mobile">
+            <span class="mobile-home-link"><a href="index.html">RDD.</a></span>
+            <div class="lang-menu">
+                <button type="button" class="lang-menu__toggle" aria-haspopup="true" aria-expanded="false"
+                        aria-label="Jezik" data-aria-label-hr="Jezik" data-aria-label-en="Language" data-aria-label-it="Lingua" data-aria-label-de="Sprache"><span data-lang="hr">HR</span><span data-lang="en">EN</span><span data-lang="it">IT</span><span data-lang="de">DE</span><svg class="lang-menu__chevron" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="lang-switch" role="group" aria-label="Jezik" data-aria-label-hr="Jezik" data-aria-label-en="Language" data-aria-label-it="Lingua" data-aria-label-de="Sprache">
+                    <button type="button" class="lang-switch__btn" data-set-lang="hr"><span class="lang-switch__code">HR</span><span class="lang-switch__name">Hrvatski</span></button>
+                    <span class="lang-switch__sep">/</span>
+                    <button type="button" class="lang-switch__btn" data-set-lang="en"><span class="lang-switch__code">EN</span><span class="lang-switch__name">English</span></button>
+                    <span class="lang-switch__sep">/</span>
+                    <button type="button" class="lang-switch__btn" data-set-lang="it"><span class="lang-switch__code">IT</span><span class="lang-switch__name">Italiano</span></button>
+                    <span class="lang-switch__sep">/</span>
+                    <button type="button" class="lang-switch__btn" data-set-lang="de"><span class="lang-switch__code">DE</span><span class="lang-switch__name">Deutsch</span></button>
+                </div>
+            </div>
+            <button type="button" class="theme-toggle" data-toggle-theme aria-pressed="false"
+                    aria-label="Tamna ili svijetla tema" data-aria-label-hr="Tamna ili svijetla tema" data-aria-label-en="Dark or light theme" data-aria-label-it="Tema scuro o chiaro" data-aria-label-de="Dunkles oder helles Design" title="Tamna ili svijetla tema" data-title-hr="Tamna ili svijetla tema" data-title-en="Dark or light theme" data-title-it="Tema scuro o chiaro" data-title-de="Dunkles oder helles Design">
+                <svg class="theme-toggle__sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/></svg>
+                <svg class="theme-toggle__moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M20.2 14.6A8.5 8.5 0 0 1 9.4 3.8a8.5 8.5 0 1 0 10.8 10.8z"/></svg>
+            </button>
+            <a class="mobile-menu-toggle" href="#0"><span>Menu</span></a>
+        </div>
+
+        <div class="row wide main-nav-wrap">
+            <nav class="column lg-12 main-nav">
+                <ul>
+                    <li><a href="index.html" class="home-link">RDD.</a></li>
+                    <li><a href="index.html#intro"><span data-lang="hr">Početna</span><span data-lang="en">Intro</span><span data-lang="it">Intro</span><span data-lang="de">Start</span></a></li>
+                    <li><a href="index.html#about"><span data-lang="hr">O nama</span><span data-lang="en">About</span><span data-lang="it">Chi siamo</span><span data-lang="de">Über uns</span></a></li>
+                    <li><a href="index.html#works"><span data-lang="hr">Projekti</span><span data-lang="en">Works</span><span data-lang="it">Progetti</span><span data-lang="de">Projekte</span></a></li>
+                    <li><a href="pricing.html"><span data-lang="hr">Cjenik</span><span data-lang="en">Pricing</span><span data-lang="it">Prezzi</span><span data-lang="de">Preise</span></a></li>
+                    <li class="current"><a href="blog.html">Blog</a></li>
+                    <li><a href="index.html#contact"><span data-lang="hr">Kontakt</span><span data-lang="en">Say Hello</span><span data-lang="it">Contatti</span><span data-lang="de">Kontakt</span></a></li>
+                    <li class="lang-switch-item">
+                        <div class="lang-switch" role="group" aria-label="Jezik" data-aria-label-hr="Jezik" data-aria-label-en="Language" data-aria-label-it="Lingua" data-aria-label-de="Sprache">
+                            <button type="button" class="lang-switch__btn" data-set-lang="hr"><span class="lang-switch__code">HR</span><span class="lang-switch__name">Hrvatski</span></button>
+                            <span class="lang-switch__sep">/</span>
+                            <button type="button" class="lang-switch__btn" data-set-lang="en"><span class="lang-switch__code">EN</span><span class="lang-switch__name">English</span></button>
+                            <span class="lang-switch__sep">/</span>
+                            <button type="button" class="lang-switch__btn" data-set-lang="it"><span class="lang-switch__code">IT</span><span class="lang-switch__name">Italiano</span></button>
+                            <span class="lang-switch__sep">/</span>
+                            <button type="button" class="lang-switch__btn" data-set-lang="de"><span class="lang-switch__code">DE</span><span class="lang-switch__name">Deutsch</span></button>
+                        </div>
+                    </li>
+                    <li class="theme-toggle-item">
+                        <button type="button" class="theme-toggle" data-toggle-theme aria-pressed="false"
+                                aria-label="Tamna ili svijetla tema" data-aria-label-hr="Tamna ili svijetla tema" data-aria-label-en="Dark or light theme" data-aria-label-it="Tema scuro o chiaro" data-aria-label-de="Dunkles oder helles Design" title="Tamna ili svijetla tema" data-title-hr="Tamna ili svijetla tema" data-title-en="Dark or light theme" data-title-it="Tema scuro o chiaro" data-title-de="Dunkles oder helles Design">
+                            <svg class="theme-toggle__sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/></svg>
+                            <svg class="theme-toggle__moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M20.2 14.6A8.5 8.5 0 0 1 9.4 3.8a8.5 8.5 0 1 0 10.8 10.8z"/></svg>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+    </header> <!-- end s-header -->
+
+
+    <!-- ## main content
+    ==================================================- -->
+    <main class="s-content">
+
+        <!-- ### intro
+        ================================================== -->
+        <section class="s-intro">
+
+            <div class="row intro-content" style="min-height: 0;">
+
+                <div class="column">
+                    <div class="text-pretitle with-line">
+                        Blog
+                    </div>
+
+                    <h1 class="article-title" data-lang="hr">GDPR i kolačići: što web stranica male tvrtke mora imati</h1>
+                    <h1 class="article-title" data-lang="en">GDPR and cookies: what a small business website needs</h1>
+                    <h1 class="article-title" data-lang="it">GDPR e cookie: cosa deve avere il sito di una piccola impresa</h1>
+                    <h1 class="article-title" data-lang="de">DSGVO und Cookies: was die Website eines kleinen Unternehmens braucht</h1>
+
+                    <p class="article-meta" data-lang="hr"><time datetime="2026-10-26">26. listopada 2026.</time><span>Milan Trbojević</span><span>5 min čitanja</span></p>
+                    <p class="article-meta" data-lang="en"><time datetime="2026-10-26">26 October 2026</time><span>Milan Trbojević</span><span>5 min read</span></p>
+                    <p class="article-meta" data-lang="it"><time datetime="2026-10-26">26 ottobre 2026</time><span>Milan Trbojević</span><span>5 min di lettura</span></p>
+                    <p class="article-meta" data-lang="de"><time datetime="2026-10-26">26. Oktober 2026</time><span>Milan Trbojević</span><span>5 Min. Lesezeit</span></p>
+
+                    <img class="article-cover" data-lang="hr" src="images/og/blog-gdpr-cookies-hr.jpg" width="1200" height="630" decoding="async" alt="">
+                    <img class="article-cover" data-lang="en" src="images/og/blog-gdpr-cookies-en.jpg" width="1200" height="630" decoding="async" alt="">
+                    <img class="article-cover" data-lang="it" src="images/og/blog-gdpr-cookies-it.jpg" width="1200" height="630" decoding="async" alt="">
+                    <img class="article-cover" data-lang="de" src="images/og/blog-gdpr-cookies-de.jpg" width="1200" height="630" decoding="async" alt="">
+                </div>
+
+            </div>
+
+        </section> <!-- end s-intro -->
+
+
+        <!-- ### article
+        ================================================== -->
+        <section class="s-page target-section">
+
+            <div class="row">
+                <div class="column lg-12">
+
+                    <article class="article page-body" data-lang="hr">
+                        <p class="page-lead">
+                            Mnogi vlasnici malih tvrtki misle da je GDPR problem velikih kompanija. No čim vaša stranica ima kontakt obrazac ili broji posjetitelje, ona obrađuje osobne podatke, a pravila vrijede i za nju.
+                            U ovom članku objašnjavamo, bez pravničkog jezika, što stranica male tvrtke u praksi treba imati i kako to izgleda kad je napravljeno kako treba.
+                        </p>
+
+                        <p>Jedna napomena unaprijed: mi izrađujemo web stranice, nismo odvjetnici. Ovaj članak pomoći će vam da znate što pitati i na što paziti, ali za posebne slučajeve, primjerice zdravstvene podatke ili podatke o djeci, potražite pravni savjet.</p>
+
+                        <h2>Koje osobne podatke prikuplja obična web stranica?</h2>
+                        <p>Više nego što se čini na prvi pogled. Tipična stranica male tvrtke dolazi u dodir s osobnim podacima na nekoliko mjesta:</p>
+                        <ul>
+                            <li><strong>Kontakt obrazac:</strong> ime, e-mail adresa, broj telefona i sadržaj poruke.</li>
+                            <li><strong>Analitika:</strong> alati koji broje posjetitelje postavljaju kolačiće i bilježe podatke o uređaju i ponašanju na stranici.</li>
+                            <li><strong>Ugrađeni sadržaji:</strong> karta, video ili kalendar za rezervacije učitavaju se s tuđih poslužitelja i mogu i sami postavljati kolačiće.</li>
+                            <li><strong>Web trgovina i korisnički računi:</strong> adrese, narudžbe i podaci za dostavu.</li>
+                        </ul>
+                        <p>Ništa od toga nije zabranjeno. Važno je da posjetitelj zna što se događa s njegovim podacima i da tamo gdje je to potrebno ima pravi izbor.</p>
+
+                        <h2>Što stranica treba imati</h2>
+
+                        <h3>Izjavu o privatnosti koja opisuje vašu stranicu</h3>
+                        <p>Izjava o privatnosti objašnjava tko ste, koje podatke prikupljate, zašto, koliko ih dugo čuvate, kome ih prosljeđujete (primjerice pružatelju hostinga, analitike ili plaćanja) i kako vas posjetitelj može kontaktirati da ostvari svoja prava. Najvažnije je da opisuje stvarno stanje. Tekst prepisan s druge stranice, koji spominje alate koje ne koristite ili prešućuje one koje koristite, nije rješenje.</p>
+
+                        <h3>Obavijest o kolačićima s pravim izborom</h3>
+                        <p>Kolačići koji su nužni za rad stranice, primjerice za košaricu u trgovini, smiju raditi bez pristanka. Analitički i marketinški kolačići smiju se postaviti tek kada posjetitelj pristane. To u praksi znači:</p>
+                        <ul>
+                            <li>alati za analitiku ne učitavaju se dok posjetitelj ne klikne &bdquo;Prihvati&ldquo;,</li>
+                            <li>&bdquo;Odbij&ldquo; je jednako vidljiv i jednako lak kao &bdquo;Prihvati&ldquo;,</li>
+                            <li>posjetitelj može kasnije promijeniti odluku, najčešće putem poveznice u podnožju stranice.</li>
+                        </ul>
+                        <p>Traka koja samo javlja &bdquo;koristimo kolačiće&ldquo;, a analitiku je već učitala, ne ispunjava svoju svrhu.</p>
+
+                        <h3>Obrazac koji traži samo ono što treba</h3>
+                        <p>Ako vam za odgovor na upit trebaju ime i e-mail, nemojte tražiti adresu i datum rođenja. Ispod obrasca kratko napišite za što koristite podatke i dodajte poveznicu na izjavu o privatnosti.</p>
+                        <p>Odlučite i koliko dugo čuvate upite. Poruku na koju ste odgovorili, a iz koje nije nastala suradnja, ne trebate čuvati godinama. Rok koji odaberete upišite u izjavu o privatnosti i držite ga se, primjerice tako da jednom godišnje očistite stare poruke iz sandučića.</p>
+
+                        <h3>Sigurnu vezu</h3>
+                        <p>Stranica mora raditi preko HTTPS-a, kako bi podaci iz obrasca putovali šifrirano. Uz dobar hosting SSL certifikat danas je standard, o čemu smo pisali u članku <a href="blog-domain-hosting.html">Domena i hosting: kako ih odabrati i zašto moraju biti na vaše ime</a>.</p>
+
+                        <h2>Ugrađeni sadržaji koje je lako previdjeti</h2>
+                        <p>Karta s lokacijom, video s YouTubea, kalendar za rezervacije ili prozorčić za chat izgledaju bezazleno, ali se učitavaju s poslužitelja drugih tvrtki. Već samim učitavanjem one mogu dobiti podatke o posjetitelju i postaviti svoje kolačiće.</p>
+                        <p>Rješenje je obično jednostavno: takav sadržaj učitava se tek kad ga posjetitelj zatraži, klikom na gumb, ili se zamijeni slikom s poveznicom. Tako stranica ostaje korisna, a posjetitelj odlučuje sam.</p>
+
+                        <figure class="article-figure">
+                            <img src="images/blog/blog-gdpr-cookies.jpg" width="1200" height="800" loading="lazy" decoding="async" alt="Stari lokot na zaključanim vratima">
+                            <figcaption>Fotografija: <a href="https://commons.wikimedia.org/wiki/File:James_Sutton_2017-01-10_(Unsplash).jpg" rel="noopener">James Sutton</a>, Unsplash (CC0)</figcaption>
+                        </figure>
+
+                        <h2>Primjer: kako smo to riješili na vlastitoj stranici</h2>
+                        <p>Na našoj stranici Google Analytics učitava se tek kada posjetitelj u traci s obaviješću o kolačićima klikne &bdquo;Prihvati&ldquo;. Ako klikne &bdquo;Odbij&ldquo;, analitika se uopće ne učitava. Odluku je moguće promijeniti u svakom trenutku putem poveznice &bdquo;Postavke kolačića&ldquo; u podnožju.</p>
+                        <p>Kalendar za rezervaciju konzultacija učitava se tek kada kliknete gumb, a kontakt obrazac ne postavlja kolačiće. Sve je opisano u našoj <a href="privacy.html">izjavi o privatnosti</a>, koju možete pogledati kao primjer.</p>
+
+                        <div class="article-tip">
+                            <p><strong>Savjet:</strong> otvorite svoju stranicu u privatnom prozoru preglednika i prije ikakvog klika pogledajte kolačiće u postavkama preglednika. Ako se analitički kolačići pojave prije nego što ste išta prihvatili, obavijest o kolačićima ne radi kako treba.</p>
+                        </div>
+
+                        <h2>Kada izvođač radi s vašim podacima</h2>
+                        <p>Kod web trgovine ili stranice s korisničkim računima izvođač koji održava stranicu može imati pristup podacima vaših kupaca. Tada vi ostajete odgovorni za te podatke, a izvođač ih obrađuje u vaše ime. Za takav odnos GDPR traži pisani ugovor o obradi podataka.</p>
+                        <p>Kod nas je to dio <a href="terms.html">općih uvjeta</a>: ako u sklopu usluge obrađujemo osobne podatke u vaše ime, s vama sklapamo ugovor o obradi podataka u skladu s člankom 28. GDPR-a. Ako sadašnji izvođač ima pristup podacima vaših kupaca, a takav ugovor nemate, vrijedi ga zatražiti.</p>
+
+                        <h2>Zaključak</h2>
+                        <p>Za stranicu male tvrtke GDPR se svodi na nekoliko konkretnih stvari: izjavu o privatnosti koja opisuje stvarno stanje, obavijest o kolačićima koja posjetitelju daje pravi izbor, obrazac bez suvišnih pitanja i sigurnu vezu. Nije komplicirano, ali treba biti napravljeno pažljivo.</p>
+                        <p>Kada izrađujemo stranicu, postavljamo obavijest o kolačićima, analitiku koja se uključuje tek uz pristanak posjetitelja i pomažemo vam oko izjave o privatnosti. Više o tome pročitajte na stranici <a href="web-development.html">Izrada web stranica i web trgovina</a>, a cijene su u našem <a href="pricing.html">cjeniku</a>. Ako niste sigurni je li vaša sadašnja stranica u redu, <a href="index.html#booking">rezervirajte besplatne konzultacije od 30 minuta</a> i zajedno ćemo je pogledati.</p>
+
+                        <p class="article-author">Milan Trbojević vlasnik je RDD Softwarea iz Rijeke. Od 2021. s malim timom izrađuje web stranice, web trgovine i aplikacije za klijente diljem Europe.</p>
+
+                        <h2>Pročitajte i</h2>
+                        <ul class="page-related">
+                            <li><a href="blog-domain-hosting.html">Domena i hosting: kako ih odabrati i zašto moraju biti na vaše ime &rarr;</a></li>
+                            <li><a href="blog-website-maintenance.html">Održavanje web stranice: što uključuje i kada se isplati &rarr;</a></li>
+                            <li><a href="web-development.html">Izrada web stranica i web trgovina &rarr;</a></li>
+                        </ul>
+                    </article>
+
+                    <article class="article page-body" data-lang="en">
+                        <p class="page-lead">
+                            Many small business owners think GDPR is a problem for big companies. But as soon as your website has a contact form or counts its visitors, it processes personal data, and the rules apply to it too.
+                            This article explains, without legal jargon, what a small business website needs in practice and what it looks like when it is done properly.
+                        </p>
+
+                        <p>One note up front: we build websites, we are not lawyers. This article will help you know what to ask and what to look out for, but for special cases, such as health data or data about children, get legal advice.</p>
+
+                        <h2>What personal data does an ordinary website collect?</h2>
+                        <p>More than it seems at first. A typical small business website touches personal data in several places:</p>
+                        <ul>
+                            <li><strong>Contact form:</strong> name, e-mail address, phone number and the message itself.</li>
+                            <li><strong>Analytics:</strong> tools that count visitors set cookies and record details about the device and how people use the site.</li>
+                            <li><strong>Embedded content:</strong> a map, a video or a booking calendar is loaded from someone else's servers and may set cookies of its own.</li>
+                            <li><strong>Online shop and user accounts:</strong> addresses, orders and delivery details.</li>
+                        </ul>
+                        <p>None of this is forbidden. What matters is that visitors know what happens to their data and, where needed, have a real choice.</p>
+
+                        <h2>What the website needs</h2>
+
+                        <h3>A privacy policy that describes your site</h3>
+                        <p>A privacy policy explains who you are, what data you collect, why, how long you keep it, who you pass it on to (for example your hosting, analytics or payment provider) and how visitors can contact you to exercise their rights. Above all, it has to describe what really happens. A text copied from another website, which mentions tools you don't use or leaves out the ones you do, is not a solution.</p>
+
+                        <h3>A cookie notice with a real choice</h3>
+                        <p>Cookies the site needs to work, such as the basket in an online shop, may run without consent. Analytics and marketing cookies may only be set once the visitor agrees. In practice that means:</p>
+                        <ul>
+                            <li>analytics tools are not loaded until the visitor clicks &ldquo;Accept&rdquo;,</li>
+                            <li>&ldquo;Decline&rdquo; is as visible and as easy as &ldquo;Accept&rdquo;,</li>
+                            <li>visitors can change their mind later, usually through a link in the footer.</li>
+                        </ul>
+                        <p>A banner that only says &ldquo;we use cookies&rdquo; after analytics has already loaded does not do its job.</p>
+
+                        <h3>A form that asks only for what you need</h3>
+                        <p>If you need a name and an e-mail address to reply to an enquiry, don't ask for a postal address and a date of birth. Below the form, briefly say what you use the details for and link to your privacy policy.</p>
+                        <p>Decide how long you keep enquiries, too. A message you have answered and that did not turn into a project does not need to be kept for years. Put the period you choose in your privacy policy and stick to it, for example by clearing old messages from your inbox once a year.</p>
+
+                        <h3>A secure connection</h3>
+                        <p>The site must run over HTTPS, so that data from the form travels encrypted. With good hosting an SSL certificate is standard today, as we explained in <a href="blog-domain-hosting.html">Domain and hosting: how to choose them and why they must be in your name</a>.</p>
+
+                        <h2>Embedded content that is easy to overlook</h2>
+                        <p>A location map, a YouTube video, a booking calendar or a chat window looks harmless, but it is loaded from another company's servers. Just by loading, it can receive data about the visitor and set its own cookies.</p>
+                        <p>The fix is usually simple: such content loads only when the visitor asks for it, by clicking a button, or it is replaced by an image with a link. The site stays useful, and visitors decide for themselves.</p>
+
+                        <figure class="article-figure">
+                            <img src="images/blog/blog-gdpr-cookies.jpg" width="1200" height="800" loading="lazy" decoding="async" alt="An old padlock on a locked door">
+                            <figcaption>Photo: <a href="https://commons.wikimedia.org/wiki/File:James_Sutton_2017-01-10_(Unsplash).jpg" rel="noopener">James Sutton</a>, Unsplash (CC0)</figcaption>
+                        </figure>
+
+                        <h2>An example: how we handled it on our own site</h2>
+                        <p>On our website, Google Analytics loads only when a visitor clicks &ldquo;Accept&rdquo; in the cookie notice. If they click &ldquo;Decline&rdquo;, analytics is not loaded at all. The choice can be changed at any time through the &ldquo;Cookie settings&rdquo; link in the footer.</p>
+                        <p>The booking calendar for consultations loads only when you click the button, and the contact form sets no cookies. It is all described in our <a href="privacy.html">privacy policy</a>, which you are welcome to look at as an example.</p>
+
+                        <div class="article-tip">
+                            <p><strong>Tip:</strong> open your website in a private browser window and, before clicking anything, look at the cookies in your browser settings. If analytics cookies appear before you have accepted anything, your cookie notice is not working as it should.</p>
+                        </div>
+
+                        <h2>When your developer works with your data</h2>
+                        <p>With an online shop or a site with user accounts, the developer who maintains it may have access to your customers' data. You remain responsible for that data, and the developer processes it on your behalf. For that kind of relationship, GDPR requires a written data processing agreement.</p>
+                        <p>With us it is part of our <a href="terms.html">terms and conditions</a>: if we process personal data on your behalf as part of our service, we sign a data processing agreement with you under Article 28 GDPR. If your current developer has access to your customers' data and you have no such agreement, it is worth asking for one.</p>
+
+                        <h2>Conclusion</h2>
+                        <p>For a small business website, GDPR comes down to a few concrete things: a privacy policy that describes what really happens, a cookie notice that gives visitors a real choice, a form without unnecessary questions and a secure connection. It is not complicated, but it has to be done carefully.</p>
+                        <p>When we build a website, we set up the cookie notice and analytics that only switch on with the visitor's consent, and we help you with the privacy policy. Read more on the <a href="web-development.html">website &amp; online shop development</a> page, and find prices in our <a href="pricing.html">price list</a>. If you are not sure whether your current website is in order, <a href="index.html#booking">book a free 30-minute consultation</a> and we will look at it together.</p>
+
+                        <p class="article-author">Milan Trbojević is the owner of RDD Software in Rijeka, Croatia. Since 2021 he and a small team have been building websites, online shops and apps for clients across Europe.</p>
+
+                        <h2>Read next</h2>
+                        <ul class="page-related">
+                            <li><a href="blog-domain-hosting.html">Domain and hosting: how to choose them and why they must be in your name &rarr;</a></li>
+                            <li><a href="blog-website-maintenance.html">Website maintenance: what it covers and when it pays off &rarr;</a></li>
+                            <li><a href="web-development.html">Website &amp; online shop development &rarr;</a></li>
+                        </ul>
+                    </article>
+
+                    <article class="article page-body" data-lang="it">
+                        <p class="page-lead">
+                            Molti titolari di piccole imprese pensano che il GDPR sia un problema delle grandi aziende. Ma appena il tuo sito ha un modulo di contatto o conta i visitatori, tratta dati personali, e le regole valgono anche per lui.
+                            In questo articolo ti spieghiamo, senza linguaggio da avvocati, cosa deve avere in pratica il sito di una piccola impresa e come appare quando è fatto bene.
+                        </p>
+
+                        <p>Una precisazione prima di iniziare: realizziamo siti web, non siamo avvocati. Questo articolo ti aiuterà a sapere cosa chiedere e a cosa fare attenzione, ma per casi particolari, come dati sanitari o dati di minori, rivolgiti a un consulente legale.</p>
+
+                        <h2>Quali dati personali raccoglie un normale sito web?</h2>
+                        <p>Più di quanto sembri. Il sito tipico di una piccola impresa entra in contatto con dati personali in diversi punti:</p>
+                        <ul>
+                            <li><strong>Modulo di contatto:</strong> nome, indirizzo e-mail, numero di telefono e testo del messaggio.</li>
+                            <li><strong>Analisi delle visite:</strong> gli strumenti che contano i visitatori impostano cookie e registrano dati sul dispositivo e sull'uso del sito.</li>
+                            <li><strong>Contenuti incorporati:</strong> una mappa, un video o un calendario di prenotazione vengono caricati da server di altri e possono impostare cookie propri.</li>
+                            <li><strong>Negozio online e account utente:</strong> indirizzi, ordini e dati per la spedizione.</li>
+                        </ul>
+                        <p>Niente di tutto questo è vietato. L'importante è che il visitatore sappia cosa succede ai suoi dati e, dove serve, abbia una vera scelta.</p>
+
+                        <h2>Cosa deve avere il sito</h2>
+
+                        <h3>Un'informativa sulla privacy che descriva il tuo sito</h3>
+                        <p>L'informativa sulla privacy spiega chi sei, quali dati raccogli, perché, per quanto tempo li conservi, a chi li trasmetti (per esempio al fornitore di hosting, di statistiche o di pagamento) e come il visitatore può contattarti per esercitare i suoi diritti. La cosa più importante è che descriva la situazione reale. Un testo copiato da un altro sito, che cita strumenti che non usi o tace su quelli che usi, non è una soluzione.</p>
+
+                        <h3>Un avviso sui cookie con una vera scelta</h3>
+                        <p>I cookie necessari al funzionamento del sito, come il carrello di un negozio online, possono funzionare senza consenso. I cookie statistici e di marketing possono essere impostati solo quando il visitatore acconsente. In pratica significa che:</p>
+                        <ul>
+                            <li>gli strumenti di statistica non si caricano finché il visitatore non clicca &laquo;Accetta&raquo;,</li>
+                            <li>&laquo;Rifiuta&raquo; è visibile e semplice quanto &laquo;Accetta&raquo;,</li>
+                            <li>il visitatore può cambiare idea in seguito, di solito tramite un link nel piè di pagina.</li>
+                        </ul>
+                        <p>Un banner che dice solo &laquo;usiamo i cookie&raquo; quando le statistiche sono già state caricate non serve al suo scopo.</p>
+
+                        <h3>Un modulo che chiede solo ciò che serve</h3>
+                        <p>Se per rispondere a una richiesta ti servono nome ed e-mail, non chiedere indirizzo e data di nascita. Sotto il modulo scrivi brevemente a cosa servono i dati e aggiungi un link all'informativa sulla privacy.</p>
+                        <p>Decidi anche per quanto tempo conservi le richieste. Un messaggio a cui hai risposto e da cui non è nata una collaborazione non va tenuto per anni. Scrivi il periodo che scegli nell'informativa sulla privacy e rispettalo, per esempio cancellando una volta all'anno i vecchi messaggi dalla casella.</p>
+
+                        <h3>Una connessione sicura</h3>
+                        <p>Il sito deve funzionare in HTTPS, così i dati del modulo viaggiano cifrati. Con un buon hosting il certificato SSL oggi è uno standard, come abbiamo spiegato nell'articolo <a href="blog-domain-hosting.html">Dominio e hosting: come sceglierli e perché devono essere intestati a te</a>.</p>
+
+                        <h2>Contenuti incorporati facili da trascurare</h2>
+                        <p>Una mappa con la sede, un video di YouTube, un calendario di prenotazione o una finestra di chat sembrano innocui, ma vengono caricati dai server di altre aziende. Già solo caricandosi possono ricevere dati sul visitatore e impostare i propri cookie.</p>
+                        <p>Di solito la soluzione è semplice: questi contenuti si caricano solo quando il visitatore li richiede, con un clic su un pulsante, oppure vengono sostituiti da un'immagine con un link. Il sito resta utile e il visitatore decide da solo.</p>
+
+                        <figure class="article-figure">
+                            <img src="images/blog/blog-gdpr-cookies.jpg" width="1200" height="800" loading="lazy" decoding="async" alt="Un vecchio lucchetto su una porta chiusa">
+                            <figcaption>Foto: <a href="https://commons.wikimedia.org/wiki/File:James_Sutton_2017-01-10_(Unsplash).jpg" rel="noopener">James Sutton</a>, Unsplash (CC0)</figcaption>
+                        </figure>
+
+                        <h2>Un esempio: come lo abbiamo risolto sul nostro sito</h2>
+                        <p>Sul nostro sito Google Analytics si carica solo quando il visitatore clicca &laquo;Accetta&raquo; nell'avviso sui cookie. Se clicca &laquo;Rifiuta&raquo;, le statistiche non si caricano affatto. La scelta si può cambiare in qualsiasi momento con il link &laquo;Impostazioni cookie&raquo; nel piè di pagina.</p>
+                        <p>Il calendario per prenotare una consulenza si carica solo quando clicchi il pulsante, e il modulo di contatto non imposta cookie. Tutto è descritto nella nostra <a href="privacy.html">informativa sulla privacy</a>, che puoi guardare come esempio.</p>
+
+                        <div class="article-tip">
+                            <p><strong>Consiglio:</strong> apri il tuo sito in una finestra privata del browser e, prima di cliccare qualsiasi cosa, guarda i cookie nelle impostazioni del browser. Se compaiono cookie statistici prima che tu abbia accettato qualcosa, l'avviso sui cookie non funziona come dovrebbe.</p>
+                        </div>
+
+                        <h2>Quando lo sviluppatore lavora con i tuoi dati</h2>
+                        <p>Con un negozio online o un sito con account utente, lo sviluppatore che si occupa della manutenzione può avere accesso ai dati dei tuoi clienti. In quel caso il responsabile dei dati resti tu, e lo sviluppatore li tratta per tuo conto. Per questo tipo di rapporto il GDPR richiede un accordo scritto sul trattamento dei dati.</p>
+                        <p>Da noi fa parte delle <a href="terms.html">condizioni generali</a>: se nell'ambito del servizio trattiamo dati personali per tuo conto, stipuliamo con te un accordo sul trattamento dei dati ai sensi dell'articolo 28 del GDPR. Se il tuo sviluppatore attuale ha accesso ai dati dei tuoi clienti e un accordo del genere non c'è, vale la pena chiederlo.</p>
+
+                        <h2>In conclusione</h2>
+                        <p>Per il sito di una piccola impresa il GDPR si riduce a poche cose concrete: un'informativa sulla privacy che descrive la situazione reale, un avviso sui cookie che dà al visitatore una vera scelta, un modulo senza domande inutili e una connessione sicura. Non è complicato, ma va fatto con cura.</p>
+                        <p>Quando realizziamo un sito, impostiamo l'avviso sui cookie e le statistiche che si attivano solo con il consenso del visitatore, e ti aiutiamo con l'informativa sulla privacy. Leggi di più nella pagina <a href="web-development.html">Realizzazione di siti web e negozi online</a>, e trovi i prezzi nel nostro <a href="pricing.html">listino prezzi</a>. Se non sei sicuro che il tuo sito attuale sia in regola, <a href="index.html#booking">prenota una consulenza gratuita di 30 minuti</a> e lo guardiamo insieme.</p>
+
+                        <p class="article-author">Milan Trbojević è il titolare di RDD Software a Fiume, in Croazia. Dal 2021 realizza con un piccolo team siti web, negozi online e applicazioni per clienti in tutta Europa.</p>
+
+                        <h2>Leggi anche</h2>
+                        <ul class="page-related">
+                            <li><a href="blog-domain-hosting.html">Dominio e hosting: come sceglierli e perché devono essere intestati a te &rarr;</a></li>
+                            <li><a href="blog-website-maintenance.html">Manutenzione del sito web: cosa comprende e quando conviene &rarr;</a></li>
+                            <li><a href="web-development.html">Realizzazione di siti web e negozi online &rarr;</a></li>
+                        </ul>
+                    </article>
+
+                    <article class="article page-body" data-lang="de">
+                        <p class="page-lead">
+                            Viele Inhaber kleiner Unternehmen halten die DSGVO für ein Thema großer Konzerne. Doch sobald Ihre Website ein Kontaktformular hat oder Besucher zählt, verarbeitet sie personenbezogene Daten, und die Regeln gelten auch für sie.
+                            In diesem Artikel erklären wir ohne Juristendeutsch, was die Website eines kleinen Unternehmens in der Praxis braucht und wie es aussieht, wenn es richtig gemacht ist.
+                        </p>
+
+                        <p>Ein Hinweis vorab: Wir erstellen Websites, wir sind keine Anwälte. Dieser Artikel hilft Ihnen zu wissen, was Sie fragen und worauf Sie achten sollten. Für besondere Fälle, etwa Gesundheitsdaten oder Daten von Kindern, holen Sie bitte rechtlichen Rat ein.</p>
+
+                        <h2>Welche personenbezogenen Daten erfasst eine gewöhnliche Website?</h2>
+                        <p>Mehr, als man zunächst denkt. Die typische Website eines kleinen Unternehmens kommt an mehreren Stellen mit personenbezogenen Daten in Berührung:</p>
+                        <ul>
+                            <li><strong>Kontaktformular:</strong> Name, E-Mail-Adresse, Telefonnummer und der Inhalt der Nachricht.</li>
+                            <li><strong>Webanalyse:</strong> Werkzeuge, die Besucher zählen, setzen Cookies und erfassen Daten über das Gerät und die Nutzung der Website.</li>
+                            <li><strong>Eingebettete Inhalte:</strong> Eine Karte, ein Video oder ein Buchungskalender wird von fremden Servern geladen und kann eigene Cookies setzen.</li>
+                            <li><strong>Onlineshop und Benutzerkonten:</strong> Adressen, Bestellungen und Lieferdaten.</li>
+                        </ul>
+                        <p>Nichts davon ist verboten. Wichtig ist, dass Besucher wissen, was mit ihren Daten geschieht, und dort, wo es nötig ist, eine echte Wahl haben.</p>
+
+                        <h2>Was die Website braucht</h2>
+
+                        <h3>Eine Datenschutzerklärung, die Ihre Website beschreibt</h3>
+                        <p>Die Datenschutzerklärung erklärt, wer Sie sind, welche Daten Sie erfassen, warum, wie lange Sie sie speichern, an wen Sie sie weitergeben (etwa an den Anbieter von Hosting, Webanalyse oder Zahlung) und wie Besucher Sie erreichen, um ihre Rechte wahrzunehmen. Vor allem muss sie den tatsächlichen Zustand beschreiben. Ein von einer anderen Website kopierter Text, der Werkzeuge erwähnt, die Sie nicht nutzen, oder die verschweigt, die Sie nutzen, ist keine Lösung.</p>
+
+                        <h3>Einen Cookie-Hinweis mit echter Wahl</h3>
+                        <p>Cookies, die für den Betrieb der Website nötig sind, etwa für den Warenkorb im Onlineshop, dürfen ohne Einwilligung laufen. Analyse- und Marketing-Cookies dürfen erst gesetzt werden, wenn der Besucher zustimmt. In der Praxis heißt das:</p>
+                        <ul>
+                            <li>Analysewerkzeuge werden erst geladen, wenn der Besucher auf &bdquo;Akzeptieren&ldquo; klickt,</li>
+                            <li>&bdquo;Ablehnen&ldquo; ist genauso sichtbar und genauso einfach wie &bdquo;Akzeptieren&ldquo;,</li>
+                            <li>Besucher können ihre Entscheidung später ändern, meist über einen Link in der Fußzeile.</li>
+                        </ul>
+                        <p>Ein Banner, das nur &bdquo;wir verwenden Cookies&ldquo; meldet, während die Analyse schon geladen ist, erfüllt seinen Zweck nicht.</p>
+
+                        <h3>Ein Formular, das nur das Nötige abfragt</h3>
+                        <p>Wenn Sie für die Antwort auf eine Anfrage Name und E-Mail brauchen, fragen Sie nicht nach Anschrift und Geburtsdatum. Schreiben Sie unter das Formular kurz, wofür Sie die Daten verwenden, und verlinken Sie die Datenschutzerklärung.</p>
+                        <p>Legen Sie auch fest, wie lange Sie Anfragen aufbewahren. Eine beantwortete Nachricht, aus der keine Zusammenarbeit entstanden ist, müssen Sie nicht jahrelang speichern. Tragen Sie die gewählte Frist in die Datenschutzerklärung ein und halten Sie sich daran, etwa indem Sie einmal im Jahr alte Nachrichten aus dem Postfach löschen.</p>
+
+                        <h3>Eine sichere Verbindung</h3>
+                        <p>Die Website muss über HTTPS laufen, damit die Daten aus dem Formular verschlüsselt übertragen werden. Bei gutem Hosting ist ein SSL-Zertifikat heute Standard, wie wir im Artikel <a href="blog-domain-hosting.html">Domain und Hosting: wie Sie sie auswählen und warum sie auf Ihren Namen laufen müssen</a> beschrieben haben.</p>
+
+                        <h2>Eingebettete Inhalte, die man leicht übersieht</h2>
+                        <p>Eine Karte mit dem Standort, ein YouTube-Video, ein Buchungskalender oder ein Chatfenster wirken harmlos, werden aber von den Servern anderer Unternehmen geladen. Schon beim Laden können sie Daten über den Besucher erhalten und eigene Cookies setzen.</p>
+                        <p>Die Lösung ist meist einfach: Solche Inhalte werden erst geladen, wenn der Besucher sie anfordert, mit einem Klick auf eine Schaltfläche, oder durch ein Bild mit Link ersetzt. So bleibt die Website nützlich, und der Besucher entscheidet selbst.</p>
+
+                        <figure class="article-figure">
+                            <img src="images/blog/blog-gdpr-cookies.jpg" width="1200" height="800" loading="lazy" decoding="async" alt="Ein altes Vorhängeschloss an einer verschlossenen Tür">
+                            <figcaption>Foto: <a href="https://commons.wikimedia.org/wiki/File:James_Sutton_2017-01-10_(Unsplash).jpg" rel="noopener">James Sutton</a>, Unsplash (CC0)</figcaption>
+                        </figure>
+
+                        <h2>Ein Beispiel: wie wir es auf unserer eigenen Website gelöst haben</h2>
+                        <p>Auf unserer Website wird Google Analytics erst geladen, wenn ein Besucher im Cookie-Hinweis auf &bdquo;Akzeptieren&ldquo; klickt. Klickt er auf &bdquo;Ablehnen&ldquo;, wird die Analyse gar nicht geladen. Die Entscheidung lässt sich jederzeit über den Link &bdquo;Cookie-Einstellungen&ldquo; in der Fußzeile ändern.</p>
+                        <p>Der Kalender für die Terminbuchung wird erst geladen, wenn Sie auf die Schaltfläche klicken, und das Kontaktformular setzt keine Cookies. Alles ist in unserer <a href="privacy.html">Datenschutzerklärung</a> beschrieben, die Sie sich gern als Beispiel ansehen können.</p>
+
+                        <div class="article-tip">
+                            <p><strong>Tipp:</strong> Öffnen Sie Ihre Website in einem privaten Browserfenster und sehen Sie sich vor dem ersten Klick die Cookies in den Browsereinstellungen an. Erscheinen Analyse-Cookies, bevor Sie etwas akzeptiert haben, funktioniert Ihr Cookie-Hinweis nicht richtig.</p>
+                        </div>
+
+                        <h2>Wenn Ihr Dienstleister mit Ihren Daten arbeitet</h2>
+                        <p>Bei einem Onlineshop oder einer Website mit Benutzerkonten kann der Dienstleister, der sie betreut, Zugriff auf die Daten Ihrer Kunden haben. Verantwortlich für diese Daten bleiben Sie, der Dienstleister verarbeitet sie in Ihrem Auftrag. Für ein solches Verhältnis verlangt die DSGVO einen schriftlichen Vertrag über die Auftragsverarbeitung.</p>
+                        <p>Bei uns ist das Teil der <a href="terms.html">AGB</a>: Wenn wir im Rahmen unserer Leistung personenbezogene Daten in Ihrem Auftrag verarbeiten, schließen wir mit Ihnen einen Vertrag über die Auftragsverarbeitung nach Art. 28 DSGVO. Wenn Ihr jetziger Dienstleister Zugriff auf Kundendaten hat und Sie keinen solchen Vertrag haben, lohnt es sich, danach zu fragen.</p>
+
+                        <h2>Fazit</h2>
+                        <p>Für die Website eines kleinen Unternehmens läuft die DSGVO auf wenige konkrete Punkte hinaus: eine Datenschutzerklärung, die den tatsächlichen Zustand beschreibt, ein Cookie-Hinweis, der Besuchern eine echte Wahl lässt, ein Formular ohne überflüssige Fragen und eine sichere Verbindung. Das ist nicht kompliziert, muss aber sorgfältig gemacht werden.</p>
+                        <p>Wenn wir eine Website erstellen, richten wir den Cookie-Hinweis und eine Webanalyse ein, die erst mit Einwilligung der Besucher startet, und helfen Ihnen bei der Datenschutzerklärung. Mehr dazu auf der Seite <a href="web-development.html">Website- und Onlineshop-Erstellung</a>, die Preise finden Sie in unserer <a href="pricing.html">Preisliste</a>. Wenn Sie nicht sicher sind, ob Ihre jetzige Website in Ordnung ist, <a href="index.html#booking">buchen Sie eine kostenlose 30-minütige Beratung</a>, und wir sehen sie uns gemeinsam an.</p>
+
+                        <p class="article-author">Milan Trbojević ist Inhaber von RDD Software in Rijeka, Kroatien. Seit 2021 entwickelt er mit einem kleinen Team Websites, Onlineshops und Apps für Kunden in ganz Europa.</p>
+
+                        <h2>Weiterlesen</h2>
+                        <ul class="page-related">
+                            <li><a href="blog-domain-hosting.html">Domain und Hosting: wie Sie sie auswählen und warum sie auf Ihren Namen laufen müssen &rarr;</a></li>
+                            <li><a href="blog-website-maintenance.html">Website-Wartung: was dazugehört und wann sie sich lohnt &rarr;</a></li>
+                            <li><a href="web-development.html">Website- und Onlineshop-Erstellung &rarr;</a></li>
+                        </ul>
+                    </article>
+                    <section class="project-cta">
+                        <h2 class="project-cta__title"><span data-lang="hr">Imate projekt na umu?</span><span data-lang="en">Have a project in mind?</span><span data-lang="it">Hai un progetto in mente?</span><span data-lang="de">Haben Sie ein Projekt geplant?</span></h2>
+                        <p class="project-cta__text"><span data-lang="hr">Javite nam se i besplatno ćemo procijeniti opseg i cijenu vašeg projekta.</span><span data-lang="en">Get in touch and we will estimate the scope and price of your project free of charge.</span><span data-lang="it">Contattaci e stimeremo gratuitamente portata e prezzo del tuo progetto.</span><span data-lang="de">Melden Sie sich, und wir schätzen Umfang und Preis Ihres Projekts kostenlos ein.</span></p>
+                        <div class="project-cta__actions">
+                            <a class="project-cta__btn project-cta__btn--primary" href="index.html#contact"><span data-lang="hr">Pošaljite upit</span><span data-lang="en">Send an enquiry</span><span data-lang="it">Invia una richiesta</span><span data-lang="de">Anfrage senden</span></a>
+                            <a class="project-cta__btn" href="index.html#booking"><span data-lang="hr">Rezervirajte konzultacije</span><span data-lang="en">Book a consultation</span><span data-lang="it">Prenota una consulenza</span><span data-lang="de">Beratung buchen</span></a>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+        </section> <!-- end s-page -->
+
+    </main> <!-- end s-content -->
+
+
+    <!-- ## footer
+    ================================================== -->
+    <footer class="s-footer">
+
+        <div class="row ss-footer-nav-row">
+            <div class="column">
+                <nav class="ss-footer-nav" aria-label="RDD Software" data-aria-label-hr="Podnožje" data-aria-label-en="Footer" data-aria-label-it="Piè di pagina" data-aria-label-de="Fußzeile">
+                    <div class="ss-footer-nav__group">
+                        <h2 class="ss-footer-nav__title"><span data-lang="hr">Usluge</span><span data-lang="en">Services</span><span data-lang="it">Servizi</span><span data-lang="de">Leistungen</span></h2>
+                        <ul>
+                            <li><a href="web-development.html"><span data-lang="hr">Izrada web stranica</span><span data-lang="en">Website development</span><span data-lang="it">Realizzazione siti web</span><span data-lang="de">Website-Erstellung</span></a></li>
+                            <li><a href="mobile-apps.html"><span data-lang="hr">Mobilne aplikacije</span><span data-lang="en">Mobile apps</span><span data-lang="it">App mobile</span><span data-lang="de">Mobile Apps</span></a></li>
+                            <li><a href="custom-software.html"><span data-lang="hr">Softver po mjeri</span><span data-lang="en">Custom software</span><span data-lang="it">Software su misura</span><span data-lang="de">Individuelle Software</span></a></li>
+                            <li><a href="pricing.html"><span data-lang="hr">Cjenik</span><span data-lang="en">Pricing</span><span data-lang="it">Prezzi</span><span data-lang="de">Preise</span></a></li>
+                        </ul>
+                    </div>
+                    <div class="ss-footer-nav__group">
+                        <h2 class="ss-footer-nav__title"><span data-lang="hr">Tvrtka</span><span data-lang="en">Company</span><span data-lang="it">Azienda</span><span data-lang="de">Unternehmen</span></h2>
+                        <ul>
+                            <li><a href="index.html#about"><span data-lang="hr">O nama</span><span data-lang="en">About us</span><span data-lang="it">Chi siamo</span><span data-lang="de">Über uns</span></a></li>
+                            <li><a href="index.html#works"><span data-lang="hr">Projekti</span><span data-lang="en">Projects</span><span data-lang="it">Progetti</span><span data-lang="de">Projekte</span></a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="index.html#contact"><span data-lang="hr">Kontakt</span><span data-lang="en">Contact</span><span data-lang="it">Contatti</span><span data-lang="de">Kontakt</span></a></li>
+                        </ul>
+                    </div>
+                    <div class="ss-footer-nav__group">
+                        <h2 class="ss-footer-nav__title"><span data-lang="hr">Pratite nas</span><span data-lang="en">Follow us</span><span data-lang="it">Seguici</span><span data-lang="de">Folgen Sie uns</span></h2>
+                        <ul>
+                            <li><a href="https://www.linkedin.com/company/106879536/" target="_blank" rel="noopener noreferrer"><svg class="ss-footer-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg> LinkedIn</a></li>
+                            <li><a href="mailto:info@rdd.software">info@rdd.software</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="column ss-copyright">
+                <span>© Copyright RDD <script>document.write(/\d{4}/.exec(Date())[0] + ".")</script></span>
+                <span><a href="privacy.html" data-lang="hr">Izjava o privatnosti</a><a href="privacy.html" data-lang="en">Privacy Policy</a><a href="privacy.html" data-lang="it">Informativa sulla privacy</a><a href="privacy.html" data-lang="de">Datenschutzerklärung</a></span>
+                <span><a href="terms.html" data-lang="hr">Opći uvjeti poslovanja</a><a href="terms.html" data-lang="en">Terms and Conditions</a><a href="terms.html" data-lang="it">Condizioni generali</a><a href="terms.html" data-lang="de">AGB</a></span>
+                <span><a href="#0" data-consent-open data-lang="hr">Postavke kolačića</a><a href="#0" data-consent-open data-lang="en">Cookie settings</a><a href="#0" data-consent-open data-lang="it">Impostazioni cookie</a><a href="#0" data-consent-open data-lang="de">Cookie-Einstellungen</a></span>
+            </div>
+
+            <div class="ss-go-top">
+                <a class="smoothscroll" title="Na vrh" data-title-hr="Na vrh" data-title-en="Back to top" data-title-it="Torna su" data-title-de="Nach oben" aria-label="Na vrh" data-aria-label-hr="Na vrh" data-aria-label-en="Back to top" data-aria-label-it="Torna su" data-aria-label-de="Nach oben" href="#top">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill-rule="evenodd" clip-rule="evenodd">
+                        <path d="M11 2.206l-6.235 7.528-.765-.645 7.521-9 7.479 9-.764.646-6.236-7.53v21.884h-1v-21.883z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="column">
+                <p class="ss-legal">R.D.D., obrt za računalno programiranje, vl. Milan Trbojević &middot; Mihovilići 2b, 51000 Rijeka &middot; OIB 09887105714 &middot; <span data-lang="hr">upisan u Obrtni registar, MBO 98224476</span><span data-lang="en">registered in the Croatian Register of Crafts, MBO 98224476</span><span data-lang="it">iscritto al Registro croato dell'artigianato, MBO 98224476</span><span data-lang="de">eingetragen im kroatischen Gewerberegister, MBO 98224476</span> &middot; <span data-lang="hr">nije u sustavu PDV-a</span><span data-lang="en">not registered for VAT</span><span data-lang="it">non soggetto a IVA</span><span data-lang="de">nicht umsatzsteuerpflichtig</span> &middot; <a href="mailto:info@rdd.software">info@rdd.software</a></p>
+            </div>
+        </div>
+
+    </footer> <!-- end s-footer -->
+
+</div> <!-- end -s-pagewrap -->
+
+
+<!-- Java Script
+================================================== -->
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
+<!-- Google Analytics - loaded only after the visitor accepts cookies -->
+<script src="js/consent.js"></script>
+
+</body>
+</html>
