@@ -88,7 +88,7 @@
         <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/blog-domain-hosting.html"/>
         <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/blog-domain-hosting.html"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/blog-domain-hosting.html"/>
-        <lastmod>2026-10-22</lastmod>
+        <lastmod>2026-10-26</lastmod>
         <priority>0.6</priority>
     </url>
     <url>
@@ -98,7 +98,7 @@
         <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/blog-domain-hosting.html"/>
         <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/blog-domain-hosting.html"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/blog-domain-hosting.html"/>
-        <lastmod>2026-10-22</lastmod>
+        <lastmod>2026-10-26</lastmod>
         <priority>0.6</priority>
     </url>
     <url>
@@ -108,7 +108,7 @@
         <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/blog-domain-hosting.html"/>
         <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/blog-domain-hosting.html"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/blog-domain-hosting.html"/>
-        <lastmod>2026-10-22</lastmod>
+        <lastmod>2026-10-26</lastmod>
         <priority>0.6</priority>
     </url>
     <url>
@@ -118,7 +118,47 @@
         <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/blog-domain-hosting.html"/>
         <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/blog-domain-hosting.html"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/blog-domain-hosting.html"/>
-        <lastmod>2026-10-22</lastmod>
+        <lastmod>2026-10-26</lastmod>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://rdd.software/blog-gdpr-cookies.html</loc>
+        <xhtml:link rel="alternate" hreflang="hr" href="https://rdd.software/blog-gdpr-cookies.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rdd.software/en/blog-gdpr-cookies.html"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/blog-gdpr-cookies.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/blog-gdpr-cookies.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/blog-gdpr-cookies.html"/>
+        <lastmod>2026-10-26</lastmod>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://rdd.software/en/blog-gdpr-cookies.html</loc>
+        <xhtml:link rel="alternate" hreflang="hr" href="https://rdd.software/blog-gdpr-cookies.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rdd.software/en/blog-gdpr-cookies.html"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/blog-gdpr-cookies.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/blog-gdpr-cookies.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/blog-gdpr-cookies.html"/>
+        <lastmod>2026-10-26</lastmod>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://rdd.software/it/blog-gdpr-cookies.html</loc>
+        <xhtml:link rel="alternate" hreflang="hr" href="https://rdd.software/blog-gdpr-cookies.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rdd.software/en/blog-gdpr-cookies.html"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/blog-gdpr-cookies.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/blog-gdpr-cookies.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/blog-gdpr-cookies.html"/>
+        <lastmod>2026-10-26</lastmod>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://rdd.software/de/blog-gdpr-cookies.html</loc>
+        <xhtml:link rel="alternate" hreflang="hr" href="https://rdd.software/blog-gdpr-cookies.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rdd.software/en/blog-gdpr-cookies.html"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/blog-gdpr-cookies.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/blog-gdpr-cookies.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/blog-gdpr-cookies.html"/>
+        <lastmod>2026-10-26</lastmod>
         <priority>0.6</priority>
     </url>
     <url>
@@ -288,7 +328,7 @@
         <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/blog.html"/>
         <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/blog.html"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/blog.html"/>
-        <lastmod>2026-10-22</lastmod>
+        <lastmod>2026-10-26</lastmod>
         <priority>0.7</priority>
     </url>
     <url>
@@ -298,7 +338,7 @@
         <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/blog.html"/>
         <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/blog.html"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/blog.html"/>
-        <lastmod>2026-10-22</lastmod>
+        <lastmod>2026-10-26</lastmod>
         <priority>0.7</priority>
     </url>
     <url>
@@ -308,7 +348,7 @@
         <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/blog.html"/>
         <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/blog.html"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/blog.html"/>
-        <lastmod>2026-10-22</lastmod>
+        <lastmod>2026-10-26</lastmod>
         <priority>0.7</priority>
     </url>
     <url>
@@ -318,7 +358,7 @@
         <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/blog.html"/>
         <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/blog.html"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/blog.html"/>
-        <lastmod>2026-10-22</lastmod>
+        <lastmod>2026-10-26</lastmod>
         <priority>0.7</priority>
     </url>
     <url>
@@ -728,7 +768,7 @@
         <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/web-development.html"/>
         <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/web-development.html"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/web-development.html"/>
-        <lastmod>2026-10-22</lastmod>
+        <lastmod>2026-10-26</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
@@ -738,7 +778,7 @@
         <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/web-development.html"/>
         <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/web-development.html"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/web-development.html"/>
-        <lastmod>2026-10-22</lastmod>
+        <lastmod>2026-10-26</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
@@ -748,7 +788,7 @@
         <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/web-development.html"/>
         <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/web-development.html"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/web-development.html"/>
-        <lastmod>2026-10-22</lastmod>
+        <lastmod>2026-10-26</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
@@ -758,7 +798,7 @@
         <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/web-development.html"/>
         <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/web-development.html"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/web-development.html"/>
-        <lastmod>2026-10-22</lastmod>
+        <lastmod>2026-10-26</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
