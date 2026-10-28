@@ -66,7 +66,7 @@ competitor prices, testimonials, awards, certifications or technologies.
   payment all rights to code and design pass to the client; domain and
   hosting are registered in the client's name; maintenance can be cancelled
   with 30 days' notice. Free 30-minute consultation (index.html#booking),
-  enquiry form (index.html#contact), price list (pricing.html), terms (terms.html).
+  enquiry form (index.html#contact), all services (services.html), price list (pricing.html), terms (terms.html).
 - Projects (describe them only like this):
   Pulseboard, private web dashboard that collects Facebook, Instagram, TikTok
   and YouTube analytics for several profiles in one place, refreshed automatically

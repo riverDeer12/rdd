@@ -65,6 +65,7 @@ PRIORITY = {
     'web-development.html': '0.8',
     'mobile-apps.html': '0.8',
     'custom-software.html': '0.8',
+    'services.html': '0.8',
     'blog.html': '0.7',
     'privacy.html': '0.3',
     'terms.html': '0.3',
@@ -297,7 +298,7 @@ CRUMB_LABEL = {'hr': 'Putanja', 'en': 'Breadcrumb', 'it': 'Percorso', 'de': 'Nav
 SERVICES = {'web-development.html', 'mobile-apps.html', 'custom-software.html'}
 CRUMB_SECTION = {
     'blog': ('blog.html', {'hr': 'Blog', 'en': 'Blog', 'it': 'Blog', 'de': 'Blog'}),
-    'services': ('index.html#services', {'hr': 'Usluge', 'en': 'Services', 'it': 'Servizi', 'de': 'Leistungen'}),
+    'services': ('services.html', {'hr': 'Usluge', 'en': 'Services', 'it': 'Servizi', 'de': 'Leistungen'}),
     'projects': ('index.html#works', {'hr': 'Projekti', 'en': 'Projects', 'it': 'Progetti', 'de': 'Projekte'}),
 }
 

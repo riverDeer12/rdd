@@ -88,7 +88,7 @@ def create_page(slug, meta, body):
     t = re.sub(r'\n<script src="js/estimate.js"></script>', '', t)               # price estimate
     t = re.sub(r'(<link rel="stylesheet" href="css/cta.css[^"]*">)',
                lambda m: m.group(1) + '\n    <link rel="stylesheet" href="css/home.css?v=3">'
-                                      '\n    <link rel="stylesheet" href="css/pages.css?v=6">', t, count=1)
+                                      '\n    <link rel="stylesheet" href="css/pages.css?v=7">', t, count=1)
     if meta.get('og_type'):
         t = t.replace('<meta property="og:type" content="website"/>',
                       '<meta property="og:type" content="%s"/>' % meta['og_type'], 1)

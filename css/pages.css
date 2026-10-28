@@ -42,7 +42,8 @@
 
 .page-body .project-links a,
 .page-body .page-related a,
-.page-body .blog-list__title a {
+.page-body .blog-list__title a,
+.page-body .service-cards a {
     text-decoration: none;
 }
 
