@@ -37,6 +37,8 @@ Page conventions in src/:
 Every page except the home page also gets a breadcrumb trail (Home > Blog >
 article) above its title, with the same trail as BreadcrumbList structured
 data for search engines; see breadcrumbs() below.
+Every blog article's "read next" list also starts with the newest other
+article (read_next() below), so older articles keep leading to new ones.
 """
 
 import datetime
@@ -370,6 +372,38 @@ def breadcrumbs(out, page, lang):
 
 
 # --------------------------------------------------------------------
+# blog: every article's "read next" list starts with the newest other
+# article, so older articles keep leading to new ones
+# --------------------------------------------------------------------
+def blog_articles(lang):
+    """[(slug, title)] newest first, from the list in src/blog.html."""
+    path = os.path.join(SRC, 'blog.html')
+    if not os.path.exists(path):
+        return []
+    blog = open(path, encoding='utf-8').read()
+    start = blog.index('<div class="page-body" data-lang="%s">' % lang)
+    block = blog[start:blog.index('</ul>', start)]
+    return [(slug, title.strip()) for _, slug, title, _ in ITEM.findall(block)]
+
+
+def read_next(out, page, lang):
+    if not page.startswith('blog-'):
+        return out
+    slug = page[:-len('.html')]
+    newest = next(((s, title) for s, title in blog_articles(lang) if s != slug), None)
+    ul = out.find('<ul class="page-related">', out.find('<article class="article'))
+    if not newest or ul == -1:
+        return out
+    end = out.index('</ul>', ul)
+    if 'href="%s.html"' % newest[0] in out[ul:end]:
+        return out
+    first = out.index('<li>', ul)
+    indent = out[out.rfind('\n', 0, first) + 1:first]
+    item = '<li><a href="%s.html">%s &rarr;</a></li>\n' % newest
+    return out[:first] + item + indent + out[first:]
+
+
+# --------------------------------------------------------------------
 # sitemap
 # --------------------------------------------------------------------
 def feed_url(lang):
@@ -457,7 +491,7 @@ def main():
     for page in pages:
         text = open(os.path.join(SRC, page), encoding='utf-8').read().replace('\r\n', '\n')
         for lang in LANGS:
-            out = breadcrumbs(render(text, page, lang, pages), page, lang)
+            out = read_next(breadcrumbs(render(text, page, lang, pages), page, lang), page, lang)
             folder = ROOT if lang == DEFAULT_LANG else os.path.join(ROOT, lang)
             os.makedirs(folder, exist_ok=True)
             target = os.path.join(folder, page)

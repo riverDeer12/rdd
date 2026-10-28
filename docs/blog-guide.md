@@ -174,7 +174,8 @@ Copy the structure of an existing article exactly, for example the
   sconosciuto / unbekannter Autor"):
   `<figure class="article-figure"><img src="images/blog/<slug>.jpg" width="1200" height="…" loading="lazy" decoding="async" alt="…"><figcaption>Fotografija | Photo | Foto | Foto: <a href="<commons page>" rel="noopener">Author</a>, Unsplash (CC0)</figcaption></figure>`,
   then `<p class="article-author">`
-  and the "read next" list (`<h2>Pročitajte i</h2><ul class="page-related">…`);
+  and the "read next" list (`<h2>Pročitajte i</h2><ul class="page-related">…`;
+  tools/build.py later puts the newest article at its top by itself);
 - the file ends with the closing lines
   `                </div>\n            </div>\n\n        </section> <!-- end s-page -->`.
 
