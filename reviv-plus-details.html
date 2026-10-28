@@ -31,9 +31,9 @@
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="manifest" href="site.webmanifest">
-    <link rel="stylesheet" href="css/project_details_style.css?v=3"/>
+    <link rel="stylesheet" href="css/project_details_style.css?v=5"/>
     <link rel="stylesheet" href="css/i18n.css?v=6"/>
-    <link rel="stylesheet" href="css/theme.css?v=3"/>
+    <link rel="stylesheet" href="css/theme.css?v=4"/>
     <link rel="stylesheet" href="css/cta.css"/>
     <!-- language (hr / en / it / de) - runs before render so only one language is shown -->
     <script src="js/i18n.js?v=2"></script>
@@ -53,7 +53,7 @@
             </a>
             <div class="lang-menu">
                 <button type="button" class="lang-menu__toggle" aria-haspopup="true" aria-expanded="false"
-                        aria-label="Jezik"><span data-lang="hr">HR</span><svg class="lang-menu__chevron" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                        aria-label="Jezik: HR"><span data-lang="hr">HR</span><svg class="lang-menu__chevron" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
                 <div class="lang-switch" role="group" aria-label="Jezik">
                     <a class="lang-switch__btn is-active" href="reviv-plus-details.html" hreflang="hr" lang="hr" data-set-lang="hr" aria-current="page"><span class="lang-switch__code">HR</span><span class="lang-switch__name">Hrvatski</span></a>
                     <span class="lang-switch__sep">/</span>
@@ -103,7 +103,7 @@
         <!-- Main Image -->
         <div class="mb-16 rounded-lg overflow-hidden border border-border">
             <img width="2000" height="941"
-                    src="images/portfolio/home_about.webp"
+                    src="images/portfolio/home_about.webp" srcset="images/portfolio/home_about-960.webp 960w, images/portfolio/home_about.webp 2000w" sizes="(max-width: 1024px) 100vw, 1024px"
                    
                     class="w-full aspect-video object-cover" alt="ReViv Plus: naslovna stranica s proizvodom i njegovim prednostima"/>
         </div>
@@ -128,14 +128,14 @@
         <!-- Challenge & Solution -->
         <section class="challenge-solution mb-16">
             <div>
-                <h3 class="mb-4"><span data-lang="hr">Izazov</span></h3>
+                <h2 class="mb-4 project-subhead"><span data-lang="hr">Izazov</span></h2>
                 <p class="text-muted-foreground leading-relaxed" data-lang="hr">
                     Osmisliti platformu koja ne samo da jasno objašnjava prednosti, sastav i učinkovitost dodatka prehrani ReViv Plus, nego funkcionira i kao pouzdana i jednostavna web trgovina. Izazov je bio uskladiti informativan sadržaj koji gradi povjerenje s neometanim iskustvom online kupnje, kako bi korisnici imali povjerenja i u proizvod i u samu kupnju, bez ikakvih zapreka.
                 </p>
             </div>
 
             <div>
-                <h3 class="mb-4"><span data-lang="hr">Rješenje</span></h3>
+                <h2 class="mb-4 project-subhead"><span data-lang="hr">Rješenje</span></h2>
                 <p class="text-muted-foreground leading-relaxed" data-lang="hr">
                     Razviti modernu web trgovinu usmjerenu na sadržaj, s jasnom hijerarhijom informacija i intuitivnom navigacijom koja korisnike vodi od upoznavanja s proizvodom do kupnje. Platforma spaja detaljnu priču o proizvodu s pojednostavljenim procesom kupnje, sigurnim plaćanjem i responzivnim dizajnom, tako da korisnici lako istražuju prednosti proizvoda, stječu povjerenje u brend i neometano dovršavaju kupnju na svim uređajima.
                 </p>
@@ -152,9 +152,9 @@
 
                 <div class="gallery-wrapper">
                     <div class="gallery-track">
-                        <img width="2000" height="858" loading="lazy" decoding="async" src="images/portfolio/home_cart.webp" alt="ReViv Plus: odabir proizvoda i košarica"/>
-                        <img width="2000" height="953" loading="lazy" decoding="async" src="images/portfolio/home_box_now.webp" alt="ReViv Plus: odabir Box Now paketomata na karti"/>
-                        <img width="2000" height="964" loading="lazy" decoding="async" src="images/portfolio/pay_screen.webp" alt="ReViv Plus: plaćanje karticom"/>
+                        <img width="2000" height="858" loading="lazy" decoding="async" src="images/portfolio/home_cart.webp" srcset="images/portfolio/home_cart-960.webp 960w, images/portfolio/home_cart.webp 2000w" sizes="(max-width: 1024px) 100vw, 1024px" alt="ReViv Plus: odabir proizvoda i košarica"/>
+                        <img width="2000" height="953" loading="lazy" decoding="async" src="images/portfolio/home_box_now.webp" srcset="images/portfolio/home_box_now-960.webp 960w, images/portfolio/home_box_now.webp 2000w" sizes="(max-width: 1024px) 100vw, 1024px" alt="ReViv Plus: odabir Box Now paketomata na karti"/>
+                        <img width="2000" height="964" loading="lazy" decoding="async" src="images/portfolio/pay_screen.webp" srcset="images/portfolio/pay_screen-960.webp 960w, images/portfolio/pay_screen.webp 2000w" sizes="(max-width: 1024px) 100vw, 1024px" alt="ReViv Plus: plaćanje karticom"/>
                     </div>
                 </div>
 
@@ -169,40 +169,40 @@
 
             <div class="key-features-grid">
                 <div class="feature-box">
-                    <h4 class="mb-2"><span data-lang="hr">Responzivan dizajn</span></h4>
+                    <h3 class="mb-2 feature-box__title"><span data-lang="hr">Responzivan dizajn</span></h3>
                     <p class="text-muted-foreground" data-lang="hr">Optimizirano za sve uređaje i veličine zaslona.</p>
                     
                 </div>
 
                 <div class="feature-box">
-                    <h4 class="mb-2"><span data-lang="hr">Performanse</span></h4>
+                    <h3 class="mb-2 feature-box__title"><span data-lang="hr">Performanse</span></h3>
                     <p class="text-muted-foreground" data-lang="hr">Brzo učitavanje i glatka interakcija.</p>
                     
                 </div>
 
                 <div class="feature-box">
-                    <h4 class="mb-2"><span data-lang="hr">Funkcionalnost web trgovine</span></h4>
+                    <h3 class="mb-2 feature-box__title"><span data-lang="hr">Funkcionalnost web trgovine</span></h3>
                     <p class="text-muted-foreground" data-lang="hr">
                         Potpuno opremljena web trgovina s katalogom proizvoda, filtriranjem, košaricom i intuitivnim procesom naplate.
                     </p>
                 </div>
 
                 <div class="feature-box">
-                    <h4 class="mb-2"><span data-lang="hr">Sigurni načini plaćanja</span></h4>
+                    <h3 class="mb-2 feature-box__title"><span data-lang="hr">Sigurni načini plaćanja</span></h3>
                     <p class="text-muted-foreground" data-lang="hr">
                         Podržava sigurno plaćanje karticama, putem PayPala, digitalnih novčanika i lokalnih pružatelja usluga plaćanja.
                     </p>
                 </div>
 
                 <div class="feature-box">
-                    <h4 class="mb-2"><span data-lang="hr">Integracija s Box Now</span></h4>
+                    <h3 class="mb-2 feature-box__title"><span data-lang="hr">Integracija s Box Now</span></h3>
                     <p class="text-muted-foreground" data-lang="hr">
                         Dostava u paketomate, praćenje pošiljaka u stvarnom vremenu i automatizirana integracija s Box Now API-jem.
                     </p>
                 </div>
 
                 <div class="feature-box">
-                    <h4 class="mb-2"><span data-lang="hr">Skalabilnost</span></h4>
+                    <h3 class="mb-2 feature-box__title"><span data-lang="hr">Skalabilnost</span></h3>
                     <p class="text-muted-foreground" data-lang="hr">Izgrađeno za rast i povećanu potražnju.</p>
                     
                 </div>

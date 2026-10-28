@@ -78,6 +78,7 @@ VOID = {'area', 'base', 'br', 'col', 'embed', 'hr', 'img', 'input', 'link',
         'meta', 'source', 'track', 'wbr'}
 URL_ATTRS = ('href', 'src', 'action', 'poster')
 LANG_ATTRS = r'(?:hr|en|it|de)'
+COPYRIGHT_SCRIPT = '<script>document.write(/\\d{4}/.exec(Date())[0] + ".")</script>'
 
 
 # --------------------------------------------------------------------
@@ -524,6 +525,8 @@ def main():
         text = open(os.path.join(SRC, page), encoding='utf-8').read().replace('\r\n', '\n')
         for lang in LANGS:
             out = render(text, page, lang, pages)
+            # the copyright year, written at build time instead of with document.write
+            out = out.replace(COPYRIGHT_SCRIPT, '%d.' % datetime.date.today().year)
             out = project_data(read_next(breadcrumbs(out, page, lang), page, lang), page, lang)
             folder = ROOT if lang == DEFAULT_LANG else os.path.join(ROOT, lang)
             os.makedirs(folder, exist_ok=True)

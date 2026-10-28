@@ -94,5 +94,5 @@ html[data-theme="light"] .consent-banner {
 }
 
 html[data-theme="light"] .consent-banner__text a {
-    color: var(--color-1);
+    color: hsla(180, 100%, 20%, 1);     /* --color-1 is just under 4.5:1 here */
 }

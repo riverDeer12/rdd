@@ -26,9 +26,9 @@
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="manifest" href="site.webmanifest">
-    <link rel="stylesheet" href="css/project_details_style.css?v=3"/>
+    <link rel="stylesheet" href="css/project_details_style.css?v=5"/>
     <link rel="stylesheet" href="css/i18n.css?v=6"/>
-    <link rel="stylesheet" href="css/theme.css?v=3"/>
+    <link rel="stylesheet" href="css/theme.css?v=4"/>
     <link rel="stylesheet" href="css/cta.css"/>
     <!-- language (hr / en / it / de) - runs before render so only one language is shown -->
     <script src="js/i18n.js?v=2"></script>
@@ -46,7 +46,7 @@
             </a>
             <div class="lang-menu">
                 <button type="button" class="lang-menu__toggle" aria-haspopup="true" aria-expanded="false"
-                        aria-label="Jezik" data-aria-label-hr="Jezik" data-aria-label-en="Language" data-aria-label-it="Lingua" data-aria-label-de="Sprache"><span data-lang="hr">HR</span><span data-lang="en">EN</span><span data-lang="it">IT</span><span data-lang="de">DE</span><svg class="lang-menu__chevron" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                        aria-label="Jezik: HR" data-aria-label-hr="Jezik: HR" data-aria-label-en="Language: EN" data-aria-label-it="Lingua: IT" data-aria-label-de="Sprache: DE"><span data-lang="hr">HR</span><span data-lang="en">EN</span><span data-lang="it">IT</span><span data-lang="de">DE</span><svg class="lang-menu__chevron" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
                 <div class="lang-switch" role="group" aria-label="Jezik" data-aria-label-hr="Jezik" data-aria-label-en="Language" data-aria-label-it="Lingua" data-aria-label-de="Sprache">
                     <button type="button" class="lang-switch__btn" data-set-lang="hr"><span class="lang-switch__code">HR</span><span class="lang-switch__name">Hrvatski</span></button>
                     <span class="lang-switch__sep">/</span>
@@ -103,7 +103,7 @@
         <!-- Main Image -->
         <div class="mb-16 rounded-lg overflow-hidden border border-border">
             <img width="1904" height="1142"
-                    src="images/portfolio/paapica_home.webp"
+                    src="images/portfolio/paapica_home.webp" srcset="images/portfolio/paapica_home-960.webp 960w, images/portfolio/paapica_home.webp 1904w" sizes="(max-width: 1024px) 100vw, 1024px"
                    
                     class="w-full aspect-video object-cover" alt="Paapica: naslovna stranica s pretragom po namirnicama" data-alt-hr="Paapica: naslovna stranica s pretragom po namirnicama" data-alt-en="Paapica: home page with search by ingredients" data-alt-it="Paapica: pagina iniziale con ricerca per ingredienti" data-alt-de="Paapica: Startseite mit Zutatensuche"/>
         </div>
@@ -111,7 +111,7 @@
         <!-- Challenge & Solution -->
         <section class="challenge-solution mb-16">
             <div>
-                <h3 class="mb-4"><span data-lang="hr">Izazov</span><span data-lang="en">Challenge</span><span data-lang="it">Sfida</span><span data-lang="de">Herausforderung</span></h3>
+                <h2 class="mb-4 project-subhead"><span data-lang="hr">Izazov</span><span data-lang="en">Challenge</span><span data-lang="it">Sfida</span><span data-lang="de">Herausforderung</span></h2>
                 <p class="text-muted-foreground leading-relaxed" data-lang="hr">
                     Recepti se obično skupljaju na papirićima, u porukama i ispod videa na društvenim mrežama, u različitim oblicima i bez nutritivnih podataka. Izazov je bio napraviti mjesto na kojem su recepti pregledni i lako pretraživi, a da njihovo dodavanje ne zahtijeva sate ručnog prepisivanja.
                 </p>
@@ -127,7 +127,7 @@
             </div>
 
             <div>
-                <h3 class="mb-4"><span data-lang="hr">Rješenje</span><span data-lang="en">Solution</span><span data-lang="it">Soluzione</span><span data-lang="de">Lösung</span></h3>
+                <h2 class="mb-4 project-subhead"><span data-lang="hr">Rješenje</span><span data-lang="en">Solution</span><span data-lang="it">Soluzione</span><span data-lang="de">Lösung</span></h2>
                 <p class="text-muted-foreground leading-relaxed" data-lang="hr">
                     Razvili smo web aplikaciju iz dva dijela. Javni dio nudi pretragu po namirnicama, automatski preračun količina za odabrani broj porcija, procjenu nutritivnih vrijednosti po porciji te ispis i dijeljenje recepata. Administracijski dio uvozi recepte iz Excela, s fotografije (naziv, sastojci i upute očitavaju se automatski) ili iz YouTube, Facebook i Instagram video poveznica, a analitika prikazuje posjećenost i najotvaranije recepte.
                 </p>
@@ -153,9 +153,9 @@
 
                 <div class="gallery-wrapper">
                     <div class="gallery-track">
-                        <img width="1904" height="1142" loading="lazy" decoding="async" src="images/portfolio/paapica_recipe.webp" alt="Paapica: recept s preračunom porcija i nutritivnim vrijednostima" data-alt-hr="Paapica: recept s preračunom porcija i nutritivnim vrijednostima" data-alt-en="Paapica: recipe with serving scaling and nutrition values" data-alt-it="Paapica: ricetta con calcolo delle porzioni e valori nutrizionali" data-alt-de="Paapica: Rezept mit Portionsrechner und Nährwerten"/>
-                        <img width="1904" height="1142" loading="lazy" decoding="async" src="images/portfolio/paapica_import.webp" alt="Paapica: uvoz recepata iz Excela, fotografije ili videa" data-alt-hr="Paapica: uvoz recepata iz Excela, fotografije ili videa" data-alt-en="Paapica: importing recipes from Excel, a photo or a video" data-alt-it="Paapica: importazione di ricette da Excel, foto o video" data-alt-de="Paapica: Rezeptimport aus Excel, Foto oder Video"/>
-                        <img width="1904" height="1036" loading="lazy" decoding="async" src="images/portfolio/paapica_analytics.webp?v=2" alt="Paapica: analitika posjećenosti i najotvaranijih recepata" data-alt-hr="Paapica: analitika posjećenosti i najotvaranijih recepata" data-alt-en="Paapica: analytics of visits and most-opened recipes" data-alt-it="Paapica: statistiche delle visite e delle ricette più aperte" data-alt-de="Paapica: Statistiken zu Besuchen und meistgeöffneten Rezepten"/>
+                        <img width="1904" height="1142" loading="lazy" decoding="async" src="images/portfolio/paapica_recipe.webp" srcset="images/portfolio/paapica_recipe-960.webp 960w, images/portfolio/paapica_recipe.webp 1904w" sizes="(max-width: 1024px) 100vw, 1024px" alt="Paapica: recept s preračunom porcija i nutritivnim vrijednostima" data-alt-hr="Paapica: recept s preračunom porcija i nutritivnim vrijednostima" data-alt-en="Paapica: recipe with serving scaling and nutrition values" data-alt-it="Paapica: ricetta con calcolo delle porzioni e valori nutrizionali" data-alt-de="Paapica: Rezept mit Portionsrechner und Nährwerten"/>
+                        <img width="1904" height="1142" loading="lazy" decoding="async" src="images/portfolio/paapica_import.webp" srcset="images/portfolio/paapica_import-960.webp 960w, images/portfolio/paapica_import.webp 1904w" sizes="(max-width: 1024px) 100vw, 1024px" alt="Paapica: uvoz recepata iz Excela, fotografije ili videa" data-alt-hr="Paapica: uvoz recepata iz Excela, fotografije ili videa" data-alt-en="Paapica: importing recipes from Excel, a photo or a video" data-alt-it="Paapica: importazione di ricette da Excel, foto o video" data-alt-de="Paapica: Rezeptimport aus Excel, Foto oder Video"/>
+                        <img width="1904" height="1036" loading="lazy" decoding="async" src="images/portfolio/paapica_analytics.webp?v=2" srcset="images/portfolio/paapica_analytics-960.webp?v=2 960w, images/portfolio/paapica_analytics.webp?v=2 1904w" sizes="(max-width: 1024px) 100vw, 1024px" alt="Paapica: analitika posjećenosti i najotvaranijih recepata" data-alt-hr="Paapica: analitika posjećenosti i najotvaranijih recepata" data-alt-en="Paapica: analytics of visits and most-opened recipes" data-alt-it="Paapica: statistiche delle visite e delle ricette più aperte" data-alt-de="Paapica: Statistiken zu Besuchen und meistgeöffneten Rezepten"/>
                     </div>
                 </div>
 
@@ -170,7 +170,7 @@
 
             <div class="key-features-grid">
                 <div class="feature-box">
-                    <h4 class="mb-2"><span data-lang="hr">Pretraga po namirnicama</span><span data-lang="en">Search by ingredients</span><span data-lang="it">Ricerca per ingredienti</span><span data-lang="de">Suche nach Zutaten</span></h4>
+                    <h3 class="mb-2 feature-box__title"><span data-lang="hr">Pretraga po namirnicama</span><span data-lang="en">Search by ingredients</span><span data-lang="it">Ricerca per ingredienti</span><span data-lang="de">Suche nach Zutaten</span></h3>
                     <p class="text-muted-foreground" data-lang="hr">
                         Upišete što imate u hladnjaku i dobijete recepte za koje trebate najmanje dokupiti.
                     </p>
@@ -186,7 +186,7 @@
                 </div>
 
                 <div class="feature-box">
-                    <h4 class="mb-2"><span data-lang="hr">Preračun porcija</span><span data-lang="en">Serving scaling</span><span data-lang="it">Calcolo delle porzioni</span><span data-lang="de">Portionsrechner</span></h4>
+                    <h3 class="mb-2 feature-box__title"><span data-lang="hr">Preračun porcija</span><span data-lang="en">Serving scaling</span><span data-lang="it">Calcolo delle porzioni</span><span data-lang="de">Portionsrechner</span></h3>
                     <p class="text-muted-foreground" data-lang="hr">
                         Količine sastojaka automatski se preračunavaju za odabrani broj porcija.
                     </p>
@@ -202,7 +202,7 @@
                 </div>
 
                 <div class="feature-box">
-                    <h4 class="mb-2"><span data-lang="hr">Nutritivne vrijednosti</span><span data-lang="en">Nutrition per serving</span><span data-lang="it">Valori nutrizionali</span><span data-lang="de">Nährwerte</span></h4>
+                    <h3 class="mb-2 feature-box__title"><span data-lang="hr">Nutritivne vrijednosti</span><span data-lang="en">Nutrition per serving</span><span data-lang="it">Valori nutrizionali</span><span data-lang="de">Nährwerte</span></h3>
                     <p class="text-muted-foreground" data-lang="hr">
                         Procjena kalorija, proteina, masti i ugljikohidrata po porciji za većinu recepata.
                     </p>
@@ -218,7 +218,7 @@
                 </div>
 
                 <div class="feature-box">
-                    <h4 class="mb-2"><span data-lang="hr">Uvoz bez prepisivanja</span><span data-lang="en">Import without typing</span><span data-lang="it">Importazione senza digitare</span><span data-lang="de">Import ohne Abtippen</span></h4>
+                    <h3 class="mb-2 feature-box__title"><span data-lang="hr">Uvoz bez prepisivanja</span><span data-lang="en">Import without typing</span><span data-lang="it">Importazione senza digitare</span><span data-lang="de">Import ohne Abtippen</span></h3>
                     <p class="text-muted-foreground" data-lang="hr">
                         Recepti se dodaju iz Excel tablice, s fotografije recepta ili iz poveznice na YouTube, Facebook i Instagram video.
                     </p>
@@ -234,7 +234,7 @@
                 </div>
 
                 <div class="feature-box">
-                    <h4 class="mb-2"><span data-lang="hr">Analitika</span><span data-lang="en">Analytics</span><span data-lang="it">Statistiche</span><span data-lang="de">Statistiken</span></h4>
+                    <h3 class="mb-2 feature-box__title"><span data-lang="hr">Analitika</span><span data-lang="en">Analytics</span><span data-lang="it">Statistiche</span><span data-lang="de">Statistiken</span></h3>
                     <p class="text-muted-foreground" data-lang="hr">
                         Pregled posjetitelja, prijava, trajanja sesija i najotvaranijih recepata, bez brojanja pretraživačkih botova.
                     </p>
@@ -250,7 +250,7 @@
                 </div>
 
                 <div class="feature-box">
-                    <h4 class="mb-2"><span data-lang="hr">Korisnički računi</span><span data-lang="en">User accounts</span><span data-lang="it">Account utente</span><span data-lang="de">Benutzerkonten</span></h4>
+                    <h3 class="mb-2 feature-box__title"><span data-lang="hr">Korisnički računi</span><span data-lang="en">User accounts</span><span data-lang="it">Account utente</span><span data-lang="de">Benutzerkonten</span></h3>
                     <p class="text-muted-foreground" data-lang="hr">
                         Registrirani korisnici mogu dijeliti vlastite recepte, a svaki recept može se ispisati ili podijeliti.
                     </p>

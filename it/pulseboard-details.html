@@ -31,9 +31,9 @@
     <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
     <link rel="manifest" href="../site.webmanifest">
-    <link rel="stylesheet" href="../css/project_details_style.css?v=3"/>
+    <link rel="stylesheet" href="../css/project_details_style.css?v=5"/>
     <link rel="stylesheet" href="../css/i18n.css?v=6"/>
-    <link rel="stylesheet" href="../css/theme.css?v=3"/>
+    <link rel="stylesheet" href="../css/theme.css?v=4"/>
     <link rel="stylesheet" href="../css/cta.css"/>
     <!-- language (hr / en / it / de) - runs before render so only one language is shown -->
     <script src="../js/i18n.js?v=2"></script>
@@ -53,7 +53,7 @@
             </a>
             <div class="lang-menu">
                 <button type="button" class="lang-menu__toggle" aria-haspopup="true" aria-expanded="false"
-                        aria-label="Lingua"><span data-lang="it">IT</span><svg class="lang-menu__chevron" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                        aria-label="Lingua: IT"><span data-lang="it">IT</span><svg class="lang-menu__chevron" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
                 <div class="lang-switch" role="group" aria-label="Lingua">
                     <a class="lang-switch__btn" href="../pulseboard-details.html" hreflang="hr" lang="hr" data-set-lang="hr"><span class="lang-switch__code">HR</span><span class="lang-switch__name">Hrvatski</span></a>
                     <span class="lang-switch__sep">/</span>
@@ -103,21 +103,21 @@
         <!-- Main Image -->
         <div class="mb-16 rounded-lg overflow-hidden border border-border">
             <img width="1600" height="854"
-                    src="../images/portfolio/pulseboard_posts.webp"
+                    src="../images/portfolio/pulseboard_posts.webp" srcset="../images/portfolio/pulseboard_posts-960.webp 960w, ../images/portfolio/pulseboard_posts.webp 1600w" sizes="(max-width: 1024px) 100vw, 1024px"
                     class="w-full aspect-video object-cover" alt="Pulseboard: tutti i post di tutti i social con visualizzazioni e reazioni">
         </div>
 
         <!-- Challenge & Solution -->
         <section class="challenge-solution mb-16">
             <div>
-                <h3 class="mb-4"><span data-lang="it">Sfida</span></h3>
+                <h2 class="mb-4 project-subhead"><span data-lang="it">Sfida</span></h2>
                 <p class="text-muted-foreground leading-relaxed" data-lang="it">
                     Chi gestisce più profili su quattro social network deve cercare le statistiche in quattro posti, in quattro interfacce diverse e con numeri che ogni piattaforma calcola a modo suo. Confrontare come è andato lo stesso video su Instagram e TikTok, o quale profilo cresce più in fretta, significava ricopiare i dati a mano in un foglio di calcolo. La sfida era riunire tutti questi dati in un unico posto, renderli confrontabili e conservarne lo storico.
                 </p>
             </div>
 
             <div>
-                <h3 class="mb-4"><span data-lang="it">Soluzione</span></h3>
+                <h2 class="mb-4 project-subhead"><span data-lang="it">Soluzione</span></h2>
                 <p class="text-muted-foreground leading-relaxed" data-lang="it">
                     Abbiamo sviluppato un'applicazione web privata che si collega a Facebook, Instagram, TikTok e YouTube tramite le loro API ufficiali, con accesso in sola lettura. Ogni dieci minuti circa raccoglie e salva automaticamente le statistiche di tutti i profili collegati, così la crescita si può seguire nel tempo. La dashboard mostra i follower al giorno, le visualizzazioni a settimana e il tasso di interazione per ogni profilo, l'elenco di tutti i post con visualizzazioni, reazioni e tempo medio di visione e il confronto dello stesso video sui diversi social. L'accesso è protetto da login.
                 </p>
@@ -134,9 +134,9 @@
 
                 <div class="gallery-wrapper">
                     <div class="gallery-track">
-                        <img width="1600" height="948" loading="lazy" decoding="async" src="../images/portfolio/pulseboard_overview.webp" alt="Pulseboard: i post più visti e i contenuti che funzionano meglio">
-                        <img width="1600" height="1044" loading="lazy" decoding="async" src="../images/portfolio/pulseboard_webshop.webp" alt="Pulseboard: download, vendite e post che portano clienti al negozio">
-                        <img width="1600" height="880" loading="lazy" decoding="async" src="../images/portfolio/pulseboard_settings.webp" alt="Pulseboard: account collegati su quattro social e sincronizzazione automatica">
+                        <img width="1600" height="948" loading="lazy" decoding="async" src="../images/portfolio/pulseboard_overview.webp" srcset="../images/portfolio/pulseboard_overview-960.webp 960w, ../images/portfolio/pulseboard_overview.webp 1600w" sizes="(max-width: 1024px) 100vw, 1024px" alt="Pulseboard: i post più visti e i contenuti che funzionano meglio">
+                        <img width="1600" height="1044" loading="lazy" decoding="async" src="../images/portfolio/pulseboard_webshop.webp" srcset="../images/portfolio/pulseboard_webshop-960.webp 960w, ../images/portfolio/pulseboard_webshop.webp 1600w" sizes="(max-width: 1024px) 100vw, 1024px" alt="Pulseboard: download, vendite e post che portano clienti al negozio">
+                        <img width="1600" height="880" loading="lazy" decoding="async" src="../images/portfolio/pulseboard_settings.webp" srcset="../images/portfolio/pulseboard_settings-960.webp 960w, ../images/portfolio/pulseboard_settings.webp 1600w" sizes="(max-width: 1024px) 100vw, 1024px" alt="Pulseboard: account collegati su quattro social e sincronizzazione automatica">
                     </div>
                 </div>
 
@@ -151,42 +151,42 @@
 
             <div class="key-features-grid">
                 <div class="feature-box">
-                    <h4 class="mb-2"><span data-lang="it">Tutti i social in un unico posto</span></h4>
+                    <h3 class="mb-2 feature-box__title"><span data-lang="it">Tutti i social in un unico posto</span></h3>
                     <p class="text-muted-foreground" data-lang="it">
                         Facebook, Instagram, TikTok e YouTube in un'unica dashboard, per più profili insieme.
                     </p>
                 </div>
 
                 <div class="feature-box">
-                    <h4 class="mb-2"><span data-lang="it">Crescita e interazione</span></h4>
+                    <h3 class="mb-2 feature-box__title"><span data-lang="it">Crescita e interazione</span></h3>
                     <p class="text-muted-foreground" data-lang="it">
                         Follower al giorno, visualizzazioni a settimana e tasso di interazione per ogni profilo.
                     </p>
                 </div>
 
                 <div class="feature-box">
-                    <h4 class="mb-2"><span data-lang="it">Statistiche dei post</span></h4>
+                    <h3 class="mb-2 feature-box__title"><span data-lang="it">Statistiche dei post</span></h3>
                     <p class="text-muted-foreground" data-lang="it">
                         L'elenco di tutti i post con visualizzazioni, like, commenti, condivisioni e tempo medio di visione.
                     </p>
                 </div>
 
                 <div class="feature-box">
-                    <h4 class="mb-2"><span data-lang="it">Confronto tra social</span></h4>
+                    <h3 class="mb-2 feature-box__title"><span data-lang="it">Confronto tra social</span></h3>
                     <p class="text-muted-foreground" data-lang="it">
                         Il confronto dello stesso video pubblicato su social diversi.
                     </p>
                 </div>
 
                 <div class="feature-box">
-                    <h4 class="mb-2"><span data-lang="it">Vendite del negozio online</span></h4>
+                    <h3 class="mb-2 feature-box__title"><span data-lang="it">Vendite del negozio online</span></h3>
                     <p class="text-muted-foreground" data-lang="it">
                         Download e vendite del negozio online (Payhip) e link tracciati che mostrano quale post porta clienti.
                     </p>
                 </div>
 
                 <div class="feature-box">
-                    <h4 class="mb-2"><span data-lang="it">Sincronizzazione automatica</span></h4>
+                    <h3 class="mb-2 feature-box__title"><span data-lang="it">Sincronizzazione automatica</span></h3>
                     <p class="text-muted-foreground" data-lang="it">
                         Follower e nuovi post si aggiornano automaticamente ogni 10 minuti, lo storico viene conservato e l'app ha accesso in sola lettura.
                     </p>

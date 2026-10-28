@@ -11,7 +11,7 @@ allow commercial use are accepted: CC0, public domain, CC BY and CC BY-SA.
         author; adding "Unsplash" to the words finds the CC0 Unsplash photos
 
     python3 tools/blog_photo.py get "File:<title>.jpg" <slug>
-        saves images/blog/<slug>.jpg (1200 px wide) and prints the author,
+        saves images/blog/<slug>.webp (1200 px wide) and prints the author,
         licence and page to put in the caption, see docs/blog-guide.md
 
 Commons limits how fast it may be called, so the script waits and retries
@@ -88,8 +88,8 @@ def get(title, slug):
     if img.width > WIDTH:
         img = img.resize((WIDTH, round(img.height * WIDTH / img.width)), Image.LANCZOS)
     os.makedirs(os.path.join(ROOT, 'images', 'blog'), exist_ok=True)
-    path = os.path.join('images', 'blog', slug + '.jpg')
-    img.save(os.path.join(ROOT, path), quality=80, optimize=True, progressive=True)
+    path = os.path.join('images', 'blog', slug + '.webp')
+    img.save(os.path.join(ROOT, path), 'WEBP', quality=80, method=6)
     author = re.sub(r'\s+', ' ', p['author']).strip() or 'unknown author'
     print('saved %s (%dx%d)' % (path, img.width, img.height))
     print('author:  %s' % author)

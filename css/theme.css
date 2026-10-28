@@ -293,7 +293,7 @@ html[data-theme="light"] .theme-toggle__moon {
 
 /* language dropdown (css/i18n.css) on a light background */
 html[data-theme="light"] .lang-menu__toggle {
-    color: var(--color-1, hsla(180, 100%, 25%, 1));
+    color: hsla(180, 100%, 20%, 1);     /* --color-1 is just under 4.5:1 at 10px */
 }
 
 html[data-theme="light"] .header-mobile .lang-menu .lang-switch,

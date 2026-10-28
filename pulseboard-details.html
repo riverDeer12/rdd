@@ -31,9 +31,9 @@
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="manifest" href="site.webmanifest">
-    <link rel="stylesheet" href="css/project_details_style.css?v=3"/>
+    <link rel="stylesheet" href="css/project_details_style.css?v=5"/>
     <link rel="stylesheet" href="css/i18n.css?v=6"/>
-    <link rel="stylesheet" href="css/theme.css?v=3"/>
+    <link rel="stylesheet" href="css/theme.css?v=4"/>
     <link rel="stylesheet" href="css/cta.css"/>
     <!-- language (hr / en / it / de) - runs before render so only one language is shown -->
     <script src="js/i18n.js?v=2"></script>
@@ -53,7 +53,7 @@
             </a>
             <div class="lang-menu">
                 <button type="button" class="lang-menu__toggle" aria-haspopup="true" aria-expanded="false"
-                        aria-label="Jezik"><span data-lang="hr">HR</span><svg class="lang-menu__chevron" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                        aria-label="Jezik: HR"><span data-lang="hr">HR</span><svg class="lang-menu__chevron" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
                 <div class="lang-switch" role="group" aria-label="Jezik">
                     <a class="lang-switch__btn is-active" href="pulseboard-details.html" hreflang="hr" lang="hr" data-set-lang="hr" aria-current="page"><span class="lang-switch__code">HR</span><span class="lang-switch__name">Hrvatski</span></a>
                     <span class="lang-switch__sep">/</span>
@@ -103,21 +103,21 @@
         <!-- Main Image -->
         <div class="mb-16 rounded-lg overflow-hidden border border-border">
             <img width="1600" height="854"
-                    src="images/portfolio/pulseboard_posts.webp"
+                    src="images/portfolio/pulseboard_posts.webp" srcset="images/portfolio/pulseboard_posts-960.webp 960w, images/portfolio/pulseboard_posts.webp 1600w" sizes="(max-width: 1024px) 100vw, 1024px"
                     class="w-full aspect-video object-cover" alt="Pulseboard: sve objave sa svih mreža s pregledima i reakcijama">
         </div>
 
         <!-- Challenge & Solution -->
         <section class="challenge-solution mb-16">
             <div>
-                <h3 class="mb-4"><span data-lang="hr">Izazov</span></h3>
+                <h2 class="mb-4 project-subhead"><span data-lang="hr">Izazov</span></h2>
                 <p class="text-muted-foreground leading-relaxed" data-lang="hr">
                     Tko vodi više profila na četiri društvene mreže, statistiku traži na četiri mjesta, u četiri različita sučelja i s brojkama koje svaka mreža računa na svoj način. Usporediti kako je isti video prošao na Instagramu i TikToku ili koji profil raste najbrže značilo je ručno prepisivanje u tablice. Izazov je bio sve te podatke skupiti na jedno mjesto, svesti ih na usporedive brojke i sačuvati njihovu povijest.
                 </p>
             </div>
 
             <div>
-                <h3 class="mb-4"><span data-lang="hr">Rješenje</span></h3>
+                <h2 class="mb-4 project-subhead"><span data-lang="hr">Rješenje</span></h2>
                 <p class="text-muted-foreground leading-relaxed" data-lang="hr">
                     Razvili smo privatnu web aplikaciju koja se preko službenih API sučelja povezuje s Facebookom, Instagramom, TikTokom i YouTubeom, isključivo s pravima za čitanje. Svakih desetak minuta automatski preuzima statistiku svih povezanih profila i sprema je, pa se rast može pratiti kroz vrijeme. Nadzorna ploča prikazuje pratitelje po danu, preglede po tjednu i stopu angažmana za svaki profil, popis svih objava s pregledima, reakcijama i prosječnim vremenom gledanja te usporedbu istog videa na različitim mrežama. Pristup je zaštićen prijavom.
                 </p>
@@ -134,9 +134,9 @@
 
                 <div class="gallery-wrapper">
                     <div class="gallery-track">
-                        <img width="1600" height="948" loading="lazy" decoding="async" src="images/portfolio/pulseboard_overview.webp" alt="Pulseboard: najgledanije objave i sadržaj koji najbolje radi">
-                        <img width="1600" height="1044" loading="lazy" decoding="async" src="images/portfolio/pulseboard_webshop.webp" alt="Pulseboard: preuzimanja, prodaje i objave koje dovode kupce u web trgovinu">
-                        <img width="1600" height="880" loading="lazy" decoding="async" src="images/portfolio/pulseboard_settings.webp" alt="Pulseboard: povezani računi na četiri mreže i automatska sinkronizacija">
+                        <img width="1600" height="948" loading="lazy" decoding="async" src="images/portfolio/pulseboard_overview.webp" srcset="images/portfolio/pulseboard_overview-960.webp 960w, images/portfolio/pulseboard_overview.webp 1600w" sizes="(max-width: 1024px) 100vw, 1024px" alt="Pulseboard: najgledanije objave i sadržaj koji najbolje radi">
+                        <img width="1600" height="1044" loading="lazy" decoding="async" src="images/portfolio/pulseboard_webshop.webp" srcset="images/portfolio/pulseboard_webshop-960.webp 960w, images/portfolio/pulseboard_webshop.webp 1600w" sizes="(max-width: 1024px) 100vw, 1024px" alt="Pulseboard: preuzimanja, prodaje i objave koje dovode kupce u web trgovinu">
+                        <img width="1600" height="880" loading="lazy" decoding="async" src="images/portfolio/pulseboard_settings.webp" srcset="images/portfolio/pulseboard_settings-960.webp 960w, images/portfolio/pulseboard_settings.webp 1600w" sizes="(max-width: 1024px) 100vw, 1024px" alt="Pulseboard: povezani računi na četiri mreže i automatska sinkronizacija">
                     </div>
                 </div>
 
@@ -151,42 +151,42 @@
 
             <div class="key-features-grid">
                 <div class="feature-box">
-                    <h4 class="mb-2"><span data-lang="hr">Sve mreže na jednom mjestu</span></h4>
+                    <h3 class="mb-2 feature-box__title"><span data-lang="hr">Sve mreže na jednom mjestu</span></h3>
                     <p class="text-muted-foreground" data-lang="hr">
                         Facebook, Instagram, TikTok i YouTube na jednoj nadzornoj ploči, za više profila odjednom.
                     </p>
                 </div>
 
                 <div class="feature-box">
-                    <h4 class="mb-2"><span data-lang="hr">Rast i angažman</span></h4>
+                    <h3 class="mb-2 feature-box__title"><span data-lang="hr">Rast i angažman</span></h3>
                     <p class="text-muted-foreground" data-lang="hr">
                         Pratitelji po danu, pregledi po tjednu i stopa angažmana za svaki profil.
                     </p>
                 </div>
 
                 <div class="feature-box">
-                    <h4 class="mb-2"><span data-lang="hr">Statistika objava</span></h4>
+                    <h3 class="mb-2 feature-box__title"><span data-lang="hr">Statistika objava</span></h3>
                     <p class="text-muted-foreground" data-lang="hr">
                         Popis svih objava s pregledima, oznakama sviđa mi se, komentarima, dijeljenjima i prosječnim vremenom gledanja.
                     </p>
                 </div>
 
                 <div class="feature-box">
-                    <h4 class="mb-2"><span data-lang="hr">Usporedba po mrežama</span></h4>
+                    <h3 class="mb-2 feature-box__title"><span data-lang="hr">Usporedba po mrežama</span></h3>
                     <p class="text-muted-foreground" data-lang="hr">
                         Usporedba istog videa objavljenog na različitim mrežama.
                     </p>
                 </div>
 
                 <div class="feature-box">
-                    <h4 class="mb-2"><span data-lang="hr">Prodaja u web trgovini</span></h4>
+                    <h3 class="mb-2 feature-box__title"><span data-lang="hr">Prodaja u web trgovini</span></h3>
                     <p class="text-muted-foreground" data-lang="hr">
                         Preuzimanja i prodaje iz web trgovine (Payhip) te praćene poveznice koje pokazuju koja objava dovodi kupce.
                     </p>
                 </div>
 
                 <div class="feature-box">
-                    <h4 class="mb-2"><span data-lang="hr">Automatska sinkronizacija</span></h4>
+                    <h3 class="mb-2 feature-box__title"><span data-lang="hr">Automatska sinkronizacija</span></h3>
                     <p class="text-muted-foreground" data-lang="hr">
                         Pratitelji i nove objave osvježavaju se automatski svakih 10 minuta, povijest se čuva, a aplikacija ima samo prava za čitanje.
                     </p>

@@ -168,6 +168,18 @@ h4 {
     margin-top: 0;
 }
 
+/* Challenge / Solution and the feature titles: one heading level lower in
+   the outline (h2, h3) than they look (h3, h4), so headings don't skip a level */
+h2.project-subhead {
+    font-size: 1.25rem;
+    font-family: inherit;
+}
+
+h3.feature-box__title {
+    font-size: 1rem;
+    margin-top: 0;
+}
+
 p,
 label,
 button,
@@ -280,6 +292,8 @@ a:hover {
     width: 100%;
     height: auto;
     aspect-ratio: 16 / 9;
+    object-fit: cover;          /* screenshots are not all 16:9: crop, don't stretch */
+    object-position: top;
     flex-shrink: 0;
     cursor: zoom-in;
 }

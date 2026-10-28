@@ -26,9 +26,9 @@
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="manifest" href="site.webmanifest">
-    <link rel="stylesheet" href="css/project_details_style.css?v=3"/>
+    <link rel="stylesheet" href="css/project_details_style.css?v=5"/>
     <link rel="stylesheet" href="css/i18n.css?v=6"/>
-    <link rel="stylesheet" href="css/theme.css?v=3"/>
+    <link rel="stylesheet" href="css/theme.css?v=4"/>
     <link rel="stylesheet" href="css/cta.css"/>
     <!-- language (hr / en / it / de) - runs before render so only one language is shown -->
     <script src="js/i18n.js?v=2"></script>
@@ -50,7 +50,7 @@
             </a>
             <div class="lang-menu">
                 <button type="button" class="lang-menu__toggle" aria-haspopup="true" aria-expanded="false"
-                        aria-label="Jezik" data-aria-label-hr="Jezik" data-aria-label-en="Language" data-aria-label-it="Lingua" data-aria-label-de="Sprache"><span data-lang="hr">HR</span><span data-lang="en">EN</span><span data-lang="it">IT</span><span data-lang="de">DE</span><svg class="lang-menu__chevron" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                        aria-label="Jezik: HR" data-aria-label-hr="Jezik: HR" data-aria-label-en="Language: EN" data-aria-label-it="Lingua: IT" data-aria-label-de="Sprache: DE"><span data-lang="hr">HR</span><span data-lang="en">EN</span><span data-lang="it">IT</span><span data-lang="de">DE</span><svg class="lang-menu__chevron" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
                 <div class="lang-switch" role="group" aria-label="Jezik" data-aria-label-hr="Jezik" data-aria-label-en="Language" data-aria-label-it="Lingua" data-aria-label-de="Sprache">
                     <button type="button" class="lang-switch__btn" data-set-lang="hr"><span class="lang-switch__code">HR</span><span class="lang-switch__name">Hrvatski</span></button>
                     <span class="lang-switch__sep">/</span>
@@ -113,7 +113,7 @@
         <!-- Main Image -->
         <div class="mb-16 rounded-lg overflow-hidden border border-border">
             <img width="2000" height="925"
-                    src="images/portfolio/yufe_home.webp"
+                    src="images/portfolio/yufe_home.webp" srcset="images/portfolio/yufe_home-960.webp 960w, images/portfolio/yufe_home.webp 2000w" sizes="(max-width: 1024px) 100vw, 1024px"
                    
                     class="w-full aspect-video object-contain"
                     loading="lazy" alt="YUFE: naslovna stranica platforme za inovacije" data-alt-hr="YUFE: naslovna stranica platforme za inovacije" data-alt-en="YUFE: home page of the innovation platform" data-alt-it="YUFE: pagina iniziale della piattaforma per l'innovazione" data-alt-de="YUFE: Startseite der Innovationsplattform"/>
@@ -138,7 +138,7 @@
         <!-- Challenge & Solution -->
         <section class="challenge-solution mb-16">
             <div>
-                <h3 class="mb-4"><span data-lang="hr">Izazov</span><span data-lang="en">Challenge</span><span data-lang="it">Sfida</span><span data-lang="de">Herausforderung</span></h3>
+                <h2 class="mb-4 project-subhead"><span data-lang="hr">Izazov</span><span data-lang="en">Challenge</span><span data-lang="it">Sfida</span><span data-lang="de">Herausforderung</span></h2>
                 <p class="text-muted-foreground leading-relaxed" data-lang="hr">
                     Omogućiti prekograničnu suradnju i inovacije među raznolikim dionicima (gospodarstvom, akademskom zajednicom, istraživačima i javnim sektorom), uz jasno, pregledno i jednostavno korisničko iskustvo u kojem se sadržaj lako pronalazi.
                 </p>
@@ -156,7 +156,7 @@
             </div>
 
             <div>
-                <h3 class="mb-4"><span data-lang="hr">Rješenje</span><span data-lang="en">Solution</span><span data-lang="it">Soluzione</span><span data-lang="de">Lösung</span></h3>
+                <h2 class="mb-4 project-subhead"><span data-lang="hr">Rješenje</span><span data-lang="en">Solution</span><span data-lang="it">Soluzione</span><span data-lang="de">Lösung</span></h2>
                 <p class="text-muted-foreground leading-relaxed" data-lang="hr">
                     Izraditi strukturiranu platformu bogatu sadržajem, s dobro osmišljenom informacijskom arhitekturom i intuitivnim sučeljem koje podržava umrežavanje, otkrivanje sadržaja i prijenos znanja među regijama i disciplinama.
                 </p>
@@ -183,9 +183,9 @@
 
                 <div class="gallery-wrapper">
                     <div class="gallery-track">
-                        <img width="1872" height="790" src="images/portfolio/gallery/yufe_modal.webp" loading="lazy" alt="YUFE: pretraga znanstvenika" data-alt-hr="YUFE: pretraga znanstvenika" data-alt-en="YUFE: scientist search" data-alt-it="YUFE: ricerca di scienziati" data-alt-de="YUFE: Suche nach Wissenschaftlern"/>
-                        <img width="2000" height="925" src="images/portfolio/yufe_home.webp" loading="lazy" alt="YUFE: naslovna stranica platforme za inovacije" data-alt-hr="YUFE: naslovna stranica platforme za inovacije" data-alt-en="YUFE: home page of the innovation platform" data-alt-it="YUFE: pagina iniziale della piattaforma per l'innovazione" data-alt-de="YUFE: Startseite der Innovationsplattform"/>
-                        <img width="2000" height="921" src="images/portfolio/yufe_about.webp" loading="lazy" alt="YUFE: stranica o platformi" data-alt-hr="YUFE: stranica o platformi" data-alt-en="YUFE: about the platform" data-alt-it="YUFE: pagina di presentazione della piattaforma" data-alt-de="YUFE: Seite über die Plattform"/>
+                        <img width="1872" height="790" src="images/portfolio/gallery/yufe_modal.webp" srcset="images/portfolio/gallery/yufe_modal-960.webp 960w, images/portfolio/gallery/yufe_modal.webp 1872w" sizes="(max-width: 1024px) 100vw, 1024px" loading="lazy" alt="YUFE: pretraga znanstvenika" data-alt-hr="YUFE: pretraga znanstvenika" data-alt-en="YUFE: scientist search" data-alt-it="YUFE: ricerca di scienziati" data-alt-de="YUFE: Suche nach Wissenschaftlern"/>
+                        <img width="2000" height="925" src="images/portfolio/yufe_home.webp" srcset="images/portfolio/yufe_home-960.webp 960w, images/portfolio/yufe_home.webp 2000w" sizes="(max-width: 1024px) 100vw, 1024px" loading="lazy" alt="YUFE: naslovna stranica platforme za inovacije" data-alt-hr="YUFE: naslovna stranica platforme za inovacije" data-alt-en="YUFE: home page of the innovation platform" data-alt-it="YUFE: pagina iniziale della piattaforma per l'innovazione" data-alt-de="YUFE: Startseite der Innovationsplattform"/>
+                        <img width="2000" height="921" src="images/portfolio/yufe_about.webp" srcset="images/portfolio/yufe_about-960.webp 960w, images/portfolio/yufe_about.webp 2000w" sizes="(max-width: 1024px) 100vw, 1024px" loading="lazy" alt="YUFE: stranica o platformi" data-alt-hr="YUFE: stranica o platformi" data-alt-en="YUFE: about the platform" data-alt-it="YUFE: pagina di presentazione della piattaforma" data-alt-de="YUFE: Seite über die Plattform"/>
                     </div>
                 </div>
 
@@ -199,7 +199,7 @@
 
             <div class="key-features-grid">
                 <div class="feature-box">
-                    <h4 class="mb-2"><span data-lang="hr">Prekogranično umrežavanje</span><span data-lang="en">Cross-border networking</span><span data-lang="it">Networking transfrontaliero</span><span data-lang="de">Grenzüberschreitende Vernetzung</span></h4>
+                    <h3 class="mb-2 feature-box__title"><span data-lang="hr">Prekogranično umrežavanje</span><span data-lang="en">Cross-border networking</span><span data-lang="it">Networking transfrontaliero</span><span data-lang="de">Grenzüberschreitende Vernetzung</span></h3>
                     <p class="text-muted-foreground" data-lang="hr">
                         Povezuje dionike iz različitih regija EU-a radi suradnje u istraživanju i razvoju te digitalnim tehnologijama.
                     </p>
@@ -215,7 +215,7 @@
                 </div>
 
                 <div class="feature-box">
-                    <h4 class="mb-2"><span data-lang="hr">Prijenos znanja</span><span data-lang="en">Knowledge transfer</span><span data-lang="it">Trasferimento di conoscenze</span><span data-lang="de">Wissenstransfer</span></h4>
+                    <h3 class="mb-2 feature-box__title"><span data-lang="hr">Prijenos znanja</span><span data-lang="en">Knowledge transfer</span><span data-lang="it">Trasferimento di conoscenze</span><span data-lang="de">Wissenstransfer</span></h3>
                     <p class="text-muted-foreground" data-lang="hr">
                         Povezuje akademsku zajednicu i gospodarstvo kroz strukturirane informacije i jasne putove suradnje.
                     </p>
@@ -231,7 +231,7 @@
                 </div>
 
                 <div class="feature-box">
-                    <h4 class="mb-2"><span data-lang="hr">Multidisciplinarni pristup</span><span data-lang="en">Multidisciplinary approach</span><span data-lang="it">Approccio multidisciplinare</span><span data-lang="de">Multidisziplinärer Ansatz</span></h4>
+                    <h3 class="mb-2 feature-box__title"><span data-lang="hr">Multidisciplinarni pristup</span><span data-lang="en">Multidisciplinary approach</span><span data-lang="it">Approccio multidisciplinare</span><span data-lang="de">Multidisziplinärer Ansatz</span></h3>
                     <p class="text-muted-foreground" data-lang="hr">
                         Koristi stručnost i ljudski kapital iz cijele Europe za postizanje rezultata visoke vrijednosti.
                     </p>
@@ -247,7 +247,7 @@
                 </div>
 
                 <div class="feature-box">
-                    <h4 class="mb-2"><span data-lang="hr">Jasna informacijska arhitektura</span><span data-lang="en">Clear information architecture</span><span data-lang="it">Architettura dell'informazione chiara</span><span data-lang="de">Klare Informationsarchitektur</span></h4>
+                    <h3 class="mb-2 feature-box__title"><span data-lang="hr">Jasna informacijska arhitektura</span><span data-lang="en">Clear information architecture</span><span data-lang="it">Architettura dell'informazione chiara</span><span data-lang="de">Klare Informationsarchitektur</span></h3>
                     <p class="text-muted-foreground" data-lang="hr">
                         Logična navigacija koja olakšava pronalaženje programa, partnera i prilika.
                     </p>
@@ -263,7 +263,7 @@
                 </div>
 
                 <div class="feature-box">
-                    <h4 class="mb-2"><span data-lang="hr">Skalabilna platforma</span><span data-lang="en">Scalable platform</span><span data-lang="it">Piattaforma scalabile</span><span data-lang="de">Skalierbare Plattform</span></h4>
+                    <h3 class="mb-2 feature-box__title"><span data-lang="hr">Skalabilna platforma</span><span data-lang="en">Scalable platform</span><span data-lang="it">Piattaforma scalabile</span><span data-lang="de">Skalierbare Plattform</span></h3>
                     <p class="text-muted-foreground" data-lang="hr">
                         Izrađena da raste zajedno s novim regijama, inicijativama, vrstama sadržaja i potrebama za suradnjom.
                     </p>
@@ -279,7 +279,7 @@
                 </div>
 
                 <div class="feature-box">
-                    <h4 class="mb-2"><span data-lang="hr">Responzivan dizajn</span><span data-lang="en">Responsive design</span><span data-lang="it">Design responsive</span><span data-lang="de">Responsives Design</span></h4>
+                    <h3 class="mb-2 feature-box__title"><span data-lang="hr">Responzivan dizajn</span><span data-lang="en">Responsive design</span><span data-lang="it">Design responsive</span><span data-lang="de">Responsives Design</span></h3>
                     <p class="text-muted-foreground" data-lang="hr">
                         Optimizirano za stolna računala, tablete i mobilne uređaje.
                     </p>

@@ -129,7 +129,7 @@ def add_cover(slug):
     if not meta:
         sys.exit('main.html needs the <p class="article-meta" data-lang="xx"> lines (see docs/blog-guide.md)')
     indent = meta[-1].group(1)
-    imgs = ''.join('\n%s<img class="article-cover" data-lang="%s" src="images/og/%s-%s.jpg" width="1200" height="630" decoding="async" alt="">'
+    imgs = ''.join('\n%s<img class="article-cover" data-lang="%s" src="images/og/%s-%s.webp" width="1200" height="630" decoding="async" alt="">'
                    % (indent, l, slug, l) for l in LANGS)
     t = t[:meta[-1].end()] + '\n' + imgs + t[meta[-1].end():]
     open(path, 'w', encoding='utf-8').write(t)
@@ -147,7 +147,7 @@ def list_on_blog(slug, meta):
         ul = t.index('<ul class="blog-list">', block) + len('<ul class="blog-list">')
         item = '''
                             <li class="blog-list__item">
-                                <a class="blog-list__thumb" href="%s.html" tabindex="-1" aria-hidden="true"><img src="images/og/%s-%s.jpg" width="1200" height="630" loading="lazy" decoding="async" alt=""></a>
+                                <a class="blog-list__thumb" href="%s.html" tabindex="-1" aria-hidden="true"><img src="images/og/%s-%s.webp" width="1200" height="630" loading="lazy" decoding="async" alt=""></a>
                                 <div class="blog-list__text">
                                     <p class="article-meta"><time datetime="%s">%s</time><span>Milan Trbojević</span></p>
                                     <h2 class="blog-list__title"><a href="%s.html">%s</a></h2>

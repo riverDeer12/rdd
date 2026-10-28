@@ -90,6 +90,8 @@ def draw_image(title, path):
     draw.text((PAD, H - PAD - 26), 'RDD Software  ·  rdd.software', font=footer, fill=GREY)
 
     img.save(path, 'JPEG', quality=88, optimize=True)
+    # the same image, lighter, for the article page and the blog list (the .jpg is for social networks)
+    img.save(path[:-len('.jpg')] + '.webp', 'WEBP', quality=82, method=6)
 
 
 def titles(page):

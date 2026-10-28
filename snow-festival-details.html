@@ -31,9 +31,9 @@
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="manifest" href="site.webmanifest">
-    <link rel="stylesheet" href="css/project_details_style.css?v=3"/>
+    <link rel="stylesheet" href="css/project_details_style.css?v=5"/>
     <link rel="stylesheet" href="css/i18n.css?v=6"/>
-    <link rel="stylesheet" href="css/theme.css?v=3"/>
+    <link rel="stylesheet" href="css/theme.css?v=4"/>
     <link rel="stylesheet" href="css/cta.css"/>
     <!-- language (hr / en / it / de) - runs before render so only one language is shown -->
     <script src="js/i18n.js?v=2"></script>
@@ -52,7 +52,7 @@
             </a>
             <div class="lang-menu">
                 <button type="button" class="lang-menu__toggle" aria-haspopup="true" aria-expanded="false"
-                        aria-label="Jezik"><span data-lang="hr">HR</span><svg class="lang-menu__chevron" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                        aria-label="Jezik: HR"><span data-lang="hr">HR</span><svg class="lang-menu__chevron" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
                 <div class="lang-switch" role="group" aria-label="Jezik">
                     <a class="lang-switch__btn is-active" href="snow-festival-details.html" hreflang="hr" lang="hr" data-set-lang="hr" aria-current="page"><span class="lang-switch__code">HR</span><span class="lang-switch__name">Hrvatski</span></a>
                     <span class="lang-switch__sep">/</span>
@@ -102,7 +102,7 @@
         <!-- Main Image -->
         <div class="mb-16 rounded-lg overflow-hidden border border-border">
             <img width="2000" height="914"
-                    src="images/portfolio/gremo_home.webp"
+                    src="images/portfolio/gremo_home.webp" srcset="images/portfolio/gremo_home-960.webp 960w, images/portfolio/gremo_home.webp 2000w" sizes="(max-width: 1024px) 100vw, 1024px"
                    
                     class="w-full aspect-video object-cover"
                     loading="lazy" alt="Snow Festival Sljeme: naslovna stranica s videom"/>
@@ -121,14 +121,14 @@
         <!-- Challenge & Solution -->
         <section class="challenge-solution mb-16">
             <div>
-                <h3 class="mb-4"><span data-lang="hr">Izazov</span></h3>
+                <h2 class="mb-4 project-subhead"><span data-lang="hr">Izazov</span></h2>
                 <p class="text-muted-foreground leading-relaxed" data-lang="hr">
                     Predstaviti bogat višednevni zimski festival sa sportskim i kulturnim programom te aktivnostima za cijelu obitelj na način koji ostaje pregledan, lako pretraživ i jednostavan za snalaženje svim posjetiteljima.
                 </p>
             </div>
 
             <div>
-                <h3 class="mb-4"><span data-lang="hr">Rješenje</span></h3>
+                <h2 class="mb-4 project-subhead"><span data-lang="hr">Rješenje</span></h2>
                 <p class="text-muted-foreground leading-relaxed" data-lang="hr">
                     Izgraditi strukturiranu platformu za događanja prilagođenu mobilnim uređajima, s naglaskom na raspored programa, prodaju ulaznica, ključne informacije za posjetitelje i vidljivost sponzora, uz promicanje održivosti i uključenosti zajednice.
                 </p>
@@ -144,9 +144,9 @@
 
                 <div class="gallery-wrapper">
                     <div class="gallery-track">
-                        <img width="2000" height="912" src="images/portfolio/gremo_countdown.webp" loading="lazy" alt="Snow Festival Sljeme: odbrojavanje do festivala i kupnja ulaznica"/>
-                        <img width="2000" height="914" src="images/portfolio/gremo_home.webp" loading="lazy" alt="Snow Festival Sljeme: naslovna stranica s videom"/>
-                        <img width="1872" height="790" src="images/portfolio/gallery/gremo_na_sljeme_modal.webp" loading="lazy" alt="Snow Festival Sljeme: članovi tima"/>
+                        <img width="2000" height="912" src="images/portfolio/gremo_countdown.webp" srcset="images/portfolio/gremo_countdown-960.webp 960w, images/portfolio/gremo_countdown.webp 2000w" sizes="(max-width: 1024px) 100vw, 1024px" loading="lazy" alt="Snow Festival Sljeme: odbrojavanje do festivala i kupnja ulaznica"/>
+                        <img width="2000" height="914" src="images/portfolio/gremo_home.webp" srcset="images/portfolio/gremo_home-960.webp 960w, images/portfolio/gremo_home.webp 2000w" sizes="(max-width: 1024px) 100vw, 1024px" loading="lazy" alt="Snow Festival Sljeme: naslovna stranica s videom"/>
+                        <img width="1872" height="790" src="images/portfolio/gallery/gremo_na_sljeme_modal.webp" srcset="images/portfolio/gallery/gremo_na_sljeme_modal-960.webp 960w, images/portfolio/gallery/gremo_na_sljeme_modal.webp 1872w" sizes="(max-width: 1024px) 100vw, 1024px" loading="lazy" alt="Snow Festival Sljeme: članovi tima"/>
                     </div>
                 </div>
 
@@ -160,42 +160,42 @@
 
             <div class="key-features-grid">
                 <div class="feature-box">
-                    <h4 class="mb-2"><span data-lang="hr">Raspored događanja</span></h4>
+                    <h3 class="mb-2 feature-box__title"><span data-lang="hr">Raspored događanja</span></h3>
                     <p class="text-muted-foreground" data-lang="hr">
                         Pregledan vremenski raspored natjecanja u zimskim sportovima, kulturnih nastupa i obiteljskih aktivnosti.
                     </p>
                 </div>
 
                 <div class="feature-box">
-                    <h4 class="mb-2"><span data-lang="hr">Ulaznice i prijave</span></h4>
+                    <h3 class="mb-2 feature-box__title"><span data-lang="hr">Ulaznice i prijave</span></h3>
                     <p class="text-muted-foreground" data-lang="hr">
                         Jednostavna kupnja ulaznica i prijava na događanja za posjetitelje i sudionike.
                     </p>
                 </div>
 
                 <div class="feature-box">
-                    <h4 class="mb-2"><span data-lang="hr">Informacije za posjetitelje</span></h4>
+                    <h3 class="mb-2 feature-box__title"><span data-lang="hr">Informacije za posjetitelje</span></h3>
                     <p class="text-muted-foreground" data-lang="hr">
                         Informacije o prijevozu, smještaju i ostale praktične informacije za bezbrižan doživljaj festivala.
                     </p>
                 </div>
 
                 <div class="feature-box">
-                    <h4 class="mb-2"><span data-lang="hr">Sponzori i partneri</span></h4>
+                    <h3 class="mb-2 feature-box__title"><span data-lang="hr">Sponzori i partneri</span></h3>
                     <p class="text-muted-foreground" data-lang="hr">
                         Isticanje sponzora i partnera festivala te lokalnih tvrtki.
                     </p>
                 </div>
 
                 <div class="feature-box">
-                    <h4 class="mb-2"><span data-lang="hr">Održivost i zajednica</span></h4>
+                    <h3 class="mb-2 feature-box__title"><span data-lang="hr">Održivost i zajednica</span></h3>
                     <p class="text-muted-foreground" data-lang="hr">
                         Promicanje ekološki prihvatljivih praksi i uključenosti zajednice.
                     </p>
                 </div>
 
                 <div class="feature-box">
-                    <h4 class="mb-2"><span data-lang="hr">Responzivan dizajn</span></h4>
+                    <h3 class="mb-2 feature-box__title"><span data-lang="hr">Responzivan dizajn</span></h3>
                     <p class="text-muted-foreground" data-lang="hr">
                         Prilagođeno mobitelima, tabletima i stolnim računalima.
                     </p>
