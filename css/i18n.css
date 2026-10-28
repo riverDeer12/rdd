@@ -478,3 +478,61 @@ html.i18n-pending body {
         display: none;
     }
 }
+
+/* --------------------------------------------------------------------
+ * "Send an enquiry" button at the bottom of the screen on phones
+ * (js/sticky-cta.js)
+ * -------------------------------------------------------------------- */
+.sticky-cta {
+    display: none;
+}
+
+@media screen and (max-width: 900px) {
+    .sticky-cta {
+        position: fixed;
+        left: 16px;
+        right: 16px;
+        bottom: 16px;
+        z-index: 500;
+        display: block;
+        padding: 14px 20px;
+        font-family: var(--font-1);
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: .2em;
+        line-height: 1.4;
+        text-align: center;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: #ffffff;
+        background: hsla(180, 100%, 20%, 1);
+        border-radius: 4px;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, .3);
+        opacity: 0;
+        transform: translateY(16px);
+        pointer-events: none;
+        visibility: hidden;
+        transition: opacity .2s ease, transform .2s ease, visibility 0s linear .2s;
+    }
+
+    .sticky-cta.is-visible {
+        opacity: 1;
+        transform: none;
+        pointer-events: auto;
+        visibility: visible;
+        transition: opacity .2s ease, transform .2s ease;
+    }
+
+    .sticky-cta:hover,
+    .sticky-cta:focus,
+    .sticky-cta:visited {
+        color: #ffffff;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .sticky-cta,
+    .sticky-cta.is-visible {
+        transition: none;
+    }
+}
