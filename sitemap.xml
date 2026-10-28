@@ -82,6 +82,46 @@
         <priority>0.6</priority>
     </url>
     <url>
+        <loc>https://rdd.software/author.html</loc>
+        <xhtml:link rel="alternate" hreflang="hr" href="https://rdd.software/author.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rdd.software/en/author.html"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/author.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/author.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/author.html"/>
+        <lastmod>2026-10-28</lastmod>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://rdd.software/en/author.html</loc>
+        <xhtml:link rel="alternate" hreflang="hr" href="https://rdd.software/author.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rdd.software/en/author.html"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/author.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/author.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/author.html"/>
+        <lastmod>2026-10-28</lastmod>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://rdd.software/it/author.html</loc>
+        <xhtml:link rel="alternate" hreflang="hr" href="https://rdd.software/author.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rdd.software/en/author.html"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/author.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/author.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/author.html"/>
+        <lastmod>2026-10-28</lastmod>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://rdd.software/de/author.html</loc>
+        <xhtml:link rel="alternate" hreflang="hr" href="https://rdd.software/author.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rdd.software/en/author.html"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/author.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/author.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/author.html"/>
+        <lastmod>2026-10-28</lastmod>
+        <priority>0.5</priority>
+    </url>
+    <url>
         <loc>https://rdd.software/blog-domain-hosting.html</loc>
         <xhtml:link rel="alternate" hreflang="hr" href="https://rdd.software/blog-domain-hosting.html"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://rdd.software/en/blog-domain-hosting.html"/>

@@ -63,6 +63,7 @@ OG_LOCALE = {'hr': 'hr_HR', 'en': 'en_GB', 'it': 'it_IT', 'de': 'de_DE'}
 
 # sitemap priority by page; anything not listed gets 0.6
 PRIORITY = {
+    'author.html': '0.5',
     'index.html': '1.0',
     'pricing.html': '0.8',
     'web-development.html': '0.8',
@@ -308,7 +309,7 @@ CRUMB_SECTION = {
 
 
 def crumb_section(page):
-    if page.startswith('blog-'):
+    if page.startswith('blog-') or page == 'author.html':
         return 'blog'
     if page in SERVICES:
         return 'services'
@@ -437,6 +438,35 @@ def read_next(out, page, lang):
 
 
 # --------------------------------------------------------------------
+# the author: his name on the blog links to author.html, which lists
+# every article
+# --------------------------------------------------------------------
+AUTHOR = 'Milan Trbojević'
+AUTHOR_LINK = '<a href="author.html" rel="author">%s</a>' % AUTHOR
+
+
+def author_links(out, page, lang):
+    if page == 'author.html':
+        marker = re.search(r'( *)<!-- articles: filled in by tools/build.py[^>]*-->', out)
+        if marker:
+            indent = marker.group(1)
+            items = ''.join('\n%s    <li><a href="%s.html">%s &rarr;</a></li>' % (indent, slug, title)
+                            for slug, title in blog_articles(lang))
+            out = out[:marker.start()] + '%s<ul class="page-related">%s\n%s</ul>' % (indent, items, indent) + out[marker.end():]
+        return out
+    if not page.startswith('blog'):
+        return out
+    # date line of the article and of each item in the blog list
+    out = re.sub(r'(<p class="article-meta"[^>]*>.*?)<span>%s</span>' % AUTHOR, lambda m: m.group(1) + AUTHOR_LINK, out)
+    # "Milan Trbojević is the owner of ..." under the article
+    out = re.sub(r'(<p class="article-author">)%s' % AUTHOR, lambda m: m.group(1) + AUTHOR_LINK, out)
+    # the article's structured data
+    out = out.replace('"@type": "Person",\n            "name": "%s"\n' % AUTHOR,
+                      '"@type": "Person",\n            "name": "%s",\n            "url": "%s"\n' % (AUTHOR, page_url('author.html', lang)))
+    return out
+
+
+# --------------------------------------------------------------------
 # sitemap
 # --------------------------------------------------------------------
 def feed_url(lang):
@@ -528,6 +558,7 @@ def main():
             # the copyright year, written at build time instead of with document.write
             out = out.replace(COPYRIGHT_SCRIPT, '%d.' % datetime.date.today().year)
             out = project_data(read_next(breadcrumbs(out, page, lang), page, lang), page, lang)
+            out = author_links(out, page, lang)
             folder = ROOT if lang == DEFAULT_LANG else os.path.join(ROOT, lang)
             os.makedirs(folder, exist_ok=True)
             target = os.path.join(folder, page)

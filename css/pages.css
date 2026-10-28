@@ -445,3 +445,19 @@ html[data-theme="light"] .article-tip {
         grid-template-columns: 1fr;
     }
 }
+
+/* the author's name links to author.html */
+.article-meta a,
+.page-body .article-author a {
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+}
+
+.article-meta a:hover,
+.article-meta a:focus,
+.page-body .article-author a:hover,
+.page-body .article-author a:focus {
+    color: var(--color-text-dark);
+}
