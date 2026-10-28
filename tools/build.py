@@ -38,7 +38,8 @@ Every page except the home page also gets a breadcrumb trail (Home > Blog >
 article) above its title, with the same trail as BreadcrumbList structured
 data for search engines; see breadcrumbs() below.
 Every blog article's "read next" list also starts with the newest other
-article (read_next() below), so older articles keep leading to new ones.
+article (read_next() below), so older articles keep leading to new ones,
+and project pages get structured data about the project (project_data()).
 """
 
 import datetime
@@ -372,6 +373,37 @@ def breadcrumbs(out, page, lang):
 
 
 # --------------------------------------------------------------------
+# project pages (*-details.html): structured data describing the project
+# --------------------------------------------------------------------
+def project_data(out, page, lang):
+    if not page.endswith('-details.html'):
+        return out
+    h1 = re.search(r'<h1[^>]*>(.*?)</h1>', out, re.S)
+    found = lambda pattern: (re.search(pattern, out, re.S) or [None, None])[1]
+    data = {
+        '@context': 'https://schema.org',
+        '@type': 'CreativeWork',
+        'name': html.unescape(re.sub(r'<[^>]+>', '', h1.group(1))).strip(),
+        'description': html.unescape(found(r'<meta name="description" content="([^"]*)"') or ''),
+        'url': page_url(page, lang),
+        'inLanguage': lang,
+        'creator': {'@type': 'ProfessionalService', 'name': 'RDD Software', 'url': SITE},
+    }
+    image = found(r'<meta property="og:image" content="([^"]*)"')
+    year = found(r'project-year">\s*(\d{4})')
+    live = found(r'class="flex gap-4 project-links">\s*<a\s+href="(https?://[^"]+)"')
+    if image:
+        data['image'] = image
+    if year:
+        data['dateCreated'] = year
+    if live:
+        data['sameAs'] = live
+    ld = '    <script type="application/ld+json">%s</script>\n' % json.dumps(data, ensure_ascii=False)
+    head_end = out.index('</head>')
+    return out[:head_end] + ld + out[head_end:]
+
+
+# --------------------------------------------------------------------
 # blog: every article's "read next" list starts with the newest other
 # article, so older articles keep leading to new ones
 # --------------------------------------------------------------------
@@ -491,7 +523,8 @@ def main():
     for page in pages:
         text = open(os.path.join(SRC, page), encoding='utf-8').read().replace('\r\n', '\n')
         for lang in LANGS:
-            out = read_next(breadcrumbs(render(text, page, lang, pages), page, lang), page, lang)
+            out = render(text, page, lang, pages)
+            out = project_data(read_next(breadcrumbs(out, page, lang), page, lang), page, lang)
             folder = ROOT if lang == DEFAULT_LANG else os.path.join(ROOT, lang)
             os.makedirs(folder, exist_ok=True)
             target = os.path.join(folder, page)
