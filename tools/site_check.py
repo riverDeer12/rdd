@@ -31,6 +31,12 @@ TIMEOUT = 20
 # sites that refuse automated requests although the link works in a browser
 # (LinkedIn answers 999, some others 403/429 to anything that is not a browser)
 BOT_WALLS = ('linkedin.com', 'formsubmit.co')
+
+# known problems on other people's sites that the owner decided to live with:
+# reported under "Provjeriti ručno" instead of failing the check every week
+KNOWN = {
+    'yufe-rimap.uniri.hr': 'certifikat ne odgovara adresi; link ostaje po odluci vlasnika',
+}
 SKIP = re.compile(r'^(mailto:|tel:|javascript:|data:)', re.I)
 
 
@@ -144,7 +150,9 @@ def main():
         netloc = urllib.parse.urlparse(url).netloc
         if any(netloc == d or netloc.endswith('.' + d) for d in BOT_WALLS) and status in (403, 429, 999):
             continue
-        if netloc != host and status in (403, 429):
+        if netloc in KNOWN:
+            warnings.append(('poznato', '%s (%s)' % (what, KNOWN[netloc])))
+        elif netloc != host and status in (403, 429):
             warnings.append(('vanjska poveznica', what + ', možda samo blokira automatske provjere'))
         else:
             problems.append(('poveznica', what))
