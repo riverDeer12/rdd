@@ -105,15 +105,15 @@
         container.hidden = false;
         button.hidden = true;
 
+        if (window.rddTrack) window.rddTrack('booking_open');
+
         loadCal();
         if (initialised.indexOf(ns) === -1) {
             window.Cal('init', ns, { origin: CAL_ORIGIN });
             api(ns)('on', {
                 action: 'bookingSuccessful',
                 callback: function () {
-                    if (typeof window.gtag === 'function') {
-                        window.gtag('event', 'generate_lead', { method: 'consultation' });
-                    }
+                    if (window.rddTrack) window.rddTrack('generate_lead', { method: 'consultation' });
                 }
             });
             initialised.push(ns);

@@ -134,6 +134,9 @@
         } catch (err) {
             // storage unavailable - the visitor still lands on the form
         }
+        if (window.rddTrack) {
+            window.rddTrack('estimate_sent', { project_type: e.project.contact, value: Math.round(middle), currency: 'EUR' });
+        }
     });
 
     form.addEventListener('change', render);

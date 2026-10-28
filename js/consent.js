@@ -6,6 +6,10 @@
  * links (footer "Cookie settings") show the banner again so it can be
  * changed. Banner texts use data-lang, like the rest of the site.
  *
+ * It also defines window.rddTrack(), which sends an event to Google
+ * Analytics only when the visitor has accepted it, and counts clicks on
+ * e-mail, LinkedIn and enquiry / booking links.
+ *
  * Load it at the end of <body>, after js/i18n.js has run in <head>.
  * ------------------------------------------------------------------- */
 
@@ -139,6 +143,30 @@
     if (stored === 'granted') loadAnalytics();
     else if (stored !== 'denied') showBanner();
 
+    /* events for Google Analytics - only sent when the visitor has accepted
+       analytics; other scripts call window.rddTrack('name', {...}) */
+    window.rddTrack = function (name, params) {
+        if (!analyticsLoaded || readStored() !== 'granted' || typeof window.gtag !== 'function') return;
+        window.gtag('event', name, params || {});
+    };
+
+    // what visitors click on their way to an enquiry
+    function trackClick(link) {
+        const href = link.getAttribute('href') || '';
+        if (href.indexOf('mailto:') === 0) {
+            window.rddTrack('contact_click', { method: 'email' });
+        } else if (href.indexOf('tel:') === 0) {
+            window.rddTrack('contact_click', { method: 'phone' });
+        } else if (href.indexOf('linkedin.com') !== -1) {
+            window.rddTrack('contact_click', { method: 'linkedin' });
+        } else if (/#contact$/.test(href) || /#booking$/.test(href)) {
+            window.rddTrack('cta_click', {
+                cta: /#booking$/.test(href) ? 'booking' : 'enquiry',
+                cta_position: link.getAttribute('data-cta') || 'page'
+            });
+        }
+    }
+
     document.addEventListener('click', function (event) {
         const button = event.target.closest('[data-consent]');
         if (button) {
@@ -151,6 +179,9 @@
             event.preventDefault();
             showBanner();
         }
+
+        const link = event.target.closest('a[href]');
+        if (link) trackClick(link);
     });
 
 })(document.documentElement);

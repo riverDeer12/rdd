@@ -132,8 +132,12 @@
             .then(function () {
                 form.reset();
                 showStatus(t('success'), false);
-                if (typeof window.gtag === 'function') {
-                    window.gtag('event', 'generate_lead', { method: 'contact_form' });
+                if (window.rddTrack) {
+                    window.rddTrack('generate_lead', {
+                        method: 'contact_form',
+                        project_type: data.type || 'none',
+                        budget: data.budget || 'none'
+                    });
                 }
             })
             .catch(function () {
