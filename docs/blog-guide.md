@@ -68,6 +68,8 @@ competitor prices, testimonials, awards, certifications or technologies.
   with 30 days' notice. Free 30-minute consultation (index.html#booking),
   enquiry form (index.html#contact), all services (services.html), price list (pricing.html), terms (terms.html).
 - Projects (describe them only like this):
+  Topple, sliding puzzle game with gravity played in the browser: 60 levels,
+  daily puzzle, endless mode and leaderboards (topple-details.html);
   Pulseboard, private web dashboard that collects Facebook, Instagram, TikTok
   and YouTube analytics for several profiles in one place, refreshed automatically
   with read-only access (pulseboard-details.html);

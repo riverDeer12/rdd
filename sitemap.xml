@@ -8,7 +8,7 @@
         <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/"/>
         <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/"/>
-        <lastmod>2026-10-28</lastmod>
+        <lastmod>2026-11-02</lastmod>
         <priority>1.0</priority>
     </url>
     <url>
@@ -18,7 +18,7 @@
         <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/"/>
         <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/"/>
-        <lastmod>2026-10-28</lastmod>
+        <lastmod>2026-11-02</lastmod>
         <priority>1.0</priority>
     </url>
     <url>
@@ -28,7 +28,7 @@
         <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/"/>
         <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/"/>
-        <lastmod>2026-10-28</lastmod>
+        <lastmod>2026-11-02</lastmod>
         <priority>1.0</priority>
     </url>
     <url>
@@ -38,7 +38,7 @@
         <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/"/>
         <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/"/>
-        <lastmod>2026-10-28</lastmod>
+        <lastmod>2026-11-02</lastmod>
         <priority>1.0</priority>
     </url>
     <url>
@@ -880,6 +880,46 @@
         <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/terms.html"/>
         <lastmod>2026-10-28</lastmod>
         <priority>0.3</priority>
+    </url>
+    <url>
+        <loc>https://rdd.software/topple-details.html</loc>
+        <xhtml:link rel="alternate" hreflang="hr" href="https://rdd.software/topple-details.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rdd.software/en/topple-details.html"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/topple-details.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/topple-details.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/topple-details.html"/>
+        <lastmod>2026-11-02</lastmod>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://rdd.software/en/topple-details.html</loc>
+        <xhtml:link rel="alternate" hreflang="hr" href="https://rdd.software/topple-details.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rdd.software/en/topple-details.html"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/topple-details.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/topple-details.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/topple-details.html"/>
+        <lastmod>2026-11-02</lastmod>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://rdd.software/it/topple-details.html</loc>
+        <xhtml:link rel="alternate" hreflang="hr" href="https://rdd.software/topple-details.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rdd.software/en/topple-details.html"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/topple-details.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/topple-details.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/topple-details.html"/>
+        <lastmod>2026-11-02</lastmod>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://rdd.software/de/topple-details.html</loc>
+        <xhtml:link rel="alternate" hreflang="hr" href="https://rdd.software/topple-details.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rdd.software/en/topple-details.html"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/topple-details.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/topple-details.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/topple-details.html"/>
+        <lastmod>2026-11-02</lastmod>
+        <priority>0.6</priority>
     </url>
     <url>
         <loc>https://rdd.software/web-development.html</loc>
