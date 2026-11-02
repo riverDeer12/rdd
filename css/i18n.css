@@ -33,9 +33,13 @@ html.i18n-pending body {
     gap: .2rem;
 }
 
-.lang-switch__btn,
-.lang-switch__btn:hover,
-.lang-switch__btn:focus {
+/* .lang-switch in front: the buttons become links in the generated pages,
+ * and without it .main-nav a (bigger padding, header-tall line-height) wins
+ * until :hover takes over again, so the text jumped on hover.
+ * Same size in every state; only the colour changes. */
+.lang-switch .lang-switch__btn,
+.lang-switch .lang-switch__btn:hover,
+.lang-switch .lang-switch__btn:focus {
     display: inline-block;
     height: auto;
     margin: 0;
@@ -50,6 +54,7 @@ html.i18n-pending body {
     border: 0;
     box-shadow: none;
     cursor: pointer;
+    transition: color .3s ease-in-out;
 }
 
 .lang-switch__btn {
