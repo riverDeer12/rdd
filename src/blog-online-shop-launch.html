@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html class="no-js" lang="hr"
+      data-title-hr="Web trgovina: plaćanje, dostava i pravila - RDD Software"
+      data-title-en="Online shop: payment, delivery and rules - RDD Software"
+      data-title-it="Negozio online: pagamenti, spedizioni e regole - RDD Software"
+      data-title-de="Onlineshop: Zahlung, Versand und Regeln - RDD Software"
+      data-description-hr="Što pripremiti prije prve prodaje u web trgovini: načine plaćanja, dostavu, uvjete prodaje, proizvode i probnu narudžbu. Praktično, za male tvrtke."
+      data-description-en="What to prepare before the first sale in an online shop: payment methods, delivery, terms of sale, products and a test order. Practical, for small firms."
+      data-description-it="Cosa preparare prima della prima vendita online: metodi di pagamento, spedizioni, condizioni di vendita, prodotti e un ordine di prova."
+      data-description-de="Was Sie vor dem ersten Verkauf im Onlineshop vorbereiten: Zahlungsarten, Versand, Verkaufsbedingungen, Produkte und eine Testbestellung.">
+<head>
+
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>Web trgovina: plaćanje, dostava i pravila - RDD Software</title>
+
+    <!-- mobile specific metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Open Graph (for Facebook, LinkedIn, etc.) -->
+    <meta property="og:image" content="https://rdd.software/images/og/blog-online-shop-launch-hr.jpg" data-content-hr="https://rdd.software/images/og/blog-online-shop-launch-hr.jpg" data-content-en="https://rdd.software/images/og/blog-online-shop-launch-en.jpg" data-content-it="https://rdd.software/images/og/blog-online-shop-launch-it.jpg" data-content-de="https://rdd.software/images/og/blog-online-shop-launch-de.jpg"/>
+    <meta property="og:type" content="article"/>
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="preload" href="css/fonts/public-sans-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="css/fonts/dm-serif-display-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="css/styles.css?v=4">
+    <link rel="stylesheet" href="css/i18n.css?v=7">
+    <link rel="stylesheet" href="css/theme.css?v=4">
+    <link rel="stylesheet" href="css/consent.css?v=2">
+    <link rel="stylesheet" href="css/cta.css">
+    <link rel="stylesheet" href="css/home.css?v=3">
+    <link rel="stylesheet" href="css/pages.css?v=8">
+
+    <!-- structured data for search engines, one per language -->
+    <script type="application/ld+json" data-lang="hr">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Web trgovina za mali biznis: plaćanje, dostava i pravila prije prve prodaje",
+        "description": "Što pripremiti prije prve prodaje u web trgovini: načine plaćanja, dostavu, uvjete prodaje, proizvode i probnu narudžbu. Praktično, za male tvrtke.",
+        "inLanguage": "hr",
+        "datePublished": "2026-11-03",
+        "dateModified": "2026-11-03",
+        "author": {
+            "@type": "Person",
+            "name": "Milan Trbojević"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "RDD Software",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://rdd.software/android-chrome-512x512.png"
+            }
+        },
+        "image": "https://rdd.software/images/og/blog-online-shop-launch-hr.jpg",
+        "mainEntityOfPage": "https://rdd.software/blog-online-shop-launch.html"
+    }
+    </script>
+    <script type="application/ld+json" data-lang="en">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "An online shop for a small business: payment, delivery and rules before the first sale",
+        "description": "What to prepare before the first sale in an online shop: payment methods, delivery, terms of sale, products and a test order. Practical, for small firms.",
+        "inLanguage": "en",
+        "datePublished": "2026-11-03",
+        "dateModified": "2026-11-03",
+        "author": {
+            "@type": "Person",
+            "name": "Milan Trbojević"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "RDD Software",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://rdd.software/android-chrome-512x512.png"
+            }
+        },
+        "image": "https://rdd.software/images/og/blog-online-shop-launch-en.jpg",
+        "mainEntityOfPage": "https://rdd.software/en/blog-online-shop-launch.html"
+    }
+    </script>
+    <script type="application/ld+json" data-lang="it">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Negozio online per una piccola impresa: pagamenti, spedizioni e regole prima della prima vendita",
+        "description": "Cosa preparare prima della prima vendita online: metodi di pagamento, spedizioni, condizioni di vendita, prodotti e un ordine di prova.",
+        "inLanguage": "it",
+        "datePublished": "2026-11-03",
+        "dateModified": "2026-11-03",
+        "author": {
+            "@type": "Person",
+            "name": "Milan Trbojević"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "RDD Software",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://rdd.software/android-chrome-512x512.png"
+            }
+        },
+        "image": "https://rdd.software/images/og/blog-online-shop-launch-it.jpg",
+        "mainEntityOfPage": "https://rdd.software/it/blog-online-shop-launch.html"
+    }
+    </script>
+    <script type="application/ld+json" data-lang="de">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Onlineshop für kleine Unternehmen: Zahlung, Versand und Regeln vor dem ersten Verkauf",
+        "description": "Was Sie vor dem ersten Verkauf im Onlineshop vorbereiten: Zahlungsarten, Versand, Verkaufsbedingungen, Produkte und eine Testbestellung.",
+        "inLanguage": "de",
+        "datePublished": "2026-11-03",
+        "dateModified": "2026-11-03",
+        "author": {
+            "@type": "Person",
+            "name": "Milan Trbojević"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "RDD Software",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://rdd.software/android-chrome-512x512.png"
+            }
+        },
+        "image": "https://rdd.software/images/og/blog-online-shop-launch-de.jpg",
+        "mainEntityOfPage": "https://rdd.software/de/blog-online-shop-launch.html"
+    }
+    </script>
+
+    <!-- language (hr / en / it / de) - runs before render so only one language is shown
+    ================================================== -->
+    <script src="js/i18n.js?v=2"></script>
+    <!-- light / dark theme - runs before render so the page does not flash -->
+    <script src="js/theme.js"></script>
+
+    <!-- favicons
+    ================================================== -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+</head>
+
+<body id="top">
+
+
+
+
+<!-- # page wrap
+================================================== -->
+<div class="s-pagewrap">
+
+    <div class="circles">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+
+    <!-- ## site header
+    ================================================== -->
+    <header class="s-header">
+
+        <div class="header-mobile">
+            <span class="mobile-home-link"><a href="index.html">RDD.</a></span>
+            <div class="lang-menu">
+                <button type="button" class="lang-menu__toggle" aria-haspopup="true" aria-expanded="false"
+                        aria-label="Jezik: HR" data-aria-label-hr="Jezik: HR" data-aria-label-en="Language: EN" data-aria-label-it="Lingua: IT" data-aria-label-de="Sprache: DE"><span data-lang="hr">HR</span><span data-lang="en">EN</span><span data-lang="it">IT</span><span data-lang="de">DE</span><svg class="lang-menu__chevron" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="lang-switch" role="group" aria-label="Jezik" data-aria-label-hr="Jezik" data-aria-label-en="Language" data-aria-label-it="Lingua" data-aria-label-de="Sprache">
+                    <button type="button" class="lang-switch__btn" data-set-lang="hr"><span class="lang-switch__code">HR</span><span class="lang-switch__name">Hrvatski</span></button>
+                    <span class="lang-switch__sep">/</span>
+                    <button type="button" class="lang-switch__btn" data-set-lang="en"><span class="lang-switch__code">EN</span><span class="lang-switch__name">English</span></button>
+                    <span class="lang-switch__sep">/</span>
+                    <button type="button" class="lang-switch__btn" data-set-lang="it"><span class="lang-switch__code">IT</span><span class="lang-switch__name">Italiano</span></button>
+                    <span class="lang-switch__sep">/</span>
+                    <button type="button" class="lang-switch__btn" data-set-lang="de"><span class="lang-switch__code">DE</span><span class="lang-switch__name">Deutsch</span></button>
+                </div>
+            </div>
+            <button type="button" class="theme-toggle" data-toggle-theme aria-pressed="false"
+                    aria-label="Tamna ili svijetla tema" data-aria-label-hr="Tamna ili svijetla tema" data-aria-label-en="Dark or light theme" data-aria-label-it="Tema scuro o chiaro" data-aria-label-de="Dunkles oder helles Design" title="Tamna ili svijetla tema" data-title-hr="Tamna ili svijetla tema" data-title-en="Dark or light theme" data-title-it="Tema scuro o chiaro" data-title-de="Dunkles oder helles Design">
+                <svg class="theme-toggle__sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/></svg>
+                <svg class="theme-toggle__moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M20.2 14.6A8.5 8.5 0 0 1 9.4 3.8a8.5 8.5 0 1 0 10.8 10.8z"/></svg>
+            </button>
+            <a class="mobile-menu-toggle" href="#0"><span>Menu</span></a>
+        </div>
+
+        <div class="row wide main-nav-wrap">
+            <nav class="column lg-12 main-nav">
+                <ul>
+                    <li><a href="index.html" class="home-link">RDD.</a></li>
+                    <li><a href="index.html#intro"><span data-lang="hr">Početna</span><span data-lang="en">Intro</span><span data-lang="it">Intro</span><span data-lang="de">Start</span></a></li>
+                    <li><a href="index.html#about"><span data-lang="hr">O nama</span><span data-lang="en">About</span><span data-lang="it">Chi siamo</span><span data-lang="de">Über uns</span></a></li>
+                    <li><a href="index.html#works"><span data-lang="hr">Projekti</span><span data-lang="en">Works</span><span data-lang="it">Progetti</span><span data-lang="de">Projekte</span></a></li>
+                    <li><a href="pricing.html"><span data-lang="hr">Cjenik</span><span data-lang="en">Pricing</span><span data-lang="it">Prezzi</span><span data-lang="de">Preise</span></a></li>
+                    <li class="current"><a href="blog.html">Blog</a></li>
+                    <li><a href="index.html#contact"><span data-lang="hr">Kontakt</span><span data-lang="en">Say Hello</span><span data-lang="it">Contatti</span><span data-lang="de">Kontakt</span></a></li>
+                    <li class="lang-switch-item">
+                        <div class="lang-switch" role="group" aria-label="Jezik" data-aria-label-hr="Jezik" data-aria-label-en="Language" data-aria-label-it="Lingua" data-aria-label-de="Sprache">
+                            <button type="button" class="lang-switch__btn" data-set-lang="hr"><span class="lang-switch__code">HR</span><span class="lang-switch__name">Hrvatski</span></button>
+                            <span class="lang-switch__sep">/</span>
+                            <button type="button" class="lang-switch__btn" data-set-lang="en"><span class="lang-switch__code">EN</span><span class="lang-switch__name">English</span></button>
+                            <span class="lang-switch__sep">/</span>
+                            <button type="button" class="lang-switch__btn" data-set-lang="it"><span class="lang-switch__code">IT</span><span class="lang-switch__name">Italiano</span></button>
+                            <span class="lang-switch__sep">/</span>
+                            <button type="button" class="lang-switch__btn" data-set-lang="de"><span class="lang-switch__code">DE</span><span class="lang-switch__name">Deutsch</span></button>
+                        </div>
+                    </li>
+                    <li class="theme-toggle-item">
+                        <button type="button" class="theme-toggle" data-toggle-theme aria-pressed="false"
+                                aria-label="Tamna ili svijetla tema" data-aria-label-hr="Tamna ili svijetla tema" data-aria-label-en="Dark or light theme" data-aria-label-it="Tema scuro o chiaro" data-aria-label-de="Dunkles oder helles Design" title="Tamna ili svijetla tema" data-title-hr="Tamna ili svijetla tema" data-title-en="Dark or light theme" data-title-it="Tema scuro o chiaro" data-title-de="Dunkles oder helles Design">
+                            <svg class="theme-toggle__sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/></svg>
+                            <svg class="theme-toggle__moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M20.2 14.6A8.5 8.5 0 0 1 9.4 3.8a8.5 8.5 0 1 0 10.8 10.8z"/></svg>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+    </header> <!-- end s-header -->
+
+
+    <!-- ## main content
+    ==================================================- -->
+    <main class="s-content">
+
+        <!-- ### intro
+        ================================================== -->
+        <section class="s-intro">
+
+            <div class="row intro-content" style="min-height: 0;">
+
+                <div class="column">
+                    <div class="text-pretitle with-line">
+                        Blog
+                    </div>
+
+                    <h1 class="article-title" data-lang="hr">Web trgovina za mali biznis: plaćanje, dostava i pravila prije prve prodaje</h1>
+                    <h1 class="article-title" data-lang="en">An online shop for a small business: payment, delivery and rules before the first sale</h1>
+                    <h1 class="article-title" data-lang="it">Negozio online per una piccola impresa: pagamenti, spedizioni e regole prima della prima vendita</h1>
+                    <h1 class="article-title" data-lang="de">Onlineshop für kleine Unternehmen: Zahlung, Versand und Regeln vor dem ersten Verkauf</h1>
+
+                    <p class="article-meta" data-lang="hr"><time datetime="2026-11-03">3. studenoga 2026.</time><span>Milan Trbojević</span><span>6 min čitanja</span></p>
+                    <p class="article-meta" data-lang="en"><time datetime="2026-11-03">3 November 2026</time><span>Milan Trbojević</span><span>6 min read</span></p>
+                    <p class="article-meta" data-lang="it"><time datetime="2026-11-03">3 novembre 2026</time><span>Milan Trbojević</span><span>6 min di lettura</span></p>
+                    <p class="article-meta" data-lang="de"><time datetime="2026-11-03">3. November 2026</time><span>Milan Trbojević</span><span>6 Min. Lesezeit</span></p>
+
+                    <img class="article-cover" data-lang="hr" src="images/og/blog-online-shop-launch-hr.webp" width="1200" height="630" decoding="async" alt="">
+                    <img class="article-cover" data-lang="en" src="images/og/blog-online-shop-launch-en.webp" width="1200" height="630" decoding="async" alt="">
+                    <img class="article-cover" data-lang="it" src="images/og/blog-online-shop-launch-it.webp" width="1200" height="630" decoding="async" alt="">
+                    <img class="article-cover" data-lang="de" src="images/og/blog-online-shop-launch-de.webp" width="1200" height="630" decoding="async" alt="">
+                </div>
+
+            </div>
+
+        </section> <!-- end s-intro -->
+
+
+        <!-- ### article
+        ================================================== -->
+        <section class="s-page target-section">
+
+            <div class="row">
+                <div class="column lg-12">
+
+                    <article class="article page-body" data-lang="hr">
+                        <p class="page-lead">
+                            Kad odlučite prodavati online, najviše pažnje obično dobije izgled trgovine. No hoće li prva narudžba proći glatko, ne ovisi o boji gumba, nego o tome jeste li riješili plaćanje, dostavu i pravila prodaje.
+                            Ovo je popis onoga što isplati pripremiti prije nego što kupac prvi put klikne &bdquo;Naruči&ldquo;.
+                        </p>
+
+                        <p>O tome koliko trgovina košta pisali smo u članku <a href="blog-website-cost.html">Koliko košta izrada web stranice u 2026.?</a>, a ovdje se bavimo pripremom koja je na vašoj strani i koju je najbolje započeti odmah, paralelno s izradom.</p>
+
+                        <h2>Plaćanje: koje načine ponuditi</h2>
+                        <p>Ne trebate ponuditi sve načine plaćanja koji postoje. Za početak su dovoljna dva koja vaši kupci najčešće koriste. Najčešći izbori su:</p>
+                        <ul>
+                            <li><strong>Kartično plaćanje.</strong> Kupcu najudobnije, a narudžba je plaćena čim je zaprimljena. Za to vam treba ugovor s pružateljem kartičnog plaćanja ili s bankom, a odobrenje može potrajati, zato ga zatražite na samom početku projekta.</li>
+                            <li><strong>Uplata na račun.</strong> Jednostavna za postaviti, ali narudžba čeka dok uplata ne stigne, pa je kupcu sporija.</li>
+                            <li><strong>Pouzeće.</strong> Mnogi kupci ga vole jer plaćaju kad paket stigne. Računajte s tim da poneki paket neće biti preuzet i da ćete platiti njegov povrat.</li>
+                        </ul>
+                        <p>Što god odaberete, kupac na kraju košarice mora jasno vidjeti koliko točno plaća i na koji način.</p>
+
+                        <h2>Dostava: kako proizvod dolazi do kupca</h2>
+                        <p>Dostava je dio iskustva kupnje kao i sama trgovina. Prije otvaranja odlučite:</p>
+                        <ul>
+                            <li><strong>Načine dostave:</strong> kurirom na adresu, u paketomat ili osobnim preuzimanjem. Paketomati su praktični za kupce koji preko dana nisu kod kuće.</li>
+                            <li><strong>Cijenu dostave:</strong> trebala bi biti vidljiva prije posljednjeg koraka narudžbe. Neočekivani trošak na samom kraju čest je razlog odustajanja od kupnje.</li>
+                            <li><strong>Rok slanja:</strong> napišite na stranici koliko vam treba da pošaljete narudžbu i držite se toga.</li>
+                            <li><strong>Pakiranje:</strong> imajte spremne kutije i materijal za prve narudžbe, da prvi tjedan ne potrošite tražeći ih.</li>
+                        </ul>
+                        <p>Primjer iz naše prakse je <a href="reviv-plus-details.html">ReViv Plus</a>, web trgovina za dodatak prehrani s kartičnim plaćanjem i dostavom u Box Now paketomate. Kupac odabere paketomat već prilikom narudžbe, pa nema dodatnih dogovora oko preuzimanja.</p>
+
+                        <figure class="article-figure">
+                            <img src="images/blog/blog-online-shop-launch.webp" width="1200" height="802" loading="lazy" decoding="async" alt="Osoba pakira kutiju za slanje na stolu s papirom i špagom">
+                            <figcaption>Fotografija: <a href="https://commons.wikimedia.org/wiki/File:Ships_out_today_(Unsplash).jpg" rel="noopener">Bench Accounting</a>, Unsplash (CC0)</figcaption>
+                        </figure>
+
+                        <h2>Pravila prodaje prije prve narudžbe</h2>
+                        <p>Trgovina koja prodaje krajnjim kupcima mora im unaprijed dati jasne informacije. Prije otvaranja pripremite:</p>
+                        <ul>
+                            <li><strong>Uvjete prodaje:</strong> tko prodaje, kako se plaća, kako i koliko brzo se dostavlja i kako se rješavaju reklamacije.</li>
+                            <li><strong>Upute za odustanak od kupnje:</strong> kod kupnje na daljinu kupac u EU u pravilu ima 14 dana da odustane od kupnje. Opišite kako to učiniti i tko plaća povrat.</li>
+                            <li><strong>Podatke o tvrtki:</strong> naziv, adresa, OIB i kontakt trebaju biti lako dostupni, najčešće u podnožju stranice.</li>
+                            <li><strong>Izjavu o privatnosti:</strong> trgovina obrađuje adrese i narudžbe kupaca. Što stranica u tom smislu treba imati, objasnili smo u članku <a href="blog-gdpr-cookies.html">GDPR i kolačići: što web stranica male tvrtke mora imati</a>.</li>
+                        </ul>
+                        <p>Mi izrađujemo trgovinu i pomažemo da se ti tekstovi na njoj jasno prikažu, ali sadržaj pravnih tekstova provjerite s pravnikom. S knjigovođom dogovorite i kako ćete izdavati račune za online narudžbe, prije nego što stigne prva.</p>
+
+                        <h2>Proizvodi: fotografije, opisi i zalihe</h2>
+                        <p>Kupac u trgovini ne može proizvod uzeti u ruke, pa mu fotografije i opis moraju reći sve što bi inače pitao prodavača. Za svaki proizvod pripremite nekoliko jasnih fotografija, opis s dimenzijama ili sastavom, cijenu i varijante, primjerice veličine ili okuse.</p>
+                        <p>Odlučite i kako ćete pratiti zalihe. Ako proizvod nestane, a trgovina ga i dalje prodaje, prvi kupac će čekati ili dobiti povrat novca, a to nije dobar početak.</p>
+
+                        <h2>Probna narudžba prije otvaranja</h2>
+                        <p>Prije nego što trgovinu otvorite kupcima, napravite nekoliko pravih probnih narudžbi: svakim načinom plaćanja i svakim načinom dostave. Provjerite:</p>
+                        <ul>
+                            <li>stiže li kupcu e-mail potvrda narudžbe i je li razumljiva,</li>
+                            <li>stiže li vama obavijest o novoj narudžbi,</li>
+                            <li>vidite li u administraciji sve što vam treba za slanje paketa,</li>
+                            <li>znate li vratiti novac ako se narudžba otkaže.</li>
+                        </ul>
+
+                        <div class="article-tip">
+                            <p><strong>Savjet:</strong> zamolite nekoga tko trgovinu još nije vidio da na mobitelu naruči jedan proizvod, bez vaše pomoći. Gdje zastane ili pita &bdquo;a što sad&ldquo;, tu i vaši kupci zastaju.</p>
+                        </div>
+
+                        <h2>Kako to radimo mi</h2>
+                        <p>Web trgovina kod nas počinje od 2.000&nbsp;€ i izrađuje se za 4 do 8 tjedana, a rok počinje teći kad stignu materijali i predujam. Konačna cijena ovisi o broju proizvoda i njihovim varijantama te o načinima plaćanja i dostave. Okvirnu procjenu možete dobiti u našem <a href="pricing.html#estimate">kalkulatoru cijene</a>.</p>
+                        <p>Greške koje prijavite u roku od 3 mjeseca od predaje ispravljamo besplatno, pa je to dobro vrijeme za probne narudžbe i prve prave kupce. Nakon otvaranja trgovina treba redovita ažuriranja jer se moduli za plaćanje i dostavu mijenjaju, o čemu više u članku <a href="blog-website-maintenance.html">Održavanje web stranice: što uključuje i kada se isplati</a>.</p>
+
+                        <h2>Zaključak</h2>
+                        <p>Dobra mala trgovina nije ona s najviše funkcija, nego ona u kojoj kupac bez zastoja plati, zna kad će paket stići i zna što učiniti ako nešto nije u redu. Plaćanje, dostavu i pravila pripremite paralelno s izradom i prva narudžba neće biti stres.</p>
+                        <p>Više o tome kako izrađujemo trgovine pročitajte na stranici <a href="web-development.html">Izrada web stranica i web trgovina</a>. Ako planirate prodavati online, <a href="index.html#booking">rezervirajte besplatne konzultacije od 30 minuta</a> i zajedno ćemo proći što vašoj trgovini treba za početak.</p>
+
+                        <p class="article-author">Milan Trbojević vlasnik je RDD Softwarea iz Rijeke. Od 2021. s malim timom izrađuje web stranice, web trgovine i aplikacije za klijente diljem Europe.</p>
+
+                        <h2>Pročitajte i</h2>
+                        <ul class="page-related">
+                            <li><a href="blog-website-or-web-app.html">Web stranica, web trgovina ili web aplikacija: što vam zapravo treba? &rarr;</a></li>
+                            <li><a href="blog-gdpr-cookies.html">GDPR i kolačići: što web stranica male tvrtke mora imati &rarr;</a></li>
+                            <li><a href="web-development.html">Izrada web stranica i web trgovina &rarr;</a></li>
+                        </ul>
+                    </article>
+
+                    <article class="article page-body" data-lang="en">
+                        <p class="page-lead">
+                            When you decide to sell online, the look of the shop usually gets the most attention. But whether the first order goes smoothly does not depend on the colour of a button. It depends on whether you have sorted out payment, delivery and the rules of sale.
+                            This is a list of what is worth preparing before a customer clicks &ldquo;Order&rdquo; for the first time.
+                        </p>
+
+                        <p>We covered what a shop costs in <a href="blog-website-cost.html">How much does a website cost in 2026?</a> Here we look at the preparation on your side, which is best started right away, alongside the build.</p>
+
+                        <h2>Payment: which methods to offer</h2>
+                        <p>You don't need to offer every payment method there is. Two that your customers use most are enough to start with. The usual choices are:</p>
+                        <ul>
+                            <li><strong>Card payment.</strong> The most convenient for customers, and the order is paid the moment it comes in. You need an agreement with a card payment provider or your bank, and approval can take a while, so ask for it at the very start of the project.</li>
+                            <li><strong>Bank transfer.</strong> Easy to set up, but the order waits until the money arrives, so it is slower for the customer.</li>
+                            <li><strong>Cash on delivery.</strong> Many customers like it because they pay when the parcel arrives. Expect that the occasional parcel will not be collected and that you will pay for its return.</li>
+                        </ul>
+                        <p>Whatever you choose, at the end of the basket the customer must see clearly how much they pay and how.</p>
+
+                        <h2>Delivery: how the product reaches the customer</h2>
+                        <p>Delivery is as much a part of the shopping experience as the shop itself. Before you open, decide on:</p>
+                        <ul>
+                            <li><strong>Delivery methods:</strong> courier to the door, parcel locker or collection in person. Parcel lockers are handy for customers who are not at home during the day.</li>
+                            <li><strong>Delivery cost:</strong> it should be visible before the last step of the order. An unexpected cost at the very end is a common reason people abandon a purchase.</li>
+                            <li><strong>Dispatch time:</strong> say on the site how long it takes you to send an order, and stick to it.</li>
+                            <li><strong>Packaging:</strong> have boxes and packing material ready for the first orders, so you don't spend the first week hunting for them.</li>
+                        </ul>
+                        <p>One example from our work is <a href="reviv-plus-details.html">ReViv Plus</a>, an online shop for a dietary supplement with card payments and delivery to Box Now parcel lockers. Customers choose their locker while ordering, so there is no back and forth about collection.</p>
+
+                        <figure class="article-figure">
+                            <img src="images/blog/blog-online-shop-launch.webp" width="1200" height="802" loading="lazy" decoding="async" alt="A person packing a box for shipping on a table with paper and twine">
+                            <figcaption>Photo: <a href="https://commons.wikimedia.org/wiki/File:Ships_out_today_(Unsplash).jpg" rel="noopener">Bench Accounting</a>, Unsplash (CC0)</figcaption>
+                        </figure>
+
+                        <h2>Rules of sale before the first order</h2>
+                        <p>A shop that sells to consumers has to give them clear information up front. Before you open, prepare:</p>
+                        <ul>
+                            <li><strong>Terms of sale:</strong> who is selling, how payment works, how and how quickly orders are delivered and how complaints are handled.</li>
+                            <li><strong>Instructions for cancelling a purchase:</strong> for distance sales in the EU, a consumer generally has 14 days to withdraw from the purchase. Explain how to do it and who pays for the return.</li>
+                            <li><strong>Company details:</strong> name, address, registration number and contact should be easy to find, usually in the footer.</li>
+                            <li><strong>Privacy policy:</strong> a shop processes customers' addresses and orders. We explained what a website needs in this respect in <a href="blog-gdpr-cookies.html">GDPR and cookies: what a small business website needs</a>.</li>
+                        </ul>
+                        <p>We build the shop and help make sure these texts are clearly presented on it, but have the content of the legal texts checked by a lawyer. Also agree with your accountant how you will issue invoices for online orders, before the first one arrives.</p>
+
+                        <h2>Products: photos, descriptions and stock</h2>
+                        <p>Customers in an online shop can't pick the product up, so the photos and description have to answer everything they would otherwise ask a shop assistant. For each product, prepare a few clear photos, a description with dimensions or ingredients, the price and the variants, such as sizes or flavours.</p>
+                        <p>Decide how you will keep track of stock, too. If a product runs out and the shop keeps selling it, your first customer either waits or gets a refund, and that is not a good start.</p>
+
+                        <h2>A test order before you open</h2>
+                        <p>Before you open the shop to customers, place a few real test orders: with every payment method and every delivery method. Check:</p>
+                        <ul>
+                            <li>whether the customer receives an order confirmation e-mail, and whether it is clear,</li>
+                            <li>whether you are notified of the new order,</li>
+                            <li>whether the admin shows everything you need to send the parcel,</li>
+                            <li>whether you know how to refund an order that is cancelled.</li>
+                        </ul>
+
+                        <div class="article-tip">
+                            <p><strong>Tip:</strong> ask someone who has not seen the shop yet to order one product on their phone, without your help. Wherever they stop or ask &ldquo;what now?&rdquo;, your customers will stop too.</p>
+                        </div>
+
+                        <h2>How we do it</h2>
+                        <p>Our online shops start from €2,000 and take 4 to 8 weeks to build, counted from when we receive the materials and the advance payment. The final price depends on the number of products and their variants and on the payment and delivery methods. You can get a rough estimate with our <a href="pricing.html#estimate">price estimate</a>.</p>
+                        <p>We fix bugs you report within 3 months of handover free of charge, which makes that period a good time for test orders and your first real customers. After launch, a shop needs regular updates because payment and delivery modules change, as explained in <a href="blog-website-maintenance.html">Website maintenance: what it covers and when it pays off</a>.</p>
+
+                        <h2>Conclusion</h2>
+                        <p>A good small shop is not the one with the most features, but the one where customers pay without a hitch, know when their parcel will arrive and know what to do if something is wrong. Prepare payment, delivery and the rules alongside the build, and the first order won't be stressful.</p>
+                        <p>Read more about how we build shops on the <a href="web-development.html">website &amp; online shop development</a> page. If you are planning to sell online, <a href="index.html#booking">book a free 30-minute consultation</a> and we will go through what your shop needs to get started.</p>
+
+                        <p class="article-author">Milan Trbojević is the owner of RDD Software in Rijeka, Croatia. Since 2021 he and a small team have been building websites, online shops and apps for clients across Europe.</p>
+
+                        <h2>Read next</h2>
+                        <ul class="page-related">
+                            <li><a href="blog-website-or-web-app.html">Website, online shop or web app: what do you actually need? &rarr;</a></li>
+                            <li><a href="blog-gdpr-cookies.html">GDPR and cookies: what a small business website needs &rarr;</a></li>
+                            <li><a href="web-development.html">Website &amp; online shop development &rarr;</a></li>
+                        </ul>
+                    </article>
+
+                    <article class="article page-body" data-lang="it">
+                        <p class="page-lead">
+                            Quando decidi di vendere online, di solito l'attenzione va soprattutto all'aspetto del negozio. Ma che il primo ordine fili liscio non dipende dal colore di un pulsante, bensì dall'aver sistemato pagamenti, spedizioni e regole di vendita.
+                            Ecco cosa conviene preparare prima che un cliente clicchi per la prima volta &laquo;Ordina&raquo;.
+                        </p>
+
+                        <p>Di quanto costa un negozio online abbiamo parlato nell'articolo <a href="blog-website-cost.html">Quanto costa un sito web nel 2026?</a> Qui ci occupiamo della preparazione che spetta a te e che conviene iniziare subito, in parallelo alla realizzazione.</p>
+
+                        <h2>Pagamenti: quali metodi offrire</h2>
+                        <p>Non devi offrire tutti i metodi di pagamento esistenti. Per iniziare bastano i due che i tuoi clienti usano di più. Le scelte più comuni sono:</p>
+                        <ul>
+                            <li><strong>Pagamento con carta.</strong> Il più comodo per il cliente, e l'ordine risulta pagato appena arriva. Ti serve un contratto con un fornitore di pagamenti con carta o con la banca, e l'approvazione può richiedere tempo, quindi chiedila all'inizio del progetto.</li>
+                            <li><strong>Bonifico bancario.</strong> Facile da impostare, ma l'ordine attende l'arrivo del pagamento, quindi per il cliente è più lento.</li>
+                            <li><strong>Contrassegno.</strong> Piace a molti clienti perché pagano alla consegna. Metti in conto che qualche pacco non verrà ritirato e che pagherai il reso.</li>
+                        </ul>
+                        <p>Qualunque cosa tu scelga, alla fine del carrello il cliente deve vedere chiaramente quanto paga e come.</p>
+
+                        <h2>Spedizioni: come il prodotto arriva al cliente</h2>
+                        <p>La spedizione fa parte dell'esperienza d'acquisto tanto quanto il negozio. Prima di aprire, decidi:</p>
+                        <ul>
+                            <li><strong>I metodi di consegna:</strong> corriere a domicilio, armadietto automatico o ritiro di persona. Gli armadietti sono comodi per chi di giorno non è in casa.</li>
+                            <li><strong>Il costo di spedizione:</strong> deve essere visibile prima dell'ultimo passaggio dell'ordine. Un costo inatteso proprio alla fine è un motivo frequente di abbandono dell'acquisto.</li>
+                            <li><strong>I tempi di spedizione:</strong> scrivi sul sito in quanto tempo spedisci un ordine e rispettalo.</li>
+                            <li><strong>L'imballaggio:</strong> tieni pronti scatole e materiale per i primi ordini, così non passi la prima settimana a cercarli.</li>
+                        </ul>
+                        <p>Un esempio dal nostro lavoro è <a href="reviv-plus-details.html">ReViv Plus</a>, un negozio online per un integratore alimentare con pagamento con carta e consegna negli armadietti Box Now. Il cliente sceglie l'armadietto già durante l'ordine, quindi non servono altri accordi per il ritiro.</p>
+
+                        <figure class="article-figure">
+                            <img src="images/blog/blog-online-shop-launch.webp" width="1200" height="802" loading="lazy" decoding="async" alt="Una persona prepara una scatola da spedire su un tavolo con carta e spago">
+                            <figcaption>Foto: <a href="https://commons.wikimedia.org/wiki/File:Ships_out_today_(Unsplash).jpg" rel="noopener">Bench Accounting</a>, Unsplash (CC0)</figcaption>
+                        </figure>
+
+                        <h2>Regole di vendita prima del primo ordine</h2>
+                        <p>Un negozio che vende ai consumatori deve dare loro informazioni chiare fin dall'inizio. Prima di aprire, prepara:</p>
+                        <ul>
+                            <li><strong>Le condizioni di vendita:</strong> chi vende, come si paga, come e in quanto tempo si consegna e come si gestiscono i reclami.</li>
+                            <li><strong>Le istruzioni per il recesso:</strong> negli acquisti a distanza nell'UE il consumatore ha in genere 14 giorni per recedere. Spiega come farlo e chi paga il reso.</li>
+                            <li><strong>I dati dell'azienda:</strong> ragione sociale, indirizzo, partita IVA o codice fiscale e contatti devono essere facili da trovare, di solito nel piè di pagina.</li>
+                            <li><strong>L'informativa sulla privacy:</strong> un negozio tratta indirizzi e ordini dei clienti. Cosa serve al sito in questo senso lo abbiamo spiegato in <a href="blog-gdpr-cookies.html">GDPR e cookie: cosa deve avere il sito di una piccola impresa</a>.</li>
+                        </ul>
+                        <p>Noi realizziamo il negozio e ti aiutiamo a presentare questi testi in modo chiaro, ma il contenuto dei testi legali fallo verificare da un legale. Con il commercialista concorda anche come emetterai le fatture per gli ordini online, prima che arrivi il primo.</p>
+
+                        <h2>Prodotti: foto, descrizioni e magazzino</h2>
+                        <p>Nel negozio online il cliente non può prendere in mano il prodotto, quindi foto e descrizione devono rispondere a tutto ciò che altrimenti chiederebbe al commesso. Per ogni prodotto prepara alcune foto nitide, una descrizione con dimensioni o ingredienti, il prezzo e le varianti, come taglie o gusti.</p>
+                        <p>Decidi anche come tenere traccia del magazzino. Se un prodotto finisce e il negozio continua a venderlo, il primo cliente aspetta o riceve un rimborso, e non è un buon inizio.</p>
+
+                        <h2>Un ordine di prova prima dell'apertura</h2>
+                        <p>Prima di aprire il negozio ai clienti, fai qualche vero ordine di prova: con ogni metodo di pagamento e ogni metodo di consegna. Controlla:</p>
+                        <ul>
+                            <li>se il cliente riceve l'e-mail di conferma dell'ordine e se è comprensibile,</li>
+                            <li>se a te arriva l'avviso del nuovo ordine,</li>
+                            <li>se nel pannello di amministrazione vedi tutto ciò che serve per spedire il pacco,</li>
+                            <li>se sai come rimborsare un ordine annullato.</li>
+                        </ul>
+
+                        <div class="article-tip">
+                            <p><strong>Consiglio:</strong> chiedi a qualcuno che non ha ancora visto il negozio di ordinare un prodotto dal telefono, senza il tuo aiuto. Dove si ferma o chiede &laquo;e adesso?&raquo;, lì si fermeranno anche i tuoi clienti.</p>
+                        </div>
+
+                        <h2>Come lavoriamo noi</h2>
+                        <p>Da noi un negozio online parte da 2.000&nbsp;€ e si realizza in 4&ndash;8 settimane, a partire dall'arrivo dei materiali e dell'acconto. Il prezzo finale dipende dal numero di prodotti e dalle loro varianti, oltre che dai metodi di pagamento e di consegna. Una stima indicativa la ottieni con il nostro <a href="pricing.html#estimate">calcolo del prezzo</a>.</p>
+                        <p>Gli errori che segnali entro 3 mesi dalla consegna li correggiamo gratuitamente, quindi è il momento giusto per gli ordini di prova e i primi clienti veri. Dopo l'apertura il negozio ha bisogno di aggiornamenti regolari, perché i moduli di pagamento e spedizione cambiano: ne parliamo in <a href="blog-website-maintenance.html">Manutenzione del sito web: cosa comprende e quando conviene</a>.</p>
+
+                        <h2>In conclusione</h2>
+                        <p>Un buon piccolo negozio non è quello con più funzioni, ma quello in cui il cliente paga senza intoppi, sa quando arriverà il pacco e sa cosa fare se qualcosa non va. Prepara pagamenti, spedizioni e regole in parallelo alla realizzazione, e il primo ordine non sarà fonte di stress.</p>
+                        <p>Leggi di più su come realizziamo i negozi nella pagina <a href="web-development.html">Realizzazione di siti web e negozi online</a>. Se pensi di vendere online, <a href="index.html#booking">prenota una consulenza gratuita di 30 minuti</a> e vediamo insieme cosa serve al tuo negozio per partire.</p>
+
+                        <p class="article-author">Milan Trbojević è il titolare di RDD Software a Fiume, in Croazia. Dal 2021 realizza con un piccolo team siti web, negozi online e applicazioni per clienti in tutta Europa.</p>
+
+                        <h2>Leggi anche</h2>
+                        <ul class="page-related">
+                            <li><a href="blog-website-or-web-app.html">Sito web, negozio online o applicazione web: di cosa hai davvero bisogno? &rarr;</a></li>
+                            <li><a href="blog-gdpr-cookies.html">GDPR e cookie: cosa deve avere il sito di una piccola impresa &rarr;</a></li>
+                            <li><a href="web-development.html">Realizzazione di siti web e negozi online &rarr;</a></li>
+                        </ul>
+                    </article>
+
+                    <article class="article page-body" data-lang="de">
+                        <p class="page-lead">
+                            Wer beschließt, online zu verkaufen, kümmert sich meist zuerst um das Aussehen des Shops. Ob die erste Bestellung reibungslos läuft, hängt aber nicht von der Farbe eines Buttons ab, sondern davon, ob Zahlung, Versand und Verkaufsregeln geklärt sind.
+                            Hier ist eine Liste dessen, was Sie vorbereiten sollten, bevor ein Kunde zum ersten Mal auf &bdquo;Bestellen&ldquo; klickt.
+                        </p>
+
+                        <p>Was ein Shop kostet, haben wir im Artikel <a href="blog-website-cost.html">Was kostet eine Website im Jahr 2026?</a> beschrieben. Hier geht es um die Vorbereitung auf Ihrer Seite, mit der Sie am besten sofort beginnen, parallel zur Umsetzung.</p>
+
+                        <h2>Zahlung: welche Zahlungsarten anbieten</h2>
+                        <p>Sie müssen nicht jede Zahlungsart anbieten, die es gibt. Für den Anfang genügen die zwei, die Ihre Kunden am häufigsten nutzen. Die üblichen Optionen sind:</p>
+                        <ul>
+                            <li><strong>Kartenzahlung.</strong> Für Kunden am bequemsten, und die Bestellung ist bezahlt, sobald sie eingeht. Sie brauchen dafür einen Vertrag mit einem Zahlungsanbieter oder Ihrer Bank, und die Freigabe kann dauern. Beantragen Sie sie deshalb gleich zu Beginn des Projekts.</li>
+                            <li><strong>Überweisung.</strong> Einfach einzurichten, aber die Bestellung wartet, bis das Geld eingeht, für den Kunden also langsamer.</li>
+                            <li><strong>Nachnahme.</strong> Viele Kunden mögen sie, weil sie bei Lieferung zahlen. Rechnen Sie damit, dass gelegentlich ein Paket nicht angenommen wird und Sie die Rücksendung bezahlen.</li>
+                        </ul>
+                        <p>Was Sie auch wählen: Am Ende des Warenkorbs muss der Kunde klar sehen, wie viel er bezahlt und auf welche Weise.</p>
+
+                        <h2>Versand: wie das Produkt zum Kunden kommt</h2>
+                        <p>Der Versand gehört genauso zum Einkaufserlebnis wie der Shop selbst. Legen Sie vor der Eröffnung fest:</p>
+                        <ul>
+                            <li><strong>Versandarten:</strong> per Kurier an die Haustür, an eine Paketstation oder zur Selbstabholung. Paketstationen sind praktisch für Kunden, die tagsüber nicht zu Hause sind.</li>
+                            <li><strong>Versandkosten:</strong> Sie sollten vor dem letzten Bestellschritt sichtbar sein. Unerwartete Kosten ganz am Ende sind ein häufiger Grund für abgebrochene Käufe.</li>
+                            <li><strong>Versanddauer:</strong> Schreiben Sie auf die Website, wie lange Sie zum Versand einer Bestellung brauchen, und halten Sie sich daran.</li>
+                            <li><strong>Verpackung:</strong> Halten Sie Kartons und Füllmaterial für die ersten Bestellungen bereit, damit Sie die erste Woche nicht mit Suchen verbringen.</li>
+                        </ul>
+                        <p>Ein Beispiel aus unserer Arbeit ist <a href="reviv-plus-details.html">ReViv Plus</a>, ein Onlineshop für ein Nahrungsergänzungsmittel mit Kartenzahlung und Lieferung an Box-Now-Paketstationen. Kunden wählen die Paketstation schon bei der Bestellung, sodass keine weiteren Absprachen zur Abholung nötig sind.</p>
+
+                        <figure class="article-figure">
+                            <img src="images/blog/blog-online-shop-launch.webp" width="1200" height="802" loading="lazy" decoding="async" alt="Eine Person verpackt einen Karton für den Versand auf einem Tisch mit Papier und Schnur">
+                            <figcaption>Foto: <a href="https://commons.wikimedia.org/wiki/File:Ships_out_today_(Unsplash).jpg" rel="noopener">Bench Accounting</a>, Unsplash (CC0)</figcaption>
+                        </figure>
+
+                        <h2>Verkaufsregeln vor der ersten Bestellung</h2>
+                        <p>Ein Shop, der an Verbraucher verkauft, muss ihnen vorab klare Informationen geben. Bereiten Sie vor der Eröffnung vor:</p>
+                        <ul>
+                            <li><strong>Verkaufsbedingungen:</strong> wer verkauft, wie bezahlt wird, wie und wie schnell geliefert wird und wie Reklamationen bearbeitet werden.</li>
+                            <li><strong>Hinweise zum Widerruf:</strong> Bei Fernabsatzkäufen in der EU haben Verbraucher in der Regel 14 Tage Zeit, vom Kauf zurückzutreten. Erklären Sie, wie das geht und wer die Rücksendung bezahlt.</li>
+                            <li><strong>Angaben zum Unternehmen:</strong> Name, Anschrift, Registernummer und Kontakt sollten leicht zu finden sein, meist in der Fußzeile.</li>
+                            <li><strong>Datenschutzerklärung:</strong> Ein Shop verarbeitet Adressen und Bestellungen der Kunden. Was eine Website dafür braucht, haben wir in <a href="blog-gdpr-cookies.html">DSGVO und Cookies: was die Website eines kleinen Unternehmens braucht</a> erklärt.</li>
+                        </ul>
+                        <p>Wir erstellen den Shop und sorgen dafür, dass diese Texte klar darin dargestellt werden. Den Inhalt der Rechtstexte lassen Sie aber bitte von einem Juristen prüfen. Klären Sie außerdem mit Ihrer Buchhaltung, wie Sie Rechnungen für Onlinebestellungen ausstellen, bevor die erste eingeht.</p>
+
+                        <h2>Produkte: Fotos, Beschreibungen und Lagerbestand</h2>
+                        <p>Im Onlineshop kann der Kunde das Produkt nicht in die Hand nehmen. Fotos und Beschreibung müssen also alles beantworten, was er sonst eine Verkäuferin fragen würde. Bereiten Sie für jedes Produkt einige klare Fotos vor, eine Beschreibung mit Maßen oder Zutaten, den Preis und die Varianten, etwa Größen oder Geschmacksrichtungen.</p>
+                        <p>Legen Sie auch fest, wie Sie den Lagerbestand verfolgen. Ist ein Produkt ausverkauft und der Shop verkauft es weiter, wartet Ihr erster Kunde oder bekommt sein Geld zurück, und das ist kein guter Start.</p>
+
+                        <h2>Eine Testbestellung vor der Eröffnung</h2>
+                        <p>Bevor Sie den Shop für Kunden öffnen, geben Sie einige echte Testbestellungen auf: mit jeder Zahlungsart und jeder Versandart. Prüfen Sie:</p>
+                        <ul>
+                            <li>ob der Kunde eine Bestellbestätigung per E-Mail erhält und ob sie verständlich ist,</li>
+                            <li>ob Sie über die neue Bestellung benachrichtigt werden,</li>
+                            <li>ob Sie in der Verwaltung alles sehen, was Sie für den Paketversand brauchen,</li>
+                            <li>ob Sie wissen, wie Sie eine stornierte Bestellung erstatten.</li>
+                        </ul>
+
+                        <div class="article-tip">
+                            <p><strong>Tipp:</strong> Bitten Sie jemanden, der den Shop noch nicht kennt, ohne Ihre Hilfe ein Produkt auf dem Handy zu bestellen. Wo diese Person stockt oder fragt &bdquo;und jetzt?&ldquo;, stocken auch Ihre Kunden.</p>
+                        </div>
+
+                        <h2>Wie wir es machen</h2>
+                        <p>Ein Onlineshop beginnt bei uns ab 2.000&nbsp;€ und entsteht in 4 bis 8 Wochen, gerechnet ab Eingang der Unterlagen und der Anzahlung. Der Endpreis hängt von der Zahl der Produkte und ihrer Varianten sowie von den Zahlungs- und Versandarten ab. Eine erste Einschätzung erhalten Sie mit unserer <a href="pricing.html#estimate">Preisschätzung</a>.</p>
+                        <p>Fehler, die Sie innerhalb von 3 Monaten nach der Übergabe melden, beheben wir kostenlos. Diese Zeit eignet sich also gut für Testbestellungen und die ersten echten Kunden. Nach dem Start braucht ein Shop regelmäßige Updates, weil sich Zahlungs- und Versandmodule ändern, mehr dazu in <a href="blog-website-maintenance.html">Website-Wartung: was dazugehört und wann sie sich lohnt</a>.</p>
+
+                        <h2>Fazit</h2>
+                        <p>Ein guter kleiner Shop ist nicht der mit den meisten Funktionen, sondern der, in dem Kunden ohne Hürden bezahlen, wissen, wann ihr Paket kommt, und wissen, was zu tun ist, wenn etwas nicht stimmt. Bereiten Sie Zahlung, Versand und Regeln parallel zur Umsetzung vor, dann wird die erste Bestellung kein Stress.</p>
+                        <p>Mehr darüber, wie wir Shops erstellen, lesen Sie auf der Seite <a href="web-development.html">Website- und Onlineshop-Erstellung</a>. Wenn Sie online verkaufen möchten, <a href="index.html#booking">buchen Sie eine kostenlose 30-minütige Beratung</a>, und wir gehen gemeinsam durch, was Ihr Shop für den Start braucht.</p>
+
+                        <p class="article-author">Milan Trbojević ist Inhaber von RDD Software in Rijeka, Kroatien. Seit 2021 entwickelt er mit einem kleinen Team Websites, Onlineshops und Apps für Kunden in ganz Europa.</p>
+
+                        <h2>Weiterlesen</h2>
+                        <ul class="page-related">
+                            <li><a href="blog-website-or-web-app.html">Website, Onlineshop oder Web-App: Was brauchen Sie wirklich? &rarr;</a></li>
+                            <li><a href="blog-gdpr-cookies.html">DSGVO und Cookies: was die Website eines kleinen Unternehmens braucht &rarr;</a></li>
+                            <li><a href="web-development.html">Website- und Onlineshop-Erstellung &rarr;</a></li>
+                        </ul>
+                    </article>
+                    <section class="project-cta">
+                        <h2 class="project-cta__title"><span data-lang="hr">Imate projekt na umu?</span><span data-lang="en">Have a project in mind?</span><span data-lang="it">Hai un progetto in mente?</span><span data-lang="de">Haben Sie ein Projekt geplant?</span></h2>
+                        <p class="project-cta__text"><span data-lang="hr">Javite nam se i besplatno ćemo procijeniti opseg i cijenu vašeg projekta.</span><span data-lang="en">Get in touch and we will estimate the scope and price of your project free of charge.</span><span data-lang="it">Contattaci e stimeremo gratuitamente portata e prezzo del tuo progetto.</span><span data-lang="de">Melden Sie sich, und wir schätzen Umfang und Preis Ihres Projekts kostenlos ein.</span></p>
+                        <div class="project-cta__actions">
+                            <a class="project-cta__btn project-cta__btn--primary" href="index.html#contact"><span data-lang="hr">Pošaljite upit</span><span data-lang="en">Send an enquiry</span><span data-lang="it">Invia una richiesta</span><span data-lang="de">Anfrage senden</span></a>
+                            <a class="project-cta__btn" href="index.html#booking"><span data-lang="hr">Rezervirajte konzultacije</span><span data-lang="en">Book a consultation</span><span data-lang="it">Prenota una consulenza</span><span data-lang="de">Beratung buchen</span></a>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+        </section> <!-- end s-page -->
+
+    </main> <!-- end s-content -->
+
+
+    <!-- ## footer
+    ================================================== -->
+    <footer class="s-footer">
+
+        <div class="row ss-footer-nav-row">
+            <div class="column">
+                <nav class="ss-footer-nav" aria-label="RDD Software" data-aria-label-hr="Podnožje" data-aria-label-en="Footer" data-aria-label-it="Piè di pagina" data-aria-label-de="Fußzeile">
+                    <div class="ss-footer-nav__group">
+                        <h2 class="ss-footer-nav__title"><span data-lang="hr">Usluge</span><span data-lang="en">Services</span><span data-lang="it">Servizi</span><span data-lang="de">Leistungen</span></h2>
+                        <ul>
+                            <li><a href="services.html"><span data-lang="hr">Sve usluge</span><span data-lang="en">All services</span><span data-lang="it">Tutti i servizi</span><span data-lang="de">Alle Leistungen</span></a></li>
+                            <li><a href="web-development.html"><span data-lang="hr">Izrada web stranica</span><span data-lang="en">Website development</span><span data-lang="it">Realizzazione siti web</span><span data-lang="de">Website-Erstellung</span></a></li>
+                            <li><a href="mobile-apps.html"><span data-lang="hr">Mobilne aplikacije</span><span data-lang="en">Mobile apps</span><span data-lang="it">App mobile</span><span data-lang="de">Mobile Apps</span></a></li>
+                            <li><a href="custom-software.html"><span data-lang="hr">Softver po mjeri</span><span data-lang="en">Custom software</span><span data-lang="it">Software su misura</span><span data-lang="de">Individuelle Software</span></a></li>
+                            <li><a href="pricing.html"><span data-lang="hr">Cjenik</span><span data-lang="en">Pricing</span><span data-lang="it">Prezzi</span><span data-lang="de">Preise</span></a></li>
+                        </ul>
+                    </div>
+                    <div class="ss-footer-nav__group">
+                        <h2 class="ss-footer-nav__title"><span data-lang="hr">Tvrtka</span><span data-lang="en">Company</span><span data-lang="it">Azienda</span><span data-lang="de">Unternehmen</span></h2>
+                        <ul>
+                            <li><a href="index.html#about"><span data-lang="hr">O nama</span><span data-lang="en">About us</span><span data-lang="it">Chi siamo</span><span data-lang="de">Über uns</span></a></li>
+                            <li><a href="index.html#works"><span data-lang="hr">Projekti</span><span data-lang="en">Projects</span><span data-lang="it">Progetti</span><span data-lang="de">Projekte</span></a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="index.html#contact"><span data-lang="hr">Kontakt</span><span data-lang="en">Contact</span><span data-lang="it">Contatti</span><span data-lang="de">Kontakt</span></a></li>
+                        </ul>
+                    </div>
+                    <div class="ss-footer-nav__group">
+                        <h2 class="ss-footer-nav__title"><span data-lang="hr">Pratite nas</span><span data-lang="en">Follow us</span><span data-lang="it">Seguici</span><span data-lang="de">Folgen Sie uns</span></h2>
+                        <ul>
+                            <li><a href="https://www.linkedin.com/company/106879536/" target="_blank" rel="noopener noreferrer"><svg class="ss-footer-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg> LinkedIn</a></li>
+                            <li><a href="mailto:info@rdd.software">info@rdd.software</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="column ss-copyright">
+                <span>© Copyright RDD <script>document.write(/\d{4}/.exec(Date())[0] + ".")</script></span>
+                <span><a href="privacy.html" data-lang="hr">Izjava o privatnosti</a><a href="privacy.html" data-lang="en">Privacy Policy</a><a href="privacy.html" data-lang="it">Informativa sulla privacy</a><a href="privacy.html" data-lang="de">Datenschutzerklärung</a></span>
+                <span><a href="terms.html" data-lang="hr">Opći uvjeti poslovanja</a><a href="terms.html" data-lang="en">Terms and Conditions</a><a href="terms.html" data-lang="it">Condizioni generali</a><a href="terms.html" data-lang="de">AGB</a></span>
+                <span><a href="#0" data-consent-open data-lang="hr">Postavke kolačića</a><a href="#0" data-consent-open data-lang="en">Cookie settings</a><a href="#0" data-consent-open data-lang="it">Impostazioni cookie</a><a href="#0" data-consent-open data-lang="de">Cookie-Einstellungen</a></span>
+            </div>
+
+            <div class="ss-go-top">
+                <a class="smoothscroll" title="Na vrh" data-title-hr="Na vrh" data-title-en="Back to top" data-title-it="Torna su" data-title-de="Nach oben" aria-label="Na vrh" data-aria-label-hr="Na vrh" data-aria-label-en="Back to top" data-aria-label-it="Torna su" data-aria-label-de="Nach oben" href="#top">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill-rule="evenodd" clip-rule="evenodd">
+                        <path d="M11 2.206l-6.235 7.528-.765-.645 7.521-9 7.479 9-.764.646-6.236-7.53v21.884h-1v-21.883z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="column">
+                <p class="ss-legal">R.D.D., obrt za računalno programiranje, vl. Milan Trbojević &middot; Mihovilići 2b, 51000 Rijeka &middot; OIB 09887105714 &middot; <span data-lang="hr">upisan u Obrtni registar, MBO 98224476</span><span data-lang="en">registered in the Croatian Register of Crafts, MBO 98224476</span><span data-lang="it">iscritto al Registro croato dell'artigianato, MBO 98224476</span><span data-lang="de">eingetragen im kroatischen Gewerberegister, MBO 98224476</span> &middot; <span data-lang="hr">nije u sustavu PDV-a</span><span data-lang="en">not registered for VAT</span><span data-lang="it">non soggetto a IVA</span><span data-lang="de">nicht umsatzsteuerpflichtig</span> &middot; <a href="mailto:info@rdd.software">info@rdd.software</a></p>
+            </div>
+        </div>
+
+    </footer> <!-- end s-footer -->
+
+</div> <!-- end -s-pagewrap -->
+
+
+<!-- Java Script
+================================================== -->
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
+<script src="js/estimate.js?v=2"></script>
+<!-- Google Analytics - loaded only after the visitor accepts cookies -->
+<script src="js/sticky-cta.js"></script>
+<script src="js/consent.js?v=2"></script>
+
+</body>
+</html>
