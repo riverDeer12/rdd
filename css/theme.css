@@ -257,7 +257,7 @@ html[data-theme="light"] .theme-toggle__moon {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0 1.2rem 0 0;
+    padding: 12px;
 }
 
 .header-mobile .theme-toggle {
@@ -307,4 +307,219 @@ html[data-theme="light"] .header-mobile .lang-menu .lang-switch__btn:focus,
 html[data-theme="light"] .back-header__inner .lang-menu .lang-switch__btn:hover,
 html[data-theme="light"] .back-header__inner .lang-menu .lang-switch__btn:focus {
     background: rgba(0, 0, 0, .05);
+}
+
+/* --------------------------------------------------------------------
+ * section backgrounds (home page, option B)
+ * About (incl. Expertise and How we work) and FAQ sit on a slightly
+ * different tone than the page, Contact on a muted teal, and the
+ * footer on the deepest tone, so the page reads in clear blocks.
+ * -------------------------------------------------------------------- */
+:root {
+    --color-section-alt: #1c1d1f;
+    --color-section-accent: #0e2627;
+    --color-section-footer: #0c0d0d;
+
+    /* contact form card */
+    --color-contact-card: #141516;
+    --color-contact-line: rgba(255, 255, 255, .10);
+    --color-contact-underline: rgba(255, 255, 255, .22);
+    --color-contact-accent: #2fb5a5;
+    --color-contact-button: #008080;
+    --color-contact-button-hover: #006b6b;
+}
+
+html[data-theme="light"] {
+    --color-section-alt: #f0f0ed;
+    --color-section-accent: #ebf4f2;
+    --color-section-footer: var(--color-body);
+
+    --color-contact-card: #ffffff;
+    --color-contact-line: rgba(0, 0, 0, .10);
+    --color-contact-underline: rgba(0, 0, 0, .25);
+    --color-contact-accent: #006666;
+    --color-contact-button: #007373;
+    --color-contact-button-hover: #005c5c;
+}
+
+.s-about,
+.s-faq {
+    background-color: var(--color-section-alt);
+}
+
+.s-faq {
+    padding-bottom: var(--vspace-4);
+}
+
+/* About, Expertise and How we work stay one block, split by a thin line */
+.s-about .about-expertise,
+.s-about .about-process {
+    border-top: 1px solid var(--color-border);
+}
+
+.s-about .about-expertise,
+.s-about .about-process {
+    margin-top: var(--vspace-3);
+    padding-top: var(--vspace-3);
+}
+
+.s-contact {
+    background-color: var(--color-section-accent);
+}
+
+.s-footer {
+    padding-top: var(--vspace-3);
+    background-color: var(--color-section-footer);
+}
+
+/* --------------------------------------------------------------------
+ * hero circles (css/styles.css, ## circles): each ring slowly turns,
+ * with two brighter arcs on opposite sides. The circles' centre sits at
+ * the right edge of the screen, so only their left half is visible:
+ * with two opposite arcs one of them is always on that half.
+ * Neighbouring rings turn in opposite directions; the negative delays
+ * set the starting angles so the visible arcs start spread over the
+ * left half (10, 8, 9:30, 7:30 and 8:30 o'clock, outer to inner).
+ * -------------------------------------------------------------------- */
+:root {
+    --color-circle: hsla(180, 100%, 25%, .1);     /* = the old 1px ring at opacity .1 */
+    --color-circle-arc: hsla(168, 62%, 46%, .6);
+}
+
+html[data-theme="light"] {
+    --color-circle-arc: hsla(180, 100%, 25%, .45);
+}
+
+.s-pagewrap .circles span {
+    opacity: 1;
+    border-color: var(--color-circle);
+    border-top-color: var(--color-circle-arc);
+    border-bottom-color: var(--color-circle-arc);
+    animation: rdd-circle-spin 110s linear -37s infinite;
+    will-change: transform;
+}
+
+.s-pagewrap .circles span:nth-child(2) {
+    animation-duration: 90s;
+    animation-direction: reverse;
+    animation-delay: -30s;
+}
+
+.s-pagewrap .circles span:nth-child(3) {
+    animation-duration: 72s;
+    animation-delay: -20s;
+}
+
+.s-pagewrap .circles span:nth-child(4) {
+    animation-duration: 56s;
+    animation-direction: reverse;
+    animation-delay: -22s;
+}
+
+.s-pagewrap .circles span:nth-child(5) {
+    animation-duration: 42s;
+    animation-delay: -9s;
+}
+
+/* phones and tablets: the circles start right under the navigation,
+ * and the scroll-down arrow is hidden */
+@media screen and (max-width: 800px) {
+    .s-pagewrap .circles {
+        top: var(--header-height);
+    }
+
+    .s-intro .intro-scrolldown {
+        display: none;
+    }
+}
+
+@keyframes rdd-circle-spin {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .s-pagewrap .circles span {
+        animation: none;
+    }
+}
+
+/* --------------------------------------------------------------------
+ * footer circles: the hero circles mirrored on the left of the footer,
+ * so the page opens and closes with the same motif. Centre on the left
+ * edge (only the right half shows), sized by the footer's height, turning
+ * the other way round from the hero. Fainter arcs, behind the content.
+ * -------------------------------------------------------------------- */
+.s-footer {
+    position: relative;
+    overflow: hidden;
+}
+
+.s-footer > .row {
+    z-index: 1;
+}
+
+.footer-circles {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 115%;
+    max-height: 640px;
+    aspect-ratio: 1;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+.footer-circles span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    box-sizing: border-box;
+    border: 1px solid var(--color-circle);
+    border-top-color: var(--color-circle-arc-soft);
+    border-bottom-color: var(--color-circle-arc-soft);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: rdd-circle-spin 110s linear -34s infinite reverse;
+    will-change: transform;
+}
+
+.footer-circles span:nth-child(1) { width: 100%; height: 100%; }
+.footer-circles span:nth-child(2) { width: 80%;  height: 80%;  animation-duration: 90s; animation-direction: normal;  animation-delay: -27.5s; }
+.footer-circles span:nth-child(3) { width: 60%;  height: 60%;  animation-duration: 72s; animation-delay: -18s; }
+.footer-circles span:nth-child(4) { width: 40%;  height: 40%;  animation-duration: 56s; animation-direction: normal;  animation-delay: -9.3s; }
+.footer-circles span:nth-child(5) { width: 20%;  height: 20%;  animation-duration: 42s; animation-delay: -9.3s; }
+
+:root {
+    --color-circle-arc-soft: hsla(168, 62%, 46%, .35);
+}
+
+html[data-theme="light"] {
+    --color-circle-arc-soft: hsla(180, 100%, 25%, .3);
+}
+
+/* phones and tablets: like the hero, the circles start in the top right
+ * corner (the footer text is on the left). Turned by 180deg so the arcs
+ * that face right on desktop now face the visible left half. */
+@media screen and (max-width: 800px) {
+    .footer-circles {
+        top: 0;
+        left: auto;
+        right: 0;
+        width: 80vw;
+        height: auto;
+        max-height: none;
+        transform: translate(50%, 0) rotate(180deg);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .footer-circles span {
+        animation: none;
+    }
 }

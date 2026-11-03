@@ -163,8 +163,17 @@
 
         const fields = form.elements;
         [['cf-type', estimate.type], ['cf-budget', estimate.budget]].forEach(function (pair) {
-            const select = fields.namedItem(pair[0]);
-            if (select && select.querySelector('option[value="' + pair[1] + '"]')) select.value = pair[1];
+            const field = fields.namedItem(pair[0]);
+            if (!field || !pair[1]) return;
+            if (field.tagName === 'SELECT') {
+                // project type: a <select>
+                if (field.querySelector('option[value="' + pair[1] + '"]')) field.value = pair[1];
+            } else {
+                // budget: radio buttons shown as pills (one radio or a RadioNodeList)
+                Array.prototype.forEach.call(field.tagName ? [field] : field, function (radio) {
+                    if (radio.value === pair[1]) radio.checked = true;
+                });
+            }
         });
 
         const message = fields.namedItem('message');

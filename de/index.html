@@ -41,9 +41,9 @@
     <link rel="preload" href="../css/fonts/dm-serif-display-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="../css/styles.css?v=4">
     <link rel="stylesheet" href="../css/i18n.css?v=8">
-    <link rel="stylesheet" href="../css/theme.css?v=4">
+    <link rel="stylesheet" href="../css/theme.css?v=13">
     <link rel="stylesheet" href="../css/consent.css?v=2">
-    <link rel="stylesheet" href="../css/home.css?v=3">
+    <link rel="stylesheet" href="../css/home.css?v=11">
 
     <!-- language (hr / en / it / de) - runs before render so only one language is shown
     ================================================== -->
@@ -681,63 +681,75 @@
         ================================================== -->
         <section id="contact" class="s-contact target-section">
 
-            <div class="row contact-top">
-                <div class="column lg-12">
-                    <h2 class="text-pretitle">
-                        <span data-lang="de">Kontakt aufnehmen</span>
-                    </h2>
-
-                    <p class="h1" data-lang="de">
-                        Sie haben ein Projekt oder eine Idee? Melden Sie sich, und wir schlagen eine Lösung vor und schätzen Umfang und Preis ein.
-                    </p>
-                </div>
-            </div> <!-- end contact-top -->
-
-            <div class="row contact-bottom">
+            <div class="row contact-main">
                 <div class="column lg-12">
 
-                    <form class="contact-form" id="contact-form" novalidate>
-                        <div class="contact-form__grid">
-                        <div class="form-field">
-                            <label for="cf-name"><span data-lang="de">Name</span> *</label>
-                            <input type="text" id="cf-name" name="name" autocomplete="name" required maxlength="120">
-                        </div>
-                        <div class="form-field">
-                            <label for="cf-email"><span data-lang="de">E-Mail</span> *</label>
-                            <input type="email" id="cf-email" name="email" autocomplete="email" required maxlength="160" placeholder="name@firma.de">
-                        </div>
-                        <div class="form-field contact-form__full">
-                            <label for="cf-company"><span data-lang="de">Unternehmen (optional)</span></label>
-                            <input type="text" id="cf-company" name="company" autocomplete="organization" maxlength="160">
-                        </div>
-                        <div class="form-field">
-                            <label for="cf-type"><span data-lang="de">Projektart</span></label>
-                            <div class="ss-custom-select"><select id="cf-type" name="cf-type"><option value="">Bitte wählen…</option><option value="Web stranica">Website</option><option value="Web trgovina">Onlineshop</option><option value="Web aplikacija">Webanwendung</option><option value="Mobilna aplikacija">Mobile App</option><option value="Softver po mjeri">Individuelle Software</option><option value="Održavanje i podrška">Wartung &amp; Support</option><option value="Nešto drugo">Etwas anderes</option></select></div>
-                        </div>
-                        <div class="form-field">
-                            <label for="cf-budget"><span data-lang="de">Budgetrahmen</span></label>
-                            <div class="ss-custom-select"><select id="cf-budget" name="cf-budget"><option value="">Bitte wählen…</option><option value="Još ne znam">Noch unklar</option><option value="Do 1.000 €">Bis 1.000 €</option><option value="1.000 – 3.000 €">1.000 – 3.000 €</option><option value="3.000 – 10.000 €">3.000 – 10.000 €</option><option value="Više od 10.000 €">Über 10.000 €</option></select></div>
-                        </div>
-                        <div class="form-field contact-form__full">
-                            <label for="cf-message"><span data-lang="de">Nachricht</span> *</label>
-                            <textarea id="cf-message" name="message" required maxlength="5000" placeholder="Beschreiben Sie kurz Ihr Projekt oder Ihre Frage…"></textarea>
-                        </div>
+                    <div class="contact-main__grid">
+
+                        <div class="contact-intro">
+                            <h2 class="text-pretitle">
+                                <span data-lang="de">Kontakt aufnehmen</span>
+                            </h2>
+                            <p class="contact-intro__title"><span data-lang="de">Sie haben ein Projekt oder eine Idee?</span></p>
+                            <p class="contact-intro__text"><span data-lang="de">Melden Sie sich, und wir schlagen eine Lösung vor und schätzen Umfang und Preis ein.</span></p>
+                            <div class="contact-next">
+                                <p class="contact-next__title"><span data-lang="de">So geht es weiter</span></p>
+                                <ol>
+                                <li><span class="contact-next__num">01</span><span><span data-lang="de">Wir lesen Ihre Anfrage und melden uns bei Ihnen.</span></span></li>
+                                <li><span class="contact-next__num">02</span><span><span data-lang="de">Ein kostenloses 30-minütiges Gespräch über Ziele, Nutzer und Zeitplan.</span></span></li>
+                                <li><span class="contact-next__num">03</span><span><span data-lang="de">Ein Lösungsvorschlag mit Einschätzung von Umfang und Preis.</span></span></li>
+                                </ol>
+                            </div>
                         </div>
 
-                        <div class="contact-form__hp" aria-hidden="true">
-                            <label for="cf-hp">Website</label>
-                            <input type="text" id="cf-hp" name="_honey" tabindex="-1" autocomplete="off">
-                        </div>
+    <form class="contact-form contact-card" id="contact-form" novalidate>
+                            <div class="contact-form__grid">
+                            <div class="form-field">
+                                <label for="cf-name"><span data-lang="de">Name</span> <span class="contact-form__req" aria-hidden="true">*</span></label>
+                                <input type="text" id="cf-name" name="name" autocomplete="name" required maxlength="120">
+                            </div>
+                            <div class="form-field">
+                                <label for="cf-email"><span data-lang="de">E-Mail</span> <span class="contact-form__req" aria-hidden="true">*</span></label>
+                                <input type="email" id="cf-email" name="email" autocomplete="email" required maxlength="160" placeholder="name@firma.de">
+                            </div>
+                            <div class="form-field contact-form__full">
+                                <label for="cf-company"><span data-lang="de">Unternehmen <span class="contact-form__opt">(optional)</span></span></label>
+                                <input type="text" id="cf-company" name="company" autocomplete="organization" maxlength="160">
+                            </div>
+                            <div class="form-field contact-form__full">
+                                <label for="cf-type"><span data-lang="de">Projektart</span></label>
+                                <div class="contact-select"><select id="cf-type" name="cf-type"><option value="">Bitte wählen…</option><option value="Web stranica">Website</option><option value="Web trgovina">Onlineshop</option><option value="Web aplikacija">Webanwendung</option><option value="Mobilna aplikacija">Mobile App</option><option value="Softver po mjeri">Individuelle Software</option><option value="Održavanje i podrška">Wartung &amp; Support</option><option value="Nešto drugo">Etwas anderes</option></select><svg class="contact-select__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></div>
+                            </div>
+                            <fieldset class="form-field contact-form__full contact-chips">
+                                <legend><span data-lang="de">Budgetrahmen</span></legend>
+                                <div class="contact-chips__list">
+                                    <label class="contact-chip"><input type="radio" name="cf-budget" value="Još ne znam"><span class="contact-chip__pill"><span data-lang="de">Noch unklar</span></span></label>
+                                    <label class="contact-chip"><input type="radio" name="cf-budget" value="Do 1.000 €"><span class="contact-chip__pill"><span data-lang="de">Bis 1.000 €</span></span></label>
+                                    <label class="contact-chip"><input type="radio" name="cf-budget" value="1.000 – 3.000 €"><span class="contact-chip__pill"><span data-lang="de">1.000 – 3.000 €</span></span></label>
+                                    <label class="contact-chip"><input type="radio" name="cf-budget" value="3.000 – 10.000 €"><span class="contact-chip__pill"><span data-lang="de">3.000 – 10.000 €</span></span></label>
+                                    <label class="contact-chip"><input type="radio" name="cf-budget" value="Više od 10.000 €"><span class="contact-chip__pill"><span data-lang="de">Über 10.000 €</span></span></label>
+                                </div>
+                            </fieldset>
+                            <div class="form-field contact-form__full">
+                                <label for="cf-message"><span data-lang="de">Nachricht</span> <span class="contact-form__req" aria-hidden="true">*</span></label>
+                                <textarea id="cf-message" name="message" required maxlength="5000" placeholder="Beschreiben Sie kurz Ihr Projekt oder Ihre Frage…"></textarea>
+                            </div>
+                            </div>
 
-                        <div class="contact-form__actions">
-                            <button type="submit" class="btn btn--primary"><span data-lang="de">Anfrage senden</span></button>
-                            <p class="contact-form__privacy"><span data-lang="de">Wir verwenden Ihre Daten nur zur Beantwortung Ihrer Anfrage gemäß unserer <a href="privacy.html">Datenschutzerklärung</a>.</span></p>
-                        </div>
+                            <div class="contact-form__hp" aria-hidden="true">
+                                <label for="cf-hp">Website</label>
+                                <input type="text" id="cf-hp" name="_honey" tabindex="-1" autocomplete="off">
+                            </div>
 
-                        <p class="contact-form__status" id="cf-status" role="status" aria-live="polite" hidden></p>
-                    </form>
+                            <div class="contact-form__actions">
+                                <p class="contact-form__privacy"><span data-lang="de">Wir verwenden Ihre Daten nur zur Beantwortung Ihrer Anfrage gemäß unserer <a href="privacy.html">Datenschutzerklärung</a>.</span></p>
+                                <button type="submit" class="contact-form__submit"><span data-lang="de">Anfrage senden</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+                            </div>
 
-                    <p class="contact-form__alt"><span data-lang="de">Lieber per E-Mail? Schreiben Sie an</span> <a href="mailto:info@rdd.software" class="mailtoui">info@rdd.software</a></p>
+                            <p class="contact-form__status" id="cf-status" role="status" aria-live="polite" hidden></p>
+                        </form>
+
+                    </div>
 
                     <div class="contact-booking" id="booking">
                         <h3 class="contact-booking__title"><span data-lang="de">Lieber ein Gespräch?</span></h3>
@@ -748,7 +760,7 @@
                     </div>
 
                 </div>
-            </div> <!-- end contact-bottom -->
+            </div> <!-- end contact-main -->
 
         </section> <!-- end contact -->
 
@@ -758,6 +770,14 @@
     <!-- ## footer
     ================================================== -->
     <footer class="s-footer">
+
+        <div class="footer-circles" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
 
         <div class="row ss-footer-nav-row">
             <div class="column">
@@ -824,7 +844,7 @@
 ================================================== -->
 <script src="../js/plugins.js"></script>
 <script src="../js/main.js"></script>
-<script src="../js/contact.js?v=2"></script>
+<script src="../js/contact.js?v=3"></script>
 <script src="../js/booking.js?v=2"></script>
 <!-- Google Analytics - loaded only after the visitor accepts cookies -->
 <script src="../js/consent.js?v=2"></script>

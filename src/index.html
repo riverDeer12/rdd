@@ -36,9 +36,9 @@
     <link rel="preload" href="css/fonts/dm-serif-display-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="css/styles.css?v=4">
     <link rel="stylesheet" href="css/i18n.css?v=8">
-    <link rel="stylesheet" href="css/theme.css?v=4">
+    <link rel="stylesheet" href="css/theme.css?v=13">
     <link rel="stylesheet" href="css/consent.css?v=2">
-    <link rel="stylesheet" href="css/home.css?v=3">
+    <link rel="stylesheet" href="css/home.css?v=11">
 
     <!-- language (hr / en / it / de) - runs before render so only one language is shown
     ================================================== -->
@@ -721,72 +721,75 @@
         ================================================== -->
         <section id="contact" class="s-contact target-section">
 
-            <div class="row contact-top">
-                <div class="column lg-12">
-                    <h2 class="text-pretitle">
-                        <span data-lang="hr">Javite nam se</span><span data-lang="en">Get In Touch</span><span data-lang="it">Contattaci</span><span data-lang="de">Kontakt aufnehmen</span>
-                    </h2>
-
-                    <p class="h1" data-lang="hr">
-                        Imate projekt ili ideju? Javite nam se, a mi ćemo predložiti rješenje i procijeniti opseg i cijenu.
-                    </p>
-                    <p class="h1" data-lang="en">
-                        Have a project or an idea? Get in touch and we will suggest a solution and estimate the scope and price.
-                    </p>
-                    <p class="h1" data-lang="it">
-                        Hai un progetto o un'idea? Contattaci: ti proporremo una soluzione e stimeremo portata e costi.
-                    </p>
-                    <p class="h1" data-lang="de">
-                        Sie haben ein Projekt oder eine Idee? Melden Sie sich, und wir schlagen eine Lösung vor und schätzen Umfang und Preis ein.
-                    </p>
-                </div>
-            </div> <!-- end contact-top -->
-
-            <div class="row contact-bottom">
+            <div class="row contact-main">
                 <div class="column lg-12">
 
-                    <form class="contact-form" id="contact-form" novalidate>
-                        <div class="contact-form__grid">
-                        <div class="form-field">
-                            <label for="cf-name"><span data-lang="hr">Ime i prezime</span><span data-lang="en">Name</span><span data-lang="it">Nome e cognome</span><span data-lang="de">Name</span> *</label>
-                            <input type="text" id="cf-name" name="name" autocomplete="name" required maxlength="120">
-                        </div>
-                        <div class="form-field">
-                            <label for="cf-email"><span data-lang="hr">E-mail</span><span data-lang="en">Email</span><span data-lang="it">E-mail</span><span data-lang="de">E-Mail</span> *</label>
-                            <input type="email" id="cf-email" name="email" autocomplete="email" required maxlength="160" data-ph-hr="ime@tvrtka.hr" data-ph-en="name@company.com" data-ph-it="nome@azienda.it" data-ph-de="name@firma.de" placeholder="ime@tvrtka.hr">
-                        </div>
-                        <div class="form-field contact-form__full">
-                            <label for="cf-company"><span data-lang="hr">Tvrtka (neobavezno)</span><span data-lang="en">Company (optional)</span><span data-lang="it">Azienda (facoltativo)</span><span data-lang="de">Unternehmen (optional)</span></label>
-                            <input type="text" id="cf-company" name="company" autocomplete="organization" maxlength="160">
-                        </div>
-                        <div class="form-field">
-                            <label for="cf-type"><span data-lang="hr">Vrsta projekta</span><span data-lang="en">Project type</span><span data-lang="it">Tipo di progetto</span><span data-lang="de">Projektart</span></label>
-                            <div class="ss-custom-select"><select id="cf-type" name="cf-type"><option value="" data-label-hr="Odaberite…" data-label-en="Choose…" data-label-it="Scegli…" data-label-de="Bitte wählen…">Odaberite…</option><option value="Web stranica" data-label-hr="Web stranica" data-label-en="Website" data-label-it="Sito web" data-label-de="Website">Web stranica</option><option value="Web trgovina" data-label-hr="Web trgovina" data-label-en="Online shop" data-label-it="Negozio online" data-label-de="Onlineshop">Web trgovina</option><option value="Web aplikacija" data-label-hr="Web aplikacija" data-label-en="Web application" data-label-it="Applicazione web" data-label-de="Webanwendung">Web aplikacija</option><option value="Mobilna aplikacija" data-label-hr="Mobilna aplikacija" data-label-en="Mobile app" data-label-it="App mobile" data-label-de="Mobile App">Mobilna aplikacija</option><option value="Softver po mjeri" data-label-hr="Softver po mjeri" data-label-en="Custom software" data-label-it="Software su misura" data-label-de="Individuelle Software">Softver po mjeri</option><option value="Održavanje i podrška" data-label-hr="Održavanje i podrška" data-label-en="Maintenance &amp; support" data-label-it="Manutenzione e supporto" data-label-de="Wartung &amp; Support">Održavanje i podrška</option><option value="Nešto drugo" data-label-hr="Nešto drugo" data-label-en="Something else" data-label-it="Altro" data-label-de="Etwas anderes">Nešto drugo</option></select></div>
-                        </div>
-                        <div class="form-field">
-                            <label for="cf-budget"><span data-lang="hr">Okvirni budžet</span><span data-lang="en">Estimated budget</span><span data-lang="it">Budget indicativo</span><span data-lang="de">Budgetrahmen</span></label>
-                            <div class="ss-custom-select"><select id="cf-budget" name="cf-budget"><option value="" data-label-hr="Odaberite…" data-label-en="Choose…" data-label-it="Scegli…" data-label-de="Bitte wählen…">Odaberite…</option><option value="Još ne znam" data-label-hr="Još ne znam" data-label-en="Not sure yet" data-label-it="Non so ancora" data-label-de="Noch unklar">Još ne znam</option><option value="Do 1.000 €" data-label-hr="Do 1.000 €" data-label-en="Up to €1,000" data-label-it="Fino a 1.000 €" data-label-de="Bis 1.000 €">Do 1.000 €</option><option value="1.000 – 3.000 €" data-label-hr="1.000 – 3.000 €" data-label-en="€1,000 – €3,000" data-label-it="1.000 – 3.000 €" data-label-de="1.000 – 3.000 €">1.000 – 3.000 €</option><option value="3.000 – 10.000 €" data-label-hr="3.000 – 10.000 €" data-label-en="€3,000 – €10,000" data-label-it="3.000 – 10.000 €" data-label-de="3.000 – 10.000 €">3.000 – 10.000 €</option><option value="Više od 10.000 €" data-label-hr="Više od 10.000 €" data-label-en="Over €10,000" data-label-it="Oltre 10.000 €" data-label-de="Über 10.000 €">Više od 10.000 €</option></select></div>
-                        </div>
-                        <div class="form-field contact-form__full">
-                            <label for="cf-message"><span data-lang="hr">Poruka</span><span data-lang="en">Message</span><span data-lang="it">Messaggio</span><span data-lang="de">Nachricht</span> *</label>
-                            <textarea id="cf-message" name="message" required maxlength="5000" data-ph-hr="Ukratko opišite projekt ili pitanje…" data-ph-en="Briefly describe your project or question…" data-ph-it="Descrivi brevemente il progetto o la domanda…" data-ph-de="Beschreiben Sie kurz Ihr Projekt oder Ihre Frage…" placeholder="Ukratko opišite projekt ili pitanje…"></textarea>
-                        </div>
+                    <div class="contact-main__grid">
+
+                        <div class="contact-intro">
+                            <h2 class="text-pretitle">
+                                <span data-lang="hr">Javite nam se</span><span data-lang="en">Get In Touch</span><span data-lang="it">Contattaci</span><span data-lang="de">Kontakt aufnehmen</span>
+                            </h2>
+                            <p class="contact-intro__title"><span data-lang="hr">Imate projekt ili ideju?</span><span data-lang="en">Have a project or an idea?</span><span data-lang="it">Hai un progetto o un'idea?</span><span data-lang="de">Sie haben ein Projekt oder eine Idee?</span></p>
+                            <p class="contact-intro__text"><span data-lang="hr">Javite nam se, a mi ćemo predložiti rješenje i procijeniti opseg i cijenu.</span><span data-lang="en">Get in touch and we will suggest a solution and estimate the scope and price.</span><span data-lang="it">Contattaci: ti proporremo una soluzione e stimeremo portata e costi.</span><span data-lang="de">Melden Sie sich, und wir schlagen eine Lösung vor und schätzen Umfang und Preis ein.</span></p>
+                            <div class="contact-next">
+                                <p class="contact-next__title"><span data-lang="hr">Što slijedi nakon upita</span><span data-lang="en">What happens next</span><span data-lang="it">Cosa succede dopo</span><span data-lang="de">So geht es weiter</span></p>
+                                <ol>
+                                <li><span class="contact-next__num">01</span><span><span data-lang="hr">Pročitamo vaš upit i javimo vam se.</span><span data-lang="en">We read your enquiry and get back to you.</span><span data-lang="it">Leggiamo la tua richiesta e ti ricontattiamo.</span><span data-lang="de">Wir lesen Ihre Anfrage und melden uns bei Ihnen.</span></span></li>
+                                <li><span class="contact-next__num">02</span><span><span data-lang="hr">Besplatne konzultacije od 30 minuta o ciljevima, korisnicima i rokovima.</span><span data-lang="en">A free 30-minute call about your goals, users and timeline.</span><span data-lang="it">Una consulenza gratuita di 30 minuti su obiettivi, utenti e tempistiche.</span><span data-lang="de">Ein kostenloses 30-minütiges Gespräch über Ziele, Nutzer und Zeitplan.</span></span></li>
+                                <li><span class="contact-next__num">03</span><span><span data-lang="hr">Prijedlog rješenja s procjenom opsega i cijene.</span><span data-lang="en">A proposed solution with an estimate of scope and price.</span><span data-lang="it">Una proposta di soluzione con una stima di portata e costi.</span><span data-lang="de">Ein Lösungsvorschlag mit Einschätzung von Umfang und Preis.</span></span></li>
+                                </ol>
+                            </div>
                         </div>
 
-                        <div class="contact-form__hp" aria-hidden="true">
-                            <label for="cf-hp">Website</label>
-                            <input type="text" id="cf-hp" name="_honey" tabindex="-1" autocomplete="off">
-                        </div>
+    <form class="contact-form contact-card" id="contact-form" novalidate>
+                            <div class="contact-form__grid">
+                            <div class="form-field">
+                                <label for="cf-name"><span data-lang="hr">Ime i prezime</span><span data-lang="en">Name</span><span data-lang="it">Nome e cognome</span><span data-lang="de">Name</span> <span class="contact-form__req" aria-hidden="true">*</span></label>
+                                <input type="text" id="cf-name" name="name" autocomplete="name" required maxlength="120">
+                            </div>
+                            <div class="form-field">
+                                <label for="cf-email"><span data-lang="hr">E-mail</span><span data-lang="en">Email</span><span data-lang="it">E-mail</span><span data-lang="de">E-Mail</span> <span class="contact-form__req" aria-hidden="true">*</span></label>
+                                <input type="email" id="cf-email" name="email" autocomplete="email" required maxlength="160" data-ph-hr="ime@tvrtka.hr" data-ph-en="name@company.com" data-ph-it="nome@azienda.it" data-ph-de="name@firma.de" placeholder="ime@tvrtka.hr">
+                            </div>
+                            <div class="form-field contact-form__full">
+                                <label for="cf-company"><span data-lang="hr">Tvrtka <span class="contact-form__opt">(neobavezno)</span></span><span data-lang="en">Company <span class="contact-form__opt">(optional)</span></span><span data-lang="it">Azienda <span class="contact-form__opt">(facoltativo)</span></span><span data-lang="de">Unternehmen <span class="contact-form__opt">(optional)</span></span></label>
+                                <input type="text" id="cf-company" name="company" autocomplete="organization" maxlength="160">
+                            </div>
+                            <div class="form-field contact-form__full">
+                                <label for="cf-type"><span data-lang="hr">Vrsta projekta</span><span data-lang="en">Project type</span><span data-lang="it">Tipo di progetto</span><span data-lang="de">Projektart</span></label>
+                                <div class="contact-select"><select id="cf-type" name="cf-type"><option value="" data-label-hr="Odaberite…" data-label-en="Choose…" data-label-it="Scegli…" data-label-de="Bitte wählen…">Odaberite…</option><option value="Web stranica" data-label-hr="Web stranica" data-label-en="Website" data-label-it="Sito web" data-label-de="Website">Web stranica</option><option value="Web trgovina" data-label-hr="Web trgovina" data-label-en="Online shop" data-label-it="Negozio online" data-label-de="Onlineshop">Web trgovina</option><option value="Web aplikacija" data-label-hr="Web aplikacija" data-label-en="Web application" data-label-it="Applicazione web" data-label-de="Webanwendung">Web aplikacija</option><option value="Mobilna aplikacija" data-label-hr="Mobilna aplikacija" data-label-en="Mobile app" data-label-it="App mobile" data-label-de="Mobile App">Mobilna aplikacija</option><option value="Softver po mjeri" data-label-hr="Softver po mjeri" data-label-en="Custom software" data-label-it="Software su misura" data-label-de="Individuelle Software">Softver po mjeri</option><option value="Održavanje i podrška" data-label-hr="Održavanje i podrška" data-label-en="Maintenance &amp; support" data-label-it="Manutenzione e supporto" data-label-de="Wartung &amp; Support">Održavanje i podrška</option><option value="Nešto drugo" data-label-hr="Nešto drugo" data-label-en="Something else" data-label-it="Altro" data-label-de="Etwas anderes">Nešto drugo</option></select><svg class="contact-select__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></div>
+                            </div>
+                            <fieldset class="form-field contact-form__full contact-chips">
+                                <legend><span data-lang="hr">Okvirni budžet</span><span data-lang="en">Estimated budget</span><span data-lang="it">Budget indicativo</span><span data-lang="de">Budgetrahmen</span></legend>
+                                <div class="contact-chips__list">
+                                    <label class="contact-chip"><input type="radio" name="cf-budget" value="Još ne znam"><span class="contact-chip__pill"><span data-lang="hr">Još ne znam</span><span data-lang="en">Not sure yet</span><span data-lang="it">Non so ancora</span><span data-lang="de">Noch unklar</span></span></label>
+                                    <label class="contact-chip"><input type="radio" name="cf-budget" value="Do 1.000 €"><span class="contact-chip__pill"><span data-lang="hr">Do 1.000 €</span><span data-lang="en">Up to €1,000</span><span data-lang="it">Fino a 1.000 €</span><span data-lang="de">Bis 1.000 €</span></span></label>
+                                    <label class="contact-chip"><input type="radio" name="cf-budget" value="1.000 – 3.000 €"><span class="contact-chip__pill"><span data-lang="hr">1.000 – 3.000 €</span><span data-lang="en">€1,000 – €3,000</span><span data-lang="it">1.000 – 3.000 €</span><span data-lang="de">1.000 – 3.000 €</span></span></label>
+                                    <label class="contact-chip"><input type="radio" name="cf-budget" value="3.000 – 10.000 €"><span class="contact-chip__pill"><span data-lang="hr">3.000 – 10.000 €</span><span data-lang="en">€3,000 – €10,000</span><span data-lang="it">3.000 – 10.000 €</span><span data-lang="de">3.000 – 10.000 €</span></span></label>
+                                    <label class="contact-chip"><input type="radio" name="cf-budget" value="Više od 10.000 €"><span class="contact-chip__pill"><span data-lang="hr">Više od 10.000 €</span><span data-lang="en">Over €10,000</span><span data-lang="it">Oltre 10.000 €</span><span data-lang="de">Über 10.000 €</span></span></label>
+                                </div>
+                            </fieldset>
+                            <div class="form-field contact-form__full">
+                                <label for="cf-message"><span data-lang="hr">Poruka</span><span data-lang="en">Message</span><span data-lang="it">Messaggio</span><span data-lang="de">Nachricht</span> <span class="contact-form__req" aria-hidden="true">*</span></label>
+                                <textarea id="cf-message" name="message" required maxlength="5000" data-ph-hr="Ukratko opišite projekt ili pitanje…" data-ph-en="Briefly describe your project or question…" data-ph-it="Descrivi brevemente il progetto o la domanda…" data-ph-de="Beschreiben Sie kurz Ihr Projekt oder Ihre Frage…" placeholder="Ukratko opišite projekt ili pitanje…"></textarea>
+                            </div>
+                            </div>
 
-                        <div class="contact-form__actions">
-                            <button type="submit" class="btn btn--primary"><span data-lang="hr">Pošalji upit</span><span data-lang="en">Send enquiry</span><span data-lang="it">Invia richiesta</span><span data-lang="de">Anfrage senden</span></button>
-                            <p class="contact-form__privacy"><span data-lang="hr">Vaše podatke koristimo samo za odgovor na upit, u skladu s <a href="privacy.html">Izjavom o privatnosti</a>.</span><span data-lang="en">We use your details only to reply to your enquiry, in line with our <a href="privacy.html">Privacy Policy</a>.</span><span data-lang="it">Usiamo i tuoi dati solo per rispondere alla richiesta, in conformità all'<a href="privacy.html">Informativa sulla privacy</a>.</span><span data-lang="de">Wir verwenden Ihre Daten nur zur Beantwortung Ihrer Anfrage gemäß unserer <a href="privacy.html">Datenschutzerklärung</a>.</span></p>
-                        </div>
+                            <div class="contact-form__hp" aria-hidden="true">
+                                <label for="cf-hp">Website</label>
+                                <input type="text" id="cf-hp" name="_honey" tabindex="-1" autocomplete="off">
+                            </div>
 
-                        <p class="contact-form__status" id="cf-status" role="status" aria-live="polite" hidden></p>
-                    </form>
+                            <div class="contact-form__actions">
+                                <p class="contact-form__privacy"><span data-lang="hr">Vaše podatke koristimo samo za odgovor na upit, u skladu s <a href="privacy.html">Izjavom o privatnosti</a>.</span><span data-lang="en">We use your details only to reply to your enquiry, in line with our <a href="privacy.html">Privacy Policy</a>.</span><span data-lang="it">Usiamo i tuoi dati solo per rispondere alla richiesta, in conformità all'<a href="privacy.html">Informativa sulla privacy</a>.</span><span data-lang="de">Wir verwenden Ihre Daten nur zur Beantwortung Ihrer Anfrage gemäß unserer <a href="privacy.html">Datenschutzerklärung</a>.</span></p>
+                                <button type="submit" class="contact-form__submit"><span data-lang="hr">Pošalji upit</span><span data-lang="en">Send enquiry</span><span data-lang="it">Invia richiesta</span><span data-lang="de">Anfrage senden</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+                            </div>
 
-                    <p class="contact-form__alt"><span data-lang="hr">Radije e-poštom? Pišite na</span><span data-lang="en">Prefer email? Write to</span><span data-lang="it">Preferisci l'e-mail? Scrivi a</span><span data-lang="de">Lieber per E-Mail? Schreiben Sie an</span> <a href="mailto:info@rdd.software" class="mailtoui">info@rdd.software</a></p>
+                            <p class="contact-form__status" id="cf-status" role="status" aria-live="polite" hidden></p>
+                        </form>
+
+                    </div>
 
                     <div class="contact-booking" id="booking">
                         <h3 class="contact-booking__title"><span data-lang="hr">Radije razgovor?</span><span data-lang="en">Prefer to talk?</span><span data-lang="it">Preferisci parlarne?</span><span data-lang="de">Lieber ein Gespräch?</span></h3>
@@ -797,7 +800,7 @@
                     </div>
 
                 </div>
-            </div> <!-- end contact-bottom -->
+            </div> <!-- end contact-main -->
 
         </section> <!-- end contact -->
 
@@ -807,6 +810,14 @@
     <!-- ## footer
     ================================================== -->
     <footer class="s-footer">
+
+        <div class="footer-circles" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
 
         <div class="row ss-footer-nav-row">
             <div class="column">
@@ -873,7 +884,7 @@
 ================================================== -->
 <script src="js/plugins.js"></script>
 <script src="js/main.js"></script>
-<script src="js/contact.js?v=2"></script>
+<script src="js/contact.js?v=3"></script>
 <script src="js/booking.js?v=2"></script>
 <!-- Google Analytics - loaded only after the visitor accepts cookies -->
 <script src="js/consent.js?v=2"></script>
