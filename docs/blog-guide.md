@@ -64,9 +64,12 @@ competitor prices, testimonials, awards, certifications or technologies.
 - Terms: 50 % advance and the rest on delivery unless the offer says
   otherwise; bugs reported within 3 months of handover are fixed free; after
   payment all rights to code and design pass to the client; domain and
-  hosting are registered in the client's name; maintenance can be cancelled
-  with 30 days' notice. Free 30-minute consultation (index.html#booking),
-  enquiry form (index.html#contact), all services (services.html), price list (pricing.html), terms (terms.html).
+  hosting are registered in the client's name; every project, maintenance
+  included, can be cancelled with 3 months' notice unless the offer says
+  otherwise. Maintenance packages (maintenance.html): website from 50 € a
+  month with up to 3 small changes a month of up to 1 working hour each,
+  app from 150 € a month. Free 30-minute consultation (index.html#booking),
+  enquiry form (index.html#contact), all services (services.html), maintenance packages (maintenance.html), price list (pricing.html), terms (terms.html).
 - Projects (describe them only like this):
   Topple, sliding puzzle game with gravity played in the browser: 60 levels,
   daily puzzle, endless mode and leaderboards (topple-details.html);

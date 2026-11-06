@@ -151,6 +151,26 @@ html[data-theme="light"] .price-table .price-table__price {
         padding: 0;
         border: 0;
     }
+    .price-table--compare td[data-label] {
+        display: flex;
+        gap: 1.2rem;
+        justify-content: space-between;
+    }
+
+    .price-table--compare td[data-label]::before {
+        content: attr(data-label);
+        flex: none;
+        font-size: 1.3rem;
+        letter-spacing: .08em;
+        text-transform: uppercase;
+        color: var(--color-text-light);
+        font-weight: 400;
+        padding-top: .2rem;
+    }
+
+    .price-table--compare td[data-label] {
+        text-align: right;
+    }
 }
 
 /* --------------------------------------------------------------------

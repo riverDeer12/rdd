@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html class="no-js" lang="hr"
+      data-title-hr="Održavanje web stranica i aplikacija: paketi - RDD Software"
+      data-title-en="Website and app maintenance packages - RDD Software"
+      data-title-it="Manutenzione di siti e app: pacchetti - RDD Software"
+      data-title-de="Wartung von Websites und Apps: Pakete - RDD Software"
+      data-description-hr="Održavanje web stranice od 50 € i aplikacije od 150 € mjesečno: hosting, ažuriranja, sigurnosne kopije i manje izmjene. Pogledajte što je uključeno."
+      data-description-en="Website maintenance from €50 and app maintenance from €150 a month: hosting, updates, backups and small changes. See what is included."
+      data-description-it="Manutenzione del sito da 50 € e dell’app da 150 € al mese: hosting, aggiornamenti, backup e piccole modifiche. Scopri cosa è incluso."
+      data-description-de="Website-Wartung ab 50 € und App-Wartung ab 150 € im Monat: Hosting, Updates, Sicherungskopien und kleine Änderungen. Was enthalten ist.">
+<head>
+
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>Održavanje web stranica i aplikacija: paketi - RDD Software</title>
+
+    <!-- mobile specific metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Open Graph (for Facebook, LinkedIn, etc.) -->
+    <meta property="og:image" content="https://rdd.software/images/about-photo.jpg"/>
+    <meta property="og:type" content="website"/>
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="preload" href="css/fonts/public-sans-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="css/fonts/dm-serif-display-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="css/styles.css?v=4">
+    <link rel="stylesheet" href="css/i18n.css?v=8">
+    <link rel="stylesheet" href="css/theme.css?v=13">
+    <link rel="stylesheet" href="css/consent.css?v=2">
+    <link rel="stylesheet" href="css/cta.css">
+    <link rel="stylesheet" href="css/home.css?v=3">
+    <link rel="stylesheet" href="css/pages.css?v=9">
+
+    <!-- structured data for search engines, one per language -->
+    <script type="application/ld+json" data-lang="hr">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Service",
+                "name": "Održavanje web stranica i aplikacija",
+                "description": "Održavanje web stranice od 50 € i aplikacije od 150 € mjesečno: hosting, ažuriranja, sigurnosne kopije i manje izmjene. Pogledajte što je uključeno.",
+                "url": "https://rdd.software/maintenance.html",
+                "inLanguage": "hr",
+                "serviceType": "Održavanje web stranica i aplikacija",
+                "areaServed": "Europe",
+                "provider": {
+                    "@type": "Organization",
+                    "name": "RDD Software",
+                    "url": "https://rdd.software/"
+                },
+                "offers": [
+                    {
+                        "@type": "Offer",
+                        "name": "Web stranica",
+                        "priceCurrency": "EUR",
+                        "priceSpecification": {
+                            "@type": "UnitPriceSpecification",
+                            "minPrice": 50,
+                            "priceCurrency": "EUR",
+                            "unitCode": "MON"
+                        }
+                    },
+                    {
+                        "@type": "Offer",
+                        "name": "Aplikacija",
+                        "priceCurrency": "EUR",
+                        "priceSpecification": {
+                            "@type": "UnitPriceSpecification",
+                            "minPrice": 150,
+                            "priceCurrency": "EUR",
+                            "unitCode": "MON"
+                        }
+                    }
+                ]
+            },
+            {
+                "@type": "FAQPage",
+                "inLanguage": "hr",
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "Što se smatra manjim zahvatom?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Sve što se može napraviti u do sat vremena: izmjena teksta, cijene ili radnog vremena, nova fotografija, video ili dokument za preuzimanje, novi član tima ili sitna dorada postojeće stranice."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Što ako ne iskoristim sve zahvate u mjesecu?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Neiskorišteni zahvati ne prenose se u sljedeći mjesec. Zauzvrat su ažuriranja, sigurnosne kopije i praćenje rada uključeni svaki mjesec, bez obzira na to koliko izmjena tražite."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Trebam li uopće održavanje?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Ako stranicu rijetko mijenjate, a netko drugi brine o hostingu i ažuriranjima, možda ne. Više o tome kada se održavanje isplati pročitajte u članku Održavanje web stranice: što uključuje i kada se isplati."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Možete li održavati stranicu koju niste izradili vi?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Možemo. Najprije pregledamo kod, hosting i stanje sustava, a zatim vam pošaljemo ponudu za održavanje ili predložimo što prvo treba popraviti."
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
+    <script type="application/ld+json" data-lang="en">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Service",
+                "name": "Website and app maintenance",
+                "description": "Website maintenance from €50 and app maintenance from €150 a month: hosting, updates, backups and small changes. See what is included.",
+                "url": "https://rdd.software/en/maintenance.html",
+                "inLanguage": "en",
+                "serviceType": "Website and app maintenance",
+                "areaServed": "Europe",
+                "provider": {
+                    "@type": "Organization",
+                    "name": "RDD Software",
+                    "url": "https://rdd.software/"
+                },
+                "offers": [
+                    {
+                        "@type": "Offer",
+                        "name": "Website",
+                        "priceCurrency": "EUR",
+                        "priceSpecification": {
+                            "@type": "UnitPriceSpecification",
+                            "minPrice": 50,
+                            "priceCurrency": "EUR",
+                            "unitCode": "MON"
+                        }
+                    },
+                    {
+                        "@type": "Offer",
+                        "name": "Application",
+                        "priceCurrency": "EUR",
+                        "priceSpecification": {
+                            "@type": "UnitPriceSpecification",
+                            "minPrice": 150,
+                            "priceCurrency": "EUR",
+                            "unitCode": "MON"
+                        }
+                    }
+                ]
+            },
+            {
+                "@type": "FAQPage",
+                "inLanguage": "en",
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "What counts as a small change?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Anything that takes up to an hour: new text, prices or opening hours, a new photo, video or downloadable document, a new team member or a small tweak to an existing page."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "What if I don't use all the changes in a month?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Unused changes do not carry over to the next month. In return, updates, backups and monitoring are included every month, however many changes you ask for."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Do I need maintenance at all?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "If you rarely change your website and someone else looks after hosting and updates, perhaps not. Read more in Website maintenance: what it covers and when it pays off."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Can you maintain a website you didn't build?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Yes. First we review the code, the hosting and the state of the system, then we send you an offer for maintenance or suggest what needs fixing first."
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
+    <script type="application/ld+json" data-lang="it">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Service",
+                "name": "Manutenzione di siti e app",
+                "description": "Manutenzione del sito da 50 € e dell’app da 150 € al mese: hosting, aggiornamenti, backup e piccole modifiche. Scopri cosa è incluso.",
+                "url": "https://rdd.software/it/maintenance.html",
+                "inLanguage": "it",
+                "serviceType": "Manutenzione di siti e app",
+                "areaServed": "Europe",
+                "provider": {
+                    "@type": "Organization",
+                    "name": "RDD Software",
+                    "url": "https://rdd.software/"
+                },
+                "offers": [
+                    {
+                        "@type": "Offer",
+                        "name": "Sito web",
+                        "priceCurrency": "EUR",
+                        "priceSpecification": {
+                            "@type": "UnitPriceSpecification",
+                            "minPrice": 50,
+                            "priceCurrency": "EUR",
+                            "unitCode": "MON"
+                        }
+                    },
+                    {
+                        "@type": "Offer",
+                        "name": "Applicazione",
+                        "priceCurrency": "EUR",
+                        "priceSpecification": {
+                            "@type": "UnitPriceSpecification",
+                            "minPrice": 150,
+                            "priceCurrency": "EUR",
+                            "unitCode": "MON"
+                        }
+                    }
+                ]
+            },
+            {
+                "@type": "FAQPage",
+                "inLanguage": "it",
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "Cosa si intende per piccolo intervento?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Tutto ciò che richiede fino a un’ora: un testo, un prezzo o un orario nuovo, una foto, un video o un documento da scaricare, un nuovo membro del team o un piccolo ritocco a una pagina esistente."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "E se non uso tutti gli interventi del mese?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Gli interventi non usati non passano al mese successivo. In cambio aggiornamenti, backup e monitoraggio sono inclusi ogni mese, qualunque sia il numero di modifiche richieste."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Mi serve davvero la manutenzione?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Se cambi raramente il sito e qualcun altro si occupa di hosting e aggiornamenti, forse no. Approfondisci nell’articolo Manutenzione del sito web: cosa comprende e quando conviene."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Potete fare la manutenzione di un sito che non avete realizzato voi?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Sì. Prima esaminiamo codice, hosting e stato del sistema, poi ti inviamo un’offerta di manutenzione o ti diciamo cosa sistemare per primo."
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
+    <script type="application/ld+json" data-lang="de">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Service",
+                "name": "Wartung von Websites und Apps",
+                "description": "Website-Wartung ab 50 € und App-Wartung ab 150 € im Monat: Hosting, Updates, Sicherungskopien und kleine Änderungen. Was enthalten ist.",
+                "url": "https://rdd.software/de/maintenance.html",
+                "inLanguage": "de",
+                "serviceType": "Wartung von Websites und Apps",
+                "areaServed": "Europe",
+                "provider": {
+                    "@type": "Organization",
+                    "name": "RDD Software",
+                    "url": "https://rdd.software/"
+                },
+                "offers": [
+                    {
+                        "@type": "Offer",
+                        "name": "Website",
+                        "priceCurrency": "EUR",
+                        "priceSpecification": {
+                            "@type": "UnitPriceSpecification",
+                            "minPrice": 50,
+                            "priceCurrency": "EUR",
+                            "unitCode": "MON"
+                        }
+                    },
+                    {
+                        "@type": "Offer",
+                        "name": "Anwendung",
+                        "priceCurrency": "EUR",
+                        "priceSpecification": {
+                            "@type": "UnitPriceSpecification",
+                            "minPrice": 150,
+                            "priceCurrency": "EUR",
+                            "unitCode": "MON"
+                        }
+                    }
+                ]
+            },
+            {
+                "@type": "FAQPage",
+                "inLanguage": "de",
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "Was gilt als kleine Änderung?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Alles, was bis zu einer Stunde dauert: ein neuer Text, Preis oder neue Öffnungszeiten, ein neues Foto, Video oder Dokument zum Herunterladen, ein neues Teammitglied oder eine kleine Anpassung einer bestehenden Seite."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Was, wenn ich nicht alle Änderungen eines Monats nutze?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Nicht genutzte Änderungen werden nicht in den nächsten Monat übertragen. Dafür sind Updates, Sicherungskopien und Überwachung jeden Monat enthalten, egal wie viele Änderungen Sie anfragen."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Brauche ich überhaupt Wartung?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Wenn Sie Ihre Website selten ändern und sich jemand anderes um Hosting und Updates kümmert, vielleicht nicht. Mehr dazu im Artikel Website-Wartung: was sie umfasst und wann sie sich lohnt."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Warten Sie auch Websites, die Sie nicht erstellt haben?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Ja. Zuerst prüfen wir Code, Hosting und Zustand des Systems, dann senden wir Ihnen ein Wartungsangebot oder sagen, was zuerst repariert werden sollte."
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
+
+    <!-- language (hr / en / it / de) - runs before render so only one language is shown
+    ================================================== -->
+    <script src="js/i18n.js?v=2"></script>
+    <!-- light / dark theme - runs before render so the page does not flash -->
+    <script src="js/theme.js"></script>
+
+    <!-- favicons
+    ================================================== -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+</head>
+
+<body id="top">
+
+
+
+
+<!-- # page wrap
+================================================== -->
+<div class="s-pagewrap">
+
+    <div class="circles">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+
+    <!-- ## site header
+    ================================================== -->
+    <header class="s-header">
+
+        <div class="header-mobile">
+            <span class="mobile-home-link"><a href="index.html">RDD.</a></span>
+            <div class="lang-menu">
+                <button type="button" class="lang-menu__toggle" aria-haspopup="true" aria-expanded="false"
+                        aria-label="Jezik: HR" data-aria-label-hr="Jezik: HR" data-aria-label-en="Language: EN" data-aria-label-it="Lingua: IT" data-aria-label-de="Sprache: DE"><span data-lang="hr">HR</span><span data-lang="en">EN</span><span data-lang="it">IT</span><span data-lang="de">DE</span><svg class="lang-menu__chevron" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="lang-switch" role="group" aria-label="Jezik" data-aria-label-hr="Jezik" data-aria-label-en="Language" data-aria-label-it="Lingua" data-aria-label-de="Sprache">
+                    <button type="button" class="lang-switch__btn" data-set-lang="hr"><span class="lang-switch__code">HR</span><span class="lang-switch__name">Hrvatski</span></button>
+                    <span class="lang-switch__sep">/</span>
+                    <button type="button" class="lang-switch__btn" data-set-lang="en"><span class="lang-switch__code">EN</span><span class="lang-switch__name">English</span></button>
+                    <span class="lang-switch__sep">/</span>
+                    <button type="button" class="lang-switch__btn" data-set-lang="it"><span class="lang-switch__code">IT</span><span class="lang-switch__name">Italiano</span></button>
+                    <span class="lang-switch__sep">/</span>
+                    <button type="button" class="lang-switch__btn" data-set-lang="de"><span class="lang-switch__code">DE</span><span class="lang-switch__name">Deutsch</span></button>
+                </div>
+            </div>
+            <button type="button" class="theme-toggle" data-toggle-theme aria-pressed="false"
+                    aria-label="Tamna ili svijetla tema" data-aria-label-hr="Tamna ili svijetla tema" data-aria-label-en="Dark or light theme" data-aria-label-it="Tema scuro o chiaro" data-aria-label-de="Dunkles oder helles Design" title="Tamna ili svijetla tema" data-title-hr="Tamna ili svijetla tema" data-title-en="Dark or light theme" data-title-it="Tema scuro o chiaro" data-title-de="Dunkles oder helles Design">
+                <svg class="theme-toggle__sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/></svg>
+                <svg class="theme-toggle__moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M20.2 14.6A8.5 8.5 0 0 1 9.4 3.8a8.5 8.5 0 1 0 10.8 10.8z"/></svg>
+            </button>
+            <a class="mobile-menu-toggle" href="#0"><span>Menu</span></a>
+        </div>
+
+        <div class="row wide main-nav-wrap">
+            <nav class="column lg-12 main-nav">
+                <ul>
+                    <li><a href="index.html" class="home-link">RDD.</a></li>
+                    <li><a href="index.html#about"><span data-lang="hr">O nama</span><span data-lang="en">About</span><span data-lang="it">Chi siamo</span><span data-lang="de">Über uns</span></a></li>
+                    <li><a href="index.html#works"><span data-lang="hr">Projekti</span><span data-lang="en">Works</span><span data-lang="it">Progetti</span><span data-lang="de">Projekte</span></a></li>
+                    <li><a href="pricing.html"><span data-lang="hr">Cjenik</span><span data-lang="en">Pricing</span><span data-lang="it">Prezzi</span><span data-lang="de">Preise</span></a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="index.html#contact"><span data-lang="hr">Kontakt</span><span data-lang="en">Say Hello</span><span data-lang="it">Contatti</span><span data-lang="de">Kontakt</span></a></li>
+                    <li class="lang-switch-item">
+                        <div class="lang-switch" role="group" aria-label="Jezik" data-aria-label-hr="Jezik" data-aria-label-en="Language" data-aria-label-it="Lingua" data-aria-label-de="Sprache">
+                            <button type="button" class="lang-switch__btn" data-set-lang="hr"><span class="lang-switch__code">HR</span><span class="lang-switch__name">Hrvatski</span></button>
+                            <span class="lang-switch__sep">/</span>
+                            <button type="button" class="lang-switch__btn" data-set-lang="en"><span class="lang-switch__code">EN</span><span class="lang-switch__name">English</span></button>
+                            <span class="lang-switch__sep">/</span>
+                            <button type="button" class="lang-switch__btn" data-set-lang="it"><span class="lang-switch__code">IT</span><span class="lang-switch__name">Italiano</span></button>
+                            <span class="lang-switch__sep">/</span>
+                            <button type="button" class="lang-switch__btn" data-set-lang="de"><span class="lang-switch__code">DE</span><span class="lang-switch__name">Deutsch</span></button>
+                        </div>
+                    </li>
+                    <li class="theme-toggle-item">
+                        <button type="button" class="theme-toggle" data-toggle-theme aria-pressed="false"
+                                aria-label="Tamna ili svijetla tema" data-aria-label-hr="Tamna ili svijetla tema" data-aria-label-en="Dark or light theme" data-aria-label-it="Tema scuro o chiaro" data-aria-label-de="Dunkles oder helles Design" title="Tamna ili svijetla tema" data-title-hr="Tamna ili svijetla tema" data-title-en="Dark or light theme" data-title-it="Tema scuro o chiaro" data-title-de="Dunkles oder helles Design">
+                            <svg class="theme-toggle__sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/></svg>
+                            <svg class="theme-toggle__moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M20.2 14.6A8.5 8.5 0 0 1 9.4 3.8a8.5 8.5 0 1 0 10.8 10.8z"/></svg>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+    </header> <!-- end s-header -->
+
+
+    <!-- ## main content
+    ==================================================- -->
+    <main class="s-content">
+
+        <!-- ### intro
+        ================================================== -->
+        <section class="s-intro">
+
+            <div class="row intro-content" style="min-height: 0;">
+
+                <div class="column">
+                    <div class="text-pretitle with-line">
+                        <span data-lang="hr">Održavanje</span><span data-lang="en">Maintenance</span><span data-lang="it">Manutenzione</span><span data-lang="de">Wartung</span>
+                    </div>
+
+                    <h1 class="text-huge-title" data-lang="hr">
+                        Paketi <br>
+                        održavanja. <br>
+                    </h1>
+                    <h1 class="text-huge-title" data-lang="en">
+                        Maintenance <br>
+                        packages. <br>
+                    </h1>
+                    <h1 class="text-huge-title" data-lang="it">
+                        Pacchetti di <br>
+                        manutenzione. <br>
+                    </h1>
+                    <h1 class="text-huge-title" data-lang="de">
+                        Wartungs-<br>
+                        pakete. <br>
+                    </h1>
+                </div>
+
+            </div>
+
+        </section> <!-- end s-intro -->
+
+
+        <!-- ### maintenance
+        ================================================== -->
+        <section class="s-page target-section">
+
+            <div class="row">
+                <div class="column lg-12">
+
+                    <div class="page-body" data-lang="hr">
+                        <p class="page-lead">Web stranica ili aplikacija nije gotova onog dana kad je objavimo. Treba je ažurirati, čuvati sigurnosne kopije i povremeno promijeniti tekst, cijenu ili fotografiju. Održavanje znači da se za to brinemo mi, za fiksni mjesečni iznos, pa vi ne morate.</p>
+
+                        <div class="intro-cta">
+                            <a href="index.html#contact" class="btn btn--primary">Zatražite ponudu</a>
+                            <a href="index.html#booking" class="btn btn--stroke">Rezervirajte konzultacije</a>
+                        </div>
+
+                        <h2 id="packages">Paketi</h2>
+                        <table class="price-table price-table--compare">
+                            <thead><tr><th>Što je uključeno</th><th>Web stranica</th><th>Aplikacija</th></tr></thead>
+                            <tbody>
+                            <tr><td>Cijena</td><td class="price-table__price" data-label="Web stranica">od 50&nbsp;€ / mj.</td><td class="price-table__price" data-label="Aplikacija">od 150&nbsp;€ / mj.</td></tr>
+                            <tr><td>Za koga</td><td data-label="Web stranica">Prezentacijske stranice, blogovi, manje web trgovine</td><td data-label="Aplikacija">Web i mobilne aplikacije, portali, sustavi s bazom podataka</td></tr>
+                            <tr><td>Hosting i SSL certifikat (https) ili briga o hostingu koji je na vaše ime</td><td data-label="Web stranica">&#10003;</td><td data-label="Aplikacija">&#10003;</td></tr>
+                            <tr><td>Redovne sigurnosne kopije</td><td data-label="Web stranica">&#10003;</td><td data-label="Aplikacija">&#10003; uključujući bazu podataka</td></tr>
+                            <tr><td>Sigurnosna ažuriranja i zakrpe</td><td data-label="Web stranica">&#10003;</td><td data-label="Aplikacija">&#10003;</td></tr>
+                            <tr><td>Praćenje dostupnosti i rada</td><td data-label="Web stranica">&#10003;</td><td data-label="Aplikacija">&#10003; uz praćenje grešaka u aplikaciji</td></tr>
+                            <tr><td>Manji zahvati: izmjena teksta ili cijena, nove fotografije ili video i slično</td><td data-label="Web stranica">do 3 mjesečno, svaki do 1 radnog sata</td><td data-label="Aplikacija">opseg prema ponudi</td></tr>
+                            <tr><td>Ispravak grešaka u radu aplikacije</td><td data-label="Web stranica">&ndash;</td><td data-label="Aplikacija">&#10003;</td></tr>
+                            <tr><td>Ažuriranje biblioteka i usklađivanje s novim verzijama iOS-a i Androida</td><td data-label="Web stranica">&ndash;</td><td data-label="Aplikacija">&#10003;</td></tr>
+                            </tbody>
+                        </table>
+                        <p class="page-note">Cijene su konačne jer obrt nije u sustavu PDV-a. Točan iznos i opseg navodimo u pisanoj ponudi, prema veličini stranice ili aplikacije. Održavanje možemo preuzeti i za stranicu ili aplikaciju koju nismo izradili mi, nakon što pregledamo kod.</p>
+
+                        <h2>Što nije uključeno</h2>
+                        <ul>
+                            <li>Nove stranice, nove funkcije i promjene dizajna.</li>
+                            <li>Zahvati iznad uključenih ili dulji od dogovorenog vremena.</li>
+                            <li>Pisanje tekstova i izrada fotografija ili videa.</li>
+                            <li>Troškovi trećih strana: domena, poslovni e-mail, naknade za kartična plaćanja.</li>
+                        </ul>
+                        <p>Takve poslove radimo prema ponudi ili po satu (programiranje 45&nbsp;€ / sat), uvijek uz vaš pristanak prije početka rada.</p>
+
+                        <h2>Kako funkcionira</h2>
+                        <ol class="process-steps">
+                            <li>
+                                <span class="process-steps__num">01</span>
+                                <h3>Ponuda</h3>
+                                <p>Pregledamo stranicu ili aplikaciju i u ponudi navedemo mjesečni iznos i što točno uključuje.</p>
+                            </li>
+                            <li>
+                                <span class="process-steps__num">02</span>
+                                <h3>Početak</h3>
+                                <p>Održavanje počinje od objave ili od dogovorenog datuma, a račun se izdaje početkom svakog mjeseca.</p>
+                            </li>
+                            <li>
+                                <span class="process-steps__num">03</span>
+                                <h3>Zahtjevi</h3>
+                                <p>Izmjene nam javite e-mailom. Potvrdimo da ulaze u paket ili vam prije rada pošaljemo procjenu.</p>
+                            </li>
+                            <li>
+                                <span class="process-steps__num">04</span>
+                                <h3>Otkaz</h3>
+                                <p>Održavanje možete otkazati pisanim putem uz otkazni rok od 3 mjeseca, ako ponudom nije dogovoreno drukčije.</p>
+                            </li>
+                        </ol>
+
+                        <h2>Česta pitanja</h2>
+                        <div class="faq">
+                            <details class="faq__item">
+                                <summary class="faq__question">Što se smatra manjim zahvatom?</summary>
+                                <div class="faq__answer"><p>Sve što se može napraviti u do sat vremena: izmjena teksta, cijene ili radnog vremena, nova fotografija, video ili dokument za preuzimanje, novi član tima ili sitna dorada postojeće stranice.</p></div>
+                            </details>
+                            <details class="faq__item">
+                                <summary class="faq__question">Što ako ne iskoristim sve zahvate u mjesecu?</summary>
+                                <div class="faq__answer"><p>Neiskorišteni zahvati ne prenose se u sljedeći mjesec. Zauzvrat su ažuriranja, sigurnosne kopije i praćenje rada uključeni svaki mjesec, bez obzira na to koliko izmjena tražite.</p></div>
+                            </details>
+                            <details class="faq__item">
+                                <summary class="faq__question">Trebam li uopće održavanje?</summary>
+                                <div class="faq__answer"><p>Ako stranicu rijetko mijenjate, a netko drugi brine o hostingu i ažuriranjima, možda ne. Više o tome kada se održavanje isplati pročitajte u članku <a href="blog-website-maintenance.html">Održavanje web stranice: što uključuje i kada se isplati</a>.</p></div>
+                            </details>
+                            <details class="faq__item">
+                                <summary class="faq__question">Možete li održavati stranicu koju niste izradili vi?</summary>
+                                <div class="faq__answer"><p>Možemo. Najprije pregledamo kod, hosting i stanje sustava, a zatim vam pošaljemo ponudu za održavanje ili predložimo što prvo treba popraviti.</p></div>
+                            </details>
+                        </div>
+
+                        <h2>Pročitajte i</h2>
+                        <ul class="page-related">
+                            <li><a href="blog-website-maintenance.html">Održavanje web stranice: što uključuje i kada se isplati &rarr;</a></li>
+                            <li><a href="blog-domain-hosting.html">Domena i hosting: kako ih odabrati i zašto moraju biti na vaše ime &rarr;</a></li>
+                            <li><a href="pricing.html">Cjenik svih usluga &rarr;</a></li>
+                            <li><a href="terms.html">Opći uvjeti poslovanja &rarr;</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="page-body" data-lang="en">
+                        <p class="page-lead">A website or app is not finished on the day it goes live. It needs updates and backups, and every now and then a new text, price or photo. With a maintenance package we take care of that for a fixed monthly fee, so you do not have to.</p>
+
+                        <div class="intro-cta">
+                            <a href="index.html#contact" class="btn btn--primary">Request a quote</a>
+                            <a href="index.html#booking" class="btn btn--stroke">Book a consultation</a>
+                        </div>
+
+                        <h2 id="packages">Packages</h2>
+                        <table class="price-table price-table--compare">
+                            <thead><tr><th>What's included</th><th>Website</th><th>Application</th></tr></thead>
+                            <tbody>
+                            <tr><td>Price</td><td class="price-table__price" data-label="Website">from €50 / month</td><td class="price-table__price" data-label="Application">from €150 / month</td></tr>
+                            <tr><td>Suited to</td><td data-label="Website">Presentation websites, blogs, small online shops</td><td data-label="Application">Web and mobile apps, portals, systems with a database</td></tr>
+                            <tr><td>Hosting and SSL certificate (https), or looking after hosting in your name</td><td data-label="Website">&#10003;</td><td data-label="Application">&#10003;</td></tr>
+                            <tr><td>Regular backups</td><td data-label="Website">&#10003;</td><td data-label="Application">&#10003; including the database</td></tr>
+                            <tr><td>Security updates and patches</td><td data-label="Website">&#10003;</td><td data-label="Application">&#10003;</td></tr>
+                            <tr><td>Uptime and health monitoring</td><td data-label="Website">&#10003;</td><td data-label="Application">&#10003; plus error tracking in the app</td></tr>
+                            <tr><td>Small changes: new text or prices, new photos or video and similar</td><td data-label="Website">up to 3 a month, each up to 1 working hour</td><td data-label="Application">scope as per offer</td></tr>
+                            <tr><td>Fixing bugs in how the app works</td><td data-label="Website">&ndash;</td><td data-label="Application">&#10003;</td></tr>
+                            <tr><td>Library updates and keeping up with new iOS and Android versions</td><td data-label="Website">&ndash;</td><td data-label="Application">&#10003;</td></tr>
+                            </tbody>
+                        </table>
+                        <p class="page-note">Prices are final because we are not registered for VAT. The exact amount and scope are set out in a written offer, depending on the size of the website or app. We can also take over maintenance of a website or app we did not build, after reviewing the code.</p>
+
+                        <h2>What is not included</h2>
+                        <ul>
+                            <li>New pages, new features and design changes.</li>
+                            <li>Work beyond what is included, or longer than agreed.</li>
+                            <li>Writing texts and producing photos or video.</li>
+                            <li>Third-party costs: domain, business email, card payment fees.</li>
+                        </ul>
+                        <p>We do this kind of work as per offer or by the hour (programming €45 / hour), always with your approval before we start.</p>
+
+                        <h2>How it works</h2>
+                        <ol class="process-steps">
+                            <li>
+                                <span class="process-steps__num">01</span>
+                                <h3>Offer</h3>
+                                <p>We review your website or app and the offer states the monthly fee and exactly what it covers.</p>
+                            </li>
+                            <li>
+                                <span class="process-steps__num">02</span>
+                                <h3>Start</h3>
+                                <p>Maintenance starts at launch or on an agreed date, and we invoice at the start of each month.</p>
+                            </li>
+                            <li>
+                                <span class="process-steps__num">03</span>
+                                <h3>Requests</h3>
+                                <p>Send us changes by email. We confirm that they are covered, or send you an estimate before we start.</p>
+                            </li>
+                            <li>
+                                <span class="process-steps__num">04</span>
+                                <h3>Cancellation</h3>
+                                <p>You can cancel in writing with 3 months' notice, unless the offer says otherwise.</p>
+                            </li>
+                        </ol>
+
+                        <h2>Frequently asked questions</h2>
+                        <div class="faq">
+                            <details class="faq__item">
+                                <summary class="faq__question">What counts as a small change?</summary>
+                                <div class="faq__answer"><p>Anything that takes up to an hour: new text, prices or opening hours, a new photo, video or downloadable document, a new team member or a small tweak to an existing page.</p></div>
+                            </details>
+                            <details class="faq__item">
+                                <summary class="faq__question">What if I don't use all the changes in a month?</summary>
+                                <div class="faq__answer"><p>Unused changes do not carry over to the next month. In return, updates, backups and monitoring are included every month, however many changes you ask for.</p></div>
+                            </details>
+                            <details class="faq__item">
+                                <summary class="faq__question">Do I need maintenance at all?</summary>
+                                <div class="faq__answer"><p>If you rarely change your website and someone else looks after hosting and updates, perhaps not. Read more in <a href="blog-website-maintenance.html">Website maintenance: what it covers and when it pays off</a>.</p></div>
+                            </details>
+                            <details class="faq__item">
+                                <summary class="faq__question">Can you maintain a website you didn't build?</summary>
+                                <div class="faq__answer"><p>Yes. First we review the code, the hosting and the state of the system, then we send you an offer for maintenance or suggest what needs fixing first.</p></div>
+                            </details>
+                        </div>
+
+                        <h2>Read next</h2>
+                        <ul class="page-related">
+                            <li><a href="blog-website-maintenance.html">Website maintenance: what it covers and when it pays off &rarr;</a></li>
+                            <li><a href="blog-domain-hosting.html">Domain and hosting: how to choose them and why they must be in your name &rarr;</a></li>
+                            <li><a href="pricing.html">Full price list &rarr;</a></li>
+                            <li><a href="terms.html">Terms of business &rarr;</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="page-body" data-lang="it">
+                        <p class="page-lead">Un sito o un’applicazione non è finito il giorno in cui va online. Va aggiornato, servono i backup e ogni tanto bisogna cambiare un testo, un prezzo o una foto. Con un pacchetto di manutenzione ce ne occupiamo noi, a un canone mensile fisso, così tu non devi pensarci.</p>
+
+                        <div class="intro-cta">
+                            <a href="index.html#contact" class="btn btn--primary">Richiedi un preventivo</a>
+                            <a href="index.html#booking" class="btn btn--stroke">Prenota una consulenza</a>
+                        </div>
+
+                        <h2 id="packages">Pacchetti</h2>
+                        <table class="price-table price-table--compare">
+                            <thead><tr><th>Cosa è incluso</th><th>Sito web</th><th>Applicazione</th></tr></thead>
+                            <tbody>
+                            <tr><td>Prezzo</td><td class="price-table__price" data-label="Sito web">da 50&nbsp;€ / mese</td><td class="price-table__price" data-label="Applicazione">da 150&nbsp;€ / mese</td></tr>
+                            <tr><td>Per chi</td><td data-label="Sito web">Siti di presentazione, blog, piccoli negozi online</td><td data-label="Applicazione">App web e mobile, portali, sistemi con database</td></tr>
+                            <tr><td>Hosting e certificato SSL (https), oppure gestione dell’hosting intestato a te</td><td data-label="Sito web">&#10003;</td><td data-label="Applicazione">&#10003;</td></tr>
+                            <tr><td>Backup regolari</td><td data-label="Sito web">&#10003;</td><td data-label="Applicazione">&#10003; incluso il database</td></tr>
+                            <tr><td>Aggiornamenti e patch di sicurezza</td><td data-label="Sito web">&#10003;</td><td data-label="Applicazione">&#10003;</td></tr>
+                            <tr><td>Monitoraggio di disponibilità e funzionamento</td><td data-label="Sito web">&#10003;</td><td data-label="Applicazione">&#10003; con tracciamento degli errori</td></tr>
+                            <tr><td>Piccoli interventi: testi o prezzi, nuove foto o video e simili</td><td data-label="Sito web">fino a 3 al mese, ciascuno fino a 1 ora di lavoro</td><td data-label="Applicazione">secondo l’offerta</td></tr>
+                            <tr><td>Correzione di errori nel funzionamento dell’app</td><td data-label="Sito web">&ndash;</td><td data-label="Applicazione">&#10003;</td></tr>
+                            <tr><td>Aggiornamento delle librerie e adeguamento alle nuove versioni di iOS e Android</td><td data-label="Sito web">&ndash;</td><td data-label="Applicazione">&#10003;</td></tr>
+                            </tbody>
+                        </table>
+                        <p class="page-note">I prezzi sono finali perché non siamo soggetti a IVA. Importo e ambito esatti li indichiamo nell’offerta scritta, in base alle dimensioni del sito o dell’app. Possiamo prendere in carico anche la manutenzione di un sito o di un’app che non abbiamo realizzato noi, dopo aver esaminato il codice.</p>
+
+                        <h2>Cosa non è incluso</h2>
+                        <ul>
+                            <li>Nuove pagine, nuove funzioni e modifiche al design.</li>
+                            <li>Interventi oltre quelli inclusi o più lunghi del previsto.</li>
+                            <li>Scrittura di testi e realizzazione di foto o video.</li>
+                            <li>Costi di terzi: dominio, email aziendale, commissioni sui pagamenti con carta.</li>
+                        </ul>
+                        <p>Questi lavori li facciamo su preventivo o a ore (programmazione 45&nbsp;€ / ora), sempre con il tuo consenso prima di iniziare.</p>
+
+                        <h2>Come funziona</h2>
+                        <ol class="process-steps">
+                            <li>
+                                <span class="process-steps__num">01</span>
+                                <h3>Offerta</h3>
+                                <p>Esaminiamo il tuo sito o la tua app e nell’offerta indichiamo il canone mensile e cosa comprende.</p>
+                            </li>
+                            <li>
+                                <span class="process-steps__num">02</span>
+                                <h3>Inizio</h3>
+                                <p>La manutenzione parte dalla pubblicazione o da una data concordata, con fattura a inizio mese.</p>
+                            </li>
+                            <li>
+                                <span class="process-steps__num">03</span>
+                                <h3>Richieste</h3>
+                                <p>Ci mandi le modifiche via email. Ti confermiamo che rientrano nel pacchetto o ti inviamo una stima prima di iniziare.</p>
+                            </li>
+                            <li>
+                                <span class="process-steps__num">04</span>
+                                <h3>Disdetta</h3>
+                                <p>Puoi disdire per iscritto con un preavviso di 3 mesi, salvo diverso accordo nell’offerta.</p>
+                            </li>
+                        </ol>
+
+                        <h2>Domande frequenti</h2>
+                        <div class="faq">
+                            <details class="faq__item">
+                                <summary class="faq__question">Cosa si intende per piccolo intervento?</summary>
+                                <div class="faq__answer"><p>Tutto ciò che richiede fino a un’ora: un testo, un prezzo o un orario nuovo, una foto, un video o un documento da scaricare, un nuovo membro del team o un piccolo ritocco a una pagina esistente.</p></div>
+                            </details>
+                            <details class="faq__item">
+                                <summary class="faq__question">E se non uso tutti gli interventi del mese?</summary>
+                                <div class="faq__answer"><p>Gli interventi non usati non passano al mese successivo. In cambio aggiornamenti, backup e monitoraggio sono inclusi ogni mese, qualunque sia il numero di modifiche richieste.</p></div>
+                            </details>
+                            <details class="faq__item">
+                                <summary class="faq__question">Mi serve davvero la manutenzione?</summary>
+                                <div class="faq__answer"><p>Se cambi raramente il sito e qualcun altro si occupa di hosting e aggiornamenti, forse no. Approfondisci nell’articolo <a href="blog-website-maintenance.html">Manutenzione del sito web: cosa comprende e quando conviene</a>.</p></div>
+                            </details>
+                            <details class="faq__item">
+                                <summary class="faq__question">Potete fare la manutenzione di un sito che non avete realizzato voi?</summary>
+                                <div class="faq__answer"><p>Sì. Prima esaminiamo codice, hosting e stato del sistema, poi ti inviamo un’offerta di manutenzione o ti diciamo cosa sistemare per primo.</p></div>
+                            </details>
+                        </div>
+
+                        <h2>Leggi anche</h2>
+                        <ul class="page-related">
+                            <li><a href="blog-website-maintenance.html">Manutenzione del sito web: cosa comprende e quando conviene &rarr;</a></li>
+                            <li><a href="blog-domain-hosting.html">Dominio e hosting: come sceglierli e perché devono essere intestati a te &rarr;</a></li>
+                            <li><a href="pricing.html">Listino di tutti i servizi &rarr;</a></li>
+                            <li><a href="terms.html">Condizioni generali &rarr;</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="page-body" data-lang="de">
+                        <p class="page-lead">Eine Website oder App ist am Tag der Veröffentlichung nicht fertig. Sie braucht Updates und Sicherungskopien, und hin und wieder ändert sich ein Text, ein Preis oder ein Foto. Mit einem Wartungspaket kümmern wir uns darum, zu einem festen Monatsbetrag, damit Sie es nicht müssen.</p>
+
+                        <div class="intro-cta">
+                            <a href="index.html#contact" class="btn btn--primary">Angebot anfordern</a>
+                            <a href="index.html#booking" class="btn btn--stroke">Beratung buchen</a>
+                        </div>
+
+                        <h2 id="packages">Pakete</h2>
+                        <table class="price-table price-table--compare">
+                            <thead><tr><th>Was enthalten ist</th><th>Website</th><th>Anwendung</th></tr></thead>
+                            <tbody>
+                            <tr><td>Preis</td><td class="price-table__price" data-label="Website">ab 50&nbsp;€ / Monat</td><td class="price-table__price" data-label="Anwendung">ab 150&nbsp;€ / Monat</td></tr>
+                            <tr><td>Geeignet für</td><td data-label="Website">Präsentationswebsites, Blogs, kleine Onlineshops</td><td data-label="Anwendung">Web- und Mobile-Apps, Portale, Systeme mit Datenbank</td></tr>
+                            <tr><td>Hosting und SSL-Zertifikat (https) oder Betreuung des Hostings auf Ihren Namen</td><td data-label="Website">&#10003;</td><td data-label="Anwendung">&#10003;</td></tr>
+                            <tr><td>Regelmäßige Sicherungskopien</td><td data-label="Website">&#10003;</td><td data-label="Anwendung">&#10003; inklusive Datenbank</td></tr>
+                            <tr><td>Sicherheitsupdates und Patches</td><td data-label="Website">&#10003;</td><td data-label="Anwendung">&#10003;</td></tr>
+                            <tr><td>Überwachung von Erreichbarkeit und Betrieb</td><td data-label="Website">&#10003;</td><td data-label="Anwendung">&#10003; mit Fehlerüberwachung in der App</td></tr>
+                            <tr><td>Kleine Änderungen: Texte oder Preise, neue Fotos oder Videos und Ähnliches</td><td data-label="Website">bis zu 3 pro Monat, je bis zu 1 Arbeitsstunde</td><td data-label="Anwendung">Umfang laut Angebot</td></tr>
+                            <tr><td>Behebung von Fehlern im Betrieb der App</td><td data-label="Website">&ndash;</td><td data-label="Anwendung">&#10003;</td></tr>
+                            <tr><td>Aktualisierung von Bibliotheken und Anpassung an neue iOS- und Android-Versionen</td><td data-label="Website">&ndash;</td><td data-label="Anwendung">&#10003;</td></tr>
+                            </tbody>
+                        </table>
+                        <p class="page-note">Die Preise sind Endpreise, da wir nicht umsatzsteuerpflichtig sind. Den genauen Betrag und Umfang nennen wir im schriftlichen Angebot, je nach Größe der Website oder App. Wir übernehmen auch die Wartung von Websites oder Apps, die nicht von uns stammen, nachdem wir den Code geprüft haben.</p>
+
+                        <h2>Was nicht enthalten ist</h2>
+                        <ul>
+                            <li>Neue Seiten, neue Funktionen und Designänderungen.</li>
+                            <li>Arbeiten über das Enthaltene hinaus oder länger als vereinbart.</li>
+                            <li>Texte schreiben sowie Fotos oder Videos erstellen.</li>
+                            <li>Kosten Dritter: Domain, geschäftliche E-Mail, Gebühren für Kartenzahlungen.</li>
+                        </ul>
+                        <p>Solche Arbeiten erledigen wir laut Angebot oder nach Stunden (Programmierung 45&nbsp;€ / Stunde), immer mit Ihrer Zustimmung vor Beginn.</p>
+
+                        <h2>So funktioniert es</h2>
+                        <ol class="process-steps">
+                            <li>
+                                <span class="process-steps__num">01</span>
+                                <h3>Angebot</h3>
+                                <p>Wir sehen uns Ihre Website oder App an, und im Angebot stehen der Monatsbetrag und was genau enthalten ist.</p>
+                            </li>
+                            <li>
+                                <span class="process-steps__num">02</span>
+                                <h3>Beginn</h3>
+                                <p>Die Wartung beginnt mit der Veröffentlichung oder zu einem vereinbarten Datum, die Rechnung kommt zu Monatsbeginn.</p>
+                            </li>
+                            <li>
+                                <span class="process-steps__num">03</span>
+                                <h3>Anfragen</h3>
+                                <p>Änderungen schicken Sie uns per E-Mail. Wir bestätigen, dass sie enthalten sind, oder senden vorher eine Schätzung.</p>
+                            </li>
+                            <li>
+                                <span class="process-steps__num">04</span>
+                                <h3>Kündigung</h3>
+                                <p>Sie können schriftlich mit einer Frist von 3 Monaten kündigen, sofern im Angebot nichts anderes vereinbart ist.</p>
+                            </li>
+                        </ol>
+
+                        <h2>Häufige Fragen</h2>
+                        <div class="faq">
+                            <details class="faq__item">
+                                <summary class="faq__question">Was gilt als kleine Änderung?</summary>
+                                <div class="faq__answer"><p>Alles, was bis zu einer Stunde dauert: ein neuer Text, Preis oder neue Öffnungszeiten, ein neues Foto, Video oder Dokument zum Herunterladen, ein neues Teammitglied oder eine kleine Anpassung einer bestehenden Seite.</p></div>
+                            </details>
+                            <details class="faq__item">
+                                <summary class="faq__question">Was, wenn ich nicht alle Änderungen eines Monats nutze?</summary>
+                                <div class="faq__answer"><p>Nicht genutzte Änderungen werden nicht in den nächsten Monat übertragen. Dafür sind Updates, Sicherungskopien und Überwachung jeden Monat enthalten, egal wie viele Änderungen Sie anfragen.</p></div>
+                            </details>
+                            <details class="faq__item">
+                                <summary class="faq__question">Brauche ich überhaupt Wartung?</summary>
+                                <div class="faq__answer"><p>Wenn Sie Ihre Website selten ändern und sich jemand anderes um Hosting und Updates kümmert, vielleicht nicht. Mehr dazu im Artikel <a href="blog-website-maintenance.html">Website-Wartung: was sie umfasst und wann sie sich lohnt</a>.</p></div>
+                            </details>
+                            <details class="faq__item">
+                                <summary class="faq__question">Warten Sie auch Websites, die Sie nicht erstellt haben?</summary>
+                                <div class="faq__answer"><p>Ja. Zuerst prüfen wir Code, Hosting und Zustand des Systems, dann senden wir Ihnen ein Wartungsangebot oder sagen, was zuerst repariert werden sollte.</p></div>
+                            </details>
+                        </div>
+
+                        <h2>Weiterlesen</h2>
+                        <ul class="page-related">
+                            <li><a href="blog-website-maintenance.html">Website-Wartung: was sie umfasst und wann sie sich lohnt &rarr;</a></li>
+                            <li><a href="blog-domain-hosting.html">Domain und Hosting: wie Sie sie wählen und warum sie auf Ihren Namen laufen müssen &rarr;</a></li>
+                            <li><a href="pricing.html">Preisliste aller Leistungen &rarr;</a></li>
+                            <li><a href="terms.html">Allgemeine Geschäftsbedingungen &rarr;</a></li>
+                        </ul>
+                    </div>
+                    <section class="project-cta">
+                        <h2 class="project-cta__title"><span data-lang="hr">Imate projekt na umu?</span><span data-lang="en">Have a project in mind?</span><span data-lang="it">Hai un progetto in mente?</span><span data-lang="de">Haben Sie ein Projekt geplant?</span></h2>
+                        <p class="project-cta__text"><span data-lang="hr">Javite nam se i besplatno ćemo procijeniti opseg i cijenu vašeg projekta.</span><span data-lang="en">Get in touch and we will estimate the scope and price of your project free of charge.</span><span data-lang="it">Contattaci e stimeremo gratuitamente portata e prezzo del tuo progetto.</span><span data-lang="de">Melden Sie sich, und wir schätzen Umfang und Preis Ihres Projekts kostenlos ein.</span></p>
+                        <div class="project-cta__actions">
+                            <a class="project-cta__btn project-cta__btn--primary" href="index.html#contact"><span data-lang="hr">Pošaljite upit</span><span data-lang="en">Send an enquiry</span><span data-lang="it">Invia una richiesta</span><span data-lang="de">Anfrage senden</span></a>
+                            <a class="project-cta__btn" href="index.html#booking"><span data-lang="hr">Rezervirajte konzultacije</span><span data-lang="en">Book a consultation</span><span data-lang="it">Prenota una consulenza</span><span data-lang="de">Beratung buchen</span></a>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+        </section> <!-- end s-page -->
+
+    </main> <!-- end s-content -->
+
+
+    <!-- ## footer
+    ================================================== -->
+    <footer class="s-footer">
+
+        <div class="footer-circles" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="row ss-footer-nav-row">
+            <div class="column">
+                <nav class="ss-footer-nav" aria-label="RDD Software" data-aria-label-hr="Podnožje" data-aria-label-en="Footer" data-aria-label-it="Piè di pagina" data-aria-label-de="Fußzeile">
+                    <div class="ss-footer-nav__group">
+                        <h2 class="ss-footer-nav__title"><span data-lang="hr">Usluge</span><span data-lang="en">Services</span><span data-lang="it">Servizi</span><span data-lang="de">Leistungen</span></h2>
+                        <ul>
+                            <li><a href="services.html"><span data-lang="hr">Sve usluge</span><span data-lang="en">All services</span><span data-lang="it">Tutti i servizi</span><span data-lang="de">Alle Leistungen</span></a></li>
+                            <li><a href="web-development.html"><span data-lang="hr">Izrada web stranica</span><span data-lang="en">Website development</span><span data-lang="it">Realizzazione siti web</span><span data-lang="de">Website-Erstellung</span></a></li>
+                            <li><a href="mobile-apps.html"><span data-lang="hr">Mobilne aplikacije</span><span data-lang="en">Mobile apps</span><span data-lang="it">App mobile</span><span data-lang="de">Mobile Apps</span></a></li>
+                            <li><a href="custom-software.html"><span data-lang="hr">Softver po mjeri</span><span data-lang="en">Custom software</span><span data-lang="it">Software su misura</span><span data-lang="de">Individuelle Software</span></a></li>
+                            <li><a href="maintenance.html"><span data-lang="hr">Održavanje</span><span data-lang="en">Maintenance</span><span data-lang="it">Manutenzione</span><span data-lang="de">Wartung</span></a></li>
+                            <li><a href="pricing.html"><span data-lang="hr">Cjenik</span><span data-lang="en">Pricing</span><span data-lang="it">Prezzi</span><span data-lang="de">Preise</span></a></li>
+                        </ul>
+                    </div>
+                    <div class="ss-footer-nav__group">
+                        <h2 class="ss-footer-nav__title"><span data-lang="hr">Tvrtka</span><span data-lang="en">Company</span><span data-lang="it">Azienda</span><span data-lang="de">Unternehmen</span></h2>
+                        <ul>
+                            <li><a href="index.html#about"><span data-lang="hr">O nama</span><span data-lang="en">About us</span><span data-lang="it">Chi siamo</span><span data-lang="de">Über uns</span></a></li>
+                            <li><a href="index.html#works"><span data-lang="hr">Projekti</span><span data-lang="en">Projects</span><span data-lang="it">Progetti</span><span data-lang="de">Projekte</span></a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="index.html#contact"><span data-lang="hr">Kontakt</span><span data-lang="en">Contact</span><span data-lang="it">Contatti</span><span data-lang="de">Kontakt</span></a></li>
+                        </ul>
+                    </div>
+                    <div class="ss-footer-nav__group">
+                        <h2 class="ss-footer-nav__title"><span data-lang="hr">Pratite nas</span><span data-lang="en">Follow us</span><span data-lang="it">Seguici</span><span data-lang="de">Folgen Sie uns</span></h2>
+                        <ul>
+                            <li><a href="https://www.linkedin.com/company/106879536/" target="_blank" rel="noopener noreferrer"><svg class="ss-footer-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg> LinkedIn</a></li>
+                            <li><a href="mailto:info@rdd.software">info@rdd.software</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="column ss-copyright">
+                <span>© Copyright RDD <script>document.write(/\d{4}/.exec(Date())[0] + ".")</script></span>
+                <span><a href="privacy.html" data-lang="hr">Izjava o privatnosti</a><a href="privacy.html" data-lang="en">Privacy Policy</a><a href="privacy.html" data-lang="it">Informativa sulla privacy</a><a href="privacy.html" data-lang="de">Datenschutzerklärung</a></span>
+                <span><a href="terms.html" data-lang="hr">Opći uvjeti poslovanja</a><a href="terms.html" data-lang="en">Terms and Conditions</a><a href="terms.html" data-lang="it">Condizioni generali</a><a href="terms.html" data-lang="de">AGB</a></span>
+                <span><a href="#0" data-consent-open data-lang="hr">Postavke kolačića</a><a href="#0" data-consent-open data-lang="en">Cookie settings</a><a href="#0" data-consent-open data-lang="it">Impostazioni cookie</a><a href="#0" data-consent-open data-lang="de">Cookie-Einstellungen</a></span>
+            </div>
+
+            <div class="ss-go-top">
+                <a class="smoothscroll" title="Na vrh" data-title-hr="Na vrh" data-title-en="Back to top" data-title-it="Torna su" data-title-de="Nach oben" aria-label="Na vrh" data-aria-label-hr="Na vrh" data-aria-label-en="Back to top" data-aria-label-it="Torna su" data-aria-label-de="Nach oben" href="#top">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill-rule="evenodd" clip-rule="evenodd">
+                        <path d="M11 2.206l-6.235 7.528-.765-.645 7.521-9 7.479 9-.764.646-6.236-7.53v21.884h-1v-21.883z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="column">
+                <p class="ss-legal">R.D.D., obrt za računalno programiranje, vl. Milan Trbojević &middot; Mihovilići 2b, 51000 Rijeka &middot; OIB 09887105714 &middot; <span data-lang="hr">upisan u Obrtni registar, MBO 98224476</span><span data-lang="en">registered in the Croatian Register of Crafts, MBO 98224476</span><span data-lang="it">iscritto al Registro croato dell'artigianato, MBO 98224476</span><span data-lang="de">eingetragen im kroatischen Gewerberegister, MBO 98224476</span> &middot; <span data-lang="hr">nije u sustavu PDV-a</span><span data-lang="en">not registered for VAT</span><span data-lang="it">non soggetto a IVA</span><span data-lang="de">nicht umsatzsteuerpflichtig</span> &middot; <a href="mailto:info@rdd.software">info@rdd.software</a></p>
+            </div>
+        </div>
+
+    </footer> <!-- end s-footer -->
+
+</div> <!-- end -s-pagewrap -->
+
+
+<!-- Java Script
+================================================== -->
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
+<script src="js/estimate.js?v=2"></script>
+<!-- Google Analytics - loaded only after the visitor accepts cookies -->
+<script src="js/sticky-cta.js"></script>
+<script src="js/consent.js?v=2"></script>
+
+</body>
+</html>

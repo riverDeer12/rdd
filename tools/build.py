@@ -70,6 +70,7 @@ PRIORITY = {
     'mobile-apps.html': '0.8',
     'custom-software.html': '0.8',
     'services.html': '0.8',
+    'maintenance.html': '0.7',
     'blog.html': '0.7',
     'privacy.html': '0.3',
     'terms.html': '0.3',
@@ -300,7 +301,7 @@ def render(text, page, lang, pages):
 # --------------------------------------------------------------------
 CRUMB_HOME = {'hr': 'Početna', 'en': 'Home', 'it': 'Home', 'de': 'Startseite'}
 CRUMB_LABEL = {'hr': 'Putanja', 'en': 'Breadcrumb', 'it': 'Percorso', 'de': 'Navigationspfad'}
-SERVICES = {'web-development.html', 'mobile-apps.html', 'custom-software.html'}
+SERVICES = {'web-development.html', 'mobile-apps.html', 'custom-software.html', 'maintenance.html'}
 CRUMB_SECTION = {
     'blog': ('blog.html', {'hr': 'Blog', 'en': 'Blog', 'it': 'Blog', 'de': 'Blog'}),
     'services': ('services.html', {'hr': 'Usluge', 'en': 'Services', 'it': 'Servizi', 'de': 'Leistungen'}),
