@@ -162,6 +162,46 @@
         <priority>0.6</priority>
     </url>
     <url>
+        <loc>https://rdd.software/blog-e-invoice-2027.html</loc>
+        <xhtml:link rel="alternate" hreflang="hr" href="https://rdd.software/blog-e-invoice-2027.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rdd.software/en/blog-e-invoice-2027.html"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/blog-e-invoice-2027.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/blog-e-invoice-2027.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/blog-e-invoice-2027.html"/>
+        <lastmod>2026-11-06</lastmod>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://rdd.software/en/blog-e-invoice-2027.html</loc>
+        <xhtml:link rel="alternate" hreflang="hr" href="https://rdd.software/blog-e-invoice-2027.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rdd.software/en/blog-e-invoice-2027.html"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/blog-e-invoice-2027.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/blog-e-invoice-2027.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/blog-e-invoice-2027.html"/>
+        <lastmod>2026-11-06</lastmod>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://rdd.software/it/blog-e-invoice-2027.html</loc>
+        <xhtml:link rel="alternate" hreflang="hr" href="https://rdd.software/blog-e-invoice-2027.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rdd.software/en/blog-e-invoice-2027.html"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/blog-e-invoice-2027.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/blog-e-invoice-2027.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/blog-e-invoice-2027.html"/>
+        <lastmod>2026-11-06</lastmod>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://rdd.software/de/blog-e-invoice-2027.html</loc>
+        <xhtml:link rel="alternate" hreflang="hr" href="https://rdd.software/blog-e-invoice-2027.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rdd.software/en/blog-e-invoice-2027.html"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/blog-e-invoice-2027.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/blog-e-invoice-2027.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/blog-e-invoice-2027.html"/>
+        <lastmod>2026-11-06</lastmod>
+        <priority>0.6</priority>
+    </url>
+    <url>
         <loc>https://rdd.software/blog-gdpr-cookies.html</loc>
         <xhtml:link rel="alternate" hreflang="hr" href="https://rdd.software/blog-gdpr-cookies.html"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://rdd.software/en/blog-gdpr-cookies.html"/>

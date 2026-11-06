@@ -72,15 +72,15 @@ def draw_image(title, path):
         draw.text((x, PAD), ch, font=label, fill=TEAL)
         x += draw.textlength(ch, font=label) + 7
 
-    # title: as large as fits in five lines
+    # title: as large as fits above the footer (at most five lines)
+    top = PAD + 70
+    available = H - top - 120
     for size in (66, 60, 54, 48, 44, 40):
         title_font = font('dm-serif-display-normal', size)
         lines = wrap(draw, title, title_font, text_w)
-        if len(lines) <= 5:
+        line_h = int(size * 1.18)
+        if len(lines) <= 5 and len(lines) * line_h <= available:
             break
-    line_h = int(size * 1.18)
-    top = PAD + 70
-    available = H - top - 120
     y = top + max(0, (available - line_h * len(lines)) // 2)
     for line in lines:
         draw.text((PAD, y), line, font=title_font, fill=WHITE)

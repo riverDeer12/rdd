@@ -195,6 +195,7 @@ Published:
 - [x] Domena i hosting: kako ih odabrati i zašto moraju biti na vaše ime (blog-domain-hosting)
 - [x] GDPR i kolačići: što web stranica male tvrtke mora imati (blog-gdpr-cookies)
 - [x] Web trgovina za mali biznis: plaćanje, dostava i pravila prije prve prodaje (blog-online-shop-launch)
+- [x] eRačun od 2027.: što obrtnici i male tvrtke izvan sustava PDV-a moraju pripremiti (blog-e-invoice-2027) → custom-software.html
 
 Next, in this order (→ service page the article leads to):
 - [ ] Zašto krenuti s manjom prvom verzijom aplikacije (MVP) → custom-software.html
