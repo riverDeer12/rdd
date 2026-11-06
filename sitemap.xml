@@ -642,6 +642,46 @@
         <priority>0.6</priority>
     </url>
     <url>
+        <loc>https://rdd.software/price-calculator.html</loc>
+        <xhtml:link rel="alternate" hreflang="hr" href="https://rdd.software/price-calculator.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rdd.software/en/price-calculator.html"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/price-calculator.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/price-calculator.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/price-calculator.html"/>
+        <lastmod>2026-11-06</lastmod>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://rdd.software/en/price-calculator.html</loc>
+        <xhtml:link rel="alternate" hreflang="hr" href="https://rdd.software/price-calculator.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rdd.software/en/price-calculator.html"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/price-calculator.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/price-calculator.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/price-calculator.html"/>
+        <lastmod>2026-11-06</lastmod>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://rdd.software/it/price-calculator.html</loc>
+        <xhtml:link rel="alternate" hreflang="hr" href="https://rdd.software/price-calculator.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rdd.software/en/price-calculator.html"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/price-calculator.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/price-calculator.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/price-calculator.html"/>
+        <lastmod>2026-11-06</lastmod>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://rdd.software/de/price-calculator.html</loc>
+        <xhtml:link rel="alternate" hreflang="hr" href="https://rdd.software/price-calculator.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rdd.software/en/price-calculator.html"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/price-calculator.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/price-calculator.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/price-calculator.html"/>
+        <lastmod>2026-11-06</lastmod>
+        <priority>0.6</priority>
+    </url>
+    <url>
         <loc>https://rdd.software/pricing.html</loc>
         <xhtml:link rel="alternate" hreflang="hr" href="https://rdd.software/pricing.html"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://rdd.software/en/pricing.html"/>

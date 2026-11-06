@@ -85,7 +85,7 @@ def create_page(slug, meta, body):
     t = re.sub(r'<html[^>]*>', lambda m: '<html class="no-js" lang="hr"' + attrs + '>', t, count=1)
     t = re.sub(r'<title>.*?</title>', lambda m: '<title>%s</title>' % esc(meta['title']['hr']), t, count=1)
     t = re.sub(r'\n    <style>.*?</style>\n', '\n', t, count=1, flags=re.S)       # price list styles
-    t = re.sub(r'\n<script src="js/estimate.js"></script>', '', t)               # price estimate
+    t = re.sub(r'\n<script src="js/estimate.js[^"]*"></script>', '', t)               # price estimate
     t = re.sub(r'(<link rel="stylesheet" href="css/cta.css[^"]*">)',
                lambda m: m.group(1) + '\n    <link rel="stylesheet" href="css/home.css?v=3">'
                                       '\n    <link rel="stylesheet" href="css/pages.css?v=9">', t, count=1)

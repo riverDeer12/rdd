@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html class="no-js" lang="hr"
+      data-title-hr="Kalkulator cijene za web stranicu: demo - RDD Software"
+      data-title-en="Price calculator for your website: demo - RDD Software"
+      data-title-it="Calcolatore dei prezzi per il tuo sito: demo - RDD Software"
+      data-title-de="Preisrechner für Ihre Website: Demo - RDD Software"
+      data-description-hr="Isprobajte kalkulator cijene čišćenja: upišite kvadraturu i odmah vidite okvirnu cijenu. Ovakav kalkulator ugrađujemo u web stranice uslužnih tvrtki."
+      data-description-en="Try a cleaning price calculator: enter the floor area and see a rough price straight away. We build calculators like this into service websites."
+      data-description-it="Prova il calcolatore per le pulizie: inserisci i metri quadri e vedi subito un prezzo indicativo. Lo integriamo nei siti delle aziende di servizi."
+      data-description-de="Testen Sie den Reinigungspreisrechner: Fläche eingeben, Richtpreis sofort sehen. Solche Rechner bauen wir in Websites von Dienstleistern ein.">
+<head>
+
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>Kalkulator cijene za web stranicu: demo - RDD Software</title>
+
+    <!-- mobile specific metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Open Graph (for Facebook, LinkedIn, etc.) -->
+    <meta property="og:image" content="https://rdd.software/images/about-photo.jpg"/>
+    <meta property="og:type" content="website"/>
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="preload" href="css/fonts/public-sans-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="css/fonts/dm-serif-display-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="css/styles.css?v=4">
+    <link rel="stylesheet" href="css/i18n.css?v=8">
+    <link rel="stylesheet" href="css/theme.css?v=13">
+    <link rel="stylesheet" href="css/consent.css?v=2">
+    <link rel="stylesheet" href="css/cta.css">
+    <link rel="stylesheet" href="css/home.css?v=3">
+    <link rel="stylesheet" href="css/pages.css?v=9">
+    <link rel="stylesheet" href="css/calc-demo.css?v=1">
+
+    <!-- structured data for search engines, one per language -->
+    <script type="application/ld+json" data-lang="hr">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Kalkulator cijene za web stranicu: demo",
+        "description": "Isprobajte kalkulator cijene čišćenja: upišite kvadraturu i odmah vidite okvirnu cijenu. Ovakav kalkulator ugrađujemo u web stranice uslužnih tvrtki.",
+        "url": "https://rdd.software/price-calculator.html",
+        "inLanguage": "hr",
+        "isPartOf": {
+            "@type": "WebSite",
+            "name": "RDD Software",
+            "url": "https://rdd.software/"
+        },
+        "about": {
+            "@type": "Service",
+            "name": "Kalkulator cijene za web stranicu",
+            "provider": {
+                "@type": "Organization",
+                "name": "RDD Software",
+                "url": "https://rdd.software/"
+            }
+        }
+    }
+    </script>
+    <script type="application/ld+json" data-lang="en">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Price calculator for your website: demo",
+        "description": "Try a cleaning price calculator: enter the floor area and see a rough price straight away. We build calculators like this into service websites.",
+        "url": "https://rdd.software/en/price-calculator.html",
+        "inLanguage": "en",
+        "isPartOf": {
+            "@type": "WebSite",
+            "name": "RDD Software",
+            "url": "https://rdd.software/"
+        },
+        "about": {
+            "@type": "Service",
+            "name": "Website price calculator",
+            "provider": {
+                "@type": "Organization",
+                "name": "RDD Software",
+                "url": "https://rdd.software/"
+            }
+        }
+    }
+    </script>
+    <script type="application/ld+json" data-lang="it">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Calcolatore dei prezzi per il tuo sito: demo",
+        "description": "Prova il calcolatore per le pulizie: inserisci i metri quadri e vedi subito un prezzo indicativo. Lo integriamo nei siti delle aziende di servizi.",
+        "url": "https://rdd.software/it/price-calculator.html",
+        "inLanguage": "it",
+        "isPartOf": {
+            "@type": "WebSite",
+            "name": "RDD Software",
+            "url": "https://rdd.software/"
+        },
+        "about": {
+            "@type": "Service",
+            "name": "Calcolatore dei prezzi per siti web",
+            "provider": {
+                "@type": "Organization",
+                "name": "RDD Software",
+                "url": "https://rdd.software/"
+            }
+        }
+    }
+    </script>
+    <script type="application/ld+json" data-lang="de">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Preisrechner für Ihre Website: Demo",
+        "description": "Testen Sie den Reinigungspreisrechner: Fläche eingeben, Richtpreis sofort sehen. Solche Rechner bauen wir in Websites von Dienstleistern ein.",
+        "url": "https://rdd.software/de/price-calculator.html",
+        "inLanguage": "de",
+        "isPartOf": {
+            "@type": "WebSite",
+            "name": "RDD Software",
+            "url": "https://rdd.software/"
+        },
+        "about": {
+            "@type": "Service",
+            "name": "Preisrechner für Websites",
+            "provider": {
+                "@type": "Organization",
+                "name": "RDD Software",
+                "url": "https://rdd.software/"
+            }
+        }
+    }
+    </script>
+
+    <!-- language (hr / en / it / de) - runs before render so only one language is shown
+    ================================================== -->
+    <script src="js/i18n.js?v=2"></script>
+    <!-- light / dark theme - runs before render so the page does not flash -->
+    <script src="js/theme.js"></script>
+
+    <!-- favicons
+    ================================================== -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+</head>
+
+<body id="top">
+
+
+
+
+<!-- # page wrap
+================================================== -->
+<div class="s-pagewrap">
+
+    <div class="circles">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+
+    <!-- ## site header
+    ================================================== -->
+    <header class="s-header">
+
+        <div class="header-mobile">
+            <span class="mobile-home-link"><a href="index.html">RDD.</a></span>
+            <div class="lang-menu">
+                <button type="button" class="lang-menu__toggle" aria-haspopup="true" aria-expanded="false"
+                        aria-label="Jezik: HR" data-aria-label-hr="Jezik: HR" data-aria-label-en="Language: EN" data-aria-label-it="Lingua: IT" data-aria-label-de="Sprache: DE"><span data-lang="hr">HR</span><span data-lang="en">EN</span><span data-lang="it">IT</span><span data-lang="de">DE</span><svg class="lang-menu__chevron" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="lang-switch" role="group" aria-label="Jezik" data-aria-label-hr="Jezik" data-aria-label-en="Language" data-aria-label-it="Lingua" data-aria-label-de="Sprache">
+                    <button type="button" class="lang-switch__btn" data-set-lang="hr"><span class="lang-switch__code">HR</span><span class="lang-switch__name">Hrvatski</span></button>
+                    <span class="lang-switch__sep">/</span>
+                    <button type="button" class="lang-switch__btn" data-set-lang="en"><span class="lang-switch__code">EN</span><span class="lang-switch__name">English</span></button>
+                    <span class="lang-switch__sep">/</span>
+                    <button type="button" class="lang-switch__btn" data-set-lang="it"><span class="lang-switch__code">IT</span><span class="lang-switch__name">Italiano</span></button>
+                    <span class="lang-switch__sep">/</span>
+                    <button type="button" class="lang-switch__btn" data-set-lang="de"><span class="lang-switch__code">DE</span><span class="lang-switch__name">Deutsch</span></button>
+                </div>
+            </div>
+            <button type="button" class="theme-toggle" data-toggle-theme aria-pressed="false"
+                    aria-label="Tamna ili svijetla tema" data-aria-label-hr="Tamna ili svijetla tema" data-aria-label-en="Dark or light theme" data-aria-label-it="Tema scuro o chiaro" data-aria-label-de="Dunkles oder helles Design" title="Tamna ili svijetla tema" data-title-hr="Tamna ili svijetla tema" data-title-en="Dark or light theme" data-title-it="Tema scuro o chiaro" data-title-de="Dunkles oder helles Design">
+                <svg class="theme-toggle__sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/></svg>
+                <svg class="theme-toggle__moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M20.2 14.6A8.5 8.5 0 0 1 9.4 3.8a8.5 8.5 0 1 0 10.8 10.8z"/></svg>
+            </button>
+            <a class="mobile-menu-toggle" href="#0"><span>Menu</span></a>
+        </div>
+
+        <div class="row wide main-nav-wrap">
+            <nav class="column lg-12 main-nav">
+                <ul>
+                    <li><a href="index.html" class="home-link">RDD.</a></li>
+                    <li><a href="index.html#about"><span data-lang="hr">O nama</span><span data-lang="en">About</span><span data-lang="it">Chi siamo</span><span data-lang="de">Über uns</span></a></li>
+                    <li><a href="index.html#works"><span data-lang="hr">Projekti</span><span data-lang="en">Works</span><span data-lang="it">Progetti</span><span data-lang="de">Projekte</span></a></li>
+                    <li><a href="pricing.html"><span data-lang="hr">Cjenik</span><span data-lang="en">Pricing</span><span data-lang="it">Prezzi</span><span data-lang="de">Preise</span></a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="index.html#contact"><span data-lang="hr">Kontakt</span><span data-lang="en">Say Hello</span><span data-lang="it">Contatti</span><span data-lang="de">Kontakt</span></a></li>
+                    <li class="lang-switch-item">
+                        <div class="lang-switch" role="group" aria-label="Jezik" data-aria-label-hr="Jezik" data-aria-label-en="Language" data-aria-label-it="Lingua" data-aria-label-de="Sprache">
+                            <button type="button" class="lang-switch__btn" data-set-lang="hr"><span class="lang-switch__code">HR</span><span class="lang-switch__name">Hrvatski</span></button>
+                            <span class="lang-switch__sep">/</span>
+                            <button type="button" class="lang-switch__btn" data-set-lang="en"><span class="lang-switch__code">EN</span><span class="lang-switch__name">English</span></button>
+                            <span class="lang-switch__sep">/</span>
+                            <button type="button" class="lang-switch__btn" data-set-lang="it"><span class="lang-switch__code">IT</span><span class="lang-switch__name">Italiano</span></button>
+                            <span class="lang-switch__sep">/</span>
+                            <button type="button" class="lang-switch__btn" data-set-lang="de"><span class="lang-switch__code">DE</span><span class="lang-switch__name">Deutsch</span></button>
+                        </div>
+                    </li>
+                    <li class="theme-toggle-item">
+                        <button type="button" class="theme-toggle" data-toggle-theme aria-pressed="false"
+                                aria-label="Tamna ili svijetla tema" data-aria-label-hr="Tamna ili svijetla tema" data-aria-label-en="Dark or light theme" data-aria-label-it="Tema scuro o chiaro" data-aria-label-de="Dunkles oder helles Design" title="Tamna ili svijetla tema" data-title-hr="Tamna ili svijetla tema" data-title-en="Dark or light theme" data-title-it="Tema scuro o chiaro" data-title-de="Dunkles oder helles Design">
+                            <svg class="theme-toggle__sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/></svg>
+                            <svg class="theme-toggle__moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M20.2 14.6A8.5 8.5 0 0 1 9.4 3.8a8.5 8.5 0 1 0 10.8 10.8z"/></svg>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+    </header> <!-- end s-header -->
+
+
+    <!-- ## main content
+    ==================================================- -->
+    <main class="s-content">
+
+        <!-- ### intro
+        ================================================== -->
+        <section class="s-intro">
+
+            <div class="row intro-content" style="min-height: 0;">
+
+                <div class="column">
+                    <div class="text-pretitle with-line">
+                        <span data-lang="hr">Demo</span><span data-lang="en">Demo</span><span data-lang="it">Demo</span><span data-lang="de">Demo</span>
+                    </div>
+
+                    <h1 class="text-huge-title" data-lang="hr">
+                        Kalkulator <br>
+                        cijene. <br>
+                    </h1>
+                    <h1 class="text-huge-title" data-lang="en">
+                        Price <br>
+                        calculator. <br>
+                    </h1>
+                    <h1 class="text-huge-title" data-lang="it">
+                        Calcolatore <br>
+                        dei prezzi. <br>
+                    </h1>
+                    <h1 class="text-huge-title" data-lang="de">
+                        Preis&shy;<br>
+                        rechner. <br>
+                    </h1>
+                </div>
+
+            </div>
+
+        </section> <!-- end s-intro -->
+
+
+        <!-- ### price calculator demo
+        ================================================== -->
+        <section class="s-page target-section">
+
+            <div class="row">
+                <div class="column lg-12">
+
+                    <div class="page-body" data-lang="hr">
+                        <p class="page-lead">Ovo je primjer kalkulatora koji ugrađujemo u web stranice uslužnih tvrtki. Posjetitelj upiše kvadraturu i odabere uslugu, odmah vidi okvirnu cijenu, a upit koji pošalje već sadrži sve podatke. Isprobajte ga na primjeru čišćenja prostora.</p>
+                    </div>
+                    <div class="page-body" data-lang="en">
+                        <p class="page-lead">This is an example of the calculator we build into websites of service businesses. Visitors enter the floor area, pick a service and see a rough price straight away, and the enquiry they send already contains everything you need. Try it on the example of a cleaning company.</p>
+                    </div>
+                    <div class="page-body" data-lang="it">
+                        <p class="page-lead">Questo è un esempio del calcolatore che integriamo nei siti delle aziende di servizi. Il visitatore inserisce i metri quadri, sceglie il servizio e vede subito un prezzo indicativo, e la richiesta che invia contiene già tutti i dati. Provalo con l’esempio di un’impresa di pulizie.</p>
+                    </div>
+                    <div class="page-body" data-lang="de">
+                        <p class="page-lead">Dies ist ein Beispiel für den Rechner, den wir in Websites von Dienstleistern einbauen. Besucher geben die Fläche ein, wählen die Leistung und sehen sofort einen Richtpreis, und ihre Anfrage enthält bereits alle Angaben. Probieren Sie ihn am Beispiel einer Reinigungsfirma aus.</p>
+                    </div>
+
+                    <section class="calc" id="calc" aria-labelledby="calc-title">
+                        <h2 class="calc__title" id="calc-title"><span data-lang="hr">Koliko košta čišćenje vašeg prostora?</span><span data-lang="en">How much does cleaning your space cost?</span><span data-lang="it">Quanto costa pulire il tuo spazio?</span><span data-lang="de">Was kostet die Reinigung Ihrer Räume?</span></h2>
+                        <p class="calc__intro"><span data-lang="hr">Primjer kalkulatora za tvrtku za čišćenje.</span><span data-lang="en">Example calculator for a cleaning company.</span><span data-lang="it">Calcolatore di esempio per un’impresa di pulizie.</span><span data-lang="de">Beispielrechner für eine Reinigungsfirma.</span></p>
+                        <div class="calc__layout">
+                            <form class="calc__form" id="calc-form">
+                                <fieldset class="calc__group">
+                                    <legend><span data-lang="hr">Površina prostora (m²)</span><span data-lang="en">Floor area (m²)</span><span data-lang="it">Superficie (m²)</span><span data-lang="de">Fläche (m²)</span></legend>
+                                    <div class="calc__area">
+                                        <input type="number" id="calc-area" name="area" min="10" max="500" step="1" value="80" inputmode="numeric" aria-label="m²">
+                                        <input type="range" id="calc-area-range" min="10" max="500" step="5" value="80" aria-hidden="true" tabindex="-1">
+                                    </div>
+                                </fieldset>
+                                <fieldset class="calc__group">
+                                    <legend><span data-lang="hr">Vrsta čišćenja</span><span data-lang="en">Type of cleaning</span><span data-lang="it">Tipo di pulizia</span><span data-lang="de">Art der Reinigung</span></legend>
+                                    <div class="calc__options">
+                                        <label class="calc__option"><input type="radio" name="kind" value="regular"><span class="calc__option-name"><span data-lang="hr">Redovno čišćenje</span><span data-lang="en">Regular cleaning</span><span data-lang="it">Pulizia ordinaria</span><span data-lang="de">Unterhaltsreinigung</span></span><span class="calc__option-note"><span data-lang="hr">održavanje čistoće, tjedno ili mjesečno</span><span data-lang="en">keeping things clean, weekly or monthly</span><span data-lang="it">mantenimento, settimanale o mensile</span><span data-lang="de">laufend, wöchentlich oder monatlich</span></span></label>
+                                        <label class="calc__option"><input type="radio" name="kind" value="deep" checked><span class="calc__option-name"><span data-lang="hr">Generalno čišćenje</span><span data-lang="en">Deep cleaning</span><span data-lang="it">Pulizia generale</span><span data-lang="de">Grundreinigung</span></span><span class="calc__option-note"><span data-lang="hr">temeljito, s kuhinjom i kupaonicom</span><span data-lang="en">thorough, kitchen and bathroom included</span><span data-lang="it">a fondo, cucina e bagno compresi</span><span data-lang="de">gründlich, inklusive Küche und Bad</span></span></label>
+                                        <label class="calc__option"><input type="radio" name="kind" value="renovation"><span class="calc__option-name"><span data-lang="hr">Čišćenje nakon radova</span><span data-lang="en">After-renovation cleaning</span><span data-lang="it">Pulizia dopo i lavori</span><span data-lang="de">Reinigung nach Renovierung</span></span><span class="calc__option-note"><span data-lang="hr">prašina, boja i ljepilo nakon renovacije</span><span data-lang="en">dust, paint and glue after building work</span><span data-lang="it">polvere, vernice e colla dopo i lavori</span><span data-lang="de">Staub, Farbe und Kleber nach Bauarbeiten</span></span></label>
+                                    </div>
+                                </fieldset>
+                                <fieldset class="calc__group">
+                                    <legend><span data-lang="hr">Dodatno</span><span data-lang="en">Extras</span><span data-lang="it">Extra</span><span data-lang="de">Zusätzlich</span></legend>
+                                    <div class="calc__options">
+                                        <label class="calc__option"><input type="checkbox" name="windows" value="1"><span class="calc__option-name"><span data-lang="hr">Pranje prozora</span><span data-lang="en">Window cleaning</span><span data-lang="it">Lavaggio finestre</span><span data-lang="de">Fensterreinigung</span></span><span class="calc__option-note"><span data-lang="hr">unutra i izvana</span><span data-lang="en">inside and out</span><span data-lang="it">dentro e fuori</span><span data-lang="de">innen und außen</span></span></label>
+                                    </div>
+                                </fieldset>
+                            </form>
+
+                            <div class="calc__result" aria-live="polite">
+                                <p class="calc__label"><span data-lang="hr">Okvirna cijena</span><span data-lang="en">Estimated price</span><span data-lang="it">Prezzo indicativo</span><span data-lang="de">Richtpreis</span></p>
+                                <p class="calc__price" id="calc-price">200 – 255 €</p>
+                                <p class="calc__meta" id="calc-meta"></p>
+                                <p class="calc__note"><span data-lang="hr">Konačnu cijenu tvrtka potvrđuje nakon upita, a upit odmah sadrži kvadraturu, uslugu i procjenu.</span><span data-lang="en">The company confirms the final price after the enquiry, which already includes the area, the service and the estimate.</span><span data-lang="it">L’azienda conferma il prezzo finale dopo la richiesta, che contiene già superficie, servizio e stima.</span><span data-lang="de">Den Endpreis bestätigt die Firma nach der Anfrage, die Fläche, Leistung und Schätzung bereits enthält.</span></p>
+                                <a class="btn btn--primary calc__send" id="calc-send" href="index.html#contact"><span data-lang="hr">Želim kalkulator</span><span data-lang="en">Get a calculator</span><span data-lang="it">Voglio un calcolatore</span><span data-lang="de">Rechner anfragen</span></a>
+                                <p class="calc__demo-note"><span data-lang="hr">Cijene u ovom primjeru izmišljene su i služe samo za prikaz.</span><span data-lang="en">The prices in this example are made up and only for demonstration.</span><span data-lang="it">I prezzi di questo esempio sono inventati e servono solo come dimostrazione.</span><span data-lang="de">Die Preise in diesem Beispiel sind erfunden und dienen nur zur Veranschaulichung.</span></p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <div class="page-body" data-lang="hr">
+                        <h2>Što kalkulator donosi</h2>
+                        <ul class="feature-grid">
+                            <li>
+                                <h3>Manje pitanja „koliko košta?”</h3>
+                                <p>Posjetitelj odgovor dobije sam, u bilo koje doba dana, a vi manje vremena trošite na telefon i poruke.</p>
+                            </li>
+                            <li>
+                                <h3>Bolje pripremljeni upiti</h3>
+                                <p>Upit stiže s kvadraturom, odabranom uslugom i procjenom, pa možete odmah poslati točnu ponudu.</p>
+                            </li>
+                            <li>
+                                <h3>Vaše cijene i pravila</h3>
+                                <p>Cijene po m², minimalni iznos, dodatne usluge ili popusti određujete vi, a mijenjamo ih kad zatreba.</p>
+                            </li>
+                            <li>
+                                <h3>Radi na mobitelu</h3>
+                                <p>Kalkulator je dio stranice, bez instalacije i prijave, i jednako radi na mobitelu i računalu.</p>
+                            </li>
+                        </ul>
+
+                        <h2>Za koga je</h2>
+                        <p>Za svaku djelatnost u kojoj cijena ovisi o nekoliko jasnih podataka: čišćenje (m²), soboslikarski i keramičarski radovi (m²), selidbe i prijevoz (kilometri, količina), vrtlarstvo (površina), najam opreme (broj dana) ili apartmani (broj noćenja i osoba). Kalkulator izrađujemo prema vašem načinu računanja cijene.</p>
+
+                        <h2>Cijena</h2>
+                        <p>Kalkulator izrađujemo kao dio nove <a href="web-development.html">web stranice</a> (od 1.000&nbsp;€) ili ga dodajemo postojećoj. Točnu cijenu navodimo u pisanoj ponudi, ovisno o broju usluga i pravila izračuna. Kasnije izmjene cijena u kalkulatoru ulaze u <a href="maintenance.html">mjesečno održavanje</a>.</p>
+
+                        <h2>Pročitajte i</h2>
+                        <ul class="page-related">
+                            <li><a href="web-development.html">Izrada web stranica i web trgovina &rarr;</a></li>
+                            <li><a href="maintenance.html">Paketi održavanja: što je uključeno &rarr;</a></li>
+                            <li><a href="pricing.html#estimate">Okvirni izračun cijene vašeg projekta &rarr;</a></li>
+                            <li><a href="blog-website-cost.html">Koliko košta izrada web stranice u 2026.? &rarr;</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="page-body" data-lang="en">
+                        <h2>What a calculator gives you</h2>
+                        <ul class="feature-grid">
+                            <li>
+                                <h3>Fewer “how much?” questions</h3>
+                                <p>Visitors get the answer themselves, at any time of day, and you spend less time on calls and messages.</p>
+                            </li>
+                            <li>
+                                <h3>Better enquiries</h3>
+                                <p>The enquiry arrives with the area, the chosen service and the estimate, so you can reply with an exact offer straight away.</p>
+                            </li>
+                            <li>
+                                <h3>Your prices, your rules</h3>
+                                <p>You set the price per m², the minimum order, extras and discounts, and we change them whenever you need.</p>
+                            </li>
+                            <li>
+                                <h3>Works on phones</h3>
+                                <p>The calculator is part of your website, with nothing to install or sign up for, and works the same on a phone or a computer.</p>
+                            </li>
+                        </ul>
+
+                        <h2>Who it is for</h2>
+                        <p>Any business where the price depends on a few clear inputs: cleaning (m²), painting and tiling (m²), removals and transport (kilometres, volume), gardening (area), equipment hire (days) or holiday apartments (nights and guests). We build the calculator around the way you price your work.</p>
+
+                        <h2>Price</h2>
+                        <p>We build the calculator as part of a new <a href="web-development.html">website</a> (from €1,000) or add it to an existing one. The exact price is in a written offer and depends on the number of services and pricing rules. Later price changes in the calculator are covered by <a href="maintenance.html">monthly maintenance</a>.</p>
+
+                        <h2>Read next</h2>
+                        <ul class="page-related">
+                            <li><a href="web-development.html">Website &amp; online shop development &rarr;</a></li>
+                            <li><a href="maintenance.html">Maintenance packages: what is included &rarr;</a></li>
+                            <li><a href="pricing.html#estimate">Quick estimate for your project &rarr;</a></li>
+                            <li><a href="blog-website-cost.html">How much does a website cost in 2026? &rarr;</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="page-body" data-lang="it">
+                        <h2>Cosa ti dà un calcolatore</h2>
+                        <ul class="feature-grid">
+                            <li>
+                                <h3>Meno domande “quanto costa?”</h3>
+                                <p>Il visitatore trova la risposta da solo, a qualsiasi ora, e tu passi meno tempo al telefono e sui messaggi.</p>
+                            </li>
+                            <li>
+                                <h3>Richieste più complete</h3>
+                                <p>La richiesta arriva con superficie, servizio scelto e stima, così puoi rispondere subito con un’offerta precisa.</p>
+                            </li>
+                            <li>
+                                <h3>I tuoi prezzi, le tue regole</h3>
+                                <p>Prezzo al m², ordine minimo, servizi extra e sconti li decidi tu, e li modifichiamo quando serve.</p>
+                            </li>
+                            <li>
+                                <h3>Funziona sul telefono</h3>
+                                <p>Il calcolatore fa parte del sito, senza installazioni né registrazioni, e funziona allo stesso modo su telefono e computer.</p>
+                            </li>
+                        </ul>
+
+                        <h2>Per chi è</h2>
+                        <p>Ogni attività in cui il prezzo dipende da pochi dati chiari: pulizie (m²), tinteggiatura e piastrellatura (m²), traslochi e trasporti (chilometri, volume), giardinaggio (superficie), noleggio attrezzature (giorni) o appartamenti (notti e ospiti). Costruiamo il calcolatore sul tuo modo di calcolare i prezzi.</p>
+
+                        <h2>Prezzo</h2>
+                        <p>Realizziamo il calcolatore come parte di un nuovo <a href="web-development.html">sito web</a> (da 1.000&nbsp;€) oppure lo aggiungiamo a un sito esistente. Il prezzo esatto è nell’offerta scritta e dipende dal numero di servizi e regole di calcolo. Le modifiche successive ai prezzi rientrano nella <a href="maintenance.html">manutenzione mensile</a>.</p>
+
+                        <h2>Leggi anche</h2>
+                        <ul class="page-related">
+                            <li><a href="web-development.html">Realizzazione di siti web e negozi online &rarr;</a></li>
+                            <li><a href="maintenance.html">Pacchetti di manutenzione: cosa è incluso &rarr;</a></li>
+                            <li><a href="pricing.html#estimate">Stima rapida del tuo progetto &rarr;</a></li>
+                            <li><a href="blog-website-cost.html">Quanto costa un sito web nel 2026? &rarr;</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="page-body" data-lang="de">
+                        <h2>Was ein Rechner bringt</h2>
+                        <ul class="feature-grid">
+                            <li>
+                                <h3>Weniger „Was kostet das?“-Fragen</h3>
+                                <p>Besucher finden die Antwort selbst, zu jeder Tageszeit, und Sie verbringen weniger Zeit mit Anrufen und Nachrichten.</p>
+                            </li>
+                            <li>
+                                <h3>Bessere Anfragen</h3>
+                                <p>Die Anfrage kommt mit Fläche, gewählter Leistung und Schätzung, sodass Sie sofort ein genaues Angebot schicken können.</p>
+                            </li>
+                            <li>
+                                <h3>Ihre Preise, Ihre Regeln</h3>
+                                <p>Preis pro m², Mindestbetrag, Zusatzleistungen und Rabatte legen Sie fest, und wir ändern sie, wann immer Sie möchten.</p>
+                            </li>
+                            <li>
+                                <h3>Funktioniert auf dem Handy</h3>
+                                <p>Der Rechner ist Teil Ihrer Website, ohne Installation oder Anmeldung, und funktioniert auf Handy und Computer gleich.</p>
+                            </li>
+                        </ul>
+
+                        <h2>Für wen er sich eignet</h2>
+                        <p>Für jedes Geschäft, bei dem der Preis von wenigen klaren Angaben abhängt: Reinigung (m²), Maler- und Fliesenarbeiten (m²), Umzüge und Transporte (Kilometer, Volumen), Gartenpflege (Fläche), Geräteverleih (Tage) oder Ferienwohnungen (Nächte und Gäste). Wir bauen den Rechner nach Ihrer Preisberechnung.</p>
+
+                        <h2>Preis</h2>
+                        <p>Wir bauen den Rechner als Teil einer neuen <a href="web-development.html">Website</a> (ab 1.000&nbsp;€) oder ergänzen eine bestehende. Den genauen Preis nennen wir im schriftlichen Angebot, je nach Anzahl der Leistungen und Berechnungsregeln. Spätere Preisänderungen im Rechner deckt die <a href="maintenance.html">monatliche Wartung</a> ab.</p>
+
+                        <h2>Weiterlesen</h2>
+                        <ul class="page-related">
+                            <li><a href="web-development.html">Website- und Onlineshop-Erstellung &rarr;</a></li>
+                            <li><a href="maintenance.html">Wartungspakete: was enthalten ist &rarr;</a></li>
+                            <li><a href="pricing.html#estimate">Schnelle Kostenschätzung für Ihr Projekt &rarr;</a></li>
+                            <li><a href="blog-website-cost.html">Was kostet eine Website im Jahr 2026? &rarr;</a></li>
+                        </ul>
+                    </div>
+
+                    <section class="project-cta">
+                        <h2 class="project-cta__title"><span data-lang="hr">Imate projekt na umu?</span><span data-lang="en">Have a project in mind?</span><span data-lang="it">Hai un progetto in mente?</span><span data-lang="de">Haben Sie ein Projekt geplant?</span></h2>
+                        <p class="project-cta__text"><span data-lang="hr">Javite nam se i besplatno ćemo procijeniti opseg i cijenu vašeg projekta.</span><span data-lang="en">Get in touch and we will estimate the scope and price of your project free of charge.</span><span data-lang="it">Contattaci e stimeremo gratuitamente portata e prezzo del tuo progetto.</span><span data-lang="de">Melden Sie sich, und wir schätzen Umfang und Preis Ihres Projekts kostenlos ein.</span></p>
+                        <div class="project-cta__actions">
+                            <a class="project-cta__btn project-cta__btn--primary" href="index.html#contact"><span data-lang="hr">Pošaljite upit</span><span data-lang="en">Send an enquiry</span><span data-lang="it">Invia una richiesta</span><span data-lang="de">Anfrage senden</span></a>
+                            <a class="project-cta__btn" href="index.html#booking"><span data-lang="hr">Rezervirajte konzultacije</span><span data-lang="en">Book a consultation</span><span data-lang="it">Prenota una consulenza</span><span data-lang="de">Beratung buchen</span></a>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+        </section> <!-- end s-page -->
+
+    </main> <!-- end s-content -->
+
+
+    <!-- ## footer
+    ================================================== -->
+    <footer class="s-footer">
+
+        <div class="footer-circles" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="row ss-footer-nav-row">
+            <div class="column">
+                <nav class="ss-footer-nav" aria-label="RDD Software" data-aria-label-hr="Podnožje" data-aria-label-en="Footer" data-aria-label-it="Piè di pagina" data-aria-label-de="Fußzeile">
+                    <div class="ss-footer-nav__group">
+                        <h2 class="ss-footer-nav__title"><span data-lang="hr">Usluge</span><span data-lang="en">Services</span><span data-lang="it">Servizi</span><span data-lang="de">Leistungen</span></h2>
+                        <ul>
+                            <li><a href="services.html"><span data-lang="hr">Sve usluge</span><span data-lang="en">All services</span><span data-lang="it">Tutti i servizi</span><span data-lang="de">Alle Leistungen</span></a></li>
+                            <li><a href="web-development.html"><span data-lang="hr">Izrada web stranica</span><span data-lang="en">Website development</span><span data-lang="it">Realizzazione siti web</span><span data-lang="de">Website-Erstellung</span></a></li>
+                            <li><a href="mobile-apps.html"><span data-lang="hr">Mobilne aplikacije</span><span data-lang="en">Mobile apps</span><span data-lang="it">App mobile</span><span data-lang="de">Mobile Apps</span></a></li>
+                            <li><a href="custom-software.html"><span data-lang="hr">Softver po mjeri</span><span data-lang="en">Custom software</span><span data-lang="it">Software su misura</span><span data-lang="de">Individuelle Software</span></a></li>
+                            <li><a href="maintenance.html"><span data-lang="hr">Održavanje</span><span data-lang="en">Maintenance</span><span data-lang="it">Manutenzione</span><span data-lang="de">Wartung</span></a></li>
+                            <li><a href="pricing.html"><span data-lang="hr">Cjenik</span><span data-lang="en">Pricing</span><span data-lang="it">Prezzi</span><span data-lang="de">Preise</span></a></li>
+                        </ul>
+                    </div>
+                    <div class="ss-footer-nav__group">
+                        <h2 class="ss-footer-nav__title"><span data-lang="hr">Tvrtka</span><span data-lang="en">Company</span><span data-lang="it">Azienda</span><span data-lang="de">Unternehmen</span></h2>
+                        <ul>
+                            <li><a href="index.html#about"><span data-lang="hr">O nama</span><span data-lang="en">About us</span><span data-lang="it">Chi siamo</span><span data-lang="de">Über uns</span></a></li>
+                            <li><a href="index.html#works"><span data-lang="hr">Projekti</span><span data-lang="en">Projects</span><span data-lang="it">Progetti</span><span data-lang="de">Projekte</span></a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="index.html#contact"><span data-lang="hr">Kontakt</span><span data-lang="en">Contact</span><span data-lang="it">Contatti</span><span data-lang="de">Kontakt</span></a></li>
+                        </ul>
+                    </div>
+                    <div class="ss-footer-nav__group">
+                        <h2 class="ss-footer-nav__title"><span data-lang="hr">Pratite nas</span><span data-lang="en">Follow us</span><span data-lang="it">Seguici</span><span data-lang="de">Folgen Sie uns</span></h2>
+                        <ul>
+                            <li><a href="https://www.linkedin.com/company/106879536/" target="_blank" rel="noopener noreferrer"><svg class="ss-footer-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg> LinkedIn</a></li>
+                            <li><a href="mailto:info@rdd.software">info@rdd.software</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="column ss-copyright">
+                <span>© Copyright RDD <script>document.write(/\d{4}/.exec(Date())[0] + ".")</script></span>
+                <span><a href="privacy.html" data-lang="hr">Izjava o privatnosti</a><a href="privacy.html" data-lang="en">Privacy Policy</a><a href="privacy.html" data-lang="it">Informativa sulla privacy</a><a href="privacy.html" data-lang="de">Datenschutzerklärung</a></span>
+                <span><a href="terms.html" data-lang="hr">Opći uvjeti poslovanja</a><a href="terms.html" data-lang="en">Terms and Conditions</a><a href="terms.html" data-lang="it">Condizioni generali</a><a href="terms.html" data-lang="de">AGB</a></span>
+                <span><a href="#0" data-consent-open data-lang="hr">Postavke kolačića</a><a href="#0" data-consent-open data-lang="en">Cookie settings</a><a href="#0" data-consent-open data-lang="it">Impostazioni cookie</a><a href="#0" data-consent-open data-lang="de">Cookie-Einstellungen</a></span>
+            </div>
+
+            <div class="ss-go-top">
+                <a class="smoothscroll" title="Na vrh" data-title-hr="Na vrh" data-title-en="Back to top" data-title-it="Torna su" data-title-de="Nach oben" aria-label="Na vrh" data-aria-label-hr="Na vrh" data-aria-label-en="Back to top" data-aria-label-it="Torna su" data-aria-label-de="Nach oben" href="#top">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill-rule="evenodd" clip-rule="evenodd">
+                        <path d="M11 2.206l-6.235 7.528-.765-.645 7.521-9 7.479 9-.764.646-6.236-7.53v21.884h-1v-21.883z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="column">
+                <p class="ss-legal">R.D.D., obrt za računalno programiranje, vl. Milan Trbojević &middot; Mihovilići 2b, 51000 Rijeka &middot; OIB 09887105714 &middot; <span data-lang="hr">upisan u Obrtni registar, MBO 98224476</span><span data-lang="en">registered in the Croatian Register of Crafts, MBO 98224476</span><span data-lang="it">iscritto al Registro croato dell'artigianato, MBO 98224476</span><span data-lang="de">eingetragen im kroatischen Gewerberegister, MBO 98224476</span> &middot; <span data-lang="hr">nije u sustavu PDV-a</span><span data-lang="en">not registered for VAT</span><span data-lang="it">non soggetto a IVA</span><span data-lang="de">nicht umsatzsteuerpflichtig</span> &middot; <a href="mailto:info@rdd.software">info@rdd.software</a></p>
+            </div>
+        </div>
+
+    </footer> <!-- end s-footer -->
+
+</div> <!-- end -s-pagewrap -->
+
+
+<!-- Java Script
+================================================== -->
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
+<script src="js/calc-demo.js?v=1"></script>
+<!-- Google Analytics - loaded only after the visitor accepts cookies -->
+<script src="js/sticky-cta.js"></script>
+<script src="js/consent.js?v=2"></script>
+
+</body>
+</html>
