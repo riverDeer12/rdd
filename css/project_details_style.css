@@ -577,3 +577,19 @@ img {
     max-width: 100%;
     height: auto;
 }
+
+/* project links: several buttons (web, App Store, Google Play) wrap, and stack on phones */
+.project-links {
+    flex-wrap: wrap;
+}
+
+@media (max-width: 600px) {
+    .project-links {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .project-links a {
+        justify-content: center;
+    }
+}

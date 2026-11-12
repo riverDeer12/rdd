@@ -71,8 +71,8 @@ competitor prices, testimonials, awards, certifications or technologies.
   app from 150 € a month. Free 30-minute consultation (index.html#booking),
   enquiry form (index.html#contact), all services (services.html), maintenance packages (maintenance.html), price list (pricing.html), terms (terms.html).
 - Projects (describe them only like this):
-  Topple, sliding puzzle game with gravity for iPhone and iPad (App Store) and
-  the browser: 120 levels, daily puzzle, endless mode, leaderboards and Game
+  Topple, sliding puzzle game with gravity for iPhone and iPad (App Store),
+  Android (Google Play) and the browser: 120 levels, daily puzzle, endless mode, leaderboards and Game
   Center (topple-details.html);
   Pulseboard, private web dashboard that collects Facebook, Instagram, TikTok
   and YouTube analytics for several profiles in one place, refreshed automatically
