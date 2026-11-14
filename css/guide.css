@@ -1,0 +1,317 @@
+/* ===================================================================
+ * RDD Software - guide with ready-made answers (js/guide.js)
+ * A button in the bottom right corner opens a small panel with
+ * prepared choices. Dark by default, light with html[data-theme="light"].
+ * ------------------------------------------------------------------- */
+
+.guide {
+    position: fixed;
+    right: 2.4rem;
+    bottom: 2.4rem;
+    z-index: 550;                       /* under the cookie notice (600) */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1.2rem;
+    font-family: var(--font-1);
+    transition: bottom .2s ease;
+}
+
+/* ---- launcher ---- */
+.guide__launcher {
+    display: inline-flex;
+    align-items: center;
+    gap: .8rem;
+    height: auto;
+    margin: 0;
+    padding: 1.2rem 1.8rem 1.2rem 1.5rem;
+    font-family: var(--font-1);
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: .02em;
+    line-height: 1.2;
+    text-transform: none;
+    color: #ffffff;
+    background: hsla(180, 100%, 20%, 1);
+    border: 0;
+    border-radius: 999px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, .3);
+    cursor: pointer;
+}
+
+.guide__launcher:hover,
+.guide__launcher:focus-visible {
+    color: #ffffff;
+    background: hsla(180, 100%, 16%, 1);
+}
+
+.guide__launcher svg {
+    flex: none;
+}
+
+.guide.is-open .guide__launcher {
+    display: none;
+}
+
+/* ---- panel ---- */
+.guide__panel {
+    display: flex;
+    flex-direction: column;
+    width: 36rem;
+    max-height: min(56rem, calc(100vh - 4.8rem));
+    background: var(--color-body, #141516);
+    border: 1px solid var(--color-gray-8, #3a3c3e);
+    border-radius: 14px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, .4);
+    overflow: hidden;
+}
+
+.guide__panel[hidden] {
+    display: none;
+}
+
+.guide__head {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1.2rem;
+    padding: 1.6rem 1.6rem 1.4rem 2rem;
+    color: #ffffff;
+    background: hsla(180, 100%, 20%, 1);
+}
+
+.guide__title {
+    margin: 0;
+    font-family: var(--font-2);
+    font-size: 2rem;
+    line-height: 1.25;
+    color: #ffffff;
+}
+
+.guide__subtitle {
+    margin: .4rem 0 0;
+    font-size: 1.35rem;
+    line-height: 1.45;
+    color: rgba(255, 255, 255, .8);
+}
+
+.guide__close {
+    flex: none;
+    width: 3.2rem;
+    height: 3.2rem;
+    margin: 0;
+    padding: 0;
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+    color: #ffffff;
+    background: transparent;
+    border: 0;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.guide__close:hover,
+.guide__close:focus-visible {
+    color: #ffffff;
+    background: rgba(255, 255, 255, .15);
+}
+
+/* ---- conversation ---- */
+.guide__log {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+    padding: 1.6rem;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+}
+
+.guide__msg {
+    max-width: 88%;
+    margin: 0;
+    padding: 1rem 1.3rem;
+    font-size: 1.45rem;
+    line-height: 1.5;
+    border-radius: 12px;
+}
+
+.guide__msg--bot {
+    align-self: flex-start;
+    color: var(--color-text-dark, #ffffff);
+    background: var(--color-gray-9, rgba(255, 255, 255, .06));
+    border-bottom-left-radius: 4px;
+}
+
+.guide__msg--user {
+    align-self: flex-end;
+    color: #ffffff;
+    background: hsla(180, 100%, 20%, 1);
+    border-bottom-right-radius: 4px;
+}
+
+.guide__options {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: .6rem;
+    margin-top: .4rem;
+}
+
+.guide__option,
+.guide__link {
+    display: block;
+    height: auto;
+    margin: 0;
+    padding: .9rem 1.3rem;
+    font-family: var(--font-1);
+    font-size: 1.4rem;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 1.4;
+    text-align: left;
+    text-transform: none;
+    text-decoration: none;
+    white-space: normal;
+    color: var(--color-text-dark, #ffffff);
+    background: transparent;
+    border: 1px solid var(--color-gray-8, #3a3c3e);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: border-color .15s ease, background-color .15s ease;
+}
+
+.guide__option:hover,
+.guide__option:focus-visible,
+.guide__link:hover,
+.guide__link:focus-visible {
+    color: var(--color-text-dark, #ffffff);
+    background: transparent;
+    border-color: var(--color-1, hsl(180, 100%, 25%));
+}
+
+.guide__link {
+    color: var(--color-1-light, hsla(180, 60%, 60%, 1));
+    border-style: dashed;
+}
+
+.guide__link--primary,
+.guide__link--primary:hover,
+.guide__link--primary:focus-visible {
+    color: #ffffff;
+    font-weight: 600;
+    background: hsla(180, 100%, 20%, 1);
+    border: 0;
+}
+
+.guide__link--primary:hover,
+.guide__link--primary:focus-visible {
+    background: hsla(180, 100%, 16%, 1);
+}
+
+.guide__option--contact {
+    font-weight: 600;
+}
+
+.guide__option--back {
+    align-self: flex-start;
+    padding: .4rem .2rem;
+    font-size: 1.3rem;
+    color: var(--color-text-light, #9a9b9d);
+    border: 0;
+}
+
+.guide__option--back:hover,
+.guide__option--back:focus-visible {
+    color: var(--color-text-dark, #ffffff);
+    border: 0;
+}
+
+/* ---- light theme ---- */
+html[data-theme="light"] .guide__panel {
+    box-shadow: 0 12px 40px rgba(0, 0, 0, .14);
+}
+
+html[data-theme="light"] .guide__msg--bot {
+    background: #ecece8;
+}
+
+html[data-theme="light"] .guide__link {
+    color: hsla(180, 100%, 20%, 1);
+}
+
+html[data-theme="light"] .guide__link--primary {
+    color: #ffffff;
+}
+
+/* ---- phones ---- */
+@media screen and (max-width: 900px) {
+    .guide {
+        right: 1.6rem;
+        bottom: 1.6rem;
+    }
+
+    /* above the "Send an enquiry" bar (js/sticky-cta.js) */
+    .guide.is-raised {
+        bottom: 8.4rem;
+    }
+
+    .guide.is-open {
+        left: .8rem;
+        right: .8rem;
+        bottom: .8rem;
+    }
+
+    .guide__panel {
+        width: 100%;
+        max-height: calc(100vh - 1.6rem);
+        max-height: calc(100dvh - 1.6rem);
+    }
+
+    .guide__launcher {
+        padding: 1.2rem 1.4rem;
+    }
+
+    .guide__launcher-text {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+        white-space: nowrap;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .guide {
+        transition: none;
+    }
+}
+
+@media print {
+    .guide {
+        display: none;
+    }
+}
+
+/* the template styles button:focus as a filled button; keep the outline look */
+.guide .guide__option:focus,
+.guide .guide__option:active {
+    color: var(--color-text-dark, #ffffff);
+    background: transparent;
+    border-color: var(--color-1, hsl(180, 100%, 25%));
+    box-shadow: none;
+}
+
+.guide .guide__option--back:focus,
+.guide .guide__option--back:active {
+    border: 0;
+}
+
+.guide .guide__option:focus-visible,
+.guide .guide__link:focus-visible,
+.guide .guide__launcher:focus-visible,
+.guide .guide__close:focus-visible {
+    outline: 2px solid var(--color-1, hsl(180, 100%, 25%));
+    outline-offset: 2px;
+}
