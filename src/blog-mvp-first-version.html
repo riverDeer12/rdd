@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html class="no-js" lang="hr"
+      data-title-hr="Zašto krenuti s manjom prvom verzijom aplikacije - RDD Software"
+      data-title-en="Why start with a smaller first version of your app - RDD Software"
+      data-title-it="Perché partire con una prima versione più piccola - RDD Software"
+      data-title-de="Warum mit einer kleineren ersten App-Version starten - RDD Software"
+      data-description-hr="Što je MVP, zašto se isplati krenuti s manjom prvom verzijom aplikacije i kako odlučiti što u nju ulazi. S primjerom i cijenama."
+      data-description-en="What an MVP is, why it pays to start with a smaller first version of your app and how to decide what goes into it. With an example and prices."
+      data-description-it="Cos&#x27;è un MVP, perché conviene partire con una prima versione più piccola dell&#x27;app e come decidere cosa includere. Con esempio e prezzi."
+      data-description-de="Was ein MVP ist, warum sich eine kleinere erste App-Version lohnt und wie Sie entscheiden, was hineingehört. Mit Beispiel und Preisen.">
+<head>
+
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>Zašto krenuti s manjom prvom verzijom aplikacije - RDD Software</title>
+
+    <!-- mobile specific metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Open Graph (for Facebook, LinkedIn, etc.) -->
+    <meta property="og:image" content="https://rdd.software/images/og/blog-mvp-first-version-hr.jpg" data-content-hr="https://rdd.software/images/og/blog-mvp-first-version-hr.jpg" data-content-en="https://rdd.software/images/og/blog-mvp-first-version-en.jpg" data-content-it="https://rdd.software/images/og/blog-mvp-first-version-it.jpg" data-content-de="https://rdd.software/images/og/blog-mvp-first-version-de.jpg"/>
+    <meta property="og:type" content="article"/>
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="preload" href="css/fonts/public-sans-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="css/fonts/dm-serif-display-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="css/styles.css?v=4">
+    <link rel="stylesheet" href="css/i18n.css?v=8">
+    <link rel="stylesheet" href="css/theme.css?v=13">
+    <link rel="stylesheet" href="css/consent.css?v=2">
+    <link rel="stylesheet" href="css/cta.css">
+    <link rel="stylesheet" href="css/home.css?v=3">
+    <link rel="stylesheet" href="css/pages.css?v=9">
+
+    <!-- structured data for search engines, one per language -->
+    <script type="application/ld+json" data-lang="hr">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Zašto krenuti s manjom prvom verzijom aplikacije (MVP)",
+        "description": "Što je MVP, zašto se isplati krenuti s manjom prvom verzijom aplikacije i kako odlučiti što u nju ulazi. S primjerom i cijenama.",
+        "inLanguage": "hr",
+        "datePublished": "2026-11-14",
+        "dateModified": "2026-11-14",
+        "author": {
+            "@type": "Person",
+            "name": "Milan Trbojević"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "RDD Software",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://rdd.software/android-chrome-512x512.png"
+            }
+        },
+        "image": "https://rdd.software/images/og/blog-mvp-first-version-hr.jpg",
+        "mainEntityOfPage": "https://rdd.software/blog-mvp-first-version.html"
+    }
+    </script>
+    <script type="application/ld+json" data-lang="en">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Why start with a smaller first version of your app (MVP)",
+        "description": "What an MVP is, why it pays to start with a smaller first version of your app and how to decide what goes into it. With an example and prices.",
+        "inLanguage": "en",
+        "datePublished": "2026-11-14",
+        "dateModified": "2026-11-14",
+        "author": {
+            "@type": "Person",
+            "name": "Milan Trbojević"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "RDD Software",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://rdd.software/android-chrome-512x512.png"
+            }
+        },
+        "image": "https://rdd.software/images/og/blog-mvp-first-version-en.jpg",
+        "mainEntityOfPage": "https://rdd.software/en/blog-mvp-first-version.html"
+    }
+    </script>
+    <script type="application/ld+json" data-lang="it">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Perché partire con una prima versione più piccola dell'applicazione (MVP)",
+        "description": "Cos'è un MVP, perché conviene partire con una prima versione più piccola dell'app e come decidere cosa includere. Con esempio e prezzi.",
+        "inLanguage": "it",
+        "datePublished": "2026-11-14",
+        "dateModified": "2026-11-14",
+        "author": {
+            "@type": "Person",
+            "name": "Milan Trbojević"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "RDD Software",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://rdd.software/android-chrome-512x512.png"
+            }
+        },
+        "image": "https://rdd.software/images/og/blog-mvp-first-version-it.jpg",
+        "mainEntityOfPage": "https://rdd.software/it/blog-mvp-first-version.html"
+    }
+    </script>
+    <script type="application/ld+json" data-lang="de">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Warum Sie mit einer kleineren ersten Version Ihrer App starten sollten (MVP)",
+        "description": "Was ein MVP ist, warum sich eine kleinere erste App-Version lohnt und wie Sie entscheiden, was hineingehört. Mit Beispiel und Preisen.",
+        "inLanguage": "de",
+        "datePublished": "2026-11-14",
+        "dateModified": "2026-11-14",
+        "author": {
+            "@type": "Person",
+            "name": "Milan Trbojević"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "RDD Software",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://rdd.software/android-chrome-512x512.png"
+            }
+        },
+        "image": "https://rdd.software/images/og/blog-mvp-first-version-de.jpg",
+        "mainEntityOfPage": "https://rdd.software/de/blog-mvp-first-version.html"
+    }
+    </script>
+
+    <!-- language (hr / en / it / de) - runs before render so only one language is shown
+    ================================================== -->
+    <script src="js/i18n.js?v=2"></script>
+    <!-- light / dark theme - runs before render so the page does not flash -->
+    <script src="js/theme.js"></script>
+
+    <!-- favicons
+    ================================================== -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+</head>
+
+<body id="top">
+
+
+
+
+<!-- # page wrap
+================================================== -->
+<div class="s-pagewrap">
+
+    <div class="circles">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+
+    <!-- ## site header
+    ================================================== -->
+    <header class="s-header">
+
+        <div class="header-mobile">
+            <span class="mobile-home-link"><a href="index.html">RDD.</a></span>
+            <div class="lang-menu">
+                <button type="button" class="lang-menu__toggle" aria-haspopup="true" aria-expanded="false"
+                        aria-label="Jezik: HR" data-aria-label-hr="Jezik: HR" data-aria-label-en="Language: EN" data-aria-label-it="Lingua: IT" data-aria-label-de="Sprache: DE"><span data-lang="hr">HR</span><span data-lang="en">EN</span><span data-lang="it">IT</span><span data-lang="de">DE</span><svg class="lang-menu__chevron" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="lang-switch" role="group" aria-label="Jezik" data-aria-label-hr="Jezik" data-aria-label-en="Language" data-aria-label-it="Lingua" data-aria-label-de="Sprache">
+                    <button type="button" class="lang-switch__btn" data-set-lang="hr"><span class="lang-switch__code">HR</span><span class="lang-switch__name">Hrvatski</span></button>
+                    <span class="lang-switch__sep">/</span>
+                    <button type="button" class="lang-switch__btn" data-set-lang="en"><span class="lang-switch__code">EN</span><span class="lang-switch__name">English</span></button>
+                    <span class="lang-switch__sep">/</span>
+                    <button type="button" class="lang-switch__btn" data-set-lang="it"><span class="lang-switch__code">IT</span><span class="lang-switch__name">Italiano</span></button>
+                    <span class="lang-switch__sep">/</span>
+                    <button type="button" class="lang-switch__btn" data-set-lang="de"><span class="lang-switch__code">DE</span><span class="lang-switch__name">Deutsch</span></button>
+                </div>
+            </div>
+            <button type="button" class="theme-toggle" data-toggle-theme aria-pressed="false"
+                    aria-label="Tamna ili svijetla tema" data-aria-label-hr="Tamna ili svijetla tema" data-aria-label-en="Dark or light theme" data-aria-label-it="Tema scuro o chiaro" data-aria-label-de="Dunkles oder helles Design" title="Tamna ili svijetla tema" data-title-hr="Tamna ili svijetla tema" data-title-en="Dark or light theme" data-title-it="Tema scuro o chiaro" data-title-de="Dunkles oder helles Design">
+                <svg class="theme-toggle__sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/></svg>
+                <svg class="theme-toggle__moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M20.2 14.6A8.5 8.5 0 0 1 9.4 3.8a8.5 8.5 0 1 0 10.8 10.8z"/></svg>
+            </button>
+            <a class="mobile-menu-toggle" href="#0"><span>Menu</span></a>
+        </div>
+
+        <div class="row wide main-nav-wrap">
+            <nav class="column lg-12 main-nav">
+                <ul>
+                    <li><a href="index.html" class="home-link">RDD.</a></li>
+                    <li><a href="index.html#about"><span data-lang="hr">O nama</span><span data-lang="en">About</span><span data-lang="it">Chi siamo</span><span data-lang="de">Über uns</span></a></li>
+                    <li><a href="index.html#works"><span data-lang="hr">Projekti</span><span data-lang="en">Works</span><span data-lang="it">Progetti</span><span data-lang="de">Projekte</span></a></li>
+                    <li><a href="pricing.html"><span data-lang="hr">Cjenik</span><span data-lang="en">Pricing</span><span data-lang="it">Prezzi</span><span data-lang="de">Preise</span></a></li>
+                    <li class="current"><a href="blog.html">Blog</a></li>
+                    <li><a href="index.html#contact"><span data-lang="hr">Kontakt</span><span data-lang="en">Say Hello</span><span data-lang="it">Contatti</span><span data-lang="de">Kontakt</span></a></li>
+                    <li class="lang-switch-item">
+                        <div class="lang-switch" role="group" aria-label="Jezik" data-aria-label-hr="Jezik" data-aria-label-en="Language" data-aria-label-it="Lingua" data-aria-label-de="Sprache">
+                            <button type="button" class="lang-switch__btn" data-set-lang="hr"><span class="lang-switch__code">HR</span><span class="lang-switch__name">Hrvatski</span></button>
+                            <span class="lang-switch__sep">/</span>
+                            <button type="button" class="lang-switch__btn" data-set-lang="en"><span class="lang-switch__code">EN</span><span class="lang-switch__name">English</span></button>
+                            <span class="lang-switch__sep">/</span>
+                            <button type="button" class="lang-switch__btn" data-set-lang="it"><span class="lang-switch__code">IT</span><span class="lang-switch__name">Italiano</span></button>
+                            <span class="lang-switch__sep">/</span>
+                            <button type="button" class="lang-switch__btn" data-set-lang="de"><span class="lang-switch__code">DE</span><span class="lang-switch__name">Deutsch</span></button>
+                        </div>
+                    </li>
+                    <li class="theme-toggle-item">
+                        <button type="button" class="theme-toggle" data-toggle-theme aria-pressed="false"
+                                aria-label="Tamna ili svijetla tema" data-aria-label-hr="Tamna ili svijetla tema" data-aria-label-en="Dark or light theme" data-aria-label-it="Tema scuro o chiaro" data-aria-label-de="Dunkles oder helles Design" title="Tamna ili svijetla tema" data-title-hr="Tamna ili svijetla tema" data-title-en="Dark or light theme" data-title-it="Tema scuro o chiaro" data-title-de="Dunkles oder helles Design">
+                            <svg class="theme-toggle__sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/></svg>
+                            <svg class="theme-toggle__moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M20.2 14.6A8.5 8.5 0 0 1 9.4 3.8a8.5 8.5 0 1 0 10.8 10.8z"/></svg>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+    </header> <!-- end s-header -->
+
+
+    <!-- ## main content
+    ==================================================- -->
+    <main class="s-content">
+
+        <!-- ### intro
+        ================================================== -->
+        <section class="s-intro">
+
+            <div class="row intro-content" style="min-height: 0;">
+
+                <div class="column">
+                    <div class="text-pretitle with-line">
+                        Blog
+                    </div>
+
+                    <h1 class="article-title" data-lang="hr">Zašto krenuti s manjom prvom verzijom aplikacije (MVP)</h1>
+                    <h1 class="article-title" data-lang="en">Why start with a smaller first version of your app (MVP)</h1>
+                    <h1 class="article-title" data-lang="it">Perché partire con una prima versione più piccola dell'applicazione (MVP)</h1>
+                    <h1 class="article-title" data-lang="de">Warum Sie mit einer kleineren ersten Version Ihrer App starten sollten (MVP)</h1>
+
+                    <p class="article-meta" data-lang="hr"><time datetime="2026-11-14">14. studenoga 2026.</time><span>Milan Trbojević</span><span>5 min čitanja</span></p>
+                    <p class="article-meta" data-lang="en"><time datetime="2026-11-14">14 November 2026</time><span>Milan Trbojević</span><span>5 min read</span></p>
+                    <p class="article-meta" data-lang="it"><time datetime="2026-11-14">14 novembre 2026</time><span>Milan Trbojević</span><span>5 min di lettura</span></p>
+                    <p class="article-meta" data-lang="de"><time datetime="2026-11-14">14. November 2026</time><span>Milan Trbojević</span><span>5 Min. Lesezeit</span></p>
+
+                    <img class="article-cover" data-lang="hr" src="images/og/blog-mvp-first-version-hr.webp" width="1200" height="630" decoding="async" alt="">
+                    <img class="article-cover" data-lang="en" src="images/og/blog-mvp-first-version-en.webp" width="1200" height="630" decoding="async" alt="">
+                    <img class="article-cover" data-lang="it" src="images/og/blog-mvp-first-version-it.webp" width="1200" height="630" decoding="async" alt="">
+                    <img class="article-cover" data-lang="de" src="images/og/blog-mvp-first-version-de.webp" width="1200" height="630" decoding="async" alt="">
+                </div>
+
+            </div>
+
+        </section> <!-- end s-intro -->
+
+
+        <!-- ### article
+        ================================================== -->
+        <section class="s-page target-section">
+
+            <div class="row">
+                <div class="column lg-12">
+
+                    <article class="article page-body" data-lang="hr">
+                        <p class="page-lead">
+                            Kad netko dođe s idejom za aplikaciju, popis želja vrlo često ima dvadesetak stavki: korisnički računi, izvještaji, obavijesti, povezivanje s knjigovodstvom, mobilna verzija. Sve to ima smisla, ali rijetko sve odjednom.
+                            U ovom članku objašnjavamo zašto se gotovo uvijek isplati krenuti s manjom prvom verzijom i kako odlučiti što u nju ulazi.
+                        </p>
+
+                        <h2>Što je zapravo MVP?</h2>
+                        <p>MVP je kratica za <em>minimum viable product</em>, u slobodnom prijevodu najmanja verzija proizvoda koja već ima smisla. Kod poslovne aplikacije to znači: najmanji skup funkcija s kojim pravi korisnici mogu obavljati pravi posao.</p>
+                        <p>MVP nije prototip ni demonstracija. Radi s pravim podacima i koristi se svaki dan. Razlika je samo u tome što rješava jedan glavni problem, a ne deset sporednih.</p>
+
+                        <h2>Zašto ne napraviti sve odmah?</h2>
+                        <p>Zato što na početku projekta nitko, ni vi ni mi, ne zna točno kako će se aplikacija koristiti. Pretpostavke se mijenjaju čim je ljudi počnu koristiti. Manja prva verzija donosi nekoliko konkretnih prednosti:</p>
+                        <ul>
+                            <li><strong>Ranije počinjete imati koristi.</strong> Aplikacija koja za par mjeseci rješava najveći problem vrijedi više od savršenog sustava koji stiže za godinu dana.</li>
+                            <li><strong>Novac ide na ono što se koristi.</strong> Funkcije koje su na papiru izgledale važno ponekad se pokažu nepotrebnima, a one na koje nitko nije mislio postanu najtraženije.</li>
+                            <li><strong>Lakše je promijeniti smjer.</strong> Dok je sustav manji, promjena je jeftinija i brža.</li>
+                            <li><strong>Manji je rizik.</strong> Ako se pokaže da ideja treba drukčiji pristup, niste potrošili cijeli budžet na pogrešnu verziju.</li>
+                        </ul>
+
+                        <h2>Kako odlučiti što ulazi u prvu verziju</h2>
+                        <p>Najbolje je krenuti od problema, a ne od popisa funkcija. Nekoliko pitanja koja pomažu:</p>
+                        <ul>
+                            <li><strong>Koji posao danas oduzima najviše vremena ili stvara najviše grešaka?</strong> To je obično srce prve verzije.</li>
+                            <li><strong>Tko je prvi korisnik?</strong> Često je bolje da prvu verziju koristi samo vaš tim, a tek kasnije i kupci ili vanjski suradnici.</li>
+                            <li><strong>Možemo li prvi mjesec raditi bez ovoga?</strong> Ako je odgovor da, funkcija ide na popis za kasnije.</li>
+                        </ul>
+
+                        <figure class="article-figure">
+                            <img src="images/blog/blog-mvp-first-version.webp" width="1200" height="800" loading="lazy" decoding="async" alt="Ruka olovkom skicira ekrane aplikacije na papiru">
+                            <figcaption>Fotografija: <a href="https://commons.wikimedia.org/wiki/File:Designer_sketching_Wireframes_(Unsplash).jpg" rel="noopener">Green Chameleon</a>, Unsplash (CC0)</figcaption>
+                        </figure>
+
+                        <h3>Primjer</h3>
+                        <p>Zamislite tvrtku koja narudžbe vodi u Excel tablici koju dijeli nekoliko ljudi. Popis želja za novu aplikaciju uključuje unos narudžbi, praćenje statusa, portal na kojem kupci sami prate narudžbu, izvještaje na kraju mjeseca i povezivanje s knjigovodstvom.</p>
+                        <p>Prva verzija mogla bi imati samo unos narudžbe i pregled statusa za tim, s korisničkim ulogama tako da svatko vidi ono što mu treba. Već to rješava najveći problem: jedno mjesto kojem svi vjeruju, umjesto tablice koju netko uvijek slučajno prepiše. Portal za kupce, izvještaji i povezivanje s knjigovodstvom dolaze u sljedećim fazama, kada se vidi što tim stvarno treba.</p>
+
+                        <div class="article-tip">
+                            <p><strong>Savjet:</strong> ne brišite ideje koje ne uđu u prvu verziju. Zapišite ih na popis &bdquo;kasnije&ldquo; i vratite mu se mjesec dana nakon pokretanja. Pola stavki tada će izgledati drukčije, a neke više neće biti potrebne.</p>
+                        </div>
+
+                        <h2>Kada manja prva verzija nije dobar izbor</h2>
+                        <p>Postoje situacije u kojima se sustav ne može uvoditi postupno. Ako nova aplikacija zamjenjuje program bez kojega posao staje, primjerice onaj u kojem se izdaju računi ili vode narudžbe za sve kupce, prva verzija mora od prvog dana pokriti sve što stari program radi. Isto vrijedi kad propisi traže da određene funkcije postoje od početka.</p>
+                        <p>I tada se može krenuti manje, ali na drugi način: najprije se prenese ono što stari sustav već radi, bez novih ideja, a poboljšanja dolaze u sljedećim fazama. Tako se rizik prelaska drži pod kontrolom, a popis želja i dalje čeka svoj red.</p>
+
+                        <h2>Što MVP nije</h2>
+                        <p>Manja verzija ne smije značiti lošije napravljenu verziju. Temelji moraju biti dobri od prvog dana, jer se na njima gradi sve ostalo:</p>
+                        <ul>
+                            <li>podaci se spremaju pouzdano i s redovitim sigurnosnim kopijama,</li>
+                            <li>korisnici vide i uređuju samo ono za što imaju ovlasti,</li>
+                            <li>sučelje je jednostavno, ali uredno i razumljivo,</li>
+                            <li>sustav je zamišljen tako da ga se kasnije može proširiti bez rušenja onoga što radi.</li>
+                        </ul>
+                        <p>Funkcija ima manje, ali one koje postoje moraju raditi dobro.</p>
+
+                        <h2>Kako to izgleda kod nas</h2>
+                        <p>Kod <a href="custom-software.html">softvera po mjeri</a> u pravilu krećemo s manjom verzijom koja odmah rješava najveći problem, a zatim je proširujemo prema stvarnim potrebama. Radimo u kratkim ciklusima i redovito vam pokazujemo napredak, pa smjer možete mijenjati na vrijeme.</p>
+                        <p>Web aplikacija po mjeri kod nas počinje od 3.500&nbsp;€, uz okvirni rok od 2 do 4 mjeseca, a cijena ovisi i o tome radimo li najprije manju prvu verziju ili cijeli sustav odjednom. Ako niste sigurni što bi trebalo ući u prvu verziju, možemo krenuti s analizom procesa i planom digitalizacije, od 600&nbsp;€. Nakon pokretanja aplikaciju možemo održavati od 150&nbsp;€ mjesečno. Sve cijene nalaze se u <a href="pricing.html">cjeniku</a>.</p>
+                        <p>Kako opisati ideju da biste dobili točnu ponudu, objasnili smo u članku <a href="blog-project-brief.html">Kako pripremiti upit za izradu softvera i dobiti točnu ponudu</a>.</p>
+
+                        <h2>Zaključak</h2>
+                        <p>Dobra prva verzija ne pokušava napraviti sve. Rješava jedan stvarni problem, dobro i na čvrstim temeljima, i ostavlja prostor da se aplikacija razvija prema onome što korisnici stvarno trebaju, a ne prema onome što smo pretpostavili na početku.</p>
+                        <p>Ako imate ideju za aplikaciju i niste sigurni odakle krenuti, <a href="index.html#booking">rezervirajte besplatne konzultacije od 30 minuta</a> i zajedno ćemo odrediti što bi trebalo ući u prvu verziju.</p>
+
+                        <p class="article-author">Milan Trbojević vlasnik je RDD Softwarea iz Rijeke. Od 2021. s malim timom izrađuje web stranice, web trgovine i aplikacije za klijente diljem Europe.</p>
+
+                        <h2>Pročitajte i</h2>
+                        <ul class="page-related">
+                            <li><a href="blog-project-brief.html">Kako pripremiti upit za izradu softvera i dobiti točnu ponudu &rarr;</a></li>
+                            <li><a href="blog-website-or-web-app.html">Web stranica, web trgovina ili web aplikacija: što vam zapravo treba? &rarr;</a></li>
+                            <li><a href="custom-software.html">Softver po mjeri &rarr;</a></li>
+                        </ul>
+                    </article>
+
+                    <article class="article page-body" data-lang="en">
+                        <p class="page-lead">
+                            When someone comes to us with an idea for an app, the wish list very often has around twenty items: user accounts, reports, notifications, a link to the accounting software, a mobile version. All of it makes sense, but rarely all at once.
+                            This article explains why it almost always pays to start with a smaller first version, and how to decide what goes into it.
+                        </p>
+
+                        <h2>What exactly is an MVP?</h2>
+                        <p>MVP stands for <em>minimum viable product</em>: the smallest version of a product that already makes sense. For a business application, that means the smallest set of features with which real users can do real work.</p>
+                        <p>An MVP is not a prototype or a demo. It works with real data and is used every day. The only difference is that it solves one main problem, not ten side issues.</p>
+
+                        <h2>Why not build everything straight away?</h2>
+                        <p>Because at the start of a project nobody, neither you nor we, knows exactly how the app will be used. Assumptions change as soon as people start using it. A smaller first version brings a few concrete advantages:</p>
+                        <ul>
+                            <li><strong>You start benefiting sooner.</strong> An app that solves your biggest problem in a couple of months is worth more than a perfect system that arrives in a year.</li>
+                            <li><strong>Money goes into what gets used.</strong> Features that looked important on paper sometimes turn out to be unnecessary, while ones nobody thought of become the most requested.</li>
+                            <li><strong>Changing direction is easier.</strong> While the system is small, a change is cheaper and quicker.</li>
+                            <li><strong>The risk is lower.</strong> If the idea turns out to need a different approach, you have not spent the whole budget on the wrong version.</li>
+                        </ul>
+
+                        <h2>How to decide what goes into the first version</h2>
+                        <p>It is best to start from the problem, not from a list of features. A few questions that help:</p>
+                        <ul>
+                            <li><strong>Which task takes the most time today, or causes the most mistakes?</strong> That is usually the heart of the first version.</li>
+                            <li><strong>Who is the first user?</strong> It is often better if only your team uses the first version, and customers or outside partners come later.</li>
+                            <li><strong>Could we manage without this for the first month?</strong> If the answer is yes, the feature goes on the list for later.</li>
+                        </ul>
+
+                        <figure class="article-figure">
+                            <img src="images/blog/blog-mvp-first-version.webp" width="1200" height="800" loading="lazy" decoding="async" alt="A hand sketching app screens on paper with a pencil">
+                            <figcaption>Photo: <a href="https://commons.wikimedia.org/wiki/File:Designer_sketching_Wireframes_(Unsplash).jpg" rel="noopener">Green Chameleon</a>, Unsplash (CC0)</figcaption>
+                        </figure>
+
+                        <h3>An example</h3>
+                        <p>Imagine a company that keeps its orders in an Excel spreadsheet shared by several people. The wish list for a new app includes entering orders, tracking their status, a portal where customers follow their own orders, monthly reports and a link to the accounting software.</p>
+                        <p>The first version could have just order entry and a status overview for the team, with user roles so everyone sees what they need. That alone solves the biggest problem: one place everyone trusts, instead of a spreadsheet someone always overwrites by accident. The customer portal, reports and accounting link come in later phases, once it is clear what the team really needs.</p>
+
+                        <div class="article-tip">
+                            <p><strong>Tip:</strong> don't throw away the ideas that don't make it into the first version. Write them on a &ldquo;later&rdquo; list and come back to it a month after launch. Half of the items will look different by then, and some will no longer be needed.</p>
+                        </div>
+
+                        <h2>When a smaller first version is not the right choice</h2>
+                        <p>Some systems cannot be introduced step by step. If the new app replaces software your business cannot work without, such as the one that issues invoices or handles orders for all customers, the first version has to cover everything the old software does from day one. The same applies when regulations require certain features from the start.</p>
+                        <p>Even then you can start small, just differently: first move over what the old system already does, without new ideas, and add the improvements in later phases. That keeps the risk of the switch under control, while the wish list still waits its turn.</p>
+
+                        <h2>What an MVP is not</h2>
+                        <p>A smaller version must not mean a badly built version. The foundations have to be solid from day one, because everything else is built on them:</p>
+                        <ul>
+                            <li>data is stored reliably, with regular backups,</li>
+                            <li>users see and edit only what they are allowed to,</li>
+                            <li>the interface is simple, but tidy and easy to understand,</li>
+                            <li>the system is designed so it can be extended later without breaking what already works.</li>
+                        </ul>
+                        <p>There are fewer features, but the ones that exist have to work well.</p>
+
+                        <h2>How we do it</h2>
+                        <p>With <a href="custom-software.html">custom software</a> we usually start with a smaller version that solves the biggest problem straight away, and then extend it based on real needs. We work in short cycles and show you our progress regularly, so you can change direction in good time.</p>
+                        <p>A custom web application starts from €3,500, with a rough timeline of 2 to 4 months, and the price also depends on whether we build a smaller first version or the whole system at once. If you are not sure what should go into the first version, we can start with a process analysis and digitalisation plan, from €600. After launch, we can maintain the app from €150 a month. All prices are in our <a href="pricing.html">price list</a>.</p>
+                        <p>We explained how to describe your idea to get an accurate quote in <a href="blog-project-brief.html">How to prepare a software project brief and get an accurate quote</a>.</p>
+
+                        <h2>Conclusion</h2>
+                        <p>A good first version does not try to do everything. It solves one real problem, well and on solid foundations, and leaves room for the app to grow towards what users actually need, not what we assumed at the start.</p>
+                        <p>If you have an idea for an app and are not sure where to begin, <a href="index.html#booking">book a free 30-minute consultation</a> and we will work out together what should go into the first version.</p>
+
+                        <p class="article-author">Milan Trbojević is the owner of RDD Software in Rijeka, Croatia. Since 2021 he and a small team have been building websites, online shops and apps for clients across Europe.</p>
+
+                        <h2>Read next</h2>
+                        <ul class="page-related">
+                            <li><a href="blog-project-brief.html">How to prepare a software project brief and get an accurate quote &rarr;</a></li>
+                            <li><a href="blog-website-or-web-app.html">Website, online shop or web app: what do you actually need? &rarr;</a></li>
+                            <li><a href="custom-software.html">Custom software &rarr;</a></li>
+                        </ul>
+                    </article>
+
+                    <article class="article page-body" data-lang="it">
+                        <p class="page-lead">
+                            Quando qualcuno arriva con un'idea per un'applicazione, la lista dei desideri ha molto spesso una ventina di voci: account utente, report, notifiche, collegamento alla contabilità, versione mobile. Tutto ha senso, ma raramente tutto insieme.
+                            In questo articolo ti spieghiamo perché conviene quasi sempre partire con una prima versione più piccola e come decidere cosa farci entrare.
+                        </p>
+
+                        <h2>Che cos'è esattamente un MVP?</h2>
+                        <p>MVP sta per <em>minimum viable product</em>, cioè la versione più piccola di un prodotto che ha già senso. Per un'applicazione aziendale significa il minimo insieme di funzioni con cui utenti veri possono svolgere un lavoro vero.</p>
+                        <p>Un MVP non è un prototipo né una demo. Funziona con dati reali e si usa ogni giorno. L'unica differenza è che risolve un problema principale, non dieci secondari.</p>
+
+                        <h2>Perché non fare subito tutto?</h2>
+                        <p>Perché all'inizio di un progetto nessuno, né tu né noi, sa esattamente come verrà usata l'applicazione. Le ipotesi cambiano appena le persone iniziano a usarla. Una prima versione più piccola porta alcuni vantaggi concreti:</p>
+                        <ul>
+                            <li><strong>Inizi prima ad averne un beneficio.</strong> Un'applicazione che in un paio di mesi risolve il problema più grande vale più di un sistema perfetto che arriva tra un anno.</li>
+                            <li><strong>I soldi vanno a ciò che si usa.</strong> Funzioni che sulla carta sembravano importanti a volte si rivelano inutili, mentre quelle a cui nessuno aveva pensato diventano le più richieste.</li>
+                            <li><strong>Cambiare direzione è più facile.</strong> Finché il sistema è piccolo, un cambiamento costa meno e richiede meno tempo.</li>
+                            <li><strong>Il rischio è minore.</strong> Se l'idea ha bisogno di un approccio diverso, non hai speso tutto il budget per la versione sbagliata.</li>
+                        </ul>
+
+                        <h2>Come decidere cosa entra nella prima versione</h2>
+                        <p>È meglio partire dal problema, non da un elenco di funzioni. Alcune domande che aiutano:</p>
+                        <ul>
+                            <li><strong>Quale lavoro oggi richiede più tempo o genera più errori?</strong> Di solito è il cuore della prima versione.</li>
+                            <li><strong>Chi è il primo utente?</strong> Spesso è meglio che la prima versione la usi solo il tuo team, e solo più avanti anche clienti o collaboratori esterni.</li>
+                            <li><strong>Possiamo farne a meno per il primo mese?</strong> Se la risposta è sì, la funzione va nell'elenco per dopo.</li>
+                        </ul>
+
+                        <figure class="article-figure">
+                            <img src="images/blog/blog-mvp-first-version.webp" width="1200" height="800" loading="lazy" decoding="async" alt="Una mano disegna a matita le schermate di un'applicazione su carta">
+                            <figcaption>Foto: <a href="https://commons.wikimedia.org/wiki/File:Designer_sketching_Wireframes_(Unsplash).jpg" rel="noopener">Green Chameleon</a>, Unsplash (CC0)</figcaption>
+                        </figure>
+
+                        <h3>Un esempio</h3>
+                        <p>Immagina un'azienda che gestisce gli ordini in un foglio Excel condiviso da più persone. La lista dei desideri per la nuova applicazione comprende l'inserimento degli ordini, il monitoraggio dello stato, un portale dove i clienti seguono da soli il proprio ordine, i report di fine mese e il collegamento alla contabilità.</p>
+                        <p>La prima versione potrebbe avere solo l'inserimento degli ordini e una panoramica dello stato per il team, con ruoli utente in modo che ognuno veda ciò che gli serve. Già questo risolve il problema più grande: un unico posto di cui tutti si fidano, invece di un foglio che qualcuno sovrascrive sempre per sbaglio. Portale clienti, report e collegamento alla contabilità arrivano nelle fasi successive, quando si vede cosa serve davvero al team.</p>
+
+                        <div class="article-tip">
+                            <p><strong>Consiglio:</strong> non buttare le idee che non entrano nella prima versione. Scrivile in un elenco &laquo;dopo&raquo; e riprendilo un mese dopo il lancio. A quel punto metà delle voci ti sembrerà diversa, e alcune non serviranno più.</p>
+                        </div>
+
+                        <h2>Quando una prima versione più piccola non è la scelta giusta</h2>
+                        <p>Ci sono sistemi che non si possono introdurre a piccoli passi. Se la nuova applicazione sostituisce un programma senza il quale il lavoro si ferma, per esempio quello con cui emetti le fatture o gestisci gli ordini di tutti i clienti, la prima versione deve coprire fin dal primo giorno tutto ciò che fa il vecchio programma. Lo stesso vale quando le norme richiedono che certe funzioni ci siano dall'inizio.</p>
+                        <p>Anche in quel caso si può partire in piccolo, ma in modo diverso: prima si trasferisce ciò che il vecchio sistema già fa, senza idee nuove, e i miglioramenti arrivano nelle fasi successive. Così il rischio del passaggio resta sotto controllo, e la lista dei desideri aspetta il suo turno.</p>
+
+                        <h2>Cosa un MVP non è</h2>
+                        <p>Una versione più piccola non deve significare una versione fatta peggio. Le fondamenta devono essere solide dal primo giorno, perché tutto il resto si costruisce sopra:</p>
+                        <ul>
+                            <li>i dati vengono salvati in modo affidabile, con backup regolari,</li>
+                            <li>gli utenti vedono e modificano solo ciò per cui hanno i permessi,</li>
+                            <li>l'interfaccia è semplice, ma ordinata e comprensibile,</li>
+                            <li>il sistema è pensato per essere ampliato in seguito senza rompere ciò che già funziona.</li>
+                        </ul>
+                        <p>Le funzioni sono meno, ma quelle che ci sono devono funzionare bene.</p>
+
+                        <h2>Come lavoriamo noi</h2>
+                        <p>Con il <a href="custom-software.html">software su misura</a> di solito partiamo da una versione più piccola che risolve subito il problema più grande, e poi la ampliamo in base alle esigenze reali. Lavoriamo a cicli brevi e ti mostriamo regolarmente i progressi, così puoi cambiare direzione in tempo.</p>
+                        <p>Un'applicazione web su misura parte da 3.500&nbsp;€, con tempi indicativi di 2&ndash;4 mesi, e il prezzo dipende anche dal fatto che si parta da una prima versione più piccola o dall'intero sistema. Se non sei sicuro di cosa debba entrare nella prima versione, possiamo iniziare con un'analisi dei processi e un piano di digitalizzazione, da 600&nbsp;€. Dopo il lancio possiamo occuparci della manutenzione dell'applicazione da 150&nbsp;€ al mese. Tutti i prezzi sono nel nostro <a href="pricing.html">listino prezzi</a>.</p>
+                        <p>Come descrivere la tua idea per ricevere un preventivo preciso lo abbiamo spiegato in <a href="blog-project-brief.html">Come preparare una richiesta per un progetto software e ottenere un preventivo preciso</a>.</p>
+
+                        <h2>In conclusione</h2>
+                        <p>Una buona prima versione non cerca di fare tutto. Risolve un problema reale, bene e su basi solide, e lascia spazio perché l'applicazione cresca verso ciò di cui gli utenti hanno davvero bisogno, non verso ciò che avevamo immaginato all'inizio.</p>
+                        <p>Se hai un'idea per un'applicazione e non sai da dove cominciare, <a href="index.html#booking">prenota una consulenza gratuita di 30 minuti</a> e decidiamo insieme cosa deve entrare nella prima versione.</p>
+
+                        <p class="article-author">Milan Trbojević è il titolare di RDD Software a Fiume, in Croazia. Dal 2021 realizza con un piccolo team siti web, negozi online e applicazioni per clienti in tutta Europa.</p>
+
+                        <h2>Leggi anche</h2>
+                        <ul class="page-related">
+                            <li><a href="blog-project-brief.html">Come preparare una richiesta per un progetto software e ottenere un preventivo preciso &rarr;</a></li>
+                            <li><a href="blog-website-or-web-app.html">Sito web, negozio online o applicazione web: di cosa hai davvero bisogno? &rarr;</a></li>
+                            <li><a href="custom-software.html">Software su misura &rarr;</a></li>
+                        </ul>
+                    </article>
+
+                    <article class="article page-body" data-lang="de">
+                        <p class="page-lead">
+                            Wenn jemand mit einer Idee für eine App zu uns kommt, hat die Wunschliste sehr oft rund zwanzig Punkte: Benutzerkonten, Berichte, Benachrichtigungen, Anbindung an die Buchhaltung, eine mobile Version. Das alles ist sinnvoll, aber selten alles auf einmal.
+                            In diesem Artikel erklären wir, warum es sich fast immer lohnt, mit einer kleineren ersten Version zu starten, und wie Sie entscheiden, was hineingehört.
+                        </p>
+
+                        <h2>Was ist eigentlich ein MVP?</h2>
+                        <p>MVP steht für <em>Minimum Viable Product</em>, also die kleinste Version eines Produkts, die schon sinnvoll ist. Bei einer Geschäftsanwendung heißt das: der kleinste Funktionsumfang, mit dem echte Nutzer echte Arbeit erledigen können.</p>
+                        <p>Ein MVP ist weder Prototyp noch Demo. Es arbeitet mit echten Daten und wird jeden Tag genutzt. Der Unterschied ist nur, dass es ein Hauptproblem löst und nicht zehn Nebenprobleme.</p>
+
+                        <h2>Warum nicht gleich alles bauen?</h2>
+                        <p>Weil zu Beginn eines Projekts niemand, weder Sie noch wir, genau weiß, wie die App genutzt werden wird. Annahmen ändern sich, sobald Menschen sie verwenden. Eine kleinere erste Version bringt einige konkrete Vorteile:</p>
+                        <ul>
+                            <li><strong>Sie profitieren früher.</strong> Eine App, die in wenigen Monaten Ihr größtes Problem löst, ist mehr wert als ein perfektes System, das in einem Jahr kommt.</li>
+                            <li><strong>Das Geld fließt in das, was genutzt wird.</strong> Funktionen, die auf dem Papier wichtig aussahen, erweisen sich manchmal als überflüssig, während solche, an die niemand gedacht hat, am meisten gefragt sind.</li>
+                            <li><strong>Ein Kurswechsel ist leichter.</strong> Solange das System klein ist, sind Änderungen günstiger und schneller.</li>
+                            <li><strong>Das Risiko ist geringer.</strong> Braucht die Idee einen anderen Ansatz, haben Sie nicht das ganze Budget für die falsche Version ausgegeben.</li>
+                        </ul>
+
+                        <h2>So entscheiden Sie, was in die erste Version gehört</h2>
+                        <p>Am besten beginnen Sie beim Problem, nicht bei einer Funktionsliste. Einige Fragen helfen dabei:</p>
+                        <ul>
+                            <li><strong>Welche Arbeit kostet heute am meisten Zeit oder verursacht die meisten Fehler?</strong> Das ist meist der Kern der ersten Version.</li>
+                            <li><strong>Wer ist der erste Nutzer?</strong> Oft ist es besser, wenn zunächst nur Ihr Team die erste Version nutzt und Kunden oder externe Partner später dazukommen.</li>
+                            <li><strong>Kommen wir im ersten Monat ohne das aus?</strong> Wenn ja, kommt die Funktion auf die Liste für später.</li>
+                        </ul>
+
+                        <figure class="article-figure">
+                            <img src="images/blog/blog-mvp-first-version.webp" width="1200" height="800" loading="lazy" decoding="async" alt="Eine Hand skizziert mit dem Stift App-Bildschirme auf Papier">
+                            <figcaption>Foto: <a href="https://commons.wikimedia.org/wiki/File:Designer_sketching_Wireframes_(Unsplash).jpg" rel="noopener">Green Chameleon</a>, Unsplash (CC0)</figcaption>
+                        </figure>
+
+                        <h3>Ein Beispiel</h3>
+                        <p>Stellen Sie sich ein Unternehmen vor, das seine Bestellungen in einer Excel-Tabelle führt, die mehrere Personen gemeinsam nutzen. Die Wunschliste für die neue App umfasst die Erfassung von Bestellungen, die Statusverfolgung, ein Portal, in dem Kunden ihre Bestellung selbst verfolgen, Monatsberichte und die Anbindung an die Buchhaltung.</p>
+                        <p>Die erste Version könnte nur die Erfassung der Bestellung und eine Statusübersicht für das Team haben, mit Benutzerrollen, damit jeder sieht, was er braucht. Schon das löst das größte Problem: ein Ort, dem alle vertrauen, statt einer Tabelle, die immer wieder jemand versehentlich überschreibt. Kundenportal, Berichte und Buchhaltungsanbindung folgen in späteren Phasen, wenn klar ist, was das Team wirklich braucht.</p>
+
+                        <div class="article-tip">
+                            <p><strong>Tipp:</strong> Werfen Sie die Ideen, die es nicht in die erste Version schaffen, nicht weg. Schreiben Sie sie auf eine Liste &bdquo;später&ldquo; und nehmen Sie sie einen Monat nach dem Start wieder zur Hand. Die Hälfte der Punkte sieht dann anders aus, und manche werden nicht mehr gebraucht.</p>
+                        </div>
+
+                        <h2>Wann eine kleinere erste Version nicht die richtige Wahl ist</h2>
+                        <p>Manche Systeme lassen sich nicht schrittweise einführen. Ersetzt die neue App ein Programm, ohne das Ihr Betrieb stillsteht, etwa das, mit dem Sie Rechnungen ausstellen oder Bestellungen für alle Kunden abwickeln, muss die erste Version vom ersten Tag an alles abdecken, was das alte Programm kann. Dasselbe gilt, wenn Vorschriften bestimmte Funktionen von Beginn an verlangen.</p>
+                        <p>Auch dann können Sie klein anfangen, nur anders: Zuerst wird übernommen, was das alte System bereits kann, ohne neue Ideen, und die Verbesserungen folgen in späteren Phasen. So bleibt das Risiko des Umstiegs beherrschbar, und die Wunschliste wartet weiter, bis sie an der Reihe ist.</p>
+
+                        <h2>Was ein MVP nicht ist</h2>
+                        <p>Eine kleinere Version darf keine schlechter gebaute Version sein. Das Fundament muss vom ersten Tag an solide sein, weil alles Weitere darauf aufbaut:</p>
+                        <ul>
+                            <li>Daten werden zuverlässig gespeichert, mit regelmäßigen Backups,</li>
+                            <li>Nutzer sehen und bearbeiten nur, wofür sie berechtigt sind,</li>
+                            <li>die Oberfläche ist einfach, aber aufgeräumt und verständlich,</li>
+                            <li>das System ist so angelegt, dass es später erweitert werden kann, ohne Funktionierendes zu zerstören.</li>
+                        </ul>
+                        <p>Es gibt weniger Funktionen, aber die vorhandenen müssen gut funktionieren.</p>
+
+                        <h2>Wie wir es machen</h2>
+                        <p>Bei <a href="custom-software.html">individueller Software</a> starten wir in der Regel mit einer kleineren Version, die das größte Problem sofort löst, und erweitern sie dann nach dem tatsächlichen Bedarf. Wir arbeiten in kurzen Zyklen und zeigen Ihnen regelmäßig den Fortschritt, damit Sie rechtzeitig die Richtung ändern können.</p>
+                        <p>Eine individuelle Webanwendung beginnt bei uns ab 3.500&nbsp;€, bei einer groben Dauer von 2 bis 4 Monaten, und der Preis hängt auch davon ab, ob wir zuerst eine kleinere Version oder gleich das ganze System bauen. Wenn Sie nicht sicher sind, was in die erste Version gehört, können wir mit einer Prozessanalyse und einem Digitalisierungsplan beginnen, ab 600&nbsp;€. Nach dem Start können wir die App ab 150&nbsp;€ im Monat warten. Alle Preise finden Sie in unserer <a href="pricing.html">Preisliste</a>.</p>
+                        <p>Wie Sie Ihre Idee beschreiben, um ein genaues Angebot zu erhalten, erklären wir in <a href="blog-project-brief.html">So bereiten Sie eine Softwareanfrage vor und erhalten ein genaues Angebot</a>.</p>
+
+                        <h2>Fazit</h2>
+                        <p>Eine gute erste Version versucht nicht, alles zu können. Sie löst ein echtes Problem, gut und auf solidem Fundament, und lässt Raum, damit die App sich in die Richtung entwickelt, die Nutzer wirklich brauchen, und nicht in die, die wir zu Beginn angenommen haben.</p>
+                        <p>Wenn Sie eine Idee für eine App haben und nicht wissen, wo Sie anfangen sollen, <a href="index.html#booking">buchen Sie eine kostenlose 30-minütige Beratung</a>, und wir legen gemeinsam fest, was in die erste Version gehört.</p>
+
+                        <p class="article-author">Milan Trbojević ist Inhaber von RDD Software in Rijeka, Kroatien. Seit 2021 entwickelt er mit einem kleinen Team Websites, Onlineshops und Apps für Kunden in ganz Europa.</p>
+
+                        <h2>Weiterlesen</h2>
+                        <ul class="page-related">
+                            <li><a href="blog-project-brief.html">So bereiten Sie eine Softwareanfrage vor und erhalten ein genaues Angebot &rarr;</a></li>
+                            <li><a href="blog-website-or-web-app.html">Website, Onlineshop oder Web-App: Was brauchen Sie wirklich? &rarr;</a></li>
+                            <li><a href="custom-software.html">Individuelle Software &rarr;</a></li>
+                        </ul>
+                    </article>
+                    <section class="project-cta">
+                        <h2 class="project-cta__title"><span data-lang="hr">Imate projekt na umu?</span><span data-lang="en">Have a project in mind?</span><span data-lang="it">Hai un progetto in mente?</span><span data-lang="de">Haben Sie ein Projekt geplant?</span></h2>
+                        <p class="project-cta__text"><span data-lang="hr">Javite nam se i besplatno ćemo procijeniti opseg i cijenu vašeg projekta.</span><span data-lang="en">Get in touch and we will estimate the scope and price of your project free of charge.</span><span data-lang="it">Contattaci e stimeremo gratuitamente portata e prezzo del tuo progetto.</span><span data-lang="de">Melden Sie sich, und wir schätzen Umfang und Preis Ihres Projekts kostenlos ein.</span></p>
+                        <div class="project-cta__actions">
+                            <a class="project-cta__btn project-cta__btn--primary" href="index.html#contact"><span data-lang="hr">Pošaljite upit</span><span data-lang="en">Send an enquiry</span><span data-lang="it">Invia una richiesta</span><span data-lang="de">Anfrage senden</span></a>
+                            <a class="project-cta__btn" href="index.html#booking"><span data-lang="hr">Rezervirajte konzultacije</span><span data-lang="en">Book a consultation</span><span data-lang="it">Prenota una consulenza</span><span data-lang="de">Beratung buchen</span></a>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+        </section> <!-- end s-page -->
+
+    </main> <!-- end s-content -->
+
+
+    <!-- ## footer
+    ================================================== -->
+    <footer class="s-footer">
+
+        <div class="footer-circles" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="row ss-footer-nav-row">
+            <div class="column">
+                <nav class="ss-footer-nav" aria-label="RDD Software" data-aria-label-hr="Podnožje" data-aria-label-en="Footer" data-aria-label-it="Piè di pagina" data-aria-label-de="Fußzeile">
+                    <div class="ss-footer-nav__group">
+                        <h2 class="ss-footer-nav__title"><span data-lang="hr">Usluge</span><span data-lang="en">Services</span><span data-lang="it">Servizi</span><span data-lang="de">Leistungen</span></h2>
+                        <ul>
+                            <li><a href="services.html"><span data-lang="hr">Sve usluge</span><span data-lang="en">All services</span><span data-lang="it">Tutti i servizi</span><span data-lang="de">Alle Leistungen</span></a></li>
+                            <li><a href="web-development.html"><span data-lang="hr">Izrada web stranica</span><span data-lang="en">Website development</span><span data-lang="it">Realizzazione siti web</span><span data-lang="de">Website-Erstellung</span></a></li>
+                            <li><a href="mobile-apps.html"><span data-lang="hr">Mobilne aplikacije</span><span data-lang="en">Mobile apps</span><span data-lang="it">App mobile</span><span data-lang="de">Mobile Apps</span></a></li>
+                            <li><a href="custom-software.html"><span data-lang="hr">Softver po mjeri</span><span data-lang="en">Custom software</span><span data-lang="it">Software su misura</span><span data-lang="de">Individuelle Software</span></a></li>
+                            <li><a href="maintenance.html"><span data-lang="hr">Održavanje</span><span data-lang="en">Maintenance</span><span data-lang="it">Manutenzione</span><span data-lang="de">Wartung</span></a></li>
+                            <li><a href="pricing.html"><span data-lang="hr">Cjenik</span><span data-lang="en">Pricing</span><span data-lang="it">Prezzi</span><span data-lang="de">Preise</span></a></li>
+                        </ul>
+                    </div>
+                    <div class="ss-footer-nav__group">
+                        <h2 class="ss-footer-nav__title"><span data-lang="hr">Tvrtka</span><span data-lang="en">Company</span><span data-lang="it">Azienda</span><span data-lang="de">Unternehmen</span></h2>
+                        <ul>
+                            <li><a href="index.html#about"><span data-lang="hr">O nama</span><span data-lang="en">About us</span><span data-lang="it">Chi siamo</span><span data-lang="de">Über uns</span></a></li>
+                            <li><a href="index.html#works"><span data-lang="hr">Projekti</span><span data-lang="en">Projects</span><span data-lang="it">Progetti</span><span data-lang="de">Projekte</span></a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="index.html#contact"><span data-lang="hr">Kontakt</span><span data-lang="en">Contact</span><span data-lang="it">Contatti</span><span data-lang="de">Kontakt</span></a></li>
+                        </ul>
+                    </div>
+                    <div class="ss-footer-nav__group">
+                        <h2 class="ss-footer-nav__title"><span data-lang="hr">Pratite nas</span><span data-lang="en">Follow us</span><span data-lang="it">Seguici</span><span data-lang="de">Folgen Sie uns</span></h2>
+                        <ul>
+                            <li><a href="https://www.linkedin.com/company/106879536/" target="_blank" rel="noopener noreferrer"><svg class="ss-footer-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg> LinkedIn</a></li>
+                            <li><a href="mailto:info@rdd.software">info@rdd.software</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="column ss-copyright">
+                <span>© Copyright RDD <script>document.write(/\d{4}/.exec(Date())[0] + ".")</script></span>
+                <span><a href="privacy.html" data-lang="hr">Izjava o privatnosti</a><a href="privacy.html" data-lang="en">Privacy Policy</a><a href="privacy.html" data-lang="it">Informativa sulla privacy</a><a href="privacy.html" data-lang="de">Datenschutzerklärung</a></span>
+                <span><a href="terms.html" data-lang="hr">Opći uvjeti poslovanja</a><a href="terms.html" data-lang="en">Terms and Conditions</a><a href="terms.html" data-lang="it">Condizioni generali</a><a href="terms.html" data-lang="de">AGB</a></span>
+                <span><a href="#0" data-consent-open data-lang="hr">Postavke kolačića</a><a href="#0" data-consent-open data-lang="en">Cookie settings</a><a href="#0" data-consent-open data-lang="it">Impostazioni cookie</a><a href="#0" data-consent-open data-lang="de">Cookie-Einstellungen</a></span>
+            </div>
+
+            <div class="ss-go-top">
+                <a class="smoothscroll" title="Na vrh" data-title-hr="Na vrh" data-title-en="Back to top" data-title-it="Torna su" data-title-de="Nach oben" aria-label="Na vrh" data-aria-label-hr="Na vrh" data-aria-label-en="Back to top" data-aria-label-it="Torna su" data-aria-label-de="Nach oben" href="#top">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill-rule="evenodd" clip-rule="evenodd">
+                        <path d="M11 2.206l-6.235 7.528-.765-.645 7.521-9 7.479 9-.764.646-6.236-7.53v21.884h-1v-21.883z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="column">
+                <p class="ss-legal">R.D.D., obrt za računalno programiranje, vl. Milan Trbojević &middot; Mihovilići 2b, 51000 Rijeka &middot; OIB 09887105714 &middot; <span data-lang="hr">upisan u Obrtni registar, MBO 98224476</span><span data-lang="en">registered in the Croatian Register of Crafts, MBO 98224476</span><span data-lang="it">iscritto al Registro croato dell'artigianato, MBO 98224476</span><span data-lang="de">eingetragen im kroatischen Gewerberegister, MBO 98224476</span> &middot; <span data-lang="hr">nije u sustavu PDV-a</span><span data-lang="en">not registered for VAT</span><span data-lang="it">non soggetto a IVA</span><span data-lang="de">nicht umsatzsteuerpflichtig</span> &middot; <a href="mailto:info@rdd.software">info@rdd.software</a></p>
+            </div>
+        </div>
+
+    </footer> <!-- end s-footer -->
+
+</div> <!-- end -s-pagewrap -->
+
+
+<!-- Java Script
+================================================== -->
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
+<!-- Google Analytics - loaded only after the visitor accepts cookies -->
+<script src="js/sticky-cta.js"></script>
+<script src="js/consent.js?v=2"></script>
+
+</body>
+</html>

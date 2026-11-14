@@ -7,6 +7,13 @@
     <language>de</language>
     <atom:link href="https://rdd.software/de/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Warum Sie mit einer kleineren ersten Version Ihrer App starten sollten (MVP)</title>
+      <link>https://rdd.software/de/blog-mvp-first-version.html</link>
+      <guid isPermaLink="true">https://rdd.software/de/blog-mvp-first-version.html</guid>
+      <pubDate>Sat, 14 Nov 2026 07:00:00 +0000</pubDate>
+      <description>Die Wunschliste für eine neue App hat oft zwanzig Punkte. Warum sich eine kleinere erste Version lohnt, die das größte Problem löst, und wie Sie entscheiden, was hineingehört.</description>
+    </item>
+    <item>
       <title>E-Rechnung in Kroatien ab 2027: was kleine Unternehmen ohne Umsatzsteuer vorbereiten müssen</title>
       <link>https://rdd.software/de/blog-e-invoice-2027.html</link>
       <guid isPermaLink="true">https://rdd.software/de/blog-e-invoice-2027.html</guid>
