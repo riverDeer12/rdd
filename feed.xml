@@ -7,6 +7,13 @@
     <language>hr-HR</language>
     <atom:link href="https://rdd.software/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Zašto krenuti s manjom prvom verzijom aplikacije (MVP)</title>
+      <link>https://rdd.software/blog-mvp-first-version.html</link>
+      <guid isPermaLink="true">https://rdd.software/blog-mvp-first-version.html</guid>
+      <pubDate>Sat, 14 Nov 2026 07:00:00 +0000</pubDate>
+      <description>Popis želja za novu aplikaciju često ima dvadeset stavki. Zašto se isplati krenuti s manjom prvom verzijom koja rješava najveći problem i kako odlučiti što u nju ulazi.</description>
+    </item>
+    <item>
       <title>eRačun od 2027.: što obrtnici i male tvrtke izvan sustava PDV-a moraju pripremiti</title>
       <link>https://rdd.software/blog-e-invoice-2027.html</link>
       <guid isPermaLink="true">https://rdd.software/blog-e-invoice-2027.html</guid>
