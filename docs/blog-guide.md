@@ -198,9 +198,9 @@ Published:
 - [x] Web trgovina za mali biznis: plaćanje, dostava i pravila prije prve prodaje (blog-online-shop-launch)
 - [x] eRačun od 2027.: što obrtnici i male tvrtke izvan sustava PDV-a moraju pripremiti (blog-e-invoice-2027) → custom-software.html
 - [x] Zašto krenuti s manjom prvom verzijom aplikacije (MVP) (blog-mvp-first-version)
+- [x] Mobilna aplikacija ili web stranica prilagođena mobitelima? (blog-mobile-app-or-website)
 
 Next, in this order (→ service page the article leads to):
-- [ ] Mobilna aplikacija ili web stranica prilagođena mobitelima? → mobile-apps.html, primjer Apex Performance Fit
 - [ ] Kako pripremiti tekstove i fotografije za novu web stranicu → web-development.html
 - [ ] Lokalni SEO: kako da vas pronađu kupci iz vašeg grada → web-development.html
 - [ ] Brzina web stranice: zašto je važna i kako je provjeriti → web-development.html (održavanje)

@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html class="no-js" lang="hr"
+      data-title-hr="Mobilna aplikacija ili web stranica za mobitele? - RDD Software"
+      data-title-en="A mobile app or a mobile-friendly website? - RDD Software"
+      data-title-it="App mobile o sito ottimizzato per smartphone? - RDD Software"
+      data-title-de="Mobile App oder handyfreundliche Website? - RDD Software"
+      data-description-hr="Trebate li mobilnu aplikaciju ili je dovoljna stranica prilagođena mobitelima? Kada se aplikacija isplati, što donosi uz sebe i koliko stoji."
+      data-description-en="Do you need a mobile app or is a mobile-friendly website enough? When an app pays off, what comes with it and what it costs."
+      data-description-it="Ti serve un&#x27;app mobile o basta un sito ottimizzato per smartphone? Quando l&#x27;app conviene, cosa comporta e quanto costa."
+      data-description-de="Brauchen Sie eine mobile App oder reicht eine handyfreundliche Website? Wann sich eine App lohnt, was sie mit sich bringt und was sie kostet.">
+<head>
+
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>Mobilna aplikacija ili web stranica za mobitele? - RDD Software</title>
+
+    <!-- mobile specific metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Open Graph (for Facebook, LinkedIn, etc.) -->
+    <meta property="og:image" content="https://rdd.software/images/og/blog-mobile-app-or-website-hr.jpg" data-content-hr="https://rdd.software/images/og/blog-mobile-app-or-website-hr.jpg" data-content-en="https://rdd.software/images/og/blog-mobile-app-or-website-en.jpg" data-content-it="https://rdd.software/images/og/blog-mobile-app-or-website-it.jpg" data-content-de="https://rdd.software/images/og/blog-mobile-app-or-website-de.jpg"/>
+    <meta property="og:type" content="article"/>
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="preload" href="css/fonts/public-sans-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="css/fonts/dm-serif-display-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="css/styles.css?v=4">
+    <link rel="stylesheet" href="css/i18n.css?v=8">
+    <link rel="stylesheet" href="css/theme.css?v=13">
+    <link rel="stylesheet" href="css/consent.css?v=2">
+    <link rel="stylesheet" href="css/guide.css?v=1">
+    <link rel="stylesheet" href="css/cta.css">
+    <link rel="stylesheet" href="css/home.css?v=3">
+    <link rel="stylesheet" href="css/pages.css?v=9">
+
+    <!-- structured data for search engines, one per language -->
+    <script type="application/ld+json" data-lang="hr">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Mobilna aplikacija ili web stranica prilagođena mobitelima?",
+        "description": "Trebate li mobilnu aplikaciju ili je dovoljna stranica prilagođena mobitelima? Kada se aplikacija isplati, što donosi uz sebe i koliko stoji.",
+        "inLanguage": "hr",
+        "datePublished": "2026-11-19",
+        "dateModified": "2026-11-19",
+        "author": {
+            "@type": "Person",
+            "name": "Milan Trbojević"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "RDD Software",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://rdd.software/android-chrome-512x512.png"
+            }
+        },
+        "image": "https://rdd.software/images/og/blog-mobile-app-or-website-hr.jpg",
+        "mainEntityOfPage": "https://rdd.software/blog-mobile-app-or-website.html"
+    }
+    </script>
+    <script type="application/ld+json" data-lang="en">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "A mobile app or a mobile-friendly website?",
+        "description": "Do you need a mobile app or is a mobile-friendly website enough? When an app pays off, what comes with it and what it costs.",
+        "inLanguage": "en",
+        "datePublished": "2026-11-19",
+        "dateModified": "2026-11-19",
+        "author": {
+            "@type": "Person",
+            "name": "Milan Trbojević"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "RDD Software",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://rdd.software/android-chrome-512x512.png"
+            }
+        },
+        "image": "https://rdd.software/images/og/blog-mobile-app-or-website-en.jpg",
+        "mainEntityOfPage": "https://rdd.software/en/blog-mobile-app-or-website.html"
+    }
+    </script>
+    <script type="application/ld+json" data-lang="it">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "App mobile o sito web ottimizzato per smartphone?",
+        "description": "Ti serve un'app mobile o basta un sito ottimizzato per smartphone? Quando l'app conviene, cosa comporta e quanto costa.",
+        "inLanguage": "it",
+        "datePublished": "2026-11-19",
+        "dateModified": "2026-11-19",
+        "author": {
+            "@type": "Person",
+            "name": "Milan Trbojević"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "RDD Software",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://rdd.software/android-chrome-512x512.png"
+            }
+        },
+        "image": "https://rdd.software/images/og/blog-mobile-app-or-website-it.jpg",
+        "mainEntityOfPage": "https://rdd.software/it/blog-mobile-app-or-website.html"
+    }
+    </script>
+    <script type="application/ld+json" data-lang="de">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Mobile App oder handyfreundliche Website?",
+        "description": "Brauchen Sie eine mobile App oder reicht eine handyfreundliche Website? Wann sich eine App lohnt, was sie mit sich bringt und was sie kostet.",
+        "inLanguage": "de",
+        "datePublished": "2026-11-19",
+        "dateModified": "2026-11-19",
+        "author": {
+            "@type": "Person",
+            "name": "Milan Trbojević"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "RDD Software",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://rdd.software/android-chrome-512x512.png"
+            }
+        },
+        "image": "https://rdd.software/images/og/blog-mobile-app-or-website-de.jpg",
+        "mainEntityOfPage": "https://rdd.software/de/blog-mobile-app-or-website.html"
+    }
+    </script>
+
+    <!-- language (hr / en / it / de) - runs before render so only one language is shown
+    ================================================== -->
+    <script src="js/i18n.js?v=2"></script>
+    <!-- light / dark theme - runs before render so the page does not flash -->
+    <script src="js/theme.js"></script>
+
+    <!-- favicons
+    ================================================== -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+</head>
+
+<body id="top">
+
+
+
+
+<!-- # page wrap
+================================================== -->
+<div class="s-pagewrap">
+
+    <div class="circles">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+
+    <!-- ## site header
+    ================================================== -->
+    <header class="s-header">
+
+        <div class="header-mobile">
+            <span class="mobile-home-link"><a href="index.html">RDD.</a></span>
+            <div class="lang-menu">
+                <button type="button" class="lang-menu__toggle" aria-haspopup="true" aria-expanded="false"
+                        aria-label="Jezik: HR" data-aria-label-hr="Jezik: HR" data-aria-label-en="Language: EN" data-aria-label-it="Lingua: IT" data-aria-label-de="Sprache: DE"><span data-lang="hr">HR</span><span data-lang="en">EN</span><span data-lang="it">IT</span><span data-lang="de">DE</span><svg class="lang-menu__chevron" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <div class="lang-switch" role="group" aria-label="Jezik" data-aria-label-hr="Jezik" data-aria-label-en="Language" data-aria-label-it="Lingua" data-aria-label-de="Sprache">
+                    <button type="button" class="lang-switch__btn" data-set-lang="hr"><span class="lang-switch__code">HR</span><span class="lang-switch__name">Hrvatski</span></button>
+                    <span class="lang-switch__sep">/</span>
+                    <button type="button" class="lang-switch__btn" data-set-lang="en"><span class="lang-switch__code">EN</span><span class="lang-switch__name">English</span></button>
+                    <span class="lang-switch__sep">/</span>
+                    <button type="button" class="lang-switch__btn" data-set-lang="it"><span class="lang-switch__code">IT</span><span class="lang-switch__name">Italiano</span></button>
+                    <span class="lang-switch__sep">/</span>
+                    <button type="button" class="lang-switch__btn" data-set-lang="de"><span class="lang-switch__code">DE</span><span class="lang-switch__name">Deutsch</span></button>
+                </div>
+            </div>
+            <button type="button" class="theme-toggle" data-toggle-theme aria-pressed="false"
+                    aria-label="Tamna ili svijetla tema" data-aria-label-hr="Tamna ili svijetla tema" data-aria-label-en="Dark or light theme" data-aria-label-it="Tema scuro o chiaro" data-aria-label-de="Dunkles oder helles Design" title="Tamna ili svijetla tema" data-title-hr="Tamna ili svijetla tema" data-title-en="Dark or light theme" data-title-it="Tema scuro o chiaro" data-title-de="Dunkles oder helles Design">
+                <svg class="theme-toggle__sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/></svg>
+                <svg class="theme-toggle__moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M20.2 14.6A8.5 8.5 0 0 1 9.4 3.8a8.5 8.5 0 1 0 10.8 10.8z"/></svg>
+            </button>
+            <a class="mobile-menu-toggle" href="#0"><span>Menu</span></a>
+        </div>
+
+        <div class="row wide main-nav-wrap">
+            <nav class="column lg-12 main-nav">
+                <ul>
+                    <li><a href="index.html" class="home-link">RDD.</a></li>
+                    <li><a href="index.html#about"><span data-lang="hr">O nama</span><span data-lang="en">About</span><span data-lang="it">Chi siamo</span><span data-lang="de">Über uns</span></a></li>
+                    <li><a href="index.html#works"><span data-lang="hr">Projekti</span><span data-lang="en">Works</span><span data-lang="it">Progetti</span><span data-lang="de">Projekte</span></a></li>
+                    <li><a href="pricing.html"><span data-lang="hr">Cjenik</span><span data-lang="en">Pricing</span><span data-lang="it">Prezzi</span><span data-lang="de">Preise</span></a></li>
+                    <li class="current"><a href="blog.html">Blog</a></li>
+                    <li><a href="index.html#contact"><span data-lang="hr">Kontakt</span><span data-lang="en">Say Hello</span><span data-lang="it">Contatti</span><span data-lang="de">Kontakt</span></a></li>
+                    <li class="lang-switch-item">
+                        <div class="lang-switch" role="group" aria-label="Jezik" data-aria-label-hr="Jezik" data-aria-label-en="Language" data-aria-label-it="Lingua" data-aria-label-de="Sprache">
+                            <button type="button" class="lang-switch__btn" data-set-lang="hr"><span class="lang-switch__code">HR</span><span class="lang-switch__name">Hrvatski</span></button>
+                            <span class="lang-switch__sep">/</span>
+                            <button type="button" class="lang-switch__btn" data-set-lang="en"><span class="lang-switch__code">EN</span><span class="lang-switch__name">English</span></button>
+                            <span class="lang-switch__sep">/</span>
+                            <button type="button" class="lang-switch__btn" data-set-lang="it"><span class="lang-switch__code">IT</span><span class="lang-switch__name">Italiano</span></button>
+                            <span class="lang-switch__sep">/</span>
+                            <button type="button" class="lang-switch__btn" data-set-lang="de"><span class="lang-switch__code">DE</span><span class="lang-switch__name">Deutsch</span></button>
+                        </div>
+                    </li>
+                    <li class="theme-toggle-item">
+                        <button type="button" class="theme-toggle" data-toggle-theme aria-pressed="false"
+                                aria-label="Tamna ili svijetla tema" data-aria-label-hr="Tamna ili svijetla tema" data-aria-label-en="Dark or light theme" data-aria-label-it="Tema scuro o chiaro" data-aria-label-de="Dunkles oder helles Design" title="Tamna ili svijetla tema" data-title-hr="Tamna ili svijetla tema" data-title-en="Dark or light theme" data-title-it="Tema scuro o chiaro" data-title-de="Dunkles oder helles Design">
+                            <svg class="theme-toggle__sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/></svg>
+                            <svg class="theme-toggle__moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M20.2 14.6A8.5 8.5 0 0 1 9.4 3.8a8.5 8.5 0 1 0 10.8 10.8z"/></svg>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+    </header> <!-- end s-header -->
+
+
+    <!-- ## main content
+    ==================================================- -->
+    <main class="s-content">
+
+        <!-- ### intro
+        ================================================== -->
+        <section class="s-intro">
+
+            <div class="row intro-content" style="min-height: 0;">
+
+                <div class="column">
+                    <div class="text-pretitle with-line">
+                        Blog
+                    </div>
+
+                    <h1 class="article-title" data-lang="hr">Mobilna aplikacija ili web stranica prilagođena mobitelima?</h1>
+                    <h1 class="article-title" data-lang="en">A mobile app or a mobile-friendly website?</h1>
+                    <h1 class="article-title" data-lang="it">App mobile o sito web ottimizzato per smartphone?</h1>
+                    <h1 class="article-title" data-lang="de">Mobile App oder handyfreundliche Website?</h1>
+
+                    <p class="article-meta" data-lang="hr"><time datetime="2026-11-19">19. studenoga 2026.</time><span>Milan Trbojević</span><span>5 min čitanja</span></p>
+                    <p class="article-meta" data-lang="en"><time datetime="2026-11-19">19 November 2026</time><span>Milan Trbojević</span><span>5 min read</span></p>
+                    <p class="article-meta" data-lang="it"><time datetime="2026-11-19">19 novembre 2026</time><span>Milan Trbojević</span><span>5 min di lettura</span></p>
+                    <p class="article-meta" data-lang="de"><time datetime="2026-11-19">19. November 2026</time><span>Milan Trbojević</span><span>5 Min. Lesezeit</span></p>
+
+                    <img class="article-cover" data-lang="hr" src="images/og/blog-mobile-app-or-website-hr.webp" width="1200" height="630" decoding="async" alt="">
+                    <img class="article-cover" data-lang="en" src="images/og/blog-mobile-app-or-website-en.webp" width="1200" height="630" decoding="async" alt="">
+                    <img class="article-cover" data-lang="it" src="images/og/blog-mobile-app-or-website-it.webp" width="1200" height="630" decoding="async" alt="">
+                    <img class="article-cover" data-lang="de" src="images/og/blog-mobile-app-or-website-de.webp" width="1200" height="630" decoding="async" alt="">
+                </div>
+
+            </div>
+
+        </section> <!-- end s-intro -->
+
+
+        <!-- ### article
+        ================================================== -->
+        <section class="s-page target-section">
+
+            <div class="row">
+                <div class="column lg-12">
+
+                    <article class="article page-body" data-lang="hr">
+                        <p class="page-lead">
+                            &bdquo;Naši kupci sve rade na mobitelu, trebamo li aplikaciju?&ldquo; Pitanje je logično, ali odgovor je češće ne nego da. Dobra web stranica na mobitelu radi odlično, a aplikacija donosi prednosti samo ako je ljudi otvaraju često.
+                            U ovom članku objašnjavamo kako prepoznati kada se aplikacija isplati, što donosi uz sebe i koliko to stoji u odnosu na stranicu.
+                        </p>
+
+                        <p>Ako tek razmišljate o tome trebate li stranicu, trgovinu ili aplikaciju za rad korisnika, kraći pregled svih mogućnosti naći ćete u članku <a href="blog-website-or-web-app.html">Web stranica, web trgovina ili web aplikacija: što vam zapravo treba?</a> Ovdje idemo korak dalje: vaši korisnici su na mobitelu, a pitanje je samo kako ih tamo dočekati.</p>
+
+                        <h2>Što već može dobra stranica na mobitelu</h2>
+                        <p>Stranica prilagođena mobitelima nije smanjena verzija stranice za računalo. Tekst je čitljiv bez povećavanja, gumbi su dovoljno veliki za prst, a stranica se brzo učitava i na mobilnoj mreži. Posjetitelj vas jednim dodirom može nazvati, otvoriti lokaciju u karti ili poslati upit.</p>
+                        <p>Za većinu malih tvrtki to je sve što kupcu treba. Netko vas pronađe na Googleu, pogleda usluge i cijene i javi se. Takav posjetitelj dođe jednom ili nekoliko puta godišnje i neće instalirati aplikaciju samo da bi vam poslao poruku.</p>
+
+                        <h2>Kada aplikacija ima smisla</h2>
+                        <p>Aplikacija se isplati kada je dio nečije svakodnevice, a ne jednokratni posjet. Najčešći znakovi su:</p>
+                        <ul>
+                            <li><strong>Korisnici je otvaraju tjedno ili svaki dan.</strong> Tada im je važno da je na početnom ekranu, a ne u pregledniku među drugim karticama.</li>
+                            <li><strong>Trebaju im obavijesti.</strong> Podsjetnik na termin, potvrda ili novost koja stiže na mobitel i kad aplikacija nije otvorena.</li>
+                            <li><strong>Imaju korisnički račun i svoje podatke.</strong> Rezervacije, povijest, napredak ili stanje računa koje redovito provjeravaju.</li>
+                            <li><strong>Koriste mogućnosti mobitela.</strong> Primjerice kameru ili rad u pokretu.</li>
+                        </ul>
+                        <p>Korisno pitanje za provjeru: bi li vaš korisnik aplikaciju i dalje imao na mobitelu mjesec dana nakon što ju je instalirao? Ako je odgovor da, aplikacija ima smisla. Ako bi je obrisao čim obavi posao, bolje mu je ponuditi dobru stranicu.</p>
+
+                        <h2>Što aplikacija donosi uz sebe</h2>
+                        <p>Aplikacija nije samo veći projekt, ona dolazi i s nekoliko obaveza koje stranica nema:</p>
+                        <ul>
+                            <li><strong>Objava u trgovinama.</strong> Aplikacija mora proći pregled u App Storeu i na Google Playu, uz opis i snimke zaslona. Mi pomažemo pripremiti sve što trgovine traže i pratimo aplikaciju kroz pregled.</li>
+                            <li><strong>Redovita ažuriranja.</strong> Nove verzije iOS-a i Androida izlaze svake godine, pa aplikaciju treba održavati da bi i dalje radila.</li>
+                            <li><strong>Korisnike treba uvjeriti da je preuzmu.</strong> Stranicu netko otvori jednim klikom, a aplikaciju mora potražiti, instalirati i prijaviti se.</li>
+                            <li><strong>Web sučelje za upravljanje.</strong> Uz aplikaciju obično treba i administracija u pregledniku u kojoj vi uređujete sadržaj i pratite korisnike.</li>
+                        </ul>
+
+                        <figure class="article-figure">
+                            <img src="images/blog/blog-mobile-app-or-website.webp" width="1200" height="800" loading="lazy" decoding="async" alt="Ruka drži pametni telefon">
+                            <figcaption>Fotografija: <a href="https://commons.wikimedia.org/wiki/File:Black_smartphone_in_hand_(Unsplash).jpg" rel="noopener">Dennis Cortés</a>, Unsplash (CC0)</figcaption>
+                        </figure>
+
+                        <h2>Primjer: Apex Performance Fit</h2>
+                        <p><a href="apex-performance-details.html">Apex Performance Fit</a> povezuje osobne trenere i sportaše: zakazivanje termina, krediti za treninge i praćenje napretka. Takav sustav korisnici otvaraju redovito, jer se oko termina i napretka vrti cijela suradnja s trenerom, pa ima smisla da ga imaju pri ruci.</p>
+                        <p>Zato postoji kao web aplikacija u pregledniku i kao aplikacija za iPhone i Android. Isti podaci dostupni su na sva tri mjesta, a korisnici biraju ono što im je u tom trenutku zgodnije.</p>
+
+                        <h2>Koliko to stoji</h2>
+                        <p>Razlika u cijeni nije samo u izradi, nego i u održavanju. Usporedba naših početnih cijena:</p>
+
+                        <table class="price-table">
+                            <thead>
+                            <tr>
+                                <th>Usluga</th>
+                                <th>Cijena</th>
+                                <th>Okvirni rok</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>Prezentacijska web stranica</td>
+                                <td class="price-table__price">od 1.000&nbsp;€</td>
+                                <td>2&ndash;4 tjedna</td>
+                            </tr>
+                            <tr>
+                                <td>Web aplikacija po mjeri</td>
+                                <td class="price-table__price">od 3.500&nbsp;€</td>
+                                <td>2&ndash;4 mjeseca</td>
+                            </tr>
+                            <tr>
+                                <td>Mobilna aplikacija (iOS / Android)</td>
+                                <td class="price-table__price">od 5.000&nbsp;€</td>
+                                <td>2&ndash;4 mjeseca</td>
+                            </tr>
+                            <tr>
+                                <td>Održavanje web stranice</td>
+                                <td class="price-table__price">od 50&nbsp;€ / mj.</td>
+                                <td>mjesečno</td>
+                            </tr>
+                            <tr>
+                                <td>Održavanje aplikacije</td>
+                                <td class="price-table__price">od 150&nbsp;€ / mj.</td>
+                                <td>mjesečno</td>
+                            </tr>
+                            </tbody>
+                        </table>
+
+                        <p>Konačna cijena ovisi o broju ekrana i funkcija, o tome treba li web sučelje za upravljanje i o povezivanju s postojećim sustavima. Rokovi počinju teći kad primimo materijale i predujam. Sve cijene nalaze se u <a href="pricing.html">cjeniku</a>.</p>
+
+                        <h2>Srednji put: krenite s webom, aplikacija kasnije</h2>
+                        <p>Ako niste sigurni, ne morate odmah birati. Možete krenuti sa stranicom ili web aplikacijom koja na mobitelu radi dobro i pratiti kako je korisnici koriste. Ako se pokaže da dolaze svaki tjedan i traže podsjetnike, mobilna aplikacija može se nadograditi na isti sustav. Zašto se manji početak gotovo uvijek isplati, objasnili smo u članku <a href="blog-mvp-first-version.html">Zašto krenuti s manjom prvom verzijom aplikacije (MVP)</a>.</p>
+                        <p>Druga mogućnost je da prije razvoja napravimo dizajn i klikabilni prototip aplikacije, od 700&nbsp;€. Prototip možete pokazati nekolicini korisnika i vidjeti bi li ga stvarno koristili, prije nego što uložite u cijelu aplikaciju.</p>
+
+                        <div class="article-tip">
+                            <p><strong>Savjet:</strong> pogledajte u statistici svoje stranice koliko se isti posjetitelji vraćaju. Ako se većina pojavi jednom i ode, aplikacija im neće trebati. Ako se isti ljudi vraćaju svaki tjedan, to je dobar znak da bi im aplikacija olakšala posao.</p>
+                        </div>
+
+                        <h2>Zaključak</h2>
+                        <p>To što su vaši kupci na mobitelu ne znači da im treba aplikacija. Treba im stranica koja na mobitelu radi brzo i jasno. Aplikacija ima smisla kad je ljudi koriste redovito, trebaju im obavijesti i imaju svoje podatke koje prate, a tada se isplati i trošak njezina održavanja.</p>
+                        <p>Više o tome kako izrađujemo aplikacije za iOS i Android pročitajte na stranici <a href="mobile-apps.html">Izrada mobilnih aplikacija</a>. Ako niste sigurni što je bolje za vas, <a href="index.html#booking">rezervirajte besplatne konzultacije od 30 minuta</a>, a mi ćemo vam iskreno reći treba li vam aplikacija.</p>
+
+                        <p class="article-author">Milan Trbojević vlasnik je RDD Softwarea iz Rijeke. Od 2021. s malim timom izrađuje web stranice, web trgovine i aplikacije za klijente diljem Europe.</p>
+
+                        <h2>Pročitajte i</h2>
+                        <ul class="page-related">
+                            <li><a href="blog-website-or-web-app.html">Web stranica, web trgovina ili web aplikacija: što vam zapravo treba? &rarr;</a></li>
+                            <li><a href="blog-mvp-first-version.html">Zašto krenuti s manjom prvom verzijom aplikacije (MVP) &rarr;</a></li>
+                            <li><a href="mobile-apps.html">Izrada mobilnih aplikacija &rarr;</a></li>
+                        </ul>
+                    </article>
+
+                    <article class="article page-body" data-lang="en">
+                        <p class="page-lead">
+                            &ldquo;Our customers do everything on their phones, so do we need an app?&rdquo; It is a fair question, but the answer is more often no than yes. A good website works perfectly well on a phone, and an app only brings advantages if people open it often.
+                            This article explains how to tell when an app pays off, what comes with it and what it costs compared with a website.
+                        </p>
+
+                        <p>If you are still deciding whether you need a website, a shop or an app for your users to work in, you will find a shorter overview in <a href="blog-website-or-web-app.html">Website, online shop or web app: what do you actually need?</a> Here we go one step further: your users are on their phones, and the only question is how to meet them there.</p>
+
+                        <h2>What a good website can already do on a phone</h2>
+                        <p>A mobile-friendly website is not a shrunk version of the desktop site. The text is readable without zooming, the buttons are big enough for a finger, and the site loads quickly even on a mobile connection. With one tap a visitor can call you, open your location on a map or send an enquiry.</p>
+                        <p>For most small businesses that is all a customer needs. Someone finds you on Google, looks at your services and prices and gets in touch. That visitor comes once or a few times a year, and will not install an app just to send you a message.</p>
+
+                        <h2>When an app makes sense</h2>
+                        <p>An app pays off when it is part of someone's routine, not a one-off visit. The most common signs are:</p>
+                        <ul>
+                            <li><strong>Users open it weekly or every day.</strong> Then it matters that it is on their home screen, not in a browser among other tabs.</li>
+                            <li><strong>They need notifications.</strong> A reminder of an appointment, a confirmation or news that reaches the phone even when the app is not open.</li>
+                            <li><strong>They have an account and their own data.</strong> Bookings, history, progress or a balance they check regularly.</li>
+                            <li><strong>They use the phone's capabilities.</strong> The camera, for example, or working on the move.</li>
+                        </ul>
+                        <p>A useful test question: would your user still have the app on their phone a month after installing it? If the answer is yes, an app makes sense. If they would delete it as soon as the job is done, a good website serves them better.</p>
+
+                        <h2>What comes with an app</h2>
+                        <p>An app is not just a bigger project, it also comes with a few obligations a website does not have:</p>
+                        <ul>
+                            <li><strong>Publishing in the stores.</strong> The app has to pass review in the App Store and on Google Play, with a description and screenshots. We help prepare everything the stores ask for and see the app through review.</li>
+                            <li><strong>Regular updates.</strong> New versions of iOS and Android come out every year, so the app needs maintenance to keep working.</li>
+                            <li><strong>Users have to be persuaded to download it.</strong> A website opens with one click, while an app has to be found, installed and signed in to.</li>
+                            <li><strong>A web admin panel.</strong> An app usually also needs an admin area in the browser where you edit content and keep an eye on users.</li>
+                        </ul>
+
+                        <figure class="article-figure">
+                            <img src="images/blog/blog-mobile-app-or-website.webp" width="1200" height="800" loading="lazy" decoding="async" alt="A hand holding a smartphone">
+                            <figcaption>Photo: <a href="https://commons.wikimedia.org/wiki/File:Black_smartphone_in_hand_(Unsplash).jpg" rel="noopener">Dennis Cortés</a>, Unsplash (CC0)</figcaption>
+                        </figure>
+
+                        <h2>An example: Apex Performance Fit</h2>
+                        <p><a href="apex-performance-details.html">Apex Performance Fit</a> connects personal trainers and athletes: scheduling sessions, session credits and progress tracking. People open a system like that regularly, because the whole relationship with the trainer revolves around sessions and progress, so it makes sense to have it at hand.</p>
+                        <p>That is why it exists as a web app in the browser and as an app for iPhone and Android. The same data is available in all three places, and users choose whichever suits them at the moment.</p>
+
+                        <h2>What it costs</h2>
+                        <p>The difference in price is not only in the build, but also in maintenance. A comparison of our starting prices:</p>
+
+                        <table class="price-table">
+                            <thead>
+                            <tr>
+                                <th>Service</th>
+                                <th>Price</th>
+                                <th>Timeline</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>Presentation website</td>
+                                <td class="price-table__price">from €1,000</td>
+                                <td>2&ndash;4 weeks</td>
+                            </tr>
+                            <tr>
+                                <td>Custom web application</td>
+                                <td class="price-table__price">from €3,500</td>
+                                <td>2&ndash;4 months</td>
+                            </tr>
+                            <tr>
+                                <td>Mobile app (iOS / Android)</td>
+                                <td class="price-table__price">from €5,000</td>
+                                <td>2&ndash;4 months</td>
+                            </tr>
+                            <tr>
+                                <td>Website maintenance</td>
+                                <td class="price-table__price">from €50 / month</td>
+                                <td>monthly</td>
+                            </tr>
+                            <tr>
+                                <td>App maintenance</td>
+                                <td class="price-table__price">from €150 / month</td>
+                                <td>monthly</td>
+                            </tr>
+                            </tbody>
+                        </table>
+
+                        <p>The final price depends on the number of screens and features, on whether a web admin panel is needed and on connections to your existing systems. Timelines start once we receive the materials and the advance payment. All prices are in our <a href="pricing.html">price list</a>.</p>
+
+                        <h2>A middle way: start on the web, add the app later</h2>
+                        <p>If you are not sure, you don't have to choose straight away. You can start with a website or web app that works well on phones and watch how people use it. If it turns out they come back every week and ask for reminders, a mobile app can be added on top of the same system. We explained why a smaller start almost always pays off in <a href="blog-mvp-first-version.html">Why start with a smaller first version of your app (MVP)</a>.</p>
+                        <p>Another option is to start with the design and a clickable prototype of the app, from €700. You can show the prototype to a few users and see whether they would really use it, before investing in the whole app.</p>
+
+                        <div class="article-tip">
+                            <p><strong>Tip:</strong> check your website statistics to see how often the same visitors come back. If most of them show up once and leave, they will not need an app. If the same people return every week, that is a good sign an app would make their lives easier.</p>
+                        </div>
+
+                        <h2>Conclusion</h2>
+                        <p>The fact that your customers are on their phones does not mean they need an app. They need a website that works quickly and clearly on a phone. An app makes sense when people use it regularly, need notifications and have their own data to follow, and then the cost of maintaining it pays off too.</p>
+                        <p>Read more about how we build apps for iOS and Android on the <a href="mobile-apps.html">mobile app development</a> page. If you are not sure what is better for you, <a href="index.html#booking">book a free 30-minute consultation</a> and we will tell you honestly whether you need an app.</p>
+
+                        <p class="article-author">Milan Trbojević is the owner of RDD Software in Rijeka, Croatia. Since 2021 he and a small team have been building websites, online shops and apps for clients across Europe.</p>
+
+                        <h2>Read next</h2>
+                        <ul class="page-related">
+                            <li><a href="blog-website-or-web-app.html">Website, online shop or web app: what do you actually need? &rarr;</a></li>
+                            <li><a href="blog-mvp-first-version.html">Why start with a smaller first version of your app (MVP) &rarr;</a></li>
+                            <li><a href="mobile-apps.html">Mobile app development &rarr;</a></li>
+                        </ul>
+                    </article>
+
+                    <article class="article page-body" data-lang="it">
+                        <p class="page-lead">
+                            &laquo;I nostri clienti fanno tutto dallo smartphone, ci serve un'app?&raquo; La domanda è sensata, ma la risposta è più spesso no che sì. Un buon sito funziona benissimo sul telefono, e un'app porta vantaggi solo se le persone la aprono spesso.
+                            In questo articolo ti spieghiamo come capire quando un'app conviene, cosa comporta e quanto costa rispetto a un sito.
+                        </p>
+
+                        <p>Se stai ancora decidendo se ti serve un sito, un negozio online o un'applicazione in cui lavorano i tuoi utenti, trovi una panoramica più breve nell'articolo <a href="blog-website-or-web-app.html">Sito web, negozio online o applicazione web: di cosa hai davvero bisogno?</a> Qui facciamo un passo in più: i tuoi utenti sono sullo smartphone, e la domanda è solo come accoglierli lì.</p>
+
+                        <h2>Cosa sa già fare un buon sito sullo smartphone</h2>
+                        <p>Un sito ottimizzato per smartphone non è una versione rimpicciolita del sito per computer. Il testo si legge senza ingrandire, i pulsanti sono abbastanza grandi per un dito e il sito si carica in fretta anche con la rete mobile. Con un tocco il visitatore può chiamarti, aprire la tua sede sulla mappa o inviare una richiesta.</p>
+                        <p>Per la maggior parte delle piccole imprese è tutto ciò che serve al cliente. Qualcuno ti trova su Google, guarda servizi e prezzi e ti contatta. Un visitatore così arriva una volta o poche volte all'anno, e non installerà un'app solo per mandarti un messaggio.</p>
+
+                        <h2>Quando un'app ha senso</h2>
+                        <p>Un'app conviene quando fa parte della routine di qualcuno, non di una visita occasionale. I segnali più comuni sono:</p>
+                        <ul>
+                            <li><strong>Gli utenti la aprono ogni settimana o ogni giorno.</strong> Allora è importante che sia nella schermata principale, non nel browser tra le altre schede.</li>
+                            <li><strong>Hanno bisogno di notifiche.</strong> Un promemoria per un appuntamento, una conferma o una novità che arriva sul telefono anche quando l'app non è aperta.</li>
+                            <li><strong>Hanno un account e i propri dati.</strong> Prenotazioni, storico, progressi o un saldo che controllano regolarmente.</li>
+                            <li><strong>Usano le funzioni del telefono.</strong> Per esempio la fotocamera, o il lavoro in movimento.</li>
+                        </ul>
+                        <p>Una domanda utile per verificarlo: il tuo utente avrebbe ancora l'app sul telefono un mese dopo averla installata? Se la risposta è sì, l'app ha senso. Se la cancellerebbe appena finito, è meglio offrirgli un buon sito.</p>
+
+                        <h2>Cosa comporta un'app</h2>
+                        <p>Un'app non è solo un progetto più grande, porta con sé anche alcuni impegni che un sito non ha:</p>
+                        <ul>
+                            <li><strong>Pubblicazione negli store.</strong> L'app deve superare la revisione su App Store e Google Play, con descrizione e screenshot. Ti aiutiamo a preparare tutto ciò che gli store richiedono e seguiamo l'app durante la revisione.</li>
+                            <li><strong>Aggiornamenti regolari.</strong> Ogni anno escono nuove versioni di iOS e Android, quindi l'app va mantenuta perché continui a funzionare.</li>
+                            <li><strong>Bisogna convincere gli utenti a scaricarla.</strong> Un sito si apre con un clic, un'app va cercata, installata e serve l'accesso.</li>
+                            <li><strong>Un pannello web di gestione.</strong> Di solito un'app richiede anche un'amministrazione nel browser, dove modifichi i contenuti e segui gli utenti.</li>
+                        </ul>
+
+                        <figure class="article-figure">
+                            <img src="images/blog/blog-mobile-app-or-website.webp" width="1200" height="800" loading="lazy" decoding="async" alt="Una mano che tiene uno smartphone">
+                            <figcaption>Foto: <a href="https://commons.wikimedia.org/wiki/File:Black_smartphone_in_hand_(Unsplash).jpg" rel="noopener">Dennis Cortés</a>, Unsplash (CC0)</figcaption>
+                        </figure>
+
+                        <h2>Un esempio: Apex Performance Fit</h2>
+                        <p><a href="apex-performance-details.html">Apex Performance Fit</a> collega personal trainer e sportivi: prenotazione delle sessioni, crediti per gli allenamenti e monitoraggio dei progressi. Un sistema così gli utenti lo aprono regolarmente, perché tutto il rapporto con l'allenatore ruota intorno a sessioni e progressi, quindi ha senso averlo a portata di mano.</p>
+                        <p>Per questo esiste come applicazione web nel browser e come app per iPhone e Android. Gli stessi dati sono disponibili in tutti e tre i posti, e gli utenti scelgono quello più comodo in quel momento.</p>
+
+                        <h2>Quanto costa</h2>
+                        <p>La differenza di prezzo non sta solo nella realizzazione, ma anche nella manutenzione. Un confronto dei nostri prezzi di partenza:</p>
+
+                        <table class="price-table">
+                            <thead>
+                            <tr>
+                                <th>Servizio</th>
+                                <th>Prezzo</th>
+                                <th>Tempi indicativi</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>Sito vetrina</td>
+                                <td class="price-table__price">da 1.000&nbsp;€</td>
+                                <td>2&ndash;4 settimane</td>
+                            </tr>
+                            <tr>
+                                <td>Applicazione web su misura</td>
+                                <td class="price-table__price">da 3.500&nbsp;€</td>
+                                <td>2&ndash;4 mesi</td>
+                            </tr>
+                            <tr>
+                                <td>App mobile (iOS / Android)</td>
+                                <td class="price-table__price">da 5.000&nbsp;€</td>
+                                <td>2&ndash;4 mesi</td>
+                            </tr>
+                            <tr>
+                                <td>Manutenzione del sito</td>
+                                <td class="price-table__price">da 50&nbsp;€ / mese</td>
+                                <td>mensile</td>
+                            </tr>
+                            <tr>
+                                <td>Manutenzione dell'app</td>
+                                <td class="price-table__price">da 150&nbsp;€ / mese</td>
+                                <td>mensile</td>
+                            </tr>
+                            </tbody>
+                        </table>
+
+                        <p>Il prezzo finale dipende dal numero di schermate e funzioni, dalla necessità di un pannello web di gestione e dai collegamenti con i sistemi che già usi. I tempi partono dal ricevimento dei materiali e dell'acconto. Tutti i prezzi sono nel nostro <a href="pricing.html">listino prezzi</a>.</p>
+
+                        <h2>Una via di mezzo: parti dal web, l'app dopo</h2>
+                        <p>Se non sei sicuro, non devi scegliere subito. Puoi partire con un sito o un'applicazione web che funzioni bene sullo smartphone e osservare come la usano le persone. Se si vede che tornano ogni settimana e chiedono promemoria, un'app mobile può essere aggiunta sullo stesso sistema. Perché un inizio più piccolo conviene quasi sempre lo abbiamo spiegato in <a href="blog-mvp-first-version.html">Perché partire con una prima versione più piccola dell'applicazione (MVP)</a>.</p>
+                        <p>Un'altra possibilità è partire dal design e da un prototipo cliccabile dell'app, da 700&nbsp;€. Puoi mostrare il prototipo a qualche utente e vedere se lo userebbe davvero, prima di investire nell'intera app.</p>
+
+                        <div class="article-tip">
+                            <p><strong>Consiglio:</strong> controlla nelle statistiche del tuo sito quanto spesso tornano gli stessi visitatori. Se la maggior parte arriva una volta e se ne va, un'app non gli servirà. Se le stesse persone tornano ogni settimana, è un buon segnale che un'app semplificherebbe loro le cose.</p>
+                        </div>
+
+                        <h2>In conclusione</h2>
+                        <p>Il fatto che i tuoi clienti siano sullo smartphone non significa che abbiano bisogno di un'app. Hanno bisogno di un sito che sul telefono funzioni in modo rapido e chiaro. Un'app ha senso quando le persone la usano regolarmente, hanno bisogno di notifiche e hanno dati propri da seguire, e allora conviene anche il costo della sua manutenzione.</p>
+                        <p>Leggi di più su come realizziamo app per iOS e Android nella pagina <a href="mobile-apps.html">Sviluppo di app mobile</a>. Se non sai cosa sia meglio per te, <a href="index.html#booking">prenota una consulenza gratuita di 30 minuti</a> e ti diremo sinceramente se ti serve un'app.</p>
+
+                        <p class="article-author">Milan Trbojević è il titolare di RDD Software a Fiume, in Croazia. Dal 2021 realizza con un piccolo team siti web, negozi online e applicazioni per clienti in tutta Europa.</p>
+
+                        <h2>Leggi anche</h2>
+                        <ul class="page-related">
+                            <li><a href="blog-website-or-web-app.html">Sito web, negozio online o applicazione web: di cosa hai davvero bisogno? &rarr;</a></li>
+                            <li><a href="blog-mvp-first-version.html">Perché partire con una prima versione più piccola dell'applicazione (MVP) &rarr;</a></li>
+                            <li><a href="mobile-apps.html">Sviluppo di app mobile &rarr;</a></li>
+                        </ul>
+                    </article>
+
+                    <article class="article page-body" data-lang="de">
+                        <p class="page-lead">
+                            &bdquo;Unsere Kunden machen alles am Handy, brauchen wir eine App?&ldquo; Die Frage ist naheliegend, die Antwort lautet aber öfter nein als ja. Eine gute Website funktioniert auf dem Handy hervorragend, und eine App bringt nur Vorteile, wenn Menschen sie oft öffnen.
+                            In diesem Artikel erklären wir, woran Sie erkennen, wann sich eine App lohnt, was sie mit sich bringt und was sie im Vergleich zu einer Website kostet.
+                        </p>
+
+                        <p>Wenn Sie noch überlegen, ob Sie eine Website, einen Shop oder eine Anwendung brauchen, in der Ihre Nutzer arbeiten, finden Sie einen kürzeren Überblick im Artikel <a href="blog-website-or-web-app.html">Website, Onlineshop oder Web-App: Was brauchen Sie wirklich?</a> Hier gehen wir einen Schritt weiter: Ihre Nutzer sind am Handy, und die Frage ist nur, wie Sie sie dort empfangen.</p>
+
+                        <h2>Was eine gute Website auf dem Handy schon kann</h2>
+                        <p>Eine handyfreundliche Website ist keine verkleinerte Desktop-Seite. Der Text ist ohne Zoomen lesbar, die Schaltflächen sind groß genug für den Finger, und die Seite lädt auch im Mobilfunknetz schnell. Mit einem Fingertipp kann der Besucher Sie anrufen, Ihren Standort in der Karte öffnen oder eine Anfrage senden.</p>
+                        <p>Für die meisten kleinen Unternehmen ist das alles, was ein Kunde braucht. Jemand findet Sie bei Google, sieht sich Leistungen und Preise an und meldet sich. Ein solcher Besucher kommt einmal oder ein paar Mal im Jahr und installiert keine App, nur um Ihnen eine Nachricht zu schicken.</p>
+
+                        <h2>Wann eine App sinnvoll ist</h2>
+                        <p>Eine App lohnt sich, wenn sie Teil des Alltags ist und kein einmaliger Besuch. Die häufigsten Anzeichen sind:</p>
+                        <ul>
+                            <li><strong>Nutzer öffnen sie wöchentlich oder täglich.</strong> Dann ist es wichtig, dass sie auf dem Startbildschirm liegt und nicht im Browser zwischen anderen Tabs.</li>
+                            <li><strong>Sie brauchen Benachrichtigungen.</strong> Eine Terminerinnerung, eine Bestätigung oder eine Neuigkeit, die auf dem Handy ankommt, auch wenn die App nicht geöffnet ist.</li>
+                            <li><strong>Sie haben ein Konto und eigene Daten.</strong> Buchungen, Verlauf, Fortschritt oder ein Guthaben, das sie regelmäßig prüfen.</li>
+                            <li><strong>Sie nutzen Funktionen des Handys.</strong> Zum Beispiel die Kamera oder das Arbeiten unterwegs.</li>
+                        </ul>
+                        <p>Eine nützliche Prüffrage: Hätte Ihr Nutzer die App einen Monat nach der Installation noch auf dem Handy? Wenn ja, ist eine App sinnvoll. Würde er sie löschen, sobald die Sache erledigt ist, ist er mit einer guten Website besser bedient.</p>
+
+                        <h2>Was eine App mit sich bringt</h2>
+                        <p>Eine App ist nicht nur ein größeres Projekt, sie bringt auch einige Pflichten mit, die eine Website nicht hat:</p>
+                        <ul>
+                            <li><strong>Veröffentlichung in den Stores.</strong> Die App muss die Prüfung im App Store und bei Google Play bestehen, mit Beschreibung und Screenshots. Wir helfen, alles vorzubereiten, was die Stores verlangen, und begleiten die App durch die Prüfung.</li>
+                            <li><strong>Regelmäßige Updates.</strong> Jedes Jahr erscheinen neue Versionen von iOS und Android, daher muss die App gewartet werden, damit sie weiter funktioniert.</li>
+                            <li><strong>Nutzer müssen zum Herunterladen bewegt werden.</strong> Eine Website öffnet man mit einem Klick, eine App muss man suchen, installieren und sich anmelden.</li>
+                            <li><strong>Eine Web-Oberfläche zur Verwaltung.</strong> Zu einer App gehört meist auch eine Verwaltung im Browser, in der Sie Inhalte bearbeiten und Nutzer im Blick behalten.</li>
+                        </ul>
+
+                        <figure class="article-figure">
+                            <img src="images/blog/blog-mobile-app-or-website.webp" width="1200" height="800" loading="lazy" decoding="async" alt="Eine Hand hält ein Smartphone">
+                            <figcaption>Foto: <a href="https://commons.wikimedia.org/wiki/File:Black_smartphone_in_hand_(Unsplash).jpg" rel="noopener">Dennis Cortés</a>, Unsplash (CC0)</figcaption>
+                        </figure>
+
+                        <h2>Ein Beispiel: Apex Performance Fit</h2>
+                        <p><a href="apex-performance-details.html">Apex Performance Fit</a> verbindet Personal Trainer und Sportler: Terminplanung, Trainingsguthaben und Fortschrittsverfolgung. Ein solches System öffnen Nutzer regelmäßig, weil sich die ganze Zusammenarbeit mit dem Trainer um Termine und Fortschritt dreht, daher ist es sinnvoll, es griffbereit zu haben.</p>
+                        <p>Deshalb gibt es sie als Webanwendung im Browser und als App für iPhone und Android. Dieselben Daten sind an allen drei Orten verfügbar, und Nutzer wählen, was ihnen gerade am besten passt.</p>
+
+                        <h2>Was es kostet</h2>
+                        <p>Der Preisunterschied liegt nicht nur in der Entwicklung, sondern auch in der Wartung. Ein Vergleich unserer Einstiegspreise:</p>
+
+                        <table class="price-table">
+                            <thead>
+                            <tr>
+                                <th>Leistung</th>
+                                <th>Preis</th>
+                                <th>Zeitrahmen</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>Unternehmenswebsite</td>
+                                <td class="price-table__price">ab 1.000&nbsp;€</td>
+                                <td>2&ndash;4 Wochen</td>
+                            </tr>
+                            <tr>
+                                <td>Individuelle Webanwendung</td>
+                                <td class="price-table__price">ab 3.500&nbsp;€</td>
+                                <td>2&ndash;4 Monate</td>
+                            </tr>
+                            <tr>
+                                <td>Mobile App (iOS / Android)</td>
+                                <td class="price-table__price">ab 5.000&nbsp;€</td>
+                                <td>2&ndash;4 Monate</td>
+                            </tr>
+                            <tr>
+                                <td>Website-Wartung</td>
+                                <td class="price-table__price">ab 50&nbsp;€ / Monat</td>
+                                <td>monatlich</td>
+                            </tr>
+                            <tr>
+                                <td>App-Wartung</td>
+                                <td class="price-table__price">ab 150&nbsp;€ / Monat</td>
+                                <td>monatlich</td>
+                            </tr>
+                            </tbody>
+                        </table>
+
+                        <p>Der Endpreis hängt von der Zahl der Bildschirme und Funktionen ab, davon, ob eine Web-Oberfläche zur Verwaltung nötig ist, und von der Anbindung an Ihre bestehenden Systeme. Die Fristen beginnen, sobald Unterlagen und Anzahlung bei uns eingehen. Alle Preise finden Sie in unserer <a href="pricing.html">Preisliste</a>.</p>
+
+                        <h2>Ein Mittelweg: zuerst im Web, die App später</h2>
+                        <p>Wenn Sie unsicher sind, müssen Sie sich nicht sofort entscheiden. Sie können mit einer Website oder Webanwendung beginnen, die auf dem Handy gut funktioniert, und beobachten, wie sie genutzt wird. Zeigt sich, dass Nutzer jede Woche wiederkommen und Erinnerungen wünschen, lässt sich eine mobile App auf dasselbe System aufsetzen. Warum sich ein kleinerer Start fast immer lohnt, erklären wir in <a href="blog-mvp-first-version.html">Warum Sie mit einer kleineren ersten Version Ihrer App starten sollten (MVP)</a>.</p>
+                        <p>Eine andere Möglichkeit ist, zuerst Design und einen klickbaren Prototyp der App zu erstellen, ab 700&nbsp;€. Den Prototyp können Sie einigen Nutzern zeigen und sehen, ob sie ihn wirklich verwenden würden, bevor Sie in die ganze App investieren.</p>
+
+                        <div class="article-tip">
+                            <p><strong>Tipp:</strong> Sehen Sie in der Statistik Ihrer Website nach, wie oft dieselben Besucher zurückkommen. Erscheinen die meisten einmal und gehen wieder, brauchen sie keine App. Kommen dieselben Menschen jede Woche wieder, ist das ein gutes Zeichen, dass eine App ihnen die Arbeit erleichtern würde.</p>
+                        </div>
+
+                        <h2>Fazit</h2>
+                        <p>Dass Ihre Kunden am Handy sind, heißt nicht, dass sie eine App brauchen. Sie brauchen eine Website, die auf dem Handy schnell und klar funktioniert. Eine App ist sinnvoll, wenn Menschen sie regelmäßig nutzen, Benachrichtigungen brauchen und eigene Daten verfolgen, und dann lohnen sich auch die Kosten für ihre Wartung.</p>
+                        <p>Mehr darüber, wie wir Apps für iOS und Android entwickeln, lesen Sie auf der Seite <a href="mobile-apps.html">Entwicklung mobiler Apps</a>. Wenn Sie nicht sicher sind, was für Sie besser ist, <a href="index.html#booking">buchen Sie eine kostenlose 30-minütige Beratung</a>, und wir sagen Ihnen ehrlich, ob Sie eine App brauchen.</p>
+
+                        <p class="article-author">Milan Trbojević ist Inhaber von RDD Software in Rijeka, Kroatien. Seit 2021 entwickelt er mit einem kleinen Team Websites, Onlineshops und Apps für Kunden in ganz Europa.</p>
+
+                        <h2>Weiterlesen</h2>
+                        <ul class="page-related">
+                            <li><a href="blog-website-or-web-app.html">Website, Onlineshop oder Web-App: Was brauchen Sie wirklich? &rarr;</a></li>
+                            <li><a href="blog-mvp-first-version.html">Warum Sie mit einer kleineren ersten Version Ihrer App starten sollten (MVP) &rarr;</a></li>
+                            <li><a href="mobile-apps.html">Entwicklung mobiler Apps &rarr;</a></li>
+                        </ul>
+                    </article>
+                    <section class="project-cta">
+                        <h2 class="project-cta__title"><span data-lang="hr">Imate projekt na umu?</span><span data-lang="en">Have a project in mind?</span><span data-lang="it">Hai un progetto in mente?</span><span data-lang="de">Haben Sie ein Projekt geplant?</span></h2>
+                        <p class="project-cta__text"><span data-lang="hr">Javite nam se i besplatno ćemo procijeniti opseg i cijenu vašeg projekta.</span><span data-lang="en">Get in touch and we will estimate the scope and price of your project free of charge.</span><span data-lang="it">Contattaci e stimeremo gratuitamente portata e prezzo del tuo progetto.</span><span data-lang="de">Melden Sie sich, und wir schätzen Umfang und Preis Ihres Projekts kostenlos ein.</span></p>
+                        <div class="project-cta__actions">
+                            <a class="project-cta__btn project-cta__btn--primary" href="index.html#contact"><span data-lang="hr">Pošaljite upit</span><span data-lang="en">Send an enquiry</span><span data-lang="it">Invia una richiesta</span><span data-lang="de">Anfrage senden</span></a>
+                            <a class="project-cta__btn" href="index.html#booking"><span data-lang="hr">Rezervirajte konzultacije</span><span data-lang="en">Book a consultation</span><span data-lang="it">Prenota una consulenza</span><span data-lang="de">Beratung buchen</span></a>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+        </section> <!-- end s-page -->
+
+    </main> <!-- end s-content -->
+
+
+    <!-- ## footer
+    ================================================== -->
+    <footer class="s-footer">
+
+        <div class="footer-circles" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="row ss-footer-nav-row">
+            <div class="column">
+                <nav class="ss-footer-nav" aria-label="RDD Software" data-aria-label-hr="Podnožje" data-aria-label-en="Footer" data-aria-label-it="Piè di pagina" data-aria-label-de="Fußzeile">
+                    <div class="ss-footer-nav__group">
+                        <h2 class="ss-footer-nav__title"><span data-lang="hr">Usluge</span><span data-lang="en">Services</span><span data-lang="it">Servizi</span><span data-lang="de">Leistungen</span></h2>
+                        <ul>
+                            <li><a href="services.html"><span data-lang="hr">Sve usluge</span><span data-lang="en">All services</span><span data-lang="it">Tutti i servizi</span><span data-lang="de">Alle Leistungen</span></a></li>
+                            <li><a href="web-development.html"><span data-lang="hr">Izrada web stranica</span><span data-lang="en">Website development</span><span data-lang="it">Realizzazione siti web</span><span data-lang="de">Website-Erstellung</span></a></li>
+                            <li><a href="mobile-apps.html"><span data-lang="hr">Mobilne aplikacije</span><span data-lang="en">Mobile apps</span><span data-lang="it">App mobile</span><span data-lang="de">Mobile Apps</span></a></li>
+                            <li><a href="custom-software.html"><span data-lang="hr">Softver po mjeri</span><span data-lang="en">Custom software</span><span data-lang="it">Software su misura</span><span data-lang="de">Individuelle Software</span></a></li>
+                            <li><a href="maintenance.html"><span data-lang="hr">Održavanje</span><span data-lang="en">Maintenance</span><span data-lang="it">Manutenzione</span><span data-lang="de">Wartung</span></a></li>
+                            <li><a href="pricing.html"><span data-lang="hr">Cjenik</span><span data-lang="en">Pricing</span><span data-lang="it">Prezzi</span><span data-lang="de">Preise</span></a></li>
+                        </ul>
+                    </div>
+                    <div class="ss-footer-nav__group">
+                        <h2 class="ss-footer-nav__title"><span data-lang="hr">Tvrtka</span><span data-lang="en">Company</span><span data-lang="it">Azienda</span><span data-lang="de">Unternehmen</span></h2>
+                        <ul>
+                            <li><a href="index.html#about"><span data-lang="hr">O nama</span><span data-lang="en">About us</span><span data-lang="it">Chi siamo</span><span data-lang="de">Über uns</span></a></li>
+                            <li><a href="index.html#works"><span data-lang="hr">Projekti</span><span data-lang="en">Projects</span><span data-lang="it">Progetti</span><span data-lang="de">Projekte</span></a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="index.html#contact"><span data-lang="hr">Kontakt</span><span data-lang="en">Contact</span><span data-lang="it">Contatti</span><span data-lang="de">Kontakt</span></a></li>
+                        </ul>
+                    </div>
+                    <div class="ss-footer-nav__group">
+                        <h2 class="ss-footer-nav__title"><span data-lang="hr">Pratite nas</span><span data-lang="en">Follow us</span><span data-lang="it">Seguici</span><span data-lang="de">Folgen Sie uns</span></h2>
+                        <ul>
+                            <li><a href="https://www.linkedin.com/company/106879536/" target="_blank" rel="noopener noreferrer"><svg class="ss-footer-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg> LinkedIn</a></li>
+                            <li><a href="mailto:info@rdd.software">info@rdd.software</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="column ss-copyright">
+                <span>© Copyright RDD <script>document.write(/\d{4}/.exec(Date())[0] + ".")</script></span>
+                <span><a href="privacy.html" data-lang="hr">Izjava o privatnosti</a><a href="privacy.html" data-lang="en">Privacy Policy</a><a href="privacy.html" data-lang="it">Informativa sulla privacy</a><a href="privacy.html" data-lang="de">Datenschutzerklärung</a></span>
+                <span><a href="terms.html" data-lang="hr">Opći uvjeti poslovanja</a><a href="terms.html" data-lang="en">Terms and Conditions</a><a href="terms.html" data-lang="it">Condizioni generali</a><a href="terms.html" data-lang="de">AGB</a></span>
+                <span><a href="#0" data-consent-open data-lang="hr">Postavke kolačića</a><a href="#0" data-consent-open data-lang="en">Cookie settings</a><a href="#0" data-consent-open data-lang="it">Impostazioni cookie</a><a href="#0" data-consent-open data-lang="de">Cookie-Einstellungen</a></span>
+            </div>
+
+            <div class="ss-go-top">
+                <a class="smoothscroll" title="Na vrh" data-title-hr="Na vrh" data-title-en="Back to top" data-title-it="Torna su" data-title-de="Nach oben" aria-label="Na vrh" data-aria-label-hr="Na vrh" data-aria-label-en="Back to top" data-aria-label-it="Torna su" data-aria-label-de="Nach oben" href="#top">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill-rule="evenodd" clip-rule="evenodd">
+                        <path d="M11 2.206l-6.235 7.528-.765-.645 7.521-9 7.479 9-.764.646-6.236-7.53v21.884h-1v-21.883z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="column">
+                <p class="ss-legal">R.D.D., obrt za računalno programiranje, vl. Milan Trbojević &middot; Mihovilići 2b, 51000 Rijeka &middot; OIB 09887105714 &middot; <span data-lang="hr">upisan u Obrtni registar, MBO 98224476</span><span data-lang="en">registered in the Croatian Register of Crafts, MBO 98224476</span><span data-lang="it">iscritto al Registro croato dell'artigianato, MBO 98224476</span><span data-lang="de">eingetragen im kroatischen Gewerberegister, MBO 98224476</span> &middot; <span data-lang="hr">nije u sustavu PDV-a</span><span data-lang="en">not registered for VAT</span><span data-lang="it">non soggetto a IVA</span><span data-lang="de">nicht umsatzsteuerpflichtig</span> &middot; <a href="mailto:info@rdd.software">info@rdd.software</a></p>
+            </div>
+        </div>
+
+    </footer> <!-- end s-footer -->
+
+</div> <!-- end -s-pagewrap -->
+
+
+<!-- Java Script
+================================================== -->
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
+<!-- Google Analytics - loaded only after the visitor accepts cookies -->
+<script src="js/sticky-cta.js"></script>
+<script src="js/guide.js?v=1"></script>
+<script src="js/consent.js?v=2"></script>
+
+</body>
+</html>

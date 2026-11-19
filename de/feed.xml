@@ -7,6 +7,13 @@
     <language>de</language>
     <atom:link href="https://rdd.software/de/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Mobile App oder handyfreundliche Website?</title>
+      <link>https://rdd.software/de/blog-mobile-app-or-website.html</link>
+      <guid isPermaLink="true">https://rdd.software/de/blog-mobile-app-or-website.html</guid>
+      <pubDate>Thu, 19 Nov 2026 07:00:00 +0000</pubDate>
+      <description>Ihre Kunden sind am Handy, aber das heißt nicht, dass sie eine App brauchen. Woran Sie erkennen, wann sich eine App lohnt, was sie mit sich bringt und was sie im Vergleich zur Website kostet.</description>
+    </item>
+    <item>
       <title>Warum Sie mit einer kleineren ersten Version Ihrer App starten sollten (MVP)</title>
       <link>https://rdd.software/de/blog-mvp-first-version.html</link>
       <guid isPermaLink="true">https://rdd.software/de/blog-mvp-first-version.html</guid>

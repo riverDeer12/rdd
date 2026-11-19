@@ -7,6 +7,13 @@
     <language>hr-HR</language>
     <atom:link href="https://rdd.software/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Mobilna aplikacija ili web stranica prilagođena mobitelima?</title>
+      <link>https://rdd.software/blog-mobile-app-or-website.html</link>
+      <guid isPermaLink="true">https://rdd.software/blog-mobile-app-or-website.html</guid>
+      <pubDate>Thu, 19 Nov 2026 07:00:00 +0000</pubDate>
+      <description>Kupci su na mobitelu, ali to ne znači da im treba aplikacija. Kako prepoznati kada se aplikacija isplati, što donosi uz sebe i koliko stoji u odnosu na stranicu.</description>
+    </item>
+    <item>
       <title>Zašto krenuti s manjom prvom verzijom aplikacije (MVP)</title>
       <link>https://rdd.software/blog-mvp-first-version.html</link>
       <guid isPermaLink="true">https://rdd.software/blog-mvp-first-version.html</guid>
