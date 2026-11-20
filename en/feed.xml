@@ -7,6 +7,13 @@
     <language>en</language>
     <atom:link href="https://rdd.software/en/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>A mobile app or a mobile-friendly website?</title>
+      <link>https://rdd.software/en/blog-mobile-app-or-website.html</link>
+      <guid isPermaLink="true">https://rdd.software/en/blog-mobile-app-or-website.html</guid>
+      <pubDate>Thu, 19 Nov 2026 07:00:00 +0000</pubDate>
+      <description>Your customers are on their phones, but that does not mean they need an app. How to tell when an app pays off, what comes with it and what it costs compared with a website.</description>
+    </item>
+    <item>
       <title>Why start with a smaller first version of your app (MVP)</title>
       <link>https://rdd.software/en/blog-mvp-first-version.html</link>
       <guid isPermaLink="true">https://rdd.software/en/blog-mvp-first-version.html</guid>
