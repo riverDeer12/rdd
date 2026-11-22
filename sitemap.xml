@@ -562,6 +562,46 @@
         <priority>0.7</priority>
     </url>
     <url>
+        <loc>https://rdd.software/cleaning-websites.html</loc>
+        <xhtml:link rel="alternate" hreflang="hr" href="https://rdd.software/cleaning-websites.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rdd.software/en/cleaning-websites.html"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/cleaning-websites.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/cleaning-websites.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/cleaning-websites.html"/>
+        <lastmod>2026-11-22</lastmod>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://rdd.software/en/cleaning-websites.html</loc>
+        <xhtml:link rel="alternate" hreflang="hr" href="https://rdd.software/cleaning-websites.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rdd.software/en/cleaning-websites.html"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/cleaning-websites.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/cleaning-websites.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/cleaning-websites.html"/>
+        <lastmod>2026-11-22</lastmod>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://rdd.software/it/cleaning-websites.html</loc>
+        <xhtml:link rel="alternate" hreflang="hr" href="https://rdd.software/cleaning-websites.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rdd.software/en/cleaning-websites.html"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/cleaning-websites.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/cleaning-websites.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/cleaning-websites.html"/>
+        <lastmod>2026-11-22</lastmod>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://rdd.software/de/cleaning-websites.html</loc>
+        <xhtml:link rel="alternate" hreflang="hr" href="https://rdd.software/cleaning-websites.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rdd.software/en/cleaning-websites.html"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/cleaning-websites.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/cleaning-websites.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/cleaning-websites.html"/>
+        <lastmod>2026-11-22</lastmod>
+        <priority>0.7</priority>
+    </url>
+    <url>
         <loc>https://rdd.software/custom-software.html</loc>
         <xhtml:link rel="alternate" hreflang="hr" href="https://rdd.software/custom-software.html"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://rdd.software/en/custom-software.html"/>
@@ -768,7 +808,7 @@
         <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/price-calculator.html"/>
         <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/price-calculator.html"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/price-calculator.html"/>
-        <lastmod>2026-11-14</lastmod>
+        <lastmod>2026-11-22</lastmod>
         <priority>0.6</priority>
     </url>
     <url>
@@ -778,7 +818,7 @@
         <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/price-calculator.html"/>
         <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/price-calculator.html"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/price-calculator.html"/>
-        <lastmod>2026-11-14</lastmod>
+        <lastmod>2026-11-22</lastmod>
         <priority>0.6</priority>
     </url>
     <url>
@@ -798,7 +838,7 @@
         <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/price-calculator.html"/>
         <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/price-calculator.html"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/price-calculator.html"/>
-        <lastmod>2026-11-14</lastmod>
+        <lastmod>2026-11-22</lastmod>
         <priority>0.6</priority>
     </url>
     <url>
@@ -1168,7 +1208,7 @@
         <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/web-development.html"/>
         <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/web-development.html"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/web-development.html"/>
-        <lastmod>2026-11-14</lastmod>
+        <lastmod>2026-11-22</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
@@ -1178,7 +1218,7 @@
         <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/web-development.html"/>
         <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/web-development.html"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/web-development.html"/>
-        <lastmod>2026-11-14</lastmod>
+        <lastmod>2026-11-22</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
@@ -1188,7 +1228,7 @@
         <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/web-development.html"/>
         <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/web-development.html"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/web-development.html"/>
-        <lastmod>2026-11-14</lastmod>
+        <lastmod>2026-11-22</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
@@ -1198,7 +1238,7 @@
         <xhtml:link rel="alternate" hreflang="it" href="https://rdd.software/it/web-development.html"/>
         <xhtml:link rel="alternate" hreflang="de" href="https://rdd.software/de/web-development.html"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://rdd.software/en/web-development.html"/>
-        <lastmod>2026-11-14</lastmod>
+        <lastmod>2026-11-22</lastmod>
         <priority>0.8</priority>
     </url>
     <url>

@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>SjajRed – demo web stranica tvrtke za čišćenje (RDD Software)</title>
+<meta name="description" content="Demo web stranica izmišljene tvrtke za čišćenje s kalkulatorom cijene. Izradio RDD Software.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230f2a43'/%3E%3Cpath d='M16 6l2.6 7.4L26 16l-7.4 2.6L16 26l-2.6-7.4L6 16l7.4-2.6z' fill='%2319c3b1'/%3E%3C/svg%3E">
+<!--
+  RDD Software - demo website of a made-up cleaning company ("SjajRed").
+  Shown on rdd.software/cleaning-websites.html as an example of what such a
+  website can look like. The company, prices and contacts are made up, the
+  page is not indexed and nothing on it is sent anywhere.
+  Language: ?lang=hr|it|en (Croatian by default).
+-->
+<style>
+@font-face { font-family: "PS"; src: url("../../css/fonts/public-sans-normal-latin.woff2") format("woff2"); font-weight: 100 900; font-display: swap; }
+@font-face { font-family: "PS"; src: url("../../css/fonts/public-sans-normal-latin-ext.woff2") format("woff2"); font-weight: 100 900; font-display: swap; unicode-range: U+0100-024F; }
+
+:root {
+    --navy: #0f2a43;
+    --navy-2: #173a5a;
+    --aqua: #19c3b1;
+    --aqua-dark: #0e8f82;
+    --sun: #ffd166;
+    --bg: #f4faf9;
+    --card: #ffffff;
+    --text: #314253;
+    --muted: #6a7a89;
+    --line: #dde8ea;
+    --radius: 18px;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 110px; }
+body { margin: 0; font-family: "PS", system-ui, -apple-system, "Segoe UI", sans-serif; font-size: 17px; line-height: 1.6; color: var(--text); background: var(--bg); }
+h1, h2, h3 { color: var(--navy); line-height: 1.15; margin: 0; letter-spacing: -.01em; }
+h1 { font-size: clamp(36px, 5.4vw, 60px); font-weight: 800; }
+h2 { font-size: clamp(28px, 3.6vw, 40px); font-weight: 800; }
+h3 { font-size: 20px; font-weight: 700; }
+p { margin: 0 0 14px; }
+a { color: var(--aqua-dark); }
+.wrap { max-width: 1140px; margin: 0 auto; padding: 0 22px; }
+[data-lang]:not(.on) { display: none !important; }
+
+/* demo notice */
+.demo-bar { position: sticky; top: 0; z-index: 50; background: var(--sun); color: #3b2f00; font-size: 14px; }
+.demo-bar .wrap { display: flex; gap: 14px; align-items: center; justify-content: space-between; padding-top: 8px; padding-bottom: 8px; }
+.demo-bar a { color: #3b2f00; font-weight: 700; white-space: nowrap; }
+
+/* header */
+.top { position: sticky; top: 38px; z-index: 40; background: rgba(244, 250, 249, .92); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+.top .wrap { display: flex; align-items: center; gap: 24px; height: 68px; }
+.logo { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 22px; color: var(--navy); text-decoration: none; }
+.logo svg { flex: none; }
+.nav { display: flex; gap: 22px; margin-left: auto; }
+.nav a { color: var(--navy); text-decoration: none; font-weight: 600; font-size: 15px; }
+.nav a:hover { color: var(--aqua-dark); }
+.langs { display: flex; gap: 4px; }
+.langs button { border: 1px solid var(--line); background: #fff; color: var(--navy); font: 600 13px "PS", sans-serif; padding: 5px 9px; border-radius: 8px; cursor: pointer; }
+.langs button[aria-pressed="true"] { background: var(--navy); color: #fff; border-color: var(--navy); }
+
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 9px; padding: 14px 22px; border-radius: 12px; font: 700 16px "PS", sans-serif; text-decoration: none; border: 0; cursor: pointer; }
+.btn--main { background: var(--aqua); color: var(--navy); }
+.btn--main:hover { background: #2dd6c4; }
+.btn--dark { background: var(--navy); color: #fff; }
+.btn--dark:hover { background: var(--navy-2); }
+.btn--ghost { background: #fff; color: var(--navy); border: 1.5px solid var(--line); }
+.btn svg { flex: none; }
+
+/* hero */
+.hero { padding: 64px 0 40px; }
+.hero .wrap { display: grid; grid-template-columns: 1.1fr .9fr; gap: 48px; align-items: center; }
+.hero h1 .hl { color: var(--aqua-dark); font-style: normal; }
+.hero .lead { font-size: 20px; margin: 20px 0 28px; max-width: 34em; }
+.hero .actions { display: flex; flex-wrap: wrap; gap: 12px; }
+.badges { display: flex; flex-wrap: wrap; gap: 10px 22px; margin-top: 28px; padding: 0; list-style: none; font-size: 15px; font-weight: 600; color: var(--navy); }
+.badges li { display: flex; align-items: center; gap: 8px; }
+.badges li::before { content: ""; width: 20px; height: 20px; border-radius: 50%; background: var(--aqua) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5 10.5l3 3 7-7' fill='none' stroke='%230f2a43' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/14px no-repeat; }
+.art { position: relative; aspect-ratio: 1 / 1; max-width: 460px; justify-self: center; width: 100%; }
+.art .blob { position: absolute; inset: 6% 4% 4% 6%; border-radius: 42% 58% 55% 45% / 48% 42% 58% 52%; background: linear-gradient(140deg, var(--aqua) 0%, #8ae6dc 100%); }
+.art .card { position: absolute; left: 12%; right: 12%; top: 20%; background: #fff; border-radius: var(--radius); padding: 24px 26px; box-shadow: 0 24px 50px rgba(15, 42, 67, .18); }
+.art .card p { margin: 0 0 12px; font-weight: 700; color: var(--navy); }
+.art .card ul { list-style: none; margin: 0; padding: 0; }
+.art .card li { display: flex; align-items: center; gap: 10px; padding: 9px 0; border-top: 1px solid var(--line); font-weight: 600; }
+.art .card li::before { content: "✓"; display: grid; place-items: center; width: 24px; height: 24px; border-radius: 8px; background: #e3f8f5; color: var(--aqua-dark); font-weight: 800; font-size: 14px; }
+.art .price-chip { position: absolute; right: 2%; bottom: 10%; background: var(--navy); color: #fff; padding: 14px 18px; border-radius: 14px; box-shadow: 0 16px 30px rgba(15, 42, 67, .25); font-size: 14px; }
+.art .price-chip b { display: block; font-size: 22px; color: var(--sun); }
+.spark { position: absolute; color: var(--sun); }
+
+/* sections */
+section { padding: 72px 0; }
+.head { max-width: 640px; margin-bottom: 36px; }
+.head p { color: var(--muted); font-size: 18px; margin-top: 12px; }
+.kicker { display: inline-block; font-size: 13px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--aqua-dark); margin-bottom: 10px; }
+
+.services { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+.service { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 26px 22px; }
+.service .ico { display: grid; place-items: center; width: 52px; height: 52px; border-radius: 14px; background: #e3f8f5; color: var(--aqua-dark); margin-bottom: 18px; }
+.service p { color: var(--muted); font-size: 15.5px; margin: 10px 0 16px; }
+.service .from { font-weight: 800; color: var(--navy); }
+
+/* calculator */
+.calc-sec { background: var(--navy); color: #d5e2ec; }
+.calc-sec h2, .calc-sec h3 { color: #fff; }
+.calc-sec .head p { color: #a9bccb; }
+.calc-sec .kicker { color: var(--aqua); }
+.calc { display: grid; grid-template-columns: 1.2fr .8fr; gap: 28px; align-items: start; }
+.calc form { background: var(--navy-2); border-radius: var(--radius); padding: 28px; }
+.field { margin-bottom: 24px; }
+.field > span { display: block; font-weight: 700; color: #fff; margin-bottom: 10px; }
+.area { display: grid; grid-template-columns: 110px 1fr; gap: 18px; align-items: center; }
+.area input[type=number] { width: 100%; padding: 12px 14px; border-radius: 10px; border: 0; font: 700 20px "PS", sans-serif; color: var(--navy); }
+.area input[type=range] { width: 100%; accent-color: var(--aqua); }
+.opts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.opt { position: relative; display: block; padding: 14px 14px 14px 42px; border-radius: 12px; border: 1.5px solid #2d5476; cursor: pointer; color: #fff; font-weight: 600; font-size: 15px; line-height: 1.35; }
+.opt small { display: block; font-weight: 400; color: #a9bccb; font-size: 13px; margin-top: 3px; }
+.opt input { position: absolute; left: 14px; top: 16px; accent-color: var(--aqua); }
+.opt:has(input:checked) { border-color: var(--aqua); background: rgba(25, 195, 177, .1); }
+.result { background: #fff; color: var(--text); border-radius: var(--radius); padding: 28px; position: sticky; top: 130px; }
+.result .label { font-size: 13px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); font-weight: 700; margin: 0; }
+.result .price { font-size: 44px; font-weight: 800; color: var(--navy); margin: 6px 0; line-height: 1.1; }
+.result .meta { color: var(--muted); font-size: 15px; }
+.result .btn { width: 100%; margin-top: 8px; }
+
+/* steps */
+.steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; counter-reset: s; padding: 0; list-style: none; }
+.steps li { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 26px 24px; }
+.steps li::before { counter-increment: s; content: counter(s); display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%; background: var(--sun); color: var(--navy); font-weight: 800; margin-bottom: 16px; }
+.steps p { color: var(--muted); margin: 8px 0 0; font-size: 15.5px; }
+
+/* placeholder for reviews */
+.placeholder { border: 2px dashed #b9cfd3; border-radius: var(--radius); padding: 34px; text-align: center; color: var(--muted); background: rgba(255, 255, 255, .6); }
+.placeholder strong { display: block; color: var(--navy); font-size: 19px; margin-bottom: 6px; }
+
+/* faq */
+.faq { max-width: 820px; }
+.faq details { background: var(--card); border: 1px solid var(--line); border-radius: 14px; margin-bottom: 10px; }
+.faq summary { cursor: pointer; list-style: none; padding: 18px 22px; font-weight: 700; color: var(--navy); }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; float: right; color: var(--aqua-dark); font-size: 22px; line-height: 1; }
+.faq details[open] summary::after { content: "–"; }
+.faq details p { padding: 0 22px 18px; margin: 0; color: var(--muted); }
+
+/* contact */
+.contact { display: grid; grid-template-columns: .9fr 1.1fr; gap: 36px; align-items: start; }
+.quick { display: grid; gap: 12px; margin-top: 22px; }
+.quick .btn { justify-content: flex-start; }
+.contact form { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 28px; }
+.contact label { display: block; font-weight: 700; color: var(--navy); font-size: 15px; margin-bottom: 16px; }
+.contact input, .contact textarea { display: block; width: 100%; margin-top: 6px; padding: 12px 14px; border: 1.5px solid var(--line); border-radius: 10px; font: 400 16px "PS", sans-serif; color: var(--navy); background: #fbfdfd; }
+.contact textarea { min-height: 120px; resize: vertical; }
+.contact input:focus, .contact textarea:focus { outline: 2px solid var(--aqua); border-color: var(--aqua); }
+.note { font-size: 13.5px; color: var(--muted); margin-top: 12px; }
+
+footer { background: var(--navy); color: #a9bccb; padding: 40px 0 110px; font-size: 15px; }
+footer .wrap { display: flex; flex-wrap: wrap; gap: 14px 40px; justify-content: space-between; }
+footer a { color: #fff; }
+
+/* toast */
+.toast { position: fixed; left: 50%; bottom: 96px; transform: translate(-50%, 20px); background: var(--navy); color: #fff; padding: 14px 20px; border-radius: 12px; box-shadow: 0 14px 30px rgba(0, 0, 0, .25); opacity: 0; pointer-events: none; transition: .25s; z-index: 60; max-width: calc(100% - 32px); font-size: 15px; }
+.toast.show { opacity: 1; transform: translate(-50%, 0); }
+
+/* bottom bar on phones */
+.mbar { display: none; }
+
+@media (max-width: 960px) {
+    .nav { display: none; }
+    .hero .wrap, .calc, .contact { grid-template-columns: 1fr; }
+    .art { max-width: 380px; }
+    .services { grid-template-columns: repeat(2, 1fr); }
+    .result { position: static; }
+}
+@media (max-width: 640px) {
+    body { font-size: 16px; }
+    section { padding: 52px 0; }
+    .hero { padding-top: 36px; }
+    .services, .steps, .opts { grid-template-columns: 1fr; }
+    .top .wrap { gap: 12px; }
+    .logo { font-size: 19px; }
+    .demo-bar .wrap { font-size: 12.5px; }
+    .demo-bar { position: static; }
+    .top { top: 0; }
+    html { scroll-padding-top: 80px; }
+    .mbar { display: grid; grid-template-columns: 1fr 1fr 1.3fr; gap: 8px; position: fixed; left: 10px; right: 10px; bottom: 10px; z-index: 45; }
+    .mbar .btn { padding: 13px 8px; font-size: 14.5px; border-radius: 12px; box-shadow: 0 8px 20px rgba(15, 42, 67, .25); }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .toast { transition: none; } }
+</style>
+</head>
+<body>
+
+<div class="demo-bar" role="note">
+    <div class="wrap">
+        <span>
+            <span data-lang="hr">Ovo je <b>demo stranica</b> koju je izradio RDD Software. Tvrtka, cijene i kontakti su izmišljeni.</span>
+            <span data-lang="it">Questo è un <b>sito demo</b> realizzato da RDD Software. Azienda, prezzi e contatti sono inventati.</span>
+            <span data-lang="en">This is a <b>demo website</b> built by RDD Software. The company, prices and contacts are made up.</span>
+        </span>
+        <a href="../../cleaning-websites.html" data-href-it="../../it/cleaning-websites.html" data-href-en="../../en/cleaning-websites.html">
+            <span data-lang="hr">Želim ovakvu stranicu →</span><span data-lang="it">Voglio un sito così →</span><span data-lang="en">I want a site like this →</span>
+        </a>
+    </div>
+</div>
+
+<header class="top">
+    <div class="wrap">
+        <a class="logo" href="#">
+            <svg width="34" height="34" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="#0f2a43"/><path d="M16 6l2.6 7.4L26 16l-7.4 2.6L16 26l-2.6-7.4L6 16l7.4-2.6z" fill="#19c3b1"/></svg>
+            SjajRed
+        </a>
+        <nav class="nav" aria-label="SjajRed">
+            <a href="#usluge"><span data-lang="hr">Usluge</span><span data-lang="it">Servizi</span><span data-lang="en">Services</span></a>
+            <a href="#cijena"><span data-lang="hr">Cijena</span><span data-lang="it">Prezzo</span><span data-lang="en">Price</span></a>
+            <a href="#kako"><span data-lang="hr">Kako radimo</span><span data-lang="it">Come lavoriamo</span><span data-lang="en">How it works</span></a>
+            <a href="#kontakt"><span data-lang="hr">Kontakt</span><span data-lang="it">Contatti</span><span data-lang="en">Contact</span></a>
+        </nav>
+        <div class="langs" role="group" aria-label="Jezik / Lingua / Language">
+            <button type="button" data-set="hr">HR</button><button type="button" data-set="it">IT</button><button type="button" data-set="en">EN</button>
+        </div>
+    </div>
+</header>
+
+<main>
+    <section class="hero">
+        <div class="wrap">
+            <div>
+                <h1>
+                    <span data-lang="hr">Čist prostor, <em class="hl">bez brige.</em></span>
+                    <span data-lang="it">Spazi puliti, <em class="hl">senza pensieri.</em></span>
+                    <span data-lang="en">A clean space, <em class="hl">no worries.</em></span>
+                </h1>
+                <p class="lead">
+                    <span data-lang="hr">Čišćenje stanova, kuća i poslovnih prostora u Rijeci i okolici. Upišite kvadraturu i odmah saznajte okvirnu cijenu.</span>
+                    <span data-lang="it">Pulizie di appartamenti, case e uffici a Fiume e dintorni. Inserisci i metri quadri e scopri subito il prezzo indicativo.</span>
+                    <span data-lang="en">Cleaning for flats, houses and offices in Rijeka and the surrounding area. Enter the floor area and see a rough price straight away.</span>
+                </p>
+                <div class="actions">
+                    <a class="btn btn--main" href="#cijena">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M8 6h8M8 11h2M14 11h2M8 15h2M14 15h2M8 19h8"/></svg>
+                        <span data-lang="hr">Izračunajte cijenu</span><span data-lang="it">Calcola il prezzo</span><span data-lang="en">Get a price</span>
+                    </a>
+                    <a class="btn btn--ghost js-demo" href="#">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="#25D366" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.6 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-1.9-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5-4.5-.2-.2-1.2-1.6-1.2-3 0-1.4.7-2.1 1-2.4.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .6l-.4.6-.4.5c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.6.3.1.2.1.8-.1 1.4z"/></svg>
+                        WhatsApp
+                    </a>
+                </div>
+                <ul class="badges">
+                    <li><span data-lang="hr">Termin unutar 48 sati</span><span data-lang="it">Appuntamento entro 48 ore</span><span data-lang="en">Booked within 48 hours</span></li>
+                    <li><span data-lang="hr">Vlastita sredstva i oprema</span><span data-lang="it">Prodotti e attrezzatura nostri</span><span data-lang="en">Our own products and kit</span></li>
+                    <li><span data-lang="hr">Račun za tvrtke i građane</span><span data-lang="it">Fattura per aziende e privati</span><span data-lang="en">Invoices for businesses and households</span></li>
+                </ul>
+            </div>
+            <div class="art" aria-hidden="true">
+                <div class="blob"></div>
+                <svg class="spark" style="left:2%;top:8%" width="46" height="46" viewBox="0 0 32 32"><path d="M16 2l3.4 10.6L30 16l-10.6 3.4L16 30l-3.4-10.6L2 16l10.6-3.4z" fill="currentColor"/></svg>
+                <svg class="spark" style="right:6%;top:2%;color:#fff" width="30" height="30" viewBox="0 0 32 32"><path d="M16 2l3.4 10.6L30 16l-10.6 3.4L16 30l-3.4-10.6L2 16l10.6-3.4z" fill="currentColor"/></svg>
+                <div class="card">
+                    <p><span data-lang="hr">Generalno čišćenje · 80 m²</span><span data-lang="it">Pulizia generale · 80 m²</span><span data-lang="en">Deep clean · 80 m²</span></p>
+                    <ul>
+                        <li><span data-lang="hr">Kuhinja i aparati</span><span data-lang="it">Cucina ed elettrodomestici</span><span data-lang="en">Kitchen and appliances</span></li>
+                        <li><span data-lang="hr">Kupaonica i pločice</span><span data-lang="it">Bagno e piastrelle</span><span data-lang="en">Bathroom and tiles</span></li>
+                        <li><span data-lang="hr">Podovi i prašina</span><span data-lang="it">Pavimenti e polvere</span><span data-lang="en">Floors and dusting</span></li>
+                        <li><span data-lang="hr">Prozori</span><span data-lang="it">Finestre</span><span data-lang="en">Windows</span></li>
+                    </ul>
+                </div>
+                <div class="price-chip"><span data-lang="hr">Okvirno</span><span data-lang="it">Indicativo</span><span data-lang="en">Roughly</span><b>200 – 255 €</b></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="usluge">
+        <div class="wrap">
+            <div class="head">
+                <span class="kicker"><span data-lang="hr">Usluge</span><span data-lang="it">Servizi</span><span data-lang="en">Services</span></span>
+                <h2><span data-lang="hr">Što čistimo</span><span data-lang="it">Cosa puliamo</span><span data-lang="en">What we clean</span></h2>
+                <p><span data-lang="hr">Jednokratno ili redovito, uz cijenu koju znate unaprijed.</span><span data-lang="it">Una tantum o regolarmente, con un prezzo che conosci in anticipo.</span><span data-lang="en">One-off or regular, at a price you know in advance.</span></p>
+            </div>
+            <div class="services">
+                <article class="service">
+                    <div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg></div>
+                    <h3><span data-lang="hr">Stanovi i kuće</span><span data-lang="it">Appartamenti e case</span><span data-lang="en">Flats and houses</span></h3>
+                    <p><span data-lang="hr">Redovito održavanje čistoće, tjedno ili mjesečno.</span><span data-lang="it">Pulizie regolari, settimanali o mensili.</span><span data-lang="en">Regular cleaning, weekly or monthly.</span></p>
+                    <span class="from"><span data-lang="hr">od 1,20 € / m²</span><span data-lang="it">da 1,20 € / m²</span><span data-lang="en">from €1.20 / m²</span></span>
+                </article>
+                <article class="service">
+                    <div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M9 7h1M14 7h1M9 11h1M14 11h1M9 15h1M14 15h1M11 21v-3h2v3"/></svg></div>
+                    <h3><span data-lang="hr">Poslovni prostori</span><span data-lang="it">Uffici e negozi</span><span data-lang="en">Offices and shops</span></h3>
+                    <p><span data-lang="hr">Uredi, ordinacije i trgovine, i izvan radnog vremena.</span><span data-lang="it">Uffici, studi e negozi, anche fuori orario.</span><span data-lang="en">Offices, practices and shops, out of hours too.</span></p>
+                    <span class="from"><span data-lang="hr">od 1,20 € / m²</span><span data-lang="it">da 1,20 € / m²</span><span data-lang="en">from €1.20 / m²</span></span>
+                </article>
+                <article class="service">
+                    <div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/><path d="M19 16l.8 2.2L22 19l-2.2.8L19 22l-.8-2.2L16 19l2.2-.8z"/></svg></div>
+                    <h3><span data-lang="hr">Generalno čišćenje</span><span data-lang="it">Pulizia generale</span><span data-lang="en">Deep cleaning</span></h3>
+                    <p><span data-lang="hr">Temeljito, s kuhinjom, kupaonicom i teško dostupnim mjestima.</span><span data-lang="it">A fondo, con cucina, bagno e angoli difficili.</span><span data-lang="en">Thorough, with the kitchen, bathroom and hard-to-reach spots.</span></p>
+                    <span class="from"><span data-lang="hr">od 2,50 € / m²</span><span data-lang="it">da 2,50 € / m²</span><span data-lang="en">from €2.50 / m²</span></span>
+                </article>
+                <article class="service">
+                    <div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20h16"/><path d="M6 20V9l6-5 6 5v11"/><path d="M14 4l6 6"/><path d="M9 14h6"/></svg></div>
+                    <h3><span data-lang="hr">Nakon radova</span><span data-lang="it">Dopo i lavori</span><span data-lang="en">After renovation</span></h3>
+                    <p><span data-lang="hr">Prašina, boja i ljepilo nakon renovacije ili selidbe.</span><span data-lang="it">Polvere, vernice e colla dopo lavori o trasloco.</span><span data-lang="en">Dust, paint and glue after building work or a move.</span></p>
+                    <span class="from"><span data-lang="hr">od 3,50 € / m²</span><span data-lang="it">da 3,50 € / m²</span><span data-lang="en">from €3.50 / m²</span></span>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="calc-sec" id="cijena">
+        <div class="wrap">
+            <div class="head">
+                <span class="kicker"><span data-lang="hr">Kalkulator</span><span data-lang="it">Calcolatore</span><span data-lang="en">Calculator</span></span>
+                <h2><span data-lang="hr">Koliko košta vaše čišćenje?</span><span data-lang="it">Quanto costa la tua pulizia?</span><span data-lang="en">How much is your clean?</span></h2>
+                <p><span data-lang="hr">Okvirna cijena za nekoliko sekundi. Točnu cijenu potvrđujemo nakon upita.</span><span data-lang="it">Un prezzo indicativo in pochi secondi. Il prezzo esatto lo confermiamo dopo la richiesta.</span><span data-lang="en">A rough price in seconds. We confirm the exact price after your enquiry.</span></p>
+            </div>
+            <div class="calc">
+                <form id="calc" onsubmit="return false">
+                    <div class="field">
+                        <span id="area-label"><span data-lang="hr">Površina (m²)</span><span data-lang="it">Superficie (m²)</span><span data-lang="en">Floor area (m²)</span></span>
+                        <div class="area">
+                            <input type="number" id="area" min="10" max="500" value="80" inputmode="numeric" aria-labelledby="area-label">
+                            <input type="range" id="area-range" min="10" max="500" step="5" value="80" aria-hidden="true" tabindex="-1">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <span><span data-lang="hr">Vrsta čišćenja</span><span data-lang="it">Tipo di pulizia</span><span data-lang="en">Type of cleaning</span></span>
+                        <div class="opts">
+                            <label class="opt"><input type="radio" name="kind" value="regular"><span data-lang="hr">Redovno</span><span data-lang="it">Ordinaria</span><span data-lang="en">Regular</span><small><span data-lang="hr">tjedno ili mjesečno</span><span data-lang="it">settimanale o mensile</span><span data-lang="en">weekly or monthly</span></small></label>
+                            <label class="opt"><input type="radio" name="kind" value="deep" checked><span data-lang="hr">Generalno</span><span data-lang="it">Generale</span><span data-lang="en">Deep clean</span><small><span data-lang="hr">temeljito</span><span data-lang="it">a fondo</span><span data-lang="en">thorough</span></small></label>
+                            <label class="opt"><input type="radio" name="kind" value="renovation"><span data-lang="hr">Nakon radova</span><span data-lang="it">Dopo i lavori</span><span data-lang="en">After works</span><small><span data-lang="hr">prašina, boja</span><span data-lang="it">polvere, vernice</span><span data-lang="en">dust, paint</span></small></label>
+                        </div>
+                    </div>
+                    <div class="field" style="margin-bottom:0">
+                        <span><span data-lang="hr">Dodatno</span><span data-lang="it">Extra</span><span data-lang="en">Extras</span></span>
+                        <div class="opts">
+                            <label class="opt"><input type="checkbox" name="windows"><span data-lang="hr">Prozori</span><span data-lang="it">Finestre</span><span data-lang="en">Windows</span><small><span data-lang="hr">unutra i izvana</span><span data-lang="it">dentro e fuori</span><span data-lang="en">inside and out</span></small></label>
+                            <label class="opt"><input type="checkbox" name="balcony"><span data-lang="hr">Balkon ili terasa</span><span data-lang="it">Balcone o terrazza</span><span data-lang="en">Balcony or terrace</span><small>+ 25 €</small></label>
+                        </div>
+                    </div>
+                </form>
+                <div class="result" aria-live="polite">
+                    <p class="label"><span data-lang="hr">Okvirna cijena</span><span data-lang="it">Prezzo indicativo</span><span data-lang="en">Estimated price</span></p>
+                    <p class="price" id="price">200 – 255 €</p>
+                    <p class="meta" id="meta"></p>
+                    <a class="btn btn--dark" id="send" href="#kontakt"><span data-lang="hr">Rezervirajte termin</span><span data-lang="it">Prenota un appuntamento</span><span data-lang="en">Book a clean</span></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="kako">
+        <div class="wrap">
+            <div class="head">
+                <span class="kicker"><span data-lang="hr">Kako radimo</span><span data-lang="it">Come lavoriamo</span><span data-lang="en">How it works</span></span>
+                <h2><span data-lang="hr">Tri koraka do čistog prostora</span><span data-lang="it">Tre passi per uno spazio pulito</span><span data-lang="en">Three steps to a clean space</span></h2>
+            </div>
+            <ol class="steps">
+                <li><h3><span data-lang="hr">Izračunajte i pošaljite upit</span><span data-lang="it">Calcola e invia la richiesta</span><span data-lang="en">Get a price and enquire</span></h3><p><span data-lang="hr">Kalkulator vam da okvirnu cijenu, a upit stiže s kvadraturom i odabranom uslugom.</span><span data-lang="it">Il calcolatore ti dà il prezzo indicativo e la richiesta arriva con superficie e servizio.</span><span data-lang="en">The calculator gives you a rough price, and your enquiry arrives with the area and service.</span></p></li>
+                <li><h3><span data-lang="hr">Dogovorimo termin</span><span data-lang="it">Fissiamo l'appuntamento</span><span data-lang="en">We agree a time</span></h3><p><span data-lang="hr">Javimo se istog dana, potvrdimo cijenu i dogovorimo dan koji vam odgovara.</span><span data-lang="it">Ti rispondiamo in giornata, confermiamo il prezzo e scegliamo il giorno.</span><span data-lang="en">We get back to you the same day, confirm the price and pick a day that suits you.</span></p></li>
+                <li><h3><span data-lang="hr">Dođemo i očistimo</span><span data-lang="it">Arriviamo e puliamo</span><span data-lang="en">We come and clean</span></h3><p><span data-lang="hr">Donosimo sredstva i opremu, a vi plaćate tek kad ste zadovoljni.</span><span data-lang="it">Portiamo prodotti e attrezzatura, e paghi solo quando sei soddisfatto.</span><span data-lang="en">We bring products and kit, and you pay only once you are happy.</span></p></li>
+            </ol>
+        </div>
+    </section>
+
+    <section style="padding-top:0">
+        <div class="wrap">
+            <div class="placeholder">
+                <strong><span data-lang="hr">Ovdje dolaze recenzije vaših klijenata</span><span data-lang="it">Qui vanno le recensioni dei tuoi clienti</span><span data-lang="en">Your customers' reviews go here</span></strong>
+                <span data-lang="hr">Na pravoj stranici prikazujemo stvarne recenzije, npr. s vašeg Google profila. U demu ih namjerno ne izmišljamo.</span>
+                <span data-lang="it">Sul sito vero mostriamo recensioni reali, ad esempio dal tuo profilo Google. Nella demo non le inventiamo di proposito.</span>
+                <span data-lang="en">On the real website we show genuine reviews, for example from your Google profile. In the demo we deliberately do not make any up.</span>
+            </div>
+        </div>
+    </section>
+
+    <section style="padding-top:0">
+        <div class="wrap">
+            <div class="head"><h2><span data-lang="hr">Česta pitanja</span><span data-lang="it">Domande frequenti</span><span data-lang="en">Questions</span></h2></div>
+            <div class="faq">
+                <details><summary><span data-lang="hr">Trebam li biti kod kuće?</span><span data-lang="it">Devo essere a casa?</span><span data-lang="en">Do I need to be at home?</span></summary><p><span data-lang="hr">Ne morate. Ključ možete ostaviti na dogovorenom mjestu, a po završetku vam pošaljemo poruku.</span><span data-lang="it">Non è necessario. Puoi lasciarci la chiave in un posto concordato e a fine lavoro ti mandiamo un messaggio.</span><span data-lang="en">No. You can leave the key somewhere agreed, and we send you a message when we are done.</span></p></details>
+                <details><summary><span data-lang="hr">Je li cijena iz kalkulatora konačna?</span><span data-lang="it">Il prezzo del calcolatore è definitivo?</span><span data-lang="en">Is the calculator price final?</span></summary><p><span data-lang="hr">Kalkulator daje okvirnu cijenu. Točnu potvrđujemo prije dolaska, ovisno o stanju prostora.</span><span data-lang="it">Il calcolatore dà un prezzo indicativo. Quello esatto lo confermiamo prima di venire, in base allo stato degli spazi.</span><span data-lang="en">It gives a rough price. We confirm the exact one before we come, depending on the state of the space.</span></p></details>
+                <details><summary><span data-lang="hr">Izdajete li račun tvrtkama?</span><span data-lang="it">Emettete fattura alle aziende?</span><span data-lang="en">Do you invoice businesses?</span></summary><p><span data-lang="hr">Da, i tvrtkama i građanima, uz mogućnost redovitog mjesečnog ugovora.</span><span data-lang="it">Sì, sia alle aziende sia ai privati, anche con contratto mensile.</span><span data-lang="en">Yes, both businesses and households, including regular monthly contracts.</span></p></details>
+            </div>
+        </div>
+    </section>
+
+    <section id="kontakt" style="padding-top:0">
+        <div class="wrap contact">
+            <div>
+                <span class="kicker"><span data-lang="hr">Kontakt</span><span data-lang="it">Contatti</span><span data-lang="en">Contact</span></span>
+                <h2><span data-lang="hr">Rezervirajte termin</span><span data-lang="it">Prenota un appuntamento</span><span data-lang="en">Book a clean</span></h2>
+                <p style="margin-top:14px"><span data-lang="hr">Pošaljite upit ili nam se javite izravno, odgovaramo istog dana.</span><span data-lang="it">Invia una richiesta o contattaci direttamente, rispondiamo in giornata.</span><span data-lang="en">Send an enquiry or contact us directly, we reply the same day.</span></p>
+                <div class="quick">
+                    <a class="btn btn--ghost js-demo" href="#"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg><span data-lang="hr">Nazovite nas</span><span data-lang="it">Chiamaci</span><span data-lang="en">Call us</span></a>
+                    <a class="btn btn--ghost js-demo" href="#"><svg width="20" height="20" viewBox="0 0 24 24" fill="#25D366" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.6 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-1.9-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5-4.5-.2-.2-1.2-1.6-1.2-3 0-1.4.7-2.1 1-2.4.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .6l-.4.6-.4.5c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.6.3.1.2.1.8-.1 1.4z"/></svg>WhatsApp</a>
+                </div>
+            </div>
+            <form id="form" novalidate>
+                <label><span data-lang="hr">Ime</span><span data-lang="it">Nome</span><span data-lang="en">Name</span><input name="name" autocomplete="off"></label>
+                <label><span data-lang="hr">Telefon ili e-mail</span><span data-lang="it">Telefono o e-mail</span><span data-lang="en">Phone or email</span><input name="contact" autocomplete="off"></label>
+                <label><span data-lang="hr">Poruka</span><span data-lang="it">Messaggio</span><span data-lang="en">Message</span><textarea name="message" id="message"></textarea></label>
+                <button class="btn btn--main" type="submit" style="width:100%"><span data-lang="hr">Pošalji upit</span><span data-lang="it">Invia richiesta</span><span data-lang="en">Send enquiry</span></button>
+                <p class="note"><span data-lang="hr">Demo: obrazac ništa ne šalje.</span><span data-lang="it">Demo: il modulo non invia nulla.</span><span data-lang="en">Demo: the form does not send anything.</span></p>
+            </form>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="wrap">
+        <div><b style="color:#fff">SjajRed</b> · <span data-lang="hr">izmišljena tvrtka za demo</span><span data-lang="it">azienda inventata per la demo</span><span data-lang="en">a made-up company for this demo</span></div>
+        <div><span data-lang="hr">Web stranicu izradio</span><span data-lang="it">Sito realizzato da</span><span data-lang="en">Website by</span> <a href="../../index.html" data-href-it="../../it/index.html" data-href-en="../../en/index.html">RDD Software</a></div>
+    </div>
+</footer>
+
+<nav class="mbar" aria-label="Brzi kontakt">
+    <a class="btn btn--ghost js-demo" href="#"><span data-lang="hr">Nazovi</span><span data-lang="it">Chiama</span><span data-lang="en">Call</span></a>
+    <a class="btn btn--ghost js-demo" href="#">WhatsApp</a>
+    <a class="btn btn--main" href="#cijena"><span data-lang="hr">Cijena</span><span data-lang="it">Prezzo</span><span data-lang="en">Price</span></a>
+</nav>
+
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+(function () {
+    'use strict';
+
+    /* ---- language: ?lang=hr|it|en, buttons in the header ---- */
+    const LANGS = ['hr', 'it', 'en'];
+    let lang = (new URLSearchParams(location.search).get('lang') || '').toLowerCase();
+    if (LANGS.indexOf(lang) < 0) lang = 'hr';
+
+    const TEXT = {
+        hr: { locale: 'hr-HR', perm2: 'oko %s € / m²', min: 'Minimalni iznos narudžbe je 50 €.', demo: 'Ovo je demo: poziv i WhatsApp ne rade, tvrtka je izmišljena.', sent: 'Demo: upit nije poslan. Na pravoj stranici stigao bi vlasniku na e-mail.',
+              summary: 'Upit iz kalkulatora: %area m², %kind%extras, okvirno %price.', kinds: { regular: 'redovno čišćenje', deep: 'generalno čišćenje', renovation: 'čišćenje nakon radova' }, windows: 'prozori', balcony: 'balkon' },
+        it: { locale: 'it-IT', perm2: 'circa %s € / m²', min: "L'ordine minimo è di 50 €.", demo: 'Questa è una demo: chiamata e WhatsApp non funzionano, l’azienda è inventata.', sent: 'Demo: la richiesta non è stata inviata. Sul sito vero arriverebbe via e-mail al titolare.',
+              summary: 'Richiesta dal calcolatore: %area m², %kind%extras, circa %price.', kinds: { regular: 'pulizia ordinaria', deep: 'pulizia generale', renovation: 'pulizia dopo i lavori' }, windows: 'finestre', balcony: 'balcone' },
+        en: { locale: 'en-GB', perm2: 'about €%s / m²', min: 'The minimum order is €50.', demo: 'This is a demo: call and WhatsApp do not work, the company is made up.', sent: 'Demo: nothing was sent. On a real website the enquiry would reach the owner by email.',
+              summary: 'Enquiry from the calculator: %area m², %kind%extras, roughly %price.', kinds: { regular: 'regular cleaning', deep: 'deep cleaning', renovation: 'after-renovation cleaning' }, windows: 'windows', balcony: 'balcony' }
+    };
+
+    function setLang(l) {
+        lang = l;
+        document.documentElement.lang = l;
+        document.querySelectorAll('[data-lang]').forEach(function (el) { el.classList.toggle('on', el.getAttribute('data-lang') === l); });
+        document.querySelectorAll('[data-set]').forEach(function (b) { b.setAttribute('aria-pressed', String(b.getAttribute('data-set') === l)); });
+        document.querySelectorAll('[data-href-it]').forEach(function (a) {
+            if (!a.dataset.hrefHr) a.dataset.hrefHr = a.getAttribute('href');
+            a.setAttribute('href', l === 'hr' ? a.dataset.hrefHr : a.getAttribute('data-href-' + l));
+        });
+        const url = new URL(location.href);
+        url.searchParams.set('lang', l);
+        history.replaceState(null, '', url);
+        render();
+    }
+    document.querySelectorAll('[data-set]').forEach(function (b) {
+        b.addEventListener('click', function () { setLang(b.getAttribute('data-set')); });
+    });
+
+    /* ---- price calculator (example prices) ---- */
+    const RATES = { regular: [1.2, 1.5], deep: [2.5, 3.2], renovation: [3.5, 4.5] };
+    const WINDOWS = [0.6, 0.8], BALCONY = 25, MINIMUM = 50;
+    const form = document.getElementById('calc');
+    const areaEl = document.getElementById('area'), rangeEl = document.getElementById('area-range');
+    const priceEl = document.getElementById('price'), metaEl = document.getElementById('meta');
+
+    function area() {
+        const v = parseInt(areaEl.value, 10);
+        return isNaN(v) ? 10 : Math.min(500, Math.max(10, v));
+    }
+    function calc() {
+        const kind = form.elements.kind.value, m2 = area();
+        let low = RATES[kind][0], high = RATES[kind][1];
+        if (form.elements.windows.checked) { low += WINDOWS[0]; high += WINDOWS[1]; }
+        const extra = form.elements.balcony.checked ? BALCONY : 0;
+        const r = function (v) { return Math.max(MINIMUM, Math.round(v / 5) * 5); };
+        return { kind: kind, m2: m2, perm2: [low, high], low: r(m2 * low + extra), high: r(m2 * high + extra) };
+    }
+    function money(v) {
+        const n = new Intl.NumberFormat(TEXT[lang].locale, { maximumFractionDigits: 0 }).format(v);
+        return lang === 'en' ? '€' + n : n + ' €';
+    }
+    function render() {
+        const t = TEXT[lang], c = calc();
+        priceEl.textContent = c.low === c.high ? money(c.low) : (lang === 'en' ? money(c.low) : new Intl.NumberFormat(t.locale).format(c.low)) + ' – ' + money(c.high);
+        const f = new Intl.NumberFormat(t.locale, { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+        metaEl.textContent = t.perm2.replace('%s', f.format(c.perm2[0]) + ' – ' + f.format(c.perm2[1])) + (c.low === MINIMUM ? '. ' + t.min : '');
+    }
+    areaEl.addEventListener('input', function () { if (areaEl.value !== '') rangeEl.value = area(); render(); });
+    areaEl.addEventListener('change', function () { areaEl.value = area(); rangeEl.value = area(); render(); });
+    rangeEl.addEventListener('input', function () { areaEl.value = rangeEl.value; render(); });
+    form.addEventListener('change', render);
+
+    /* "Book a clean": the contact form below starts with the calculation */
+    document.getElementById('send').addEventListener('click', function () {
+        const t = TEXT[lang], c = calc();
+        const extras = [form.elements.windows.checked ? t.windows : '', form.elements.balcony.checked ? t.balcony : ''].filter(Boolean);
+        document.getElementById('message').value = t.summary
+            .replace('%area', c.m2).replace('%kind', t.kinds[c.kind])
+            .replace('%extras', extras.length ? ' + ' + extras.join(' + ') : '')
+            .replace('%price', priceEl.textContent) + '\n\n';
+    });
+
+    /* ---- demo only: nothing is called or sent ---- */
+    const toast = document.getElementById('toast');
+    let timer;
+    function say(msg) {
+        toast.textContent = msg;
+        toast.classList.add('show');
+        clearTimeout(timer);
+        timer = setTimeout(function () { toast.classList.remove('show'); }, 3800);
+    }
+    document.querySelectorAll('.js-demo').forEach(function (a) {
+        a.addEventListener('click', function (e) { e.preventDefault(); say(TEXT[lang].demo); });
+    });
+    document.getElementById('form').addEventListener('submit', function (e) { e.preventDefault(); say(TEXT[lang].sent); });
+
+    setLang(lang);
+})();
+</script>
+</body>
+</html>
