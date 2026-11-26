@@ -7,6 +7,13 @@
     <language>hr-HR</language>
     <atom:link href="https://rdd.software/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Kako pripremiti tekstove i fotografije za novu web stranicu</title>
+      <link>https://rdd.software/blog-website-content.html</link>
+      <guid isPermaLink="true">https://rdd.software/blog-website-content.html</guid>
+      <pubDate>Thu, 26 Nov 2026 07:00:00 +0000</pubDate>
+      <description>Nova stranica najčešće kasni zbog sadržaja, a ne zbog programiranja. Kako pripremiti tekstove, fotografije i logo da stranica bude gotova na vrijeme i da kupcu nešto kaže.</description>
+    </item>
+    <item>
       <title>Mobilna aplikacija ili web stranica prilagođena mobitelima?</title>
       <link>https://rdd.software/blog-mobile-app-or-website.html</link>
       <guid isPermaLink="true">https://rdd.software/blog-mobile-app-or-website.html</guid>
